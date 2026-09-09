@@ -1,12 +1,69 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal class clsSubscriptionPlansDataAccess
+    static class clsSubscriptionPlansDataAccess
     {
+        //PlamID , PlanName , PlanDescription , Availablity, PlanPrice  , Note .
+
+        static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price, ref string Note)
+        {
+            string query = $"SELECT Name, Description, Availablity, Price, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Name = (string)reader["Name"];
+                        Description = (string)reader["Description"];
+                        Availablity = (bool)reader["Availiability"];
+                        Price = (decimal)reader["Price"];
+                        if (reader["Note"] == DBNull.Value)
+                            Note = string.Empty;
+                        else
+                            Note = (string)reader["Note"];
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        static int Add(string Name, string Description, bool Availablity, decimal Price, string Note)
+        {
+            string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note) ; SELECT SCOPE_IDENTITY(); ";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Name", Name);
+                cmd.Parameters.AddWithValue("@Description", Description);
+                cmd.Parameters.AddWithValue("@Availablity", Availablity);
+                cmd.Parameters.AddWithValue("@Price", Price);
+                if (!string.IsNullOrEmpty(Note))
+                    cmd.Parameters.AddWithValue("@Note", Note);
+                else
+                    cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+
+                object Result = cmd.ExecuteScalar();
+
+                if (int.TryParse(Result.ToString(), out int value))
+                    return value;
+                else
+                    return -1;
+            }
+        }
+        
+
     }
 }
