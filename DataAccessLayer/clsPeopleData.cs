@@ -203,5 +203,32 @@ namespace DataAccessLayer
 
             return (rowEffect > 0);
         }
+
+        static public bool DeletePerson(int PersonID)
+        {
+            int rowEffect = -1;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "DELETE FROM [dbo].[People] WHERE ID=@PersonID;";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("ID", PersonID);
+
+            try
+            {
+                connection.Open();
+                rowEffect = command.ExecuteNonQuery();
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowEffect > 0);
+        }
     }
 }
