@@ -63,7 +63,24 @@ namespace DataAccessLayer
                     return -1;
             }
         }
-        
+        static bool Update(string Name, string Description, bool Availiablity, decimal Price, string Note)
+        {
+            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description, Availiablity= @AAvailiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Name", Name);
+                cmd.Parameters.AddWithValue("@Description", Description);
+                cmd.Parameters.AddWithValue("@Availablity", Availiablity);
+                cmd.Parameters.AddWithValue("@Price", Price);
+                if (!string.IsNullOrEmpty(Note))
+                    cmd.Parameters.AddWithValue("@Note", Note);
+                else
+                    cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
 
-    }
+            }
+
+        }
+        }
 }
