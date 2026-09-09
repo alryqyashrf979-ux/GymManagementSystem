@@ -83,7 +83,6 @@ namespace DataAccessLayer
 
             }
         }
-
         static bool Delete(int PlanID)
         {
             string Query = "Delete From SubscriptionPlans where PlanID = @PlanID";
@@ -94,5 +93,17 @@ namespace DataAccessLayer
                 return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
             }
         }
+        static bool SetAvailiability(int PlanID , bool Availiability)
+        {
+            string Query = " Update SubscriptionPlans set Availiablity =@Availiability where PlanID = @PlanID ";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                cmd.Parameters.AddWithValue("@Availiability", Availiability);
+
+                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                }
+            }
         }
 }
