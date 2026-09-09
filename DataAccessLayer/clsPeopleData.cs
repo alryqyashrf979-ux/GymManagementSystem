@@ -308,5 +308,31 @@ ref string Email, ref string Address, ref string ImagePath)
 
             return IsFound;
         }
+
+        static public bool IsPersonExist(string NationalID)
+        {
+            bool IsFound = false;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "select Found=1 from People where NationalID=@National;";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("NationalID", NationalID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                IsFound = reader.HasRows;
+            }
+            catch (Exception ex)
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
     }
 }
