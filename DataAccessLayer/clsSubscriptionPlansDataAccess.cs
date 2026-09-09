@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -93,7 +95,7 @@ namespace DataAccessLayer
                 return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
             }
         }
-        static bool SetAvailiability(int PlanID , bool Availiability)
+        static bool SetAvailiability(int PlanID, bool Availiability)
         {
             string Query = " Update SubscriptionPlans set Availiablity =@Availiability where PlanID = @PlanID ";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -103,7 +105,24 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@Availiability", Availiability);
 
                 return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
-                }
             }
         }
-}
+        static DataTable GetAllSubscriptionPlans()
+        {
+            DataTable dt = new DataTable();
+            string Query = "select * from SubscriptionPlans ";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                        dt.Load(reader);
+                }
+
+                return dt;
+            }
+        }
+
+    }
+    }
