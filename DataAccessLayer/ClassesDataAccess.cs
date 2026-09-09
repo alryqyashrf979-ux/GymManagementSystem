@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
@@ -186,6 +187,50 @@ namespace DataAccessLayer
             }
 
             return (rowsAffected > 0);
+        }
+
+        public static DataTable GetAllClasses()
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string query =
+              @"select Classes.ClassID,Classes.className,Classes.CoachID,Classes.StartTime,Classes.EndTime,Classes.Maximum_Capacity,
+Classes.IsActive from Classes ;
+";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
         }
 
 
