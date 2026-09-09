@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class ClassesDataAccess
+    public class clsClassesData
     {
 
         public static int AddNewClass(int CoachID,string className,string Description,TimeSpan StartTime,TimeSpan EndTime,string Note,byte Maximum_Capacity,
