@@ -5,8 +5,10 @@ using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DataAccessLayer
 {
@@ -80,7 +82,17 @@ namespace DataAccessLayer
                 return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
 
             }
+        }
 
+        static bool Delete(int PlanID)
+        {
+            string Query = "Delete From SubscriptionPlans where PlanID = @PlanID";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+            }
         }
         }
 }
