@@ -43,13 +43,13 @@ namespace DataAccessLayer
         }
 
         static public bool GetPersonInfoByPersonID(int PersonID, ref string FirstName, ref string SecondName,
-   ref string LastName, ref string PhoneNumber, ref char Gendor, ref DateTime Birthdate, ref int CountryID,
+   ref string LastName, ref string PhoneNumber, ref char Gender, ref DateTime Birthdate, ref int CountryID,
    ref string Email, ref string NationalID, ref string Address, ref string ImagePath)
         {
             bool IsFound = false;
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = "SELECT [ID] ,[FirstName] ,[SecondName],[LastName],[PhoneNumber],[Gendre]" +
+            string query = "SELECT [ID] ,[FirstName] ,[SecondName],[LastName],[PhoneNumber],[Gender]" +
                 " ,[Birthdate],[CountryID],[Email],[NationalID],[Address],[ImagePath] " +
                 "FROM[dbo].[People] where ID = @PersonID; ";
 
@@ -70,7 +70,7 @@ namespace DataAccessLayer
                     LastName = (string)reader["LastName"];
                     PhoneNumber = (string)reader["PhoneNumber"];
                     Birthdate = (DateTime)reader["Birthdate"];
-                    Gendor = (char)reader["Gendre"];
+                    Gender = (char)reader["Gender"];
                     CountryID = (int)reader["CountryID"];
                     Email = (string)reader["Email"];
                     NationalID = (string)reader["NationalID"];
@@ -94,17 +94,17 @@ namespace DataAccessLayer
             return IsFound;
         }
 
-
+        
         static public bool AddNewPerson(string FirstName, string SecondName, string LastName,
-            string PhoneNumber, char Gendor, DateTime Birthdate, int CountryID, string Email,
+            string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
             string NationalID, string Address, string ImagePath)
         {
             int PersonID = -1;
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
             string query = "  INSERT INTO [dbo].[People] ([FirstName],[SecondName],[LastName]," +
-                " [PhoneNumber],[Gendre],[Birthdate],[CountryID],[Email],[NationalID],[Address]," +
-                "[ImagePath]) VALUES (@FirstName,@SecondName,@LastName,@PhoneNumber,@Gendre," +
+                " [PhoneNumber],[Gender],[Birthdate],[CountryID],[Email],[NationalID],[Address]," +
+                "[ImagePath]) VALUES (@FirstName,@SecondName,@LastName,@PhoneNumber,@Gender," +
                 "@Birthdate,@CountryID,@Email,@NationalID,@Address,@ImagePath) " +
                 "select scope_Identity;";
 
@@ -115,7 +115,7 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("SecondName", SecondName);
             command.Parameters.AddWithValue("LastName", LastName);
             command.Parameters.AddWithValue("PhoneNumber", PhoneNumber);
-            command.Parameters.AddWithValue("Gendre", Gendor);
+            command.Parameters.AddWithValue("Gender", Gender);
             command.Parameters.AddWithValue("Birthdate", Birthdate);
             command.Parameters.AddWithValue("CountryID", CountryID);
             command.Parameters.AddWithValue("Email", Email);
@@ -145,6 +145,63 @@ namespace DataAccessLayer
             }
 
             return (PersonID != -1);
+        }
+
+        static public bool UpdatePersonInfo(int PersonID,string FirstName, string SecondName, string LastName,
+            string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
+            string NationalID, string Address, string ImagePath)
+        {
+            int rowEffect = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = " UPDATE [dbo].[People] SET" +
+                " [FirstName] = @FirstName," +
+                "[SecondName] = @SecondName," +
+                "[LastName] = @LastName," +
+                "[PhoneNumber] = @PhoneNumber," +
+                "[Gender] = @Gender," +
+                "[Birthdate] = @Birthdate," +
+                "[CountryID] = @CountryID," +
+                "[Email] = @Email," +
+                "[NationalID] = @NationalID," +
+                "[Address] = @Address," +
+                "[ImagePath] = @ImagePath " +
+                "WHERE ID=@PersonID; ";
+
+            SqlCommand command = new SqlCommand(query,connection);
+
+
+            command.Parameters.AddWithValue("ID", PersonID);
+            command.Parameters.AddWithValue("FirstName", FirstName);
+            command.Parameters.AddWithValue("SecondName", SecondName);
+            command.Parameters.AddWithValue("LastName", LastName);
+            command.Parameters.AddWithValue("PhoneNumber", PhoneNumber);
+            command.Parameters.AddWithValue("Gender", Gender);
+            command.Parameters.AddWithValue("Birthdate", Birthdate);
+            command.Parameters.AddWithValue("CountryID", CountryID);
+            command.Parameters.AddWithValue("Email", Email);
+            command.Parameters.AddWithValue("NationalID", NationalID);
+            command.Parameters.AddWithValue("Address", Address);
+            if (ImagePath == "")
+                command.Parameters.AddWithValue("ImagePath", DBNull.Value);
+            else
+                command.Parameters.AddWithValue("ImagePath", ImagePath);
+
+            try
+            {
+                connection.Open();
+                rowEffect = command.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowEffect > 0);
         }
     }
 }
