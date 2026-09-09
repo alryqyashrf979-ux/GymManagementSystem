@@ -12,7 +12,7 @@ namespace DataAccessLayer
     public class ClassesDataAccess
     {
 
-        public static int AddNewClass(string className,string Description,TimeSpan StartTime,TimeSpan EndTime,string Note,byte Maximum_Capacity,
+        public static int AddNewClass(int CoachID,string className,string Description,TimeSpan StartTime,TimeSpan EndTime,string Note,byte Maximum_Capacity,
             bool IsActive,string StartDay,string EndDay)
         {
 
@@ -29,7 +29,8 @@ namespace DataAccessLayer
            ,[Maximum_Capacity]
            ,[IsActive]
            ,[EndDay]
-           ,[StartDay])
+           ,[StartDay]
+           ,[CoachID])
      VALUES
            (@className
            ,@Description
@@ -39,7 +40,8 @@ namespace DataAccessLayer
            ,@Maximum_Capacity
            ,@IsActive
            ,@EndDay
-           ,@StartDay);
+           ,@StartDay
+           ,@CoachID);
 
  SELECT SCOPE_IDENTITY();
 
@@ -49,6 +51,7 @@ namespace DataAccessLayer
             SqlCommand Command = new SqlCommand(query, connection);
 
 
+            Command.Parameters.AddWithValue("@CoachID", CoachID);
             Command.Parameters.AddWithValue("@className", className);
 
 
@@ -110,7 +113,7 @@ namespace DataAccessLayer
 
 
 
-        public static bool UpdateClass(int ClassID, string className, string Description, TimeSpan StartTime, TimeSpan EndTime, string Note, byte Maximum_Capacity,
+        public static bool UpdateClass(int ClassID, int CoachID, string className, string Description, TimeSpan StartTime, TimeSpan EndTime, string Note, byte Maximum_Capacity,
        bool IsActive, string StartDay, string EndDay)
         {
 
@@ -126,10 +129,14 @@ namespace DataAccessLayer
       ,[Maximum_Capacity] = @Maximum_Capacity
       ,[IsActive] = @IsActive
       ,[EndDay] = @EndDay
-      ,[StartDay] = @StartDay
+      ,[StartDay] = @StartDay,
+       [CoachID]= @CoachID
           WHERE ClassID =@ClassID";
 
             SqlCommand Command = new SqlCommand(query, connection);
+
+            Command.Parameters.AddWithValue("@CoachID", CoachID);
+
 
             Command.Parameters.AddWithValue("@ClassID", ClassID);
             Command.Parameters.AddWithValue("@className", className);
