@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class Class1
+    public class DataAccessSettings
     {
 
-
-
-
-
+        public static string ConnectionString = "Server=.;Database=GymManagementSystem;User Id=sa;Password=123456;";
 
     }
 }
