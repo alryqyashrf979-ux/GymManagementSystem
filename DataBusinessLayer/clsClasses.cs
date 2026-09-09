@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataBusinessLayer
 {
-    public class clsClassesDataBusiness
+    public class clsClasses
     {
 
         public int ClassID { get; set; }
@@ -31,7 +31,7 @@ namespace DataBusinessLayer
 
 
 
-        private clsClassesDataBusiness(int classID, string className, string description, TimeSpan startTime, TimeSpan endTime,
+        private clsClasses(int classID, string className, string description, TimeSpan startTime, TimeSpan endTime,
             string note, byte maximum_Capacity, bool isActive, string startDay, string endDay, int coachID)
         {
 
@@ -52,7 +52,7 @@ namespace DataBusinessLayer
         }
 
 
-        public clsClassesDataBusiness()
+        public clsClasses()
         {
             this.ClassID = -1;
             this.CoachID = -1;
@@ -128,7 +128,7 @@ namespace DataBusinessLayer
             return ClassesDataAccess.DeleteClass(ClassID);
         }
 
-        public static clsClassesDataBusiness GetClassInfoByClassID(int ClassID)
+        public static clsClasses GetClassInfoByClassID(int ClassID)
         {
             int coachID = -1;
             byte maximumCapacity = 0;
@@ -145,7 +145,7 @@ namespace DataBusinessLayer
                 ,ref endTime,ref note,ref maximumCapacity,ref isActive,ref startDay,ref endDay))
             {
 
-                return new clsClassesDataBusiness(ClassID,className,Description,startTime,
+                return new clsClasses(ClassID,className,Description,startTime,
                     endTime,note,maximumCapacity,isActive,startDay,endDay,coachID);
 
             }
