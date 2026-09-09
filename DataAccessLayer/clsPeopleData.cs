@@ -223,7 +223,7 @@ ref string Email, ref string Address, ref string ImagePath)
             SqlCommand command = new SqlCommand(query,connection);
 
 
-            command.Parameters.AddWithValue("ID", PersonID);
+            command.Parameters.AddWithValue("PersonID", PersonID);
             command.Parameters.AddWithValue("FirstName", FirstName);
             command.Parameters.AddWithValue("SecondName", SecondName);
             command.Parameters.AddWithValue("LastName", LastName);
@@ -263,7 +263,7 @@ ref string Email, ref string Address, ref string ImagePath)
             string query = "DELETE FROM [dbo].[People] WHERE ID=@PersonID;";
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("ID", PersonID);
+            command.Parameters.AddWithValue("PersonID", PersonID);
 
             try
             {
@@ -283,6 +283,30 @@ ref string Email, ref string Address, ref string ImagePath)
             return (rowEffect > 0);
         }
 
+        static public bool IsPersonExist(int PersonID)
+        {
+            bool IsFound = false;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "select Found=1 from People where ID=@PersonID;";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("PersonID", PersonID);
 
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                IsFound = reader.HasRows;
+            }
+            catch(Exception ex)
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
     }
 }
