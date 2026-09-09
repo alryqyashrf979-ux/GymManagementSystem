@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataBusinessLayer
 {
-    public class ClassesDataBusiness
+    public class clsClassesDataBusiness
     {
 
         public int ClassID { get; set; }
@@ -27,6 +27,49 @@ namespace DataBusinessLayer
 
         private enum enMode { AddNew = 1, Update = 2 }
         enMode _Mode = enMode.AddNew;
+
+
+
+
+        private clsClassesDataBusiness(int classID, string className, string description, TimeSpan startTime, TimeSpan endTime,
+            string note, byte maximum_Capacity, bool isActive, string startDay, string endDay, int coachID)
+        {
+
+            this.ClassID = classID;
+            this.className = className;
+            this.Description = description;
+            this.StartTime = startTime;
+            this.EndTime = endTime;
+            this.Note = note;
+            this.Maximum_Capacity = maximum_Capacity;
+            this.IsActive = isActive;
+            this.StartDay = startDay;
+            this.EndDay = endDay;
+            this.CoachID = coachID;
+
+            _Mode = enMode.Update;
+             
+        }
+
+
+        public clsClassesDataBusiness()
+        {
+            this.ClassID = -1;
+            this.CoachID = -1;
+            this.Note = "";
+            this.StartDay = "";
+            this.EndDay = "";
+            this.EndTime = TimeSpan.Zero;
+            this.StartTime= TimeSpan.Zero;
+            this.IsActive = false;
+            this.Description = "";
+            this.Maximum_Capacity = 0;
+            this.className = "";
+
+            _Mode = enMode.AddNew;
+
+        }
+
 
 
 
@@ -84,6 +127,36 @@ namespace DataBusinessLayer
         {
             return ClassesDataAccess.DeleteClass(ClassID);
         }
+
+        public static clsClassesDataBusiness GetClassInfoByClassID(int ClassID)
+        {
+            int coachID = -1;
+            byte maximumCapacity = 0;
+            string note = string.Empty;
+            string className = string.Empty;
+            string Description = string.Empty;
+            TimeSpan startTime=TimeSpan.Zero;
+            TimeSpan endTime=TimeSpan.Zero;
+            string startDay = string.Empty;
+            string endDay = string.Empty;
+            bool isActive = false;
+
+            if(ClassesDataAccess.GetClassInfoByClassID(ClassID,ref  coachID,ref className,ref Description,ref startTime
+                ,ref endTime,ref note,ref maximumCapacity,ref isActive,ref startDay,ref endDay))
+            {
+
+                return new clsClassesDataBusiness(ClassID,className,Description,startTime,
+                    endTime,note,maximumCapacity,isActive,startDay,endDay,coachID);
+
+            }
+            else
+            {
+                return null;
+            }
+
+
+        }
+
 
 
 
