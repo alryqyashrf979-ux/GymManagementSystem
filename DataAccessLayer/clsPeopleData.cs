@@ -49,7 +49,7 @@ namespace DataAccessLayer
             bool IsFound = false;
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = "SELECT [ID] ,[FirstName] ,[SecondName],[LastName],[PhoneNumber],[Gender]" +
+            string query = "SELECT  [FirstName] ,[SecondName],[LastName],[PhoneNumber],[Gender]" +
                 " ,[Birthdate],[CountryID],[Email],[NationalID],[Address],[ImagePath] " +
                 "FROM[dbo].[People] where ID = @PersonID; ";
 
@@ -94,7 +94,59 @@ namespace DataAccessLayer
             return IsFound;
         }
 
-        
+        static public bool GetPersonInfoByNationalID(string NationalID,ref int PersonID, ref string FirstName, ref string SecondName,
+ref string LastName, ref string PhoneNumber, ref char Gender, ref DateTime Birthdate, ref int CountryID,
+ref string Email, ref string Address, ref string ImagePath)
+        {
+            bool IsFound = false;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "SELECT [ID] ,[FirstName] ,[SecondName],[LastName],[PhoneNumber],[Gender]" +
+                " ,[Birthdate],[CountryID],[Email],[Address],[ImagePath] " +
+                "FROM[dbo].[People] where NationalID = @NationalID; ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("NationalID", NationalID);
+
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    IsFound = true;
+                    FirstName = (string)reader["FirstName"];
+                    SecondName = (string)reader["SecondName"];
+                    LastName = (string)reader["LastName"];
+                    PhoneNumber = (string)reader["PhoneNumber"];
+                    Birthdate = (DateTime)reader["Birthdate"];
+                    Gender = (char)reader["Gender"];
+                    CountryID = (int)reader["CountryID"];
+                    Email = (string)reader["Email"];
+                    PersonID = (int)reader["ID"];
+                    Address = (string)reader["Address"];
+                    if ((string)reader["ImagePath"] != "")
+                        ImagePath = (string)reader["ImagePath"];
+                    else
+                        ImagePath = "";
+                }
+
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
+
+
         static public bool AddNewPerson(string FirstName, string SecondName, string LastName,
             string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
             string NationalID, string Address, string ImagePath)
@@ -230,5 +282,7 @@ namespace DataAccessLayer
 
             return (rowEffect > 0);
         }
+
+
     }
 }
