@@ -80,7 +80,10 @@ namespace DataBusinessLayer
             return ClassesDataAccess.GetAllClasses();
         }
 
-
+        public static bool DeleteClass(int ClassID)
+        {
+            return ClassesDataAccess.DeleteClass(ClassID);
+        }
 
 
 
