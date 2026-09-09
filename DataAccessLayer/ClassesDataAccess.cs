@@ -271,6 +271,95 @@ Classes.IsActive from Classes ;
 
 
 
+        public static bool GetClassInfoByClassID(int ClassID, ref int CoachID,ref string className, ref string Description,ref TimeSpan StartTime,ref TimeSpan EndTime, ref string Note,ref byte Maximum_Capacity,
+       ref bool IsActive,ref string StartDay, ref string EndDay)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string query = "SELECT * FROM Classes WHERE ClassID = @ClassID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ClassID", ClassID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // The record was found
+                    isFound = true;
+
+                    if (reader["Note"] != DBNull.Value)
+                    {
+                        Note = (string)reader["Note"];
+                    }
+                    else
+                    {
+                        Note = "";
+                    }
+
+                    if (reader["StartDay"] != DBNull.Value)
+                    {
+                        StartDay = (string)reader["StartDay"];
+                    }
+                    else
+                    {
+                        StartDay = "";
+                    }
+
+                    if (reader["EndDay"] != DBNull.Value)
+                    {
+                        EndDay = (string)reader["EndDay"];
+                    }
+                    else
+                    {
+                        EndDay = "";
+                    }
+
+                    if (reader["Description"] != DBNull.Value)
+                    {
+                        Description = (string)reader["Description"];
+                    }
+                    else
+                    {
+                        Description = "";
+                    }
+
+                    Maximum_Capacity = (byte)reader["Maximum_Capacity"];
+                    IsActive = (bool)reader["IsActive"];
+                    CoachID = (int)reader["CoachID"];
+                    StartTime = (TimeSpan)reader["StartTime"];
+                    EndTime = (TimeSpan)reader["EndTime"];
+
+                    
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
 
 
     }
