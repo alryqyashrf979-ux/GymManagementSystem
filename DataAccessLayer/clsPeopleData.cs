@@ -94,5 +94,57 @@ namespace DataAccessLayer
             return IsFound;
         }
 
+
+        static public bool AddNewPerson(string FirstName, string SecondName, string LastName,
+            string PhoneNumber, char Gendor, DateTime Birthdate, int CountryID, string Email,
+            string NationalID, string Address, string ImagePath)
+        {
+            int PersonID = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "  INSERT INTO [dbo].[People] ([FirstName],[SecondName],[LastName]," +
+                " [PhoneNumber],[Gendre],[Birthdate],[CountryID],[Email],[NationalID],[Address]," +
+                "[ImagePath]) VALUES (@FirstName,@SecondName,@LastName,@PhoneNumber,@Gendre," +
+                "@Birthdate,@CountryID,@Email,@NationalID,@Address,@ImagePath) " +
+                "select scope_Identity;";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("FirstName", FirstName);
+            command.Parameters.AddWithValue("SecondName", SecondName);
+            command.Parameters.AddWithValue("LastName", LastName);
+            command.Parameters.AddWithValue("PhoneNumber", PhoneNumber);
+            command.Parameters.AddWithValue("Gendre", Gendor);
+            command.Parameters.AddWithValue("Birthdate", Birthdate);
+            command.Parameters.AddWithValue("CountryID", CountryID);
+            command.Parameters.AddWithValue("Email", Email);
+            command.Parameters.AddWithValue("NationalID", NationalID);
+            command.Parameters.AddWithValue("Address", Address);
+            if (ImagePath == "")
+                command.Parameters.AddWithValue("ImagePath", DBNull.Value);
+            else
+                command.Parameters.AddWithValue("ImagePath", ImagePath);
+
+            try
+            {
+                connection.Open();
+                object Resault = command.ExecuteScalar();
+                if (int.TryParse(Resault.ToString(), out int _PersonID))
+                {
+                    PersonID = _PersonID;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (PersonID != -1);
+        }
     }
 }
