@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace DataBusinessLayer
 
         //  Implemented a private `AddClass()` method to handle adding new
         //classes via
-        private bool AddClass()
+        private bool _AddClass()
         {
             this.ClassID = DataAccessLayer.ClassesDataAccess.AddNewClass(this.CoachID, this.className, this.Description, this.StartTime,
                 this.EndTime, this.Note,
@@ -38,7 +39,13 @@ namespace DataBusinessLayer
 
             return (this.ClassID != -1);
         }
+        private bool _UpdateClass()
+        {
+            //call DataAccess Layer 
 
+            return ClassesDataAccess.UpdateClass(this.ClassID,this.CoachID,this.className,this.Description,this.StartTime,this.EndTime
+                ,this.Note,this.Maximum_Capacity,this.IsActive,this.StartDay,this.EndDay);
+        }
 
         //Added a public `Save()` method to manage saving logic based on
         //the current mode, supporting both adding and updating classes.
@@ -48,7 +55,7 @@ namespace DataBusinessLayer
             {
 
                 case enMode.AddNew:
-                    if (AddClass())
+                    if (_AddClass())
                     {
                         _Mode = enMode.Update;
                         return true;
@@ -59,7 +66,7 @@ namespace DataBusinessLayer
                     }
 
                 case enMode.Update:
-                    return true;
+                    return _UpdateClass();
 
             }
 
