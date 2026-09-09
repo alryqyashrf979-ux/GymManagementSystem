@@ -77,7 +77,7 @@ namespace DataBusinessLayer
         //classes via
         private bool _AddClass()
         {
-            this.ClassID = DataAccessLayer.ClassesDataAccess.AddNewClass(this.CoachID, this.className, this.Description, this.StartTime,
+            this.ClassID = DataAccessLayer.clsClassesData.AddNewClass(this.CoachID, this.className, this.Description, this.StartTime,
                 this.EndTime, this.Note,
                 this.Maximum_Capacity, this.IsActive, this.StartDay, this.EndDay);
 
@@ -87,7 +87,7 @@ namespace DataBusinessLayer
         {
             //call DataAccess Layer 
 
-            return ClassesDataAccess.UpdateClass(this.ClassID,this.CoachID,this.className,this.Description,this.StartTime,this.EndTime
+            return clsClassesData.UpdateClass(this.ClassID,this.CoachID,this.className,this.Description,this.StartTime,this.EndTime
                 ,this.Note,this.Maximum_Capacity,this.IsActive,this.StartDay,this.EndDay);
         }
 
@@ -120,12 +120,12 @@ namespace DataBusinessLayer
 
         public static DataTable GetAllClasses()
         {
-            return ClassesDataAccess.GetAllClasses();
+            return clsClassesData.GetAllClasses();
         }
 
         public static bool DeleteClass(int ClassID)
         {
-            return ClassesDataAccess.DeleteClass(ClassID);
+            return clsClassesData.DeleteClass(ClassID);
         }
 
         public static clsClasses GetClassInfoByClassID(int ClassID)
@@ -141,7 +141,7 @@ namespace DataBusinessLayer
             string endDay = string.Empty;
             bool isActive = false;
 
-            if(ClassesDataAccess.GetClassInfoByClassID(ClassID,ref  coachID,ref className,ref Description,ref startTime
+            if(clsClassesData.GetClassInfoByClassID(ClassID,ref  coachID,ref className,ref Description,ref startTime
                 ,ref endTime,ref note,ref maximumCapacity,ref isActive,ref startDay,ref endDay))
             {
 
