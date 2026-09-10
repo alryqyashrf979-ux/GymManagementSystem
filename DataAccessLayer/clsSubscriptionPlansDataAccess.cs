@@ -14,11 +14,11 @@ using System.Xml.Linq;
 
 namespace DataAccessLayer
 {
-    static class clsSubscriptionPlansDataAccess
+    public static class clsSubscriptionPlansDataAccess
     {
         //PlamID , PlanName , PlanDescription , Availablity, PlanPrice  , Note .
 
-        static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price, ref string Note)
+      public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price, ref string Note)
         {
             string query = $"SELECT Name, Description, Availablity, Price, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -44,7 +44,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static int Add(string Name, string Description, bool Availablity, decimal Price, string Note)
+        public static int Add(string Name, string Description, bool Availablity, decimal Price, string Note)
         {
             string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note) ; SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -67,7 +67,7 @@ namespace DataAccessLayer
                     return -1;
             }
         }
-        static bool Update(string Name, string Description, bool Availiablity, decimal Price, string Note)
+       public static bool Update(string Name, string Description, bool Availiablity, decimal Price, string Note)
         {
             string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description, Availiablity= @AAvailiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -85,7 +85,7 @@ namespace DataAccessLayer
 
             }
         }
-        static bool Delete(int PlanID)
+       public static bool Delete(int PlanID)
         {
             string Query = "Delete From SubscriptionPlans where PlanID = @PlanID";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -95,7 +95,7 @@ namespace DataAccessLayer
                 return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
             }
         }
-        static bool SetAvailiability(int PlanID, bool Availiability)
+       public static bool SetAvailiability(int PlanID, bool Availiability)
         {
             string Query = " Update SubscriptionPlans set Availiablity =@Availiability where PlanID = @PlanID ";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -107,7 +107,7 @@ namespace DataAccessLayer
                 return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
             }
         }
-        static DataTable GetAllSubscriptionPlans()
+       public static DataTable GetAllSubscriptionPlans()
         {
             DataTable dt = new DataTable();
             string Query = "select * from SubscriptionPlans ";
