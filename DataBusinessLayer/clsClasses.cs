@@ -11,8 +11,9 @@ namespace DataBusinessLayer
 {
     public class clsClasses
     {
-
-        public int ClassID { get; set; }
+        // Ashraf edited the property and access modifier of the class ID
+        private int _ClassID = -1;
+        public int ClassID { get { return _ClassID; } }
         public string className { get; set; }
         public string Description { get; set; }
         public TimeSpan StartTime { get; set; }
@@ -34,8 +35,8 @@ namespace DataBusinessLayer
         private clsClasses(int classID, string className, string description, TimeSpan startTime, TimeSpan endTime,
             string note, byte maximum_Capacity, bool isActive, string startDay, string endDay, int coachID)
         {
-
-            this.ClassID = classID;
+            // Ashraf edited this.ClassID to this._ClassID
+            this._ClassID = classID;
             this.className = className;
             this.Description = description;
             this.StartTime = startTime;
@@ -54,7 +55,8 @@ namespace DataBusinessLayer
 
         public clsClasses()
         {
-            this.ClassID = -1;
+            // Ashraf edited this.ClassID to this._ClassID
+            this._ClassID = -1;
             this.CoachID = -1;
             this.Note = "";
             this.StartDay = "";
@@ -77,7 +79,8 @@ namespace DataBusinessLayer
         //classes via
         private bool _AddClass()
         {
-            this.ClassID = DataAccessLayer.clsClassesData.AddNewClass(this.CoachID, this.className, this.Description, this.StartTime,
+            // Ashraf edited this.ClassID to this._ClassID
+            this._ClassID = DataAccessLayer.clsClassesData.AddNewClass(this.CoachID, this.className, this.Description, this.StartTime,
                 this.EndTime, this.Note,
                 this.Maximum_Capacity, this.IsActive, this.StartDay, this.EndDay);
 
