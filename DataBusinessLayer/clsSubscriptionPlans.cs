@@ -71,7 +71,28 @@ namespace DataBusinessLayer
         {
             return clsSubscriptionPlansDataAccess.Update(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
         }
-       
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.Add:
+                    {
+                        if (_Add())
+                            return true;
+                        else
+                            return false;
+                    }
+                case enMode.Update:
+                    {
+                        if (_Update())
+                            return true;
+                        else return false;
+                    }
+
+            }
+            return false;
+        }
+
 
 
     }
