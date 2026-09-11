@@ -61,7 +61,17 @@ namespace DataBusinessLayer
             else return null;
         }
 
+        private bool _Add()
+        {
+            this._PlanID = clsSubscriptionPlansDataAccess.Add(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
+            return this._PlanID > -1;
+        }
 
+        private bool _Update()
+        {
+            return clsSubscriptionPlansDataAccess.Update(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
+        }
+       
 
 
     }
