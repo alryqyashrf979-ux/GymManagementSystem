@@ -81,6 +81,7 @@ namespace DataAccessLayer
             else
                 Command.Parameters.AddWithValue("@EndDay", DBNull.Value);
 
+
                      if(!string.IsNullOrEmpty(StartDay))
                 Command.Parameters.AddWithValue("@StartDay", StartDay);
             else
@@ -226,7 +227,7 @@ Classes.IsActive from Classes ;
      , Classes.IsActive 
 FROM Classes 
 ORDER BY Classes.IsActive DESC, Classes.CoachID ASC; ;
-";
+
 
 
             SqlCommand command = new SqlCommand(query, connection);
