@@ -141,9 +141,9 @@ namespace DataAccessLayer
 
             Command.Parameters.AddWithValue("@ClassID", ClassID);
             Command.Parameters.AddWithValue("@className", className);
+            //      adding !string.IsNullOrEmpty(Description) to simlpifygit  code
 
-
-            if (Description != "" && Description != null)
+            if (!string.IsNullOrEmpty(Description))
                 Command.Parameters.AddWithValue("@Description", Description);
             else
                 Command.Parameters.AddWithValue("@Description", DBNull.Value);
@@ -151,7 +151,7 @@ namespace DataAccessLayer
             Command.Parameters.AddWithValue("@StartTime", StartTime);
             Command.Parameters.AddWithValue("@EndTime", EndTime);
 
-            if (Note != "" && Note != null)
+            if (!string.IsNullOrEmpty(Note))
                 Command.Parameters.AddWithValue("@Note", Note);
             else
                 Command.Parameters.AddWithValue("@Note", DBNull.Value);
@@ -159,12 +159,13 @@ namespace DataAccessLayer
             Command.Parameters.AddWithValue("@Maximum_Capacity", Maximum_Capacity);
             Command.Parameters.AddWithValue("@IsActive", IsActive);
 
-            if (EndDay != "" && EndDay != null)
+            if (!string.IsNullOrEmpty(EndDay))
                 Command.Parameters.AddWithValue("@EndDay", EndDay);
             else
                 Command.Parameters.AddWithValue("@EndDay", DBNull.Value);
+            // StartDay != "" not null 
 
-            if (StartDay != null && StartDay != null)
+            if (!string.IsNullOrEmpty(StartDay))
                 Command.Parameters.AddWithValue("@StartDay", StartDay);
             else
                 Command.Parameters.AddWithValue("@StartDay", DBNull.Value);
@@ -194,9 +195,20 @@ namespace DataAccessLayer
 
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            /*
+                changeed @"select Classes.ClassID as 'Class ID' ,Classes.className,Classes.CoachID,Classes.StartTime,Classes.EndTime,Classes.Maximum_Capacity,
+Classes.IsActive from Classes ;
 
+            to 
+
+               @"select Classes.ClassID as 'Class ID' ,Classes.className as 'Class Name ',Classes.CoachID as 'Coach ID',Classes.StartTime as'Start Time
+',Classes.EndTime as 'End Time',Classes.Maximum_Capacity,
+Classes.IsActive from Classes ;
+";
+            */
             string query =
-              @"select Classes.ClassID,Classes.className,Classes.CoachID,Classes.StartTime,Classes.EndTime,Classes.Maximum_Capacity,
+              @"select Classes.ClassID as 'Class ID' ,Classes.className as 'Class Name ',Classes.CoachID as 'Coach ID',Classes.StartTime as'Start Time
+',Classes.EndTime as 'End Time',Classes.Maximum_Capacity,
 Classes.IsActive from Classes ;
 ";
 
@@ -222,7 +234,6 @@ Classes.IsActive from Classes ;
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
             }
             finally
             {
