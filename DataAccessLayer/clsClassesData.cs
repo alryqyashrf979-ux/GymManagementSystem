@@ -81,7 +81,7 @@ namespace DataAccessLayer
             else
                 Command.Parameters.AddWithValue("@EndDay", DBNull.Value);
 
- (!string.IsNullOrEmpty(StartDay))
+                     if(!string.IsNullOrEmpty(StartDay))
                 Command.Parameters.AddWithValue("@StartDay", StartDay);
             else
                 Command.Parameters.AddWithValue("@StartDay", DBNull.Value);
