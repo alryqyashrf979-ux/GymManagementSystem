@@ -97,6 +97,13 @@ namespace DataBusinessLayer
         {
             return clsSubscriptionPlansDataAccess.Delete(planID);
         }
-
+        public bool Activate()
+        {
+            return clsSubscriptionPlansDataAccess.SetAvailiability(this.PlanID, true);
+        }
+        public bool Deactivate()
+        {
+            return clsSubscriptionPlansDataAccess.SetAvailiability(this.PlanID, false);
+        }
     }
 }
