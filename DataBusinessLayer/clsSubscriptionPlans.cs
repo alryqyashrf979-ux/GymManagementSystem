@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,19 @@ namespace DataBusinessLayer
             this.Note = note;
             this.Mode = enMode.Update;
 
+        }
+
+        public static clsSubscriptionPlans Find(int PlanID)
+        {
+            string PlanName = string.Empty;
+            string PlanDescription = string.Empty;
+            string Note = string.Empty;
+            decimal PlanPrice = default(decimal);
+            bool Availiablity = true;
+
+            if (clsSubscriptionPlansDataAccess.FindPlan(PlanID, ref PlanName, ref PlanDescription, ref Availiablity, ref PlanPrice, ref Note))
+                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note);
+            else return null;
         }
 
 
