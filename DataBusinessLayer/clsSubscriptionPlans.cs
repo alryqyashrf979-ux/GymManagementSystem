@@ -93,7 +93,10 @@ namespace DataBusinessLayer
             return false;
         }
 
-
+        public static bool Delete(int planID)
+        {
+            return clsSubscriptionPlansDataAccess.Delete(planID);
+        }
 
     }
 }
