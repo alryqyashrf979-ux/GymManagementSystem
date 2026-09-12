@@ -79,7 +79,12 @@ namespace DataBusinessLayer
                 case enMode.Add:
                     {
                         if (_Add())
+                        {
+
+                            Mode=enMode.Update;
+                            //Change the Mode To Update
                             return true;
+                        }
                         else
                             return false;
                     }
