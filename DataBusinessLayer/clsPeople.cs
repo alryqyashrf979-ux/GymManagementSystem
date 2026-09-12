@@ -84,10 +84,52 @@ namespace DataBusinessLayer
 
 
 
+        private bool _AddNewPerson()
+        {
+            //call DataAccess Layer 
+
+            this.int_PersonID = clsPeopleDataAccess.AddNewPerson(this.FirstName, this.SecondName,
+                this.LastName, this.PhoneNumber, this.Gender, this.DateOfBirth, this.NationalityCountryID,
+                this.Email, this.NationalNo, this.Address, this.ImagePath);
+
+            return (this.int_PersonID != -1);
+        }
+
+        private bool _UpdatePerson()
+        {
+            //call DataAccess Layer 
+
+            return clsPeopleDataAccess.UpdatePersonInfo(this.PersonID,this.FirstName, this.SecondName,
+                this.LastName, this.PhoneNumber, this.Gender, this.DateOfBirth, this.NationalityCountryID,
+                this.Email, this.NationalNo, this.Address, this.ImagePath);
+        }
 
 
 
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewPerson())
+                    {
 
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdatePerson();
+
+            }
+
+            return false;
+        }
 
 
 
