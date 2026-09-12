@@ -135,22 +135,22 @@ namespace DataAccessLayer
             }
         }
 
-        //static public DataTable GetAllMembers()
-        //{
-        //    DataTable dt = new DataTable();
-        //    string Query = "select * from Members ";
-        //    using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
-        //    using (SqlCommand command = new SqlCommand(Query, con))
-        //    {
-        //        using (SqlDataReader reader = command.ExecuteReader())
-        //        {
-        //            if (reader.HasRows)
-        //                dt.Load(reader);
-        //        }
-        //        return dt;
+        static public DataTable GetAllMembers()
+        {
+            DataTable dt = new DataTable();
+            string Query = "select * from Members ";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                        dt.Load(reader);
+                }
+                return dt;
 
-        //    }
-        //}
+            }
+        }
 
 
 
