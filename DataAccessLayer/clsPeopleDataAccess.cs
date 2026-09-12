@@ -201,6 +201,62 @@ ref string Email, ref string Address, ref string ImagePath)
 
             return (PersonID != -1);
         }
+        static public bool UpdatePersonInfo(int PersonID, string FirstName, string SecondName, string LastName,
+           string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
+           string NationalID, string Address, string ImagePath)
+        {
+            int rowEffect = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = " UPDATE [dbo].[People] SET" +
+                " [FirstName] = @FirstName," +
+                "[SecondName] = @SecondName," +
+                "[LastName] = @LastName," +
+                "[PhoneNumber] = @PhoneNumber," +
+                "[Gender] = @Gender," +
+                "[Birthdate] = @Birthdate," +
+                "[CountryID] = @CountryID," +
+                "[Email] = @Email," +
+                "[NationalID] = @NationalID," +
+                "[Address] = @Address," +
+                "[ImagePath] = @ImagePath " +
+                "WHERE ID=@PersonID; ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@FirstName", FirstName);
+            command.Parameters.AddWithValue("@SecondName", SecondName);
+            command.Parameters.AddWithValue("@LastName", LastName);
+            command.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+            command.Parameters.AddWithValue("@Gender", Gender);
+            command.Parameters.AddWithValue("@Birthdate", Birthdate);
+            command.Parameters.AddWithValue("@CountryID", CountryID);
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@NationalID", NationalID);
+            command.Parameters.AddWithValue("@Address", Address);
+            if (ImagePath == "")
+                command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+            else
+                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+
+            try
+            {
+                connection.Open();
+                rowEffect = command.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowEffect > 0);
+        }
 
     }
 }
