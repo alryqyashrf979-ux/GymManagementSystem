@@ -138,7 +138,20 @@ namespace DataBusinessLayer
             return clsPeopleDataAccess.GetAllPeople();
         }
 
+        public static bool DeletePerson(int ID)
+        {
+            return clsPeopleDataAccess.DeletePerson(ID);
+        }
 
+        public static bool isPersonExist(int ID)
+        {
+            return clsPeopleDataAccess.DoesPersonExist(ID);
+        }
+
+        public static bool isPersonExist(string NationlNo)
+        {
+            return clsPeopleDataAccess.DoesPersonExist(NationlNo);
+        }
 
     }
 }
