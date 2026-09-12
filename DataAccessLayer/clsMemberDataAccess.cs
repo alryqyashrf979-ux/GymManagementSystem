@@ -112,16 +112,16 @@ namespace DataAccessLayer
             return false;
         }
 
-        //static public bool DoesPersonExistByPersonID(int PersonID)
-        //{
-        //    string Query = "select Found = 1 from Members where PersonID = @PersonID";
-        //    using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
-        //    using (SqlCommand command = new SqlCommand(Query, con))
-        //    {
-        //        command.Parameters.AddWithValue("@PersonID", PersonID);
-        //        return command.ExecuteNonQuery() > 0;
-        //    }
-        //}
+        static public bool DoesPersonExistByPersonID(int PersonID)
+        {
+            string Query = "select Found = 1 from Members where PersonID = @PersonID";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                return command.ExecuteNonQuery() > 0;
+            }
+        }
 
         //static public DataTable GetAllMembers()
         //{
