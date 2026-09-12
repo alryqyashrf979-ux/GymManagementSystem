@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -98,7 +100,50 @@ namespace DataAccessLayer
             }
             return false;
         }
+        static public bool Delete(int MemberID)
+        {
+            string Query = "Delete from Members Where MemberID =@MemberID ";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                command.Parameters.AddWithValue("@MemberID", MemberID);
+                return command.ExecuteNonQuery() > 0;
+            }
+            return false;
+        }
+
+        //static public bool DoesPersonExistByPersonID(int PersonID)
+        //{
+        //    string Query = "select Found = 1 from Members where PersonID = @PersonID";
+        //    using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+        //    using (SqlCommand command = new SqlCommand(Query, con))
+        //    {
+        //        command.Parameters.AddWithValue("@PersonID", PersonID);
+        //        return command.ExecuteNonQuery() > 0;
+        //    }
+        //}
+
+        //static public DataTable GetAllMembers()
+        //{
+        //    DataTable dt = new DataTable();
+        //    string Query = "select * from Members ";
+        //    using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+        //    using (SqlCommand command = new SqlCommand(Query, con))
+        //    {
+        //        using (SqlDataReader reader = command.ExecuteReader())
+        //        {
+        //            if (reader.HasRows)
+        //                dt.Load(reader);
+        //        }
+        //        return dt;
+
+        //    }
+        //}
+
+
+
+    }
 
 
 }
-}
+
