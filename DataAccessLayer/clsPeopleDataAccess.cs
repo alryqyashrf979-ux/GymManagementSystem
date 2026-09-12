@@ -18,10 +18,10 @@ namespace DataAccessLayer
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
             // in this way it is formatted and ready to present .
-            string query = "select ID ,nationalID as 'National ID', FirstName+' '+SecondName+' '+ LastName as 'Full Name' " +
-                ", PhoneNumber as 'Phone Number' , \r\ncase when gender = 0 then 'Male' else 'Female'  end as 'Gendre' " +
-                ", Birthdate as 'Birth date' , C.CountryName as 'Country ',\r\nEmail , Address" +
-                " from people P inner join Countries C on P.COuntryID = C.CountryID\r\n";
+            string query = @"select ID ,nationalID as 'National ID', FirstName+' '+SecondName+' '+ LastName as 'Full Name'
+                , PhoneNumber as 'Phone Number' ,case when p.Gendre = 0 then 'Male' else 'Female'  end as 'Gendre' 
+                , Birthdate as 'Birth date' , C.CountryName as 'Country ',Email , Address
+                 from people P inner join Countries C on P.CountryID = C.CountryID";
             SqlCommand command = new SqlCommand(query, connection);
 
             try
@@ -80,7 +80,7 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
                     NationalID = (string)reader["NationalID"];
                     Address = (string)reader["Address"];
 
-                    if ((string)reader["ImagePath"] != "")
+                    if (reader["ImagePath"] != DBNull.Value)
                         ImagePath = (string)reader["ImagePath"];
                     else
                         ImagePath = "";
@@ -133,7 +133,8 @@ ref string Email, ref string Address, ref string ImagePath)
                     Email = (string)reader["Email"];
                     PersonID = (int)reader["ID"];
                     Address = (string)reader["Address"];
-                    if (!string.IsNullOrEmpty((string)reader["ImagePath"]))
+
+                    if (reader["ImagePath"] != DBNull.Value)
                         ImagePath = (string)reader["ImagePath"];
                     else
                         ImagePath = "";
@@ -161,7 +162,7 @@ ref string Email, ref string Address, ref string ImagePath)
             string query = "  INSERT INTO [dbo].[People] ([FirstName],[SecondName],[LastName]," +
                 " [PhoneNumber],[Gender],[Birthdate],[CountryID],[Email],[NationalID],[Address]," +
                 "[ImagePath]) VALUES (@FirstName,@SecondName,@LastName,@PhoneNumber,@Gender," +
-                "@Birthdate,@CountryID,@Email,@NationalID,@Address,@ImagePath) " +
+                "@Birthdate,@CountryID,@Email,@NationalID,@Address,@ImagePath); " +
                 "select scope_Identity();";
 
 
@@ -177,10 +178,11 @@ ref string Email, ref string Address, ref string ImagePath)
             command.Parameters.AddWithValue("@Email", Email);
             command.Parameters.AddWithValue("@NationalID", NationalID);
             command.Parameters.AddWithValue("@Address", Address);
-            if (ImagePath == "")
-                command.Parameters.AddWithValue("ImagePath", DBNull.Value);
-            else
+
+            if (!string.IsNullOrEmpty(ImagePath))
                 command.Parameters.AddWithValue("ImagePath", ImagePath);
+            else
+                command.Parameters.AddWithValue("ImagePath", DBNull.Value);
 
             try
             {
@@ -237,10 +239,12 @@ ref string Email, ref string Address, ref string ImagePath)
             command.Parameters.AddWithValue("@Email", Email);
             command.Parameters.AddWithValue("@NationalID", NationalID);
             command.Parameters.AddWithValue("@Address", Address);
-            if (ImagePath == "")
-                command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
+            if (!string.IsNullOrEmpty(ImagePath))
+                command.Parameters.AddWithValue("ImagePath", ImagePath);
             else
-                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                command.Parameters.AddWithValue("ImagePath", DBNull.Value);
+
 
             try
             {
