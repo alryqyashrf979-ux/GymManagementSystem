@@ -133,6 +133,54 @@ namespace DataBusinessLayer
         }
 
 
+
+        public static clsPeople Find(int PersonID)
+        {
+
+            string FirstName = "", SecondName = "", LastName = "", NationalNo = "", Email = "", Phone = "", Address = "", ImagePath = "";
+            DateTime DateOfBirth = DateTime.Now;
+            int NationalityCountryID = -1;
+            char Gendor = '0';
+
+            bool IsFound = clsPeopleDataAccess.GetPersonInfo
+                                (
+                                  PersonID, ref FirstName, ref SecondName, ref LastName, ref Phone,
+                                  ref Gendor, ref DateOfBirth, ref NationalityCountryID, ref Email
+                                  , ref NationalNo, ref Address, ref ImagePath
+                                );
+
+            if (IsFound)
+                //we return new object of that person with the right data
+                return new clsPeople(PersonID, FirstName, SecondName, LastName, NationalNo, DateOfBirth,
+                    Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
+            else
+                return null;
+        }
+
+        public static clsPeople Find(string NationalNo)
+        {
+            string FirstName = "", SecondName = "", LastName = "", Email = "", Phone = "", Address = "", ImagePath = "";
+            DateTime DateOfBirth = DateTime.Now;
+            int PersonID = -1, NationalityCountryID = -1;
+            char Gendor = '0';
+
+            bool IsFound = clsPeopleDataAccess.GetPersonInfo
+                                (
+                                   NationalNo, ref PersonID, ref FirstName, ref SecondName, ref LastName, ref Phone,
+                                  ref Gendor, ref DateOfBirth, ref NationalityCountryID, ref Email
+                                  , ref Address, ref ImagePath
+                                );
+
+            if (IsFound)
+                return new clsPeople(PersonID, FirstName, SecondName, LastName, NationalNo, DateOfBirth,
+                    Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
+            else
+                return null;
+        }
+
+
+
+
         public static DataTable GetAllPeople()
         {
             return clsPeopleDataAccess.GetAllPeople();
