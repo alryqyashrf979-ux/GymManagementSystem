@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsClassesData.cs" />
+    <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
     <Compile Include="DataAccessSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
