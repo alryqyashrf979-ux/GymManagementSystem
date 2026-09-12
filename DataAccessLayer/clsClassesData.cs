@@ -81,7 +81,7 @@ namespace DataAccessLayer
             else
                 Command.Parameters.AddWithValue("@EndDay", DBNull.Value);
 
-                     if(!string.IsNullOrEmpty(StartDay))
+ (!string.IsNullOrEmpty(StartDay))
                 Command.Parameters.AddWithValue("@StartDay", StartDay);
             else
                 Command.Parameters.AddWithValue("@StartDay", DBNull.Value);
@@ -217,15 +217,9 @@ Classes.IsActive from Classes ;
 ";
             */
             string query =
-              @"SELECT Classes.ClassID AS 'Class ID' 
-     , Classes.className AS 'Class Name' 
-     , Classes.CoachID AS 'Coach ID' 
-     , Classes.StartTime AS 'Start Time' 
-     , Classes.EndTime AS 'End Time' 
-     , Classes.Maximum_Capacity
-     , Classes.IsActive 
-FROM Classes 
-ORDER BY Classes.IsActive DESC, Classes.CoachID ASC; ;
+              @"select Classes.ClassID as 'Class ID' ,Classes.className as 'Class Name ',Classes.CoachID as 'Coach ID',Classes.StartTime as'Start Time
+',Classes.EndTime as 'End Time',Classes.Maximum_Capacity,
+Classes.IsActive from Classes ;
 ";
 
 
