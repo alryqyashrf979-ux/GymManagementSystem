@@ -66,7 +66,7 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                if (reader.Read())
                 {
                     IsFound = true;
                     FirstName = (string)reader["FirstName"];
@@ -79,6 +79,7 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
                     Email = (string)reader["Email"];
                     NationalID = (string)reader["NationalID"];
                     Address = (string)reader["Address"];
+
                     if ((string)reader["ImagePath"] != "")
                         ImagePath = (string)reader["ImagePath"];
                     else
@@ -119,7 +120,7 @@ ref string Email, ref string Address, ref string ImagePath)
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                if (reader.Read())
                 {
                     IsFound = true;
                     FirstName = (string)reader["FirstName"];
