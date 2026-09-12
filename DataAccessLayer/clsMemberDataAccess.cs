@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,10 +41,9 @@ namespace DataAccessLayer
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand cmd = new SqlCommand(Query, con))
             {
-                cmd.Parameters.AddWithValue("@PersonID", MemberID);
+                cmd.Parameters.AddWithValue("@PersonID", PersonID);
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-
                     if (reader.Read())
                     {
                         MemberID = (int)reader["MemberID"];
@@ -56,6 +56,26 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        static public int Add(int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        {
+            string Query = "Insert into Members " +
+                "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID) , select SCOPE_IDENTITY();";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+                command.Parameters.AddWithValue("@IsActive", IsActive);
+                command.Parameters.AddWithValue("@ContactPersonInfoID", ContactPersonInfoID);
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int NewID))
+                    return NewID;
+            }
+            return -1;
+
+        }
+       
     
 }
 }
