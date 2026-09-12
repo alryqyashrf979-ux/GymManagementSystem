@@ -34,5 +34,28 @@ namespace DataAccessLayer
             }
             return false;
         }
-    }
+        static public bool FindmemberByPersonID(int PersonID, ref int MemberID, ref DateTime LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
+        {
+            string Query = "select * from Members where PersonID = @PersonID";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, con))
+            {
+                cmd.Parameters.AddWithValue("@PersonID", MemberID);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+
+                    if (reader.Read())
+                    {
+                        MemberID = (int)reader["MemberID"];
+                        LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
+                        IsActive = (bool)reader["IsActive"];
+                        ContactPersonInfo = (int)reader["ContactPersonInfo"];
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+    
+}
 }
