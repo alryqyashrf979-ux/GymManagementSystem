@@ -152,7 +152,7 @@ ref string Email, ref string Address, ref string ImagePath)
 
             return IsFound;
         }
-        static public bool AddNewPerson(string FirstName, string SecondName, string LastName,
+        static public int AddNewPerson(string FirstName, string SecondName, string LastName,
         string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
         string NationalID, string Address, string ImagePath)
         {
@@ -202,7 +202,7 @@ ref string Email, ref string Address, ref string ImagePath)
                 connection.Close();
             }
 
-            return (PersonID != -1);
+            return PersonID;
         }
         static public bool UpdatePersonInfo(int PersonID, string FirstName, string SecondName, string LastName,
            string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
