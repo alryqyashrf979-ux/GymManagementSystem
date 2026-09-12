@@ -75,7 +75,30 @@ namespace DataAccessLayer
             return -1;
 
         }
-       
-    
+
+        static public bool Update(int MemberID, int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        {
+            string Query = " Update Members " +
+                "set PersonID = @PersonID , " +
+                "LastSubscriptionID = @LastSubscriptionID ," +
+                "IsActive = @IsActive , " +
+                "ContactPersonInfoID = @ContactPersonInfoID " +
+                "where MemberID = @MemberID";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+                command.Parameters.AddWithValue("@IsActive", IsActive);
+                command.Parameters.AddWithValue("@ContactPersonInfoID", ContactPersonInfoID);
+                command.Parameters.AddWithValue("@MemberID", MemberID);
+
+                return command.ExecuteNonQuery() > 0;
+
+            }
+            return false;
+        }
+
+
 }
 }
