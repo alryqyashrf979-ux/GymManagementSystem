@@ -285,6 +285,31 @@ ref string Email, ref string Address, ref string ImagePath)
 
             return (rowEffect > 0);
         }
+        static public bool DoesPersonExist(int PersonID)
+        {
+            bool IsFound = false;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "select Found=1 from People where ID=@PersonID;";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                IsFound = reader.HasRows;
+            }
+            catch (Exception ex)
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
 
 
     }
