@@ -151,6 +151,7 @@ namespace DataAccessLayer
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
                     //Open the database Connection
+                    conn.Open();
 
                     using (SqlCommand cmd = new SqlCommand(Query, conn))
                     {
@@ -165,16 +166,28 @@ namespace DataAccessLayer
                 return false;
             }
         }
-       public static bool SetAvailiability(int PlanID, bool Availiability)
+        public static bool SetAvailiability(int PlanID, bool Availiability)
         {
             string Query = " Update SubscriptionPlans set Availiablity =@Availiability where PlanID = @PlanID ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            try
             {
-                cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                cmd.Parameters.AddWithValue("@Availiability", Availiability);
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+                    conn.Open();
 
-                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                        cmd.Parameters.AddWithValue("@Availiability", Availiability);
+
+                        return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
        public static DataTable GetAllSubscriptionPlans()
