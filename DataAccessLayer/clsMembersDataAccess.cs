@@ -26,5 +26,15 @@ namespace DataAccessLayer
 
             }
         }
+        static public bool DoesPersonExistByMemberID(int MemberID)
+        {
+            string Query = "select Found = 1 from Members where MemberID = @MemberID";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                command.Parameters.AddWithValue("@MemberID", MemberID);
+                return command.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }
