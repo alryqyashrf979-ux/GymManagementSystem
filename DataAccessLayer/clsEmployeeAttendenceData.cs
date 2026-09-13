@@ -78,12 +78,12 @@ namespace DataAccessLayer
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("AttendanceID", AttendanceID);
-            command.Parameters.AddWithValue("EmployeeID", EmployeeID);
-            command.Parameters.AddWithValue("CheckInTime", CheckInTime);
-            command.Parameters.AddWithValue("CheckoutTime", CheckoutTime);
-            command.Parameters.AddWithValue("Note", Note);
-            command.Parameters.AddWithValue("IsStillWorking", IsStillWorking);
+            command.Parameters.AddWithValue("@AttendanceID", AttendanceID);
+            command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
+            command.Parameters.AddWithValue("@CheckInTime", CheckInTime);
+            command.Parameters.AddWithValue("@CheckoutTime", CheckoutTime);
+            command.Parameters.AddWithValue("@Note", Note);
+            command.Parameters.AddWithValue("@IsStillWorking", IsStillWorking);
 
             try
             {
@@ -112,16 +112,16 @@ namespace DataAccessLayer
                 "Select scope_Identity();";
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("EmployeeID", EmployeeID);
-            command.Parameters.AddWithValue("CheckInTime", CheckInTime);
-            command.Parameters.AddWithValue("CheckoutTime", CheckoutTime);
+            command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
+            command.Parameters.AddWithValue("@CheckInTime", CheckInTime);
+            command.Parameters.AddWithValue("@CheckoutTime", CheckoutTime);
 
             if(Note=="")
-            command.Parameters.AddWithValue("Note", DBNull.Value);
+            command.Parameters.AddWithValue("@Note", DBNull.Value);
             else
-            command.Parameters.AddWithValue("Note", Note);
+            command.Parameters.AddWithValue("@Note", Note);
 
-            command.Parameters.AddWithValue("IsStillWorking", IsStillWorking);
+            command.Parameters.AddWithValue("@IsStillWorking", IsStillWorking);
 
             try
             {
@@ -152,7 +152,7 @@ namespace DataAccessLayer
             string query = " select *from EmployeesAttendance where AttendanceID=@AttendanceID; ";
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("AttendanceID", AttendanceID);
+            command.Parameters.AddWithValue("@AttendanceID", AttendanceID);
 
             try
             {
@@ -165,7 +165,7 @@ namespace DataAccessLayer
                     CheckInTime = (DateTime) reader["CheckInTime"];
                     CheckoutTime = (DateTime) reader["CheckoutTime"];
                     Note = ( reader["Note"]==DBNull.Value)? string.Empty :(string) reader["Note"];
-                    IsStillWorking = ((int)reader["IsStillWorking"]==1) ? true : false;
+                    IsStillWorking = (bool)reader["IsStillWorking"];
                 }
             }
             catch
@@ -201,7 +201,7 @@ namespace DataAccessLayer
                     CheckInTime = (DateTime)reader["CheckInTime"];
                     CheckoutTime = (DateTime)reader["CheckoutTime"];
                     Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
-                    IsStillWorking = ((int)reader["IsStillWorking"] == 1) ? true : false;
+                    IsStillWorking = (bool)reader["IsStillWorking"];
                 }
             }
             catch
@@ -216,78 +216,10 @@ namespace DataAccessLayer
             return IsFound;
         }
 
-        static public bool FindEmployeeAttendanceByCheckinTime( DateTime CheckInTime,ref int AttendanceID,ref int EmployeeID, ref DateTime CheckoutTime, ref string Note, ref bool IsStillWorking)
-        {
-            bool IsFound = false;
+        
 
-            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = " select *from EmployeesAttendance where CheckInTime=@CheckInTime; ";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("CheckInTime", CheckInTime);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    IsFound = true;
-                    AttendanceID = (int)reader["AttendanceID"];
-                    EmployeeID = (int)reader["EmployeeID"];
-                    CheckoutTime = (DateTime)reader["CheckoutTime"];
-                    Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
-                    IsStillWorking = ((int)reader["IsStillWorking"] == 1) ? true : false;
-                }
-            }
-            catch
-            {
-                IsFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return IsFound;
-        }
-
-        static public bool FindEmployeeAttendanceByCheckoutTime(DateTime CheckoutTime, ref int AttendanceID, ref int EmployeeID, ref DateTime CheckinTime, ref string Note, ref bool IsStillWorking)
-        {
-            bool IsFound = false;
-
-            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = " select *from EmployeesAttendance where CheckoutTime=@CheckoutTime; ";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("CheckoutTime", CheckoutTime);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    IsFound = true;
-                    AttendanceID = (int)reader["AttendanceID"];
-                    EmployeeID = (int)reader["EmployeeID"];
-                    CheckinTime = (DateTime)reader["CheckinTime"];
-                    Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
-                    IsStillWorking = ((int)reader["IsStillWorking"] == 1) ? true : false;
-                }
-            }
-            catch
-            {
-                IsFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return IsFound;
-        }
-
+        
+/*
         static public bool FindEmployeeAttendanceStillWorking(bool IsStillWorking,ref int AttendanceID, ref int EmployeeID, ref DateTime CheckInTime, ref DateTime CheckoutTime, ref string Note)
         {
             bool IsFound = false;
@@ -322,6 +254,7 @@ namespace DataAccessLayer
 
             return IsFound;
         }
+        */
 
     }
 }
