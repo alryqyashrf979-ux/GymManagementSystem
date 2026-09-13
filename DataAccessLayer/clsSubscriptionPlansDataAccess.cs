@@ -97,26 +97,49 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
+                return -1;
             }
-            return -1;
         }
-       public static bool Update(string Name, string Description, bool Availiablity, decimal Price, string Note)
+       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, decimal Price, string Note)
         {
-            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description, Availiablity= @AAvailiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
-            {
-                cmd.Parameters.AddWithValue("@Name", Name);
-                cmd.Parameters.AddWithValue("@Description", Description);
-                cmd.Parameters.AddWithValue("@Availablity", Availiablity);
-                cmd.Parameters.AddWithValue("@Price", Price);
-                if (!string.IsNullOrEmpty(Note))
-                    cmd.Parameters.AddWithValue("@Note", Note);
-                else
-                    cmd.Parameters.AddWithValue("@Note", DBNull.Value);
-                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+            // edit spelling mistake in Availiablity
+            //add Price parameter to the query
+            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description,Price=@Price, Availiablity= @Availiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
 
+            //Handle Exception
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        //Add parameters to the command object Plan ID
+
+                        cmd.Parameters.AddWithValue("@PlanID", Name);
+                        cmd.Parameters.AddWithValue("@Name", Name);
+                        cmd.Parameters.AddWithValue("@Description", Description);
+
+                        //edit spelling mistake in Availiablity
+                        cmd.Parameters.AddWithValue("@Availiablity", Availiablity);
+                        cmd.Parameters.AddWithValue("@Price", Price);
+
+                        if (!string.IsNullOrEmpty(Note))
+                            cmd.Parameters.AddWithValue("@Note", Note);
+                        else
+                            cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+                        return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
         }
        public static bool Delete(int PlanID)
         {
