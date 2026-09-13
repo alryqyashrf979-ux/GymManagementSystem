@@ -64,25 +64,41 @@ namespace DataAccessLayer
         public static int Add(string Name, string Description, bool Availablity, decimal Price, string Note)
         {
             string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note) ; SELECT SCOPE_IDENTITY(); ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+
+            //Handle Exception
+
+            try
             {
-                cmd.Parameters.AddWithValue("@Name", Name);
-                cmd.Parameters.AddWithValue("@Description", Description);
-                cmd.Parameters.AddWithValue("@Availablity", Availablity);
-                cmd.Parameters.AddWithValue("@Price", Price);
-                if (!string.IsNullOrEmpty(Note))
-                    cmd.Parameters.AddWithValue("@Note", Note);
-                else
-                    cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection 
 
-                object Result = cmd.ExecuteScalar();
+                    conn.Open();
 
-                if (int.TryParse(Result.ToString(), out int value))
-                    return value;
-                else
-                    return -1;
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", Name);
+                        cmd.Parameters.AddWithValue("@Description", Description);
+                        cmd.Parameters.AddWithValue("@Availablity", Availablity);
+                        cmd.Parameters.AddWithValue("@Price", Price);
+                        if (!string.IsNullOrEmpty(Note))
+                            cmd.Parameters.AddWithValue("@Note", Note);
+                        else
+                            cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+
+                        object Result = cmd.ExecuteScalar();
+
+                        if (int.TryParse(Result.ToString(), out int value))
+                            return value;
+                        else
+                            return -1;
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+            }
+            return -1;
         }
        public static bool Update(string Name, string Description, bool Availiablity, decimal Price, string Note)
         {
