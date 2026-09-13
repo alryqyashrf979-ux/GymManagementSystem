@@ -112,13 +112,37 @@ namespace DataAccessLayer
             using (SqlCommand cmd = new SqlCommand(Query, con))
             {
                 con.Open();
-                cmd.Parameters.AddWithValue("@PersonID", MemberID);
+                cmd.Parameters.AddWithValue("@PersonID", PersonID);
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
 
                     if (reader.Read())
                     {
                         MemberID = (int)reader["MemberID"];
+                        LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
+                        IsActive = (bool)reader["IsActive"];
+                        ContactPersonInfo = (int)reader["ContactPersonInfo"];
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        static public bool FindmemberByMemberID(int MemberID, ref int PersonID, ref DateTime LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
+        {
+            string Query = "select * from Members where MemberID = @MemberID";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, con))
+            {
+                con.Open();
+                cmd.Parameters.AddWithValue("@MemberID", MemberID);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+
+                    if (reader.Read())
+                    {
+                        PersonID = (int)reader["PersonID"];
                         LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
                         IsActive = (bool)reader["IsActive"];
                         ContactPersonInfo = (int)reader["ContactPersonInfo"];
