@@ -85,6 +85,26 @@ namespace DataAccessLayer
             
         }
 
+        static public int Add(int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        {
+            string Query = "Insert into Members " +
+                "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID) , select SCOPE_IDENTITY();";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                con.Open();
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+                command.Parameters.AddWithValue("@IsActive", IsActive);
+                command.Parameters.AddWithValue("@ContactPersonInfoID", ContactPersonInfoID);
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int NewID))
+                    return NewID;
+            }
+            return -1;
+
+        }
+
 
     }
 }
