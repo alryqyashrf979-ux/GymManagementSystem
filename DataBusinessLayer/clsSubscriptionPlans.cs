@@ -68,9 +68,11 @@ namespace DataBusinessLayer
             return this._PlanID > -1;
         }
 
+        //add Plan ID parameter of Update method to match the signature of the Update method in clsSubscriptionPlansDataAccess
+        // 
         private bool _Update()
         {
-            return clsSubscriptionPlansDataAccess.Update(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
+            return clsSubscriptionPlansDataAccess.Update(this.PlanID,this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
         }
         public bool Save()
         {
