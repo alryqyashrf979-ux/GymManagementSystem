@@ -21,26 +21,43 @@ namespace DataAccessLayer
       public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price, ref string Note)
         {
             string query = $"SELECT Name, Description, Availablity, Price, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
+
+            //Handle Exception
+            try
             {
-                cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
-                    if (reader.Read())
+                    //Open the database Connection 
+
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        Name = (string)reader["Name"];
-                        Description = (string)reader["Description"];
-                        Availablity = (bool)reader["Availiability"];
-                        Price = (decimal)reader["Price"];
-                        if (reader["Note"] == DBNull.Value)
-                            Note = string.Empty;
-                        else
-                            Note = (string)reader["Note"];
-                        return true;
+                        cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                Name = (string)reader["Name"];
+                                Description = (string)reader["Description"];
+                                //edit spelling mistake
+                                Availablity = (bool)reader["Availablity"];
+                                Price = (decimal)reader["Price"];
+                                if (reader["Note"] == DBNull.Value)
+                                    Note = string.Empty;
+                                else
+                                    Note = (string)reader["Note"];
+                                return true;
+                            }
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+
+            }
+
             return false;
         }
 
