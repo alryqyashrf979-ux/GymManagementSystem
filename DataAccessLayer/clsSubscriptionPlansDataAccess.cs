@@ -190,19 +190,32 @@ namespace DataAccessLayer
                 return false;
             }
         }
-       public static DataTable GetAllSubscriptionPlans()
+        public static DataTable GetAllSubscriptionPlans()
         {
             DataTable dt = new DataTable();
             string Query = "select * from SubscriptionPlans ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            try
             {
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                //Handle Exception
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
-                    if (reader.HasRows)
-                        dt.Load(reader);
-                }
+                    //Open the database Connection
+                    conn.Open();
 
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
                 return dt;
             }
         }
