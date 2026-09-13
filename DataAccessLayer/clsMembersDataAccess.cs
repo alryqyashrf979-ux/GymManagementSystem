@@ -35,7 +35,9 @@ namespace DataAccessLayer
             {
                 con.Open();
                 command.Parameters.AddWithValue("@MemberID", MemberID);
-                return command.ExecuteNonQuery() > 0;
+
+                using (SqlDataReader Reader = command.ExecuteReader())
+                    return (Reader.HasRows);
             }
         }
         static public bool DoesPersonExistByPersonID(int PersonID)
@@ -45,7 +47,9 @@ namespace DataAccessLayer
             using (SqlCommand command = new SqlCommand(Query, con))
             {
                 command.Parameters.AddWithValue("@PersonID", PersonID);
-                return command.ExecuteNonQuery() > 0;
+
+                using (SqlDataReader Reader = command.ExecuteReader())
+                    return (Reader.HasRows);
             }
         }
         static public bool Delete(int MemberID)
