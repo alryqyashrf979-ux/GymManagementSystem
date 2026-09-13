@@ -3,11 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    class clsEmployeeAttendenceData
+    static public class clsEmployeeAttendenceData
     {
+
+        static public DataTable GetAllEmployeeAttendence()
+        {
+            DataTable dt = new DataTable();
+
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "select AttendanceID as 'Attendance ID' ,EmployeeID as 'Employee ID'" +
+                ",CheckInTime as 'Check in Time',CheckoutTime as 'Check out Time',Note," +
+                "IsStillWorking as 'Is Still Working'  from EmployeesAttendance;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    dt.Load(reader);
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return dt;
+        }
+
 
     }
 }
