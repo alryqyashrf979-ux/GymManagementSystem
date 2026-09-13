@@ -48,5 +48,18 @@ namespace DataAccessLayer
                 return command.ExecuteNonQuery() > 0;
             }
         }
+        static public bool Delete(int MemberID)
+        {
+            string Query = "Delete from Members Where MemberID =@MemberID ";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                con.Open();
+                command.Parameters.AddWithValue("@MemberID", MemberID);
+                return command.ExecuteNonQuery() > 0;
+            }
+           
+        }
+
     }
 }
