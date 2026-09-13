@@ -179,5 +179,44 @@ namespace DataAccessLayer
 
             return IsFound;
         }
+
+        static public bool FindEmployeeAttendanceByEmployeeID( int EmployeeID,ref int AttendanceID, ref DateTime CheckInTime, ref DateTime CheckoutTime, ref string Note, ref bool IsStillWorking)
+        {
+            bool IsFound = false;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = " select *from EmployeesAttendance where EmployeeID=@EmployeeID; ";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    AttendanceID = (int)reader["AttendanceID"];
+                    CheckInTime = (DateTime)reader["CheckInTime"];
+                    CheckoutTime = (DateTime)reader["CheckoutTime"];
+                    Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
+                    IsStillWorking = ((int)reader["IsStillWorking"] == 1) ? true : false;
+                }
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
+
+
+
     }
 }
