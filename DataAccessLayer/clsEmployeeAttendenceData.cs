@@ -11,7 +11,7 @@ namespace DataAccessLayer
     static public class clsEmployeeAttendenceData
     {
 
-        static public DataTable GetAllEmployeeAttendence()
+        static public DataTable GetAllEmployeeAttendenceData()
         {
             DataTable dt = new DataTable();
 
@@ -67,5 +67,39 @@ namespace DataAccessLayer
             return (EffectedRows > 0);
         }
 
+        static public bool UpdateEmployeeAttendanceData(int AttendanceID,int EmployeeID,DateTime CheckInTime,DateTime CheckoutTime,string Note,bool IsStillWorking)
+        {
+            int RowEffect = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = " UPDATE [dbo].[EmployeesAttendance] SET [EmployeeID] = @EmployeeID," +
+                "[CheckInTime] = @CheckInTime,[CheckoutTime] = @CheckoutTime,[Note] = @Note," +
+                "[IsStillWorking] = @IsStillWorking WHERE AttendanceID=@AttendanceID; ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("AttendanceID", AttendanceID);
+            command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+            command.Parameters.AddWithValue("CheckInTime", CheckInTime);
+            command.Parameters.AddWithValue("CheckoutTime", CheckoutTime);
+            command.Parameters.AddWithValue("Note", Note);
+            command.Parameters.AddWithValue("IsStillWorking", IsStillWorking);
+
+            try
+            {
+                connection.Open();
+               RowEffect = command.ExecuteNonQuery(); 
+                
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (RowEffect > 0);
+        }
     }
 }
