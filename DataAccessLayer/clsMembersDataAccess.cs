@@ -17,6 +17,7 @@ namespace DataAccessLayer
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand command = new SqlCommand(Query, con))
             {
+                con.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     if (reader.HasRows)
@@ -32,7 +33,18 @@ namespace DataAccessLayer
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand command = new SqlCommand(Query, con))
             {
+                con.Open();
                 command.Parameters.AddWithValue("@MemberID", MemberID);
+                return command.ExecuteNonQuery() > 0;
+            }
+        }
+        static public bool DoesPersonExistByPersonID(int PersonID)
+        {
+            string Query = "select Found = 1 from Members where PersonID = @PersonID";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                command.Parameters.AddWithValue("@PersonID", PersonID);
                 return command.ExecuteNonQuery() > 0;
             }
         }
