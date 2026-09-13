@@ -141,14 +141,28 @@ namespace DataAccessLayer
             }
 
         }
-       public static bool Delete(int PlanID)
+        public static bool Delete(int PlanID)
         {
             string Query = "Delete From SubscriptionPlans where PlanID = @PlanID";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            //Handle Exception
+            try
             {
-                cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                        return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
        public static bool SetAvailiability(int PlanID, bool Availiability)
