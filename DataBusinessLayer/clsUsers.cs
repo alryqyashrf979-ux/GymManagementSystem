@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,8 +53,46 @@ namespace DataBusinessLayer
 
 
 
+        private bool _AddNewUser()
+        {
+            //call DataAccess Layer 
 
+            this.int_UserID = clsUsersData.AddNewUser(this.PersonID, this.UserName,
+                this.Password,this.Permission,this.IsActive);
 
+            return (this.int_UserID != -1);
+        }
+        private bool _UpdateUser()
+        {
+            //call DataAccess Layer 
+
+            return clsUsersData.UpdateUser(this.UserID, this.PersonID, this.UserName,
+                this.Password,this.Permission ,this.IsActive);
+        }
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewUser())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdateUser();
+
+            }
+
+            return false;
+        }
 
 
 
