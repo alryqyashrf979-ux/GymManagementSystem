@@ -158,7 +158,20 @@ namespace DataBusinessLayer
             return clsUsersData.DeleteUser(UserID);
         }
 
+        public static bool isUserExist(int UserID)
+        {
+            return clsUsersData.IsUserExist(UserID);
+        }
 
+        public static bool isUserExist(string UserName)
+        {
+            return clsUsersData.IsUserExist(UserName);
+        }
+
+        public static bool isUserExistByPersonID(int PersonID)
+        {
+            return clsUsersData.IsUserExistByPersonID(PersonID);
+        }
 
 
 
