@@ -95,7 +95,37 @@ namespace DataBusinessLayer
         }
 
 
+        public static clsUsers FindByUserID(int UserID)
+        {
+            int PersonID = -1;
+            string UserName = "", Password = "";
+            sbyte Permission = 0;
+            bool IsActive = false;
 
+            bool IsFound = clsUsersData.GetUserInfoByUserID
+                                (UserID, ref PersonID, ref UserName, ref Password,ref Permission,ref IsActive);
+
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUsers(UserID, PersonID, UserName, Password,Permission, IsActive);
+            else
+                return null;
+        }
+        public static clsUsers FindByPersonID(int PersonID)
+        {
+            int UserID = -1;
+            string UserName = "", Password = "";
+            sbyte Permission = 0;
+            bool IsActive = false;
+
+            bool IsFound = clsUsersData.GetUserInfoByPersonID(ref UserID,PersonID,ref UserName,ref Password,ref Permission,ref IsActive) ;
+                               
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUsers(UserID, UserID, UserName, Password,Permission, IsActive);
+            else
+                return null;
+        }
 
 
 
