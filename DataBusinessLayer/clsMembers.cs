@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -26,12 +28,11 @@ namespace DataBusinessLayer
             _MemberID = -1;
             personID = -1;
             LastSubscriptionID = default(DateTime);
-IsActive = false;
+            IsActive = false;
             ContactPersonInfoID = -1;
             EmergencyContactInfo = null;
             Mode = enMode.add;
         }
-
         public clsMembers(int MemberID ,int personID , DateTime lastSubscriptionDate , bool IsActive , int ContactPersonInfoID ,int PersonID, string FirstName, string SecondName,
             string LastName, string NationalNo, DateTime DateOfBirth, char Gender,
              string Address, string Phone, string Email,
@@ -40,7 +41,6 @@ IsActive = false;
             Address,  Phone,  Email,
              NationalityCountryID,  ImagePath)
         {
-
            this. _MemberID = MemberID;
             this.personID = personID;
            this. LastSubscriptionID = lastSubscriptionDate;
@@ -48,6 +48,11 @@ IsActive = false;
            this. ContactPersonInfoID = ContactPersonInfoID;
             this.EmergencyContactInfo = clsEmergencyContacts.Find(ContactPersonInfoID);
             Mode = enMode.edit;
+        }
+
+        static public DataTable GetAllMembers()
+        {
+            return clsMembersDataAccess.GetAllMembers();
         }
 
 
