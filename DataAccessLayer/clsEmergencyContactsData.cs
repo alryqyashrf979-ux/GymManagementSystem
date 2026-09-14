@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public static class clsEmergencyContacts
+    public static class clsEmergencyContactsData
     {
 
 
