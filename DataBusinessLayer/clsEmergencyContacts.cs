@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,10 +40,46 @@ namespace DataBusinessLayer
             int_ContactID = -1;
         }
 
+        private bool _AddNewContact()
+        {
+
+            this.int_ContactID = clsEmergencyContactsData.AddEmergencyContact(this.Name, this.Relationship, this.PhoneNumber);
+            return this.int_ContactID != -1;
+
+        }
+
+        private bool _UpdateContact()
+        {
+            return clsEmergencyContactsData.UpdateEmergencyContact(this.ContactID, this.Name, this.Relationship, this.PhoneNumber);
+        }   
 
 
+        public bool Save()
+        {
 
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewContact())
+                    {
 
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdateContact();
+
+            }
+
+            return false;
+
+        }
 
 
 
