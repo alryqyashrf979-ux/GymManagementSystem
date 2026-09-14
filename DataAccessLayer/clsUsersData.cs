@@ -235,7 +235,34 @@ namespace DataAccessLayer
 
 
 
+        public static bool IsUserExistByPersonID(int PersonID)
+        {
 
+            string query = "SELECT Found=1 FROM Users WHERE PersonID = @PersonID";
+
+            try
+            {
+
+               using(SqlConnection conn=new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@PersonID", PersonID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        return reader.HasRows;
+                    }
+                }
+
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+
+
+
+        }
 
 
 
