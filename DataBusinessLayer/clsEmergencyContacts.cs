@@ -93,7 +93,24 @@ namespace DataBusinessLayer
         }
 
 
+        public static clsEmergencyContacts Find(int ContactID)
+        {
 
+            string Name = string.Empty;
+            string PhoneNumber = string.Empty;
+            string Relationship = string.Empty;
+
+
+            if (clsEmergencyContactsData.GetEmergencyContactByID(ContactID, ref Name, ref Relationship, ref PhoneNumber))
+            {
+
+                return new clsEmergencyContacts(Name, Relationship, PhoneNumber, ContactID);
+
+            }
+            else
+                return null;
+
+        }
 
 
 
