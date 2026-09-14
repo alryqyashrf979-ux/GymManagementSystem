@@ -146,6 +146,37 @@ namespace DataAccessLayer
 
 
 
+        public static DataTable GetAllEmergencyContacts()
+        {
+            string query = "SELECT * FROM EmergencyContacts";
+
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+
+                    using (SqlDataReader Reader = cmd.ExecuteReader())
+                    {
+
+                        if (Reader.HasRows)
+                        {
+                            dt.Load(Reader);
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+            }
+
+            return dt;
+        }
+
 
     }
 }
