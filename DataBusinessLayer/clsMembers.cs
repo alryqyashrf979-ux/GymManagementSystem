@@ -55,6 +55,16 @@ namespace DataBusinessLayer
             return clsMembersDataAccess.GetAllMembers();
         }
 
+        static public bool DoesMemberExistByPersonID(int PersonID)
+        {
+            return clsMembersDataAccess.DoesPersonExistByPersonID(PersonID);
+        }
+        static public bool DoesMemberExistByMemberID(int MemberID)
+        {
+            return clsMembersDataAccess.DoesPersonExistByMemberID(MemberID);
+        }
+
+
 
 
     }
