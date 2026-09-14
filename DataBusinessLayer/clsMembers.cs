@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Policy;
@@ -18,7 +19,7 @@ namespace DataBusinessLayer
         public int MemberID { get { return _MemberID; } }
 
         public int personID { set; get; }
-        public DateTime LastSubscriptionID { set; get; }
+        public DateTime LastSubscriptionDate { set; get; }
         public bool IsActive { set; get; }
         public int ContactPersonInfoID { set; get; }
 
@@ -29,7 +30,7 @@ namespace DataBusinessLayer
 
             _MemberID = -1;
             personID = -1;
-            LastSubscriptionID = default(DateTime);
+            LastSubscriptionDate = default(DateTime);
             IsActive = false;
             ContactPersonInfoID = -1;
             EmergencyContactInfo = null;
@@ -45,7 +46,7 @@ namespace DataBusinessLayer
         {
             this._MemberID = MemberID;
             this.personID = personID;
-            this.LastSubscriptionID = lastSubscriptionDate;
+            this.LastSubscriptionDate = lastSubscriptionDate;
             this.IsActive = IsActive;
             this.ContactPersonInfoID = ContactPersonInfoID;
             this.EmergencyContactInfo = clsEmergencyContacts.Find(ContactPersonInfoID);
@@ -74,12 +75,12 @@ namespace DataBusinessLayer
         }
         private bool _Update()
         {
-            return clsMembersDataAccess.Update(this.MemberID, this.personID, this.LastSubscriptionID, this.IsActive, this.ContactPersonInfoID);
+            return clsMembersDataAccess.Update(this.MemberID, this.personID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
 
         }
         private bool _Add()
         {
-            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactPersonInfoID);
+            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
             return _MemberID != -1;
         }
 
@@ -102,6 +103,30 @@ namespace DataBusinessLayer
                     break;
             }
             return false;
+        }
+        static public clsMembers FindMemberUsingPersonID(int personID)
+        {
+            int MemberID = -1; int EmergencyContactID = -1; DateTime LastSubscriptionDate= default(DateTime); bool IsActive = false; 
+            if(clsMembersDataAccess.FindmemberByPersonID(personID,ref MemberID , ref LastSubscriptionDate,ref IsActive,ref EmergencyContactID))
+            {
+                clsPeople person = clsPeople.Find(personID);
+                return new clsMembers(MemberID,personID,LastSubscriptionDate,IsActive,EmergencyContactID,personID,person.FirstName,person.SecondName,person.LastName
+                    ,person.NationalNo,person.DateOfBirth,person.Gender,person.Address,person.PhoneNumber,person.Email,person.NationalityCountryID,person.ImagePath);
+               
+            }
+            return null;
+        }
+        static public clsMembers FindMemberUsingMemberID(int memberID)
+        {
+            int PersonID = -1; int EmergencyContactID = -1; DateTime LastSubscriptionDate = default(DateTime); bool IsActive = false;
+            if (clsMembersDataAccess.FindmemberByMemberID( memberID ,ref PersonID, ref LastSubscriptionDate, ref IsActive, ref EmergencyContactID))
+            {
+                clsPeople person = clsPeople.Find(PersonID);
+                return new clsMembers(memberID, PersonID, LastSubscriptionDate, IsActive, EmergencyContactID, PersonID, person.FirstName, person.SecondName, person.LastName
+                    , person.NationalNo, person.DateOfBirth, person.Gender, person.Address, person.PhoneNumber, person.Email, person.NationalityCountryID, person.ImagePath);
+
+            }
+            return null;
         }
     }
 }
