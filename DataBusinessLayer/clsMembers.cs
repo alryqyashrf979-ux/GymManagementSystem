@@ -72,6 +72,37 @@ namespace DataBusinessLayer
                     return true;
             return false;
         }
+        private bool _Update()
+        {
+            return clsMembersDataAccess.Update(this.MemberID, this.personID, this.LastSubscriptionID, this.IsActive, this.ContactPersonInfoID);
 
+        }
+        private bool _Add()
+        {
+            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactPersonInfoID);
+            return _MemberID != -1;
+        }
+
+        public bool Save()
+        {
+            base.Mode = (MembersMode == enModeMembers.add) ? enMode.AddNew : enMode.Update;
+            if (!base.Save())
+                return false;
+            switch (MembersMode)
+            {
+                case enModeMembers.add:
+                    {
+                        if (_Add())
+                            return true;
+                        break;
+                    }
+                case enModeMembers.edit:
+                    if (_Update())
+                        return true;
+                    break;
+            }
+            return false;
+        }
     }
 }
+
