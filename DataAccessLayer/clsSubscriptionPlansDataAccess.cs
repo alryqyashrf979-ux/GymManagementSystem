@@ -21,105 +21,201 @@ namespace DataAccessLayer
       public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price, ref string Note)
         {
             string query = $"SELECT Name, Description, Availablity, Price, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
+
+            //Handle Exception
+            try
             {
-                cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
-                    if (reader.Read())
+                    //Open the database Connection 
+
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        Name = (string)reader["Name"];
-                        Description = (string)reader["Description"];
-                        Availablity = (bool)reader["Availiability"];
-                        Price = (decimal)reader["Price"];
-                        if (reader["Note"] == DBNull.Value)
-                            Note = string.Empty;
-                        else
-                            Note = (string)reader["Note"];
-                        return true;
+                        cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                Name = (string)reader["Name"];
+                                Description = (string)reader["Description"];
+                                //edit spelling mistake
+                                Availablity = (bool)reader["Availablity"];
+                                Price = (decimal)reader["Price"];
+                                if (reader["Note"] == DBNull.Value)
+                                    Note = string.Empty;
+                                else
+                                    Note = (string)reader["Note"];
+                                return true;
+                            }
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+
+            }
+
             return false;
         }
 
         public static int Add(string Name, string Description, bool Availablity, decimal Price, string Note)
         {
             string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note) ; SELECT SCOPE_IDENTITY(); ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+
+            //Handle Exception
+
+            try
             {
-                cmd.Parameters.AddWithValue("@Name", Name);
-                cmd.Parameters.AddWithValue("@Description", Description);
-                cmd.Parameters.AddWithValue("@Availablity", Availablity);
-                cmd.Parameters.AddWithValue("@Price", Price);
-                if (!string.IsNullOrEmpty(Note))
-                    cmd.Parameters.AddWithValue("@Note", Note);
-                else
-                    cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection 
 
-                object Result = cmd.ExecuteScalar();
+                    conn.Open();
 
-                if (int.TryParse(Result.ToString(), out int value))
-                    return value;
-                else
-                    return -1;
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", Name);
+                        cmd.Parameters.AddWithValue("@Description", Description);
+                        cmd.Parameters.AddWithValue("@Availablity", Availablity);
+                        cmd.Parameters.AddWithValue("@Price", Price);
+                        if (!string.IsNullOrEmpty(Note))
+                            cmd.Parameters.AddWithValue("@Note", Note);
+                        else
+                            cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+
+                        object Result = cmd.ExecuteScalar();
+
+                        if (int.TryParse(Result.ToString(), out int value))
+                            return value;
+                        else
+                            return -1;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return -1;
             }
         }
-       public static bool Update(string Name, string Description, bool Availiablity, decimal Price, string Note)
+       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, decimal Price, string Note)
         {
-            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description, Availiablity= @AAvailiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
-            {
-                cmd.Parameters.AddWithValue("@Name", Name);
-                cmd.Parameters.AddWithValue("@Description", Description);
-                cmd.Parameters.AddWithValue("@Availablity", Availiablity);
-                cmd.Parameters.AddWithValue("@Price", Price);
-                if (!string.IsNullOrEmpty(Note))
-                    cmd.Parameters.AddWithValue("@Note", Note);
-                else
-                    cmd.Parameters.AddWithValue("@Note", DBNull.Value);
-                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+            // edit spelling mistake in Availiablity
+            //add Price parameter to the query
+            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description,Price=@Price, Availiablity= @Availiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
 
+            //Handle Exception
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        //Add parameters to the command object Plan ID
+
+                        cmd.Parameters.AddWithValue("@PlanID", Name);
+                        cmd.Parameters.AddWithValue("@Name", Name);
+                        cmd.Parameters.AddWithValue("@Description", Description);
+
+                        //edit spelling mistake in Availiablity
+                        cmd.Parameters.AddWithValue("@Availiablity", Availiablity);
+                        cmd.Parameters.AddWithValue("@Price", Price);
+
+                        if (!string.IsNullOrEmpty(Note))
+                            cmd.Parameters.AddWithValue("@Note", Note);
+                        else
+                            cmd.Parameters.AddWithValue("@Note", DBNull.Value);
+                        return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
         }
-       public static bool Delete(int PlanID)
+        public static bool Delete(int PlanID)
         {
             string Query = "Delete From SubscriptionPlans where PlanID = @PlanID";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            //Handle Exception
+            try
             {
-                cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                        return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
-       public static bool SetAvailiability(int PlanID, bool Availiability)
+        public static bool SetAvailiability(int PlanID, bool Availiability)
         {
             string Query = " Update SubscriptionPlans set Availiablity =@Availiability where PlanID = @PlanID ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            try
             {
-                cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                cmd.Parameters.AddWithValue("@Availiability", Availiability);
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+                    conn.Open();
 
-                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PlanID", PlanID);
+                        cmd.Parameters.AddWithValue("@Availiability", Availiability);
+
+                        return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
-       public static DataTable GetAllSubscriptionPlans()
+        public static DataTable GetAllSubscriptionPlans()
         {
             DataTable dt = new DataTable();
             string Query = "select * from SubscriptionPlans ";
-            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            try
             {
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                //Handle Exception
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
-                    if (reader.HasRows)
-                        dt.Load(reader);
-                }
+                    //Open the database Connection
+                    conn.Open();
 
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
                 return dt;
             }
         }
