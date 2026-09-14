@@ -59,7 +59,7 @@ namespace DataBusinessLayer
         }
 
 
-        private clsPeople(int PersonID, string FirstName, string SecondName,
+        public clsPeople(int PersonID, string FirstName, string SecondName,
             string LastName, string NationalNo, DateTime DateOfBirth, char Gender,
              string Address, string Phone, string Email,
             int NationalityCountryID, string ImagePath)
