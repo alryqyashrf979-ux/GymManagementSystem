@@ -54,7 +54,42 @@ namespace DataAccessLayer
             }
         }
 
-      
+
+        public static bool GetEmergencyContactByID(int ID, ref string Name, ref string Relationship, ref string PhoneNumber)
+        {
+            string query = "SELECT Name, Relationship, PhoneNumber FROM EmergencyContacts WHERE ID = @ID";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Name = reader["Name"].ToString();
+                            Relationship = reader["Relationship"].ToString();
+                            PhoneNumber = reader["PhoneNumber"].ToString();
+                            return true; // Contact found
+                        }
+                        else
+                        {
+                            return false; // Contact not found
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                return false;
+            }
+        }
+
+
 
 
 
