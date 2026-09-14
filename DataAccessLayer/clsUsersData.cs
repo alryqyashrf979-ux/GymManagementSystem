@@ -169,10 +169,69 @@ namespace DataAccessLayer
 
 
 
+        public static bool IsUserExist(int UserID)
+        {
+
+            string query = "SELECT Found=1 FROM Users WHERE UserID = @UserID";
+
+           try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@UserID", UserID);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                       return reader.HasRows;
+                    }
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
 
 
+        }
 
 
+        public static bool IsUserExist(string UserName)
+        {
+
+            string query = "SELECT Found=1 FROM Users WHERE UserName = @UserName";
+
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@UserName", UserName);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        return reader.HasRows;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
 
 
 
