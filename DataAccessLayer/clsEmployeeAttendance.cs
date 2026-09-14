@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
@@ -38,6 +40,30 @@ namespace DataAccessLayer
             return dt;
         }
 
+        static public bool DeleteEmployeeAttendanceData(int AttendanceID)
+        {
+            int EffectedRows = -1;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "Delete EmployeesAttendance where AttendanceID=@AttendanceID; ";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@AttendanceID", AttendanceID);
+
+            try
+            {
+                connection.Open();
+                EffectedRows = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (EffectedRows > 0);
+        }
 
     }
 }
