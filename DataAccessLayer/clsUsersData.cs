@@ -62,8 +62,42 @@ namespace DataAccessLayer
 
 
 
+        public static bool UpdateUser(int UserID,int PersonID, string UserName,
+             string Password, sbyte Permission, bool IsActive)
+        {
+
+            string query = @"UPDATE Users SET PersonID=@PersonID, UserName=@UserName, Password=@Password, IsActive=@IsActive, Permission=@Permission
+                             WHERE UserID=@UserID;";
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(query,conn))
+                {
+
+                    conn.Open();
+
+                    command.Parameters.AddWithValue("@Permission", Permission);
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    command.Parameters.AddWithValue("@UserName", UserName);
+                    command.Parameters.AddWithValue("@Password", Password);
+                    command.Parameters.AddWithValue("@IsActive", IsActive);
+                    command.Parameters.AddWithValue("@UserID", UserID);
 
 
+                    return command.ExecuteNonQuery() > 0;   
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+
+
+        }
 
 
 
