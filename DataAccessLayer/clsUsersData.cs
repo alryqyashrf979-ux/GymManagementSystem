@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -104,7 +105,49 @@ namespace DataAccessLayer
 
 
 
+        public static DataTable GetAllUsers()
+        {
 
+            DataTable dt = new DataTable();
+
+            string query = @"
+
+                        SELECT  Users.UserID as 'User ID', Users.PersonID as 'Person ID',
+                            FullName = People.FirstName + ' ' + People.SecondName+' ' + People.LastName,
+                             Users.UserName as 'User Name', Users.IsActive
+                             FROM  Users INNER JOIN
+                                    People ON Users.PersonID = People.ID
+";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader Reader =command.ExecuteReader())
+                    {
+
+                        if (Reader.HasRows)
+                        {
+                            dt.Load(Reader);
+                            return dt;
+                        }
+                        else
+                            return null;
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
+           
+
+        }
 
 
 
