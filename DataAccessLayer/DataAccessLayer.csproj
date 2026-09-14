@@ -47,6 +47,7 @@
     <Compile Include="clsMembersDataAccess.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
+    <Compile Include="clsUsersData.cs" />
     <Compile Include="DataAccessSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
