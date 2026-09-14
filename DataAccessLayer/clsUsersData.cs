@@ -102,9 +102,6 @@ namespace DataAccessLayer
 
 
 
-
-
-
         public static DataTable GetAllUsers()
         {
 
@@ -150,7 +147,25 @@ namespace DataAccessLayer
         }
 
 
-
+        public static bool Delete(int UserID)
+        {
+            string query = @"DELETE FROM Users WHERE UserID=@UserID;";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    return command.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                return false;
+            }
+        }
 
 
 
