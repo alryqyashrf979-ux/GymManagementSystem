@@ -91,6 +91,35 @@ namespace DataAccessLayer
 
 
 
+        public static bool UpdateEmergencyContact(int ID, string Name, string Relationship, string PhoneNumber)
+        {
+
+
+            string query = "UPDATE EmergencyContacts SET Name = @Name, Relationship = @Relationship, PhoneNumber = @PhoneNumber WHERE ID = @ID";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    cmd.Parameters.AddWithValue("@Name", Name);
+                    cmd.Parameters.AddWithValue("@Relationship", Relationship);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+
+                    return cmd.ExecuteNonQuery() > 0; // Return true if at least one row was updated
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                return false;
+            }
+
+
+        }
+
+    
 
 
 
