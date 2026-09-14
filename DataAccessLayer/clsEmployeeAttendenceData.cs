@@ -120,7 +120,7 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
             command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
 
-            if(Note=="")
+            if(string.IsNullOrEmpty(Note))
             command.Parameters.AddWithValue("@Note", DBNull.Value);
             else
             command.Parameters.AddWithValue("@Note", Note);
