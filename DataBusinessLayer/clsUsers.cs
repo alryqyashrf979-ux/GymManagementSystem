@@ -129,6 +129,23 @@ namespace DataBusinessLayer
 
 
 
+        public static clsUsers FindByUsernameAndPassword(string UserName, string Password)
+        {
+            int UserID = -1;
+            int PersonID = -1;
+            sbyte Permission = 0;
+
+            bool IsActive = false;
+
+            bool IsFound = clsUsersData.GetUserInfoByUsernameAndPassword
+                                (UserName, Password, ref UserID, ref PersonID, ref IsActive,ref Permission);
+
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUsers(UserID, PersonID, UserName, Password, Permission, IsActive);
+            else
+                return null;
+        }
 
 
 
