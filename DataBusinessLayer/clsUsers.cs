@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -147,7 +148,15 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        public static DataTable GetAllUsers()
+        {
+            return clsUsersData.GetAllUsers();
+        }
 
+        public static bool DeleteUser(int UserID)
+        {
+            return clsUsersData.DeleteUser(UserID);
+        }
 
 
 

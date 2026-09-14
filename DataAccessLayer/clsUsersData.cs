@@ -147,7 +147,7 @@ namespace DataAccessLayer
         }
 
 
-        public static bool Delete(int UserID)
+        public static bool DeleteUser(int UserID)
         {
             string query = @"DELETE FROM Users WHERE UserID=@UserID;";
             try
