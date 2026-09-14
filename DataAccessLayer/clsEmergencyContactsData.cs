@@ -15,7 +15,7 @@ namespace DataAccessLayer
 
         public static int AddEmergencyContact(string Name, string Relationship, string PhoneNumber)
         {
-            string query = "INSERT INTO EmergencyContacts (Name, Relationship, PhoneNumber) VALUES (@Name, @Relationship, @PhoneNumber);" +
+            string query = "INSERT INTO EmergencyContacts (Name, Relationship, Phone) VALUES (@Name, @Relationship, @Phone);" +
                 " SELECT SCOPE_IDENTITY();";
             try
             {
@@ -29,7 +29,7 @@ namespace DataAccessLayer
 
                     cmd.Parameters.AddWithValue("@Name", Name);
                     cmd.Parameters.AddWithValue("@Relationship", Relationship);
-                    cmd.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+                    cmd.Parameters.AddWithValue("@Phone", PhoneNumber);
 
 
                     object result = cmd.ExecuteScalar();
@@ -57,7 +57,7 @@ namespace DataAccessLayer
 
         public static bool GetEmergencyContactByID(int ID, ref string Name, ref string Relationship, ref string PhoneNumber)
         {
-            string query = "SELECT Name, Relationship, PhoneNumber FROM EmergencyContacts WHERE ID = @ID";
+            string query = "SELECT  Name, Relationship, Phone FROM EmergencyContacts WHERE ContactInfoID = @ID";
 
             try
             {
@@ -72,7 +72,7 @@ namespace DataAccessLayer
                         {
                             Name = reader["Name"].ToString();
                             Relationship = reader["Relationship"].ToString();
-                            PhoneNumber = reader["PhoneNumber"].ToString();
+                            PhoneNumber = reader["Phone"].ToString();
                             return true; // Contact found
                         }
                         else
@@ -95,7 +95,7 @@ namespace DataAccessLayer
         {
 
 
-            string query = "UPDATE EmergencyContacts SET Name = @Name, Relationship = @Relationship, PhoneNumber = @PhoneNumber WHERE ID = @ID";
+            string query = "UPDATE EmergencyContacts SET Name = @Name, Relationship = @Relationship, Phone = @PhoneNumber WHERE ContactInfoID = @ID";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -124,7 +124,7 @@ namespace DataAccessLayer
         {
 
 
-            string query = "DELETE FROM EmergencyContacts WHERE ID = @ID";
+            string query = "DELETE FROM EmergencyContacts WHERE ContactInfoID = @ID";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
