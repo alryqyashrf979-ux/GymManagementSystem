@@ -119,7 +119,30 @@ namespace DataAccessLayer
 
         }
 
-    
+
+        public static bool DeleteEmergencyContact(int ID)
+        {
+
+
+            string query = "DELETE FROM EmergencyContacts WHERE ID = @ID";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    return cmd.ExecuteNonQuery() > 0; // Return true if at least one row was deleted
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                return false;
+            }
+
+
+        }
 
 
 
