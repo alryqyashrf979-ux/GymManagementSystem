@@ -81,6 +81,17 @@ namespace DataBusinessLayer
 
         }
 
+        public static bool DeleteEmergencyContact(int contactID)
+        {
+            return clsEmergencyContactsData.DeleteEmergencyContact(contactID);
+        }
+
+
+
+
+
+
+
 
 
     }
