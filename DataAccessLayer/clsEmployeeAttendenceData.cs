@@ -17,9 +17,8 @@ namespace DataAccessLayer
 
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = "select AttendanceID as 'Attendance ID' ,EmployeeID as 'Employee ID'" +
-                ",CheckInTime as 'Check in Time',CheckoutTime as 'Check out Time',Note," +
-                "IsStillWorking as 'Is Still Working'  from EmployeesAttendance;";
+            string query = "select AttendanceID as 'Attendance ID' , EmployeeID as 'Employee ID',IsCheckin as 'Is Checkin'," +
+                "IsCheckout as 'Is Checkout',Note,Date from EmployeesAttendance;";
 
             SqlCommand command = new SqlCommand(query, connection);
             try
@@ -67,23 +66,28 @@ namespace DataAccessLayer
             return (EffectedRows > 0);
         }
 
-        static public bool UpdateEmployeeAttendanceData(int AttendanceID,int EmployeeID,DateTime CheckInTime,DateTime CheckoutTime,string Note,bool IsStillWorking)
+        static public bool UpdateEmployeeAttendanceData(int AttendanceID,int EmployeeID,bool IsCheckin, bool IsCheckout, string Note,DateTime Date)
         {
             int RowEffect = -1;
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = " UPDATE [dbo].[EmployeesAttendance] SET [EmployeeID] = @EmployeeID," +
-                "[CheckInTime] = @CheckInTime,[CheckoutTime] = @CheckoutTime,[Note] = @Note," +
-                "[IsStillWorking] = @IsStillWorking WHERE AttendanceID=@AttendanceID; ";
+            string query = "UPDATE [dbo].[EmployeesAttendance] SET" +
+                " [EmployeeID] = @EmployeeID," +
+                "[IsCheckin] = @IsCheckin," +
+                "[IsCheckout] = @IsCheckout," +
+                "[Note] = @Note," +
+                "[Date] = @Date " +
+                "WHERE AttendanceID=@AttendanceID; ";
 
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@AttendanceID", AttendanceID);
             command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
-            command.Parameters.AddWithValue("@CheckInTime", CheckInTime);
-            command.Parameters.AddWithValue("@CheckoutTime", CheckoutTime);
+            command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
+            command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
             command.Parameters.AddWithValue("@Note", Note);
-            command.Parameters.AddWithValue("@IsStillWorking", IsStillWorking);
+            command.Parameters.AddWithValue("@Date", Date);
+
 
             try
             {
@@ -102,26 +106,26 @@ namespace DataAccessLayer
             return (RowEffect > 0);
         }
 
-        static public int AddEmployeeAttendanceData(int EmployeeID,DateTime CheckInTime,DateTime CheckoutTime,string Note,bool IsStillWorking)
+        static public int AddEmployeeAttendanceData(int EmployeeID,bool IsCheckin, bool IsCheckout, string Note,DateTime Date)
         {
             int AttendanceID = -1;
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = "INSERT INTO [dbo].[EmployeesAttendance] ([EmployeeID],[CheckInTime] ," +
-                "[CheckoutTime],[Note],[IsStillWorking]) VALUES (@EmployeeID,@CheckInTime,@CheckoutTime," +
-                "@Note,@IsStillWorking) ;" +
+            string query = "INSERT INTO [dbo].[EmployeesAttendance] ([EmployeeID],[IsCheckin],[IsCheckout],[Note],[Date]) " +
+                "VALUES (@EmployeeID,@IsCheckin,@IsCheckout,@Note,@Date);" +
                 "Select scope_Identity();";
+
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
-            command.Parameters.AddWithValue("@CheckInTime", CheckInTime);
-            command.Parameters.AddWithValue("@CheckoutTime", CheckoutTime);
+            command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
+            command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
 
             if(Note=="")
             command.Parameters.AddWithValue("@Note", DBNull.Value);
             else
             command.Parameters.AddWithValue("@Note", Note);
 
-            command.Parameters.AddWithValue("@IsStillWorking", IsStillWorking);
+            command.Parameters.AddWithValue("@Date", Date);
 
             try
             {
@@ -144,7 +148,7 @@ namespace DataAccessLayer
             return AttendanceID;
         }
 
-        static public bool FindEmployeeAttendanceByAttendanceID(int AttendanceID,ref int EmployeeID,ref DateTime CheckInTime,ref DateTime CheckoutTime,ref string Note,ref bool IsStillWorking)
+        static public bool FindEmployeeAttendanceByAttendanceID(int AttendanceID,ref int EmployeeID,ref bool IsCheckin, ref bool IsCheckout, ref string Note,ref DateTime Date)
         {
             bool IsFound = false;
 
@@ -162,10 +166,10 @@ namespace DataAccessLayer
                 {
                     IsFound = true;
                     EmployeeID = (int) reader["EmployeeID"];
-                    CheckInTime = (DateTime) reader["CheckInTime"];
-                    CheckoutTime = (DateTime) reader["CheckoutTime"];
+                    IsCheckin = (bool) reader["IsCheckin"];
+                    IsCheckout = (bool) reader["IsCheckout"];
                     Note = ( reader["Note"]==DBNull.Value)? string.Empty :(string) reader["Note"];
-                    IsStillWorking = (bool)reader["IsStillWorking"];
+                    Date = (DateTime)reader["Date"];
                 }
             }
             catch
@@ -180,7 +184,7 @@ namespace DataAccessLayer
             return IsFound;
         }
 
-        static public bool FindEmployeeAttendanceByEmployeeID( int EmployeeID,ref int AttendanceID, ref DateTime CheckInTime, ref DateTime CheckoutTime, ref string Note, ref bool IsStillWorking)
+        static public bool FindEmployeeAttendanceByEmployeeID( int EmployeeID,ref int AttendanceID, ref bool IsCheckin, ref bool IsCheckout, ref string Note, ref DateTime Date)
         {
             bool IsFound = false;
 
@@ -198,10 +202,10 @@ namespace DataAccessLayer
                 {
                     IsFound = true;
                     AttendanceID = (int)reader["AttendanceID"];
-                    CheckInTime = (DateTime)reader["CheckInTime"];
-                    CheckoutTime = (DateTime)reader["CheckoutTime"];
+                    IsCheckin = (bool)reader["IsCheckin"];
+                    IsCheckout = (bool)reader["IsCheckout"];
                     Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
-                    IsStillWorking = (bool)reader["IsStillWorking"];
+                    Date = (DateTime)reader["Date"];
                 }
             }
             catch
