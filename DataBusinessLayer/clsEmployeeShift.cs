@@ -44,5 +44,10 @@ namespace DataBusinessLayer
 
             return _ShiftID != -1;
         }
+
+        private bool _UpdateEmployeeShift()
+        {
+            return clsEmployeeShiftData.UpdateEmployeeShift(_ShiftID, ShiftType, StartTime, EndTime);
+        }
     }
 }
