@@ -94,7 +94,46 @@ namespace DataBusinessLayer
 
 
 
+        public static clsSubscription FindBySubscriptionID(int SubscriptionID)
+        {
+            int MemberID = -1;
+            int PlanID = -1;
+            byte Status = 1;
+            DateTime StartDate = DateTime.Now;
+            DateTime ExpirationDate = DateTime.Now.AddMonths(1);
+            double Price = 0.0;
+            int createdByUserID = -1;
+
+            bool IsFound = clsSubscriptionsData.FindSubscriptionBySubscriptionID(SubscriptionID,ref MemberID,ref PlanID,ref StartDate,ref ExpirationDate,ref Price,ref Status,ref createdByUserID);
+            if (IsFound)
+                return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, Price, createdByUserID);
+            else
+                return null;
+        }
+
+        public static clsSubscription FindByMemberID(int MemberID)
+        {
+            int SubscriptionID = -1;
+            int PlanID = -1;
+            byte Status = 1;
+            DateTime StartDate = DateTime.Now;
+            DateTime ExpirationDate = DateTime.Now.AddMonths(1);
+            double Price = 0.0;
+            int createdByUserID = -1;
 
 
-    }
+            bool IsFound = clsSubscriptionsData.FindSubscriptionByMemberID(MemberID, ref
+                SubscriptionID, ref PlanID, ref StartDate, ref ExpirationDate, ref Price, ref Status, ref createdByUserID);
+
+            if (IsFound)
+                return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, Price, createdByUserID);
+            else
+                return null;
+        }
+
+
+
+
+
+        }
 }
