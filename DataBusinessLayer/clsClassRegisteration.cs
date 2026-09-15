@@ -63,5 +63,10 @@ namespace DataBusinessLayer
         {
             return clsClassregisterationsDataAccess.FilterClassRegisterationByClassID(ClassID);
         }
+
+        static public bool Delete(int ClassRegisterationID)
+        {
+            return clsClassregisterationsDataAccess.Delete(ClassRegisterationID);
+        }
     }
     }
