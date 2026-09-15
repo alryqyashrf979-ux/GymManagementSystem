@@ -11,46 +11,43 @@ using System.Threading.Tasks;
 
 namespace DataBusinessLayer
 {
-    public class clsMembers : clsPeople
+    public class clsMembers 
     {
-        public enum enModeMembers { add = 1, edit = 2 }
-        public enModeMembers MembersMode = enModeMembers.add;
+        public enum enMode{ add = 1, edit = 2 }
+        public enMode Mode = enMode.add;
         private int _MemberID;
         public int MemberID { get { return _MemberID; } }
 
-        public int personID { set; get; }
+        public int PersonID { set; get; }
         public DateTime LastSubscriptionDate { set; get; }
         public bool IsActive { set; get; }
         public int ContactPersonInfoID { set; get; }
 
-        clsEmergencyContacts EmergencyContactInfo { set; get; }
+       public  clsEmergencyContacts EmergencyContactInfo { set; get; }
+ public        clsPeople PersonInfo { set; get; }
 
-        public clsMembers() : base()
+        public clsMembers() 
         {
 
             _MemberID = -1;
-            personID = -1;
+            PersonID = -1;
             LastSubscriptionDate = default(DateTime);
             IsActive = false;
             ContactPersonInfoID = -1;
             EmergencyContactInfo = null;
-            MembersMode = enModeMembers.add;
+            Mode = enMode.add;
+            PersonInfo = null;
         }
-        public clsMembers(int MemberID, int personID, DateTime lastSubscriptionDate, bool IsActive, int ContactPersonInfoID, int PersonID, string FirstName, string SecondName,
-            string LastName, string NationalNo, DateTime DateOfBirth, char Gender,
-             string Address, string Phone, string Email,
-            int NationalityCountryID, string ImagePath) : base(PersonID, FirstName, SecondName,
-           LastName, NationalNo, DateOfBirth, Gender,
-            Address, Phone, Email,
-             NationalityCountryID, ImagePath)
-        {
+        public clsMembers(int MemberID, int personID, DateTime lastSubscriptionDate, bool IsActive, int ContactPersonInfoID)
+        { 
             this._MemberID = MemberID;
-            this.personID = personID;
+            this.PersonID = personID;
             this.LastSubscriptionDate = lastSubscriptionDate;
             this.IsActive = IsActive;
             this.ContactPersonInfoID = ContactPersonInfoID;
             this.EmergencyContactInfo = clsEmergencyContacts.Find(ContactPersonInfoID);
-            MembersMode = enModeMembers.add;
+            this.PersonInfo = clsPeople.Find(PersonID);
+            Mode = enMode.edit;
         }
 
         static public DataTable GetAllMembers()
@@ -68,36 +65,28 @@ namespace DataBusinessLayer
         }
         public bool Delete(int memberID)
         {
-            if (clsMembersDataAccess.Delete(memberID))
-                if (clsPeople.DeletePerson(this.PersonID))
-                    return true;
-            return false;
+            return clsMembersDataAccess.Delete(memberID);
         }
         private bool _Update()
         {
-            return clsMembersDataAccess.Update(this.MemberID, this.personID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
-
+            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
         }
         private bool _Add()
         {
             this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
             return _MemberID != -1;
         }
-
         public bool Save()
         {
-            base.Mode = (MembersMode == enModeMembers.add) ? enMode.AddNew : enMode.Update;
-            if (!base.Save())
-                return false;
-            switch (MembersMode)
+            switch (Mode)
             {
-                case enModeMembers.add:
+                case enMode.add:
                     {
                         if (_Add())
                             return true;
                         break;
                     }
-                case enModeMembers.edit:
+                case enMode.edit:
                     if (_Update())
                         return true;
                     break;
@@ -109,10 +98,7 @@ namespace DataBusinessLayer
             int MemberID = -1; int EmergencyContactID = -1; DateTime LastSubscriptionDate= default(DateTime); bool IsActive = false; 
             if(clsMembersDataAccess.FindmemberByPersonID(personID,ref MemberID , ref LastSubscriptionDate,ref IsActive,ref EmergencyContactID))
             {
-                clsPeople person = clsPeople.Find(personID);
-                return new clsMembers(MemberID,personID,LastSubscriptionDate,IsActive,EmergencyContactID,personID,person.FirstName,person.SecondName,person.LastName
-                    ,person.NationalNo,person.DateOfBirth,person.Gender,person.Address,person.PhoneNumber,person.Email,person.NationalityCountryID,person.ImagePath);
-               
+                return new clsMembers(MemberID, personID, LastSubscriptionDate, IsActive, EmergencyContactID);               
             }
             return null;
         }
@@ -121,10 +107,7 @@ namespace DataBusinessLayer
             int PersonID = -1; int EmergencyContactID = -1; DateTime LastSubscriptionDate = default(DateTime); bool IsActive = false;
             if (clsMembersDataAccess.FindmemberByMemberID( memberID ,ref PersonID, ref LastSubscriptionDate, ref IsActive, ref EmergencyContactID))
             {
-                clsPeople person = clsPeople.Find(PersonID);
-                return new clsMembers(memberID, PersonID, LastSubscriptionDate, IsActive, EmergencyContactID, PersonID, person.FirstName, person.SecondName, person.LastName
-                    , person.NationalNo, person.DateOfBirth, person.Gender, person.Address, person.PhoneNumber, person.Email, person.NationalityCountryID, person.ImagePath);
-
+                return new clsMembers(memberID, PersonID, LastSubscriptionDate, IsActive, EmergencyContactID);
             }
             return null;
         }
