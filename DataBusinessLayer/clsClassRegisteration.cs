@@ -48,5 +48,20 @@ namespace DataBusinessLayer
             ClassInfo = clsClasses.GetClassInfoByClassID(ClassID);
             MemberInfo = clsMembers.FindMemberUsingMemberID(MemberID);
         }
+
+        static public DataTable GetAllClassRegisterationInfo()
+        {
+            return clsClassregisterationsDataAccess.GetAllClassRegisterationInfo();
+        }
+
+        static public DataTable FilterClassRegisterationByMemberID(int MemberID)
+        {
+            return clsClassregisterationsDataAccess.FilterClassRegisterationByMemberID(MemberID);
+        }
+
+        static public DataTable FilterClassRegisterationByClassID(int ClassID)
+        {
+            return clsClassregisterationsDataAccess.FilterClassRegisterationByClassID(ClassID);
+        }
     }
     }
