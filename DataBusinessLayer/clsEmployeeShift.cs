@@ -28,5 +28,14 @@ namespace DataBusinessLayer
             this.EndTime = DateTime.Now;
             _Mode = enMode.AddMode;
         }
+
+        public clsEmployeeShift(int ShiftID,string ShiftType,DateTime StartTime,DateTime EndTime)
+        {
+            _ShiftID = ShiftID;
+            this.ShiftType = ShiftType;
+            this.StartTime = StartTime;
+            this.EndTime =EndTime;
+            _Mode = enMode.UpdateMode;
+        }
     }
 }
