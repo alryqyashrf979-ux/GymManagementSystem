@@ -38,5 +38,13 @@ namespace DataBusinessLayer
             this.Speciality = Speciality;
             _Mode = enMode.UpdateMode;
         }
+
+        private bool _AddCoach()
+        {
+            _CoachID = clsCoachData.AddCoach(EmployeeID, Speciality, Note);
+
+            return _CoachID != -1;
+        }
+
     }
 }
