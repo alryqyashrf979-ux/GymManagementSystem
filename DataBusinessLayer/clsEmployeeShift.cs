@@ -75,5 +75,18 @@ namespace DataBusinessLayer
             return false;
         }
 
+        static public object Find(int ShiftID)
+        {
+            string ShiftType = string.Empty;
+            DateTime StartTime = DateTime.Now, EndTime = DateTime.Now;
+
+            bool IsFound = clsEmployeeShiftData.Find(ShiftID, ref ShiftType,ref StartTime,ref EndTime);
+
+            if (IsFound)
+                return new clsEmployeeShift(ShiftID, ShiftType, StartTime, EndTime);
+            else
+                return null;
+        }
+
     }
 }
