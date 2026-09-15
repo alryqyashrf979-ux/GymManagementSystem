@@ -27,5 +27,23 @@ namespace DataBusinessLayer
 
         public enum enMode { AddMode=1,UpdateMode=2};
         enMode _Mode = enMode.AddMode;
+
+
+        public clsEmployees()
+        {
+            _EmployeeID = -1;
+            PersonID = -1;
+            ShiftID = -1;
+            Title = string.Empty;
+            Salary = 0;
+            HiredDate = DateTime.Now;
+            Notes = string.Empty;
+            IsActive = false;
+            _Person = null;
+            _Shift = null;
+            _Mode = enMode.AddMode;
+        }
+
+      
     }
 }
