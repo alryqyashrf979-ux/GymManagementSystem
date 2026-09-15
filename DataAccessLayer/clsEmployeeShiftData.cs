@@ -62,5 +62,36 @@ namespace DataAccessLayer
                 return -1;
             }
         }
+
+        static public bool UpdateEmployeeShift(int ShiftID,string ShiftType,DateTime StartTime,DateTime EndTime)
+        {
+            string query = "UPDATE [dbo].[EmployeesShift] SET " +
+                "[ShiftType] = @ShiftType," +
+                "[StartTime] =@StartTime ," +
+                "[EndTime] = @EndTime" +
+                " WHERE ShiftID=@ShiftID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("ShiftID", ShiftID);
+                        command.Parameters.AddWithValue("ShiftType", ShiftType);
+                        command.Parameters.AddWithValue("StartTime", StartTime);
+                        command.Parameters.AddWithValue("EndTime", EndTime);
+
+                        return command.ExecuteNonQuery()>0;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+            return -1;
+        }
     }
 }
