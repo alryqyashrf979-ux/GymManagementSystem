@@ -78,5 +78,18 @@ namespace DataBusinessLayer
         {
             return clsCoachData.DeleteCoach(CoachID);
         }
+
+        static public object FindByCoachID(int CoachID)
+        {
+            int EmployeeID = -1;
+            string Note = string.Empty, Speciality = string.Empty;
+
+            bool IsFound = clsCoachData.FindByCoachID(CoachID, ref EmployeeID, ref Speciality, ref Note);
+
+            if (IsFound)
+                return new clsCoaches(CoachID, EmployeeID, Note, Speciality);
+            else
+                return null;
+        }
     }
 }
