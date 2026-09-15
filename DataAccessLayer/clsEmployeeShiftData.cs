@@ -117,5 +117,40 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        static public bool Find(int ShiftID,ref string ShiftType,ref DateTime StartTime,ref DateTime EndTime)
+        {
+            string query = "select *from EmployeesShift where ShiftID=@ShiftID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("ShiftID", ShiftID);
+
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                ShiftType = (string)reader["ShiftType"];
+                                StartTime = (DateTime)reader["StartTime"];
+                                EndTime = (DateTime)reader["EndTime"];
+
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
+        }
+       
     }
 }
