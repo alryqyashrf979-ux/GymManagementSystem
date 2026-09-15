@@ -42,11 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsClasses.cs" />
+    <Compile Include="clsClassRegisteration.cs" />
+    <Compile Include="clsCoaches.cs" />
     <Compile Include="clsCountries.cs" />
     <Compile Include="clsEmergencyContacts.cs" />
     <Compile Include="clsEmployeeAttendanceBussnise.cs" />
     <Compile Include="clsEmployees.cs" />
     <Compile Include="clsFrozenSubscription.cs" />
+
+    <Compile Include="clsEmployeeShift.cs" />
+
     <Compile Include="clsMembers.cs" />
     <Compile Include="clsPeople.cs" />
     <Compile Include="clsSubscription.cs" />

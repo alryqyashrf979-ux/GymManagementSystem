@@ -42,11 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsClassesData.cs" />
+    <Compile Include="clsClassregisterationsDataAccess.cs" />
+    <Compile Include="clsCoachData.cs" />
     <Compile Include="clsCountriesDataAccess.cs" />
     <Compile Include="clsEmergencyContactsData.cs" />
     <Compile Include="clsEmployeeAttendanceData.cs" />
     <Compile Include="clsEmployeesData.cs" />
+
     <Compile Include="clsFrozenSubscriptionData.cs" />
+
+    <Compile Include="clsEmployeeShiftData.cs" />
+
     <Compile Include="clsMembersDataAccess.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />

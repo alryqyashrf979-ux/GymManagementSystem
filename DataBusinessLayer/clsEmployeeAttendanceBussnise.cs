@@ -8,7 +8,7 @@ using DataAccessLayer;
 
 namespace DataBusinessLayer
 {
-    public class clsEmployeeAttendanceBussnise
+    public class clsEmployeeAttendance
     {
         private int _AttendanceID;
         public int AttendanceID { get { return _AttendanceID; } }
@@ -17,11 +17,13 @@ namespace DataBusinessLayer
         public bool IsCheckout { set; get; }
         public DateTime Date { set; get; }
         public string Note { set; get; }
+        private object _Employee;
+        public object Employee { get { return _Employee; } }
 
        public enum enMode { AddMode=1,UpdateMode=2 }
         enMode _Mode = enMode.AddMode;
 
-      public  clsEmployeeAttendanceBussnise()
+      public  clsEmployeeAttendance()
         {
             _AttendanceID = -1;
             EmployeeID = -1;
@@ -29,11 +31,12 @@ namespace DataBusinessLayer
             IsCheckout = false;
             Date = DateTime.Now;
             Note = string.Empty;
+            _Employee = null;
             _Mode = enMode.AddMode;
         }
 
 
-        clsEmployeeAttendanceBussnise(int AttendaceID, int EmployeeID, bool IsCheckin, bool IsCheckout, DateTime Date, string Note)
+        clsEmployeeAttendance(int AttendaceID, int EmployeeID, bool IsCheckin, bool IsCheckout, DateTime Date, string Note)
         {
             this._AttendanceID = AttendaceID;
             this.EmployeeID = EmployeeID;
@@ -41,6 +44,7 @@ namespace DataBusinessLayer
             this.IsCheckout = IsCheckout;
             this.Date = Date;
             this.Note = Note;
+            this._Employee = clsEmployees.FindByEmployeeID(EmployeeID);
             _Mode = enMode.UpdateMode;
         }
 
@@ -77,7 +81,7 @@ namespace DataBusinessLayer
             bool IsFound = clsEmployeeAttendanceData.FindEmployeeAttendanceByAttendanceID(AttendanceID, ref EmployeeID, ref IsCheckin, ref IsCheckout, ref Note, ref Date) ;
 
             if (IsFound)
-                return new clsEmployeeAttendanceBussnise(AttendanceID, EmployeeID, IsCheckin, IsCheckout, Date, Note);
+                return new clsEmployeeAttendance(AttendanceID, EmployeeID, IsCheckin, IsCheckout, Date, Note);
             else
                 return null;
         }
@@ -92,7 +96,7 @@ namespace DataBusinessLayer
             bool IsFound = clsEmployeeAttendanceData.FindEmployeeAttendanceByEmployeeID(EmployeeID, ref AttendanceID, ref IsCheckin, ref IsCheckout, ref Note, ref Date);
 
             if (IsFound)
-                return new clsEmployeeAttendanceBussnise(AttendanceID, EmployeeID, IsCheckin, IsCheckout, Date, Note);
+                return new clsEmployeeAttendance(AttendanceID, EmployeeID, IsCheckin, IsCheckout, Date, Note);
             else
                 return null;
         }

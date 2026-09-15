@@ -13,7 +13,9 @@ namespace DataAccessLayer
         static public DataTable GetAllEmployees()
         {
             DataTable dt = new DataTable();
-            string query = "Select *from Employees;";
+            string query = "select EmployeeID as 'Employee ID',PersonID as 'Person ID',Title,Salary,HiredDate as 'Hired Date'," +
+                "TerminationDate as 'Termination Date',Notes,IsActive as 'Is Active',ShiftID as 'Shift ID' from Employees;";
+
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString)) 
             using(SqlCommand command=new SqlCommand(query, connection))
             {
@@ -23,9 +25,9 @@ namespace DataAccessLayer
                     if (reader.HasRows)
                         dt.Load(reader);
                 }
-                return dt;
+              
             }
-
+            return dt;
         }
 
         static public bool DeleteEmployee(int EmployeeID)
