@@ -240,5 +240,29 @@ namespace DataAccessLayer
             return false;
         }
 
+        static public bool TerminateEmployee(int EmployeeID)
+        {
+            string query = "Update Employees set TerminationDate=@TerminationDate where EmployeeID=@EmployeeID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("TerminationDate", DateTime.Now);
+                        command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+
+                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
+        }
     }
 }
