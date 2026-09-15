@@ -93,5 +93,29 @@ namespace DataAccessLayer
             }
             return -1;
         }
+    
+        static public bool DeleteEmployeeShift(int ShiftID)
+        {
+            string query = "Delete From EmployeesShift where ShiftID=@ShiftID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ShiftID", ShiftID);
+
+                        return command.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+            return false;
+        }
     }
 }
