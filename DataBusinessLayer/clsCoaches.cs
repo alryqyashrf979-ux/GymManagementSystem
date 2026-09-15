@@ -46,5 +46,11 @@ namespace DataBusinessLayer
             return _CoachID != -1;
         }
 
+
+        private bool _UpdateCoach()
+        {
+            return clsCoachData.UpdateCoach(_CoachID, EmployeeID, Speciality, Note);
+        }
+
     }
 }
