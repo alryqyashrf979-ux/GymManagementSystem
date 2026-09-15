@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -22,8 +23,8 @@ namespace DataBusinessLayer
         public int createdByUserID { set; get; }
 
 
-        public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3,Frozen = 4 ,Changed = 5 }
-        
+        public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3, Frozen = 4, Changed = 5 }
+
 
         public enum enModeSubscription { AddNew = 1, Update = 2 }
 
@@ -40,7 +41,7 @@ namespace DataBusinessLayer
             this.Price = Price;
             this.createdByUserID = createdByUserID;
 
-            Mode= enModeSubscription.Update;
+            Mode = enModeSubscription.Update;
         }
 
         public clsSubscription()
@@ -60,7 +61,7 @@ namespace DataBusinessLayer
 
         private bool _AddSubscription()
         {
-            _SubscriptionID =clsSubscriptionsData.AddNewSubscription(this.MemberID,this.PlanID,this.StartDate,this.ExpirationDate,this.Price,(byte)this.Status,this.createdByUserID);
+            _SubscriptionID = clsSubscriptionsData.AddNewSubscription(this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
             return _SubscriptionID > 0;
         }
 
@@ -104,7 +105,7 @@ namespace DataBusinessLayer
             double Price = 0.0;
             int createdByUserID = -1;
 
-            bool IsFound = clsSubscriptionsData.FindSubscriptionBySubscriptionID(SubscriptionID,ref MemberID,ref PlanID,ref StartDate,ref ExpirationDate,ref Price,ref Status,ref createdByUserID);
+            bool IsFound = clsSubscriptionsData.FindSubscriptionBySubscriptionID(SubscriptionID, ref MemberID, ref PlanID, ref StartDate, ref ExpirationDate, ref Price, ref Status, ref createdByUserID);
             if (IsFound)
                 return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, Price, createdByUserID);
             else
@@ -130,6 +131,22 @@ namespace DataBusinessLayer
             else
                 return null;
         }
+
+
+
+        public static bool DeleteSubscription(int SubscriptionID)
+        {
+            return clsSubscriptionsData.DeleteSubscription(SubscriptionID);
+        }
+
+
+
+        public static DataTable GetAllSubscriptions()
+        {
+            return clsSubscriptionsData.GetAllSubscriptions();
+        }
+
+
 
 
 
