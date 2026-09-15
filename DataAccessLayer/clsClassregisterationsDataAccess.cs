@@ -54,5 +54,45 @@ namespace DataAccessLayer
                 return false;
             }
         }
+        static public int Add(int MemberID, int ClassID, int UserID, DateTime RegisterationDate)
+        {
+            string Query = "insert into ClassRegisterations " +
+                "values (@MemberID,@ClassID,@UserID,@RegisterationDate); select Scope_Idenetity();";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MemberID", MemberID);
+                cmd.Parameters.AddWithValue("@ClassID", ClassID);
+                cmd.Parameters.AddWithValue("@UserID", UserID);
+                cmd.Parameters.AddWithValue("@RegisterationDate", RegisterationDate);
+                conn.Open();
+                object value = cmd.ExecuteScalar();
+
+                if (value != null && int.TryParse(value.ToString(), out int NewID))
+                    return NewID;
+
+            }
+            return -1;
+        }
+        static public bool Update(int ClassRegisterationID, int MemberID, int ClassID, int UserID, DateTime RegisterationDate)
+        {
+            string Query = "update ClassRegisterations " +
+                   "set MemberID =@MemberID ," +
+                   "ClassID = @ClassID ," +
+                   "UserID =@UserID  ," +
+                   "RegisterationDate = @RegisterationDate " +
+                   "where ClassRegisterationID = @ClassRegisterationID";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ClassRegisterationID", ClassRegisterationID);
+                cmd.Parameters.AddWithValue("@MemberID", MemberID);
+                cmd.Parameters.AddWithValue("@ClassID", ClassID);
+                cmd.Parameters.AddWithValue("@UserID", UserID);
+                cmd.Parameters.AddWithValue("@RegisterationDate", RegisterationDate);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }
