@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -255,10 +257,108 @@ namespace DataAccessLayer
             }
         }
 
+        public static bool FindFrozenSubscriptionByFreezeID(int FreezeID, ref int SubscriptionID,
+    ref DateTime FreezeStartDate, ref DateTime FreezeEndDate, ref DateTime UnFreezeDate,
+    ref byte FreezingDuration, ref double FreezeFee, ref string FreezeReason,
+    ref bool IsFeesPaid, ref bool IsFrozen, ref int FrozenByUserID, ref int unfrozenByUserID)
+        {
+            bool isFound = false;
 
+            string sql = @"SELECT * FROM FrozenSubscriptions WHERE FreezeID = @FreezeID";
 
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.Parameters.AddWithValue("@FreezeID", FreezeID);
 
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
 
+                            SubscriptionID = (int)reader["SubscriptionID"];
+                            FreezeStartDate = (DateTime)reader["FreezeStartDate"];
+                            FreezeEndDate = (DateTime)reader["FreezeEndDate"];
+
+                            UnFreezeDate = (DateTime)reader["UnFreezeDate"];
+                            FreezingDuration = (byte)reader["FreezingDuration"];
+                            FreezeFee = reader["FreezeFee"] != DBNull.Value ? (double)reader["FreezeFee"] : 0.0;
+                            FreezeReason = reader["FreezeReason"] != DBNull.Value ? (string)reader["FreezeReason"]: string.Empty;
+                            IsFeesPaid = (bool)reader["IsFeesPaid"];
+                            IsFrozen = (bool)reader["IsFrozen"]; 
+                            FrozenByUserID = (int)reader["FrozenByUserID"];
+                            unfrozenByUserID = reader["unfrozenByUserID"] != DBNull.Value ? (int)reader["unfrozenByUserID"] : -1;
+                        }
+                        else
+                        {
+                            isFound = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
+
+            return isFound;
+        }
+        public static bool FindFrozenSubscriptionBySubscriptionID(int SubscriptionID, ref int FreezeID,
+    ref DateTime FreezeStartDate, ref DateTime FreezeEndDate, ref DateTime UnFreezeDate,
+    ref byte FreezingDuration, ref double FreezeFee, ref string FreezeReason,
+    ref bool IsFeesPaid, ref bool IsFrozen, ref int FrozenByUserID, ref int unfrozenByUserID)
+        {
+            bool isFound = false;
+
+            string sql = @"SELECT TOP 1 * FROM FrozenSubscriptions 
+                   WHERE SubscriptionID = @SubscriptionID 
+                   ORDER BY FreezeID DESC";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+
+                            FreezeID = (int)reader["FreezeID"];
+                            FreezeStartDate = (DateTime)reader["FreezeStartDate"];
+                            FreezeEndDate = (DateTime)reader["FreezeEndDate"];
+                            UnFreezeDate = (DateTime)reader["UnFreezeDate"];
+
+                            FreezingDuration = (byte)reader["FreezingDuration"];
+                            FreezeFee = reader["FreezeFee"] != DBNull.Value ? Convert.ToDouble(reader["FreezeFee"]) : 0.0;
+                            FreezeReason = reader["FreezeReason"] != DBNull.Value ? (string)reader["FreezeReason"] : string.Empty;
+                            IsFeesPaid = (bool)reader["IsFeesPaid"];
+                            IsFrozen = (bool)reader["IsFrozen"];
+                            FrozenByUserID = (int)reader["FrozenByUserID"];
+                            unfrozenByUserID = reader["unfrozenByUserID"] != DBNull.Value ? (int)reader["unfrozenByUserID"] : -1;
+                        }
+                        else
+                        {
+                            isFound = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
+
+            return isFound;
+        }
 
 
 
