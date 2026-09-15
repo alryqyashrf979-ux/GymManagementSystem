@@ -155,5 +155,44 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        static public bool FindByEmployeeID(int CoachID, ref int EmployeeID, ref string Speciality, ref string Note)
+        {
+            string query = "Select *from Coaches where EmployeeID=@Employee;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                CoachID = (int)reader["CoachID"];
+                                Speciality = (string)reader["Speciality"];
+                                if (reader["Note"] == DBNull.Value)
+                                    Note = string.Empty;
+                                else
+                                    Note = (string)reader["Note"];
+
+                                return true;
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
+        }
+
     }
 }
