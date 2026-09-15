@@ -76,5 +76,25 @@ namespace DataBusinessLayer
         {
             return clsEmployeesData.DeleteEmployee(EmployeeID);
         }
+
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddEmployee())
+                    {
+                        _Mode = enMode.UpdateMode;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case enMode.UpdateMode:
+                    return _UpdateEmployee();
+            }
+            return false;
+        }
     }
 }
