@@ -16,8 +16,8 @@ namespace DataBusinessLayer
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
-        private int int_PersonID=-1;
-        public int PersonID { get { return int_PersonID; } }
+        private int _PersonID=-1;
+        public int PersonID { get { return _PersonID; } }
         public string FirstName { set; get; }
         public string SecondName { set; get; }
         public string LastName { set; get; }
@@ -41,7 +41,7 @@ namespace DataBusinessLayer
         public clsPeople()
 
         {
-            this.int_PersonID = -1;
+            this._PersonID = -1;
             this.FirstName = "";
             this.SecondName = "";
             this.LastName = "";
@@ -65,7 +65,7 @@ namespace DataBusinessLayer
             int NationalityCountryID, string ImagePath)
 
         {
-            this.int_PersonID = PersonID;
+            this._PersonID = PersonID;
             this.FirstName = FirstName;
             this.SecondName = SecondName;
             this.LastName = LastName;
@@ -89,11 +89,11 @@ namespace DataBusinessLayer
         {
             //call DataAccess Layer 
 
-            this.int_PersonID = clsPeopleDataAccess.AddNewPerson(this.FirstName, this.SecondName,
+            this._PersonID = clsPeopleDataAccess.AddNewPerson(this.FirstName, this.SecondName,
                 this.LastName, this.PhoneNumber, this.Gender, this.DateOfBirth, this.NationalityCountryID,
                 this.Email, this.NationalNo, this.Address, this.ImagePath);
 
-            return (this.int_PersonID != -1);
+            return (this._PersonID != -1);
         }
 
         private bool _UpdatePerson()

@@ -42,13 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsClassesData.cs" />
+
     <Compile Include="clsClassRegisterationsDataAccess.cs" />
+
+    <Compile Include="clsCoachData.cs" />
+
     <Compile Include="clsCountriesDataAccess.cs" />
     <Compile Include="clsEmergencyContactsData.cs" />
     <Compile Include="clsEmployeeAttendanceData.cs" />
+    <Compile Include="clsEmployeesData.cs" />
     <Compile Include="clsMembersDataAccess.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
+    <Compile Include="clsSubscriptionsData.cs" />
     <Compile Include="clsUsersData.cs" />
     <Compile Include="DataAccessSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
