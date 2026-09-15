@@ -242,7 +242,7 @@ namespace DataAccessLayer
 
         static public bool TerminateEmployee(int EmployeeID)
         {
-            string query = "Update Employees set TerminationDate=@TerminationDate where EmployeeID=@EmployeeID;";
+            string query = "Update Employees set TerminationDate=@TerminationDate,IsActive=0 where EmployeeID=@EmployeeID;";
 
             try
             {
