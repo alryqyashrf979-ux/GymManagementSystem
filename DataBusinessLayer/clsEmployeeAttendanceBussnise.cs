@@ -31,5 +31,16 @@ namespace DataBusinessLayer
         }
 
 
+        clsEmployeeAttendanceBussnise(int AttendaceID, int EmployeeID, bool IsCheckin, bool IsCheckout, DateTime Date, string Note)
+        {
+            this._AttendanceID = AttendaceID;
+            this.EmployeeID = EmployeeID;
+            this.IsCheckin = IsCheckin;
+            this.IsCheckout = IsCheckout;
+            this.Date = Date;
+            this.Note = Note;
+            _Mode = enMode.UpdateMode;
+        }
+
     }
 }
