@@ -60,5 +60,11 @@ namespace DataBusinessLayer
 
             return (_AttendanceID != -1);
         }
+
+        private bool _UpdateEmployeeAttendance()
+        {
+            return clsEmployeeAttendanceData.UpdateEmployeeAttendanceData(this._AttendanceID, this.EmployeeID, this.IsCheckin, this.IsCheckout, this.Note, this.Date);
+
+        }
     }
 }
