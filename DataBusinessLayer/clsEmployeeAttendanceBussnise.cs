@@ -16,8 +16,20 @@ namespace DataBusinessLayer
         public DateTime Date { set; get; }
         public string Note { set; get; }
 
-       public enum enMode { AddMode=1,UpdateMode=2; }
+       public enum enMode { AddMode=1,UpdateMode=2 }
         enMode _Mode = enMode.AddMode;
+
+      public  clsEmployeeAttendanceBussnise()
+        {
+            _AttendanceID = -1;
+            EmployeeID = -1;
+            IsCheckin = false;
+            IsCheckout = false;
+            Date = DateTime.Now;
+            Note = string.Empty;
+            _Mode = enMode.AddMode;
+        }
+
 
     }
 }
