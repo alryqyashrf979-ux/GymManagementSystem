@@ -37,8 +37,10 @@ namespace DataAccessLayer
             using (SqlCommand cmd = new SqlCommand(Query, conn))
             {
                 conn.Open();
+                cmd.Parameters.AddWithValue("@ClassRegisterationID", ClassRegisterationID);
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
+                   
                     if (reader.Read())
                     {
                         MemberID = (int)reader["memberID"];
@@ -58,6 +60,10 @@ namespace DataAccessLayer
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand cmd = new SqlCommand(Query, conn))
             {
+                cmd.Parameters.AddWithValue("@MemberID", MemberID);
+                cmd.Parameters.AddWithValue("@ClassID", ClassID);
+                cmd.Parameters.AddWithValue("@UserID", UserID);
+                cmd.Parameters.AddWithValue("@RegisterationDate", RegisterationDate);
                 conn.Open();
                 object value = cmd.ExecuteScalar();
 
@@ -66,6 +72,26 @@ namespace DataAccessLayer
 
             }
             return -1;
+        }
+        static public bool Update(int ClassRegisterationID, int MemberID, int ClassID, int UserID, DateTime RegisterationDate)
+        {
+            string Query = "update ClassRegisterations " +
+                   "set MemberID =@MemberID ," +
+                   "ClassID = @ClassID ," +
+                   "UserID =@UserID  ," +
+                   "RegisterationDate = @RegisterationDate " +
+                   "where ClassRegisterationID = @ClassRegisterationID";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ClassRegisterationID", ClassRegisterationID);
+                cmd.Parameters.AddWithValue("@MemberID", MemberID);
+                cmd.Parameters.AddWithValue("@ClassID", ClassID);
+                cmd.Parameters.AddWithValue("@UserID", UserID);
+                cmd.Parameters.AddWithValue("@RegisterationDate", RegisterationDate);
+                return cmd.ExecuteNonQuery() > 0;
+            }
         }
     }
 }
