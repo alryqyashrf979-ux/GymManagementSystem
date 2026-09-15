@@ -23,9 +23,9 @@ namespace DataAccessLayer
                     if (reader.HasRows)
                         dt.Load(reader);
                 }
-                return dt;
+              
             }
-
+            return dt;
         }
 
         static public bool DeleteEmployee(int EmployeeID)
