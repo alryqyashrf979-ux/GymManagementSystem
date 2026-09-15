@@ -94,5 +94,28 @@ namespace DataAccessLayer
                 return false;
             }
         }
+
+        static public bool DeleteCoach(int CoachID)
+        {
+            string query = "Delete from Coaches where CoachID=@CoachID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CoachID", CoachID);
+
+                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
