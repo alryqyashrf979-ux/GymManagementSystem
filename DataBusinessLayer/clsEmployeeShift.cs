@@ -49,5 +49,11 @@ namespace DataBusinessLayer
         {
             return clsEmployeeShiftData.UpdateEmployeeShift(_ShiftID, ShiftType, StartTime, EndTime);
         }
+
+        static public bool DeleteEmployeeShift(int ShiftID)
+        {
+            return clsEmployeeShiftData.DeleteEmployeeShift(ShiftID);
+        }
+
     }
 }
