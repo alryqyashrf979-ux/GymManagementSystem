@@ -21,6 +21,15 @@ namespace DataBusinessLayer
         public enum enMode { AddMode=1,UpdateMode=2}
         private enMode _Mode = enMode.AddMode;
 
+        public clsCoaches()
+        {
+            _CoachID = -1;
+            EmployeeID = -1;
+            Note = string.Empty;
+            Speciality = string.Empty;
+            _Mode = enMode.AddMode;
+        }
+
 
     }
 }
