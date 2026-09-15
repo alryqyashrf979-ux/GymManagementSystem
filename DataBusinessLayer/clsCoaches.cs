@@ -30,6 +30,13 @@ namespace DataBusinessLayer
             _Mode = enMode.AddMode;
         }
 
-
+        public clsCoaches(int CoachID,int EmployeeID,string Note,string Speciality)
+        {
+            this._CoachID = CoachID;
+            this.EmployeeID = EmployeeID;
+            this.Note = Note;
+            this.Speciality = Speciality;
+            _Mode = enMode.UpdateMode;
+        }
     }
 }
