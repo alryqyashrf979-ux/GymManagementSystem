@@ -64,5 +64,35 @@ namespace DataAccessLayer
                 return -1;
             }
         }
+
+        static public bool UpdateCoach(int CoachID,int EmployeeID,string Speciality,string Note)
+        {
+            string query = " UPDATE [dbo].[Coaches] SET [EmployeeID] = @EmployeeID,[Speciality] = @Speciality,[Note] = @Note WHERE CoachID=@CoachID; ";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("CoachID", CoachID);
+                        command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+                        command.Parameters.AddWithValue("Speciality", Speciality);
+
+                        if (string.IsNullOrEmpty(Note))
+                            command.Parameters.AddWithValue("Note", DBNull.Value);
+                        else
+                            command.Parameters.AddWithValue("Note", Note);
+
+                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
