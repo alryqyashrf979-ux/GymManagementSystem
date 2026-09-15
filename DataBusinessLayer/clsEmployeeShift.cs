@@ -55,5 +55,25 @@ namespace DataBusinessLayer
             return clsEmployeeShiftData.DeleteEmployeeShift(ShiftID);
         }
 
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddEmployeeShift())
+                    {
+                        _Mode = enMode.UpdateMode;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case enMode.UpdateMode:
+                    return _UpdateEmployeeShift();
+            }
+            return false;
+        }
+
     }
 }
