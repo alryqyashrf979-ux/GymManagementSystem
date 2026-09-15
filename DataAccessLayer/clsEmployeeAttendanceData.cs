@@ -85,8 +85,11 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
             command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
             command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
-            command.Parameters.AddWithValue("@Note", Note);
-            command.Parameters.AddWithValue("@Date", Date);
+          
+            if (string.IsNullOrEmpty(Note))
+                command.Parameters.AddWithValue("@Note", DBNull.Value);
+            else
+                command.Parameters.AddWithValue("@Note", Note);
 
 
             try
