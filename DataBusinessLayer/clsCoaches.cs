@@ -52,5 +52,26 @@ namespace DataBusinessLayer
             return clsCoachData.UpdateCoach(_CoachID, EmployeeID, Speciality, Note);
         }
 
+
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddCoach())
+                    {
+                        _Mode = enMode.UpdateMode;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.UpdateMode:
+                    return _UpdateCoach();
+            }
+            return false;
+        }
     }
 }
