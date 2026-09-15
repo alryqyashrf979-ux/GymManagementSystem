@@ -67,6 +67,21 @@ namespace DataBusinessLayer
 
         }
 
+        static public object Find(int AttendanceID)
+        {
+            int EmployeeID = -1;
+            bool IsCheckin = false, IsCheckout = false;
+            DateTime Date = DateTime.Now;
+            string Note = string.Empty;
+
+            bool IsFound = clsEmployeeAttendanceData.FindEmployeeAttendanceByAttendanceID(AttendanceID, ref EmployeeID, ref IsCheckin, ref IsCheckout, ref Note, ref Date) ;
+
+            if (IsFound)
+                return new clsEmployeeAttendanceBussnise(AttendanceID, EmployeeID, IsCheckin, IsCheckout, Date, Note);
+            else
+                return null;
+        }
+
         public bool Save()
         {
             switch (_Mode)
