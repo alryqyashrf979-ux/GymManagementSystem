@@ -91,7 +91,7 @@ namespace DataAccessLayer
             {
 
             }
-            return -1;
+            return false;
         }
     
         static public bool DeleteEmployeeShift(int ShiftID)
