@@ -104,6 +104,29 @@ namespace DataAccessLayer
                 return cmd.ExecuteNonQuery() > 0;
 
             }
+
             }
+
+        static public DataTable FilterClassRegisterationByMemberID(int MemberID)
+        {
+            DataTable dt = new DataTable();
+            string Query = "SELECT \r\n    ClassRegisterationID CR AS [Class Registeration ID],\r\n    P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Member Full Name],\r\n " +
+                "   C.ClassName AS [Class Name],\r\n    C.StartTime AS [Start Time]\r\nFROM ClassRegisterations CR\r\nINNER JOIN Members M\r\n    ON M.MemberID = ClassRegisteration.MemberID\r\nINNER JOIN People P\r\n " +
+                "   ON P.ID = M.PersonID\r\nINNER JOIN Classes C\r\n    ON C.ClassID = ClassRegisteration.ClassID " +
+                "where CR.MemberID = @MemberID;";
+
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                        dt.Load(reader);
+                }
+            }
+            return dt;
+        }
     }
 }
