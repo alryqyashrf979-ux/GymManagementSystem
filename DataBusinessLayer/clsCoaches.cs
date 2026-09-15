@@ -91,5 +91,18 @@ namespace DataBusinessLayer
             else
                 return null;
         }
+
+        static public object FindByEmployeeID(int EmployeeID)
+        {
+            int CoachID = -1;
+            string Note = string.Empty, Speciality = string.Empty;
+
+            bool IsFound = clsCoachData.FindByEmployeeID(EmployeeID, ref CoachID, ref Speciality, ref Note);
+
+            if (IsFound)
+                return new clsCoaches(CoachID, EmployeeID, Note, Speciality);
+            else
+                return null;
+        }
     }
 }
