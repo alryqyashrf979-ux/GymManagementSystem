@@ -20,6 +20,13 @@ namespace DataBusinessLayer
         public enum enMode { AddMode=1,UpdateMode=2 }
         private enMode _Mode = enMode.AddMode;
 
-
+        public clsEmployeeShift()
+        {
+            _ShiftID = -1;
+            this.ShiftType = string.Empty;
+            this.StartTime = DateTime.Now;
+            this.EndTime = DateTime.Now;
+            _Mode = enMode.AddMode;
+        }
     }
 }
