@@ -21,7 +21,7 @@ namespace DataBusinessLayer
         public int createdByUserID { set; get; }
 
 
-        public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3,Freezed = 4 ,Changed = 5 }
+        public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3,Frozen = 4 ,Changed = 5 }
         
 
         public enum enModeSubscription { AddNew = 1, Update = 2 }

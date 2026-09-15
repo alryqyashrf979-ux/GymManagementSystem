@@ -15,12 +15,12 @@ namespace DataAccessLayer
 
 
         public static int AddNewSubscription(int MemberID,
-             int PlanID, DateTime StartDate, DateTime ExpirationDate, double Price, bool IsActive, int CreatedByUserID)
+             int PlanID, DateTime StartDate, DateTime ExpirationDate, double Price, byte Status, int CreatedByUserID)
         {
 
 
-            string sql = "INSERT INTO Subscriptions (MemberID, PlanID, StartDate, ExpirationDate, Price, IsActive, CreatedByUserID) " +
-                         "VALUES (@MemberID, @PlanID, @StartDate, @ExpirationDate, @Price, @IsActive, @CreatedByUserID); " +
+            string sql = "INSERT INTO Subscriptions (MemberID, PlanID, StartDate, ExpirationDate, Price, Status, CreatedByUserID) " +
+                         "VALUES (@MemberID, @PlanID, @StartDate, @ExpirationDate, @Price, @Status, @CreatedByUserID); " +
                          "SELECT SCOPE_IDENTITY();"; // This will return the last inserted identity value
 
 
@@ -34,7 +34,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@StartDate", StartDate);
                     command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
                     command.Parameters.AddWithValue("@Price", Price);
-                    command.Parameters.AddWithValue("@IsActive", IsActive);
+                    command.Parameters.AddWithValue("@Status", Status);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
 
@@ -61,9 +61,9 @@ namespace DataAccessLayer
         }
 
         public static bool UpdateSubscription(int SubscriptionID, int MemberID,
-             int PlanID, DateTime StartDate, DateTime ExpirationDate, double Price, bool IsActive, int CreatedByUserID)
+             int PlanID, DateTime StartDate, DateTime ExpirationDate, double Price, byte Status, int CreatedByUserID)
         {
-            string sql = "UPDATE Subscriptions SET MemberID = @MemberID, PlanID = @PlanID, StartDate = @StartDate, ExpirationDate = @ExpirationDate, Price = @Price, IsActive = @IsActive, CreatedByUserID = @CreatedByUserID " +
+            string sql = "UPDATE Subscriptions SET MemberID = @MemberID, PlanID = @PlanID, StartDate = @StartDate, ExpirationDate = @ExpirationDate, Price = @Price, Status = @Status, CreatedByUserID = @CreatedByUserID " +
                          "WHERE SubscriptionID = @SubscriptionID";
             try
             {
@@ -76,7 +76,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@StartDate", StartDate);
                     command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
                     command.Parameters.AddWithValue("@Price", Price);
-                    command.Parameters.AddWithValue("@IsActive", IsActive);
+                    command.Parameters.AddWithValue("@Status", Status);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
                     return command.ExecuteNonQuery() > 0;
@@ -116,11 +116,27 @@ namespace DataAccessLayer
 
 
             string sql = @"
-                     SELECT SubscriptionID as 'Subscription ID' ,People.FirstName+' '+People.SecondName+' '+ People.LastName as 'Member Name' 
-                      ,  subscriptions.PlanID as 'Plan ID', StartDate as 'Start Date', ExpirationDate as 
-                 'Expiration Date', subscriptions.Price as 'Price', subscriptions.IsActive as 'Is Active', subscriptions.CreatedByUserID as
-                'Created By User ID' from Subscriptions join Members on Subscriptions.MemberID=Members.MemberID join People on Members.PersonID=People.ID
-                join SubscriptionPlans on SubscriptionPlans.PlanID =subscriptions.PlanID
+                    SELECT 
+    SubscriptionID AS 'Subscription ID', 
+    People.FirstName + ' ' + People.SecondName + ' ' + People.LastName AS 'Member Name', 
+    subscriptions.PlanID AS 'Plan ID', 
+    StartDate AS 'Start Date', 
+    ExpirationDate AS 'Expiration Date', 
+    subscriptions.Price AS 'Price', 
+    CASE subscriptions.Status 
+        WHEN 1 THEN 'Active'
+        WHEN 2 THEN 'Expired'
+        WHEN 3 THEN 'Canceled'
+        WHEN 4 THEN 'Frozen'
+        WHEN 5 THEN 'Changed'
+        ELSE 'Unknown'
+    END AS 'Status', 
+    subscriptions.CreatedByUserID AS 'Created By User ID' 
+FROM Subscriptions 
+JOIN Members ON Subscriptions.MemberID = Members.MemberID 
+JOIN People ON Members.PersonID = People.ID
+JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID;
+
 
                      ";
 
@@ -156,11 +172,11 @@ namespace DataAccessLayer
         }
 
         public static bool FindSubscriptionBySubscriptionID(int SubscriptionID, ref int MemberID, ref int PlanID, ref DateTime StartDate, ref DateTime ExpirationDate,
-            ref double Price, ref bool IsActive, ref int CreatedByUserID)
+            ref double Price, ref byte Status, ref int CreatedByUserID)
         {
 
 
-            string sql = "SELECT MemberID, PlanID, StartDate, ExpirationDate, Price, IsActive, CreatedByUserID FROM Subscriptions WHERE SubscriptionID = @SubscriptionID";
+            string sql = "SELECT MemberID, PlanID, StartDate, ExpirationDate, Price, Status, CreatedByUserID FROM Subscriptions WHERE SubscriptionID = @SubscriptionID";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -176,7 +192,7 @@ namespace DataAccessLayer
                             StartDate = (DateTime)reader["StartDate"];
                             ExpirationDate = (DateTime)reader["ExpirationDate"];
                             Price = (double)reader["Price"];
-                            IsActive = (bool)reader["IsActive"];
+                            Status = (byte)reader["Status"];
                             CreatedByUserID = (int)reader["CreatedByUserID"];
 
 
@@ -196,10 +212,10 @@ namespace DataAccessLayer
         }
 
         public static bool FindSubscriptionByMemberID(int MemberID, ref int SubscriptionID, ref int PlanID, ref DateTime StartDate, ref DateTime ExpirationDate,
-            ref double Price, ref bool IsActive, ref int CreatedByUserID)
+            ref double Price, ref byte Status, ref int CreatedByUserID)
         {
 
-            string sql = "SELECT SubscriptionID, PlanID, StartDate, ExpirationDate, Price, IsActive, CreatedByUserID FROM Subscriptions WHERE MemberID = @MemberID";
+            string sql = "SELECT SubscriptionID, PlanID, StartDate, ExpirationDate, Price, Status, CreatedByUserID FROM Subscriptions WHERE MemberID = @MemberID";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -215,7 +231,7 @@ namespace DataAccessLayer
                             StartDate = (DateTime)reader["StartDate"];
                             ExpirationDate = (DateTime)reader["ExpirationDate"];
                             Price = (double)reader["Price"];
-                            IsActive = (bool)reader["IsActive"];
+                            Status = (byte)reader["Status"];
                             CreatedByUserID = (int)reader["CreatedByUserID"];
 
 
@@ -236,25 +252,25 @@ namespace DataAccessLayer
         }
 
 
-                
-        //public static bool UpdateSubscriptionStatus(int SubscriptionID, bool IsActive)
-        //{
-        //    string sql = "UPDATE Subscriptions SET IsActive = @IsActive WHERE SubscriptionID = @SubscriptionID";
-        //    try
-        //    {
-        //        using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-        //        using (SqlCommand command = new SqlCommand(sql, conn))
-        //        {
-        //            command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
-        //            command.Parameters.AddWithValue("@IsActive", IsActive);
-        //            return command.ExecuteNonQuery() > 0;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return false;
-        //    }
-        //}
+
+        public static bool UpdateSubscriptionStatus(int SubscriptionID, byte Status)
+        {
+            string sql = "UPDATE Subscriptions SET Status = @Status WHERE SubscriptionID = @SubscriptionID";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+                    command.Parameters.AddWithValue("@Status", Status);
+                    return command.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
 
 
