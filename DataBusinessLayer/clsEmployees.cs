@@ -113,6 +113,21 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        static public object FindByPersonID(int PersonID)
+        {
+            int EmployeeID = -1, ShiftID = -1;
+            string Title = string.Empty, Notes = string.Empty;
+            float Salary = 0;
+            DateTime HiredDate = DateTime.Now; DateTime? TerminationDate = DateTime.Now;
+            bool IsActive = false;                  //? to handle allows null
+
+            bool IsFound = clsEmployeesData.FindByEmployeeID(PersonID, ref EmployeeID, ref Title, ref Salary, ref HiredDate, ref TerminationDate, ref Notes, ref IsActive, ref ShiftID);
+
+            if (IsFound)
+                return new clsEmployees(EmployeeID, PersonID, ShiftID, Title, Salary, HiredDate, Notes, IsActive);
+            else
+                return null;
+        }
 
     }
 }
