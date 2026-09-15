@@ -40,7 +40,7 @@ namespace DataAccessLayer
                     using (SqlCommand command=new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("EmployeeID", EmployeeID);
-                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                        return command.ExecuteNonQuery() > 0;
                     }
                 }
             }
@@ -126,7 +126,7 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("IsActive", IsActive);
                         command.Parameters.AddWithValue("ShiftID", ShiftID);
 
-                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                        return command.ExecuteNonQuery()> 0;
                     }
                 }
             }
@@ -254,7 +254,7 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("TerminationDate", DateTime.Now);
                         command.Parameters.AddWithValue("EmployeeID", EmployeeID);
 
-                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                        return command.ExecuteNonQuery()> 0;
                     }
                 }
             }
