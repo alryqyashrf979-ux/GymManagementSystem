@@ -85,7 +85,7 @@ namespace DataAccessLayer
                         else
                             command.Parameters.AddWithValue("Note", Note);
 
-                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                        return command.ExecuteNonQuery() > 0;
                     }
                 }
             }
