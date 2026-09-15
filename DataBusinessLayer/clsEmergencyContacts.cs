@@ -31,6 +31,8 @@ namespace DataBusinessLayer
             Relationship = relationship;
             PhoneNumber = phoneNumber;
             int_ContactID = contactID;
+
+            Mode=enMode.Update;
         }
 
         public clsEmergencyContacts()
@@ -39,6 +41,9 @@ namespace DataBusinessLayer
             Relationship = string.Empty;
             PhoneNumber = string.Empty;
             int_ContactID = -1;
+
+            Mode = enMode.AddNew;
+
         }
 
         private bool _AddNewContact()
