@@ -37,5 +37,12 @@ namespace DataBusinessLayer
             this.EndTime =EndTime;
             _Mode = enMode.UpdateMode;
         }
+
+        private bool _AddEmployeeShift()
+        {
+            _ShiftID = clsEmployeeShiftData.AddEmployeeShift(ShiftType, StartTime, EndTime);
+
+            return _ShiftID != -1;
+        }
     }
 }
