@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -55,6 +56,43 @@ namespace DataBusinessLayer
 
             Mode = enModeSubscription.AddNew;
         }
+
+
+        private bool _AddSubscription()
+        {
+            _SubscriptionID =clsSubscriptionsData.AddNewSubscription(this.MemberID,this.PlanID,this.StartDate,this.ExpirationDate,this.Price,(byte)this.Status,this.createdByUserID);
+            return _SubscriptionID > 0;
+        }
+
+        private bool _UpdateSubscription()
+        {
+            return clsSubscriptionsData.UpdateSubscription(this.SubscriptionID, this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
+        }
+
+
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enModeSubscription.AddNew:
+
+                    if (_AddSubscription())
+                    {
+                        Mode = enModeSubscription.Update;
+                        return true;
+
+                    }
+                    else
+                        return false;
+
+                case enModeSubscription.Update:
+                    return _UpdateSubscription();
+            }
+            return false;
+        }
+
+
 
 
 
