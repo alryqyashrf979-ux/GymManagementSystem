@@ -187,5 +187,58 @@ namespace DataAccessLayer
 
             return false;
         }
+
+        static public bool FindByPersonID(int PersonID, ref int EmployeeID, ref string Title, ref float Salary, ref DateTime HiredDate, ref DateTime? TerminationDate, ref string Notes, ref bool IsActive, ref int ShiftID)
+        {                                                                                                                                   // ? because allows null .
+            string query = "Select *from Employees where PersonID=@PersonID;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("PersonID", PersonID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                EmployeeID = (int)reader["EmployeeID"];
+                                Title = (string)reader["Title"];
+                                Salary = (float)reader["Salary"];
+
+                                if (reader["HiredDate"] == DBNull.Value)
+                                    TerminationDate = null;
+                                else
+                                    TerminationDate = (DateTime)reader["TerminationDate"];
+
+                                HiredDate = (DateTime)reader["HiredDate"];
+
+                                if (string.IsNullOrEmpty(Notes))
+                                    Notes = string.Empty;
+                                else
+                                    Notes = (string)reader["Notes"];
+
+                                IsActive = (bool)reader["IsActive"];
+                                ShiftID = (int)reader["ShiftID"];
+
+                                return true;
+
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return false;
+        }
+
     }
 }
