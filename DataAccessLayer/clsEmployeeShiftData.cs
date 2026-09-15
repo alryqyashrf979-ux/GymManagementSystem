@@ -31,5 +31,36 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+        static public int AddEmployeeShift(string ShiftType,DateTime StartTime,DateTime EndTime)
+        {
+            string query = "INSERT INTO [dbo].[EmployeesShift] ([ShiftType],[StartTime],[EndTime]) " +
+                "VALUES (@ShiftType,@StartTime,@EndTime);select scope_idintity();";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ShiftType", ShiftType);
+                        command.Parameters.AddWithValue("@StartTime", StartTime);
+                        command.Parameters.AddWithValue("@EndTime", EndTime);
+
+                        object Resault = command.ExecuteNonQuery();
+
+                        if (int.TryParse(Resault.ToString(), out int Value))
+                            return Value;
+                        else
+                            return -1;
+                    }
+                }
+            }
+            catch
+            {
+                return -1;
+            }
+        }
     }
 }
