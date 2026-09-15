@@ -44,6 +44,19 @@ namespace DataBusinessLayer
             _Mode = enMode.AddMode;
         }
 
-      
+        clsEmployees(int EmployeeID,int PersonID,int ShiftID,string Title,float Salary,DateTime HiredDate,string Notes,bool IsActive)
+        {
+            this._EmployeeID = EmployeeID;
+            this.PersonID = PersonID;
+            this.ShiftID = ShiftID;
+            this.Title = Title;
+            this.Salary = Salary;
+            this.HiredDate = HiredDate;
+            this.Notes = Notes;
+            this.IsActive = IsActive;
+            this._Person = clsPeople.Find(PersonID);
+            this._Shift = null;//still has a shift class
+            _Mode = enMode.UpdateMode;
+        }
     }
 }
