@@ -47,6 +47,7 @@
     <Compile Include="clsEmergencyContacts.cs" />
     <Compile Include="clsEmployeeAttendanceBussnise.cs" />
     <Compile Include="clsEmployees.cs" />
+    <Compile Include="clsEmployeeShift.cs" />
     <Compile Include="clsMembers.cs" />
     <Compile Include="clsPeople.cs" />
     <Compile Include="clsSubscription.cs" />
