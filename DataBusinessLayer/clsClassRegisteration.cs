@@ -11,16 +11,42 @@ namespace DataBusinessLayer
 
     public class clsClassRegisteration
     {
+        private int _ClassRegisterationID = -1;
+        public int ClassRegisterationID { get { return _ClassRegisterationID; } }
         public int MemberID { get; set; }
         public int ClassID { get; set; }
         public int RegisteredByUserID { get; set; }
         public DateTime RegisterationDate { get; set; }
-
         public enum enMode { AddNew = 1, Update = 2 }
         public enMode Mode = enMode.AddNew;
-
         public clsUsers UserInfo = new clsUsers();
         public clsClasses ClassInfo = new clsClasses();
         public clsMembers MemberInfo = new clsMembers();
+
+        public clsClassRegisteration()
+        {
+            this._ClassRegisterationID = -1;
+            this.MemberID = -1;
+            this.ClassID = -1;
+            this.RegisteredByUserID = -1;
+            this.RegisterationDate = DateTime.Now;
+            this.Mode = enMode.AddNew;
+            UserInfo = new clsUsers();
+            ClassInfo = new clsClasses();
+            MemberInfo = new clsMembers();
+        }
+
+        private clsClassRegisteration(int ClassRegisterationID, int MemberID, int ClassID, int UserID, DateTime RegisterationDate)
+        {
+            this._ClassRegisterationID = ClassRegisterationID;
+            this.MemberID = MemberID;
+            this.ClassID = ClassID;
+            this.RegisteredByUserID = UserID;
+            this.RegisterationDate = RegisterationDate;
+            this.Mode = enMode.Update;
+            UserInfo = clsUsers.FindByUserID(RegisteredByUserID);
+            ClassInfo = clsClasses.GetClassInfoByClassID(ClassID);
+            MemberInfo = clsMembers.FindMemberUsingMemberID(MemberID);
+        }
     }
     }
