@@ -30,5 +30,29 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+        static public bool Find(int ClassRegisterationID, ref int MemberID, ref int ClassID, ref int UserID, ref DateTime RegisterationDate)
+        {
+            string Query = " select * from ClassRegisterations where ClassRegisterationID = @ClassRegisterationID";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ClassRegisterationID", ClassRegisterationID);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+
+                    if (reader.Read())
+                    {
+                        MemberID = (int)reader["memberID"];
+                        ClassID = (int)reader["ClassID"];
+                        UserID = (int)reader["UserID"];
+                        RegisterationDate = (DateTime)reader["RegisterationDate"];
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
     }
 }
