@@ -66,6 +66,48 @@ namespace DataAccessLayer
             return (EffectedRows > 0);
         }
 
-      
+        static public bool UpdateEmployeeAttendanceData(int AttendanceID, int EmployeeID, bool IsCheckin, bool IsCheckout, string Note, DateTime Date)
+        {
+            int RowEffect = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "UPDATE [dbo].[EmployeesAttendance] SET" +
+                " [EmployeeID] = @EmployeeID," +
+                "[IsCheckin] = @IsCheckin," +
+                "[IsCheckout] = @IsCheckout," +
+                "[Note] = @Note," +
+                "[Date] = @Date " +
+                "WHERE AttendanceID=@AttendanceID; ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@AttendanceID", AttendanceID);
+            command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
+            command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
+            command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
+            command.Parameters.AddWithValue("@Note", Note);
+            command.Parameters.AddWithValue("@Date", Date);
+
+
+            try
+            {
+                connection.Open();
+                RowEffect = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (RowEffect > 0);
+        }
+
+       
+
+
     }
 }
