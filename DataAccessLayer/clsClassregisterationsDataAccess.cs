@@ -94,5 +94,19 @@ namespace DataAccessLayer
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+        static public bool Delete(int ClassRegisterationID)
+        {
+            string Query = " Delete from ClassRegisterations where ClassRegisterationID =@ClassRegisterationID";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ClassRegisterationID", ClassRegisterationID);
+                return cmd.ExecuteNonQuery() > 0;
+
+            }
+
+        }
+
     }
 }
