@@ -73,5 +73,10 @@ namespace DataBusinessLayer
             }
             return false;
         }
+
+        static public bool DeleteCoach(int CoachID)
+        {
+            return clsCoachData.DeleteCoach(CoachID);
+        }
     }
 }
