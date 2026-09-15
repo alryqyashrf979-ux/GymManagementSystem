@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace DataAccessLayer
 
 
 
-        public static int AddNewFrozenSubscription(int SubscriptionID,DateTime FreezeEndDate,DateTime FreezeStartDate, byte FreezingDuration,double FreezeFee,
+        public static int AddNewFreezeSubscription(int SubscriptionID,DateTime FreezeEndDate,DateTime FreezeStartDate, byte FreezingDuration,double FreezeFee,
             string FreezeReason,bool IsFeesPaid,bool IsFrozen, int FrozenByUserID)
         {
 
@@ -177,6 +178,83 @@ namespace DataAccessLayer
             }
 
         }
+
+
+
+        public static bool DeleteFrozenSubscription(int FreezeID)
+        {
+
+            string sql = "DELETE FROM FrozenSubscriptions WHERE FreezeID = @FreezeID";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.Parameters.AddWithValue("@FreezeID", FreezeID);
+                    return command.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
+
+        public static DataTable GetAllFrozenSubscriptions()
+        {
+
+
+            string sql = @"
+
+                    SELECT 
+    FreezeID AS 'Freeze ID',
+    SubscriptionID AS 'Subscription ID',
+    FreezeStartDate AS 'Start Date',
+    FreezeEndDate AS 'End Date',
+    UnFreezeDate AS 'UnFreeze Date',
+    FreezingDuration AS 'Freezing Duration',
+    FreezeFee AS 'Freeze Fee',
+    IsFeesPaid AS 'IsFeesPaid',
+    IsFrozen AS 'Is Frozen',
+    FrozenByUserID AS 'FrozenByUserID',
+    unfrozenByUserID AS 'UnFrozenByUserID'
+
+      FROM FrozenSubscriptions;
+
+                     ";
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                using (SqlDataReader Reader = command.ExecuteReader())
+                {
+
+
+                    if (Reader.HasRows)
+                    {
+                        dt.Load(Reader);
+                        return dt;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
 
 
 
