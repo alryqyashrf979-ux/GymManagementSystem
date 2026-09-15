@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsClassesData.cs" />
+    <Compile Include="clsCoachData.cs" />
     <Compile Include="clsCountriesDataAccess.cs" />
     <Compile Include="clsEmergencyContactsData.cs" />
     <Compile Include="clsEmployeeAttendanceData.cs" />
