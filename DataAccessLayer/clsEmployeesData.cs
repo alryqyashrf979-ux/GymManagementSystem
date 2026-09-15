@@ -50,7 +50,7 @@ namespace DataAccessLayer
             }
         }
 
-        static public int AddEmployee(int PersonID,string Title,float Salary,DateTime HiredDate,string Notes,bool IsActive,int ShiftID)
+        static public int AddEmployee(int PersonID,string Title,float Salary,string Notes,bool IsActive,int ShiftID)
         {
             string query = "INSERT INTO [dbo].[Employees]([PersonID],[Title],[Salary],[HiredDate],[Notes],[IsActive],[ShiftID])" +
                 " VALUES (@PersonID,@Title,@Salary,@HiredDate,@Notes,@IsActive,@ShiftID); Select scope_Idintity()";
@@ -65,10 +65,10 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("PersonID", PersonID);
                         command.Parameters.AddWithValue("Title", Title);
                         command.Parameters.AddWithValue("Salary", Salary);
-                        command.Parameters.AddWithValue("HiredDate", HiredDate);
+                        command.Parameters.AddWithValue("HiredDate", DateTime.Now);
 
             
-                        if(string.IsNullOrEmpty(Notes)
+                        if(string.IsNullOrEmpty(Notes))
                         command.Parameters.AddWithValue("Notes", DBNull.Value);
                         else
                         command.Parameters.AddWithValue("Notes", Notes);
@@ -134,6 +134,58 @@ namespace DataAccessLayer
             {
                 return false;
             }
+        }
+
+        static public bool FindByEmployeeID(int EmployeeID,ref int PersonID,ref string Title,ref float Salary,ref DateTime HiredDate,ref DateTime? TerminationDate,ref string Notes,ref bool IsActive,ref int ShiftID)
+        {                                                                                                                                   // ? because allows null .
+            string query = "Select *from Employees where EmployeeID=@EmployeeID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+
+                        using(SqlDataReader reader=command.ExecuteReader())
+                        {
+                            if(reader.Read())
+                            {
+                                PersonID = (int)reader["PersonID"];
+                                Title = (string)reader["Title"];
+                                Salary = (float)reader["Salary"];
+
+                                if(reader["HiredDate"]==DBNull.Value)
+                                TerminationDate = null;
+                                else
+                                TerminationDate = (DateTime)reader["TerminationDate"];
+
+                                HiredDate = (DateTime)reader["HiredDate"];
+
+                                if (string.IsNullOrEmpty(Notes))
+                                    Notes = string.Empty;
+                                else
+                                Notes = (string)reader["Notes"];
+
+                                IsActive = (bool)reader["IsActive"];
+                                ShiftID = (int)reader["ShiftID"];
+
+                                return true;
+
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+               
+            }
+
+            return false;
         }
     }
 }
