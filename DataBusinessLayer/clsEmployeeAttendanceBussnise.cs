@@ -49,5 +49,16 @@ namespace DataBusinessLayer
             return clsEmployeeAttendanceData.GetAllEmployeeAttendenceData();
         }
 
+        static public bool DeleteEmployeeAttendance(int AttendanceID)
+        {
+            return clsEmployeeAttendanceData.DeleteEmployeeAttendanceData(AttendanceID);
+        }
+
+        private bool _AddEmployeeAttendance()
+        {
+            _AttendanceID = clsEmployeeAttendanceData.AddEmployeeAttendanceData(EmployeeID, IsCheckin, IsCheckout, Note, Date);
+
+            return (_AttendanceID != -1);
+        }
     }
 }
