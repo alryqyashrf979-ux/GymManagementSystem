@@ -15,8 +15,8 @@ namespace DataBusinessLayer
         public int EmployeeID { set; get; }
         public string Note { set; get; }
         public string Speciality { set; get; }
-        private clsEmployees _Employees;
-        public clsEmployees Employees { get { return _Employees; } }
+        private Object _Employees;
+        public object Employees { get { return _Employees; } }
 
         public enum enMode { AddMode=1,UpdateMode=2}
         private enMode _Mode = enMode.AddMode;
@@ -36,6 +36,7 @@ namespace DataBusinessLayer
             this.EmployeeID = EmployeeID;
             this.Note = Note;
             this.Speciality = Speciality;
+            _Employees = clsEmployees.FindByEmployeeID(EmployeeID);
             _Mode = enMode.UpdateMode;
         }
 
