@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using DataAccessLayer;
 
 namespace DataBusinessLayer
 {
@@ -40,6 +42,11 @@ namespace DataBusinessLayer
             this.Date = Date;
             this.Note = Note;
             _Mode = enMode.UpdateMode;
+        }
+
+        static public DataTable GetAllEmployeeAttendance()
+        {
+            return clsEmployeeAttendanceData.GetAllEmployeeAttendenceData();
         }
 
     }
