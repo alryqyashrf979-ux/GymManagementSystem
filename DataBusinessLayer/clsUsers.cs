@@ -15,9 +15,9 @@ namespace DataBusinessLayer
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
-        private int int_UserID = -1;
+        private int _UserID = -1;
         public int UserID { set; get; }
-        public int PersonID { get { return int_UserID; } }
+        public int PersonID { get { return _UserID; } }
         public clsPeople PersonInfo;
         public string UserName { set; get; }
         public string Password { set; get; }
@@ -32,7 +32,7 @@ namespace DataBusinessLayer
             this.Password = "";
             this.IsActive = true;
             this.Permission = 0;
-            this.int_UserID = -1;
+            this._UserID = -1;
 
             Mode = enMode.AddNew;
         }
@@ -42,7 +42,7 @@ namespace DataBusinessLayer
 
         {
             this.UserID = UserID;
-            this.int_UserID = PersonID;
+            this._UserID = PersonID;
             this.Permission = Permission;
             this.PersonInfo = clsPeople.Find(PersonID);
             this.UserName = Username;
@@ -58,10 +58,10 @@ namespace DataBusinessLayer
         {
             //call DataAccess Layer 
 
-            this.int_UserID = clsUsersData.AddNewUser(this.PersonID, this.UserName,
+            this._UserID = clsUsersData.AddNewUser(this.PersonID, this.UserName,
                 this.Password,this.Permission,this.IsActive);
 
-            return (this.int_UserID != -1);
+            return (this._UserID != -1);
         }
         private bool _UpdateUser()
         {

@@ -15,10 +15,10 @@ namespace DataBusinessLayer
         public string Relationship { get; set; }
         public string PhoneNumber { get; set; }
 
-        private int int_ContactID = -1;
+        private int _ContactID = -1;
         public int ContactID
         {
-            get { return int_ContactID; }
+            get { return _ContactID; }
         }
 
         public enum enMode { Update=1,AddNew=2}
@@ -30,7 +30,7 @@ namespace DataBusinessLayer
             Name = name;
             Relationship = relationship;
             PhoneNumber = phoneNumber;
-            int_ContactID = contactID;
+            _ContactID = contactID;
 
             Mode=enMode.Update;
         }
@@ -40,7 +40,7 @@ namespace DataBusinessLayer
             Name = string.Empty;
             Relationship = string.Empty;
             PhoneNumber = string.Empty;
-            int_ContactID = -1;
+            _ContactID = -1;
 
             Mode = enMode.AddNew;
 
@@ -49,8 +49,8 @@ namespace DataBusinessLayer
         private bool _AddNewContact()
         {
 
-            this.int_ContactID = clsEmergencyContactsData.AddEmergencyContact(this.Name, this.Relationship, this.PhoneNumber);
-            return this.int_ContactID != -1;
+            this._ContactID = clsEmergencyContactsData.AddEmergencyContact(this.Name, this.Relationship, this.PhoneNumber);
+            return this._ContactID != -1;
 
         }
 
