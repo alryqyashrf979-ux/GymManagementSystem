@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using DataAccessLayer;
 
 namespace DataBusinessLayer
 {
@@ -57,6 +58,13 @@ namespace DataBusinessLayer
             this._Person = clsPeople.Find(PersonID);
             this._Shift = null;//still has a shift class
             _Mode = enMode.UpdateMode;
+        }
+
+        private bool _AddEmployee()
+        {
+            _EmployeeID = clsEmployeesData.AddEmployee(PersonID, Title, Salary, Notes, IsActive, ShiftID);
+
+            return _EmployeeID != -1;
         }
     }
 }
