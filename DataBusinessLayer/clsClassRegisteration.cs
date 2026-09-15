@@ -68,5 +68,35 @@ namespace DataBusinessLayer
         {
             return clsClassregisterationsDataAccess.Delete(ClassRegisterationID);
         }
+        private bool _Add()
+        {
+            this._ClassRegisterationID = clsClassregisterationsDataAccess.Add(this.MemberID, this.ClassID, this.RegisteredByUserID, this.RegisterationDate);
+            return (this._ClassRegisterationID != -1);
+        }
+
+        private bool _Update()
+        {
+            return clsClassregisterationsDataAccess.Update(this.ClassRegisterationID, this.MemberID, this.ClassID, this.RegisteredByUserID, this.RegisterationDate);
+        }
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_Add())
+                    {
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                        return false;
+
+                case enMode.Update:
+                    return _Update();
+            }
+
+            return false;
+        }
     }
     }
