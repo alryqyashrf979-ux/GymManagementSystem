@@ -106,7 +106,51 @@ namespace DataAccessLayer
             return (RowEffect > 0);
         }
 
-       
+     
+        static public int AddEmployeeAttendanceData(int EmployeeID, bool IsCheckin, bool IsCheckout, string Note, DateTime Date)
+        {
+            int AttendanceID = -1;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = "INSERT INTO [dbo].[EmployeesAttendance] ([EmployeeID],[IsCheckin],[IsCheckout],[Note],[Date]) " +
+                "VALUES (@EmployeeID,@IsCheckin,@IsCheckout,@Note,@Date);" +
+                "Select scope_Identity();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
+            command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
+            command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
+
+            if (string.IsNullOrEmpty(Note))
+                command.Parameters.AddWithValue("@Note", DBNull.Value);
+            else
+                command.Parameters.AddWithValue("@Note", Note);
+
+            command.Parameters.AddWithValue("@Date", Date);
+
+            try
+            {
+                connection.Open();
+                object Resault = command.ExecuteScalar();
+
+                if (int.TryParse(Resault.ToString(), out int _AttendanceID))
+                {
+                    AttendanceID = _AttendanceID;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return AttendanceID;
+        }
+
+
+
 
 
     }
