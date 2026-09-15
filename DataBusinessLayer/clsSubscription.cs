@@ -22,6 +22,12 @@ namespace DataBusinessLayer
         public double Price { set; get; }
         public int createdByUserID { set; get; }
 
+        private clsMembers _MemberInfo;
+        private clsSubscriptionPlans _PlanInfo;
+
+        public clsMembers MemberInfo { get { return _MemberInfo; } }
+        public clsSubscriptionPlans PlanInfo { get { return _PlanInfo; } }
+
 
         public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3, Frozen = 4, Changed = 5 }
 
@@ -40,6 +46,9 @@ namespace DataBusinessLayer
             this.ExpirationDate = ExpirationDate;
             this.Price = Price;
             this.createdByUserID = createdByUserID;
+
+            this._MemberInfo=clsMembers.FindMemberUsingMemberID(MemberID);
+            this._PlanInfo=clsSubscriptionPlans.Find(PlanID);
 
             Mode = enModeSubscription.Update;
         }
