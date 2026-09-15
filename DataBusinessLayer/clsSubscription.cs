@@ -147,9 +147,11 @@ namespace DataBusinessLayer
         }
 
 
+        public static bool TerminateSubscription(int SubscriptionID)
+        {
+            return clsSubscriptionsData.UpdateSubscriptionStatus(SubscriptionID, (byte)enSubscriptionStatus.Expired);
 
-
-
+        }
 
 
         }
