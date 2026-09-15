@@ -187,6 +187,42 @@ namespace DataAccessLayer
 
 
 
+        static public bool FindEmployeeAttendanceByEmployeeID(int EmployeeID, ref int AttendanceID, ref bool IsCheckin, ref bool IsCheckout, ref string Note, ref DateTime Date)
+        {
+            bool IsFound = false;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = " select *from EmployeesAttendance where EmployeeID=@EmployeeID; ";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    AttendanceID = (int)reader["AttendanceID"];
+                    IsCheckin = (bool)reader["IsCheckin"];
+                    IsCheckout = (bool)reader["IsCheckout"];
+                    Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
+                    Date = (DateTime)reader["Date"];
+                }
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
+
 
 
     }
