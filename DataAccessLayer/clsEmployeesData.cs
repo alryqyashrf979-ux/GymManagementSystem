@@ -27,5 +27,27 @@ namespace DataAccessLayer
             }
 
         }
+
+        static public bool DeleteEmployee(int EmployeeID)
+        {
+            string query = " Delete Employees where EmployeeID=@EmployeeID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("EmployeeID", EmployeeID);
+                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
