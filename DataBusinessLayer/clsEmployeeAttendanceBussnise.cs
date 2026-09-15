@@ -66,5 +66,23 @@ namespace DataBusinessLayer
             return clsEmployeeAttendanceData.UpdateEmployeeAttendanceData(this._AttendanceID, this.EmployeeID, this.IsCheckin, this.IsCheckout, this.Note, this.Date);
 
         }
+
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddEmployeeAttendance())
+                    {
+                        _Mode = enMode.UpdateMode;
+                        return true;
+                    }
+                    else
+                        return false;
+                case enMode.UpdateMode:
+                    return _UpdateEmployeeAttendance();
+            }
+            return false;
+        }
     }
 }
