@@ -98,5 +98,20 @@ namespace DataBusinessLayer
 
             return false;
         }
+        static public clsClassRegisteration Find(int ClassRegisterationID)
+        {
+            int MemberID = -1;
+            int ClassID = -1;
+            int UserID = -1;
+            DateTime RegisterationDate = DateTime.Now;
+
+            bool IsFound = clsClassregisterationsDataAccess.Find(ClassRegisterationID, ref MemberID, ref ClassID, ref UserID, ref RegisterationDate);
+
+            if (IsFound)
+                return new clsClassRegisteration(ClassRegisterationID, MemberID, ClassID, UserID, RegisterationDate);
+            else
+                return null;
+        }
     }
-    }
+}
+    
