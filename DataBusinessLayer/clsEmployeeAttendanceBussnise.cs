@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace DataBusinessLayer
 {
-   static public class clsEmployeeAttendanceBussnise
+    public class clsEmployeeAttendanceBussnise
     {
+        private int _AttendanceID;
+        public int AttendanceID { get { return _AttendanceID; } }
+        public int EmployeeID { set; get; }
+        public bool IsCheckin { set; get; }
+        public bool IsCheckout { set; get; }
+        public DateTime Date { set; get; }
+        public string Note { set; get; }
+
+       public enum enMode { AddMode=1,UpdateMode=2; }
+        enMode _Mode = enMode.AddMode;
+
     }
 }
