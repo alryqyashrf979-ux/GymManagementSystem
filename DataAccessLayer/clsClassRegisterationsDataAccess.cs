@@ -20,6 +20,7 @@ namespace DataAccessLayer
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand cmd = new SqlCommand(Query, conn))
             {
+                conn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -35,7 +36,7 @@ namespace DataAccessLayer
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand cmd = new SqlCommand(Query, conn))
             {
-
+                conn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
@@ -50,6 +51,21 @@ namespace DataAccessLayer
                 return false;
             }
         }
+        static public int Add(int MemberID, int ClassID, int UserID, DateTime RegisterationDate)
+        {
+            string Query = "insert into ClassRegisterations " +
+                "values (@MemberID,@ClassID,@UserID,@RegisterationDate); select Scope_Idenetity();";
+            using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+                object value = cmd.ExecuteScalar();
 
+                if (value != null && int.TryParse(value.ToString(), out int NewID))
+                    return NewID;
+
+            }
+            return -1;
+        }
     }
 }
