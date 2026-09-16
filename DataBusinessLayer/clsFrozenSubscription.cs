@@ -18,7 +18,7 @@ namespace DataBusinessLayer
         public int SubscriptionID { set; get; }
         public DateTime FreezeStartDate { set; get; }
         public DateTime FreezeEndDate { set; get; }
-        public DateTime UnFreezeDate { set; get; }
+        public DateTime? UnFreezeDate { set; get; }//to allow null
         public byte FreezingDuration { set; get; }
         public double FreezeFee { set; get; }
         public string FreezeReason { set; get; }
@@ -40,7 +40,7 @@ namespace DataBusinessLayer
         public enMode Mode = enMode.AddNew;
 
         private clsFrozenSubscription(int freezeID, int subscriptionID, DateTime freezeStartDate, DateTime freezeEndDate,
-            DateTime unFreezeDate, byte freezingDuration, double freezeFee, string freezeReason,
+            DateTime? unFreezeDate, byte freezingDuration, double freezeFee, string freezeReason,
             bool isFeesPaid, bool isFrozen, int frozenByUserID, int unfrozenByUserID)
         {
             this._FreezeID = freezeID;
