@@ -49,5 +49,10 @@ namespace DataBusinessLayer
 
             return _SubscriptionChangeID != -1;
         }
+
+        private bool _UpdateSubscriptionChanges()
+        {
+            return clsSubscriptionChangesData.UpdateSubscriptionChange(_SubscriptionChangeID,NewSubscriptionID,CancelledSubscriptionID,this.ChangedByUserID,this.ChangeDateTime);
+        }
     }
 }
