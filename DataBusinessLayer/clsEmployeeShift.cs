@@ -75,7 +75,7 @@ namespace DataBusinessLayer
             return false;
         }
 
-        static public object Find(int ShiftID)
+        static public clsEmployeeShift Find(int ShiftID)
         {
             string ShiftType = string.Empty;
             DateTime StartTime = DateTime.Now, EndTime = DateTime.Now;
