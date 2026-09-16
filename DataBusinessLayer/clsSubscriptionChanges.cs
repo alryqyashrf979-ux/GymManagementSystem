@@ -11,5 +11,16 @@ namespace DataBusinessLayer
    public class clsSubscriptionChanges
     {
 
+        private int _SubscriptionChangeID;
+        public int SubscriptionChangeID { get { return _SubscriptionChangeID; } }
+        public int NewSubscriptionID { get; set; }
+        public int CancelledSubscriptionID { get; set; }
+        public int ChangedByUserID { get; set; }
+        public DateTime ChangeDateTime { get; set; }
+
+        public enum enMode { AddMode=1,UpdateMode=2};
+        private enMode _Mode = enMode.AddMode;
+
+
     }
 }
