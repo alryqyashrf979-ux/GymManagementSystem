@@ -112,6 +112,10 @@ namespace DataBusinessLayer
             switch (Mode)
             {
                 case enMode.AddNew:
+
+                    TimeSpan duration = FreezeEndDate - FreezeStartDate;
+                    this.FreezingDuration = (byte)Math.Max(0, duration.Days);
+
                     if (_AddNewFreezeSubscription())
                     {
                         Mode = enMode.Update;
