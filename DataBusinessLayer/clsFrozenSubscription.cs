@@ -150,7 +150,7 @@ namespace DataBusinessLayer
             int SubscriptionID = -1;
             DateTime FreezeStartDate = DateTime.Now;
             DateTime FreezeEndDate = DateTime.Now;
-            DateTime UnFreezeDate = DateTime.Now;
+            DateTime? UnFreezeDate = DateTime.Now;
             byte FreezingDuration = 0;
             double FreezeFee = 0.0;
             string FreezeReason = string.Empty;
@@ -177,7 +177,7 @@ namespace DataBusinessLayer
             int FreezeID = -1;
             DateTime FreezeStartDate = DateTime.Now;
             DateTime FreezeEndDate = DateTime.Now;
-            DateTime UnFreezeDate = DateTime.Now;
+            DateTime? UnFreezeDate = DateTime.Now;
             byte FreezingDuration = 0;
             double FreezeFee = 0.0;
             string FreezeReason = string.Empty;
