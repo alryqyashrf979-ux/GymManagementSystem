@@ -1,4 +1,4 @@
-﻿using DataAccessLayer;
+من﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -123,13 +123,14 @@ namespace DataBusinessLayer
 
         public bool Save()
         {
+            TimeSpan duration = FreezeEndDate - FreezeStartDate;
+                    this.FreezingDuration = (byte)Math.Max(0, duration.Days);
+
             switch (Mode)
             {
                 case enMode.AddNew:
 
-                    TimeSpan duration = FreezeEndDate - FreezeStartDate;
-                    this.FreezingDuration = (byte)Math.Max(0, duration.Days);
-
+                    
                     if (_AddNewFreezeSubscription())
                     {
                         Mode = enMode.Update;
@@ -221,7 +222,7 @@ namespace DataBusinessLayer
             this.IsFrozen = false;
             this.UnFreezeDate = DateTime.Now;
 
-            return this.Save();
+            return this._UpdateFrozenSubscription();
 
 
         }
