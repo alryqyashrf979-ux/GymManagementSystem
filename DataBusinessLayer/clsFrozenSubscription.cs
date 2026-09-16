@@ -209,10 +209,22 @@ namespace DataBusinessLayer
         }
 
 
+      
 
 
+        public bool UnfreezeSubscription()
+        {
 
 
+            TimeSpan duration = DateTime.Now - FreezeStartDate;
+            this.FreezingDuration = (byte)duration.Days;
+            this.IsFrozen = false;
+            this.UnFreezeDate = DateTime.Now;
+
+            return this.Save();
+
+
+        }
 
 
 
