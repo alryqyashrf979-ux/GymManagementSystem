@@ -11,7 +11,7 @@ namespace DataBusinessLayer
     public class clsEmployees
     {
         private int _EmployeeID;
-        public int EmployeeID { get; }
+        public int EmployeeID { get { return this._EmployeeID; }}
         public int PersonID { get; set; }
         public int ShiftID { set; get; }
         public string Title { get; set; }
@@ -62,9 +62,9 @@ namespace DataBusinessLayer
 
         private bool _AddEmployee()
         {
-            _EmployeeID = clsEmployeesData.AddEmployee(PersonID, Title, Salary, Notes, IsActive, ShiftID);
+            this._EmployeeID = clsEmployeesData.AddEmployee(this.PersonID, this.Title,this.Salary, this.Notes, this.IsActive, this.ShiftID);
 
-            return _EmployeeID != -1;
+            return this._EmployeeID != -1;
         }
 
         private bool _UpdateEmployee()
