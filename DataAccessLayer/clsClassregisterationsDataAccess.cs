@@ -61,7 +61,7 @@ namespace DataAccessLayer
         static public int Add(int MemberID, int ClassID, int UserID, DateTime RegisterationDate)
         {
             string Query = "insert into ClassRegisterations " +
-                "values (@MemberID,@ClassID,@UserID,@RegisterationDate); select Scope_Idenetity();";
+                "values (@MemberID,@ClassID,@UserID,@RegisterationDate); SELECT SCOPE_IDENTITY();";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand cmd = new SqlCommand(Query, conn))
             {
