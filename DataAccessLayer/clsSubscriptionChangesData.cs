@@ -46,5 +46,34 @@ namespace DataAccessLayer
 
             return dt;
         }
+
+        static public int AddSubscriptionChange(int SubscriptionChangeID,int NewSubscriptionID,int CancelledSubscriptionID,int ChangedByUserID,DateTime ChangeDateTime)
+        {
+            string query = " INSERT INTO [dbo].[SubscriptionChanges]([NewSubscriptionID],[CancelledSubscriptionID],[ChangedByUserID],[ChangeDateTime]) " +
+                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime) ";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@NewSubscriptionID", NewSubscriptionID);
+                        command.Parameters.AddWithValue("@CancelledSubscriptionID", CancelledSubscriptionID);
+                        command.Parameters.AddWithValue("@ChangedByUserID", ChangedByUserID);
+                        command.Parameters.AddWithValue("@ChangeDateTime", ChangeDateTime);
+
+                        return command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return -1;
+        }
     }
 }
