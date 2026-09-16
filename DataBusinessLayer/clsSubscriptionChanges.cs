@@ -75,5 +75,10 @@ namespace DataBusinessLayer
             }
             return false;
         }
+
+        static public bool DeleteSubscriptionChanges(int SubscriptionChangeID)
+        {
+            return clsSubscriptionChangesData.DeleteSubscriptionChanges(SubscriptionChangeID);
+        }
     }
 }
