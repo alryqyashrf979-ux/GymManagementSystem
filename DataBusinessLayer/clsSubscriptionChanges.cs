@@ -43,6 +43,11 @@ namespace DataBusinessLayer
             _Mode = enMode.UpdateMode;
         }
 
+        private bool _AddSubscriptionChanges()
+        {
+            _SubscriptionChangeID = clsSubscriptionChangesData.AddSubscriptionChange(this.NewSubscriptionID, this.CancelledSubscriptionID, this.ChangedByUserID, this.ChangeDateTime);
 
+            return _SubscriptionChangeID != -1;
+        }
     }
 }
