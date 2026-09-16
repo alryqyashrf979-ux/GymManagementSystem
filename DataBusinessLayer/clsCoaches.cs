@@ -80,6 +80,12 @@ namespace DataBusinessLayer
             return clsCoachData.DeleteCoach(CoachID);
         }
 
+        public static DataTable GetAllCoaches()
+        {
+            return clsCoachData.GetAllCoaches();
+        }
+
+
         static public object FindByCoachID(int CoachID)
         {
             int EmployeeID = -1;

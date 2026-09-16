@@ -11,7 +11,7 @@ namespace DataAccessLayer
    static public class clsCoachData
     {
       
-        static public DataTable GetAllCoach()
+        static public DataTable GetAllCoaches()
         {
             DataTable dt = new DataTable();
             string query = "select CoachID as 'Coach ID' , EmployeeID as 'Employee ID',Speciality,Note from Coaches;";
