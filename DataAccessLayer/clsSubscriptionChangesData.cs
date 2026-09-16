@@ -47,10 +47,10 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddSubscriptionChange(int SubscriptionChangeID,int NewSubscriptionID,int CancelledSubscriptionID,int ChangedByUserID,DateTime ChangeDateTime)
+        static public int AddSubscriptionChange(int NewSubscriptionID,int CancelledSubscriptionID,int ChangedByUserID,DateTime ChangeDateTime)
         {
             string query = " INSERT INTO [dbo].[SubscriptionChanges]([NewSubscriptionID],[CancelledSubscriptionID],[ChangedByUserID],[ChangeDateTime]) " +
-                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime) ";
+                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime);Select scope_Idintity(); ";
 
             try
             {
@@ -65,7 +65,12 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("@ChangedByUserID", ChangedByUserID);
                         command.Parameters.AddWithValue("@ChangeDateTime", ChangeDateTime);
 
-                        return command.ExecuteNonQuery();
+                        object Resault= command.ExecuteScalar();
+
+                        if (int.TryParse(Resault.ToString(), out int Value))
+                            return Value;
+                        else
+                            return -1;
                     }
                 }
             }
@@ -74,6 +79,40 @@ namespace DataAccessLayer
 
             }
             return -1;
+        }
+    
+        static public bool UpdateSubscriptionChange(int SubscriptionChangeID, int NewSubscriptionID, int CancelledSubscriptionID, int ChangedByUserID, DateTime ChangeDateTime)
+        {
+            string query = " UPDATE [dbo].[SubscriptionChanges] SET" +
+                            " [NewSubscriptionID] = @NewSubscriptionID," +
+                            "[CancelledSubscriptionID] = @CancelledSubscriptionID," +
+                            "[ChangedByUserID] = @ChangedByUserID ," +
+                            "[ChangeDateTime] = @ChangeDateTime" +
+                            " WHERE SubscriptionChangeID=@SubscriptionChangeID; ";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@SubscriptionChangeID", SubscriptionChangeID);
+                        command.Parameters.AddWithValue("@NewSubscriptionID", NewSubscriptionID);
+                        command.Parameters.AddWithValue("@CancelledSubscriptionID", CancelledSubscriptionID);
+                        command.Parameters.AddWithValue("@ChangedByUserID", ChangedByUserID);
+                        command.Parameters.AddWithValue("@ChangeDateTime", ChangeDateTime);
+
+                        return command.ExecuteNonQuery() > 0;
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
         }
     }
 }
