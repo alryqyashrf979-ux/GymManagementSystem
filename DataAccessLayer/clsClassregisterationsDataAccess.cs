@@ -115,15 +115,17 @@ namespace DataAccessLayer
         static public DataTable FilterClassRegisterationByMemberID(int MemberID)
         {
             DataTable dt = new DataTable();
-            string Query = "SELECT \r\n    ClassRegisterationID CR AS [Class Registeration ID],\r\n    P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Member Full Name],\r\n " +
-                "   C.ClassName AS [Class Name],\r\n    C.StartTime AS [Start Time]\r\nFROM ClassRegisterations CR\r\nINNER JOIN Members M\r\n    ON M.MemberID = ClassRegisteration.MemberID\r\nINNER JOIN People P\r\n " +
-                "   ON P.ID = M.PersonID\r\nINNER JOIN Classes C\r\n    ON C.ClassID = ClassRegisteration.ClassID " +
-                "where CR.MemberID = @MemberID;";
+            string Query = @"SELECT  CR.ClassRegisterationID  AS [Class Registeration ID],    P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Member Full Name],
+                 C.ClassName AS [Class Name],    C.StartTime AS [Start Time],CR.RegisterationDate as 'Registeration Date' FROM ClassRegisterations CR INNER JOIN Members M  ON M.MemberID 
+                 = CR.MemberID INNER JOIN People P
+                   ON P.ID = M.PersonID INNER JOIN Classes C    ON C.ClassID = CR.ClassID 
+                where CR.MemberID =@MemberID";
 
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand cmd = new SqlCommand(Query, conn))
             {
                 conn.Open();
+                cmd.Parameters.AddWithValue("@MemberID", MemberID);
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
