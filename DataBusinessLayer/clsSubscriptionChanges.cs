@@ -21,6 +21,13 @@ namespace DataBusinessLayer
         public enum enMode { AddMode=1,UpdateMode=2};
         private enMode _Mode = enMode.AddMode;
 
-
+        public clsSubscriptionChanges()
+        {
+            _SubscriptionChangeID = -1;
+            NewSubscriptionID = -1;
+            CancelledSubscriptionID = -1;
+            ChangedByUserID = -1;
+            ChangeDateTime = DateTime.Now;
+        }
     }
 }
