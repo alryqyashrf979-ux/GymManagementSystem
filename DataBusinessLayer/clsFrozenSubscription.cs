@@ -30,6 +30,12 @@ namespace DataBusinessLayer
         private clsSubscription _SubscriptionInfo;
         public clsSubscription SubscriptionInfo { get { return _SubscriptionInfo; } }
 
+        private clsUsers _FrozenByUserInfo;
+        private clsUsers _UnFrozenByUserInfo;
+
+        public clsUsers FrozenByUserInfo { get { return _FrozenByUserInfo; } }
+        public clsUsers UnFrozenByUserInfo { get { return _UnFrozenByUserInfo; } }
+
         public enum enMode { AddNew = 1, Update = 2 }
         public enMode Mode = enMode.AddNew;
 
@@ -51,6 +57,12 @@ namespace DataBusinessLayer
             this.UnfrozenByUserID = unfrozenByUserID;
 
             this._SubscriptionInfo = clsSubscription.FindBySubscriptionID(subscriptionID);
+
+            if(unfrozenByUserID!=-1)
+            this._UnFrozenByUserInfo=clsUsers.FindByUserID(unfrozenByUserID);
+
+
+            this._FrozenByUserInfo = clsUsers.FindByUserID(frozenByUserID);
             Mode = enMode.Update;
         }
 
@@ -68,7 +80,9 @@ namespace DataBusinessLayer
             this.IsFrozen = true;
             this.FrozenByUserID = -1;
             this.UnfrozenByUserID = -1;
-
+            this._UnFrozenByUserInfo = new clsUsers();
+            this._FrozenByUserInfo= new clsUsers();
+            this._SubscriptionInfo = new clsSubscription();
             Mode = enMode.AddNew;
         }
 
