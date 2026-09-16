@@ -11,7 +11,7 @@ namespace DataBusinessLayer
     public class clsCoaches
     {
         private int _CoachID;
-        public int CoachID { get; }
+        public int CoachID { get { return this._CoachID; } }
         public int EmployeeID { set; get; }
         public string Note { set; get; }
         public string Speciality { set; get; }
@@ -42,7 +42,7 @@ namespace DataBusinessLayer
 
         private bool _AddCoach()
         {
-            _CoachID = clsCoachData.AddCoach(EmployeeID, Speciality, Note);
+            _CoachID = clsCoachData.AddCoach(this.EmployeeID, this.Speciality, this.Note);
 
             return _CoachID != -1;
         }
@@ -50,7 +50,7 @@ namespace DataBusinessLayer
 
         private bool _UpdateCoach()
         {
-            return clsCoachData.UpdateCoach(_CoachID, EmployeeID, Speciality, Note);
+            return clsCoachData.UpdateCoach(this._CoachID, this.EmployeeID, this.Speciality, this.Note);
         }
 
 

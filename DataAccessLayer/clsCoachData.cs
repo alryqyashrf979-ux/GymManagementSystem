@@ -108,7 +108,7 @@ namespace DataAccessLayer
                     {
                         command.Parameters.AddWithValue("@CoachID", CoachID);
 
-                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                        return command.ExecuteNonQuery() > 0;
                     }
                 }
             }
