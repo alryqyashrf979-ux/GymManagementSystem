@@ -28,6 +28,21 @@ namespace DataBusinessLayer
             CancelledSubscriptionID = -1;
             ChangedByUserID = -1;
             ChangeDateTime = DateTime.Now;
+
+            _Mode = enMode.AddMode;
         }
+
+        public clsSubscriptionChanges(int SubscriptionChangeID,int NewSubscriptionID,int CancelledSubscriptionID,int ChangedByUserID,DateTime ChangeDateTime)
+        {
+            _SubscriptionChangeID = SubscriptionChangeID;
+            this.NewSubscriptionID = NewSubscriptionID;
+            this.CancelledSubscriptionID = CancelledSubscriptionID;
+            this.ChangedByUserID = ChangedByUserID;
+            this.ChangeDateTime = ChangeDateTime;
+
+            _Mode = enMode.UpdateMode;
+        }
+
+
     }
 }
