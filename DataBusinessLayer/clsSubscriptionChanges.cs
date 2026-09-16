@@ -80,5 +80,18 @@ namespace DataBusinessLayer
         {
             return clsSubscriptionChangesData.DeleteSubscriptionChanges(SubscriptionChangeID);
         }
+
+        static public object Find(int SubscriptionChangeID)
+        {
+            int NewSubscriptionID = -1, ChangedByUserID = -1, CancelledSubscriptionID = -1;
+            DateTime ChangeDateTime = DateTime.Now;
+
+            bool IsFound = clsSubscriptionChangesData.Find(SubscriptionChangeID, ref NewSubscriptionID, ref CancelledSubscriptionID, ref ChangedByUserID, ref ChangeDateTime);
+
+            if (IsFound)
+                return new clsSubscriptionChanges(SubscriptionChangeID, NewSubscriptionID, CancelledSubscriptionID, ChangedByUserID, ChangeDateTime);
+            else
+                return null;
+        }
     }
 }
