@@ -139,6 +139,38 @@ namespace DataAccessLayer
             }
             return false;
         }
-    
+
+        static public bool Find(int SubscriptionChangeID,ref int NewSubscriptionID,ref int CancelledSubscriptionID,ref int ChangedByUserID,ref DateTime ChangeDateTime)
+        {
+            string query = " select *from [SubscriptionChanges] where SubscriptionChangeID=@SubscriptionChangeID; ";
+
+            try
+            {
+                using (SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("SubscriptionChangeID", SubscriptionChangeID);
+
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            NewSubscriptionID = (int)reader["NewSubscriptionID"];
+                            CancelledSubscriptionID = (int)reader["CancelledSubscriptionID"];
+                            ChangedByUserID = (int)reader["ChangedByUserID"];
+                            ChangeDateTime = (DateTime)reader["ChangeDateTime"];
+
+                            return true;
+
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
+        }
     }
 }
