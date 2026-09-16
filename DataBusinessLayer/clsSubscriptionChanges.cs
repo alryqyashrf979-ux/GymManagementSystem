@@ -54,5 +54,26 @@ namespace DataBusinessLayer
         {
             return clsSubscriptionChangesData.UpdateSubscriptionChange(_SubscriptionChangeID,NewSubscriptionID,CancelledSubscriptionID,this.ChangedByUserID,this.ChangeDateTime);
         }
+
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddSubscriptionChanges())
+                    {
+                        _Mode = enMode.UpdateMode;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.UpdateMode:
+                    return _UpdateSubscriptionChanges();
+            }
+            return false;
+        }
     }
 }
