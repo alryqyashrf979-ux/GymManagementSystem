@@ -114,5 +114,31 @@ namespace DataAccessLayer
             }
             return false;
         }
+    
+        static public bool DeleteSubscriptionChanges(int SubscriptionChangeID)
+        {
+            string query = "Delete From [SubscriptionChanges] where SubscriptionChangeID=@SubscriptionChangeID;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@SubscriptionChangeID", SubscriptionChangeID);
+
+                        return command.ExecuteNonQuery() > 0;
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
+        }
+    
     }
 }
