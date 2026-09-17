@@ -40,7 +40,7 @@ namespace DataAccessLayer
             string query = " INSERT INTO [dbo].[Payments]" +
                 " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID])" +
                 " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@PaymentAmount-@ActualAmount,@PaymentMethod,@PaymentDate,@CreatedByUserID);" +
-                "select scope_Idintity(); ";
+                " SELECT SCOPE_IDENTITY(); ";
 
             try
             {
