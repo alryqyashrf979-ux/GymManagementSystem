@@ -248,5 +248,33 @@ namespace DataAccessLayer
             return -1;
         }
 
+        static public int SelectPlanIDBySubscriptionID(int SubscriptionID)
+        {
+            string query = "select PlanID from Subscription where SubscriptionID=@SubscriptionID;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                                return (int)reader["PlanID"];
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return -1;
+        }
+
     }
     }

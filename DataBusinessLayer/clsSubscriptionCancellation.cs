@@ -51,6 +51,8 @@ namespace DataBusinessLayer
 
         static public bool DeleteSubscriptionCancellation(int SubscriptionCancellationID)
         {
+
+           
             return clsSubscriptionCancellationData.DeleteSubscriptionCancellation(SubscriptionCancellationID);
         }
 
@@ -66,8 +68,23 @@ namespace DataBusinessLayer
             return clsSubscriptionCancellationData.UpdateSubscriptionCancellation(this._CancellationID, this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancellationDate, this.CancelledByUserID);
         }
 
-        private void HandleRefunding()
+        private void HandleRefund()
         {
+            clsSubscription Subscription = clsSubscription.FindByMemberID(this.SubscriptionID);
+            int PlanID = clsSubscriptionPlansDataAccess.SelectPlanIDBySubscriptionID(this.SubscriptionID);
+            int Duration = clsSubscriptionPlansDataAccess.SelectDurationFromPlan(PlanID);
+            double Fees = Subscription.Price;
+            DateTime StartDate = Subscription.StartDate;
+
+            double OneDayFee = Fees / Duration;
+            int LapsedDays = (DateTime.Now - StartDate).Days;
+
+            double UsedAmount = OneDayFee * LapsedDays;
+
+            double Refund = Fees - UsedAmount;
+
+            this.Refund = Refund;
+
 
         }
 
