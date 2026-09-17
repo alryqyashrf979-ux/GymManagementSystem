@@ -22,6 +22,18 @@ namespace DataBusinessLayer
         public enum enMode { AddMode=1,UpdateMode=2}
         private enMode _Mode = enMode.AddMode;
 
+        public clsSubscriptionCancellation()
+        {
+            this._CancellationID = -1;
+            this.SubscriptionID = -1;
+            this.CancelledByUserID = -1;
+            this.ElapsedDays = 0;
+            this.CancellationDate = DateTime.Now;
+            this.CancellationReason = string.Empty;
+            this.Refund = 0;
+            _Mode = enMode.AddMode;
+        }
+
 
     }
 }
