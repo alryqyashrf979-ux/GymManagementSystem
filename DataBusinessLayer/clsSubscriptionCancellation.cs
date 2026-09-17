@@ -108,5 +108,22 @@ namespace DataBusinessLayer
             return false;
         }
 
+        static public object Find(int CancellationID)
+        {
+            int SubscriptionID = -1, CancelledByUserID = -1;
+            byte ElapsedDays = 0;
+            DateTime CancellationDate = DateTime.Now;
+            string CancellationReason = string.Empty;
+            double Refund = 0;
+
+            bool IsFound = clsSubscriptionCancellationData.Find(CancellationID, ref SubscriptionID, ref CancellationReason, ref Refund,ref ElapsedDays,
+               ref CancellationDate, ref CancelledByUserID);
+
+            if (IsFound)
+                return new clsSubscriptionCancellation(CancellationID, SubscriptionID, CancelledByUserID, ElapsedDays, CancellationDate, CancellationReason, Refund);
+            else
+                return null;
+        }
+
     }
 }
