@@ -9,7 +9,7 @@ using System.Data;
 
 namespace DataAccessLayer
 {
-   static public class clsSubscriptionCancellation
+   static public class clsSubscriptionCancellationData
     {
        static public DataTable GetAllSubscriptionCancellation()
         {

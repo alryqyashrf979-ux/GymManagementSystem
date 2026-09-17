@@ -51,7 +51,14 @@ namespace DataBusinessLayer
 
         static public bool DeleteSubscriptionCancellation(int SubscriptionCancellationID)
         {
-            return clsSubscriptionCancellation.DeleteSubscriptionCancellation(SubscriptionCancellationID);
+            return clsSubscriptionCancellationData.DeleteSubscriptionCancellation(SubscriptionCancellationID);
+        }
+
+        private bool _AddSubscriptionCancellationID()
+        {
+            this._CancellationID = clsSubscriptionCancellationData.AddSubscriptionCancellation(this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancellationDate, this.CancelledByUserID);
+
+            return this._CancellationID != -1;
         }
 
     }
