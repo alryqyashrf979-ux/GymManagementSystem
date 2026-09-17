@@ -52,7 +52,7 @@
     <Compile Include="clsFrozenSubscriptionData.cs" />
     <Compile Include="clsMembersDataAccess.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
-    <Compile Include="clsSubscriptionCancellation.cs" />
+    <Compile Include="clsSubscriptionCancellationData.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
     <Compile Include="clsSubscriptionsData.cs" />
     <Compile Include="clsUsersData.cs" />
