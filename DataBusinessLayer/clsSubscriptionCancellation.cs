@@ -19,6 +19,8 @@ namespace DataBusinessLayer
         public string CancellationReason { get; set; }
         public double Refund { get; set; }
 
+        public clsUsers CancelledByUserInfo;
+        public clsSubscription SubscriptionInfo;
         public enum enMode { AddMode=1,UpdateMode=2}
         private enMode _Mode = enMode.AddMode;
 
@@ -31,6 +33,8 @@ namespace DataBusinessLayer
             this.CancellationDate = DateTime.Now;
             this.CancellationReason = string.Empty;
             this.Refund = 0;
+            this.CancelledByUserInfo = new clsUsers();
+            this.SubscriptionInfo = new clsSubscription();
             _Mode = enMode.AddMode;
         }
 
@@ -45,6 +49,9 @@ namespace DataBusinessLayer
             this.CancellationDate = CancellationDate;
             this.CancellationReason = CancellationReason;
             this.Refund = Refund;
+
+            this.CancelledByUserInfo=clsUsers.FindByUserID(UserID);
+            this.SubscriptionInfo=clsSubscription.FindBySubscriptionID(SubscriptionID);
             _Mode = enMode.UpdateMode;
 
         }
