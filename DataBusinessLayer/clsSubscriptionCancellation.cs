@@ -70,9 +70,11 @@ namespace DataBusinessLayer
 
         private void HandleRefund()
         {
-            clsSubscription Subscription = clsSubscription.FindByMemberID(this.SubscriptionID);
-            int PlanID = clsSubscriptionPlansDataAccess.SelectPlanIDBySubscriptionID(this.SubscriptionID);
-            int Duration = clsSubscriptionPlansDataAccess.SelectDurationFromPlan(PlanID);
+            clsSubscription Subscription = clsSubscription.FindBySubscriptionID(this.SubscriptionID);
+            //int PlanID = clsSubscriptionPlansDataAccess.SelectPlanIDBySubscriptionID(this.SubscriptionID);
+            //int PlanID = Subscription.PlanID;
+            //int Duration = clsSubscriptionPlansDataAccess.SelectDurationFromPlan(PlanID);
+            int Duration = (Subscription.ExpirationDate - Subscription.StartDate).Days;
             double Fees = Subscription.Price;
             DateTime StartDate = Subscription.StartDate;
 
@@ -82,10 +84,7 @@ namespace DataBusinessLayer
             double UsedAmount = OneDayFee * LapsedDays;
 
             double Refund = Fees - UsedAmount;
-
             this.Refund = Refund;
-
-
         }
 
         public bool Save()
