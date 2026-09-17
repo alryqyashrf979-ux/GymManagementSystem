@@ -48,5 +48,10 @@ namespace DataBusinessLayer
             this.CreatedByUserID = CreatedByUserID;
             _Mode = enMode.UpdateMode;
         }
+
+        static public bool DeletePayment(int PaymentID)
+        {
+            return clsPaymentData.DeletePayment(PaymentID);
+        }
     }
 }
