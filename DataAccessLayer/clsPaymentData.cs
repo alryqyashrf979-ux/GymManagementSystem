@@ -34,7 +34,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddPayment(int SubscriptionID,int PaymentAmount,int ActualAmount,int PaymentMethod,DateTime PaymentDate, int CreatedByUserID)
+        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,int PaymentMethod,DateTime PaymentDate, int CreatedByUserID)
         {
             string query = " INSERT INTO [dbo].[Payments]" +
                 " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID])" +
@@ -68,7 +68,7 @@ namespace DataAccessLayer
             return -1;
         }
     
-        static public bool UpdatePayment(int PaymentID,int SubscriptionID, int PaymentAmount, int ActualAmount, int PaymentMethod, DateTime PaymentDate, int CreatedByUserID)
+        static public bool UpdatePayment(int PaymentID,int SubscriptionID, double PaymentAmount, double ActualAmount, int PaymentMethod, DateTime PaymentDate, int CreatedByUserID)
         {
             string query = "UPDATE [dbo].[Payments] SET " +
                 "[SubscriptionID] = @SubscriptionID," +
@@ -129,5 +129,42 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        static public bool Find(int PaymentID,ref int SubscriptionID,ref double PaymentAmount,ref double ActualAmount,ref double TotalRemaining, ref int PaymentMethod,ref DateTime PaymentDate,ref int CreatedByUserID)
+        {
+            string query = " select *from Payments where PaymentID=@PaymentID; ";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("PaymentID", PaymentID);
+
+                       using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            SubscriptionID = (int)reader["SubscriptionID"];
+                            PaymentAmount = (double)reader["PaymentAmount"];
+                            ActualAmount = (double)reader["ActualAmount"];
+                            TotalRemaining = (double)reader["TotalRemaining"];
+                            PaymentMethod = (int)reader["PaymentMethod"];
+                            PaymentDate = (DateTime)reader["PaymentDate"];
+                            CreatedByUserID = (int)reader["CreatedByUserID"];
+
+                            return true;
+
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
+        }
+       
     }
 }
