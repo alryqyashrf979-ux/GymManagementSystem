@@ -35,5 +35,19 @@ namespace DataBusinessLayer
         }
 
 
+        private clsSubscriptionCancellation(int CancellationID, int SubscriptionID, int UserID, byte ElapsedDays, DateTime CancellationDate,
+            string CancellationReason, double Refund)
+        {
+            this._CancellationID = CancellationID;
+            this.SubscriptionID = SubscriptionID;
+            this.CancelledByUserID = UserID;
+            this.ElapsedDays = ElapsedDays;
+            this.CancellationDate = CancellationDate;
+            this.CancellationReason = CancellationReason;
+            this.Refund = Refund;
+            _Mode = enMode.UpdateMode;
+
+        }
+
     }
 }
