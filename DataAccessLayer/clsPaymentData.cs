@@ -49,12 +49,12 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
-                        command.Parameters.AddWithValue("PaymentAmount", PaymentAmount);
-                        command.Parameters.AddWithValue("ActualAmount", ActualAmount);
-                        command.Parameters.AddWithValue("PaymentMethod", PaymentMethod);
-                        command.Parameters.AddWithValue("PaymentDate", DateTime.Now);
-                        command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
+                        command.Parameters.AddWithValue("@ActualAmount", ActualAmount);
+                        command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
+                        command.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
+                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
                         object Resault = command.ExecuteScalar();
                         if (int.TryParse(Resault.ToString(), out int Value))
@@ -88,13 +88,13 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("PaymentID", PaymentID);
-                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
-                        command.Parameters.AddWithValue("PaymentAmount", PaymentAmount);
-                        command.Parameters.AddWithValue("ActualAmount", ActualAmount);
-                        command.Parameters.AddWithValue("PaymentMethod", PaymentMethod);
-                        command.Parameters.AddWithValue("PaymentDate", DateTime.Now);
-                        command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
+                        command.Parameters.AddWithValue("@ActualAmount", ActualAmount);
+                        command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
+                        command.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
+                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
                         return command.ExecuteNonQuery()>0;
                     }
@@ -118,7 +118,7 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("PaymentID", PaymentID);
+                        command.Parameters.AddWithValue("@PaymentID", PaymentID);
 
                         return command.ExecuteNonQuery()>0;
                     }
