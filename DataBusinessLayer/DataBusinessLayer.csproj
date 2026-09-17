@@ -53,6 +53,7 @@
     <Compile Include="clsMembers.cs" />
     <Compile Include="clsPeople.cs" />
     <Compile Include="clsSubscription.cs" />
+    <Compile Include="clsSubscriptionCancellation.cs" />
     <Compile Include="clsSubscriptionPlans.cs" />
     <Compile Include="clsUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
