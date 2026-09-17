@@ -19,6 +19,10 @@ namespace DataBusinessLayer
         public int PaymentMethod { set; get; }
         public DateTime PaymentDate { set; get; }
         public int CreatedByUserID { set; get; }
+
+        public clsUsers UserInfo;
+        public clsSubscription SubscriptionInfo;
+
         public enum enMode { AddMode=1,UpdateMode=2 }
         private enMode _Mode = enMode.AddMode;
 
@@ -32,6 +36,8 @@ namespace DataBusinessLayer
             this.PaymentMethod = -1;
             this.PaymentDate = DateTime.Now;
             this.CreatedByUserID = -1;
+            this.UserInfo = new clsUsers(); 
+            this.SubscriptionInfo = new clsSubscription();
             _Mode = enMode.AddMode;
         }
 
@@ -46,6 +52,11 @@ namespace DataBusinessLayer
             this.PaymentMethod = PaymentMethod;
             this.PaymentDate = PaymentDate;
             this.CreatedByUserID = CreatedByUserID;
+
+
+            this.SubscriptionInfo = clsSubscription.FindBySubscriptionID(SubscriptionID);
+            this.UserInfo = clsUsers.FindByUserID(CreatedByUserID);
+
             _Mode = enMode.UpdateMode;
         }
 
