@@ -66,5 +66,10 @@ namespace DataBusinessLayer
             return clsSubscriptionCancellationData.UpdateSubscriptionCancellation(this._CancellationID, this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancellationDate, this.CancelledByUserID);
         }
 
+        private void HandleRefunding()
+        {
+
+        }
+
     }
 }
