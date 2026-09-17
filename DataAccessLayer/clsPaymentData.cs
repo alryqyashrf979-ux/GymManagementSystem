@@ -33,5 +33,36 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+        static public int AddPayment(int SubscriptionID,int PaymentAmount,int ActualAmount,int PaymentMethod,DateTime PaymentDate, int CreatedByUserID)
+        {
+            string query = " INSERT INTO [dbo].[Payments]" +
+                " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID])" +
+                " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@PaymentAmount-@ActualAmount,@PaymentMethod,@PaymentDate,@CreatedByUserID) ";
+
+            try
+            {
+                using(SqlConnection connection =new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("PaymentAmount", PaymentAmount);
+                        command.Parameters.AddWithValue("ActualAmount", ActualAmount);
+                        command.Parameters.AddWithValue("PaymentMethod", PaymentMethod);
+                        command.Parameters.AddWithValue("PaymentDate", PaymentDate);
+                        command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
+
+                        return command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return -1;
+        }
     }
 }
