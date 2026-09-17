@@ -217,15 +217,17 @@ Classes.IsActive from Classes ;
 ";
             */
             string query =
-              @"SELECT Classes.ClassID AS 'Class ID' 
+              @"
+       SELECT Classes.ClassID AS 'Class ID' 
      , Classes.className AS 'Class Name' 
-     , Classes.CoachID AS 'Coach ID' 
+     , People.FirstName+' '+People.SecondName+' '+ISNULL(People.LastName,'') AS 'Coach Name' 
      , Classes.StartTime AS 'Start Time' 
      , Classes.EndTime AS 'End Time' 
      , Classes.Maximum_Capacity
      , Classes.IsActive 
-FROM Classes 
-ORDER BY Classes.IsActive DESC, Classes.CoachID ASC; ;
+      FROM Classes inner join Coaches on Coaches.CoachID=Classes.ClassID inner join
+      Employees on Employees.EmployeeID=Coaches.EmployeeID inner join People on People.ID=Employees.PersonID
+      ORDER BY Classes.IsActive DESC, Classes.CoachID ASC;
 ";
 
 
