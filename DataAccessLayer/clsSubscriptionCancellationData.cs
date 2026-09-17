@@ -48,17 +48,17 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
 
                         if(string.IsNullOrEmpty(CancellationReason))
-                        command.Parameters.AddWithValue("CancellationReason", DBNull.Value);
+                        command.Parameters.AddWithValue("@CancellationReason", DBNull.Value);
                         else
-                        command.Parameters.AddWithValue("CancellationReason", CancellationReason);
+                        command.Parameters.AddWithValue("@CancellationReason", CancellationReason);
 
-                        command.Parameters.AddWithValue("RefundAmount", RefundAmount);
-                        command.Parameters.AddWithValue("ElapsedDays", ElapsedDays);
-                        command.Parameters.AddWithValue("CancellationDate", CancellationDate);
-                        command.Parameters.AddWithValue("CancelledByUSerID", CancelledByUSerID);
+                        command.Parameters.AddWithValue("@RefundAmount", RefundAmount);
+                        command.Parameters.AddWithValue("@ElapsedDays", ElapsedDays);
+                        command.Parameters.AddWithValue("@CancellationDate", CancellationDate);
+                        command.Parameters.AddWithValue("@CancelledByUSerID", CancelledByUSerID);
 
                         object Resault = command.ExecuteScalar();
                         if (int.TryParse(Resault.ToString(), out int Value))
@@ -94,18 +94,18 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("SubscriptionCancellationID", SubscriptionCancellationID);
-                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("@SubscriptionCancellationID", SubscriptionCancellationID);
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
 
                         if (string.IsNullOrEmpty(CancellationReason))
-                            command.Parameters.AddWithValue("CancellationReason", DBNull.Value);
+                            command.Parameters.AddWithValue("@CancellationReason", DBNull.Value);
                         else
-                            command.Parameters.AddWithValue("CancellationReason", CancellationReason);
+                            command.Parameters.AddWithValue("@CancellationReason", CancellationReason);
 
-                        command.Parameters.AddWithValue("RefundAmount", RefundAmount);
-                        command.Parameters.AddWithValue("ElapsedDays", ElapsedDays);
-                        command.Parameters.AddWithValue("CancellationDate", CancellationDate);
-                        command.Parameters.AddWithValue("CancelledByUSerID", CancelledByUSerID);
+                        command.Parameters.AddWithValue("@RefundAmount", RefundAmount);
+                        command.Parameters.AddWithValue("@ElapsedDays", ElapsedDays);
+                        command.Parameters.AddWithValue("@CancellationDate", CancellationDate);
+                        command.Parameters.AddWithValue("@CancelledByUSerID", CancelledByUSerID);
 
                         return command.ExecuteNonQuery() > 0;
 
@@ -130,7 +130,7 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("SubscriptionCancellationID", SubscriptionCancellationID);
+                        command.Parameters.AddWithValue("@SubscriptionCancellationID", SubscriptionCancellationID);
 
                         return command.ExecuteNonQuery() > 0;
                     }
@@ -156,7 +156,7 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("SubscriptionCancellationID", SubscriptionCancellationID);
+                        command.Parameters.AddWithValue("@SubscriptionCancellationID", SubscriptionCancellationID);
 
                         using(SqlDataReader reader = command.ExecuteReader())
                         {
