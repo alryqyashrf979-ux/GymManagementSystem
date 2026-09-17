@@ -86,5 +86,22 @@ namespace DataBusinessLayer
             return false;
         }
 
+        static public object Find(int PaymentID)
+        {
+            
+           int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;
+
+          double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
+
+          DateTime  PaymentDate = DateTime.Now;
+
+            bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID);
+
+            if (IsFound)
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID);
+            else
+                return null;
+        }
+
     }
 }
