@@ -42,7 +42,7 @@ namespace DataBusinessLayer
             this.Notes = string.Empty;
             this.IsActive = false;
             this._Person = new clsPeople();
-            this._EmployeeShift =new clsEmployeeShift();
+            this._EmployeeShift =clsEmployeeShift.Find(ShiftID);
             this._Mode = enMode.AddMode;
         }
 
