@@ -49,5 +49,10 @@ namespace DataBusinessLayer
 
         }
 
+        static public bool DeleteSubscriptionCancellation(int SubscriptionCancellationID)
+        {
+            return clsSubscriptionCancellation.DeleteSubscriptionCancellation(SubscriptionCancellationID);
+        }
+
     }
 }
