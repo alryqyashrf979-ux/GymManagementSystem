@@ -33,5 +33,49 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+        static public int AddSubscriptionCancellation(int SubscriptionID,string CancellationReason,double RefundAmount,byte ElapsedDays,
+            DateTime CancellationDate,int CancelledByUSerID)
+        {
+            string query = " INSERT INTO [dbo].[SubscriptionCancellations]([SubscriptionID] ,[CancellationReason],[RefundAmount]," +
+                "[ElapsedDays] ,[CancellationDate] ,[CancelledByUSerID]) VALUES(@SubscriptionID,@CancellationReason,@RefundAmount," +
+                "@ElapsedDays,@CancellationDate,@CancelledByUSerID);select SCOPE_IDENTITY(); ";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
+
+                        if(string.IsNullOrEmpty(CancellationReason))
+                        command.Parameters.AddWithValue("CancellationReason", DBNull.Value);
+                        else
+                        command.Parameters.AddWithValue("CancellationReason", CancellationReason);
+
+                        command.Parameters.AddWithValue("RefundAmount", RefundAmount);
+                        command.Parameters.AddWithValue("ElapsedDays", ElapsedDays);
+                        command.Parameters.AddWithValue("CancellationDate", CancellationDate);
+                        command.Parameters.AddWithValue("CancelledByUSerID", CancelledByUSerID);
+
+                        object Resault = command.ExecuteScalar();
+                        if (int.TryParse(Resault.ToString(), out int Value))
+                            return Value;
+                        else
+                            return -1;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return -1;
+        }
+
+
+     
     }
 }
