@@ -22,6 +22,17 @@ namespace DataBusinessLayer
         public enum enMode { AddMode=1,UpdateMode=2 }
         private enMode _Mode = enMode.AddMode;
 
-
+        public clsPayments()
+        {
+            _PaymentID = -1;
+            this.SubscriptionID = -1;
+            this.PaymentAmount = 0;
+            this.ActualAmount = 0;
+            this.TotalRemaining = 0;
+            this.PaymentMethod = -1;
+            this.PaymentDate = DateTime.Now;
+            this.CreatedByUserID = -1;
+            _Mode = enMode.AddMode;
+        }
     }
 }
