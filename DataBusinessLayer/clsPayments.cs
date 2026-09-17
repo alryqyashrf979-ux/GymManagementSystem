@@ -61,6 +61,10 @@ namespace DataBusinessLayer
             return this._PaymentID != -1;
         }
 
+        private bool _UpdatePayment()
+        {
+            return clsPaymentData.UpdatePayment(this._PaymentID,this.SubscriptionID,this.PaymentAmount,this.ActualAmount,this.PaymentMethod,this.CreatedByUserID);
+        }
 
     }
 }
