@@ -34,7 +34,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,int PaymentMethod,DateTime PaymentDate, int CreatedByUserID)
+        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,int PaymentMethod, int CreatedByUserID)
         {
             string query = " INSERT INTO [dbo].[Payments]" +
                 " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID])" +
@@ -52,7 +52,7 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("PaymentAmount", PaymentAmount);
                         command.Parameters.AddWithValue("ActualAmount", ActualAmount);
                         command.Parameters.AddWithValue("PaymentMethod", PaymentMethod);
-                        command.Parameters.AddWithValue("PaymentDate", PaymentDate);
+                        command.Parameters.AddWithValue("PaymentDate", DateTime.Now);
                         command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
 
                         object Resault = command.ExecuteScalar();
@@ -68,7 +68,7 @@ namespace DataAccessLayer
             return -1;
         }
     
-        static public bool UpdatePayment(int PaymentID,int SubscriptionID, double PaymentAmount, double ActualAmount, int PaymentMethod, DateTime PaymentDate, int CreatedByUserID)
+        static public bool UpdatePayment(int PaymentID,int SubscriptionID, double PaymentAmount, double ActualAmount, int PaymentMethod, int CreatedByUserID)
         {
             string query = "UPDATE [dbo].[Payments] SET " +
                 "[SubscriptionID] = @SubscriptionID," +
@@ -92,7 +92,7 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("PaymentAmount", PaymentAmount);
                         command.Parameters.AddWithValue("ActualAmount", ActualAmount);
                         command.Parameters.AddWithValue("PaymentMethod", PaymentMethod);
-                        command.Parameters.AddWithValue("PaymentDate", PaymentDate);
+                        command.Parameters.AddWithValue("PaymentDate", DateTime.Now);
                         command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
 
                         return command.ExecuteNonQuery()>0;
