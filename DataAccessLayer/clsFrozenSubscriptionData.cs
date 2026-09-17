@@ -323,9 +323,8 @@ namespace DataAccessLayer
         {
             bool isFound = false;
 
-            string sql = @"SELECT TOP 1 * FROM FrozenSubscriptions 
-                   WHERE SubscriptionID = @SubscriptionID 
-                   ORDER BY FreezeID DESC";
+            string sql = @"SELECT * FROM FrozenSubscriptions 
+                   WHERE SubscriptionID = @SubscriptionID ";
 
             try
             {
