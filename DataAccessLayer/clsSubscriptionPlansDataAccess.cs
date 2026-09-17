@@ -220,5 +220,33 @@ namespace DataAccessLayer
             }
         }
 
+        static public int SelectDurationFromPlan(int PlanID)
+        {
+            string query = "select Duration from SubscriptionPlans where PlanID=@PlanID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("PlanID", PlanID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                                return (int)reader["Duration"];
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return -1;
+        }
+
     }
     }
