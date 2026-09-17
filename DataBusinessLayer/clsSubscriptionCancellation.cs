@@ -88,5 +88,25 @@ namespace DataBusinessLayer
 
         }
 
+        public bool Save()
+        {
+            HandleRefund();
+
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddSubscriptionCancellationID())
+                    {
+                        _Mode = enMode.UpdateMode;
+                        return true;
+                    }
+                    else
+                        return false;
+                case enMode.UpdateMode:
+                    return _UpdateSubscriptionCancellation();
+            }
+            return false;
+        }
+
     }
 }
