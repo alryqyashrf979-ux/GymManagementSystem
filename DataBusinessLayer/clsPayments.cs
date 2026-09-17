@@ -34,5 +34,19 @@ namespace DataBusinessLayer
             this.CreatedByUserID = -1;
             _Mode = enMode.AddMode;
         }
+
+        private clsPayments(int PaymentID,int SubscriptionID,double PaymentAmount,double ActualAmount,double TotalRemaining,
+            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID)
+        {
+            _PaymentID = PaymentID;
+            this.SubscriptionID = SubscriptionID;
+            this.PaymentAmount = PaymentAmount;
+            this.ActualAmount =ActualAmount;
+            this.TotalRemaining = TotalRemaining;
+            this.PaymentMethod = PaymentMethod;
+            this.PaymentDate = PaymentDate;
+            this.CreatedByUserID = CreatedByUserID;
+            _Mode = enMode.UpdateMode;
+        }
     }
 }
