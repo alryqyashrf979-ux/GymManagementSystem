@@ -75,7 +75,7 @@ namespace DataAccessLayer
             return -1;
         }
 
-        static public bool UpdateSubscriptionCancellation(int SubscriptionCancellationID, int SubscriptionCancellation,int SubscriptionID, string CancellationReason, double RefundAmount, byte ElapsedDays,
+        static public bool UpdateSubscriptionCancellation(int SubscriptionCancellationID,int SubscriptionID, string CancellationReason, double RefundAmount, byte ElapsedDays,
             DateTime CancellationDate, int CancelledByUSerID)
         {
             string query = "UPDATE [dbo].[SubscriptionCancellations] SET " +
@@ -144,5 +144,40 @@ namespace DataAccessLayer
             return false;
         }
 
+        static public bool Find(int SubscriptionCancellationID,ref int SubscriptionID,ref string CancellationReason,ref double RefundAmount,ref byte ElapsedDays,
+           ref DateTime CancellationDate,ref int CancelledByUSerID)
+        {
+            string query = "select *from SubscriptionCancellations where SubscriptionCancellationID=@SubscriptionCancellationID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("SubscriptionCancellationID", SubscriptionCancellationID);
+
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            SubscriptionID = (int)reader["SubscriptionID"];
+                            CancellationReason = (string)reader["CancellationReason"];
+                            RefundAmount = (double)reader["RefundAmount"];
+                            ElapsedDays = (byte)reader["ElapsedDays"];
+                            CancellationDate = (DateTime)reader["CancellationDate"];
+                            CancelledByUSerID = (int)reader["CancelledByUSerID"];
+
+                            return true;
+
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
+        }
     }
 }
