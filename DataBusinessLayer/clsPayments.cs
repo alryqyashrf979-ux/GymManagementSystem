@@ -53,5 +53,14 @@ namespace DataBusinessLayer
         {
             return clsPaymentData.DeletePayment(PaymentID);
         }
+
+        private bool _AddPayment()
+        {
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount, this.PaymentMethod, this.CreatedByUserID);
+
+            return this._PaymentID != -1;
+        }
+
+
     }
 }
