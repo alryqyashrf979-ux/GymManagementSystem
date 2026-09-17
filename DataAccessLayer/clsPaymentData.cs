@@ -38,7 +38,8 @@ namespace DataAccessLayer
         {
             string query = " INSERT INTO [dbo].[Payments]" +
                 " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID])" +
-                " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@PaymentAmount-@ActualAmount,@PaymentMethod,@PaymentDate,@CreatedByUserID) ";
+                " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@PaymentAmount-@ActualAmount,@PaymentMethod,@PaymentDate,@CreatedByUserID);" +
+                "select scope_Idintity(); ";
 
             try
             {
@@ -54,7 +55,9 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("PaymentDate", PaymentDate);
                         command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
 
-                        return command.ExecuteNonQuery();
+                        object Resault = command.ExecuteScalar();
+                        if (int.TryParse(Resault.ToString(), out int Value))
+                            return Value;
                     }
                 }
             }
@@ -63,6 +66,44 @@ namespace DataAccessLayer
 
             }
             return -1;
+        }
+    
+        static public bool UpdatePayment(int PaymentID,int SubscriptionID, int PaymentAmount, int ActualAmount, int PaymentMethod, DateTime PaymentDate, int CreatedByUserID)
+        {
+            string query = "UPDATE [dbo].[Payments] SET " +
+                "[SubscriptionID] = @SubscriptionID," +
+                "[PaymentAmount] = @PaymentAmount," +
+                "[ActualAmount] = @ActualAmount," +
+                "[TotalRemaining] = @PaymentAmount-@ActualAmount ," +
+                "[PaymentMethod] = @PaymentMethod," +
+                "[PaymentDate] = @PaymentDate," +
+                "[CreatedByUserID] = @CreatedByUserID" +
+                " WHERE PaymentID=@PaymentID;";
+
+            try
+            {
+                using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using(SqlCommand command=new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("PaymentID", PaymentID);
+                        command.Parameters.AddWithValue("SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("PaymentAmount", PaymentAmount);
+                        command.Parameters.AddWithValue("ActualAmount", ActualAmount);
+                        command.Parameters.AddWithValue("PaymentMethod", PaymentMethod);
+                        command.Parameters.AddWithValue("PaymentDate", PaymentDate);
+                        command.Parameters.AddWithValue("CreatedByUserID", CreatedByUserID);
+
+                        return command.ExecuteNonQuery()>0;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
         }
     }
 }
