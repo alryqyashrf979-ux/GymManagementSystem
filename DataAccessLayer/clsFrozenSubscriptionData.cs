@@ -43,7 +43,7 @@ namespace DataAccessLayer
            ,@IsFrozen
            ,@FrozenByUserID
            ,@unfrozenByUserID);
-               Select scope_Idintity(); 
+               Select scope_Identity(); 
                  ";
 
 
