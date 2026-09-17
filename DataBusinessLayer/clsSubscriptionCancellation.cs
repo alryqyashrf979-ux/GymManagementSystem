@@ -68,9 +68,9 @@ namespace DataBusinessLayer
             return clsSubscriptionCancellationData.UpdateSubscriptionCancellation(this._CancellationID, this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancellationDate, this.CancelledByUserID);
         }
 
-        private void HandleRefund()
+        public static void HandleRefund(int SubscriptionID, ref double Refund,ref int LapsedDays,ref double OneDayFee,ref double UsedAmount)
         {
-            clsSubscription Subscription = clsSubscription.FindBySubscriptionID(this.SubscriptionID);
+            clsSubscription Subscription = clsSubscription.FindBySubscriptionID(SubscriptionID);
             //int PlanID = clsSubscriptionPlansDataAccess.SelectPlanIDBySubscriptionID(this.SubscriptionID);
             //int PlanID = Subscription.PlanID;
             //int Duration = clsSubscriptionPlansDataAccess.SelectDurationFromPlan(PlanID);
@@ -78,18 +78,17 @@ namespace DataBusinessLayer
             double Fees = Subscription.Price;
             DateTime StartDate = Subscription.StartDate;
 
-            double OneDayFee = Fees / Duration;
-            int LapsedDays = (DateTime.Now - StartDate).Days;
+             OneDayFee = Fees / Duration;
+             LapsedDays = (DateTime.Now - StartDate).Days;
 
-            double UsedAmount = OneDayFee * LapsedDays;
+             UsedAmount = OneDayFee * LapsedDays;
 
-            double Refund = Fees - UsedAmount;
-            this.Refund = Refund;
+             Refund = Fees - UsedAmount;
+            
         }
 
         public bool Save()
         {
-            HandleRefund();
 
             switch (_Mode)
             {
