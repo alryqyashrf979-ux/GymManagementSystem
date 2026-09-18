@@ -37,6 +37,7 @@ namespace DataBusinessLayer
             EmergencyContactInfo = null;
             Mode = enMode.add;
             PersonInfo = null;
+            Mode = enMode.add;
         }
         public clsMembers(int MemberID, int personID, DateTime lastSubscriptionDate, bool IsActive, int ContactPersonInfoID)
         { 
