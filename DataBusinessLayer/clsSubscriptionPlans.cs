@@ -18,6 +18,7 @@ namespace DataBusinessLayer
         public string PlanName { set; get; }
         public string PlanDescription { set; get; }
         public bool Availiability { set; get; }
+        public int Duration { set; get; }
 
         public decimal PlanPrice { set; get; }
 
@@ -31,19 +32,21 @@ namespace DataBusinessLayer
             _PlanID = -1;
             PlanName = string.Empty;
             PlanDescription = string.Empty;
+            Duration = -1;
             Availiability = true;
             PlanPrice = default(decimal);
             Note = string.Empty;
             Mode = enMode.Add;
 
         }
-        public clsSubscriptionPlans(int planID, string planName, string planDescription, bool availiablity, decimal planPrice, string note)
+        public clsSubscriptionPlans(int planID, string planName, string planDescription, bool availiablity, decimal planPrice, string note,int Duration)
         {
             this._PlanID = planID;
             this.PlanName = planName;
             this.PlanDescription = planDescription;
             this.Availiability = availiablity;
             this.PlanPrice = planPrice;
+            this.Duration = Duration;
             this.Note = note;
             this.Mode = enMode.Update;
 
@@ -56,15 +59,16 @@ namespace DataBusinessLayer
             string Note = string.Empty;
             decimal PlanPrice = default(decimal);
             bool Availiablity = true;
+            int Duration = -1;
 
-            if (clsSubscriptionPlansDataAccess.FindPlan(PlanID, ref PlanName, ref PlanDescription, ref Availiablity, ref PlanPrice, ref Note))
-                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note);
+            if (clsSubscriptionPlansDataAccess.FindPlan(PlanID, ref PlanName, ref PlanDescription, ref Availiablity, ref PlanPrice,ref Duration, ref Note))
+                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note,Duration);
             else return null;
         }
 
         private bool _Add()
         {
-            this._PlanID = clsSubscriptionPlansDataAccess.Add(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
+            this._PlanID = clsSubscriptionPlansDataAccess.Add(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice,this.Duration, this.Note);
             return this._PlanID > -1;
         }
 
@@ -72,7 +76,7 @@ namespace DataBusinessLayer
         // 
         private bool _Update()
         {
-            return clsSubscriptionPlansDataAccess.Update(this.PlanID,this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice, this.Note);
+            return clsSubscriptionPlansDataAccess.Update(this.PlanID,this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice,this.Duration, this.Note);
         }
         public bool Save()
         {
