@@ -57,7 +57,7 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
                         object Resault = command.ExecuteScalar();
-                        if (int.TryParse(Resault.ToString(), out int Value))
+                        if (Resault!=null&& int.TryParse(Resault.ToString(), out int Value))
                             return Value;
                     }
                 }
