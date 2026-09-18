@@ -73,7 +73,7 @@ INNER JOIN Users U ON U.UserID = SC.ChangedByUserID;";
 
                         object Resault= command.ExecuteScalar();
 
-                        if (int.TryParse(Resault.ToString(), out int Value))
+                        if (Resault!=null&& int.TryParse(Resault.ToString(), out int Value))
                             return Value;
                         else
                             return -1;
