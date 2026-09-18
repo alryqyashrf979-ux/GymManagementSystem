@@ -16,8 +16,9 @@ namespace DataBusinessLayer
         public enMode Mode = enMode.AddNew;
 
         private int _UserID = -1;
-        public int UserID { set; get; }
-        public int PersonID { get { return _UserID; } }
+        public int UserID { get { return _UserID; } }
+        private int _PersonID;
+        public int PersonID { get { return _PersonID; } }
         public clsPeople PersonInfo;
         public string UserName { set; get; }
         public string Password { set; get; }
@@ -27,7 +28,8 @@ namespace DataBusinessLayer
         public clsUsers()
 
         {
-            this.UserID = -1;
+            this._UserID = -1;
+            this._PersonID = -1;
             this.UserName = "";
             this.Password = "";
             this.IsActive = true;
@@ -41,8 +43,8 @@ namespace DataBusinessLayer
             bool IsActive)
 
         {
-            this.UserID = UserID;
-            this._UserID = PersonID;
+            this._UserID = UserID;
+            this._PersonID = PersonID;
             this.Permission = Permission;
             this.PersonInfo = clsPeople.Find(PersonID);
             this.UserName = Username;

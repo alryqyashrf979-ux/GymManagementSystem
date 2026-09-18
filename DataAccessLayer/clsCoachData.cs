@@ -34,7 +34,7 @@ namespace DataAccessLayer
         static public int AddCoach(int EmployeeID,string Speciality,string Note)
         {
             string query = "INSERT INTO [dbo].[Coaches] ([EmployeeID],[Speciality],[Note])" +
-                " VALUES (@EmployeeID,@Speciality,@Note);select scope_Idintity();";
+                " VALUES (@EmployeeID,@Speciality,@Note);select scope_Identity();";
 
             try
             {

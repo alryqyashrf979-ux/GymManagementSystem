@@ -56,7 +56,7 @@ INNER JOIN Users U ON U.UserID = SC.ChangedByUserID;";
         static public int AddSubscriptionChange(int NewSubscriptionID,int CancelledSubscriptionID,int ChangedByUserID,DateTime ChangeDateTime)
         {
             string query = " INSERT INTO [dbo].[SubscriptionChanges]([NewSubscriptionID],[CancelledSubscriptionID],[ChangedByUserID],[ChangeDateTime]) " +
-                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime);Select scope_Idintity(); ";
+                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime);Select scope_Identity(); ";
 
             try
             {
@@ -73,7 +73,7 @@ INNER JOIN Users U ON U.UserID = SC.ChangedByUserID;";
 
                         object Resault= command.ExecuteScalar();
 
-                        if (int.TryParse(Resault.ToString(), out int Value))
+                        if (Resault!=null&& int.TryParse(Resault.ToString(), out int Value))
                             return Value;
                         else
                             return -1;
