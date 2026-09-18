@@ -71,7 +71,7 @@ namespace DataBusinessLayer
         private bool _AddSubscription()
         {
             _SubscriptionID = clsSubscriptionsData.AddNewSubscription(this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
-            return _SubscriptionID > 0;
+            return _SubscriptionID != -1;
         }
 
         private bool _UpdateSubscription()
