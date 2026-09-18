@@ -16,11 +16,11 @@ namespace DataAccessLayer
 {
     public static class clsSubscriptionPlansDataAccess
     {
-        //PlamID , PlanName , PlanDescription , Availablity, PlanPrice  , Note .
+        //PlamID , PlanName , PlanDescription , Availablity, PlanPrice,Duration  , Note .
 
-      public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price, ref string Note)
+      public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price,ref int Duration, ref string Note)
         {
-            string query = $"SELECT Name, Description, Availablity, Price, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
+            string query = $"SELECT Name, Description, Availablity, Price,Duration, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
 
             //Handle Exception
             try
@@ -39,6 +39,7 @@ namespace DataAccessLayer
                             if (reader.Read())
                             {
                                 Name = (string)reader["Name"];
+                                Duration = (int)reader["Duration"];
                                 Description = (string)reader["Description"];
                                 //edit spelling mistake
                                 Availablity = (bool)reader["Availablity"];
@@ -61,9 +62,9 @@ namespace DataAccessLayer
             return false;
         }
 
-        public static int Add(string Name, string Description, bool Availablity, decimal Price, string Note)
+        public static int Add(string Name, string Description, bool Availablity, decimal Price,int Duration, string Note)
         {
-            string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note) ; SELECT SCOPE_IDENTITY(); ";
+            string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note,@Duration) ; SELECT SCOPE_IDENTITY(); ";
 
             //Handle Exception
 
@@ -78,6 +79,7 @@ namespace DataAccessLayer
                     using (SqlCommand cmd = new SqlCommand(Query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Name", Name);
+                        cmd.Parameters.AddWithValue("@Duration", Duration);
                         cmd.Parameters.AddWithValue("@Description", Description);
                         cmd.Parameters.AddWithValue("@Availablity", Availablity);
                         cmd.Parameters.AddWithValue("@Price", Price);
@@ -88,7 +90,7 @@ namespace DataAccessLayer
 
                         object Result = cmd.ExecuteScalar();
 
-                        if (int.TryParse(Result.ToString(), out int value))
+                        if (Result !=null && int.TryParse(Result.ToString(), out int value))
                             return value;
                         else
                             return -1;
@@ -100,11 +102,11 @@ namespace DataAccessLayer
                 return -1;
             }
         }
-       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, decimal Price, string Note)
+       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, decimal Price,int Duration, string Note)
         {
             // edit spelling mistake in Availiablity
             //add Price parameter to the query
-            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description,Price=@Price, Availiablity= @Availiablity, Note = @Note\r\nwhere PlanID = @PlanID  ";
+            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description,Price=@Price, Availiablity= @Availiablity, Note = @Note,Duration=@Duration \r\nwhere PlanID = @PlanID  ";
 
             //Handle Exception
             try
@@ -119,6 +121,7 @@ namespace DataAccessLayer
                         //Add parameters to the command object Plan ID
 
                         cmd.Parameters.AddWithValue("@PlanID", Name);
+                        cmd.Parameters.AddWithValue("@Duration", Duration);
                         cmd.Parameters.AddWithValue("@Name", Name);
                         cmd.Parameters.AddWithValue("@Description", Description);
 
