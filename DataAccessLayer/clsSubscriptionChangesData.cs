@@ -16,11 +16,17 @@ namespace DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            string query = " select SubscriptionChangeID as 'Subscription Change ID',P.Name as 'New Subscription' ," +
-                "(select P.Name  from SubscriptionChanges SC2 inner join Subscription S on SC2.CancelledSubscriptionID=S.SubscriptionID" +
-                " inner join SubscriptionPlans P on P.PlanID=S.PlanID where SC2.SubscriptionChangeID=SC.SubscriptionChangeID) as 'Perviouse Subscription'," +
-                "U.Username from SubscriptionChanges SC inner join Subscription S on SC.NewSubscriptionID=S.SubscriptionID " +
-                " inner join SubscriptionPlans P on P.PlanID=S.PlanID inner join Users U on U.UserID=SC.ChangedByUserID; ";
+            string query = @"SELECT 
+    SC.SubscriptionChangeID AS 'Change ID',
+    P_New.Name AS 'New Subscription',
+    P_Old.Name AS 'Previous Subscription',
+    U.Username
+FROM SubscriptionChanges SC
+INNER JOIN Subscriptions S_New ON SC.NewSubscriptionID = S_New.SubscriptionID
+INNER JOIN SubscriptionPlans P_New ON P_New.PlanID = S_New.PlanID
+INNER JOIN Subscriptions S_Old ON SC.CancelledSubscriptionID = S_Old.SubscriptionID
+INNER JOIN SubscriptionPlans P_Old ON P_Old.PlanID = S_Old.PlanID
+INNER JOIN Users U ON U.UserID = SC.ChangedByUserID;";
 
             try
             {
@@ -50,7 +56,7 @@ namespace DataAccessLayer
         static public int AddSubscriptionChange(int NewSubscriptionID,int CancelledSubscriptionID,int ChangedByUserID,DateTime ChangeDateTime)
         {
             string query = " INSERT INTO [dbo].[SubscriptionChanges]([NewSubscriptionID],[CancelledSubscriptionID],[ChangedByUserID],[ChangeDateTime]) " +
-                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime);Select scope_Idintity(); ";
+                "VALUES (@NewSubscriptionID,@CancelledSubscriptionID,@ChangedByUserID,@ChangeDateTime);Select scope_Identity(); ";
 
             try
             {
@@ -67,7 +73,7 @@ namespace DataAccessLayer
 
                         object Resault= command.ExecuteScalar();
 
-                        if (int.TryParse(Resault.ToString(), out int Value))
+                        if (Resault!=null&& int.TryParse(Resault.ToString(), out int Value))
                             return Value;
                         else
                             return -1;

@@ -11,7 +11,7 @@ namespace DataAccessLayer
    static public class clsCoachData
     {
       
-        static public DataTable GetAllCoach()
+        static public DataTable GetAllCoaches()
         {
             DataTable dt = new DataTable();
             string query = "select CoachID as 'Coach ID' , EmployeeID as 'Employee ID',Speciality,Note from Coaches;";
@@ -34,7 +34,7 @@ namespace DataAccessLayer
         static public int AddCoach(int EmployeeID,string Speciality,string Note)
         {
             string query = "INSERT INTO [dbo].[Coaches] ([EmployeeID],[Speciality],[Note])" +
-                " VALUES (@EmployeeID,@Speciality,@Note);select scope_Idintity();";
+                " VALUES (@EmployeeID,@Speciality,@Note);select scope_Identity();";
 
             try
             {
@@ -108,7 +108,7 @@ namespace DataAccessLayer
                     {
                         command.Parameters.AddWithValue("@CoachID", CoachID);
 
-                        return Convert.ToInt32(command.ExecuteNonQuery()) > 0;
+                        return command.ExecuteNonQuery() > 0;
                     }
                 }
             }

@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using DataAccessLayer;
+
+namespace DataBusinessLayer
+{
+   public class clsPayments
+    {
+        private int _PaymentID;
+        public int PaymentID { get { return _PaymentID; } }
+        public int SubscriptionID { set; get; }
+        public double PaymentAmount { set; get; }
+        public double ActualAmount { set; get; }
+        public double TotalRemaining { set; get; }
+        public int PaymentMethod { set; get; }
+        public DateTime PaymentDate { set; get; }
+        public int CreatedByUserID { set; get; }
+
+        public clsUsers UserInfo;
+        public clsSubscription SubscriptionInfo;
+
+        public enum enMode { AddMode=1,UpdateMode=2 }
+        private enMode _Mode = enMode.AddMode;
+
+        public clsPayments()
+        {
+            _PaymentID = -1;
+            this.SubscriptionID = -1;
+            this.PaymentAmount = 0;
+            this.ActualAmount = 0;
+            this.TotalRemaining = 0;
+            this.PaymentMethod = -1;
+            this.PaymentDate = DateTime.Now;
+            this.CreatedByUserID = -1;
+            this.UserInfo = new clsUsers(); 
+            this.SubscriptionInfo = new clsSubscription();
+            _Mode = enMode.AddMode;
+        }
+
+        private clsPayments(int PaymentID,int SubscriptionID,double PaymentAmount,double ActualAmount,double TotalRemaining,
+            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID)
+        {
+            _PaymentID = PaymentID;
+            this.SubscriptionID = SubscriptionID;
+            this.PaymentAmount = PaymentAmount;
+            this.ActualAmount =ActualAmount;
+            this.TotalRemaining = TotalRemaining;
+            this.PaymentMethod = PaymentMethod;
+            this.PaymentDate = PaymentDate;
+            this.CreatedByUserID = CreatedByUserID;
+
+
+            this.SubscriptionInfo = clsSubscription.FindBySubscriptionID(SubscriptionID);
+            this.UserInfo = clsUsers.FindByUserID(CreatedByUserID);
+
+            _Mode = enMode.UpdateMode;
+        }
+
+        static public bool DeletePayment(int PaymentID)
+        {
+            return clsPaymentData.DeletePayment(PaymentID);
+        }
+
+        private bool _AddPayment()
+        {
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount, this.PaymentMethod, this.CreatedByUserID);
+
+            return this._PaymentID != -1;
+        }
+
+        private bool _UpdatePayment()
+        {
+            return clsPaymentData.UpdatePayment(this._PaymentID,this.SubscriptionID,this.PaymentAmount,this.ActualAmount,this.PaymentMethod,this.CreatedByUserID);
+        }
+
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case enMode.AddMode:
+                    if (_AddPayment())
+                    {
+                        _Mode = enMode.AddMode;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case enMode.UpdateMode:
+                    return _UpdatePayment();
+            }
+            return false;
+        }
+
+        static public object Find(int PaymentID)
+        {
+            
+           int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;
+
+          double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
+
+          DateTime  PaymentDate = DateTime.Now;
+
+            bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID);
+
+            if (IsFound)
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID);
+            else
+                return null;
+        }
+
+    }
+}

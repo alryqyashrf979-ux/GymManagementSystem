@@ -49,7 +49,9 @@
     <Compile Include="clsEmployeeAttendanceData.cs" />
     <Compile Include="clsEmployeesData.cs" />
     <Compile Include="clsEmployeeShiftData.cs" />
+    <Compile Include="clsFrozenSubscriptionData.cs" />
     <Compile Include="clsMembersDataAccess.cs" />
+    <Compile Include="clsPaymentData.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsSubscriptionChangesData.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
