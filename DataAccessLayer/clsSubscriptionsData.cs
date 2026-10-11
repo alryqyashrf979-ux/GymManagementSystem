@@ -116,10 +116,17 @@ namespace DataAccessLayer
 
 
             string sql = @"
-                    SELECT 
+                   
+
+
+
+
+
+
+ SELECT 
     SubscriptionID AS 'Subscription ID', 
     People.FirstName + ' ' + People.SecondName + ' ' + People.LastName AS 'Member Name', 
-    subscriptions.PlanID AS 'Plan ID', 
+    SubscriptionPlans.Name AS 'Plan', 
     StartDate AS 'Start Date', 
     ExpirationDate AS 'Expiration Date', 
     subscriptions.Price AS 'Price', 
@@ -131,11 +138,13 @@ namespace DataAccessLayer
         WHEN 5 THEN 'Changed'
         ELSE 'Unknown'
     END AS 'Status', 
-    subscriptions.CreatedByUserID AS 'Created By User ID' 
-FROM Subscriptions 
+    Users.Username AS 'Created By User ID' 
+FROM Subscriptions
 JOIN Members ON Subscriptions.MemberID = Members.MemberID 
 JOIN People ON Members.PersonID = People.ID
-JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID;
+JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner join Users on Users.UserID=Subscriptions.CreatedByUserID;;
+
+
 
 
                      ";

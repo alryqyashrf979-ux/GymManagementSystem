@@ -43,7 +43,7 @@ namespace DataAccessLayer
            ,@IsFrozen
            ,@FrozenByUserID
            ,@unfrozenByUserID);
-               Select scope_Idintity(); 
+               Select scope_Identity(); 
                  ";
 
 
@@ -105,7 +105,7 @@ namespace DataAccessLayer
 
 
         public static bool UpdateFrozenSubscription(int FreezeID, int SubscriptionID,
-            DateTime FreezeEndDate,DateTime FreezeStartDate,DateTime UnFreezeDate, byte FreezingDuration, double FreezeFee,
+            DateTime FreezeEndDate,DateTime FreezeStartDate,DateTime? UnFreezeDate, byte FreezingDuration, double FreezeFee,
             string FreezeReason, bool IsFeesPaid, bool IsFrozen, int FrozenByUserID,int unfrozenByUserID)
         {
 
@@ -142,7 +142,12 @@ namespace DataAccessLayer
                     cmd.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
                     cmd.Parameters.AddWithValue("@FreezeStartDate", FreezeStartDate);
                     cmd.Parameters.AddWithValue("@FreezeEndDate", FreezeEndDate);
-                    cmd.Parameters.AddWithValue("@UnFreezeDate", UnFreezeDate);
+
+                    if (UnFreezeDate.HasValue)
+                        cmd.Parameters.AddWithValue("@UnFreezeDate", UnFreezeDate);
+                    else
+                        cmd.Parameters.AddWithValue("@UnFreezeDate", DBNull.Value);
+
 
 
 
@@ -258,7 +263,7 @@ namespace DataAccessLayer
         }
 
         public static bool FindFrozenSubscriptionByFreezeID(int FreezeID, ref int SubscriptionID,
-    ref DateTime FreezeStartDate, ref DateTime FreezeEndDate, ref DateTime UnFreezeDate,
+    ref DateTime FreezeStartDate, ref DateTime FreezeEndDate, ref DateTime? UnFreezeDate,
     ref byte FreezingDuration, ref double FreezeFee, ref string FreezeReason,
     ref bool IsFeesPaid, ref bool IsFrozen, ref int FrozenByUserID, ref int unfrozenByUserID)
         {
@@ -284,8 +289,12 @@ namespace DataAccessLayer
                             FreezeStartDate = (DateTime)reader["FreezeStartDate"];
                             FreezeEndDate = (DateTime)reader["FreezeEndDate"];
 
-                            UnFreezeDate = (DateTime)reader["UnFreezeDate"];
-                            FreezingDuration = (byte)reader["FreezingDuration"];
+                            if (reader["UnFreezeDate"] != DBNull.Value)
+                                UnFreezeDate = (DateTime)reader["UnFreezeDate"];
+                            else
+                                UnFreezeDate = null;
+
+                                FreezingDuration = (byte)reader["FreezingDuration"];
                             FreezeFee = reader["FreezeFee"] != DBNull.Value ? (double)reader["FreezeFee"] : 0.0;
                             FreezeReason = reader["FreezeReason"] != DBNull.Value ? (string)reader["FreezeReason"]: string.Empty;
                             IsFeesPaid = (bool)reader["IsFeesPaid"];
@@ -308,15 +317,14 @@ namespace DataAccessLayer
             return isFound;
         }
         public static bool FindFrozenSubscriptionBySubscriptionID(int SubscriptionID, ref int FreezeID,
-    ref DateTime FreezeStartDate, ref DateTime FreezeEndDate, ref DateTime UnFreezeDate,
+    ref DateTime FreezeStartDate, ref DateTime FreezeEndDate, ref DateTime? UnFreezeDate,
     ref byte FreezingDuration, ref double FreezeFee, ref string FreezeReason,
     ref bool IsFeesPaid, ref bool IsFrozen, ref int FrozenByUserID, ref int unfrozenByUserID)
         {
             bool isFound = false;
 
-            string sql = @"SELECT TOP 1 * FROM FrozenSubscriptions 
-                   WHERE SubscriptionID = @SubscriptionID 
-                   ORDER BY FreezeID DESC";
+            string sql = @"SELECT * FROM FrozenSubscriptions 
+                   WHERE SubscriptionID = @SubscriptionID ";
 
             try
             {
@@ -335,7 +343,11 @@ namespace DataAccessLayer
                             FreezeID = (int)reader["FreezeID"];
                             FreezeStartDate = (DateTime)reader["FreezeStartDate"];
                             FreezeEndDate = (DateTime)reader["FreezeEndDate"];
-                            UnFreezeDate = (DateTime)reader["UnFreezeDate"];
+
+                            if (reader["UnFreezeDate"] != DBNull.Value)
+                                UnFreezeDate = (DateTime)reader["UnFreezeDate"];
+                            else
+                                UnFreezeDate = null;
 
                             FreezingDuration = (byte)reader["FreezingDuration"];
                             FreezeFee = reader["FreezeFee"] != DBNull.Value ? Convert.ToDouble(reader["FreezeFee"]) : 0.0;

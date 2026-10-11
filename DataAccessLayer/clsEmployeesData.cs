@@ -55,7 +55,7 @@ namespace DataAccessLayer
         static public int AddEmployee(int PersonID,string Title,float Salary,string Notes,bool IsActive,int ShiftID)
         {
             string query = "INSERT INTO [dbo].[Employees]([PersonID],[Title],[Salary],[HiredDate],[Notes],[IsActive],[ShiftID])" +
-                " VALUES (@PersonID,@Title,@Salary,@HiredDate,@Notes,@IsActive,@ShiftID); Select scope_Idintity()";
+                " VALUES (@PersonID,@Title,@Salary,@HiredDate,@Notes,@IsActive,@ShiftID); Select scope_Identity()";
 
             try
             {

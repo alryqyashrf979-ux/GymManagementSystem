@@ -51,8 +51,10 @@
     <Compile Include="clsEmployeeShiftData.cs" />
     <Compile Include="clsFrozenSubscriptionData.cs" />
     <Compile Include="clsMembersDataAccess.cs" />
+    <Compile Include="clsPaymentData.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsSubscriptionCancellation.cs" />
+    <Compile Include="clsSubscriptionChangesData.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
     <Compile Include="clsSubscriptionsData.cs" />
     <Compile Include="clsUsersData.cs" />

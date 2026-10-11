@@ -35,7 +35,7 @@ namespace DataAccessLayer
         static public int AddEmployeeShift(string ShiftType,DateTime StartTime,DateTime EndTime)
         {
             string query = "INSERT INTO [dbo].[EmployeesShift] ([ShiftType],[StartTime],[EndTime]) " +
-                "VALUES (@ShiftType,@StartTime,@EndTime);select scope_idintity();";
+                "VALUES (@ShiftType,@StartTime,@EndTime);select scope_identity();";
 
             try
             {
