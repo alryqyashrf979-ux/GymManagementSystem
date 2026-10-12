@@ -47,6 +47,10 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lbNumberOfPeople = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowPeopleList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,8 +124,7 @@
             this.dgvShowPeopleList.AllowUserToOrderColumns = true;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             this.dgvShowPeopleList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvShowPeopleList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvShowPeopleList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvShowPeopleList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvShowPeopleList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -291,11 +294,55 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 250;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(5, 591);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(164, 10);
+            this.guna2Separator1.TabIndex = 99;
+            // 
+            // lbNumberOfPeople
+            // 
+            this.lbNumberOfPeople.AutoSize = true;
+            this.lbNumberOfPeople.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumberOfPeople.Location = new System.Drawing.Point(113, 563);
+            this.lbNumberOfPeople.Name = "lbNumberOfPeople";
+            this.lbNumberOfPeople.Size = new System.Drawing.Size(49, 25);
+            this.lbNumberOfPeople.TabIndex = 98;
+            this.lbNumberOfPeople.Text = "N/A";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 563);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 25);
+            this.label2.TabIndex = 97;
+            this.label2.Text = "#Records:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label1.Location = new System.Drawing.Point(0, -6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(336, 59);
+            this.label1.TabIndex = 96;
+            this.label1.Text = "Manage People";
+            // 
             // frmManagePeople
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.guna2Separator1);
+            this.Controls.Add(this.lbNumberOfPeople);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFiltering);
             this.Controls.Add(this.cmSelectTypeOfFiltering);
             this.Controls.Add(this.label9);
@@ -328,5 +375,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private System.Windows.Forms.Label lbNumberOfPeople;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
