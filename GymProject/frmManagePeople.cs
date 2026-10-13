@@ -66,7 +66,7 @@ namespace GymMangementSystem
                     FilteringName.Append("FullName");
                     break;
                 case "Phone":
-                    FilteringName.Append("Phone");
+                    FilteringName.Append("PhoneNumber");
                     break;
                 case "Email":
                     FilteringName.Append("Email");
@@ -110,7 +110,7 @@ namespace GymMangementSystem
             else
                 dtPeople.DefaultView.RowFilter = $"{FilteringName.ToString()} Like '{txtFiltering.Text}%'";
 
-
+            lblRecord.Text = dtPeople.DefaultView.Count.ToString();
 
         }
     }
