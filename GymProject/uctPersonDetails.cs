@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void uctPersonDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
