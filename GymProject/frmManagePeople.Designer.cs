@@ -38,7 +38,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dgvShowPeopleList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.lbNumberOfPeople = new System.Windows.Forms.Label();
+            this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.clnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +75,7 @@
             this.txtFiltering.Size = new System.Drawing.Size(230, 29);
             this.txtFiltering.TabIndex = 88;
             this.txtFiltering.Visible = false;
+            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
             // 
             // cmSelectTypeOfFiltering
             // 
@@ -91,19 +92,19 @@
             "None",
             "Person ID",
             "National No.",
-            "First Name",
-            "Second Name",
-            "Last Name",
+            "Full Name",
             "Nationality",
             "Gender",
             "Phone",
-            "Email"});
+            "Email",
+            "Address"});
             this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(106, 267);
             this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
             this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(209, 36);
             this.cmSelectTypeOfFiltering.StartIndex = 0;
             this.cmSelectTypeOfFiltering.TabIndex = 87;
+            this.cmSelectTypeOfFiltering.SelectedIndexChanged += new System.EventHandler(this.cmSelectTypeOfFiltering_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -112,7 +113,7 @@
             this.label9.Location = new System.Drawing.Point(11, 271);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 22);
+            this.label9.Size = new System.Drawing.Size(75, 18);
             this.label9.TabIndex = 86;
             this.label9.Text = "Filter By:";
             // 
@@ -202,15 +203,15 @@
             this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
             this.guna2Separator1.TabIndex = 99;
             // 
-            // lbNumberOfPeople
+            // lblRecord
             // 
-            this.lbNumberOfPeople.AutoSize = true;
-            this.lbNumberOfPeople.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumberOfPeople.Location = new System.Drawing.Point(113, 708);
-            this.lbNumberOfPeople.Name = "lbNumberOfPeople";
-            this.lbNumberOfPeople.Size = new System.Drawing.Size(49, 25);
-            this.lbNumberOfPeople.TabIndex = 98;
-            this.lbNumberOfPeople.Text = "N/A";
+            this.lblRecord.AutoSize = true;
+            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecord.Location = new System.Drawing.Point(113, 708);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(38, 20);
+            this.lblRecord.TabIndex = 98;
+            this.lblRecord.Text = "N/A";
             // 
             // label2
             // 
@@ -218,7 +219,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 707);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 25);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 97;
             this.label2.Text = "#Records:";
             // 
@@ -229,7 +230,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.label1.Location = new System.Drawing.Point(0, -6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 59);
+            this.label1.Size = new System.Drawing.Size(276, 47);
             this.label1.TabIndex = 96;
             this.label1.Text = "Manage People";
             // 
@@ -266,7 +267,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.DataPropertyName = "Gendre";
+            this.Column4.DataPropertyName = "Gender";
             this.Column4.HeaderText = "Gender";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
@@ -330,7 +331,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.lbNumberOfPeople);
+            this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFiltering);
@@ -357,7 +358,7 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2DataGridView dgvShowPeopleList;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.Label lbNumberOfPeople;
+        private System.Windows.Forms.Label lblRecord;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnID;
