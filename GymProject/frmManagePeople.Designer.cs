@@ -247,7 +247,7 @@
             // CountryName
             // 
             this.CountryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CountryName.DataPropertyName = "National ID";
+            this.CountryName.DataPropertyName = "NationalID";
             this.CountryName.HeaderText = "National No.";
             this.CountryName.MinimumWidth = 6;
             this.CountryName.Name = "CountryName";
@@ -257,7 +257,7 @@
             // CurrencyName
             // 
             this.CurrencyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CurrencyName.DataPropertyName = "Full Name";
+            this.CurrencyName.DataPropertyName = "FullName";
             this.CurrencyName.HeaderText = "Full Name";
             this.CurrencyName.MinimumWidth = 6;
             this.CurrencyName.Name = "CurrencyName";
@@ -277,7 +277,7 @@
             // ImagePath
             // 
             this.ImagePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ImagePath.DataPropertyName = "Birth date";
+            this.ImagePath.DataPropertyName = "BirthDate";
             this.ImagePath.HeaderText = "Date Of Birth";
             this.ImagePath.MinimumWidth = 6;
             this.ImagePath.Name = "ImagePath";
@@ -297,7 +297,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "Phone Number";
+            this.Column3.DataPropertyName = "PhoneNumber";
             this.Column3.HeaderText = "Phone";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
