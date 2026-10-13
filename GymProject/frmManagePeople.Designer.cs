@@ -68,12 +68,12 @@
             this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltering.ForeColor = System.Drawing.Color.Black;
             this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Location = new System.Drawing.Point(320, 267);
+            this.txtFiltering.Location = new System.Drawing.Point(294, 267);
             this.txtFiltering.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltering.Name = "txtFiltering";
             this.txtFiltering.PlaceholderText = "Search...";
             this.txtFiltering.SelectedText = "";
-            this.txtFiltering.Size = new System.Drawing.Size(230, 29);
+            this.txtFiltering.Size = new System.Drawing.Size(224, 29);
             this.txtFiltering.TabIndex = 88;
             this.txtFiltering.Visible = false;
             this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
@@ -97,12 +97,11 @@
             "Nationality",
             "Gender",
             "Phone",
-            "Email",
-            "Address"});
-            this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(106, 267);
-            this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
+            "Email"});
+            this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(80, 267);
+            this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
-            this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(209, 36);
+            this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(188, 36);
             this.cmSelectTypeOfFiltering.StartIndex = 0;
             this.cmSelectTypeOfFiltering.TabIndex = 87;
             this.cmSelectTypeOfFiltering.SelectedIndexChanged += new System.EventHandler(this.cmSelectTypeOfFiltering_SelectedIndexChanged);
@@ -125,8 +124,6 @@
             this.dgvShowPeopleList.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvShowPeopleList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvShowPeopleList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvShowPeopleList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvShowPeopleList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -147,8 +144,7 @@
             this.ImagePath,
             this.Nationality,
             this.Column3,
-            this.Column5,
-            this.Address});
+            this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,8 +154,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvShowPeopleList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvShowPeopleList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvShowPeopleList.Location = new System.Drawing.Point(2, 307);
-            this.dgvShowPeopleList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvShowPeopleList.Location = new System.Drawing.Point(4, 313);
+            this.dgvShowPeopleList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvShowPeopleList.Name = "dgvShowPeopleList";
             this.dgvShowPeopleList.ReadOnly = true;
             this.dgvShowPeopleList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -181,7 +177,7 @@
             this.dgvShowPeopleList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvShowPeopleList.RowTemplate.Height = 35;
             this.dgvShowPeopleList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowPeopleList.Size = new System.Drawing.Size(1365, 382);
+            this.dgvShowPeopleList.Size = new System.Drawing.Size(1303, 277);
             this.dgvShowPeopleList.TabIndex = 85;
             this.dgvShowPeopleList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvShowPeopleList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -352,21 +348,16 @@
             // 
             // frmManagePeople
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.lblRecord);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.txtFiltering);
             this.Controls.Add(this.cmSelectTypeOfFiltering);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgvShowPeopleList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmManagePeople";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage People";
