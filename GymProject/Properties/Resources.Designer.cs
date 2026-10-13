@@ -143,9 +143,9 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Name {
+        internal static System.Drawing.Bitmap NameImage {
             get {
-                object obj = ResourceManager.GetObject("Name", resourceCulture);
+                object obj = ResourceManager.GetObject("NameImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
