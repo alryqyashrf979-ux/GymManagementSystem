@@ -74,9 +74,11 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pbSelectedPhoto = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnSelectPhoto = new Guna.UI2.WinForms.Guna2Button();
+            this.lnkRemoveImage = new System.Windows.Forms.LinkLabel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -94,7 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -369,7 +371,7 @@
             this.cmCountries.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmCountries.ForeColor = System.Drawing.Color.Black;
             this.cmCountries.ItemHeight = 30;
-            this.cmCountries.Location = new System.Drawing.Point(684, 271);
+            this.cmCountries.Location = new System.Drawing.Point(681, 267);
             this.cmCountries.Margin = new System.Windows.Forms.Padding(2);
             this.cmCountries.Name = "cmCountries";
             this.cmCountries.Size = new System.Drawing.Size(165, 36);
@@ -389,7 +391,7 @@
             this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(684, 237);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(681, 233);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhoneNumber.MaxLength = 12;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
@@ -408,7 +410,7 @@
             this.dtDateOfBirth.FillColor = System.Drawing.Color.White;
             this.dtDateOfBirth.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
             this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtDateOfBirth.Location = new System.Drawing.Point(685, 196);
+            this.dtDateOfBirth.Location = new System.Drawing.Point(682, 192);
             this.dtDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.dtDateOfBirth.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.dtDateOfBirth.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
@@ -585,7 +587,7 @@
             this.btnSave.Location = new System.Drawing.Point(525, 401);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(164, 30);
+            this.btnSave.Size = new System.Drawing.Size(178, 30);
             this.btnSave.TabIndex = 53;
             this.btnSave.Text = "Save";
             // 
@@ -607,10 +609,10 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(344, 401);
+            this.btnClose.Location = new System.Drawing.Point(314, 401);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(161, 30);
+            this.btnClose.Size = new System.Drawing.Size(191, 30);
             this.btnClose.TabIndex = 52;
             this.btnClose.Text = "Close";
             // 
@@ -671,7 +673,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(565, 271);
+            this.label9.Location = new System.Drawing.Point(561, 271);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 21);
             this.label9.TabIndex = 61;
@@ -682,7 +684,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(574, 229);
+            this.label10.Location = new System.Drawing.Point(570, 229);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 21);
             this.label10.TabIndex = 59;
@@ -695,14 +697,14 @@
             this.label11.ForeColor = System.Drawing.Color.Gray;
             this.label11.Location = new System.Drawing.Point(520, 191);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 21);
+            this.label11.Size = new System.Drawing.Size(117, 21);
             this.label11.TabIndex = 57;
-            this.label11.Text = "Date Of Birth: :";
+            this.label11.Text = "Date Of Birth :";
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Email;
-            this.pictureBox9.Location = new System.Drawing.Point(645, 271);
+            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Country;
+            this.pictureBox9.Location = new System.Drawing.Point(641, 271);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(33, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -711,8 +713,8 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PersonID;
-            this.pictureBox10.Location = new System.Drawing.Point(645, 229);
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Phone;
+            this.pictureBox10.Location = new System.Drawing.Point(641, 229);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(33, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -721,8 +723,8 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox11.Location = new System.Drawing.Point(644, 189);
+            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox11.Location = new System.Drawing.Point(640, 189);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(35, 28);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -744,34 +746,36 @@
             // 
             this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel5.BorderRadius = 4;
-            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.lnkRemoveImage);
+            this.guna2Panel5.Controls.Add(this.btnSelectPhoto);
             this.guna2Panel5.Controls.Add(this.label13);
             this.guna2Panel5.Controls.Add(this.label12);
-            this.guna2Panel5.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel5.Controls.Add(this.pbSelectedPhoto);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.guna2Panel5.Location = new System.Drawing.Point(876, 83);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(226, 312);
             this.guna2Panel5.TabIndex = 68;
             // 
-            // guna2CirclePictureBox1
+            // pbSelectedPhoto
             // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(43, 8);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(140, 137);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.pbSelectedPhoto.ImageRotate = 0F;
+            this.pbSelectedPhoto.Location = new System.Drawing.Point(43, 8);
+            this.pbSelectedPhoto.Name = "pbSelectedPhoto";
+            this.pbSelectedPhoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbSelectedPhoto.Size = new System.Drawing.Size(140, 137);
+            this.pbSelectedPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSelectedPhoto.TabIndex = 0;
+            this.pbSelectedPhoto.TabStop = false;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label12.Location = new System.Drawing.Point(77, 152);
+            this.label12.Location = new System.Drawing.Point(77, 158);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 20);
             this.label12.TabIndex = 4;
@@ -782,22 +786,65 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.LightGray;
-            this.label13.Location = new System.Drawing.Point(55, 172);
+            this.label13.Location = new System.Drawing.Point(55, 178);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(125, 17);
             this.label13.TabIndex = 25;
             this.label13.Text = "JPG,PNG (Max 5MB)";
+            // 
+            // btnSelectPhoto
+            // 
+            this.btnSelectPhoto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.btnSelectPhoto.BorderRadius = 5;
+            this.btnSelectPhoto.BorderThickness = 1;
+            this.btnSelectPhoto.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSelectPhoto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectPhoto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectPhoto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectPhoto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectPhoto.FillColor = System.Drawing.Color.Transparent;
+            this.btnSelectPhoto.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnSelectPhoto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPhoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSelectPhoto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSelectPhoto.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSelectPhoto.Image = global::GymMangementSystem.Properties.Resources.Photo;
+            this.btnSelectPhoto.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btnSelectPhoto.ImageSize = new System.Drawing.Size(26, 27);
+            this.btnSelectPhoto.Location = new System.Drawing.Point(28, 230);
+            this.btnSelectPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelectPhoto.Name = "btnSelectPhoto";
+            this.btnSelectPhoto.Size = new System.Drawing.Size(178, 39);
+            this.btnSelectPhoto.TabIndex = 54;
+            this.btnSelectPhoto.Text = "Select Photo";
+            // 
+            // lnkRemoveImage
+            // 
+            this.lnkRemoveImage.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkRemoveImage.AutoSize = true;
+            this.lnkRemoveImage.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lnkRemoveImage.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkRemoveImage.Location = new System.Drawing.Point(87, 274);
+            this.lnkRemoveImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkRemoveImage.Name = "lnkRemoveImage";
+            this.lnkRemoveImage.Size = new System.Drawing.Size(79, 26);
+            this.lnkRemoveImage.TabIndex = 55;
+            this.lnkRemoveImage.TabStop = true;
+            this.lnkRemoveImage.Text = "Remove";
+            this.lnkRemoveImage.Visible = false;
+            this.lnkRemoveImage.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             // 
             // frmAddPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1146, 522);
+            this.ClientSize = new System.Drawing.Size(1146, 503);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmAddPerson";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddPerson";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -820,7 +867,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -873,7 +920,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbSelectedPhoto;
         private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2Button btnSelectPhoto;
+        private System.Windows.Forms.LinkLabel lnkRemoveImage;
     }
 }
