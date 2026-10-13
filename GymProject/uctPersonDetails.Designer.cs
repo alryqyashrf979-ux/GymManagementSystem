@@ -119,9 +119,9 @@ namespace GymMangementSystem
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.picPersonalPhoto);
-            this.panel13.Location = new System.Drawing.Point(681, 55);
+            this.panel13.Location = new System.Drawing.Point(677, 55);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(157, 183);
+            this.panel13.Size = new System.Drawing.Size(165, 183);
             this.panel13.TabIndex = 13;
             // 
             // panel14
@@ -129,7 +129,7 @@ namespace GymMangementSystem
             this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel14.Controls.Add(this.label4);
             this.panel14.Controls.Add(this.pictureBox13);
-            this.panel14.Location = new System.Drawing.Point(6, 152);
+            this.panel14.Location = new System.Drawing.Point(11, 152);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(145, 24);
             this.panel14.TabIndex = 2;
@@ -158,9 +158,9 @@ namespace GymMangementSystem
             // picPersonalPhoto
             // 
             this.picPersonalPhoto.Image = global::GymMangementSystem.Properties.Resources.Male;
-            this.picPersonalPhoto.Location = new System.Drawing.Point(6, 6);
+            this.picPersonalPhoto.Location = new System.Drawing.Point(7, 6);
             this.picPersonalPhoto.Name = "picPersonalPhoto";
-            this.picPersonalPhoto.Size = new System.Drawing.Size(145, 144);
+            this.picPersonalPhoto.Size = new System.Drawing.Size(149, 144);
             this.picPersonalPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPersonalPhoto.TabIndex = 2;
             this.picPersonalPhoto.TabStop = false;
@@ -533,7 +533,7 @@ namespace GymMangementSystem
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(847, 297);
+            this.panel1.Size = new System.Drawing.Size(861, 296);
             this.panel1.TabIndex = 4;
             // 
             // panel7
@@ -599,7 +599,7 @@ namespace GymMangementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 39);
+            this.panel2.Size = new System.Drawing.Size(857, 39);
             this.panel2.TabIndex = 0;
             // 
             // uctPersonDetails
@@ -609,7 +609,7 @@ namespace GymMangementSystem
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "uctPersonDetails";
-            this.Size = new System.Drawing.Size(846, 302);
+            this.Size = new System.Drawing.Size(866, 302);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();

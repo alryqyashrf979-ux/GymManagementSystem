@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using DataBusinessLayer;
 namespace GymMangementSystem
@@ -32,7 +33,17 @@ namespace GymMangementSystem
 
         private void LoadPersonImages()
         {
-           picPersonalPhoto.Image= (_PersonInfo.Gender == 0) ? Properties.Resources.Male : Properties.Resources.Female;
+            picPersonalPhoto.Image = _PersonInfo.Gender == '0'? Properties.Resources.Male: picPersonalPhoto.Image = Properties.Resources.Female;
+
+            string ImagePath = _PersonInfo.ImagePath;
+
+            if(ImagePath!=null&&ImagePath!=string.Empty)
+            if (File.Exists(ImagePath))
+            {
+                picPersonalPhoto.ImageLocation = ImagePath;
+            }
+            else
+                MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void _ResetPersonInformation()
