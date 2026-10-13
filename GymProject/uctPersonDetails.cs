@@ -49,7 +49,7 @@ namespace GymMangementSystem
         private void _FillPersonInfo()
         {
             lbAddress.Text = _PersonInfo.Address;
-            lbCountry.Text = _PersonInfo.NationalityCountryID.ToString();//still have to find the name of country id.
+            lbCountry.Text = clsCountries.Find(_PersonInfo.NationalityCountryID).CountryName;
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
             lbEmail.Text = _PersonInfo.Email.ToString();
             lbGender.Text = _PersonInfo.Gender==0? "Male":"Female";
