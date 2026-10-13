@@ -609,7 +609,7 @@ namespace GymMangementSystem
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "uctPersonDetails";
-            this.Size = new System.Drawing.Size(889, 437);
+            this.Size = new System.Drawing.Size(889, 350);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

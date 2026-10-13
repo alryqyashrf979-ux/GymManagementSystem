@@ -75,20 +75,21 @@ namespace GymMangementSystem
             this.uctPersonDetails1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uctPersonDetails1.Location = new System.Drawing.Point(0, 0);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(891, 446);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(891, 343);
             this.uctPersonDetails1.TabIndex = 0;
             // 
             // frmPersonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 446);
+            this.ClientSize = new System.Drawing.Size(891, 343);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.uctPersonDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPersonDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Person Details";
+            this.Load += new System.EventHandler(this.frmPersonDetails_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
