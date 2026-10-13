@@ -610,7 +610,6 @@ namespace GymMangementSystem
             this.Controls.Add(this.panel1);
             this.Name = "uctPersonDetails";
             this.Size = new System.Drawing.Size(882, 302);
-            this.Load += new System.EventHandler(this.uctPersonDetails_Load);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
