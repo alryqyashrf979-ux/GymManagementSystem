@@ -30,5 +30,29 @@ namespace DataAccessLayer
 
             }
         }
+
+        static public bool FindByCountryID(int CountryID,ref string CountryName)
+        {
+            string query = "select CountryName from Countries where CountryID=@CountryID;";
+
+            using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using(SqlCommand command=new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CountryID", CountryID);
+
+                    using(SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            CountryName = (string)reader["CountryName"];
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
     }
 }
