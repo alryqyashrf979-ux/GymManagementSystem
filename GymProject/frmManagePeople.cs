@@ -113,5 +113,10 @@ namespace GymMangementSystem
             lblRecord.Text = dtPeople.DefaultView.Count.ToString();
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
