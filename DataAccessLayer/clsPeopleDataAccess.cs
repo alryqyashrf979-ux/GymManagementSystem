@@ -74,7 +74,7 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
                     LastName = (string)reader["LastName"];
                     PhoneNumber = (string)reader["PhoneNumber"];
                     Birthdate = (DateTime)reader["Birthdate"];
-                    Gender = (char)reader["Gender"];
+                    Gender = Convert.ToChar(reader["Gender"]);
                     CountryID = (int)reader["CountryID"];
                     Email = (string)reader["Email"];
                     NationalID = (string)reader["NationalID"];

@@ -131,7 +131,7 @@ namespace GymMangementSystem
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(307, 43);
+            this.panel3.Size = new System.Drawing.Size(349, 43);
             this.panel3.TabIndex = 6;
             // 
             // lbPersonID
@@ -206,7 +206,7 @@ namespace GymMangementSystem
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(3, 97);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(307, 43);
+            this.panel4.Size = new System.Drawing.Size(349, 43);
             this.panel4.TabIndex = 7;
             // 
             // lbName
@@ -249,7 +249,7 @@ namespace GymMangementSystem
             this.panel5.Controls.Add(this.label8);
             this.panel5.Location = new System.Drawing.Point(3, 146);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(307, 43);
+            this.panel5.Size = new System.Drawing.Size(349, 43);
             this.panel5.TabIndex = 8;
             // 
             // lbNationalNo
@@ -292,7 +292,7 @@ namespace GymMangementSystem
             this.panel6.Controls.Add(this.lable);
             this.panel6.Location = new System.Drawing.Point(3, 195);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(307, 43);
+            this.panel6.Size = new System.Drawing.Size(349, 43);
             this.panel6.TabIndex = 9;
             // 
             // lbGender
@@ -335,7 +335,7 @@ namespace GymMangementSystem
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(3, 244);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(307, 43);
+            this.panel7.Size = new System.Drawing.Size(349, 43);
             this.panel7.TabIndex = 10;
             // 
             // lbEmail
@@ -373,7 +373,7 @@ namespace GymMangementSystem
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(318, 40);
+            this.panel8.Location = new System.Drawing.Point(358, 40);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 250);
             this.panel8.TabIndex = 11;
@@ -384,7 +384,7 @@ namespace GymMangementSystem
             this.panel9.Controls.Add(this.lbAddress);
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(325, 51);
+            this.panel9.Location = new System.Drawing.Point(364, 51);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(307, 43);
             this.panel9.TabIndex = 7;
@@ -427,7 +427,7 @@ namespace GymMangementSystem
             this.panel10.Controls.Add(this.lbDateOfBirth);
             this.panel10.Controls.Add(this.pictureBox9);
             this.panel10.Controls.Add(this.label9);
-            this.panel10.Location = new System.Drawing.Point(325, 100);
+            this.panel10.Location = new System.Drawing.Point(364, 100);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(307, 43);
             this.panel10.TabIndex = 8;
@@ -470,7 +470,7 @@ namespace GymMangementSystem
             this.panel11.Controls.Add(this.lbPhone);
             this.panel11.Controls.Add(this.pictureBox10);
             this.panel11.Controls.Add(this.label10);
-            this.panel11.Location = new System.Drawing.Point(325, 149);
+            this.panel11.Location = new System.Drawing.Point(364, 149);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(307, 43);
             this.panel11.TabIndex = 12;
@@ -513,7 +513,7 @@ namespace GymMangementSystem
             this.panel12.Controls.Add(this.lbCountry);
             this.panel12.Controls.Add(this.pictureBox11);
             this.panel12.Controls.Add(this.label11);
-            this.panel12.Location = new System.Drawing.Point(325, 198);
+            this.panel12.Location = new System.Drawing.Point(364, 198);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(307, 43);
             this.panel12.TabIndex = 8;
@@ -556,7 +556,7 @@ namespace GymMangementSystem
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.pictureBox12);
-            this.panel13.Location = new System.Drawing.Point(667, 55);
+            this.panel13.Location = new System.Drawing.Point(681, 55);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(194, 183);
             this.panel13.TabIndex = 13;

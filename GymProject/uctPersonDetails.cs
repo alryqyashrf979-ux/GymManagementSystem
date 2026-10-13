@@ -49,12 +49,12 @@ namespace GymMangementSystem
         private void _FillPersonInfo()
         {
             lbAddress.Text = _PersonInfo.Address;
-            lbCountry.Text = _PersonInfo.NationalityCountryID.ToString();
+            lbCountry.Text = _PersonInfo.NationalityCountryID.ToString();//still have to find the name of country id.
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
             lbEmail.Text = _PersonInfo.Email.ToString();
             lbGender.Text = _PersonInfo.Gender==0? "Male":"Female";
             lbName.Text = _PersonInfo.FullName;
-           // lbNationalNo.Text =clsCountries.Find( _PersonInfo.NationalityCountryID);
+            lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
             lbPersonID.Text =_PersonInfo.PersonID.ToString();
             lbPhone.Text =_PersonInfo.PhoneNumber;
         }
