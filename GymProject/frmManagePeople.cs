@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace GymMangementSystem
         public frmManagePeople()
         {
             InitializeComponent();
+        }
+
+        private void frmManagePeople_Load(object sender, EventArgs e)
+        {
+            _RefreshDataTable();
+        }
+        DataTable dtPeople = new DataTable();
+
+        void _RefreshDataTable()
+        {
+            dtPeople = clsPeople.GetAllPeople();
+
+            dgvShowPeopleList.DataSource = dtPeople;
+        }
+
+        private void dgvShowPeopleList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

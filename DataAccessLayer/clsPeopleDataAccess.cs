@@ -20,7 +20,7 @@ namespace DataAccessLayer
             // in this way it is formatted and ready to present .
             string query = @"select ID ,nationalID as 'National ID', FirstName+' '+SecondName+' '+ LastName as 'Full Name'
                 , PhoneNumber as 'Phone Number' ,case when p.Gendre = 0 then 'Male' else 'Female'  end as 'Gendre' 
-                , Birthdate as 'Birth date' , C.CountryName as 'Country ',Email , Address
+                , Birthdate as 'Birth date' , C.CountryName as 'Country',Email , Address
                  from people P inner join Countries C on P.CountryID = C.CountryID";
             SqlCommand command = new SqlCommand(query, connection);
 
