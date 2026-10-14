@@ -14,7 +14,7 @@ namespace GymMangementSystem
 {
     public partial class frmManageUsers : Form
     {
-        private DataTable _AllUsers;
+      static  private DataTable _AllUsers;
         public frmManageUsers()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace GymMangementSystem
         {
             _AllUsers = clsUsers.GetAllUsers();
             dgvShowUserList.DataSource = _AllUsers;
-
+            cbValue.SelectedIndex = 0;
 
             if (dgvShowUserList.Rows.Count > 0)
             {
@@ -45,6 +45,96 @@ namespace GymMangementSystem
             }
 
             lblRecord.Text = dgvShowUserList.Rows.Count.ToString() ;
+            tbSearch.Visible = !(cbValue.Text == "None" || cbValue.Text == "Is Active");
+            cbIsActive.Visible = (cbValue.Text == "Is Active");
+
+
+        }
+
+        private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearch.Clear();
+            tbSearch.Visible = !(cbValue.Text == "None"||cbValue.Text=="Is Active");
+            cbIsActive.Visible = (cbValue.Text == "Is Active");
+
+            if (cbValue.Visible)
+            {
+                tbSearch.Focus();
+            }
+            lblRecord.Text = dgvShowUserList.Rows.Count.ToString();
+
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            StringBuilder Filtering = new StringBuilder();
+
+            switch (cbValue.Text)
+            {
+                case "User ID":
+                    Filtering.Append( "UserID");
+                    break;
+
+                case "Person ID":
+                    Filtering.Append( "PersonID");
+                    break;
+
+                case "User Name":
+                    Filtering.Append("UserName");
+                    break;
+
+                case "Full Name":
+                    Filtering.Append("FullName");
+                    break;
+
+                case "Is Active":
+                    Filtering.Append("IsActive");
+                    break;
+            }
+
+            if (string.IsNullOrEmpty(tbSearch.Text))
+            {
+                _AllUsers.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvShowUserList.Rows.Count.ToString();
+                return;
+            }
+
+            if (cbValue.Text == "User ID" || cbValue.Text == "Person ID")
+                _AllUsers.DefaultView.RowFilter = $"{Filtering}='{tbSearch.Text.Trim()}'";
+            else
+                _AllUsers.DefaultView.RowFilter = $"{Filtering} like '{tbSearch.Text.Trim()}%'";
+
+            lblRecord.Text = dgvShowUserList.Rows.Count.ToString();
+
+
+
+        }
+
+        private void tbSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbValue.Text == "User ID" || cbValue.Text == "Person ID")
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void cbIsActive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbIsActive.Text)
+            {
+                case "Yes":
+                    _AllUsers.DefaultView.RowFilter = $"IsActive=1";
+                    break;
+
+                case "No":
+                    _AllUsers.DefaultView.RowFilter = $"IsActive=0";
+                    break;
+
+                default:
+                    _AllUsers.DefaultView.RowFilter = "";
+                    break;
+            }
+
+            lblRecord.Text = dgvShowUserList.Rows.Count.ToString();
+
         }
     }
 }
