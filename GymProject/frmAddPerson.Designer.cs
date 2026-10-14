@@ -30,59 +30,63 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPerson));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtSecondName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbPersonID = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNationalNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmCountries = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.rbFemale = new System.Windows.Forms.RadioButton();
-            this.rbMake = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.myTextBox1 = new GymMangementSystem.MyTextBox();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lnkRemoveImage = new System.Windows.Forms.LinkLabel();
+            this.btnSelectPhoto = new Guna.UI2.WinForms.Guna2Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pbSelectedPhoto = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pbSelectedPhoto = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnSelectPhoto = new Guna.UI2.WinForms.Guna2Button();
-            this.lnkRemoveImage = new System.Windows.Forms.LinkLabel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMake = new System.Windows.Forms.RadioButton();
+            this.cmCountries = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNationalNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbPersonID = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSecondName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.myTextBox2 = new GymMangementSystem.MyTextBox();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -90,13 +94,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -105,6 +106,8 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.myTextBox2);
+            this.guna2Panel1.Controls.Add(this.myTextBox1);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.pictureBox9);
@@ -139,432 +142,233 @@
             this.guna2Panel1.Controls.Add(this.pictureBox3);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.txtLastName);
             this.guna2Panel1.Controls.Add(this.txtSecondName);
             this.guna2Panel1.Controls.Add(this.txtFirstName);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(4, 52);
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 64);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1138, 445);
+            this.guna2Panel1.Size = new System.Drawing.Size(1517, 548);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Panel2
+            // myTextBox1
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel2.Controls.Add(this.guna2VSeparator1);
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1146, 46);
-            this.guna2Panel2.TabIndex = 4;
+            this.myTextBox1.ErrorMessage = "This Field is Required";
+            this.myTextBox1.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.myTextBox1.IsRequired = false;
+            this.myTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.myTextBox1.Name = "myTextBox1";
+            this.myTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.myTextBox1.TabIndex = 0;
             // 
-            // label1
+            // guna2Panel5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Add Person";
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel5.BorderRadius = 4;
+            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.lnkRemoveImage);
+            this.guna2Panel5.Controls.Add(this.btnSelectPhoto);
+            this.guna2Panel5.Controls.Add(this.label13);
+            this.guna2Panel5.Controls.Add(this.label12);
+            this.guna2Panel5.Controls.Add(this.pbSelectedPhoto);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(1168, 102);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(301, 384);
+            this.guna2Panel5.TabIndex = 68;
             // 
-            // guna2Panel3
+            // lnkRemoveImage
             // 
-            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel3.BorderRadius = 5;
-            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel3.Controls.Add(this.label2);
-            this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(0, -3);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1138, 54);
-            this.guna2Panel3.TabIndex = 0;
+            this.lnkRemoveImage.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkRemoveImage.AutoSize = true;
+            this.lnkRemoveImage.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lnkRemoveImage.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkRemoveImage.Location = new System.Drawing.Point(116, 337);
+            this.lnkRemoveImage.Name = "lnkRemoveImage";
+            this.lnkRemoveImage.Size = new System.Drawing.Size(96, 31);
+            this.lnkRemoveImage.TabIndex = 55;
+            this.lnkRemoveImage.TabStop = true;
+            this.lnkRemoveImage.Text = "Remove";
+            this.lnkRemoveImage.Visible = false;
+            this.lnkRemoveImage.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             // 
-            // guna2VSeparator1
+            // btnSelectPhoto
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(50, 5);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 38);
-            this.guna2VSeparator1.TabIndex = 1;
+            this.btnSelectPhoto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.btnSelectPhoto.BorderRadius = 5;
+            this.btnSelectPhoto.BorderThickness = 1;
+            this.btnSelectPhoto.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSelectPhoto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectPhoto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectPhoto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectPhoto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectPhoto.FillColor = System.Drawing.Color.Transparent;
+            this.btnSelectPhoto.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnSelectPhoto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPhoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSelectPhoto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSelectPhoto.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSelectPhoto.Image = global::GymMangementSystem.Properties.Resources.Photo;
+            this.btnSelectPhoto.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btnSelectPhoto.ImageSize = new System.Drawing.Size(26, 27);
+            this.btnSelectPhoto.Location = new System.Drawing.Point(37, 283);
+            this.btnSelectPhoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSelectPhoto.Name = "btnSelectPhoto";
+            this.btnSelectPhoto.Size = new System.Drawing.Size(237, 48);
+            this.btnSelectPhoto.TabIndex = 54;
+            this.btnSelectPhoto.Text = "Select Photo";
             // 
-            // label2
+            // label13
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label2.Location = new System.Drawing.Point(61, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Person Information";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.LightGray;
+            this.label13.Location = new System.Drawing.Point(73, 219);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 23);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "JPG,PNG (Max 5MB)";
             // 
-            // txtLastName
+            // label12
             // 
-            this.txtLastName.BackColor = System.Drawing.Color.Transparent;
-            this.txtLastName.BorderRadius = 5;
-            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLastName.DefaultText = "";
-            this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.ForeColor = System.Drawing.Color.Black;
-            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(549, 107);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.PlaceholderText = "Last Name";
-            this.txtLastName.SelectedText = "";
-            this.txtLastName.Size = new System.Drawing.Size(180, 27);
-            this.txtLastName.TabIndex = 18;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label12.Location = new System.Drawing.Point(103, 194);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 25);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Add Photo";
             // 
-            // txtSecondName
+            // pbSelectedPhoto
             // 
-            this.txtSecondName.BackColor = System.Drawing.Color.Transparent;
-            this.txtSecondName.BorderRadius = 5;
-            this.txtSecondName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSecondName.DefaultText = "";
-            this.txtSecondName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSecondName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSecondName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSecondName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSecondName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSecondName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecondName.ForeColor = System.Drawing.Color.Black;
-            this.txtSecondName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSecondName.Location = new System.Drawing.Point(344, 107);
-            this.txtSecondName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSecondName.Name = "txtSecondName";
-            this.txtSecondName.PlaceholderText = "Second Name";
-            this.txtSecondName.SelectedText = "";
-            this.txtSecondName.Size = new System.Drawing.Size(185, 27);
-            this.txtSecondName.TabIndex = 16;
+            this.pbSelectedPhoto.ImageRotate = 0F;
+            this.pbSelectedPhoto.Location = new System.Drawing.Point(57, 10);
+            this.pbSelectedPhoto.Margin = new System.Windows.Forms.Padding(4);
+            this.pbSelectedPhoto.Name = "pbSelectedPhoto";
+            this.pbSelectedPhoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbSelectedPhoto.Size = new System.Drawing.Size(187, 169);
+            this.pbSelectedPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSelectedPhoto.TabIndex = 0;
+            this.pbSelectedPhoto.TabStop = false;
             // 
-            // txtFirstName
+            // guna2Panel4
             // 
-            this.txtFirstName.BackColor = System.Drawing.Color.Transparent;
-            this.txtFirstName.BorderRadius = 5;
-            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFirstName.DefaultText = "";
-            this.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.ForeColor = System.Drawing.Color.Black;
-            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Location = new System.Drawing.Point(151, 107);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.PlaceholderText = "First Name";
-            this.txtFirstName.SelectedText = "";
-            this.txtFirstName.Size = new System.Drawing.Size(177, 27);
-            this.txtFirstName.TabIndex = 15;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel4.BorderRadius = 4;
+            this.guna2Panel4.BorderThickness = 1;
+            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(1153, 95);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(329, 400);
+            this.guna2Panel4.TabIndex = 67;
             // 
-            // label6
+            // pictureBox9
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(37, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 21);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Name :";
+            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Country;
+            this.pictureBox9.Location = new System.Drawing.Point(855, 334);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 65;
+            this.pictureBox9.TabStop = false;
             // 
-            // lbPersonID
+            // pictureBox10
             // 
-            this.lbPersonID.AutoSize = true;
-            this.lbPersonID.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.lbPersonID.ForeColor = System.Drawing.Color.Black;
-            this.lbPersonID.Location = new System.Drawing.Point(137, 71);
-            this.lbPersonID.Name = "lbPersonID";
-            this.lbPersonID.Size = new System.Drawing.Size(34, 21);
-            this.lbPersonID.TabIndex = 23;
-            this.lbPersonID.Text = "???";
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Phone;
+            this.pictureBox10.Location = new System.Drawing.Point(855, 282);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 64;
+            this.pictureBox10.TabStop = false;
             // 
-            // label3
+            // pictureBox11
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(37, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 21);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Person ID :";
+            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox11.Location = new System.Drawing.Point(853, 233);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(47, 34);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 63;
+            this.pictureBox11.TabStop = false;
             // 
-            // txtNationalNumber
+            // label9
             // 
-            this.txtNationalNumber.BackColor = System.Drawing.Color.Transparent;
-            this.txtNationalNumber.BorderRadius = 5;
-            this.txtNationalNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNationalNumber.DefaultText = "";
-            this.txtNationalNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNationalNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNationalNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNationalNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNationalNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNationalNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtNationalNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNumber.Location = new System.Drawing.Point(151, 145);
-            this.txtNationalNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNationalNumber.Name = "txtNationalNumber";
-            this.txtNationalNumber.PlaceholderText = "National Nu";
-            this.txtNationalNumber.SelectedText = "";
-            this.txtNationalNumber.Size = new System.Drawing.Size(177, 27);
-            this.txtNationalNumber.TabIndex = 25;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(748, 334);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 28);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Country:";
             // 
-            // label4
+            // label10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(39, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 21);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "National No :";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(760, 282);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 28);
+            this.label10.TabIndex = 59;
+            this.label10.Text = "Phone :";
             // 
-            // txtEmail
+            // label11
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.BorderRadius = 5;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(151, 193);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "Email";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(177, 27);
-            this.txtEmail.TabIndex = 32;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(693, 235);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(151, 28);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Date Of Birth :";
             // 
-            // cmCountries
+            // guna2VSeparator2
             // 
-            this.cmCountries.BackColor = System.Drawing.Color.Transparent;
-            this.cmCountries.BorderRadius = 5;
-            this.cmCountries.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmCountries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmCountries.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmCountries.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmCountries.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmCountries.ForeColor = System.Drawing.Color.Black;
-            this.cmCountries.ItemHeight = 30;
-            this.cmCountries.Location = new System.Drawing.Point(681, 267);
-            this.cmCountries.Margin = new System.Windows.Forms.Padding(2);
-            this.cmCountries.Name = "cmCountries";
-            this.cmCountries.Size = new System.Drawing.Size(165, 36);
-            this.cmCountries.TabIndex = 42;
+            this.guna2VSeparator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2VSeparator2.Location = new System.Drawing.Point(679, 174);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 294);
+            this.guna2VSeparator2.TabIndex = 56;
             // 
-            // txtPhoneNumber
+            // pictureBox8
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.txtPhoneNumber.BorderRadius = 5;
-            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneNumber.DefaultText = "";
-            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(681, 233);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhoneNumber.MaxLength = 12;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PlaceholderText = "Phone Number";
-            this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(164, 27);
-            this.txtPhoneNumber.TabIndex = 41;
+            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.Location;
+            this.pictureBox8.Location = new System.Drawing.Point(5, 334);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 55;
+            this.pictureBox8.TabStop = false;
             // 
-            // dtDateOfBirth
+            // label8
             // 
-            this.dtDateOfBirth.BackColor = System.Drawing.Color.Transparent;
-            this.dtDateOfBirth.BorderColor = System.Drawing.Color.Gainsboro;
-            this.dtDateOfBirth.BorderRadius = 5;
-            this.dtDateOfBirth.BorderThickness = 1;
-            this.dtDateOfBirth.Checked = true;
-            this.dtDateOfBirth.FillColor = System.Drawing.Color.White;
-            this.dtDateOfBirth.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtDateOfBirth.Location = new System.Drawing.Point(682, 192);
-            this.dtDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
-            this.dtDateOfBirth.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            this.dtDateOfBirth.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
-            this.dtDateOfBirth.Name = "dtDateOfBirth";
-            this.dtDateOfBirth.Size = new System.Drawing.Size(164, 26);
-            this.dtDateOfBirth.TabIndex = 40;
-            this.dtDateOfBirth.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            // 
-            // rbFemale
-            // 
-            this.rbFemale.AutoSize = true;
-            this.rbFemale.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFemale.Location = new System.Drawing.Point(282, 239);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
-            this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(76, 23);
-            this.rbFemale.TabIndex = 44;
-            this.rbFemale.Text = "Female";
-            this.rbFemale.UseVisualStyleBackColor = true;
-            // 
-            // rbMake
-            // 
-            this.rbMake.AutoSize = true;
-            this.rbMake.Checked = true;
-            this.rbMake.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMake.Location = new System.Drawing.Point(163, 239);
-            this.rbMake.Margin = new System.Windows.Forms.Padding(2);
-            this.rbMake.Name = "rbMake";
-            this.rbMake.Size = new System.Drawing.Size(61, 23);
-            this.rbMake.TabIndex = 43;
-            this.rbMake.TabStop = true;
-            this.rbMake.Text = "Male";
-            this.rbMake.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(39, 193);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Email:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(37, 236);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 21);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Gender :";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(4, 1);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(46, 42);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 6;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Gendor;
-            this.pictureBox7.Location = new System.Drawing.Point(4, 229);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 50;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Email;
-            this.pictureBox6.Location = new System.Drawing.Point(4, 186);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Man_32;
-            this.pictureBox5.Location = new System.Drawing.Point(133, 234);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 26);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 46;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Woman_32;
-            this.pictureBox2.Location = new System.Drawing.Point(252, 234);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonID;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 138);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.PersonID;
-            this.pictureBox3.Location = new System.Drawing.Point(5, 62);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 101);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 10);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(35, 42);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 5;
-            this.guna2PictureBox1.TabStop = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(52, 342);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 28);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "Address :";
             // 
             // btnSave
             // 
@@ -584,10 +388,10 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(525, 401);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(700, 494);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(178, 30);
+            this.btnSave.Size = new System.Drawing.Size(237, 37);
             this.btnSave.TabIndex = 53;
             this.btnSave.Text = "Save";
             // 
@@ -609,10 +413,10 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(314, 401);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(419, 494);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(191, 30);
+            this.btnClose.Size = new System.Drawing.Size(255, 37);
             this.btnClose.TabIndex = 52;
             this.btnClose.Text = "Close";
             // 
@@ -630,229 +434,473 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(132, 278);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress.Location = new System.Drawing.Point(176, 342);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "Address";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(360, 102);
+            this.txtAddress.Size = new System.Drawing.Size(480, 126);
             this.txtAddress.TabIndex = 51;
             this.txtAddress.TextOffset = new System.Drawing.Point(0, -38);
             // 
-            // pictureBox8
+            // pictureBox7
             // 
-            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.Location;
-            this.pictureBox8.Location = new System.Drawing.Point(4, 271);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 55;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Gendor;
+            this.pictureBox7.Location = new System.Drawing.Point(5, 282);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 50;
+            this.pictureBox7.TabStop = false;
             // 
-            // label8
+            // label7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(39, 278);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 21);
-            this.label8.TabIndex = 54;
-            this.label8.Text = "Address :";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(49, 290);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 28);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Gender :";
             // 
-            // guna2VSeparator2
+            // pictureBox6
             // 
-            this.guna2VSeparator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2VSeparator2.Location = new System.Drawing.Point(509, 141);
-            this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(10, 239);
-            this.guna2VSeparator2.TabIndex = 56;
+            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Email;
+            this.pictureBox6.Location = new System.Drawing.Point(5, 229);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
             // 
-            // label9
+            // label5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(561, 271);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 21);
-            this.label9.TabIndex = 61;
-            this.label9.Text = "Country:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(52, 238);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 28);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Email:";
             // 
-            // label10
+            // pictureBox5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(570, 229);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 21);
-            this.label10.TabIndex = 59;
-            this.label10.Text = "Phone :";
+            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Man_32;
+            this.pictureBox5.Location = new System.Drawing.Point(177, 288);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 46;
+            this.pictureBox5.TabStop = false;
             // 
-            // label11
+            // pictureBox2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(520, 191);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 21);
-            this.label11.TabIndex = 57;
-            this.label11.Text = "Date Of Birth :";
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Woman_32;
+            this.pictureBox2.Location = new System.Drawing.Point(336, 288);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox9
+            // rbFemale
             // 
-            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Country;
-            this.pictureBox9.Location = new System.Drawing.Point(641, 271);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 65;
-            this.pictureBox9.TabStop = false;
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemale.Location = new System.Drawing.Point(376, 294);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(91, 26);
+            this.rbFemale.TabIndex = 44;
+            this.rbFemale.Text = "Female";
+            this.rbFemale.UseVisualStyleBackColor = true;
             // 
-            // pictureBox10
+            // rbMake
             // 
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Phone;
-            this.pictureBox10.Location = new System.Drawing.Point(641, 229);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 64;
-            this.pictureBox10.TabStop = false;
+            this.rbMake.AutoSize = true;
+            this.rbMake.Checked = true;
+            this.rbMake.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMake.Location = new System.Drawing.Point(217, 294);
+            this.rbMake.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbMake.Name = "rbMake";
+            this.rbMake.Size = new System.Drawing.Size(72, 26);
+            this.rbMake.TabIndex = 43;
+            this.rbMake.TabStop = true;
+            this.rbMake.Text = "Male";
+            this.rbMake.UseVisualStyleBackColor = true;
             // 
-            // pictureBox11
+            // cmCountries
             // 
-            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox11.Location = new System.Drawing.Point(640, 189);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(35, 28);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 63;
-            this.pictureBox11.TabStop = false;
+            this.cmCountries.BackColor = System.Drawing.Color.Transparent;
+            this.cmCountries.BorderRadius = 5;
+            this.cmCountries.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmCountries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmCountries.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmCountries.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmCountries.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmCountries.ForeColor = System.Drawing.Color.Black;
+            this.cmCountries.ItemHeight = 30;
+            this.cmCountries.Location = new System.Drawing.Point(908, 329);
+            this.cmCountries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmCountries.Name = "cmCountries";
+            this.cmCountries.Size = new System.Drawing.Size(219, 36);
+            this.cmCountries.TabIndex = 42;
             // 
-            // guna2Panel4
+            // txtPhoneNumber
             // 
-            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel4.BorderRadius = 4;
-            this.guna2Panel4.BorderThickness = 1;
-            this.guna2Panel4.FillColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(865, 77);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(247, 325);
-            this.guna2Panel4.TabIndex = 67;
+            this.txtPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.txtPhoneNumber.BorderRadius = 5;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(908, 287);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhoneNumber.MaxLength = 12;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PlaceholderText = "Phone Number";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 33);
+            this.txtPhoneNumber.TabIndex = 41;
             // 
-            // guna2Panel5
+            // dtDateOfBirth
             // 
-            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel5.BorderRadius = 4;
-            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.guna2Panel5.BorderThickness = 1;
-            this.guna2Panel5.Controls.Add(this.lnkRemoveImage);
-            this.guna2Panel5.Controls.Add(this.btnSelectPhoto);
-            this.guna2Panel5.Controls.Add(this.label13);
-            this.guna2Panel5.Controls.Add(this.label12);
-            this.guna2Panel5.Controls.Add(this.pbSelectedPhoto);
-            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(876, 83);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(226, 312);
-            this.guna2Panel5.TabIndex = 68;
+            this.dtDateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.dtDateOfBirth.BorderColor = System.Drawing.Color.Gainsboro;
+            this.dtDateOfBirth.BorderRadius = 5;
+            this.dtDateOfBirth.BorderThickness = 1;
+            this.dtDateOfBirth.Checked = true;
+            this.dtDateOfBirth.FillColor = System.Drawing.Color.White;
+            this.dtDateOfBirth.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtDateOfBirth.Location = new System.Drawing.Point(909, 236);
+            this.dtDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtDateOfBirth.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtDateOfBirth.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
+            this.dtDateOfBirth.Name = "dtDateOfBirth";
+            this.dtDateOfBirth.Size = new System.Drawing.Size(219, 32);
+            this.dtDateOfBirth.TabIndex = 40;
+            this.dtDateOfBirth.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             // 
-            // pbSelectedPhoto
+            // txtEmail
             // 
-            this.pbSelectedPhoto.ImageRotate = 0F;
-            this.pbSelectedPhoto.Location = new System.Drawing.Point(43, 8);
-            this.pbSelectedPhoto.Name = "pbSelectedPhoto";
-            this.pbSelectedPhoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbSelectedPhoto.Size = new System.Drawing.Size(140, 137);
-            this.pbSelectedPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbSelectedPhoto.TabIndex = 0;
-            this.pbSelectedPhoto.TabStop = false;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderRadius = 5;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(201, 238);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(236, 33);
+            this.txtEmail.TabIndex = 32;
             // 
-            // label12
+            // pictureBox1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label12.Location = new System.Drawing.Point(77, 158);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 20);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Add Photo";
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonID;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 170);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
             // 
-            // label13
+            // label4
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.LightGray;
-            this.label13.Location = new System.Drawing.Point(55, 178);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 17);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "JPG,PNG (Max 5MB)";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(52, 178);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 28);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "National No :";
             // 
-            // btnSelectPhoto
+            // txtNationalNumber
             // 
-            this.btnSelectPhoto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.btnSelectPhoto.BorderRadius = 5;
-            this.btnSelectPhoto.BorderThickness = 1;
-            this.btnSelectPhoto.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnSelectPhoto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSelectPhoto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSelectPhoto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSelectPhoto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSelectPhoto.FillColor = System.Drawing.Color.Transparent;
-            this.btnSelectPhoto.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnSelectPhoto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectPhoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSelectPhoto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSelectPhoto.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSelectPhoto.Image = global::GymMangementSystem.Properties.Resources.Photo;
-            this.btnSelectPhoto.ImageOffset = new System.Drawing.Point(-8, 0);
-            this.btnSelectPhoto.ImageSize = new System.Drawing.Size(26, 27);
-            this.btnSelectPhoto.Location = new System.Drawing.Point(28, 230);
-            this.btnSelectPhoto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSelectPhoto.Name = "btnSelectPhoto";
-            this.btnSelectPhoto.Size = new System.Drawing.Size(178, 39);
-            this.btnSelectPhoto.TabIndex = 54;
-            this.btnSelectPhoto.Text = "Select Photo";
+            this.txtNationalNumber.BackColor = System.Drawing.Color.Transparent;
+            this.txtNationalNumber.BorderRadius = 5;
+            this.txtNationalNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNationalNumber.DefaultText = "";
+            this.txtNationalNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNationalNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNationalNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNationalNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNationalNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNationalNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNationalNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtNationalNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNationalNumber.Location = new System.Drawing.Point(201, 178);
+            this.txtNationalNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNationalNumber.Name = "txtNationalNumber";
+            this.txtNationalNumber.PlaceholderText = "National Nu";
+            this.txtNationalNumber.SelectedText = "";
+            this.txtNationalNumber.Size = new System.Drawing.Size(236, 33);
+            this.txtNationalNumber.TabIndex = 25;
             // 
-            // lnkRemoveImage
+            // label3
             // 
-            this.lnkRemoveImage.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.lnkRemoveImage.AutoSize = true;
-            this.lnkRemoveImage.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lnkRemoveImage.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkRemoveImage.Location = new System.Drawing.Point(87, 274);
-            this.lnkRemoveImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkRemoveImage.Name = "lnkRemoveImage";
-            this.lnkRemoveImage.Size = new System.Drawing.Size(79, 26);
-            this.lnkRemoveImage.TabIndex = 55;
-            this.lnkRemoveImage.TabStop = true;
-            this.lnkRemoveImage.Text = "Remove";
-            this.lnkRemoveImage.Visible = false;
-            this.lnkRemoveImage.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(49, 84);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 28);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Person ID :";
+            // 
+            // lbPersonID
+            // 
+            this.lbPersonID.AutoSize = true;
+            this.lbPersonID.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.lbPersonID.ForeColor = System.Drawing.Color.Black;
+            this.lbPersonID.Location = new System.Drawing.Point(183, 87);
+            this.lbPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPersonID.Name = "lbPersonID";
+            this.lbPersonID.Size = new System.Drawing.Size(42, 25);
+            this.lbPersonID.TabIndex = 23;
+            this.lbPersonID.Text = "???";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.PersonID;
+            this.pictureBox3.Location = new System.Drawing.Point(7, 76);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox4.Location = new System.Drawing.Point(4, 124);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(49, 132);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 28);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Name :";
+            // 
+            // txtSecondName
+            // 
+            this.txtSecondName.BackColor = System.Drawing.Color.Transparent;
+            this.txtSecondName.BorderRadius = 5;
+            this.txtSecondName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSecondName.DefaultText = "";
+            this.txtSecondName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSecondName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSecondName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSecondName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSecondName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSecondName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSecondName.ForeColor = System.Drawing.Color.Black;
+            this.txtSecondName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSecondName.Location = new System.Drawing.Point(459, 132);
+            this.txtSecondName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSecondName.Name = "txtSecondName";
+            this.txtSecondName.PlaceholderText = "Second Name";
+            this.txtSecondName.SelectedText = "";
+            this.txtSecondName.Size = new System.Drawing.Size(247, 33);
+            this.txtSecondName.TabIndex = 16;
+            this.txtSecondName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSecondName_KeyPress);
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BackColor = System.Drawing.Color.Transparent;
+            this.txtFirstName.BorderRadius = 5;
+            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFirstName.DefaultText = "";
+            this.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.ForeColor = System.Drawing.Color.Black;
+            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.Location = new System.Drawing.Point(201, 132);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.PlaceholderText = "First Name";
+            this.txtFirstName.SelectedText = "";
+            this.txtFirstName.Size = new System.Drawing.Size(236, 33);
+            this.txtFirstName.TabIndex = 15;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel3.BorderRadius = 5;
+            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel3.Controls.Add(this.label2);
+            this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(0, -4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1517, 66);
+            this.guna2Panel3.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(9, 12);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(47, 52);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(81, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(258, 30);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Person Information";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel2.Controls.Add(this.guna2VSeparator1);
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1528, 57);
+            this.guna2Panel2.TabIndex = 4;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(5, 1);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 52);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 6;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Location = new System.Drawing.Point(67, 6);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(13, 47);
+            this.guna2VSeparator1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(81, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Add Person";
+            // 
+            // myTextBox2
+            // 
+            this.myTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.myTextBox2.DefaultText = "";
+            this.myTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.myTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.myTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.myTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.myTextBox2.ErrorMessage = "This Field is Required";
+            this.myTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.myTextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.myTextBox2.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
+            this.myTextBox2.IsRequired = false;
+            this.myTextBox2.Location = new System.Drawing.Point(765, 124);
+            this.myTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.myTextBox2.Name = "myTextBox2";
+            this.myTextBox2.PlaceholderText = "";
+            this.myTextBox2.SelectedText = "";
+            this.myTextBox2.Size = new System.Drawing.Size(229, 48);
+            this.myTextBox2.TabIndex = 69;
             // 
             // frmAddPerson
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1146, 503);
+            this.ClientSize = new System.Drawing.Size(1528, 619);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddPerson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddPerson";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -860,14 +908,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -882,7 +928,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtLastName;
         private Guna.UI2.WinForms.Guna2TextBox txtSecondName;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -924,5 +969,7 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button btnSelectPhoto;
         private System.Windows.Forms.LinkLabel lnkRemoveImage;
+        private MyTextBox myTextBox1;
+        private MyTextBox myTextBox2;
     }
 }
