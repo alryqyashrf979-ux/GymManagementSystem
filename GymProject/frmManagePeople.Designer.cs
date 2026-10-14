@@ -79,6 +79,7 @@
             this.txtFiltering.TabIndex = 88;
             this.txtFiltering.Visible = false;
             this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
+            this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
             // cmSelectTypeOfFiltering
             // 
@@ -116,7 +117,7 @@
             this.label9.Location = new System.Drawing.Point(11, 271);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 18);
+            this.label9.Size = new System.Drawing.Size(91, 22);
             this.label9.TabIndex = 86;
             this.label9.Text = "Filter By:";
             // 
@@ -302,7 +303,7 @@
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecord.Location = new System.Drawing.Point(113, 708);
             this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(38, 20);
+            this.lblRecord.Size = new System.Drawing.Size(49, 25);
             this.lblRecord.TabIndex = 98;
             this.lblRecord.Text = "N/A";
             // 
@@ -312,7 +313,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 707);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 97;
             this.label2.Text = "#Records:";
             // 
@@ -323,7 +324,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.label1.Location = new System.Drawing.Point(0, -6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 47);
+            this.label1.Size = new System.Drawing.Size(336, 59);
             this.label1.TabIndex = 96;
             this.label1.Text = "Manage People";
             // 
