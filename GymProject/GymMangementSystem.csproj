@@ -80,7 +80,7 @@
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="MyTextBox.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MyTextBox.Designer.cs">
       <DependentUpon>MyTextBox.cs</DependentUpon>

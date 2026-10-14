@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class MyTextBox :TextBox
+    public partial class MyTextBox :Guna2TextBox
     {
         public MyTextBox()
         {
@@ -40,9 +41,24 @@ namespace GymMangementSystem
             set => _ErrorMessage = value;
         }
 
-        private ErrorProvider Validating = new ErrorProvider();
+        private ErrorProvider _errorProvider = new ErrorProvider();
 
-        public override 
+        protected override void OnValidating(CancelEventArgs e)
+        {
+            base.OnValidating(e);
+            if (IsRequired)
+            {
+                if (IsRequired && string.IsNullOrEmpty(this.Text))
+                {
+                    _errorProvider.SetError(this, _ErrorMessage);
+                    e.Cancel = true;
+                }
+                else
+                {
+                    _errorProvider.SetError(this, "");
+                }
+            }
+        }
 
 
 
