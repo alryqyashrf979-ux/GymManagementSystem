@@ -86,7 +86,6 @@ namespace GymMangementSystem
         }
         private void MyTextBox_KeyPress(object sender,KeyPressEventArgs e)
         {
-            base.OnKeyPress(e);
 
             if (_inputType == TextType.Numeric)
             {

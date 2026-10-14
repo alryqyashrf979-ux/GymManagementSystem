@@ -865,13 +865,13 @@
             this.myTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.myTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.myTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox2.ErrorMessage = "This Field is Required";
+            this.myTextBox2.ErrorMessage = "Your Last Name Is Required";
             this.myTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.myTextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.myTextBox2.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
-            this.myTextBox2.IsRequired = false;
-            this.myTextBox2.Location = new System.Drawing.Point(765, 124);
+            this.myTextBox2.IsRequired = true;
+            this.myTextBox2.Location = new System.Drawing.Point(741, 124);
             this.myTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.myTextBox2.Name = "myTextBox2";
             this.myTextBox2.PlaceholderText = "";
