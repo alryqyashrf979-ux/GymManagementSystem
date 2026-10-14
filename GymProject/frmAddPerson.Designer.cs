@@ -79,6 +79,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddress = new GymMangementSystem.MyTextBox();
             this.txtPhoneNumber = new GymMangementSystem.MyTextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).BeginInit();
@@ -149,6 +150,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1517, 548);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // txtEmail
             // 
@@ -328,6 +330,7 @@
             this.btnSelectPhoto.Size = new System.Drawing.Size(237, 48);
             this.btnSelectPhoto.TabIndex = 9;
             this.btnSelectPhoto.Text = "Select Photo";
+            this.btnSelectPhoto.Click += new System.EventHandler(this.btnSelectPhoto_Click);
             // 
             // label13
             // 
@@ -879,6 +882,10 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(219, 33);
             this.txtPhoneNumber.TabIndex = 7;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmAddPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -971,5 +978,6 @@
         private MyTextBox txtNationalNo;
         private MyTextBox txtPhoneNumber;
         private MyTextBox txtAddress;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
