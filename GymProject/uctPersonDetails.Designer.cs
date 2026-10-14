@@ -34,7 +34,7 @@ namespace GymMangementSystem
             this.panel14 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.picPersonalPhoto = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbGender = new System.Windows.Forms.Label();
@@ -155,7 +155,25 @@ namespace GymMangementSystem
             this.pictureBox13.TabIndex = 6;
             this.pictureBox13.TabStop = false;
             // 
-            // pictureBox12
+            // picPersonalPhoto
+            // 
+            this.picPersonalPhoto.Image = global::GymMangementSystem.Properties.Resources.Male;
+            this.picPersonalPhoto.Location = new System.Drawing.Point(7, 6);
+            this.picPersonalPhoto.Name = "picPersonalPhoto";
+            this.picPersonalPhoto.Size = new System.Drawing.Size(149, 144);
+            this.picPersonalPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPersonalPhoto.TabIndex = 2;
+            this.picPersonalPhoto.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Email;
+            this.pictureBox7.Location = new System.Drawing.Point(4, 7);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(42, 28);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
             // 
             this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.NameImage;
             this.pictureBox12.Location = new System.Drawing.Point(9, 7);
