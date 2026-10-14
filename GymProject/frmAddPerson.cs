@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,13 +23,17 @@ namespace GymMangementSystem
         enMode _Mode = enMode.Addnew;
         private int _PersonID=-1;
 
+        private enum enGender { Male = 0, Female = 1 };
 
 
-       public frmAddPerson(int PersonID)
+        public frmAddPerson(int PersonID)
         {
-            this._PersonID= PersonID;   
+            this._PersonID = PersonID;
+            this._Mode = enMode.Update;
+
         }
 
+        clsPeople _Person;
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -54,9 +59,67 @@ namespace GymMangementSystem
             }
         }
 
+
+
+
+
+        void _ResetDefualtValues()
+        {
+
+
+
+            if(_Mode==enMode.Addnew)
+            {
+                lblTitle.Text = "Add Person";
+                this.Text = "Add Person";
+                _Person = new clsPeople();
+
+            }
+            else
+            {
+                lblTitle.Text = "Update Person";
+                this.Text = "Update Person";
+                
+            }
+
+
+            txtFirstName.Text = string.Empty;
+            txtLastName.Text= string.Empty;
+            txtSecondName.Text = string.Empty;
+            txtNationalNo.Text = string.Empty;
+            txtPhoneNumber.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+
+            rbMake.Checked = true;
+
+            //pbSelectedPhoto.Image = Properties.Resources.no_image;
+
+
+
+            cmCountries.DataSource = clsCountries.GetAlllCountries();
+            cmCountries.DisplayMember = "CountryName";
+            cmCountries.ValueMember = "CountryID";
+
+
+            cmCountries.SelectedIndex=cmCountries.FindStringExact("Yemen");
+
+            dtDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
+            dtDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
+
+
+        }
+
+
+
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void frmAddPerson_Load(object sender, EventArgs e)
+        {
+            _ResetDefualtValues();
         }
     }
 }
