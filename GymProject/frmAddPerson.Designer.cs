@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPerson));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtEmail = new GymMangementSystem.MyTextBox();
+            this.txtNationalNo = new GymMangementSystem.MyTextBox();
+            this.txtFirstName = new GymMangementSystem.MyTextBox();
+            this.txtSecondName = new GymMangementSystem.MyTextBox();
+            this.txtLastName = new GymMangementSystem.MyTextBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lnkRemoveImage = new System.Windows.Forms.LinkLabel();
             this.btnSelectPhoto = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +53,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -58,19 +62,14 @@
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMake = new System.Windows.Forms.RadioButton();
             this.cmCountries = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNationalNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbPersonID = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSecondName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,6 +77,8 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtAddress = new GymMangementSystem.MyTextBox();
+            this.txtPhoneNumber = new GymMangementSystem.MyTextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).BeginInit();
@@ -104,6 +105,13 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.txtPhoneNumber);
+            this.guna2Panel1.Controls.Add(this.txtAddress);
+            this.guna2Panel1.Controls.Add(this.txtEmail);
+            this.guna2Panel1.Controls.Add(this.txtNationalNo);
+            this.guna2Panel1.Controls.Add(this.txtFirstName);
+            this.guna2Panel1.Controls.Add(this.txtSecondName);
+            this.guna2Panel1.Controls.Add(this.txtLastName);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.pictureBox9);
@@ -117,7 +125,6 @@
             this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.btnSave);
             this.guna2Panel1.Controls.Add(this.btnClose);
-            this.guna2Panel1.Controls.Add(this.txtAddress);
             this.guna2Panel1.Controls.Add(this.pictureBox7);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.pictureBox6);
@@ -127,19 +134,14 @@
             this.guna2Panel1.Controls.Add(this.rbFemale);
             this.guna2Panel1.Controls.Add(this.rbMake);
             this.guna2Panel1.Controls.Add(this.cmCountries);
-            this.guna2Panel1.Controls.Add(this.txtPhoneNumber);
             this.guna2Panel1.Controls.Add(this.dtDateOfBirth);
-            this.guna2Panel1.Controls.Add(this.txtEmail);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.txtNationalNumber);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.lbPersonID);
             this.guna2Panel1.Controls.Add(this.pictureBox3);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.txtSecondName);
-            this.guna2Panel1.Controls.Add(this.txtFirstName);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
             this.guna2Panel1.Location = new System.Drawing.Point(5, 64);
@@ -147,6 +149,126 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1517, 548);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderRadius = 5;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.ErrorMessage = "This Field is Required";
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtEmail.IsRequired = false;
+            this.txtEmail.Location = new System.Drawing.Point(201, 238);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(249, 33);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // txtNationalNo
+            // 
+            this.txtNationalNo.BorderRadius = 5;
+            this.txtNationalNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNationalNo.DefaultText = "";
+            this.txtNationalNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNationalNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNationalNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNationalNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNationalNo.ErrorMessage = "This Field is Required";
+            this.txtNationalNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNationalNo.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtNationalNo.ForeColor = System.Drawing.Color.Black;
+            this.txtNationalNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNationalNo.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtNationalNo.IsRequired = true;
+            this.txtNationalNo.Location = new System.Drawing.Point(201, 178);
+            this.txtNationalNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNationalNo.Name = "txtNationalNo";
+            this.txtNationalNo.PlaceholderText = "National No";
+            this.txtNationalNo.SelectedText = "";
+            this.txtNationalNo.Size = new System.Drawing.Size(229, 33);
+            this.txtNationalNo.TabIndex = 4;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BorderRadius = 5;
+            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFirstName.DefaultText = "";
+            this.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstName.ErrorMessage = "This Field is Required";
+            this.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFirstName.ForeColor = System.Drawing.Color.Black;
+            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFirstName.IsRequired = true;
+            this.txtFirstName.Location = new System.Drawing.Point(201, 132);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.PlaceholderText = "First Name";
+            this.txtFirstName.SelectedText = "";
+            this.txtFirstName.Size = new System.Drawing.Size(229, 33);
+            this.txtFirstName.TabIndex = 1;
+            // 
+            // txtSecondName
+            // 
+            this.txtSecondName.BorderRadius = 5;
+            this.txtSecondName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSecondName.DefaultText = "";
+            this.txtSecondName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSecondName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSecondName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSecondName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSecondName.ErrorMessage = "This Field is Required";
+            this.txtSecondName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSecondName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSecondName.ForeColor = System.Drawing.Color.Black;
+            this.txtSecondName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSecondName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtSecondName.IsRequired = true;
+            this.txtSecondName.Location = new System.Drawing.Point(445, 132);
+            this.txtSecondName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSecondName.Name = "txtSecondName";
+            this.txtSecondName.PlaceholderText = "Second Name";
+            this.txtSecondName.SelectedText = "";
+            this.txtSecondName.Size = new System.Drawing.Size(229, 33);
+            this.txtSecondName.TabIndex = 2;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BorderRadius = 5;
+            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastName.DefaultText = "";
+            this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.ErrorMessage = "This Field is Required";
+            this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtLastName.ForeColor = System.Drawing.Color.Black;
+            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtLastName.IsRequired = true;
+            this.txtLastName.Location = new System.Drawing.Point(694, 132);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.PlaceholderText = "Last Name";
+            this.txtLastName.SelectedText = "";
+            this.txtLastName.Size = new System.Drawing.Size(222, 33);
+            this.txtLastName.TabIndex = 3;
             // 
             // guna2Panel5
             // 
@@ -204,7 +326,7 @@
             this.btnSelectPhoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelectPhoto.Name = "btnSelectPhoto";
             this.btnSelectPhoto.Size = new System.Drawing.Size(237, 48);
-            this.btnSelectPhoto.TabIndex = 54;
+            this.btnSelectPhoto.TabIndex = 9;
             this.btnSelectPhoto.Text = "Select Photo";
             // 
             // label13
@@ -234,11 +356,11 @@
             // pbSelectedPhoto
             // 
             this.pbSelectedPhoto.ImageRotate = 0F;
-            this.pbSelectedPhoto.Location = new System.Drawing.Point(57, 10);
+            this.pbSelectedPhoto.Location = new System.Drawing.Point(71, 10);
             this.pbSelectedPhoto.Margin = new System.Windows.Forms.Padding(4);
             this.pbSelectedPhoto.Name = "pbSelectedPhoto";
             this.pbSelectedPhoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbSelectedPhoto.Size = new System.Drawing.Size(187, 169);
+            this.pbSelectedPhoto.Size = new System.Drawing.Size(165, 167);
             this.pbSelectedPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSelectedPhoto.TabIndex = 0;
             this.pbSelectedPhoto.TabStop = false;
@@ -369,8 +491,8 @@
             this.btnSave.FillColor = System.Drawing.Color.Transparent;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
@@ -378,7 +500,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(237, 37);
-            this.btnSave.TabIndex = 53;
+            this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             // 
             // btnClose
@@ -403,31 +525,8 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(255, 37);
-            this.btnClose.TabIndex = 52;
+            this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Close";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.Transparent;
-            this.txtAddress.BorderRadius = 5;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(176, 342);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PlaceholderText = "Address";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(480, 126);
-            this.txtAddress.TabIndex = 51;
-            this.txtAddress.TextOffset = new System.Drawing.Point(0, -38);
             // 
             // pictureBox7
             // 
@@ -539,30 +638,7 @@
             this.cmCountries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmCountries.Name = "cmCountries";
             this.cmCountries.Size = new System.Drawing.Size(219, 36);
-            this.cmCountries.TabIndex = 42;
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.txtPhoneNumber.BorderRadius = 5;
-            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneNumber.DefaultText = "";
-            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(908, 287);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPhoneNumber.MaxLength = 12;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PlaceholderText = "Phone Number";
-            this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 33);
-            this.txtPhoneNumber.TabIndex = 41;
+            this.cmCountries.TabIndex = 8;
             // 
             // dtDateOfBirth
             // 
@@ -580,30 +656,8 @@
             this.dtDateOfBirth.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
             this.dtDateOfBirth.Name = "dtDateOfBirth";
             this.dtDateOfBirth.Size = new System.Drawing.Size(219, 32);
-            this.dtDateOfBirth.TabIndex = 40;
+            this.dtDateOfBirth.TabIndex = 6;
             this.dtDateOfBirth.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.BorderRadius = 5;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(201, 238);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "Email";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(236, 33);
-            this.txtEmail.TabIndex = 32;
             // 
             // pictureBox1
             // 
@@ -627,28 +681,6 @@
             this.label4.Size = new System.Drawing.Size(139, 28);
             this.label4.TabIndex = 26;
             this.label4.Text = "National No :";
-            // 
-            // txtNationalNumber
-            // 
-            this.txtNationalNumber.BackColor = System.Drawing.Color.Transparent;
-            this.txtNationalNumber.BorderRadius = 5;
-            this.txtNationalNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNationalNumber.DefaultText = "";
-            this.txtNationalNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNationalNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNationalNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNationalNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNationalNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNationalNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtNationalNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNumber.Location = new System.Drawing.Point(201, 178);
-            this.txtNationalNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNationalNumber.Name = "txtNationalNumber";
-            this.txtNationalNumber.PlaceholderText = "National Nu";
-            this.txtNationalNumber.SelectedText = "";
-            this.txtNationalNumber.Size = new System.Drawing.Size(236, 33);
-            this.txtNationalNumber.TabIndex = 25;
             // 
             // label3
             // 
@@ -707,51 +739,6 @@
             this.label6.Size = new System.Drawing.Size(79, 28);
             this.label6.TabIndex = 19;
             this.label6.Text = "Name :";
-            // 
-            // txtSecondName
-            // 
-            this.txtSecondName.BackColor = System.Drawing.Color.Transparent;
-            this.txtSecondName.BorderRadius = 5;
-            this.txtSecondName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSecondName.DefaultText = "";
-            this.txtSecondName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSecondName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSecondName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSecondName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSecondName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSecondName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecondName.ForeColor = System.Drawing.Color.Black;
-            this.txtSecondName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSecondName.Location = new System.Drawing.Point(459, 132);
-            this.txtSecondName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSecondName.Name = "txtSecondName";
-            this.txtSecondName.PlaceholderText = "Second Name";
-            this.txtSecondName.SelectedText = "";
-            this.txtSecondName.Size = new System.Drawing.Size(247, 33);
-            this.txtSecondName.TabIndex = 16;
-            this.txtSecondName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSecondName_KeyPress);
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.BackColor = System.Drawing.Color.Transparent;
-            this.txtFirstName.BorderRadius = 5;
-            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFirstName.DefaultText = "";
-            this.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.ForeColor = System.Drawing.Color.Black;
-            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Location = new System.Drawing.Point(201, 132);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.PlaceholderText = "First Name";
-            this.txtFirstName.SelectedText = "";
-            this.txtFirstName.Size = new System.Drawing.Size(236, 33);
-            this.txtFirstName.TabIndex = 15;
             // 
             // guna2Panel3
             // 
@@ -843,10 +830,60 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Add Person";
             // 
+            // txtAddress
+            // 
+            this.txtAddress.BorderRadius = 5;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.ErrorMessage = "This Field is Required";
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtAddress.IsRequired = true;
+            this.txtAddress.Location = new System.Drawing.Point(158, 343);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PlaceholderText = "Address";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(480, 126);
+            this.txtAddress.TabIndex = 10;
+            this.txtAddress.TextOffset = new System.Drawing.Point(0, -38);
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.BorderRadius = 5;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.ErrorMessage = "This Field is Required";
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
+            this.txtPhoneNumber.IsRequired = true;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(909, 283);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PlaceholderText = "Phone Number";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 33);
+            this.txtPhoneNumber.TabIndex = 7;
+            // 
             // frmAddPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1528, 619);
             this.Controls.Add(this.guna2Panel2);
@@ -892,31 +929,25 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtSecondName;
-        private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbPersonID;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtNationalNumber;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.RadioButton rbMake;
         private Guna.UI2.WinForms.Guna2ComboBox cmCountries;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtDateOfBirth;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
@@ -933,5 +964,12 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button btnSelectPhoto;
         private System.Windows.Forms.LinkLabel lnkRemoveImage;
+        private MyTextBox txtSecondName;
+        private MyTextBox txtLastName;
+        private MyTextBox txtFirstName;
+        private MyTextBox txtEmail;
+        private MyTextBox txtNationalNo;
+        private MyTextBox txtPhoneNumber;
+        private MyTextBox txtAddress;
     }
 }
