@@ -21,5 +21,10 @@ namespace GymMangementSystem
         {
 
         }
+
+        private void txtSecondName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
