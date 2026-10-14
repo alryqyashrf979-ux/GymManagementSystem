@@ -109,9 +109,9 @@ namespace DataAccessLayer
 
             string query = @"
 
-                        SELECT  Users.UserID as 'User ID', Users.PersonID as 'Person ID',
+                        SELECT  Users.UserID , Users.PersonID,
                             FullName = People.FirstName + ' ' + People.SecondName+' ' + People.LastName,
-                             Users.UserName as 'User Name', Users.IsActive
+                             Users.UserName , Users.IsActive
                              FROM  Users INNER JOIN
                                     People ON Users.PersonID = People.ID
 ";
