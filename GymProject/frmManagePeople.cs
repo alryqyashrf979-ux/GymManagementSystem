@@ -118,5 +118,15 @@ namespace GymMangementSystem
         {
             this.Close();
         }
+
+        private void txtFiltering_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(cmSelectTypeOfFiltering.Text=="Person ID" || cmSelectTypeOfFiltering.Text == "Phone")
+            {
+
+                e.Handled = (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar));
+               
+            }
+        }
     }
 }
