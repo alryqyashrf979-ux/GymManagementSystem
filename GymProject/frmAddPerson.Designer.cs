@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPerson));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.myTextBox1 = new GymMangementSystem.MyTextBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lnkRemoveImage = new System.Windows.Forms.LinkLabel();
             this.btnSelectPhoto = new Guna.UI2.WinForms.Guna2Button();
@@ -79,7 +78,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label1 = new System.Windows.Forms.Label();
-            this.myTextBox2 = new GymMangementSystem.MyTextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedPhoto)).BeginInit();
@@ -106,8 +104,6 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.myTextBox2);
-            this.guna2Panel1.Controls.Add(this.myTextBox1);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.pictureBox9);
@@ -151,16 +147,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1517, 548);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // myTextBox1
-            // 
-            this.myTextBox1.ErrorMessage = "This Field is Required";
-            this.myTextBox1.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.myTextBox1.IsRequired = false;
-            this.myTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.myTextBox1.Name = "myTextBox1";
-            this.myTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.myTextBox1.TabIndex = 0;
             // 
             // guna2Panel5
             // 
@@ -857,28 +843,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Add Person";
             // 
-            // myTextBox2
-            // 
-            this.myTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.myTextBox2.DefaultText = "";
-            this.myTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.myTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.myTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox2.ErrorMessage = "Your Last Name Is Required";
-            this.myTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.myTextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox2.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
-            this.myTextBox2.IsRequired = true;
-            this.myTextBox2.Location = new System.Drawing.Point(741, 124);
-            this.myTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.myTextBox2.Name = "myTextBox2";
-            this.myTextBox2.PlaceholderText = "";
-            this.myTextBox2.SelectedText = "";
-            this.myTextBox2.Size = new System.Drawing.Size(229, 48);
-            this.myTextBox2.TabIndex = 69;
-            // 
             // frmAddPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -969,7 +933,5 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button btnSelectPhoto;
         private System.Windows.Forms.LinkLabel lnkRemoveImage;
-        private MyTextBox myTextBox1;
-        private MyTextBox myTextBox2;
     }
 }
