@@ -78,7 +78,7 @@ namespace GymMangementSystem
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPersonalPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel12.SuspendLayout();
@@ -118,10 +118,10 @@ namespace GymMangementSystem
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.picPersonalPhoto);
-            this.panel13.Location = new System.Drawing.Point(677, 55);
+            this.panel13.Controls.Add(this.pictureBox12);
+            this.panel13.Location = new System.Drawing.Point(681, 55);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(165, 183);
+            this.panel13.Size = new System.Drawing.Size(194, 183);
             this.panel13.TabIndex = 13;
             // 
             // panel14
@@ -129,9 +129,9 @@ namespace GymMangementSystem
             this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel14.Controls.Add(this.label4);
             this.panel14.Controls.Add(this.pictureBox13);
-            this.panel14.Location = new System.Drawing.Point(11, 152);
+            this.panel14.Location = new System.Drawing.Point(9, 154);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(145, 24);
+            this.panel14.Size = new System.Drawing.Size(175, 24);
             this.panel14.TabIndex = 2;
             // 
             // label4
@@ -139,7 +139,7 @@ namespace GymMangementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(68, 6);
+            this.label4.Location = new System.Drawing.Point(86, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 6;
@@ -148,7 +148,7 @@ namespace GymMangementSystem
             // pictureBox13
             // 
             this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.Photo;
-            this.pictureBox13.Location = new System.Drawing.Point(34, 3);
+            this.pictureBox13.Location = new System.Drawing.Point(52, 4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(31, 17);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,6 +164,24 @@ namespace GymMangementSystem
             this.picPersonalPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPersonalPhoto.TabIndex = 2;
             this.picPersonalPhoto.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Email;
+            this.pictureBox7.Location = new System.Drawing.Point(4, 7);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(42, 28);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox12.Location = new System.Drawing.Point(9, 7);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(175, 144);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 2;
+            this.pictureBox12.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -533,7 +551,7 @@ namespace GymMangementSystem
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 296);
+            this.panel1.Size = new System.Drawing.Size(879, 297);
             this.panel1.TabIndex = 4;
             // 
             // panel7
@@ -599,7 +617,7 @@ namespace GymMangementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(857, 39);
+            this.panel2.Size = new System.Drawing.Size(875, 39);
             this.panel2.TabIndex = 0;
             // 
             // uctPersonDetails
@@ -609,12 +627,12 @@ namespace GymMangementSystem
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "uctPersonDetails";
-            this.Size = new System.Drawing.Size(866, 302);
+            this.Size = new System.Drawing.Size(882, 302);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPersonalPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel12.ResumeLayout(false);
@@ -657,7 +675,7 @@ namespace GymMangementSystem
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox picPersonalPhoto;
+        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbGender;

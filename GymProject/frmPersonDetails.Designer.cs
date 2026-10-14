@@ -45,7 +45,7 @@ namespace GymMangementSystem
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(862, 42);
+            this.guna2Panel1.Size = new System.Drawing.Size(896, 42);
             this.guna2Panel1.TabIndex = 3;
             // 
             // label1
@@ -74,7 +74,7 @@ namespace GymMangementSystem
             this.uctPersonDetails2.BackColor = System.Drawing.Color.White;
             this.uctPersonDetails2.Location = new System.Drawing.Point(0, 38);
             this.uctPersonDetails2.Name = "uctPersonDetails2";
-            this.uctPersonDetails2.Size = new System.Drawing.Size(911, 299);
+            this.uctPersonDetails2.Size = new System.Drawing.Size(889, 299);
             this.uctPersonDetails2.TabIndex = 4;
             // 
             // frmPersonDetails
@@ -82,7 +82,7 @@ namespace GymMangementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(862, 340);
+            this.ClientSize = new System.Drawing.Size(896, 340);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.uctPersonDetails2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

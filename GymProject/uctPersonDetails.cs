@@ -31,21 +31,6 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
-        private void LoadPersonImages()
-        {
-            picPersonalPhoto.Image = _PersonInfo.Gender == '0'? Properties.Resources.Male: picPersonalPhoto.Image = Properties.Resources.Female;
-
-            string ImagePath = _PersonInfo.ImagePath;
-
-            if(ImagePath!=null&&ImagePath!=string.Empty)
-            if (File.Exists(ImagePath))
-            {
-                picPersonalPhoto.ImageLocation = ImagePath;
-            }
-            else
-                MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
         private void _ResetPersonInformation()
         {
             lbAddress.Text = "???";
@@ -71,8 +56,6 @@ namespace GymMangementSystem
             lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
             lbPersonID.Text = _PersonInfo.PersonID.ToString();
             lbPhone.Text = _PersonInfo.PhoneNumber;
-
-            LoadPersonImages();
         }
 
         public void LoadPersonInfo(int PersonID)
