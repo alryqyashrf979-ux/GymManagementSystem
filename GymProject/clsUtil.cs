@@ -54,7 +54,7 @@ namespace GymMangementSystem
             return true;
         }
 
-        private static bool DeletePersonImage(string ImagePath)
+        public static bool DeletePersonImage(string ImagePath)
         {
             if (ImagePath != "")
             {
