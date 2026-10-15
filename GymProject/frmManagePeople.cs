@@ -128,5 +128,13 @@ namespace GymMangementSystem
                
             }
         }
+
+        private void btnAddPerson_Click(object sender, EventArgs e)
+        {
+            frmAddPerson frm = new frmAddPerson();
+            frm.ShowDialog();
+            _RefreshDataTable();
+
+        }
     }
 }
