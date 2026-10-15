@@ -1,10 +1,13 @@
 ﻿using DataBusinessLayer;
+using GymMangementSystem.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -61,7 +64,62 @@ namespace GymMangementSystem
 
 
 
+        void _LoadData()
+        {
 
+
+            _Person = clsPeople.Find(_PersonID);
+
+
+            if(_Person == null)
+            {
+
+                MessageBox.Show($"Person with ID {_PersonID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnSave.Enabled = true;
+                return;
+            }
+
+
+
+            lblPersonID.Text = _Person.PersonID.ToString();
+
+            txtFirstName.Text=_Person.FirstName;    
+            txtLastName.Text=_Person.LastName;
+            txtSecondName.Text=_Person.SecondName;
+            txtEmail.Text=_Person.Email;
+            txtAddress.Text = _Person.Address;
+            txtPhoneNumber.Text = _Person.PhoneNumber;
+
+
+            cmCountries.SelectedIndex = _Person.NationalityCountryID;
+
+
+
+
+
+            if (_Person.Gender == (byte)enGender.Male)
+                rbMale.Checked=true;
+            else
+                rbFemale.Checked = true;
+
+
+            //if (rbFemale.Checked)
+            //    pbShowSelectedPicture.Image = Resources.Female_512;
+            //else
+            //    pbShowSelectedPicture.Image = Resources.Male_512;
+
+
+
+            if (_Person.ImagePath != "")
+                pbSelectedPhoto.ImageLocation = _Person.ImagePath;
+
+
+            lnkRemoveImage.Visible = (pbSelectedPhoto.ImageLocation != null);
+
+
+
+
+        }
 
         void _ResetDefualtValues()
         {
@@ -91,7 +149,7 @@ namespace GymMangementSystem
             txtEmail.Text = string.Empty;
             txtAddress.Text = string.Empty;
 
-            rbMake.Checked = true;
+            rbMale.Checked = true;
 
             //pbSelectedPhoto.Image = Properties.Resources.no_image;
 
@@ -120,6 +178,9 @@ namespace GymMangementSystem
         private void frmAddPerson_Load(object sender, EventArgs e)
         {
             _ResetDefualtValues();
+
+            if (_Mode == enMode.Update)
+                _LoadData();
         }
     }
 }
