@@ -294,5 +294,10 @@ namespace GymMangementSystem
             lnkRemoveImage.Visible=false;
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
