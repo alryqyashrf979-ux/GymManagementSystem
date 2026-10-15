@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -97,7 +98,7 @@ namespace GymMangementSystem
 
 
 
-            if (_Person.Gender == (byte)enGender.Male)
+            if (_Person.Gender == (char)enGender.Male)
                 rbMale.Checked=true;
             else
                 rbFemale.Checked = true;
@@ -177,18 +178,43 @@ namespace GymMangementSystem
 
 
 
-        void _HanldeImage()
+        bool _HanldeImage()
         {
 
 
+            if (_Person.ImagePath != pbSelectedPhoto.ImageLocation)
+            {
+
+
+                if (_Person.ImagePath != "")
+                {
+                    clsUtil.DeletePersonImage(_Person.ImagePath);
+                }
+
+                if (pbSelectedPhoto.ImageLocation != null)
+                {
+
+
+                    string SourceFile = pbSelectedPhoto.ImageLocation.ToString();
+
+                    if (clsUtil.CopyImageToProjectImagesFolder(ref SourceFile))
+                    {
+
+                        pbSelectedPhoto.ImageLocation = SourceFile;
+                        return true;
+                    }
+                    else
+                        return false;
 
 
 
+                }
+
+            }
 
 
 
-
-
+            return false;
         }
 
 
@@ -211,6 +237,8 @@ namespace GymMangementSystem
             }
 
 
+            if (!_HanldeImage())
+                return;
 
             _Person.FirstName = txtFirstName.Text;
             _Person.LastName = txtLastName.Text;
@@ -219,8 +247,24 @@ namespace GymMangementSystem
             _Person.Address= txtAddress.Text;
             _Person.DateOfBirth = dtDateOfBirth.Value;
             _Person.PhoneNumber= txtPhoneNumber.Text;
-            
-            if(_Person.Save())
+
+            if (rbMale.Checked)
+                _Person.Gender = (char)enGender.Male;
+            else
+                _Person.Gender = (char)enGender.Female;
+
+
+
+            if (pbSelectedPhoto.ImageLocation != null)
+                _Person.ImagePath = pbSelectedPhoto.ImageLocation.ToString();
+            else
+                _Person.ImagePath = "";
+
+            _Person.NationalityCountryID = (int)cmCountries.SelectedValue;
+           
+
+
+            if (_Person.Save())
             {
                 lblPersonID.Text = _Person.PersonID.ToString();
                 _Mode = enMode.Update;
@@ -247,6 +291,7 @@ namespace GymMangementSystem
             //else
             //    pbShowSelectedPicture.Image = Resources.Male_512;
 
+            lnkRemoveImage.Visible=false;
 
         }
     }
