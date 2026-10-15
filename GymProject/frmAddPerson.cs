@@ -175,12 +175,79 @@ namespace GymMangementSystem
 
         }
 
+
+
+        void _HanldeImage()
+        {
+
+
+
+
+
+
+
+
+
+
+        }
+
+
         private void frmAddPerson_Load(object sender, EventArgs e)
         {
             _ResetDefualtValues();
 
             if (_Mode == enMode.Update)
                 _LoadData();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+
+            if(this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            _Person.FirstName = txtFirstName.Text;
+            _Person.LastName = txtLastName.Text;
+            _Person.SecondName = txtSecondName.Text;
+            _Person.Email= txtEmail.Text;
+            _Person.Address= txtAddress.Text;
+            _Person.DateOfBirth = dtDateOfBirth.Value;
+            _Person.PhoneNumber= txtPhoneNumber.Text;
+            
+            if(_Person.Save())
+            {
+                lblPersonID.Text = _Person.PersonID.ToString();
+                _Mode = enMode.Update;
+                lblTitle.Text = "Update Person";
+                this.Text = "Update Person";
+
+
+
+                MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else
+                MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void lnkRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pbSelectedPhoto.ImageLocation = null;
+
+            //if (rbFemale.Checked)
+            //    pbShowSelectedPicture.Image = Resources.Female_512;
+            //else
+            //    pbShowSelectedPicture.Image = Resources.Male_512;
+
+
         }
     }
 }

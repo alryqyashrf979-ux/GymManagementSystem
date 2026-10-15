@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsUtil.cs" />
     <Compile Include="frmAddPerson.cs">
       <SubType>Form</SubType>
     </Compile>
