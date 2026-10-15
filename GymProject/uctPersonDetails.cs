@@ -30,6 +30,11 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
+        private void LoadPersonImages()
+        {
+           picPersonalPhoto.Image= (_PersonInfo.Gender == 0) ? Properties.Resources.Male : Properties.Resources.Female;
+        }
+
         private void _ResetPersonInformation()
         {
             lbAddress.Text = "???";
@@ -55,6 +60,8 @@ namespace GymMangementSystem
             lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
             lbPersonID.Text = _PersonInfo.PersonID.ToString();
             lbPhone.Text = _PersonInfo.PhoneNumber;
+
+            LoadPersonImages();
         }
 
         public void LoadPersonInfo(int PersonID)

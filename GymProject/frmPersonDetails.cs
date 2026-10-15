@@ -15,6 +15,7 @@ namespace GymMangementSystem
         public frmPersonDetails()
         {
             InitializeComponent();
+            uctPersonDetails2.LoadPersonInfo(4);
         }
     }
 }
