@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class Form1 : Form
+    public partial class frmAddPerson : Form
     {
-        public Form1()
+        public frmAddPerson()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
