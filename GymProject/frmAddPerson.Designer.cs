@@ -60,13 +60,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rbFemale = new System.Windows.Forms.RadioButton();
-            this.rbMake = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
             this.cmCountries = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbPersonID = new System.Windows.Forms.Label();
+            this.lblPersonID = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -133,13 +133,13 @@
             this.guna2Panel1.Controls.Add(this.pictureBox5);
             this.guna2Panel1.Controls.Add(this.pictureBox2);
             this.guna2Panel1.Controls.Add(this.rbFemale);
-            this.guna2Panel1.Controls.Add(this.rbMake);
+            this.guna2Panel1.Controls.Add(this.rbMale);
             this.guna2Panel1.Controls.Add(this.cmCountries);
             this.guna2Panel1.Controls.Add(this.dtDateOfBirth);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.lbPersonID);
+            this.guna2Panel1.Controls.Add(this.lblPersonID);
             this.guna2Panel1.Controls.Add(this.pictureBox3);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.label6);
@@ -612,19 +612,19 @@
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
-            // rbMake
+            // rbMale
             // 
-            this.rbMake.AutoSize = true;
-            this.rbMake.Checked = true;
-            this.rbMake.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMake.Location = new System.Drawing.Point(217, 294);
-            this.rbMake.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbMake.Name = "rbMake";
-            this.rbMake.Size = new System.Drawing.Size(72, 26);
-            this.rbMake.TabIndex = 43;
-            this.rbMake.TabStop = true;
-            this.rbMake.Text = "Male";
-            this.rbMake.UseVisualStyleBackColor = true;
+            this.rbMale.AutoSize = true;
+            this.rbMale.Checked = true;
+            this.rbMale.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMale.Location = new System.Drawing.Point(217, 294);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(72, 26);
+            this.rbMale.TabIndex = 43;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
             // 
             // cmCountries
             // 
@@ -697,17 +697,17 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Person ID :";
             // 
-            // lbPersonID
+            // lblPersonID
             // 
-            this.lbPersonID.AutoSize = true;
-            this.lbPersonID.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.lbPersonID.ForeColor = System.Drawing.Color.Black;
-            this.lbPersonID.Location = new System.Drawing.Point(183, 87);
-            this.lbPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbPersonID.Name = "lbPersonID";
-            this.lbPersonID.Size = new System.Drawing.Size(42, 25);
-            this.lbPersonID.TabIndex = 23;
-            this.lbPersonID.Text = "???";
+            this.lblPersonID.AutoSize = true;
+            this.lblPersonID.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.lblPersonID.ForeColor = System.Drawing.Color.Black;
+            this.lblPersonID.Location = new System.Drawing.Point(183, 87);
+            this.lblPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPersonID.Name = "lblPersonID";
+            this.lblPersonID.Size = new System.Drawing.Size(42, 25);
+            this.lblPersonID.TabIndex = 23;
+            this.lblPersonID.Text = "???";
             // 
             // pictureBox3
             // 
@@ -940,14 +940,14 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbPersonID;
+        private System.Windows.Forms.Label lblPersonID;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.RadioButton rbFemale;
-        private System.Windows.Forms.RadioButton rbMake;
+        private System.Windows.Forms.RadioButton rbMale;
         private Guna.UI2.WinForms.Guna2ComboBox cmCountries;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtDateOfBirth;
         private System.Windows.Forms.PictureBox pictureBox7;
