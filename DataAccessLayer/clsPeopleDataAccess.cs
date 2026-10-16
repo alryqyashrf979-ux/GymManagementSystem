@@ -328,7 +328,7 @@ ref string Email, ref string Address, ref string ImagePath)
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
             string query = "select Found=1 from People where NationalID=@National;";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("NationalID", NationalID);
+            command.Parameters.AddWithValue("@National", NationalID);
 
             try
             {

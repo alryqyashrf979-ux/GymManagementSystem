@@ -333,5 +333,15 @@ namespace GymMangementSystem
 
 
         }
+
+
+        void ChangePersonImageDependOnGender(object sender, EventArgs e)
+        {
+            if(rbFemale.Checked)
+                pbSelectedPhoto.Image=Resources.Female;
+            else
+                pbSelectedPhoto.Image=Resources.Male;
+
+        }
     }
 }
