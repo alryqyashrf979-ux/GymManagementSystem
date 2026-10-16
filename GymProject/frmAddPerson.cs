@@ -214,7 +214,7 @@ namespace GymMangementSystem
 
 
 
-            return false;
+            return true;
         }
 
 
@@ -230,7 +230,7 @@ namespace GymMangementSystem
         {
 
 
-            if(this.ValidateChildren())
+            if(!this.ValidateChildren())
             {
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -247,6 +247,7 @@ namespace GymMangementSystem
             _Person.Address= txtAddress.Text;
             _Person.DateOfBirth = dtDateOfBirth.Value;
             _Person.PhoneNumber= txtPhoneNumber.Text;
+            _Person.NationalNo = txtNationalNo.Text;
 
             if (rbMale.Checked)
                 _Person.Gender = (char)enGender.Male;
@@ -298,6 +299,39 @@ namespace GymMangementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+
+
+
+            if(txtNationalNo.Text!=_Person.NationalNo && txtNationalNo.Text!="")
+            {
+
+                if (clsPeople.isPersonExist(txtNationalNo.Text.Trim()))
+                {
+
+                    e.Cancel = true;
+
+                    errorProvider1.SetError(txtNationalNo, "this National No. is already Used,try another one.");
+
+
+
+                }
+                else
+                    errorProvider1.SetError(txtNationalNo, "");
+
+
+
+
+            }
+
+
+
+
+
+
         }
     }
 }

@@ -175,7 +175,13 @@ ref string Email, ref string Address, ref string ImagePath)
             command.Parameters.AddWithValue("@Gender", Gender);
             command.Parameters.AddWithValue("@Birthdate", Birthdate);
             command.Parameters.AddWithValue("@CountryID", CountryID);
-            command.Parameters.AddWithValue("@Email", Email);
+
+            if (!string.IsNullOrEmpty(Email))
+                command.Parameters.AddWithValue("@Email", Email);
+            else
+                command.Parameters.AddWithValue("@Email", DBNull.Value);
+
+
             command.Parameters.AddWithValue("@NationalID", NationalID);
             command.Parameters.AddWithValue("@Address", Address);
 
