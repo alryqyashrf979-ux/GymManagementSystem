@@ -104,10 +104,10 @@ namespace GymMangementSystem
                 rbFemale.Checked = true;
 
 
-            //if (rbFemale.Checked)
-            //    pbShowSelectedPicture.Image = Resources.Female_512;
-            //else
-            //    pbShowSelectedPicture.Image = Resources.Male_512;
+            if (rbFemale.Checked)
+                pbSelectedPhoto.Image = Resources.Female;
+            else
+                pbSelectedPhoto.Image = Resources.Male;
 
 
 
@@ -152,7 +152,7 @@ namespace GymMangementSystem
 
             rbMale.Checked = true;
 
-            //pbSelectedPhoto.Image = Properties.Resources.no_image;
+            pbSelectedPhoto.Image = Resources.Male;
 
 
 
@@ -161,7 +161,7 @@ namespace GymMangementSystem
             cmCountries.ValueMember = "CountryID";
 
 
-            cmCountries.SelectedIndex=cmCountries.FindStringExact("Yemen");
+            cmCountries.SelectedIndex=cmCountries.FindString("Yemen");
 
             dtDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
             dtDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
@@ -286,10 +286,10 @@ namespace GymMangementSystem
         {
             pbSelectedPhoto.ImageLocation = null;
 
-            //if (rbFemale.Checked)
-            //    pbShowSelectedPicture.Image = Resources.Female_512;
-            //else
-            //    pbShowSelectedPicture.Image = Resources.Male_512;
+            if (rbFemale.Checked)
+                pbSelectedPhoto.Image = Resources.Female;
+            else
+                pbSelectedPhoto.Image = Resources.Male;
 
             lnkRemoveImage.Visible=false;
 
