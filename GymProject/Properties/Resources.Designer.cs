@@ -153,6 +153,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_000000009be4824391a90a2907bdb04d {
+            get {
+                object obj = ResourceManager.GetObject("file_000000009be4824391a90a2907bdb04d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file_00000000b7008243ac6af8813b1919f7 {
             get {
                 object obj = ResourceManager.GetObject("file_00000000b7008243ac6af8813b1919f7", resourceCulture);
@@ -166,6 +176,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Gendor {
             get {
                 object obj = ResourceManager.GetObject("Gendor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_3 {
+            get {
+                object obj = ResourceManager.GetObject("home-3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +256,76 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Man_32 {
             get {
                 object obj = ResourceManager.GetObject("Man 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manage_classes {
+            get {
+                object obj = ResourceManager.GetObject("manage classes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Manage_employees {
+            get {
+                object obj = ResourceManager.GetObject("Manage employees", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manage_payments {
+            get {
+                object obj = ResourceManager.GetObject("manage payments", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manageMembers {
+            get {
+                object obj = ResourceManager.GetObject("manageMembers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap managepeople {
+            get {
+                object obj = ResourceManager.GetObject("managepeople", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manageTrainers {
+            get {
+                object obj = ResourceManager.GetObject("manageTrainers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manageUsers {
+            get {
+                object obj = ResourceManager.GetObject("manageUsers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
