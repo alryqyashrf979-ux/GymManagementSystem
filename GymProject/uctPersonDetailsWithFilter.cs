@@ -24,5 +24,11 @@ namespace GymMangementSystem
             else
                 uctPersonDetails1.LoadPersonInfo(tbSearch.Text);
         }
+
+        public void FocusOnTbSearch()
+        {
+            tbSearch.Clear();
+            tbSearch.Focus();
+        }
     }
 }
