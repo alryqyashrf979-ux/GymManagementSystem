@@ -233,5 +233,32 @@
   <ItemGroup>
     <None Include="Resources\file_00000000b7008243ac6af8813b1919f7.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_000000009be4824391a90a2907bdb04d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\managepeople.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manageUsers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manageMembers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manageTrainers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manage classes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manage payments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage employees.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
