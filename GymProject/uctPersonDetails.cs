@@ -86,5 +86,18 @@ namespace GymMangementSystem
 
             _FillPersonInfo();
         }
+
+        public void LoadPersonInfo(string NationalNo)
+        {
+            _PersonInfo = clsPeople.Find(NationalNo);
+            if (_PersonInfo == null)
+            {
+                _ResetPersonInformation();
+                MessageBox.Show("No Person with National No =" + NationalNo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _FillPersonInfo();
+        }
     }
 }
