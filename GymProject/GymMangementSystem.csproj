@@ -94,6 +94,12 @@
     <Compile Include="uctPersonDetails.Designer.cs">
       <DependentUpon>uctPersonDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="uctPersonDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
+      <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAddPerson.resx">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="uctPersonDetails.resx">
       <DependentUpon>uctPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctPersonDetailsWithFilter.resx">
+      <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
