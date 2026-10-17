@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            uctPersonDetails1.LoadPersonInfo(Convert.ToInt32(tbSearch.Text));
+        }
     }
 }
