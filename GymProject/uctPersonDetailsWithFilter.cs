@@ -19,7 +19,10 @@ namespace GymMangementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            uctPersonDetails1.LoadPersonInfo(Convert.ToInt32(tbSearch.Text));
+            if (cbOptions.Text == "Person ID")
+                uctPersonDetails1.LoadPersonInfo(Convert.ToInt32(tbSearch.Text));
+            else
+                uctPersonDetails1.LoadPersonInfo(tbSearch.Text);
         }
     }
 }
