@@ -226,13 +226,13 @@
             this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.guna2Button3.Image = global::GymMangementSystem.Properties.Resources.manageUsers;
             this.guna2Button3.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(65, 39);
+            this.guna2Button3.ImageSize = new System.Drawing.Size(80, 39);
             this.guna2Button3.Location = new System.Drawing.Point(5, 391);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(244, 62);
             this.guna2Button3.TabIndex = 9;
             this.guna2Button3.Text = "Manage Users";
-            this.guna2Button3.TextOffset = new System.Drawing.Point(-8, 0);
+            this.guna2Button3.TextOffset = new System.Drawing.Point(-15, 0);
             // 
             // guna2Button2
             // 
