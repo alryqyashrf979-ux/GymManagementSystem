@@ -128,7 +128,7 @@ ref string Email, ref string Address, ref string ImagePath)
                     LastName = (string)reader["LastName"];
                     PhoneNumber = (string)reader["PhoneNumber"];
                     Birthdate = (DateTime)reader["Birthdate"];
-                    Gender = (char)reader["Gender"];
+                    Gender = Convert.ToChar(reader["Gender"]);
                     CountryID = (int)reader["CountryID"];
                     Email = (string)reader["Email"];
                     PersonID = (int)reader["ID"];

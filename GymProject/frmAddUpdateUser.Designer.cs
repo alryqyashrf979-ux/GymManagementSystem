@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.SuspendLayout();
+            // 
+            // uctPersonDetailsWithFilter1
+            // 
+            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(48, 39);
+            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(900, 383);
+            this.uctPersonDetailsWithFilter1.TabIndex = 0;
             // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 450);
+            this.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.Name = "frmAddUpdateUser";
             this.Text = "frmAddUpdateUser";
             this.ResumeLayout(false);
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private uctPersonDetailsWithFilter uctPersonDetailsWithFilter1;
     }
 }
