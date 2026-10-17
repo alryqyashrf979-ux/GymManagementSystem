@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,20 @@ namespace GymMangementSystem
 
         }
 
+        private void _LoadPersonImage()
+        {
+            picPersonalImage.Image = _PersonInfo.Gender == '0' ? Properties.Resources.Male : Properties.Resources.Female;
+
+            if (_PersonInfo.ImagePath == "" || _PersonInfo.ImagePath == null)
+                return;
+
+            string ImagePath = _PersonInfo.ImagePath;
+            if (File.Exists(ImagePath))
+            {
+                picPersonalImage.ImageLocation = ImagePath;
+            }
+        }
+
         private void _FillPersonInfo()
         {
             lbAddress.Text = _PersonInfo.Address;
@@ -55,6 +70,8 @@ namespace GymMangementSystem
             lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
             lbPersonID.Text = _PersonInfo.PersonID.ToString();
             lbPhone.Text = _PersonInfo.PhoneNumber;
+
+            _LoadPersonImage();
         }
 
         public void LoadPersonInfo(int PersonID)

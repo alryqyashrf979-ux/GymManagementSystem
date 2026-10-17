@@ -34,7 +34,7 @@ namespace GymMangementSystem
             this.panel14 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.picPersonalImage = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbGender = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@ namespace GymMangementSystem
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel12.SuspendLayout();
@@ -118,7 +118,7 @@ namespace GymMangementSystem
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.pictureBox12);
+            this.panel13.Controls.Add(this.picPersonalImage);
             this.panel13.Location = new System.Drawing.Point(681, 55);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(191, 183);
@@ -155,15 +155,15 @@ namespace GymMangementSystem
             this.pictureBox13.TabIndex = 6;
             this.pictureBox13.TabStop = false;
             // 
-            // pictureBox12
+            // picPersonalImage
             // 
-            this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.Male;
-            this.pictureBox12.Location = new System.Drawing.Point(9, 7);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(175, 144);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 2;
-            this.pictureBox12.TabStop = false;
+            this.picPersonalImage.Image = global::GymMangementSystem.Properties.Resources.Male;
+            this.picPersonalImage.Location = new System.Drawing.Point(9, 7);
+            this.picPersonalImage.Name = "picPersonalImage";
+            this.picPersonalImage.Size = new System.Drawing.Size(175, 144);
+            this.picPersonalImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPersonalImage.TabIndex = 2;
+            this.picPersonalImage.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -614,7 +614,7 @@ namespace GymMangementSystem
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel12.ResumeLayout(false);
@@ -657,7 +657,7 @@ namespace GymMangementSystem
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox picPersonalImage;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbGender;
