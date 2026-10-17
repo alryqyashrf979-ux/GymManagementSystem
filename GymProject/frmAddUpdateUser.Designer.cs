@@ -47,6 +47,7 @@
             this.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.Name = "frmAddUpdateUser";
             this.Text = "frmAddUpdateUser";
+            this.Activated += new System.EventHandler(this.frmAddUpdateUser_Activated);
             this.ResumeLayout(false);
 
         }

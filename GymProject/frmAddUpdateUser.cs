@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void frmAddUpdateUser_Activated(object sender, EventArgs e)
+        {
+            uctPersonDetailsWithFilter1.FocusOnTbSearch();
+        }
     }
 }
