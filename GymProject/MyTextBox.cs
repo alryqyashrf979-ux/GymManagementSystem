@@ -73,7 +73,7 @@ namespace GymMangementSystem
             base.OnValidating(e);
             if (IsRequired)
             {
-                if (IsRequired && string.IsNullOrEmpty(this.Text))
+                if (string.IsNullOrEmpty(this.Text))
                 {
                     _errorProvider.SetError(this, _ErrorMessage);
                     e.Cancel = true;

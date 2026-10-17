@@ -42,7 +42,7 @@ namespace GymMangementSystem
             lbNationalNo.Text = "???";
             lbPersonID.Text = "???";
             lbPhone.Text = "???";
-
+            picPersonalImage.Image = Properties.Resources.Male;
         }
 
         private void _LoadPersonImage()
@@ -81,6 +81,19 @@ namespace GymMangementSystem
             {
                 _ResetPersonInformation();
                 MessageBox.Show("No Person with Person ID=" + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _FillPersonInfo();
+        }
+
+        public void LoadPersonInfo(string NationalNo)
+        {
+            _PersonInfo = clsPeople.Find(NationalNo);
+            if (_PersonInfo == null)
+            {
+                _ResetPersonInformation();
+                MessageBox.Show("No Person with National No =" + NationalNo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
