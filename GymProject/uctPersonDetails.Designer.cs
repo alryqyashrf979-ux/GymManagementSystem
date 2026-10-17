@@ -121,7 +121,7 @@ namespace GymMangementSystem
             this.panel13.Controls.Add(this.pictureBox12);
             this.panel13.Location = new System.Drawing.Point(681, 55);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(194, 183);
+            this.panel13.Size = new System.Drawing.Size(191, 183);
             this.panel13.TabIndex = 13;
             // 
             // panel14
@@ -157,7 +157,7 @@ namespace GymMangementSystem
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.Male;
             this.pictureBox12.Location = new System.Drawing.Point(9, 7);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(175, 144);
