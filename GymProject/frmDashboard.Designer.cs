@@ -320,7 +320,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1443, 79);
+            this.guna2Panel3.Size = new System.Drawing.Size(1519, 79);
             this.guna2Panel3.TabIndex = 1;
             // 
             // label3
@@ -354,7 +354,7 @@
             this.pbCurrentUser.FillColor = System.Drawing.Color.Transparent;
             this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
             this.pbCurrentUser.ImageRotate = 0F;
-            this.pbCurrentUser.Location = new System.Drawing.Point(1202, 8);
+            this.pbCurrentUser.Location = new System.Drawing.Point(1265, 8);
             this.pbCurrentUser.Name = "pbCurrentUser";
             this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pbCurrentUser.Size = new System.Drawing.Size(64, 64);
@@ -368,7 +368,7 @@
             this.lblCurrentUseName.BackColor = System.Drawing.Color.Transparent;
             this.lblCurrentUseName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblCurrentUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblCurrentUseName.Location = new System.Drawing.Point(1289, 51);
+            this.lblCurrentUseName.Location = new System.Drawing.Point(1352, 51);
             this.lblCurrentUseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurrentUseName.Name = "lblCurrentUseName";
             this.lblCurrentUseName.Size = new System.Drawing.Size(144, 21);
@@ -381,7 +381,7 @@
             this.lblShowUserInformation.BackColor = System.Drawing.Color.Transparent;
             this.lblShowUserInformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShowUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblShowUserInformation.Location = new System.Drawing.Point(1265, 45);
+            this.lblShowUserInformation.Location = new System.Drawing.Point(1328, 45);
             this.lblShowUserInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShowUserInformation.Name = "lblShowUserInformation";
             this.lblShowUserInformation.Size = new System.Drawing.Size(27, 28);
@@ -393,7 +393,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1712, 886);
+            this.ClientSize = new System.Drawing.Size(1788, 886);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Panel3);
