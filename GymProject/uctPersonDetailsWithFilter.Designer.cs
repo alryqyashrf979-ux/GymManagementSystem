@@ -31,9 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.tbSearch = new GymMangementSystem.MyTextBox();
             this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbSearch = new GymMangementSystem.MyTextBox();
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,28 +80,6 @@
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // tbSearch
-            // 
-            this.tbSearch.BorderRadius = 15;
-            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.DefaultText = "";
-            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.ErrorMessage = "This Field is Required";
-            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.tbSearch.IsRequired = false;
-            this.tbSearch.Location = new System.Drawing.Point(461, 20);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.PlaceholderText = "";
-            this.tbSearch.SelectedText = "";
-            this.tbSearch.Size = new System.Drawing.Size(241, 36);
-            this.tbSearch.TabIndex = 7;
-            // 
             // cbOptions
             // 
             this.cbOptions.BackColor = System.Drawing.Color.Transparent;
@@ -110,8 +88,8 @@
             this.cbOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOptions.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbOptions.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbOptions.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbOptions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbOptions.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cbOptions.ForeColor = System.Drawing.Color.Black;
             this.cbOptions.ItemHeight = 30;
             this.cbOptions.Items.AddRange(new object[] {
             "Person ID",
@@ -119,6 +97,7 @@
             this.cbOptions.Location = new System.Drawing.Point(244, 20);
             this.cbOptions.Name = "cbOptions";
             this.cbOptions.Size = new System.Drawing.Size(199, 36);
+            this.cbOptions.StartIndex = 0;
             this.cbOptions.TabIndex = 6;
             this.cbOptions.SelectedIndexChanged += new System.EventHandler(this.cbOptions_SelectedIndexChanged);
             // 
@@ -131,6 +110,31 @@
             this.label1.Size = new System.Drawing.Size(96, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Find By :";
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.BorderRadius = 15;
+            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.DefaultText = "";
+            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.ErrorMessage = "This Field is Required";
+            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.ForeColor = System.Drawing.Color.Black;
+            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
+            this.tbSearch.IsRequired = false;
+            this.tbSearch.Location = new System.Drawing.Point(461, 20);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.PlaceholderText = "";
+            this.tbSearch.SelectedText = "";
+            this.tbSearch.Size = new System.Drawing.Size(241, 36);
+            this.tbSearch.TabIndex = 7;
+            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
             // 
             // uctPersonDetails1
             // 
