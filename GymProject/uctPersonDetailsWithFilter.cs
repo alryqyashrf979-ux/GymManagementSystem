@@ -20,9 +20,14 @@ namespace GymMangementSystem
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (cbOptions.Text == "Person ID")
+            {
                 uctPersonDetails1.LoadPersonInfo(Convert.ToInt32(tbSearch.Text));
+            }
             else
+            {
                 uctPersonDetails1.LoadPersonInfo(tbSearch.Text);
+            }
+
         }
 
         public void FocusOnTbSearch()
@@ -34,6 +39,21 @@ namespace GymMangementSystem
         {
             tbSearch.Clear();
             tbSearch.Focus();
+
+            if (cbOptions.Text == "Person ID")
+            {
+                tbSearch.InputType = MyTextBox.TextType.Numeric;
+            }
+            else
+            {
+                tbSearch.InputType = MyTextBox.TextType.Text;
+            }
+        }
+
+        private void tbSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                btnSearch.PerformClick();
         }
     }
 }
