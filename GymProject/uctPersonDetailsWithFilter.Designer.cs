@@ -120,6 +120,7 @@
             this.cbOptions.Name = "cbOptions";
             this.cbOptions.Size = new System.Drawing.Size(199, 36);
             this.cbOptions.TabIndex = 6;
+            this.cbOptions.SelectedIndexChanged += new System.EventHandler(this.cbOptions_SelectedIndexChanged);
             // 
             // label1
             // 

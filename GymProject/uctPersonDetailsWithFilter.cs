@@ -27,6 +27,11 @@ namespace GymMangementSystem
 
         public void FocusOnTbSearch()
         {
+            tbSearch.Focus();
+        }
+
+        private void cbOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
             tbSearch.Clear();
             tbSearch.Focus();
         }
