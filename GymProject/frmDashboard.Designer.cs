@@ -43,8 +43,13 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblCurrentUseName = new System.Windows.Forms.Label();
+            this.lblShowUserInformation = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -306,13 +311,16 @@
             this.guna2Panel3.BorderRadius = 5;
             this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.lblShowUserInformation);
+            this.guna2Panel3.Controls.Add(this.lblCurrentUseName);
+            this.guna2Panel3.Controls.Add(this.pbCurrentUser);
             this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1305, 79);
+            this.guna2Panel3.Size = new System.Drawing.Size(1443, 79);
             this.guna2Panel3.TabIndex = 1;
             // 
             // label3
@@ -340,12 +348,52 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Here\'s what\'s happening at your gym today.";
             // 
+            // pbCurrentUser
+            // 
+            this.pbCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbCurrentUser.FillColor = System.Drawing.Color.Transparent;
+            this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
+            this.pbCurrentUser.ImageRotate = 0F;
+            this.pbCurrentUser.Location = new System.Drawing.Point(1202, 8);
+            this.pbCurrentUser.Name = "pbCurrentUser";
+            this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbCurrentUser.Size = new System.Drawing.Size(64, 64);
+            this.pbCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCurrentUser.TabIndex = 8;
+            this.pbCurrentUser.TabStop = false;
+            // 
+            // lblCurrentUseName
+            // 
+            this.lblCurrentUseName.AutoSize = true;
+            this.lblCurrentUseName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurrentUseName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCurrentUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblCurrentUseName.Location = new System.Drawing.Point(1289, 51);
+            this.lblCurrentUseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurrentUseName.Name = "lblCurrentUseName";
+            this.lblCurrentUseName.Size = new System.Drawing.Size(144, 21);
+            this.lblCurrentUseName.TabIndex = 9;
+            this.lblCurrentUseName.Text = "Current Admin  ";
+            // 
+            // lblShowUserInformation
+            // 
+            this.lblShowUserInformation.AutoSize = true;
+            this.lblShowUserInformation.BackColor = System.Drawing.Color.Transparent;
+            this.lblShowUserInformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblShowUserInformation.Location = new System.Drawing.Point(1265, 45);
+            this.lblShowUserInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblShowUserInformation.Name = "lblShowUserInformation";
+            this.lblShowUserInformation.Size = new System.Drawing.Size(27, 28);
+            this.lblShowUserInformation.TabIndex = 10;
+            this.lblShowUserInformation.Text = "⌄";
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1574, 886);
+            this.ClientSize = new System.Drawing.Size(1712, 886);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Panel3);
@@ -358,6 +406,9 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,5 +431,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbCurrentUser;
+        private System.Windows.Forms.Label lblCurrentUseName;
+        private System.Windows.Forms.Label lblShowUserInformation;
     }
 }
