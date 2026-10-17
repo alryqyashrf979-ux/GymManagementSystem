@@ -16,5 +16,17 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            frmManagePeople frm = new frmManagePeople();
+            frm.ShowDialog();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            frmManageUsers frm = new frmManageUsers();
+            frm.ShowDialog();
+        }
     }
 }

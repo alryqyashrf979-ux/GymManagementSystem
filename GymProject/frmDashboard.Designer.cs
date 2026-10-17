@@ -31,6 +31,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblShowUserInformation = new System.Windows.Forms.Label();
+            this.lblCurrentUseName = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pbCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -40,16 +46,10 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pbCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lblCurrentUseName = new System.Windows.Forms.Label();
-            this.lblShowUserInformation = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -97,6 +97,90 @@
             this.label2.Size = new System.Drawing.Size(258, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "Gym Management System";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel3.BorderRadius = 5;
+            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.lblShowUserInformation);
+            this.guna2Panel3.Controls.Add(this.lblCurrentUseName);
+            this.guna2Panel3.Controls.Add(this.pbCurrentUser);
+            this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1519, 79);
+            this.guna2Panel3.TabIndex = 1;
+            // 
+            // lblShowUserInformation
+            // 
+            this.lblShowUserInformation.AutoSize = true;
+            this.lblShowUserInformation.BackColor = System.Drawing.Color.Transparent;
+            this.lblShowUserInformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblShowUserInformation.Location = new System.Drawing.Point(1328, 45);
+            this.lblShowUserInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblShowUserInformation.Name = "lblShowUserInformation";
+            this.lblShowUserInformation.Size = new System.Drawing.Size(27, 28);
+            this.lblShowUserInformation.TabIndex = 10;
+            this.lblShowUserInformation.Text = "⌄";
+            // 
+            // lblCurrentUseName
+            // 
+            this.lblCurrentUseName.AutoSize = true;
+            this.lblCurrentUseName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurrentUseName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCurrentUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblCurrentUseName.Location = new System.Drawing.Point(1352, 51);
+            this.lblCurrentUseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurrentUseName.Name = "lblCurrentUseName";
+            this.lblCurrentUseName.Size = new System.Drawing.Size(144, 21);
+            this.lblCurrentUseName.TabIndex = 9;
+            this.lblCurrentUseName.Text = "Current Admin  ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label3.Location = new System.Drawing.Point(270, 83);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 41);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Welcome Back";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label4.Location = new System.Drawing.Point(274, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(297, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Here\'s what\'s happening at your gym today.";
+            // 
+            // pbCurrentUser
+            // 
+            this.pbCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbCurrentUser.FillColor = System.Drawing.Color.Transparent;
+            this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
+            this.pbCurrentUser.ImageRotate = 0F;
+            this.pbCurrentUser.Location = new System.Drawing.Point(1265, 8);
+            this.pbCurrentUser.Name = "pbCurrentUser";
+            this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbCurrentUser.Size = new System.Drawing.Size(64, 64);
+            this.pbCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCurrentUser.TabIndex = 8;
+            this.pbCurrentUser.TabStop = false;
             // 
             // guna2Button8
             // 
@@ -241,6 +325,7 @@
             this.guna2Button3.TabIndex = 9;
             this.guna2Button3.Text = "Manage Users";
             this.guna2Button3.TextOffset = new System.Drawing.Point(-15, 0);
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 
@@ -265,6 +350,7 @@
             this.guna2Button2.TabIndex = 8;
             this.guna2Button2.Text = "Manage People";
             this.guna2Button2.TextOffset = new System.Drawing.Point(-6, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -304,90 +390,6 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel3.BorderRadius = 5;
-            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.lblShowUserInformation);
-            this.guna2Panel3.Controls.Add(this.lblCurrentUseName);
-            this.guna2Panel3.Controls.Add(this.pbCurrentUser);
-            this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1519, 79);
-            this.guna2Panel3.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label3.Location = new System.Drawing.Point(270, 83);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 41);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Welcome Back";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label4.Location = new System.Drawing.Point(274, 124);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Here\'s what\'s happening at your gym today.";
-            // 
-            // pbCurrentUser
-            // 
-            this.pbCurrentUser.BackColor = System.Drawing.Color.Transparent;
-            this.pbCurrentUser.FillColor = System.Drawing.Color.Transparent;
-            this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
-            this.pbCurrentUser.ImageRotate = 0F;
-            this.pbCurrentUser.Location = new System.Drawing.Point(1265, 8);
-            this.pbCurrentUser.Name = "pbCurrentUser";
-            this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbCurrentUser.Size = new System.Drawing.Size(64, 64);
-            this.pbCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCurrentUser.TabIndex = 8;
-            this.pbCurrentUser.TabStop = false;
-            // 
-            // lblCurrentUseName
-            // 
-            this.lblCurrentUseName.AutoSize = true;
-            this.lblCurrentUseName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrentUseName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCurrentUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblCurrentUseName.Location = new System.Drawing.Point(1352, 51);
-            this.lblCurrentUseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCurrentUseName.Name = "lblCurrentUseName";
-            this.lblCurrentUseName.Size = new System.Drawing.Size(144, 21);
-            this.lblCurrentUseName.TabIndex = 9;
-            this.lblCurrentUseName.Text = "Current Admin  ";
-            // 
-            // lblShowUserInformation
-            // 
-            this.lblShowUserInformation.AutoSize = true;
-            this.lblShowUserInformation.BackColor = System.Drawing.Color.Transparent;
-            this.lblShowUserInformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblShowUserInformation.Location = new System.Drawing.Point(1328, 45);
-            this.lblShowUserInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblShowUserInformation.Name = "lblShowUserInformation";
-            this.lblShowUserInformation.Size = new System.Drawing.Size(27, 28);
-            this.lblShowUserInformation.TabIndex = 10;
-            this.lblShowUserInformation.Text = "⌄";
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,10 +407,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
