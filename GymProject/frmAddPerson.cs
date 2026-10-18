@@ -278,7 +278,7 @@ namespace GymMangementSystem
 
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DataBack?.Invoke(_PersonID);
+                DataBack?.Invoke(_Person.PersonID);
             }
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);

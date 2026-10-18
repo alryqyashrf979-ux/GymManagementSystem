@@ -73,7 +73,7 @@ namespace GymMangementSystem
         public static bool CopyImageToProjectImagesFolder(ref string SourceFile)
         {
 
-            string Destination = @"D:\People_Image_Gym\";
+            string Destination = @"C:\People_Image_Gym\";
 
             if (!CreateFolderIfDoesNotExists(Destination))
                 return false;
