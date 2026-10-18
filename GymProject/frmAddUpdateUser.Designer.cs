@@ -66,6 +66,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.guna2CustomRadioButton2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.guna2CustomRadioButton1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcUserInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
@@ -81,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // tcUserInfo
@@ -91,18 +96,19 @@
             this.tcUserInfo.Location = new System.Drawing.Point(0, 0);
             this.tcUserInfo.Name = "tcUserInfo";
             this.tcUserInfo.SelectedIndex = 0;
-            this.tcUserInfo.Size = new System.Drawing.Size(911, 410);
+            this.tcUserInfo.Size = new System.Drawing.Size(911, 441);
             this.tcUserInfo.TabIndex = 0;
             // 
             // tpPersonalInfo
             // 
+            this.tpPersonalInfo.Controls.Add(this.panel4);
             this.tpPersonalInfo.Controls.Add(this.btnSave);
             this.tpPersonalInfo.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 22);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(903, 384);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(903, 415);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             this.tpPersonalInfo.UseVisualStyleBackColor = true;
@@ -125,7 +131,7 @@
             this.btnSave.Image = global::GymMangementSystem.Properties.Resources.Next_64;
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(766, 339);
+            this.btnSave.Location = new System.Drawing.Point(740, 359);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(119, 30);
@@ -136,11 +142,10 @@
             // uctPersonDetailsWithFilter1
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(3, 3);
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(3, 32);
             this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(897, 378);
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(897, 376);
             this.uctPersonDetailsWithFilter1.TabIndex = 1;
             // 
             // tpLoginInfo
@@ -157,10 +162,8 @@
             this.tpLoginInfo.Controls.Add(this.pictureBox7);
             this.tpLoginInfo.Controls.Add(this.tbConfirmPassword);
             this.tpLoginInfo.Controls.Add(this.label7);
-            this.tpLoginInfo.Controls.Add(this.pictureBox6);
             this.tpLoginInfo.Controls.Add(this.tbPassword);
             this.tpLoginInfo.Controls.Add(this.label6);
-            this.tpLoginInfo.Controls.Add(this.pictureBox5);
             this.tpLoginInfo.Controls.Add(this.tbUserName);
             this.tpLoginInfo.Controls.Add(this.label5);
             this.tpLoginInfo.Controls.Add(this.pictureBox4);
@@ -169,10 +172,12 @@
             this.tpLoginInfo.Controls.Add(this.pictureBox3);
             this.tpLoginInfo.Controls.Add(this.panel2);
             this.tpLoginInfo.Controls.Add(this.panel1);
+            this.tpLoginInfo.Controls.Add(this.pictureBox6);
+            this.tpLoginInfo.Controls.Add(this.pictureBox5);
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 22);
             this.tpLoginInfo.Name = "tpLoginInfo";
             this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLoginInfo.Size = new System.Drawing.Size(903, 384);
+            this.tpLoginInfo.Size = new System.Drawing.Size(903, 294);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
             // 
@@ -258,7 +263,7 @@
             this.guna2Button1.Image = global::GymMangementSystem.Properties.Resources.Save_32;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(-10, 1);
             this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(791, 415);
+            this.guna2Button1.Location = new System.Drawing.Point(795, 445);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(109, 30);
@@ -283,7 +288,7 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(667, 415);
+            this.btnClose.Location = new System.Drawing.Point(667, 445);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(117, 30);
@@ -401,8 +406,8 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox5.Location = new System.Drawing.Point(453, 144);
+            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Password;
+            this.pictureBox5.Location = new System.Drawing.Point(462, 144);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 27);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -444,8 +449,8 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox6.Location = new System.Drawing.Point(453, 246);
+            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Password;
+            this.pictureBox6.Location = new System.Drawing.Point(462, 246);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(40, 27);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -607,19 +612,51 @@
             this.guna2CustomRadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2CustomRadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(897, 37);
+            this.panel4.TabIndex = 13;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(46, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 26);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Add User";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(911, 455);
+            this.ClientSize = new System.Drawing.Size(911, 479);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcUserInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateUser";
-            this.Text = "frmAddUpdateUser";
             this.Activated += new System.EventHandler(this.frmAddUpdateUser_Activated);
             this.tcUserInfo.ResumeLayout(false);
             this.tpPersonalInfo.ResumeLayout(false);
@@ -640,6 +677,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -684,5 +724,8 @@
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton2;
         private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }
