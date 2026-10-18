@@ -28,5 +28,11 @@ namespace GymMangementSystem
             Form frm = new frmManageUsers();
             frm.ShowDialog();
         }
+
+        private void btnManageMember_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmManageMember();
+            frm.ShowDialog();
+        }
     }
 }
