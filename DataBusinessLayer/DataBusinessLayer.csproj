@@ -50,6 +50,7 @@
     <Compile Include="clsEmployees.cs" />
     <Compile Include="clsEmployeeShift.cs" />
     <Compile Include="clsFrozenSubscription.cs" />
+    <Compile Include="clsHashing.cs" />
     <Compile Include="clsMembers.cs" />
     <Compile Include="clsPayments.cs" />
     <Compile Include="clsPeople.cs" />
