@@ -60,5 +60,11 @@ namespace GymMangementSystem
             if (e.KeyChar == (char)13)
                 btnSearch.PerformClick();
         }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            frmAddPerson frm = new frmAddPerson();
+
+        }
     }
 }

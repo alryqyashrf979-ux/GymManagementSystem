@@ -17,6 +17,8 @@ namespace GymMangementSystem
 {
     public partial class frmAddPerson : Form
     {
+        public delegate void DataBackEventHandler(int PersonID);
+        public event DataBackEventHandler DataBack;
         public frmAddPerson()
         {
             InitializeComponent();
@@ -276,7 +278,7 @@ namespace GymMangementSystem
 
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                DataBack?.Invoke(_PersonID);
             }
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
