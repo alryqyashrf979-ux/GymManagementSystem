@@ -96,13 +96,12 @@
             this.cmSelectTypeOfFiltering.Items.AddRange(new object[] {
             "None",
             "Person ID",
-            "National No.",
+            "Member ID",
             "Full Name",
-            "Nationality",
+            "Country Name",
             "Gender",
             "Phone",
-            "Email",
-            "Address"});
+            "Email"});
             this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(106, 267);
             this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
