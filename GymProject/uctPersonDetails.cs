@@ -13,7 +13,7 @@ namespace GymMangementSystem
 {
     public partial class uctPersonDetails : UserControl
     {
-        private int _PersonID;
+        private int _PersonID=-1;
         private clsCountries _CountryInfo;
         public int PersonID
         {
@@ -78,6 +78,7 @@ namespace GymMangementSystem
             lbPhone.Text = _PersonInfo.PhoneNumber;
 
             _LoadPersonImage();
+            _PersonID = _PersonInfo.PersonID;
         }
 
         public void LoadPersonInfo(int PersonID)

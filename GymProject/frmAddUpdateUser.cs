@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataBusinessLayer;
 
 namespace GymMangementSystem
 {
@@ -47,7 +48,14 @@ namespace GymMangementSystem
 
             }
 
-            if(uctPersonDetailsWithFilter1)
+            if (uctPersonDetailsWithFilter1.PersonID != -1)
+            {
+                if (clsUsers.isUserExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
+                {
+                    MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    uctPersonDetailsWithFilter1.FocusOnTbSearch();
+                }
+            }
 
         }
     }
