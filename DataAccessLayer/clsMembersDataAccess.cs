@@ -13,7 +13,12 @@ namespace DataAccessLayer
         static public DataTable GetAllMembers()
         {
             DataTable dt = new DataTable();
-            string Query = "select * from Members ";
+            string Query = @"
+select M.MemberID,P.ID as PersonID, P.FirstName+' '+P.SecondName+' '+P.LastName as FullName,
+case when P.Gender = 0 then 'Male' else 'Female'  end as 'Gender',
+P.PhoneNumber,P.Email,C.CountryName,M.LastSubscriptionDate,M.EmergencyContactInfoID,M.IsActive
+from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID=P.CountryID
+ ";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand command = new SqlCommand(Query, con))
             {
