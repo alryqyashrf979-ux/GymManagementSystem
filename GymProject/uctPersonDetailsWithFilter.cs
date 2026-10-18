@@ -64,7 +64,15 @@ namespace GymMangementSystem
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             frmAddPerson frm = new frmAddPerson();
+            frm.DataBack += DataBackEvent;
+            frm.ShowDialog();
+        }
 
+        private void DataBackEvent(int PersonID)
+        {
+            cbOptions.SelectedIndex = 0;
+            tbSearch.Text = PersonID.ToString();
+            uctPersonDetails1.LoadPersonInfo(PersonID);
         }
     }
 }
