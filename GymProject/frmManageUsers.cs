@@ -141,6 +141,7 @@ namespace GymMangementSystem
         {
             Form frm = new frmAddUpdateUser();
             frm.ShowDialog();
+            frmManageUsers_Load(null, null);
         }
     }
 }
