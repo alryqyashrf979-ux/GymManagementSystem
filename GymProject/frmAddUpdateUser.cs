@@ -15,7 +15,7 @@ namespace GymMangementSystem
     {
         public enum enMode { AddMode,UpdateMode}
         enMode _Mode = enMode.AddMode;
-
+        private int _Permission=0;
         public frmAddUpdateUser()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace GymMangementSystem
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
         {
             tpLoginInfo.Enabled = false;
+            rbNo.Checked = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -68,6 +69,67 @@ namespace GymMangementSystem
                 uctPersonDetailsWithFilter1.FocusOnTbSearch();
             }
 
+        }
+
+        private void rbYes_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlPermission.Enabled = false;
+        }
+
+        private void rbNo_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlPermission.Enabled = true;
+            chkManageClasses.Checked = false;
+            chkManageEmployees.Checked = false ;
+            chkManagePayments.Checked = false;
+            chkManageMembers.Checked = false;
+            chkManageTrainers.Checked = false;
+            chkManageUsers.Checked = false;
+            chkManagePeople.Checked = false;
+
+        }
+
+        private void SetPermission(CheckBox _checkbox,int permissionNumber)
+        {
+            if (_checkbox.Checked)
+                _Permission += permissionNumber;
+            else
+                _Permission -= permissionNumber;
+                
+        }
+        private void chkManagePeople_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManagePeople, Convert.ToInt32(chkManagePeople.Tag));
+        }
+
+        private void chkManageUsers_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManageUsers, Convert.ToInt32(chkManageUsers.Tag));
+        }
+
+        private void chkManageMembers_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManageMembers, Convert.ToInt32(chkManageMembers.Tag));
+        }
+
+        private void chkManagePayments_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManagePayments, Convert.ToInt32(chkManagePayments.Tag));
+        }
+
+        private void chkManageEmployees_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManageEmployees, Convert.ToInt32(chkManageEmployees.Tag));
+        }
+
+        private void chkManageTrainers_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManageTrainers, Convert.ToInt32(chkManageTrainers.Tag));
+        }
+
+        private void chkManageClasses_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPermission(chkManageClasses, Convert.ToInt32(chkManageClasses.Tag));
         }
     }
 }
