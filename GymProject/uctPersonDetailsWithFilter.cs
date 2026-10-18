@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,14 @@ namespace GymMangementSystem
 {
     public partial class uctPersonDetailsWithFilter : UserControl
     {
+        public int PersonID
+        {
+            get { return uctPersonDetails1.PersonID; }
+        }
+        public clsCountries CountryInfo
+        {
+            get { return uctPersonDetails1.CountryInfo; }
+        }
         public uctPersonDetailsWithFilter()
         {
             InitializeComponent();
