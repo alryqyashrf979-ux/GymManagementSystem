@@ -51,11 +51,11 @@ namespace GymMangementSystem
             lblRecord.Text = dtPeople.Rows.Count.ToString();
 
         }
+        StringBuilder FilteringName = new StringBuilder();
 
         private void txtFiltering_TextChanged(object sender, EventArgs e)
         {
 
-            StringBuilder FilteringName=new StringBuilder();
             FilteringName.Clear();
             //FilteringName.Append("");
 

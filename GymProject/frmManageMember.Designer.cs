@@ -37,12 +37,13 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFiltering = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvMembersList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtFiltering = new GymMangementSystem.MyTextBox();
+            this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,29 +112,6 @@
             this.label2.TabIndex = 113;
             this.label2.Text = "#Records:";
             // 
-            // txtFiltering
-            // 
-            this.txtFiltering.BackColor = System.Drawing.Color.Transparent;
-            this.txtFiltering.BorderRadius = 5;
-            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFiltering.DefaultText = "";
-            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtFiltering.ForeColor = System.Drawing.Color.Black;
-            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Location = new System.Drawing.Point(325, 382);
-            this.txtFiltering.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFiltering.Name = "txtFiltering";
-            this.txtFiltering.PlaceholderText = "Search...";
-            this.txtFiltering.SelectedText = "";
-            this.txtFiltering.Size = new System.Drawing.Size(230, 29);
-            this.txtFiltering.TabIndex = 112;
-            this.txtFiltering.Visible = false;
-            // 
             // cmSelectTypeOfFiltering
             // 
             this.cmSelectTypeOfFiltering.BackColor = System.Drawing.Color.Transparent;
@@ -148,19 +126,21 @@
             this.cmSelectTypeOfFiltering.Items.AddRange(new object[] {
             "None",
             "Person ID",
-            "National No.",
+            "Member ID",
+            "Emergency Contact ID",
             "Full Name",
-            "Nationality",
             "Gender",
             "Phone",
             "Email",
-            "Address"});
+            "Country Name",
+            "IsActive"});
             this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(109, 378);
             this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
             this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(209, 36);
             this.cmSelectTypeOfFiltering.StartIndex = 0;
             this.cmSelectTypeOfFiltering.TabIndex = 111;
+            this.cmSelectTypeOfFiltering.SelectedIndexChanged += new System.EventHandler(this.cmSelectTypeOfFiltering_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -270,6 +250,54 @@
             this.label1.TabIndex = 118;
             this.label1.Text = "Manage Members";
             // 
+            // txtFiltering
+            // 
+            this.txtFiltering.BorderRadius = 5;
+            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiltering.DefaultText = "";
+            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.ErrorMessage = "This Field is Required";
+            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFiltering.IsRequired = false;
+            this.txtFiltering.Location = new System.Drawing.Point(324, 378);
+            this.txtFiltering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiltering.Name = "txtFiltering";
+            this.txtFiltering.PlaceholderText = "Search...";
+            this.txtFiltering.SelectedText = "";
+            this.txtFiltering.Size = new System.Drawing.Size(264, 36);
+            this.txtFiltering.TabIndex = 119;
+            this.txtFiltering.Visible = false;
+            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
+            // 
+            // cmIsActive
+            // 
+            this.cmIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.cmIsActive.BorderRadius = 5;
+            this.cmIsActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmIsActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmIsActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmIsActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmIsActive.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cmIsActive.ForeColor = System.Drawing.Color.Black;
+            this.cmIsActive.ItemHeight = 30;
+            this.cmIsActive.Items.AddRange(new object[] {
+            "All",
+            "Yes",
+            "No"});
+            this.cmIsActive.Location = new System.Drawing.Point(337, 380);
+            this.cmIsActive.Name = "cmIsActive";
+            this.cmIsActive.Size = new System.Drawing.Size(216, 36);
+            this.cmIsActive.StartIndex = 0;
+            this.cmIsActive.TabIndex = 120;
+            this.cmIsActive.Visible = false;
+            this.cmIsActive.SelectedIndexChanged += new System.EventHandler(this.cmIsActiveOrno_SelectedIndexChanged);
+            // 
             // CountryName
             // 
             this.CountryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -283,7 +311,7 @@
             // clnID
             // 
             this.clnID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clnID.DataPropertyName = "ID";
+            this.clnID.DataPropertyName = "PersonID";
             this.clnID.HeaderText = "PersonID";
             this.clnID.MinimumWidth = 3;
             this.clnID.Name = "clnID";
@@ -353,12 +381,12 @@
             // EmergencyContactInfoID
             // 
             this.EmergencyContactInfoID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EmergencyContactInfoID.DataPropertyName = "EmergencyContactID";
+            this.EmergencyContactInfoID.DataPropertyName = "EmergencyContactInfoID";
             this.EmergencyContactInfoID.HeaderText = "EmergencyContactID";
             this.EmergencyContactInfoID.MinimumWidth = 6;
             this.EmergencyContactInfoID.Name = "EmergencyContactInfoID";
             this.EmergencyContactInfoID.ReadOnly = true;
-            this.EmergencyContactInfoID.Width = 200;
+            this.EmergencyContactInfoID.Width = 220;
             // 
             // Column1
             // 
@@ -376,13 +404,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1712, 935);
+            this.Controls.Add(this.cmIsActive);
+            this.Controls.Add(this.txtFiltering);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.btnAddMember);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtFiltering);
             this.Controls.Add(this.cmSelectTypeOfFiltering);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgvMembersList);
@@ -391,6 +420,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "manage Members";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmManageMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembersList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -403,12 +433,13 @@
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.Label lblRecord;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtFiltering;
         private Guna.UI2.WinForms.Guna2ComboBox cmSelectTypeOfFiltering;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMembersList;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label1;
+        private MyTextBox txtFiltering;
+        private Guna.UI2.WinForms.Guna2ComboBox cmIsActive;
         private System.Windows.Forms.DataGridViewTextBoxColumn CountryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrencyName;
