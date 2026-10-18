@@ -12,6 +12,9 @@ namespace GymMangementSystem
 {
     public partial class frmAddUpdateUser : Form
     {
+        public enum enMode { AddMode,UpdateMode}
+        enMode _Mode = enMode.AddMode;
+
         public frmAddUpdateUser()
         {
             InitializeComponent();
@@ -27,19 +30,25 @@ namespace GymMangementSystem
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click_1(object sender, EventArgs e)
-        {
-            tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
-        }
 
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
         {
             tpLoginInfo.Enabled = false;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            if (_Mode == enMode.UpdateMode)
+            {
+                btnSave.Enabled = true;
+                tpLoginInfo.Enabled = true;
+                tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+
+            }
+
+            if(uctPersonDetailsWithFilter1)
+
         }
     }
 }
