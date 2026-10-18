@@ -36,8 +36,19 @@
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tcUserInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
+            this.tpLoginInfo.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tcUserInfo
@@ -118,13 +129,15 @@
             // 
             // tpLoginInfo
             // 
+            this.tpLoginInfo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpLoginInfo.Controls.Add(this.panel2);
+            this.tpLoginInfo.Controls.Add(this.panel1);
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 22);
             this.tpLoginInfo.Name = "tpLoginInfo";
             this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpLoginInfo.Size = new System.Drawing.Size(903, 384);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
-            this.tpLoginInfo.UseVisualStyleBackColor = true;
             // 
             // guna2Button1
             // 
@@ -161,20 +174,93 @@
             this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(897, 378);
             this.uctPersonDetailsWithFilter1.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(897, 37);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(3, 43);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 35);
+            this.panel2.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Add User";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(64, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 26);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "User Information";
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 455);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcUserInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateUser";
             this.Text = "frmAddUpdateUser";
             this.Activated += new System.EventHandler(this.frmAddUpdateUser_Activated);
             this.tcUserInfo.ResumeLayout(false);
             this.tpPersonalInfo.ResumeLayout(false);
+            this.tpLoginInfo.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +274,11 @@
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
