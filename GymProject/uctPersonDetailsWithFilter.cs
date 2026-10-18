@@ -25,8 +25,7 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void FIndNow()
         {
             if (tbSearch.Text.Trim() == "")
             {
@@ -41,6 +40,17 @@ namespace GymMangementSystem
             {
                 uctPersonDetails1.LoadPersonInfo(tbSearch.Text);
             }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            FIndNow();
 
         }
 
