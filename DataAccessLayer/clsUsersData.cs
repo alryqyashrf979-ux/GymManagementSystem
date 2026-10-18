@@ -32,7 +32,7 @@ namespace DataAccessLayer
 
                     conn.Open();
 
-                    command.Parameters.AddWithValue("@Permission", Permission);
+                    command.Parameters.AddWithValue("@Permission",Convert.ToInt16(Permission));
                     command.Parameters.AddWithValue("@PersonID", PersonID);
                     command.Parameters.AddWithValue("@UserName", UserName);
                     command.Parameters.AddWithValue("@Password", Password);

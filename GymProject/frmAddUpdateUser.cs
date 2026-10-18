@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace GymMangementSystem
         public enum enMode { AddMode,UpdateMode}
         enMode _Mode = enMode.AddMode;
         private int _Permission=0;
+        private clsUsers _User;
         public frmAddUpdateUser()
         {
             InitializeComponent();
@@ -31,11 +33,35 @@ namespace GymMangementSystem
             this.Close();
         }
 
+        private void _ResetDefaultValues()
+        {
+            if (_Mode == enMode.AddMode)
+            {
+                tpLoginInfo.Enabled = false;
+                lblTitle.Text = "Add User";
+                _User = new clsUsers();
+            }
+            else
+            {
+                lblTitle.Text = "Update User";
+                tpLoginInfo.Enabled = true;
+                btnSave.Enabled = true;
+            }
+
+            tbUserName.Text =string.Empty;
+            tbPassword.Text = string.Empty;
+            tbConfirmPassword.Text = string.Empty;
+            lblPersonID.Text = "???";
+            lblUserID.Text = "???";
+            _SetCheckedValueForAllChkBox(false);
+            rbActive.Checked = true;
+            rbNo.Checked = true;
+        }
 
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
         {
-            tpLoginInfo.Enabled = false;
-            rbNo.Checked = true;
+            _ResetDefaultValues();
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -60,6 +86,7 @@ namespace GymMangementSystem
                 {
                     btnSave.Enabled = true;
                     tpLoginInfo.Enabled = true;
+                    lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
                     tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
                 }
             }
@@ -76,16 +103,20 @@ namespace GymMangementSystem
             pnlPermission.Enabled = false;
         }
 
+        private void _SetCheckedValueForAllChkBox(bool CheckedValue)
+        {
+            chkManageClasses.Checked = CheckedValue;
+            chkManageEmployees.Checked = CheckedValue;
+            chkManagePayments.Checked = CheckedValue;
+            chkManageMembers.Checked = CheckedValue;
+            chkManageTrainers.Checked = CheckedValue;
+            chkManageUsers.Checked = CheckedValue;
+            chkManagePeople.Checked = CheckedValue;
+        }
         private void rbNo_CheckedChanged(object sender, EventArgs e)
         {
             pnlPermission.Enabled = true;
-            chkManageClasses.Checked = false;
-            chkManageEmployees.Checked = false ;
-            chkManagePayments.Checked = false;
-            chkManageMembers.Checked = false;
-            chkManageTrainers.Checked = false;
-            chkManageUsers.Checked = false;
-            chkManagePeople.Checked = false;
+            _SetCheckedValueForAllChkBox(false);
 
         }
 
@@ -130,6 +161,32 @@ namespace GymMangementSystem
         private void chkManageClasses_CheckedChanged(object sender, EventArgs e)
         {
             SetPermission(chkManageClasses, Convert.ToInt32(chkManageClasses.Tag));
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _User.UserName = tbUserName.Text.Trim();
+            _User.Password=clsHashing.Hashing(tbConfirmPassword.Text.Trim());
+            _User.Permission = Convert.ToSByte(_Permission);
+            _User.IsActive = rbActive.Checked;
+            _User.PersonID=Convert.ToInt32(lblPersonID.Text.Trim());
+
+            if (_User.Save())
+            {
+                lblTitle.Text = "Update User";
+                _Mode = enMode.UpdateMode;
+                lblUserID.Text = _User.UserID.ToString();
+                MessageBox.Show("User saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Error : User did not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
     }
 }
