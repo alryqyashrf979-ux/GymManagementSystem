@@ -41,17 +41,18 @@
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvMembersList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.clnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label1 = new System.Windows.Forms.Label();
             this.CountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nationality = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label1 = new System.Windows.Forms.Label();
+            this.EmergencyContactInfoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembersList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             this.btnAddMember.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddUser;
             this.btnAddMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddMember.Location = new System.Drawing.Point(1483, 234);
+            this.btnAddMember.Location = new System.Drawing.Point(1644, 372);
             this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMember.Name = "btnAddMember";
             this.btnAddMember.Size = new System.Drawing.Size(57, 44);
@@ -83,7 +84,7 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_321;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1404, 690);
+            this.btnClose.Location = new System.Drawing.Point(1531, 885);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(142, 34);
@@ -94,7 +95,7 @@
             // 
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(116, 695);
+            this.lblRecord.Location = new System.Drawing.Point(113, 871);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(49, 25);
             this.lblRecord.TabIndex = 114;
@@ -104,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 693);
+            this.label2.Location = new System.Drawing.Point(6, 869);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 113;
@@ -124,7 +125,7 @@
             this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtFiltering.ForeColor = System.Drawing.Color.Black;
             this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Location = new System.Drawing.Point(323, 249);
+            this.txtFiltering.Location = new System.Drawing.Point(325, 382);
             this.txtFiltering.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltering.Name = "txtFiltering";
             this.txtFiltering.PlaceholderText = "Search...";
@@ -154,7 +155,7 @@
             "Phone",
             "Email",
             "Address"});
-            this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(109, 249);
+            this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(109, 378);
             this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
             this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(209, 36);
@@ -165,7 +166,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 253);
+            this.label9.Location = new System.Drawing.Point(11, 386);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 22);
@@ -194,15 +195,16 @@
             this.dgvMembersList.ColumnHeadersHeight = 35;
             this.dgvMembersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvMembersList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clnID,
             this.CountryName,
+            this.clnID,
             this.CurrencyName,
             this.Column4,
             this.ImagePath,
-            this.Nationality,
-            this.Column3,
             this.Column5,
-            this.Address});
+            this.Column3,
+            this.Address,
+            this.EmergencyContactInfoID,
+            this.Column1});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,7 +214,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembersList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMembersList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvMembersList.Location = new System.Drawing.Point(5, 289);
+            this.dgvMembersList.Location = new System.Drawing.Point(2, 427);
             this.dgvMembersList.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMembersList.Name = "dgvMembersList";
             this.dgvMembersList.ReadOnly = true;
@@ -235,7 +237,7 @@
             this.dgvMembersList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMembersList.RowTemplate.Height = 35;
             this.dgvMembersList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembersList.Size = new System.Drawing.Size(1541, 382);
+            this.dgvMembersList.Size = new System.Drawing.Size(1697, 417);
             this.dgvMembersList.TabIndex = 109;
             this.dgvMembersList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMembersList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -248,6 +250,36 @@
             this.dgvMembersList.ThemeStyle.RowsStyle.Height = 35;
             this.dgvMembersList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(2, 899);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
+            this.guna2Separator1.TabIndex = 117;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label1.Location = new System.Drawing.Point(4, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(389, 59);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "Manage Members";
+            // 
+            // CountryName
+            // 
+            this.CountryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CountryName.DataPropertyName = "MemberID";
+            this.CountryName.HeaderText = "Member ID";
+            this.CountryName.MinimumWidth = 6;
+            this.CountryName.Name = "CountryName";
+            this.CountryName.ReadOnly = true;
+            this.CountryName.Width = 150;
+            // 
             // clnID
             // 
             this.clnID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -257,16 +289,6 @@
             this.clnID.Name = "clnID";
             this.clnID.ReadOnly = true;
             this.clnID.Width = 150;
-            // 
-            // CountryName
-            // 
-            this.CountryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CountryName.DataPropertyName = "NationalID";
-            this.CountryName.HeaderText = "National No.";
-            this.CountryName.MinimumWidth = 6;
-            this.CountryName.Name = "CountryName";
-            this.CountryName.ReadOnly = true;
-            this.CountryName.Width = 150;
             // 
             // CurrencyName
             // 
@@ -291,32 +313,12 @@
             // ImagePath
             // 
             this.ImagePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ImagePath.DataPropertyName = "BirthDate";
-            this.ImagePath.HeaderText = "Date Of Birth";
+            this.ImagePath.DataPropertyName = "PhoneNumber";
+            this.ImagePath.HeaderText = "Phone Number";
             this.ImagePath.MinimumWidth = 6;
             this.ImagePath.Name = "ImagePath";
             this.ImagePath.ReadOnly = true;
             this.ImagePath.Width = 250;
-            // 
-            // Nationality
-            // 
-            this.Nationality.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Nationality.DataPropertyName = "Country";
-            this.Nationality.HeaderText = "Nationality";
-            this.Nationality.MinimumWidth = 6;
-            this.Nationality.Name = "Nationality";
-            this.Nationality.ReadOnly = true;
-            this.Nationality.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "PhoneNumber";
-            this.Column3.HeaderText = "Phone";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
             // 
             // Column5
             // 
@@ -328,42 +330,52 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 250;
             // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "CountryName";
+            this.Column3.HeaderText = "Country";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
             // Address
             // 
             this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Address";
+            this.Address.DataPropertyName = "LastSubscriptionDate";
+            this.Address.HeaderText = "Last Subscription Date";
             this.Address.MinimumWidth = 6;
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
-            this.Address.Width = 125;
+            this.Address.Width = 200;
             // 
-            // guna2Separator1
+            // EmergencyContactInfoID
             // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(5, 723);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
-            this.guna2Separator1.TabIndex = 117;
+            this.EmergencyContactInfoID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EmergencyContactInfoID.DataPropertyName = "EmergencyContactID";
+            this.EmergencyContactInfoID.HeaderText = "EmergencyContactID";
+            this.EmergencyContactInfoID.MinimumWidth = 6;
+            this.EmergencyContactInfoID.Name = "EmergencyContactInfoID";
+            this.EmergencyContactInfoID.ReadOnly = true;
+            this.EmergencyContactInfoID.Width = 200;
             // 
-            // label1
+            // Column1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(4, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 59);
-            this.label1.TabIndex = 118;
-            this.label1.Text = "Manage Members";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.DataPropertyName = "IsActive";
+            this.Column1.HeaderText = "IsActive";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
             // 
             // frmManageMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1556, 735);
+            this.ClientSize = new System.Drawing.Size(1712, 935);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.btnAddMember);
@@ -378,6 +390,7 @@
             this.Name = "frmManageMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "manage Members";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembersList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -394,16 +407,17 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmSelectTypeOfFiltering;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMembersList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnID;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CountryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrencyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImagePath;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nationality;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyContactInfoID;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }
