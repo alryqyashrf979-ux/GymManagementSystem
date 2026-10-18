@@ -55,6 +55,17 @@ namespace GymMangementSystem
                     MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     uctPersonDetailsWithFilter1.FocusOnTbSearch();
                 }
+                else
+                {
+                    btnSave.Enabled = true;
+                    tpLoginInfo.Enabled = true;
+                    tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                uctPersonDetailsWithFilter1.FocusOnTbSearch();
             }
 
         }
