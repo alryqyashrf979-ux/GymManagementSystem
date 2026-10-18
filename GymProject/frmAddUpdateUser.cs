@@ -36,5 +36,10 @@ namespace GymMangementSystem
         {
             tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
         }
+
+        private void frmAddUpdateUser_Load(object sender, EventArgs e)
+        {
+            tpLoginInfo.Enabled = false;
+        }
     }
 }
