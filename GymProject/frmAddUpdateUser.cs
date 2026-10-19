@@ -142,7 +142,6 @@ namespace GymMangementSystem
                 return;
             }
 
-            uctPersonDetailsWithFilter1.SetValueInTextbox(_User.PersonID);
             uctPersonDetailsWithFilter1.LoadPersonInfo(_User.PersonID);
             lblPersonID.Text = _User.PersonID.ToString();
             tbUserName.Text = _User.UserName;
@@ -159,11 +158,6 @@ namespace GymMangementSystem
 
         }
 
-        private void rbYes_CheckedChanged(object sender, EventArgs e)
-        {
-            pnlPermission.Enabled = false;
-        }
-
         private void _SetCheckedValueForAllChkBox(bool CheckedValue)
         {
             chkManageClasses.Checked = CheckedValue;
@@ -174,12 +168,7 @@ namespace GymMangementSystem
             chkManageUsers.Checked = CheckedValue;
             chkManagePeople.Checked = CheckedValue;
         }
-        private void rbNo_CheckedChanged(object sender, EventArgs e)
-        {
-            pnlPermission.Enabled = true;
-            _SetCheckedValueForAllChkBox(false);
-
-        }
+     
 
         private void SetPermission(CheckBox _checkbox,int permissionNumber)
         {
@@ -196,73 +185,6 @@ namespace GymMangementSystem
             SetPermission(checkbox, Convert.ToInt32(checkbox.Tag));
         }
 
-
-        //private void chkManagePeople_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManagePeople, Convert.ToInt32(chkManagePeople.Tag));
-        //}
-
-        //private void chkManageUsers_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManageUsers, Convert.ToInt32(chkManageUsers.Tag));
-        //}
-
-        //private void chkManageMembers_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManageMembers, Convert.ToInt32(chkManageMembers.Tag));
-        //}
-
-        //private void chkManagePayments_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManagePayments, Convert.ToInt32(chkManagePayments.Tag));
-        //}
-
-        //private void chkManageEmployees_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManageEmployees, Convert.ToInt32(chkManageEmployees.Tag));
-        //}
-
-        //private void chkManageTrainers_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManageTrainers, Convert.ToInt32(chkManageTrainers.Tag));
-        //}
-
-        //private void chkManageClasses_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    SetPermission(chkManageClasses, Convert.ToInt32(chkManageClasses.Tag));
-        //}
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (!this.ValidateChildren())
-            {
-                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            _User.UserName = tbUserName.Text.Trim();
-            //if(clsHashing.Hashing(tbConfirmPassword.Text.Trim())!= clsHashing.Hashing(_User.Password))
-            //_User.Password=clsHashing.Hashing(tbConfirmPassword.Text.Trim());
-
-            _User.Password = tbConfirmPassword.Text.Trim();
-
-            _User.Permission = Convert.ToSByte(_Permission);
-            _User.IsActive = rbActive.Checked;
-            _User.PersonID=Convert.ToInt32(lblPersonID.Text.Trim());
-
-            if (_User.Save())
-            {
-                lblTitle.Text = "Update User";
-                lblTitle2.Text = "Update User";
-                _Mode = enMode.UpdateMode;
-                lblUserID.Text = _User.UserID.ToString();
-                MessageBox.Show("User saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("Error : User did not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        }
-
         private void tbConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
             if (tbPassword.Text != tbConfirmPassword.Text)
@@ -277,6 +199,48 @@ namespace GymMangementSystem
                 errorProvider1.SetError(tbUserName, "this username already in user choose another one.");
             else
                 errorProvider1.SetError(tbUserName, "");
+        }
+
+        private void rbYes_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlPermission.Enabled = false;
+            _Permission = -1;
+        }
+
+        private void rbNo_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlPermission.Enabled = true;
+            _SetCheckedValueForAllChkBox(false);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _User.UserName = tbUserName.Text.Trim();
+      
+
+            _User.Password = tbConfirmPassword.Text.Trim();
+
+            _User.Permission = Convert.ToSByte(_Permission);
+            _User.IsActive = rbActive.Checked;
+            _User.PersonID = Convert.ToInt32(lblPersonID.Text.Trim());
+
+            if (_User.Save())
+            {
+                lblTitle.Text = "Update User";
+                lblTitle2.Text = "Update User";
+                _Mode = enMode.UpdateMode;
+                lblUserID.Text = _User.UserID.ToString();
+                MessageBox.Show("User saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Error : User did not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
     }
 }
