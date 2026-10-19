@@ -16,5 +16,15 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void txtCurrentPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
