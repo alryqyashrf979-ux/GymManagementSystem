@@ -23,7 +23,6 @@ namespace GymMangementSystem
 
         private void frmChangePassword_Load(object sender, EventArgs e)
         {
-
            
         }
 
@@ -43,9 +42,36 @@ namespace GymMangementSystem
                 errorProvider1.SetError(txtConfirmPassword, "");
         }
 
+        private void _ResetDefaultValues()
+        {
+            txtNewPassword.Clear();
+            txtCurrentPassword.Clear();
+            txtConfirmPassword.Clear();
+            txtCurrentPassword.Focus();
+        }
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (clsUsers.ChangePassword(_UserID, clsHashing.Hashing(txtConfirmPassword.Text)))
+            {
+                _ResetDefaultValues();
+                MessageBox.Show("Password changed successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Faild to change Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+        }
+
+        private void frmChangePassword_Activated(object sender, EventArgs e)
+        {
+            txtCurrentPassword.Focus();
+
         }
     }
 }

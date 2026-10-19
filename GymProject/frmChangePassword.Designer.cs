@@ -294,6 +294,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Activated += new System.EventHandler(this.frmChangePassword_Activated);
             this.Load += new System.EventHandler(this.frmChangePassword_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
