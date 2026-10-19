@@ -13,8 +13,8 @@ namespace DataBusinessLayer
 {
     public class clsMembers : clsEmergencyContacts
     {
-        public enum enMode{ add = 1, edit = 2 }
-        public enMode Mode = enMode.add;
+        private enum enMode{ add = 1, edit = 2 }
+        private enMode _Mode = enMode.add;
         private int _MemberID;
         public int MemberID { get { return _MemberID; } }
 
@@ -23,16 +23,16 @@ namespace DataBusinessLayer
         public bool IsActive { set; get; }
         public clsPeople PersonInfo { set; get; }
 
-        public clsMembers() 
+        public clsMembers():base()
         {
 
             _MemberID = -1;
             PersonID = -1;
             LastSubscriptionDate = default(DateTime);
             IsActive = false;
-            Mode = enMode.add;
+            _Mode = enMode.add;
             PersonInfo = null;
-            Mode = enMode.add;
+            _Mode = enMode.add;
         }
         public clsMembers(int MemberID, int personID, DateTime lastSubscriptionDate, bool IsActive, int EmergencyContactID,string ContactName,string ContactPhone,string Relationship):
                                                                                                                       base(ContactName,Relationship,ContactPhone, EmergencyContactID)
@@ -42,7 +42,7 @@ namespace DataBusinessLayer
             this.LastSubscriptionDate = lastSubscriptionDate;
             this.IsActive = IsActive;
             this.PersonInfo = clsPeople.Find(PersonID);
-            Mode = enMode.edit;
+            _Mode = enMode.edit;
         }
 
         static public DataTable GetAllMembers()
@@ -58,9 +58,12 @@ namespace DataBusinessLayer
         {
             return clsMembersDataAccess.DoesPersonExistByMemberID(MemberID);
         }
-        public bool Delete(int memberID)
+        public bool Delete()
         {
-            return clsMembersDataAccess.Delete(memberID);
+            if (clsMembersDataAccess.Delete(this.MemberID))
+                return base.DeleteEmergencyContact();
+            else
+                return false;
         }
         private bool _Update()
         {
@@ -71,9 +74,16 @@ namespace DataBusinessLayer
             this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactID);
             return _MemberID != -1;
         }
-        public bool Save()
+        public new bool Save()
         {
-            switch (Mode)
+
+            base.Mode = (clsEmergencyContacts.enMode)_Mode;
+
+            if (!base.Save())
+                return false;
+
+
+            switch (_Mode)
             {
                 case enMode.add:
                     {
