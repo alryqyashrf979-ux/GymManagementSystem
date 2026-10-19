@@ -79,7 +79,7 @@ namespace DataAccessLayer
 
                     conn.Open();
 
-                    command.Parameters.AddWithValue("@Permission", Permission);
+                    command.Parameters.AddWithValue("@Permission",Convert.ToInt16(Permission));
                     command.Parameters.AddWithValue("@PersonID", PersonID);
                     command.Parameters.AddWithValue("@UserName", UserName);
                     command.Parameters.AddWithValue("@Password", Password);
@@ -323,7 +323,7 @@ namespace DataAccessLayer
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
-                    Permission = (sbyte)reader["Permission"];
+                    Permission = Convert.ToSByte(reader["Permission"]);
 
 
                 }

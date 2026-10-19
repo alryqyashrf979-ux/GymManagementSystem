@@ -32,7 +32,7 @@
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
@@ -139,7 +139,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.lblTitle2);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 3);
@@ -147,16 +147,16 @@
             this.panel4.Size = new System.Drawing.Size(897, 37);
             this.panel4.TabIndex = 13;
             // 
-            // label14
+            // lblTitle2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(46, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 26);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Add User";
+            this.lblTitle2.AutoSize = true;
+            this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle2.ForeColor = System.Drawing.Color.White;
+            this.lblTitle2.Location = new System.Drawing.Point(46, 5);
+            this.lblTitle2.Name = "lblTitle2";
+            this.lblTitle2.Size = new System.Drawing.Size(97, 26);
+            this.lblTitle2.TabIndex = 2;
+            this.lblTitle2.Text = "Add User";
             // 
             // pictureBox10
             // 
@@ -985,7 +985,7 @@
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbDisactive;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbActive;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panle11;
         private System.Windows.Forms.Panel panel6;

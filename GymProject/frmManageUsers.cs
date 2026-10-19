@@ -148,6 +148,7 @@ namespace GymMangementSystem
         {
             Form frm = new frmAddUpdateUser((int)dgvShowUserList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            frmManageUsers_Load(null, null);
         }
     }
 }
