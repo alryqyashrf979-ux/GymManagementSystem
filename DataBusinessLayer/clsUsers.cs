@@ -53,7 +53,10 @@ namespace DataBusinessLayer
             Mode = enMode.Update;
         }
 
-
+        static public bool ChangePassword(int UserID,string Password)
+        {
+            return clsUsersData.UpdatePassword(UserID, Password);
+        }
 
         private bool _AddNewUser()
         {

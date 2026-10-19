@@ -100,7 +100,37 @@ namespace DataAccessLayer
 
         }
 
+        public static bool UpdatePassword(int UserID,string Password)
+        {
 
+            string query = @"UPDATE Users SET  Password=@Password WHERE UserID=@UserID;";
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+
+                    conn.Open();
+
+              
+                    command.Parameters.AddWithValue("@Password", Password);
+                    command.Parameters.AddWithValue("@UserID", UserID);
+
+
+                    return command.ExecuteNonQuery() > 0;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
 
         public static DataTable GetAllUsers()
         {
