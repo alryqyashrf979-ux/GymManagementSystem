@@ -30,29 +30,29 @@
         {
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblsActive = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblUserID = new System.Windows.Forms.Label();
-            this.lable = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblsActive = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblUserID = new System.Windows.Forms.Label();
+            this.lable = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // uctPersonDetails1
@@ -81,54 +81,6 @@
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(-310, 0);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.LoginInformation;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(263, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 52);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(573, 53);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 52);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.lblUserID);
-            this.panel3.Controls.Add(this.lable);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(10, 52);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(228, 49);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.lblUsername);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(293, 53);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(228, 49);
-            this.panel4.TabIndex = 4;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -140,25 +92,26 @@
             this.panel5.Size = new System.Drawing.Size(228, 49);
             this.panel5.TabIndex = 5;
             // 
-            // pictureBox2
+            // lblsActive
             // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.lblsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.lblsActive.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.lblsActive.Location = new System.Drawing.Point(66, 23);
+            this.lblsActive.Name = "lblsActive";
+            this.lblsActive.Size = new System.Drawing.Size(24, 20);
+            this.lblsActive.TabIndex = 2;
+            this.lblsActive.Text = "???";
             // 
-            // pictureBox3
+            // label4
             // 
-            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox3.Location = new System.Drawing.Point(23, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 33);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(63, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Is Active";
             // 
             // pictureBox4
             // 
@@ -170,27 +123,16 @@
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
-            // lblUserID
+            // panel4
             // 
-            this.lblUserID.AutoSize = true;
-            this.lblUserID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.ForeColor = System.Drawing.Color.Black;
-            this.lblUserID.Location = new System.Drawing.Point(56, 26);
-            this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(29, 18);
-            this.lblUserID.TabIndex = 7;
-            this.lblUserID.Text = "???";
-            // 
-            // lable
-            // 
-            this.lable.AutoSize = true;
-            this.lable.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable.ForeColor = System.Drawing.Color.Gray;
-            this.lable.Location = new System.Drawing.Point(58, 8);
-            this.lable.Name = "lable";
-            this.lable.Size = new System.Drawing.Size(43, 13);
-            this.lable.TabIndex = 6;
-            this.lable.Text = "User ID";
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.lblUsername);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.pictureBox3);
+            this.panel4.Location = new System.Drawing.Point(293, 53);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(228, 49);
+            this.panel4.TabIndex = 4;
             // 
             // lblUsername
             // 
@@ -214,26 +156,84 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Username";
             // 
-            // label4
+            // pictureBox3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(63, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Is Active";
+            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox3.Location = new System.Drawing.Point(23, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
-            // lblsActive
+            // panel3
             // 
-            this.lblsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
-            this.lblsActive.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.lblsActive.Location = new System.Drawing.Point(66, 23);
-            this.lblsActive.Name = "lblsActive";
-            this.lblsActive.Size = new System.Drawing.Size(24, 20);
-            this.lblsActive.TabIndex = 2;
-            this.lblsActive.Text = "???";
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.lblUserID);
+            this.panel3.Controls.Add(this.lable);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Location = new System.Drawing.Point(10, 52);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(228, 49);
+            this.panel3.TabIndex = 3;
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.ForeColor = System.Drawing.Color.Black;
+            this.lblUserID.Location = new System.Drawing.Point(56, 26);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(29, 18);
+            this.lblUserID.TabIndex = 7;
+            this.lblUserID.Text = "???";
+            // 
+            // lable
+            // 
+            this.lable.AutoSize = true;
+            this.lable.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable.ForeColor = System.Drawing.Color.Gray;
+            this.lable.Location = new System.Drawing.Point(58, 8);
+            this.lable.Name = "lable";
+            this.lable.Size = new System.Drawing.Size(43, 13);
+            this.lable.TabIndex = 6;
+            this.lable.Text = "User ID";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(573, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 52);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(263, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 52);
+            this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.LoginInformation;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ctrlUserDetails
             // 
@@ -244,17 +244,18 @@
             this.Controls.Add(this.uctPersonDetails1);
             this.Name = "ctrlUserDetails";
             this.Size = new System.Drawing.Size(887, 421);
+            this.Load += new System.EventHandler(this.ctrlUserDetails_Load);
             this.guna2GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
