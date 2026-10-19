@@ -17,6 +17,11 @@ namespace GymMangementSystem
         {
             get { return uctPersonDetails1.PersonID; }
         }
+        public clsPeople PersonInfo
+        {
+            get => uctPersonDetails1.PersonInfo;
+        }
+
         public clsCountries CountryInfo
         {
             get { return uctPersonDetails1.CountryInfo; }

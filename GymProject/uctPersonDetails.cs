@@ -47,6 +47,7 @@ namespace GymMangementSystem
             lbNationalNo.Text = "???";
             lbPersonID.Text = "???";
             lbPhone.Text = "???";
+            _PersonID = -1;
             picPersonalImage.Image = Properties.Resources.Male;
         }
 
