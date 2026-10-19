@@ -35,7 +35,6 @@
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -85,6 +84,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -116,9 +116,9 @@
             // tpPersonalInfo
             // 
             this.tpPersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.tpPersonalInfo.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.tpPersonalInfo.Controls.Add(this.panel4);
             this.tpPersonalInfo.Controls.Add(this.btnNext);
-            this.tpPersonalInfo.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 25);
             this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
@@ -182,22 +182,13 @@
             this.btnNext.Image = global::GymMangementSystem.Properties.Resources.Next_64;
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1036, 560);
+            this.btnNext.Location = new System.Drawing.Point(1044, 567);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 37);
             this.btnNext.TabIndex = 12;
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // uctPersonDetailsWithFilter1
-            // 
-            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(5, 53);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
-            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1193, 475);
-            this.uctPersonDetailsWithFilter1.TabIndex = 1;
             // 
             // tcUserInfo
             // 
@@ -903,6 +894,15 @@
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             // 
+            // uctPersonDetailsWithFilter1
+            // 
+            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(2, 58);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 503);
+            this.uctPersonDetailsWithFilter1.TabIndex = 14;
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -956,7 +956,6 @@
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2Button btnNext;
-        private uctPersonDetailsWithFilter uctPersonDetailsWithFilter1;
         private System.Windows.Forms.TabPage tpLoginInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1005,5 +1004,6 @@
         private System.Windows.Forms.CheckBox chkManageMembers;
         private System.Windows.Forms.CheckBox chkManagePeople;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
+        private uctPersonDetailsWithFilter uctPersonDetailsWithFilter1;
     }
 }
