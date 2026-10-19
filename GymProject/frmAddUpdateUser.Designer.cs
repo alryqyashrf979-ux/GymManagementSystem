@@ -38,17 +38,17 @@
             this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.rbNo = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbYes = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlPermission = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.rbDisactive = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbActive = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.chkManageClasses = new System.Windows.Forms.CheckBox();
             this.chkManageUsers = new System.Windows.Forms.CheckBox();
             this.chkManageEmployees = new System.Windows.Forms.CheckBox();
@@ -56,6 +56,11 @@
             this.chkManageTrainers = new System.Windows.Forms.CheckBox();
             this.chkManageMembers = new System.Windows.Forms.CheckBox();
             this.chkManagePeople = new System.Windows.Forms.CheckBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.rbDisactive = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbActive = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -80,17 +85,17 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcUserInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.pnlPermission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -102,8 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -112,6 +115,7 @@
             // 
             // tpPersonalInfo
             // 
+            this.tpPersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.tpPersonalInfo.Controls.Add(this.panel4);
             this.tpPersonalInfo.Controls.Add(this.btnNext);
             this.tpPersonalInfo.Controls.Add(this.uctPersonDetailsWithFilter1);
@@ -123,7 +127,6 @@
             this.tpPersonalInfo.Size = new System.Drawing.Size(1207, 613);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
-            this.tpPersonalInfo.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -179,7 +182,7 @@
             this.btnNext.Image = global::GymMangementSystem.Properties.Resources.Next_64;
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(987, 442);
+            this.btnNext.Location = new System.Drawing.Point(1036, 560);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 37);
@@ -190,10 +193,10 @@
             // uctPersonDetailsWithFilter1
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 39);
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 53);
             this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1196, 463);
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1196, 475);
             this.uctPersonDetailsWithFilter1.TabIndex = 1;
             // 
             // tcUserInfo
@@ -244,6 +247,42 @@
             this.tpLoginInfo.Size = new System.Drawing.Size(1207, 613);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1199, 46);
+            this.panel1.TabIndex = 66;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(61, 6);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(119, 32);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "Add User";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox12
             // 
@@ -300,44 +339,156 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label18);
-            this.guna2Panel1.Controls.Add(this.pictureBox11);
+            this.guna2Panel1.Controls.Add(this.pnlPermission);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
-            this.guna2Panel1.Controls.Add(this.chkManageClasses);
-            this.guna2Panel1.Controls.Add(this.chkManageUsers);
-            this.guna2Panel1.Controls.Add(this.chkManageEmployees);
-            this.guna2Panel1.Controls.Add(this.chkManagePayments);
-            this.guna2Panel1.Controls.Add(this.chkManageTrainers);
-            this.guna2Panel1.Controls.Add(this.chkManageMembers);
-            this.guna2Panel1.Controls.Add(this.chkManagePeople);
             this.guna2Panel1.Location = new System.Drawing.Point(39, 352);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1124, 251);
             this.guna2Panel1.TabIndex = 29;
             // 
+            // pnlPermission
+            // 
+            this.pnlPermission.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPermission.Controls.Add(this.guna2VSeparator2);
+            this.pnlPermission.Controls.Add(this.label18);
+            this.pnlPermission.Controls.Add(this.pictureBox11);
+            this.pnlPermission.Controls.Add(this.chkManageClasses);
+            this.pnlPermission.Controls.Add(this.chkManageUsers);
+            this.pnlPermission.Controls.Add(this.chkManageEmployees);
+            this.pnlPermission.Controls.Add(this.chkManagePayments);
+            this.pnlPermission.Controls.Add(this.chkManageTrainers);
+            this.pnlPermission.Controls.Add(this.chkManageMembers);
+            this.pnlPermission.Controls.Add(this.chkManagePeople);
+            this.pnlPermission.Location = new System.Drawing.Point(4, 60);
+            this.pnlPermission.Name = "pnlPermission";
+            this.pnlPermission.Size = new System.Drawing.Size(1116, 185);
+            this.pnlPermission.TabIndex = 70;
+            // 
+            // guna2VSeparator2
+            // 
+            this.guna2VSeparator2.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2VSeparator2.FillThickness = 2;
+            this.guna2VSeparator2.Location = new System.Drawing.Point(389, 36);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 142);
+            this.guna2VSeparator2.TabIndex = 79;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(55, 63);
+            this.label18.Location = new System.Drawing.Point(55, 9);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(259, 27);
-            this.label18.TabIndex = 62;
+            this.label18.TabIndex = 71;
             this.label18.Text = "Management Permission :";
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Setting;
-            this.pictureBox11.Location = new System.Drawing.Point(9, 59);
+            this.pictureBox11.Location = new System.Drawing.Point(9, 5);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(37, 33);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 61;
+            this.pictureBox11.TabIndex = 70;
             this.pictureBox11.TabStop = false;
+            // 
+            // chkManageClasses
+            // 
+            this.chkManageClasses.AutoSize = true;
+            this.chkManageClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManageClasses.Location = new System.Drawing.Point(484, 35);
+            this.chkManageClasses.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManageClasses.Name = "chkManageClasses";
+            this.chkManageClasses.Size = new System.Drawing.Size(171, 32);
+            this.chkManageClasses.TabIndex = 75;
+            this.chkManageClasses.Tag = "64";
+            this.chkManageClasses.Text = "Manage Classes";
+            this.chkManageClasses.UseVisualStyleBackColor = true;
+            // 
+            // chkManageUsers
+            // 
+            this.chkManageUsers.AutoSize = true;
+            this.chkManageUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManageUsers.Location = new System.Drawing.Point(55, 107);
+            this.chkManageUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManageUsers.Name = "chkManageUsers";
+            this.chkManageUsers.Size = new System.Drawing.Size(157, 32);
+            this.chkManageUsers.TabIndex = 78;
+            this.chkManageUsers.Tag = "2";
+            this.chkManageUsers.Text = "Manage Users";
+            this.chkManageUsers.UseVisualStyleBackColor = true;
+            // 
+            // chkManageEmployees
+            // 
+            this.chkManageEmployees.AutoSize = true;
+            this.chkManageEmployees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManageEmployees.Location = new System.Drawing.Point(484, 111);
+            this.chkManageEmployees.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManageEmployees.Name = "chkManageEmployees";
+            this.chkManageEmployees.Size = new System.Drawing.Size(204, 32);
+            this.chkManageEmployees.TabIndex = 73;
+            this.chkManageEmployees.Tag = "16";
+            this.chkManageEmployees.Text = "Manage Employees";
+            this.chkManageEmployees.UseVisualStyleBackColor = true;
+            // 
+            // chkManagePayments
+            // 
+            this.chkManagePayments.AutoSize = true;
+            this.chkManagePayments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManagePayments.ForeColor = System.Drawing.Color.Black;
+            this.chkManagePayments.Location = new System.Drawing.Point(484, 73);
+            this.chkManagePayments.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManagePayments.Name = "chkManagePayments";
+            this.chkManagePayments.Size = new System.Drawing.Size(193, 32);
+            this.chkManagePayments.TabIndex = 74;
+            this.chkManagePayments.Tag = "8";
+            this.chkManagePayments.Text = "Manage Payments";
+            this.chkManagePayments.UseVisualStyleBackColor = true;
+            // 
+            // chkManageTrainers
+            // 
+            this.chkManageTrainers.AutoSize = true;
+            this.chkManageTrainers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManageTrainers.Location = new System.Drawing.Point(484, 149);
+            this.chkManageTrainers.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManageTrainers.Name = "chkManageTrainers";
+            this.chkManageTrainers.Size = new System.Drawing.Size(176, 32);
+            this.chkManageTrainers.TabIndex = 76;
+            this.chkManageTrainers.Tag = "32";
+            this.chkManageTrainers.Text = "Manage Trainers";
+            this.chkManageTrainers.UseVisualStyleBackColor = true;
+            // 
+            // chkManageMembers
+            // 
+            this.chkManageMembers.AutoSize = true;
+            this.chkManageMembers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManageMembers.Location = new System.Drawing.Point(55, 145);
+            this.chkManageMembers.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManageMembers.Name = "chkManageMembers";
+            this.chkManageMembers.Size = new System.Drawing.Size(192, 32);
+            this.chkManageMembers.TabIndex = 77;
+            this.chkManageMembers.Tag = "4";
+            this.chkManageMembers.Text = "Manage Members";
+            this.chkManageMembers.UseVisualStyleBackColor = true;
+            // 
+            // chkManagePeople
+            // 
+            this.chkManagePeople.AutoSize = true;
+            this.chkManagePeople.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManagePeople.Location = new System.Drawing.Point(55, 69);
+            this.chkManagePeople.Margin = new System.Windows.Forms.Padding(4);
+            this.chkManagePeople.Name = "chkManagePeople";
+            this.chkManagePeople.Size = new System.Drawing.Size(169, 32);
+            this.chkManagePeople.TabIndex = 72;
+            this.chkManagePeople.Tag = "1";
+            this.chkManagePeople.Text = "Manage People";
+            this.chkManagePeople.UseVisualStyleBackColor = true;
             // 
             // guna2Panel2
             // 
@@ -414,98 +565,6 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
-            // 
-            // chkManageClasses
-            // 
-            this.chkManageClasses.AutoSize = true;
-            this.chkManageClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManageClasses.Location = new System.Drawing.Point(484, 89);
-            this.chkManageClasses.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManageClasses.Name = "chkManageClasses";
-            this.chkManageClasses.Size = new System.Drawing.Size(171, 32);
-            this.chkManageClasses.TabIndex = 66;
-            this.chkManageClasses.Tag = "64";
-            this.chkManageClasses.Text = "Manage Classes";
-            this.chkManageClasses.UseVisualStyleBackColor = true;
-            // 
-            // chkManageUsers
-            // 
-            this.chkManageUsers.AutoSize = true;
-            this.chkManageUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManageUsers.Location = new System.Drawing.Point(55, 161);
-            this.chkManageUsers.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManageUsers.Name = "chkManageUsers";
-            this.chkManageUsers.Size = new System.Drawing.Size(157, 32);
-            this.chkManageUsers.TabIndex = 69;
-            this.chkManageUsers.Tag = "2";
-            this.chkManageUsers.Text = "Manage Users";
-            this.chkManageUsers.UseVisualStyleBackColor = true;
-            // 
-            // chkManageEmployees
-            // 
-            this.chkManageEmployees.AutoSize = true;
-            this.chkManageEmployees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManageEmployees.Location = new System.Drawing.Point(484, 165);
-            this.chkManageEmployees.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManageEmployees.Name = "chkManageEmployees";
-            this.chkManageEmployees.Size = new System.Drawing.Size(204, 32);
-            this.chkManageEmployees.TabIndex = 64;
-            this.chkManageEmployees.Tag = "16";
-            this.chkManageEmployees.Text = "Manage Employees";
-            this.chkManageEmployees.UseVisualStyleBackColor = true;
-            // 
-            // chkManagePayments
-            // 
-            this.chkManagePayments.AutoSize = true;
-            this.chkManagePayments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManagePayments.ForeColor = System.Drawing.Color.Black;
-            this.chkManagePayments.Location = new System.Drawing.Point(484, 127);
-            this.chkManagePayments.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManagePayments.Name = "chkManagePayments";
-            this.chkManagePayments.Size = new System.Drawing.Size(193, 32);
-            this.chkManagePayments.TabIndex = 65;
-            this.chkManagePayments.Tag = "8";
-            this.chkManagePayments.Text = "Manage Payments";
-            this.chkManagePayments.UseVisualStyleBackColor = true;
-            // 
-            // chkManageTrainers
-            // 
-            this.chkManageTrainers.AutoSize = true;
-            this.chkManageTrainers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManageTrainers.Location = new System.Drawing.Point(484, 203);
-            this.chkManageTrainers.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManageTrainers.Name = "chkManageTrainers";
-            this.chkManageTrainers.Size = new System.Drawing.Size(176, 32);
-            this.chkManageTrainers.TabIndex = 67;
-            this.chkManageTrainers.Tag = "32";
-            this.chkManageTrainers.Text = "Manage Trainers";
-            this.chkManageTrainers.UseVisualStyleBackColor = true;
-            // 
-            // chkManageMembers
-            // 
-            this.chkManageMembers.AutoSize = true;
-            this.chkManageMembers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManageMembers.Location = new System.Drawing.Point(55, 199);
-            this.chkManageMembers.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManageMembers.Name = "chkManageMembers";
-            this.chkManageMembers.Size = new System.Drawing.Size(192, 32);
-            this.chkManageMembers.TabIndex = 68;
-            this.chkManageMembers.Tag = "4";
-            this.chkManageMembers.Text = "Manage Members";
-            this.chkManageMembers.UseVisualStyleBackColor = true;
-            // 
-            // chkManagePeople
-            // 
-            this.chkManagePeople.AutoSize = true;
-            this.chkManagePeople.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManagePeople.Location = new System.Drawing.Point(55, 123);
-            this.chkManagePeople.Margin = new System.Windows.Forms.Padding(4);
-            this.chkManagePeople.Name = "chkManagePeople";
-            this.chkManagePeople.Size = new System.Drawing.Size(169, 32);
-            this.chkManagePeople.TabIndex = 63;
-            this.chkManagePeople.Tag = "1";
-            this.chkManagePeople.Text = "Manage People";
-            this.chkManagePeople.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -787,10 +846,10 @@
             this.guna2Panel3.Controls.Add(this.btnSave);
             this.guna2Panel3.Controls.Add(this.btnClose);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(6, 649);
+            this.guna2Panel3.Location = new System.Drawing.Point(6, 650);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1205, 64);
+            this.guna2Panel3.Size = new System.Drawing.Size(1205, 63);
             this.guna2Panel3.TabIndex = 15;
             // 
             // btnSave
@@ -844,42 +903,6 @@
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1199, 46);
-            this.panel1.TabIndex = 66;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(61, 6);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(119, 32);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Add User";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -902,9 +925,13 @@
             this.tcUserInfo.ResumeLayout(false);
             this.tpLoginInfo.ResumeLayout(false);
             this.tpLoginInfo.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.pnlPermission.ResumeLayout(false);
+            this.pnlPermission.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -917,9 +944,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -956,19 +980,10 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private Guna.UI2.WinForms.Guna2RadioButton rbDisactive;
         private Guna.UI2.WinForms.Guna2RadioButton rbActive;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.CheckBox chkManageClasses;
-        private System.Windows.Forms.CheckBox chkManageUsers;
-        private System.Windows.Forms.CheckBox chkManageEmployees;
-        private System.Windows.Forms.CheckBox chkManagePayments;
-        private System.Windows.Forms.CheckBox chkManageTrainers;
-        private System.Windows.Forms.CheckBox chkManageMembers;
-        private System.Windows.Forms.CheckBox chkManagePeople;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2RadioButton rbNo;
         private Guna.UI2.WinForms.Guna2RadioButton rbYes;
@@ -979,5 +994,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel pnlPermission;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.CheckBox chkManageClasses;
+        private System.Windows.Forms.CheckBox chkManageUsers;
+        private System.Windows.Forms.CheckBox chkManageEmployees;
+        private System.Windows.Forms.CheckBox chkManagePayments;
+        private System.Windows.Forms.CheckBox chkManageTrainers;
+        private System.Windows.Forms.CheckBox chkManageMembers;
+        private System.Windows.Forms.CheckBox chkManagePeople;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
     }
 }
