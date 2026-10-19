@@ -80,6 +80,9 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -99,6 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.guna2Panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -112,9 +117,9 @@
             this.tpPersonalInfo.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
-            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Size = new System.Drawing.Size(1207, 613);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
@@ -127,7 +132,7 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(4, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1199, 46);
             this.panel4.TabIndex = 13;
@@ -149,7 +154,7 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(56, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +191,7 @@
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
             this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 39);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
             this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1196, 463);
             this.uctPersonDetailsWithFilter1.TabIndex = 1;
@@ -197,7 +202,7 @@
             this.tcUserInfo.Controls.Add(this.tpLoginInfo);
             this.tcUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.tcUserInfo.Location = new System.Drawing.Point(0, 0);
-            this.tcUserInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcUserInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tcUserInfo.Name = "tcUserInfo";
             this.tcUserInfo.SelectedIndex = 0;
             this.tcUserInfo.Size = new System.Drawing.Size(1215, 642);
@@ -206,6 +211,7 @@
             // tpLoginInfo
             // 
             this.tpLoginInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.tpLoginInfo.Controls.Add(this.panel1);
             this.tpLoginInfo.Controls.Add(this.pictureBox12);
             this.tpLoginInfo.Controls.Add(this.rbNo);
             this.tpLoginInfo.Controls.Add(this.rbYes);
@@ -232,9 +238,9 @@
             this.tpLoginInfo.Controls.Add(this.pictureBox5);
             this.tpLoginInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpLoginInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpLoginInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpLoginInfo.Name = "tpLoginInfo";
-            this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tpLoginInfo.Size = new System.Drawing.Size(1207, 613);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
@@ -242,8 +248,8 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.Verfication;
-            this.pictureBox12.Location = new System.Drawing.Point(41, 310);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Location = new System.Drawing.Point(41, 315);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(52, 33);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -258,8 +264,8 @@
             this.rbNo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbNo.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbNo.CheckedState.InnerOffset = -4;
-            this.rbNo.Location = new System.Drawing.Point(297, 268);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNo.Location = new System.Drawing.Point(297, 272);
+            this.rbNo.Margin = new System.Windows.Forms.Padding(4);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(60, 32);
             this.rbNo.TabIndex = 64;
@@ -277,8 +283,8 @@
             this.rbYes.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbYes.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbYes.CheckedState.InnerOffset = -4;
-            this.rbYes.Location = new System.Drawing.Point(209, 268);
-            this.rbYes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbYes.Location = new System.Drawing.Point(209, 272);
+            this.rbYes.Margin = new System.Windows.Forms.Padding(4);
             this.rbYes.Name = "rbYes";
             this.rbYes.Size = new System.Drawing.Size(60, 32);
             this.rbYes.TabIndex = 63;
@@ -304,8 +310,8 @@
             this.guna2Panel1.Controls.Add(this.chkManageTrainers);
             this.guna2Panel1.Controls.Add(this.chkManageMembers);
             this.guna2Panel1.Controls.Add(this.chkManagePeople);
-            this.guna2Panel1.Location = new System.Drawing.Point(39, 347);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(39, 352);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1124, 251);
             this.guna2Panel1.TabIndex = 29;
@@ -326,7 +332,7 @@
             // 
             this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Setting;
             this.pictureBox11.Location = new System.Drawing.Point(9, 59);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(37, 33);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -343,7 +349,7 @@
             this.guna2Panel2.Controls.Add(this.pictureBox7);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(242)))));
             this.guna2Panel2.Location = new System.Drawing.Point(4, 4);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1116, 52);
             this.guna2Panel2.TabIndex = 0;
@@ -357,7 +363,7 @@
             this.rbDisactive.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbDisactive.CheckedState.InnerOffset = -4;
             this.rbDisactive.Location = new System.Drawing.Point(376, 11);
-            this.rbDisactive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDisactive.Margin = new System.Windows.Forms.Padding(4);
             this.rbDisactive.Name = "rbDisactive";
             this.rbDisactive.Size = new System.Drawing.Size(60, 32);
             this.rbDisactive.TabIndex = 62;
@@ -376,7 +382,7 @@
             this.rbActive.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbActive.CheckedState.InnerOffset = -4;
             this.rbActive.Location = new System.Drawing.Point(288, 11);
-            this.rbActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbActive.Margin = new System.Windows.Forms.Padding(4);
             this.rbActive.Name = "rbActive";
             this.rbActive.Size = new System.Drawing.Size(60, 32);
             this.rbActive.TabIndex = 61;
@@ -402,7 +408,7 @@
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Verfication;
             this.pictureBox7.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(52, 33);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -414,7 +420,7 @@
             this.chkManageClasses.AutoSize = true;
             this.chkManageClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManageClasses.Location = new System.Drawing.Point(484, 89);
-            this.chkManageClasses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManageClasses.Margin = new System.Windows.Forms.Padding(4);
             this.chkManageClasses.Name = "chkManageClasses";
             this.chkManageClasses.Size = new System.Drawing.Size(171, 32);
             this.chkManageClasses.TabIndex = 66;
@@ -427,7 +433,7 @@
             this.chkManageUsers.AutoSize = true;
             this.chkManageUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManageUsers.Location = new System.Drawing.Point(55, 161);
-            this.chkManageUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManageUsers.Margin = new System.Windows.Forms.Padding(4);
             this.chkManageUsers.Name = "chkManageUsers";
             this.chkManageUsers.Size = new System.Drawing.Size(157, 32);
             this.chkManageUsers.TabIndex = 69;
@@ -440,7 +446,7 @@
             this.chkManageEmployees.AutoSize = true;
             this.chkManageEmployees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManageEmployees.Location = new System.Drawing.Point(484, 165);
-            this.chkManageEmployees.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManageEmployees.Margin = new System.Windows.Forms.Padding(4);
             this.chkManageEmployees.Name = "chkManageEmployees";
             this.chkManageEmployees.Size = new System.Drawing.Size(204, 32);
             this.chkManageEmployees.TabIndex = 64;
@@ -454,7 +460,7 @@
             this.chkManagePayments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManagePayments.ForeColor = System.Drawing.Color.Black;
             this.chkManagePayments.Location = new System.Drawing.Point(484, 127);
-            this.chkManagePayments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManagePayments.Margin = new System.Windows.Forms.Padding(4);
             this.chkManagePayments.Name = "chkManagePayments";
             this.chkManagePayments.Size = new System.Drawing.Size(193, 32);
             this.chkManagePayments.TabIndex = 65;
@@ -467,7 +473,7 @@
             this.chkManageTrainers.AutoSize = true;
             this.chkManageTrainers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManageTrainers.Location = new System.Drawing.Point(484, 203);
-            this.chkManageTrainers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManageTrainers.Margin = new System.Windows.Forms.Padding(4);
             this.chkManageTrainers.Name = "chkManageTrainers";
             this.chkManageTrainers.Size = new System.Drawing.Size(176, 32);
             this.chkManageTrainers.TabIndex = 67;
@@ -480,7 +486,7 @@
             this.chkManageMembers.AutoSize = true;
             this.chkManageMembers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManageMembers.Location = new System.Drawing.Point(55, 199);
-            this.chkManageMembers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManageMembers.Margin = new System.Windows.Forms.Padding(4);
             this.chkManageMembers.Name = "chkManageMembers";
             this.chkManageMembers.Size = new System.Drawing.Size(192, 32);
             this.chkManageMembers.TabIndex = 68;
@@ -493,7 +499,7 @@
             this.chkManagePeople.AutoSize = true;
             this.chkManagePeople.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkManagePeople.Location = new System.Drawing.Point(55, 123);
-            this.chkManagePeople.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkManagePeople.Margin = new System.Windows.Forms.Padding(4);
             this.chkManagePeople.Name = "chkManagePeople";
             this.chkManagePeople.Size = new System.Drawing.Size(169, 32);
             this.chkManagePeople.TabIndex = 63;
@@ -506,7 +512,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(65, 25);
+            this.label2.Location = new System.Drawing.Point(60, 63);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 33);
@@ -516,8 +522,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 56);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -529,7 +535,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(88, 268);
+            this.label11.Location = new System.Drawing.Point(88, 272);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 27);
@@ -541,7 +547,7 @@
             this.lblPersonID.AutoSize = true;
             this.lblPersonID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersonID.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonID.Location = new System.Drawing.Point(788, 93);
+            this.lblPersonID.Location = new System.Drawing.Point(788, 123);
             this.lblPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersonID.Name = "lblPersonID";
             this.lblPersonID.Size = new System.Drawing.Size(39, 27);
@@ -553,7 +559,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(653, 92);
+            this.label10.Location = new System.Drawing.Point(653, 122);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 27);
@@ -576,8 +582,8 @@
             this.tbConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbConfirmPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.tbConfirmPassword.IsRequired = true;
-            this.tbConfirmPassword.Location = new System.Drawing.Point(671, 295);
-            this.tbConfirmPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbConfirmPassword.Location = new System.Drawing.Point(671, 299);
+            this.tbConfirmPassword.Margin = new System.Windows.Forms.Padding(5);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
             this.tbConfirmPassword.PasswordChar = '*';
             this.tbConfirmPassword.PlaceholderText = "Confirm Password";
@@ -591,7 +597,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(664, 265);
+            this.label7.Location = new System.Drawing.Point(664, 269);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(196, 27);
@@ -614,8 +620,8 @@
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.tbPassword.IsRequired = true;
-            this.tbPassword.Location = new System.Drawing.Point(665, 203);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbPassword.Location = new System.Drawing.Point(665, 207);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(5);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.PlaceholderText = "Password";
@@ -628,7 +634,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(659, 176);
+            this.label6.Location = new System.Drawing.Point(659, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 27);
@@ -640,7 +646,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(103, 314);
+            this.label15.Location = new System.Drawing.Point(103, 319);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(133, 27);
@@ -663,8 +669,8 @@
             this.tbUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUserName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.tbUserName.IsRequired = true;
-            this.tbUserName.Location = new System.Drawing.Point(77, 204);
-            this.tbUserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbUserName.Location = new System.Drawing.Point(77, 208);
+            this.tbUserName.Margin = new System.Windows.Forms.Padding(5);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.PlaceholderText = "User Name";
             this.tbUserName.SelectedText = "";
@@ -677,7 +683,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(72, 175);
+            this.label5.Location = new System.Drawing.Point(72, 179);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 27);
@@ -689,7 +695,7 @@
             this.lblUserID.AutoSize = true;
             this.lblUserID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserID.ForeColor = System.Drawing.Color.Black;
-            this.lblUserID.Location = new System.Drawing.Point(168, 93);
+            this.lblUserID.Location = new System.Drawing.Point(168, 123);
             this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(39, 27);
@@ -701,7 +707,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(72, 91);
+            this.label3.Location = new System.Drawing.Point(72, 121);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 27);
@@ -711,8 +717,8 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.IsActive;
-            this.pictureBox9.Location = new System.Drawing.Point(28, 265);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(28, 269);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(52, 33);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -722,8 +728,8 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox8.Location = new System.Drawing.Point(612, 90);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(612, 120);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(32, 33);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -733,8 +739,8 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox4.Location = new System.Drawing.Point(28, 174);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(28, 178);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -744,8 +750,8 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.PersonID;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 91);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(28, 121);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -755,8 +761,8 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Password;
-            this.pictureBox6.Location = new System.Drawing.Point(620, 262);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(620, 266);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(40, 33);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -766,8 +772,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Password;
-            this.pictureBox5.Location = new System.Drawing.Point(616, 174);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(616, 178);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 33);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -782,7 +788,7 @@
             this.guna2Panel3.Controls.Add(this.btnClose);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.guna2Panel3.Location = new System.Drawing.Point(6, 649);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1205, 64);
             this.guna2Panel3.TabIndex = 15;
@@ -838,6 +844,42 @@
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1199, 46);
+            this.panel1.TabIndex = 66;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(61, 6);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(119, 32);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "Add User";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -848,7 +890,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.tcUserInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddUpdateUser";
             this.Activated += new System.EventHandler(this.frmAddUpdateUser_Activated);
             this.Load += new System.EventHandler(this.frmAddUpdateUser_Load);
@@ -875,6 +917,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -931,5 +976,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
