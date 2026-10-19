@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,9 +29,9 @@ namespace GymMangementSystem
             if (_Mode == enMode.Update)
             {
 
-
-
-
+                btnSave.Enabled = true;
+                tpLoginInfo.Enabled = true;
+                tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpLoginInfo"];
                 return;
             }
 
@@ -38,6 +39,24 @@ namespace GymMangementSystem
             {
 
 
+                if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
+                {
+
+                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnSave.Enabled = false;
+                    tpLoginInfo.Enabled = false;
+                    uctPersonDetailsWithFilter1.FocusOnTbSearch();
+
+
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    tpLoginInfo.Enabled = true;
+                    tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpLoginInfo"];
+                    lblPersonID.Text= uctPersonDetailsWithFilter1.PersonID.ToString();
+
+                }
 
 
 
