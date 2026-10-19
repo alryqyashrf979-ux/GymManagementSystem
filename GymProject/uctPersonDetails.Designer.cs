@@ -116,7 +116,7 @@ namespace GymMangementSystem
             this.pictureBox7.Location = new System.Drawing.Point(5, 9);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(56, 34);
+            this.pictureBox7.Size = new System.Drawing.Size(54, 34);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 5;
             this.pictureBox7.TabStop = false;
@@ -151,7 +151,7 @@ namespace GymMangementSystem
             this.pictureBox6.Location = new System.Drawing.Point(5, 9);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(56, 34);
+            this.pictureBox6.Size = new System.Drawing.Size(54, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
@@ -233,7 +233,7 @@ namespace GymMangementSystem
             this.pictureBox5.Location = new System.Drawing.Point(5, 9);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(56, 34);
+            this.pictureBox5.Size = new System.Drawing.Size(54, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
@@ -315,7 +315,7 @@ namespace GymMangementSystem
             this.pictureBox4.Location = new System.Drawing.Point(5, 9);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(56, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(54, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -397,7 +397,7 @@ namespace GymMangementSystem
             this.pictureBox3.Location = new System.Drawing.Point(5, 9);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(56, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(54, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
