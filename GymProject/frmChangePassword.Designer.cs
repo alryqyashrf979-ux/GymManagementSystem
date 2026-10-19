@@ -34,7 +34,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.ctrlUserDetails1 = new GymMangementSystem.ctrlUserDetails();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.lblConfirmPassword = new GymMangementSystem.MyTextBox();
             this.lable11 = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +95,6 @@
             // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.Controls.Add(this.pictureBox4);
             this.guna2GroupBox1.Controls.Add(this.btnChangePassword);
             this.guna2GroupBox1.Controls.Add(this.lblConfirmPassword);
             this.guna2GroupBox1.Controls.Add(this.lable11);
@@ -118,17 +115,6 @@
             this.guna2GroupBox1.Text = "Change Password";
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(35, 0);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.LockWhite;
-            this.pictureBox4.Location = new System.Drawing.Point(236, 198);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 38);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 17;
-            this.pictureBox4.TabStop = false;
-            // 
             // btnChangePassword
             // 
             this.btnChangePassword.BackColor = System.Drawing.Color.Transparent;
@@ -146,7 +132,6 @@
             this.btnChangePassword.Size = new System.Drawing.Size(314, 45);
             this.btnChangePassword.TabIndex = 16;
             this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // lblConfirmPassword
             // 
@@ -157,7 +142,7 @@
             this.lblConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.lblConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.lblConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblConfirmPassword.ErrorMessage = "User Name is required";
+            this.lblConfirmPassword.ErrorMessage = "Confirm password is required";
             this.lblConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lblConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblConfirmPassword.ForeColor = System.Drawing.Color.Black;
@@ -167,6 +152,7 @@
             this.lblConfirmPassword.Location = new System.Drawing.Point(71, 251);
             this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.PasswordChar = '*';
             this.lblConfirmPassword.PlaceholderText = "Confirm Password";
             this.lblConfirmPassword.SelectedText = "";
             this.lblConfirmPassword.Size = new System.Drawing.Size(244, 31);
@@ -202,7 +188,7 @@
             this.txtNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNewPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewPassword.ErrorMessage = "User Name is required";
+            this.txtNewPassword.ErrorMessage = "New password is required";
             this.txtNewPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNewPassword.ForeColor = System.Drawing.Color.Black;
@@ -212,6 +198,7 @@
             this.txtNewPassword.Location = new System.Drawing.Point(71, 160);
             this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.PlaceholderText = "New Password";
             this.txtNewPassword.SelectedText = "";
             this.txtNewPassword.Size = new System.Drawing.Size(244, 31);
@@ -247,7 +234,7 @@
             this.txtCurrentPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCurrentPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCurrentPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentPassword.ErrorMessage = "User Name is required";
+            this.txtCurrentPassword.ErrorMessage = "Current password is required";
             this.txtCurrentPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCurrentPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCurrentPassword.ForeColor = System.Drawing.Color.Black;
@@ -257,11 +244,11 @@
             this.txtCurrentPassword.Location = new System.Drawing.Point(71, 72);
             this.txtCurrentPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
+            this.txtCurrentPassword.PasswordChar = '*';
             this.txtCurrentPassword.PlaceholderText = "Current Password";
             this.txtCurrentPassword.SelectedText = "";
             this.txtCurrentPassword.Size = new System.Drawing.Size(244, 31);
             this.txtCurrentPassword.TabIndex = 10;
-            this.txtCurrentPassword.TextChanged += new System.EventHandler(this.txtCurrentPassword_TextChanged);
             // 
             // label1
             // 
@@ -288,6 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1233, 455);
             this.Controls.Add(this.guna2GroupBox1);
@@ -295,12 +283,12 @@
             this.Controls.Add(this.ctrlUserDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -325,6 +313,5 @@
         private System.Windows.Forms.Label lable11;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
-        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

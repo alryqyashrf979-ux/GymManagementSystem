@@ -156,5 +156,11 @@ namespace GymMangementSystem
             Form frm = new frmShowUserDetails((int)dgvShowUserList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmChangePassword((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }
