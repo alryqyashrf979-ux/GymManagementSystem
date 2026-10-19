@@ -51,11 +51,13 @@ namespace GymMangementSystem
             {
                 tpLoginInfo.Enabled = false;
                 lblTitle.Text = "Add User";
+                lblTitle2.Text = "Add User";
                 _User = new clsUsers();
             }
             else
             {
                 lblTitle.Text = "Update User";
+                lblTitle2.Text = "Update User";
                 tpLoginInfo.Enabled = true;
                 btnSave.Enabled = true;
             }
@@ -86,7 +88,7 @@ namespace GymMangementSystem
                 btnSave.Enabled = true;
                 tpLoginInfo.Enabled = true;
                 tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
-
+                return;
             }
 
             if (uctPersonDetailsWithFilter1.PersonID != -1)
@@ -113,35 +115,19 @@ namespace GymMangementSystem
         }
         private void CheckPermission()
         {
-            BitArray permissionBitArray = new BitArray(new int[] { _User.Permission });
-
-            BitArray myBitArray = new BitArray(new int[] {Convert.ToInt32(chkManagePeople.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManagePeople.Checked = true;
-
-             myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageUsers.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManageUsers.Checked = true;
-
-            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageMembers.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManageMembers.Checked = true;
-
-            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManagePayments.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManagePayments.Checked = true;
-
-            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageTrainers.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManageTrainers.Checked = true;
-
-            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageClasses.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManageClasses.Checked = true;
-
-            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageEmployees.Tag) });
-            if (permissionBitArray.And(myBitArray) == (myBitArray))
-                chkManageEmployees.Checked = true;
+            if (_User.Permission == -1)
+            {
+                rbNo.Checked = false;
+                rbYes.Checked = true;
+                return;
+            }
+                chkManagePeople.Checked = ((Convert.ToInt32(_User.Permission)&Convert.ToInt32(chkManagePeople.Tag))== Convert.ToInt32(chkManagePeople.Tag));
+                chkManageUsers.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageUsers.Tag)) == Convert.ToInt32(chkManageUsers.Tag));
+                chkManagePayments.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManagePayments.Tag)) == Convert.ToInt32(chkManagePayments.Tag));
+                chkManageEmployees.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageEmployees.Tag)) == Convert.ToInt32(chkManageEmployees.Tag));
+                chkManageMembers.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageMembers.Tag)) == Convert.ToInt32(chkManageMembers.Tag));
+                chkManageClasses.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageClasses.Tag)) == Convert.ToInt32(chkManageClasses.Tag));
+                chkManageTrainers.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageTrainers.Tag)) == Convert.ToInt32(chkManageTrainers.Tag));
         }
         private void _LoadData()
         {
@@ -156,7 +142,7 @@ namespace GymMangementSystem
 
             uctPersonDetailsWithFilter1.SetValueInTextbox(_User.PersonID);
             uctPersonDetailsWithFilter1.LoadPersonInfo(_User.PersonID);
-            
+            lblPersonID.Text = _User.PersonID.ToString();
             tbUserName.Text = _User.UserName;
             tbPassword.Text = _User.Password;
             tbConfirmPassword.Text = _User.Password;
@@ -245,7 +231,9 @@ namespace GymMangementSystem
             }
 
             _User.UserName = tbUserName.Text.Trim();
+            if(clsHashing.Hashing(tbConfirmPassword.Text.Trim())!= clsHashing.Hashing(_User.Password))
             _User.Password=clsHashing.Hashing(tbConfirmPassword.Text.Trim());
+
             _User.Permission = Convert.ToSByte(_Permission);
             _User.IsActive = rbActive.Checked;
             _User.PersonID=Convert.ToInt32(lblPersonID.Text.Trim());
@@ -253,6 +241,7 @@ namespace GymMangementSystem
             if (_User.Save())
             {
                 lblTitle.Text = "Update User";
+                lblTitle2.Text = "Update User";
                 _Mode = enMode.UpdateMode;
                 lblUserID.Text = _User.UserID.ToString();
                 MessageBox.Show("User saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
