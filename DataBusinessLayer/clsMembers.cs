@@ -113,7 +113,7 @@ namespace DataBusinessLayer
 
 
                 return new clsMembers(MemberID, personID, LastSubscriptionDate, IsActive,ContactInfo.ContactID,
-                    ContactInfo.Name,ContactInfo.PhoneNumber,ContactInfo.Relationship);               
+                    ContactInfo.EmergencyContactPersonName,ContactInfo.EmergencyContactPhoneNumber,ContactInfo.Relationship);               
             }
             return null;
         }
@@ -131,7 +131,7 @@ namespace DataBusinessLayer
 
 
                 return new clsMembers(memberID, PersonID, LastSubscriptionDate, IsActive, ContactInfo.ContactID,
-                    ContactInfo.Name, ContactInfo.PhoneNumber, ContactInfo.Relationship);
+                    ContactInfo.EmergencyContactPersonName, ContactInfo.EmergencyContactPhoneNumber, ContactInfo.Relationship);
             }
             return null;
         }

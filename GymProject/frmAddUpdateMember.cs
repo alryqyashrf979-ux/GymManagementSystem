@@ -39,7 +39,7 @@ namespace GymMangementSystem
             {
 
                 btnSave.Enabled = true;
-                tpLoginInfo.Enabled = true;
+                tpMemberInfo.Enabled = true;
                 tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpLoginInfo"];
                 return;
             }
@@ -53,7 +53,7 @@ namespace GymMangementSystem
 
                     MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnSave.Enabled = false;
-                    tpLoginInfo.Enabled = false;
+                    tpMemberInfo.Enabled = false;
                     uctPersonDetailsWithFilter1.FocusOnTbSearch();
 
 
@@ -61,7 +61,7 @@ namespace GymMangementSystem
                 else
                 {
                     btnSave.Enabled = true;
-                    tpLoginInfo.Enabled = true;
+                    tpMemberInfo.Enabled = true;
                     tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpLoginInfo"];
                     lblPersonID.Text= uctPersonDetailsWithFilter1.PersonID.ToString();
 
@@ -117,7 +117,7 @@ namespace GymMangementSystem
             dtLastSubscriptionDate.MinDate = DateTime.Today;
 
             btnSave.Enabled = false;
-            tpLoginInfo.Enabled = false;
+            tpMemberInfo.Enabled = false;
             tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpPersonalInfo"];
             tgschIsActive.Checked = true;
 
@@ -136,13 +136,18 @@ namespace GymMangementSystem
                 return;
             }
             uctPersonDetailsWithFilter1.DisableFiltering();
-            txtPersonName.Text = _Member.EmergencyContactInfo.Name;
-            txtRelationship.Text=_Member.EmergencyContactInfo.Relationship;
-            txtPhoneNumber.Text=_Member.EmergencyContactInfo.PhoneNumber;
+            txtPersonName.Text = _Member.EmergencyContactPersonName; ;
+            txtRelationship.Text=_Member.Relationship;
+            txtPhoneNumber.Text=_Member.EmergencyContactPersonName;
             tgschIsActive.Checked = _Member.IsActive;
-            lblEmergencyContactID.Text = _Member.EmergencyContactID.ToString();
+            lblEmergencyContactID.Text = _Member.ContactID.ToString();
             lblPersonID.Text=uctPersonDetailsWithFilter1.PersonID.ToString();
             lblMemberID.Text = _Member.MemberID.ToString();
+
+            dtLastSubscriptionDate.MaxDate= DateTime.Today;
+            dtLastSubscriptionDate.MinDate=_Member.LastSubscriptionDate;
+
+            dtLastSubscriptionDate.Value= _Member.LastSubscriptionDate;
 
 
 
@@ -169,19 +174,26 @@ namespace GymMangementSystem
 
             _Member.IsActive = tgschIsActive.Checked;
             _Member.PersonID = uctPersonDetailsWithFilter1.PersonID;
-      
+            _Member.EmergencyContactPersonName = txtPersonName.Text;
+            _Member.Relationship = txtRelationship.Text;    
+            _Member.EmergencyContactPhoneNumber = txtPhoneNumber.Text;
+            _Member.LastSubscriptionDate = dtLastSubscriptionDate.Value;
 
 
 
+            if(_Member.Save())
+            {
 
+                lblTitle1.Text = "Update Member";
+                lblTitle2.Text = "Update Member";
+                _Mode = enMode.Update;
+                lblMemberID.Text = _Member.MemberID.ToString();
+                lblEmergencyContactID.Text = _Member.ContactID.ToString();
 
-
-
-
-
-
-
-
+                MessageBox.Show("Member saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Error : Member did Not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 

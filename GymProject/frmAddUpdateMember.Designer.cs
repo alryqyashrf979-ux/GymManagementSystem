@@ -35,7 +35,7 @@
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.tpLoginInfo = new System.Windows.Forms.TabPage();
+            this.tpMemberInfo = new System.Windows.Forms.TabPage();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -78,7 +78,7 @@
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.tpLoginInfo.SuspendLayout();
+            this.tpMemberInfo.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -101,7 +101,7 @@
             // tcMemberInfo
             // 
             this.tcMemberInfo.Controls.Add(this.tpPersonalInfo);
-            this.tcMemberInfo.Controls.Add(this.tpLoginInfo);
+            this.tcMemberInfo.Controls.Add(this.tpMemberInfo);
             this.tcMemberInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.tcMemberInfo.Location = new System.Drawing.Point(0, 0);
             this.tcMemberInfo.Margin = new System.Windows.Forms.Padding(4);
@@ -196,20 +196,20 @@
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // tpLoginInfo
+            // tpMemberInfo
             // 
-            this.tpLoginInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.tpLoginInfo.Controls.Add(this.guna2Panel4);
-            this.tpLoginInfo.Controls.Add(this.panel1);
-            this.tpLoginInfo.Controls.Add(this.guna2Panel1);
-            this.tpLoginInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpLoginInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpLoginInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.tpLoginInfo.Name = "tpLoginInfo";
-            this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpLoginInfo.Size = new System.Drawing.Size(1214, 633);
-            this.tpLoginInfo.TabIndex = 1;
-            this.tpLoginInfo.Text = "Login Info";
+            this.tpMemberInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.tpMemberInfo.Controls.Add(this.guna2Panel4);
+            this.tpMemberInfo.Controls.Add(this.panel1);
+            this.tpMemberInfo.Controls.Add(this.guna2Panel1);
+            this.tpMemberInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.tpMemberInfo.Name = "tpMemberInfo";
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.tpMemberInfo.Size = new System.Drawing.Size(1214, 633);
+            this.tpMemberInfo.TabIndex = 1;
+            this.tpMemberInfo.Text = "Member Info";
             // 
             // guna2Panel4
             // 
@@ -775,7 +775,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.tpLoginInfo.ResumeLayout(false);
+            this.tpMemberInfo.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -811,7 +811,7 @@
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2Button btnNext;
-        private System.Windows.Forms.TabPage tpLoginInfo;
+        private System.Windows.Forms.TabPage tpMemberInfo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle1;
         private System.Windows.Forms.PictureBox pictureBox1;
