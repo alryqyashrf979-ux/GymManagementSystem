@@ -29,10 +29,6 @@ namespace GymMangementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.picPersonalImage = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,19 +61,18 @@ namespace GymMangementSystem
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.lnkEditPersonInfo = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -98,63 +93,19 @@ namespace GymMangementSystem
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.picPersonalImage);
-            this.panel13.Location = new System.Drawing.Point(908, 68);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(254, 225);
-            this.panel13.TabIndex = 13;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel14.Controls.Add(this.label4);
-            this.panel14.Controls.Add(this.pictureBox13);
-            this.panel14.Location = new System.Drawing.Point(12, 190);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(233, 30);
-            this.panel14.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(115, 7);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Photo";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.Photo;
-            this.pictureBox13.Location = new System.Drawing.Point(69, 5);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(41, 21);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 6;
-            this.pictureBox13.TabStop = false;
             // 
             // picPersonalImage
             // 
+            this.picPersonalImage.BackColor = System.Drawing.Color.Transparent;
             this.picPersonalImage.Image = global::GymMangementSystem.Properties.Resources.Male;
-            this.picPersonalImage.Location = new System.Drawing.Point(12, 9);
+            this.picPersonalImage.Location = new System.Drawing.Point(16, 9);
             this.picPersonalImage.Margin = new System.Windows.Forms.Padding(4);
             this.picPersonalImage.Name = "picPersonalImage";
-            this.picPersonalImage.Size = new System.Drawing.Size(233, 177);
+            this.picPersonalImage.Size = new System.Drawing.Size(188, 187);
             this.picPersonalImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPersonalImage.TabIndex = 2;
             this.picPersonalImage.TabStop = false;
@@ -185,12 +136,12 @@ namespace GymMangementSystem
             // lbGender
             // 
             this.lbGender.AutoSize = true;
-            this.lbGender.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGender.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGender.ForeColor = System.Drawing.Color.Black;
             this.lbGender.Location = new System.Drawing.Point(67, 26);
             this.lbGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(37, 23);
+            this.lbGender.Size = new System.Drawing.Size(36, 25);
             this.lbGender.TabIndex = 5;
             this.lbGender.Text = "???";
             // 
@@ -211,7 +162,7 @@ namespace GymMangementSystem
             this.panel12.Controls.Add(this.lbCountry);
             this.panel12.Controls.Add(this.pictureBox11);
             this.panel12.Controls.Add(this.label11);
-            this.panel12.Location = new System.Drawing.Point(485, 244);
+            this.panel12.Location = new System.Drawing.Point(485, 255);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(409, 53);
@@ -220,12 +171,12 @@ namespace GymMangementSystem
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCountry.ForeColor = System.Drawing.Color.Black;
             this.lbCountry.Location = new System.Drawing.Point(67, 26);
             this.lbCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(37, 23);
+            this.lbCountry.Size = new System.Drawing.Size(36, 25);
             this.lbCountry.TabIndex = 5;
             this.lbCountry.Text = "???";
             // 
@@ -267,12 +218,12 @@ namespace GymMangementSystem
             // lbNationalNo
             // 
             this.lbNationalNo.AutoSize = true;
-            this.lbNationalNo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNationalNo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNationalNo.ForeColor = System.Drawing.Color.Black;
             this.lbNationalNo.Location = new System.Drawing.Point(67, 26);
             this.lbNationalNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNationalNo.Name = "lbNationalNo";
-            this.lbNationalNo.Size = new System.Drawing.Size(37, 23);
+            this.lbNationalNo.Size = new System.Drawing.Size(36, 25);
             this.lbNationalNo.TabIndex = 5;
             this.lbNationalNo.Text = "???";
             // 
@@ -293,7 +244,7 @@ namespace GymMangementSystem
             this.panel11.Controls.Add(this.lbPhone);
             this.panel11.Controls.Add(this.pictureBox10);
             this.panel11.Controls.Add(this.label10);
-            this.panel11.Location = new System.Drawing.Point(485, 183);
+            this.panel11.Location = new System.Drawing.Point(485, 194);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(409, 53);
@@ -302,12 +253,12 @@ namespace GymMangementSystem
             // lbPhone
             // 
             this.lbPhone.AutoSize = true;
-            this.lbPhone.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.ForeColor = System.Drawing.Color.Black;
             this.lbPhone.Location = new System.Drawing.Point(67, 26);
             this.lbPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(37, 23);
+            this.lbPhone.Size = new System.Drawing.Size(36, 25);
             this.lbPhone.TabIndex = 5;
             this.lbPhone.Text = "???";
             // 
@@ -349,12 +300,12 @@ namespace GymMangementSystem
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.Black;
             this.lbName.Location = new System.Drawing.Point(67, 26);
             this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(37, 23);
+            this.lbName.Size = new System.Drawing.Size(36, 25);
             this.lbName.TabIndex = 5;
             this.lbName.Text = "???";
             // 
@@ -375,7 +326,7 @@ namespace GymMangementSystem
             this.panel10.Controls.Add(this.lbDateOfBirth);
             this.panel10.Controls.Add(this.pictureBox9);
             this.panel10.Controls.Add(this.label9);
-            this.panel10.Location = new System.Drawing.Point(485, 123);
+            this.panel10.Location = new System.Drawing.Point(485, 134);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(409, 53);
@@ -384,12 +335,12 @@ namespace GymMangementSystem
             // lbDateOfBirth
             // 
             this.lbDateOfBirth.AutoSize = true;
-            this.lbDateOfBirth.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDateOfBirth.ForeColor = System.Drawing.Color.Black;
             this.lbDateOfBirth.Location = new System.Drawing.Point(67, 26);
             this.lbDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDateOfBirth.Name = "lbDateOfBirth";
-            this.lbDateOfBirth.Size = new System.Drawing.Size(37, 23);
+            this.lbDateOfBirth.Size = new System.Drawing.Size(36, 25);
             this.lbDateOfBirth.TabIndex = 5;
             this.lbDateOfBirth.Text = "???";
             // 
@@ -431,12 +382,12 @@ namespace GymMangementSystem
             // lbPersonID
             // 
             this.lbPersonID.AutoSize = true;
-            this.lbPersonID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPersonID.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPersonID.ForeColor = System.Drawing.Color.Black;
             this.lbPersonID.Location = new System.Drawing.Point(67, 26);
             this.lbPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPersonID.Name = "lbPersonID";
-            this.lbPersonID.Size = new System.Drawing.Size(37, 23);
+            this.lbPersonID.Size = new System.Drawing.Size(36, 25);
             this.lbPersonID.TabIndex = 5;
             this.lbPersonID.Text = "???";
             // 
@@ -457,7 +408,7 @@ namespace GymMangementSystem
             this.panel9.Controls.Add(this.lbAddress);
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(485, 63);
+            this.panel9.Location = new System.Drawing.Point(485, 74);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(409, 53);
@@ -466,12 +417,12 @@ namespace GymMangementSystem
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
-            this.lbAddress.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddress.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddress.ForeColor = System.Drawing.Color.Black;
             this.lbAddress.Location = new System.Drawing.Point(67, 26);
             this.lbAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(37, 23);
+            this.lbAddress.Size = new System.Drawing.Size(36, 25);
             this.lbAddress.TabIndex = 5;
             this.lbAddress.Text = "???";
             // 
@@ -513,44 +464,34 @@ namespace GymMangementSystem
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.ForeColor = System.Drawing.Color.Black;
             this.lbEmail.Location = new System.Drawing.Point(67, 26);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(37, 23);
+            this.lbEmail.Size = new System.Drawing.Size(36, 25);
             this.lbEmail.TabIndex = 5;
             this.lbEmail.Text = "???";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.LightGray;
-            this.panel8.Location = new System.Drawing.Point(476, 59);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 278);
-            this.panel8.TabIndex = 11;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.panel13);
+            this.panel1.Controls.Add(this.guna2VSeparator2);
+            this.panel1.Controls.Add(this.guna2Panel5);
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1171, 365);
+            this.panel1.Size = new System.Drawing.Size(1182, 368);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -614,29 +555,6 @@ namespace GymMangementSystem
             this.panel3.Size = new System.Drawing.Size(465, 53);
             this.panel3.TabIndex = 6;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox2.Location = new System.Drawing.Point(-21, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label2.Location = new System.Drawing.Point(83, 10);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Person Information";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
@@ -646,9 +564,73 @@ namespace GymMangementSystem
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1167, 48);
+            this.panel2.Size = new System.Drawing.Size(1182, 48);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(55, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(247, 29);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Person Information";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel5.BorderRadius = 4;
+            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.lnkEditPersonInfo);
+            this.guna2Panel5.Controls.Add(this.picPersonalImage);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(944, 55);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(219, 234);
+            this.guna2Panel5.TabIndex = 69;
+            // 
+            // guna2VSeparator2
+            // 
+            this.guna2VSeparator2.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2VSeparator2.FillThickness = 2;
+            this.guna2VSeparator2.Location = new System.Drawing.Point(470, 73);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 249);
+            this.guna2VSeparator2.TabIndex = 80;
+            // 
+            // lnkEditPersonInfo
+            // 
+            this.lnkEditPersonInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkEditPersonInfo.AutoSize = true;
+            this.lnkEditPersonInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkEditPersonInfo.Enabled = false;
+            this.lnkEditPersonInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkEditPersonInfo.Location = new System.Drawing.Point(27, 200);
+            this.lnkEditPersonInfo.Name = "lnkEditPersonInfo";
+            this.lnkEditPersonInfo.Size = new System.Drawing.Size(174, 31);
+            this.lnkEditPersonInfo.TabIndex = 45;
+            this.lnkEditPersonInfo.TabStop = true;
+            this.lnkEditPersonInfo.Text = "Edit Person Info";
+            this.lnkEditPersonInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked);
             // 
             // uctPersonDetails
             // 
@@ -658,11 +640,7 @@ namespace GymMangementSystem
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uctPersonDetails";
-            this.Size = new System.Drawing.Size(1176, 372);
-            this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.Size = new System.Drawing.Size(1187, 368);
             ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -692,18 +670,16 @@ namespace GymMangementSystem
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox picPersonalImage;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
@@ -736,7 +712,6 @@ namespace GymMangementSystem
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
@@ -746,5 +721,8 @@ namespace GymMangementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
+        private System.Windows.Forms.LinkLabel lnkEditPersonInfo;
     }
 }
