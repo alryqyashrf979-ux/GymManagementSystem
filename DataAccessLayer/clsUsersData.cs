@@ -468,7 +468,7 @@ namespace DataAccessLayer
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
-                    Permission = (sbyte)reader["Permission"];
+                    Permission = Convert.ToSByte(reader["Permission"]);
 
 
 

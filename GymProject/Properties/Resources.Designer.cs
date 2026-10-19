@@ -113,6 +113,26 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dnabale {
+            get {
+                object obj = ResourceManager.GetObject("Dnabale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dnabale2 {
+            get {
+                object obj = ResourceManager.GetObject("Dnabale2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Email {
             get {
                 object obj = ResourceManager.GetObject("Email", resourceCulture);
@@ -136,16 +156,6 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap file_000000009be4824391a90a2907bdb04d {
             get {
                 object obj = ResourceManager.GetObject("file_000000009be4824391a90a2907bdb04d", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap file_00000000b7008243ac6af8813b1919f7 {
-            get {
-                object obj = ResourceManager.GetObject("file_00000000b7008243ac6af8813b1919f7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
