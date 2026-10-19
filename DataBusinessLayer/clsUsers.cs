@@ -97,7 +97,7 @@ namespace DataBusinessLayer
         }
         static public bool IsUsernameExist(string username)
         {
-            return clsUsers.IsUsernameExist(username);
+            return clsUsersData.IsUserNameExist(username);
         }
 
         public static clsUsers FindByUserID(int UserID)
