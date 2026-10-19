@@ -37,6 +37,7 @@ namespace GymMangementSystem
 
         private void _ResetPersonInformation()
         {
+            lnkEditPersonInfo.Enabled = false;  
             lbAddress.Text = "???";
             lbCountry.Text = "???";
             lbDateOfBirth.Text = "???";
@@ -66,7 +67,7 @@ namespace GymMangementSystem
         private void _FillPersonInfo()
         {
             _CountryInfo = clsCountries.Find(_PersonInfo.NationalityCountryID);
-
+            lnkEditPersonInfo.Enabled = true;
             lbAddress.Text = _PersonInfo.Address;
             lbCountry.Text =_CountryInfo .CountryName;
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
@@ -114,6 +115,15 @@ namespace GymMangementSystem
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void lnkEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddPerson frm=new frmAddPerson(PersonInfo.PersonID);
+            frm.ShowDialog();
+            LoadPersonInfo(PersonInfo.PersonID);
+
 
         }
     }

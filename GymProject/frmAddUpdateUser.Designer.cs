@@ -189,10 +189,10 @@
             // uctPersonDetailsWithFilter1
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(3, 43);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(5, 53);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(897, 386);
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1193, 475);
             this.uctPersonDetailsWithFilter1.TabIndex = 1;
             // 
             // tcUserInfo
