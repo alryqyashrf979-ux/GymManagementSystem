@@ -12,9 +12,10 @@ namespace GymMangementSystem
 {
     public partial class frmShowUserDetails : Form
     {
-        public frmShowUserDetails()
+        public frmShowUserDetails(int UserID)
         {
             InitializeComponent();
+            ctrlUserDetails1.LoadUserInfo(UserID);
         }
     }
 }
