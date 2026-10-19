@@ -182,7 +182,7 @@
             this.btnNext.Image = global::GymMangementSystem.Properties.Resources.Next_64;
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1035, 563);
+            this.btnNext.Location = new System.Drawing.Point(1044, 567);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 44);
@@ -491,8 +491,8 @@
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.Controls.Add(this.pictureBox7);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(5, 5);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel2.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1116, 52);
             this.guna2Panel2.TabIndex = 0;
@@ -898,7 +898,7 @@
             // uctPersonDetailsWithFilter1
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 58);
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(2, 58);
             this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
             this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 503);
