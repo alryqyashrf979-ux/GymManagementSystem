@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -18,9 +19,19 @@ namespace GymMangementSystem
         enMode _Mode = enMode.AddMode;
         private int _Permission=0;
         private clsUsers _User;
+        private int _UserID = -1;
+
+      
         public frmAddUpdateUser()
         {
             InitializeComponent();
+            _Mode = enMode.AddMode;
+        }
+
+        public frmAddUpdateUser(int UserID)
+        {
+            InitializeComponent();
+            _Mode = enMode.UpdateMode;
         }
 
         private void frmAddUpdateUser_Activated(object sender, EventArgs e)
@@ -95,6 +106,60 @@ namespace GymMangementSystem
                 MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 uctPersonDetailsWithFilter1.FocusOnTbSearch();
             }
+
+        }
+        private void CheckPermission()
+        {
+            BitArray permissionBitArray = new BitArray(new int[] { _User.Permission });
+
+            BitArray myBitArray = new BitArray(new int[] {Convert.ToInt32(chkManagePeople.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManagePeople.Checked = true;
+
+             myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageUsers.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManageUsers.Checked = true;
+
+            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageMembers.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManageMembers.Checked = true;
+
+            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManagePayments.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManagePayments.Checked = true;
+
+            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageTrainers.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManageTrainers.Checked = true;
+
+            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageClasses.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManageClasses.Checked = true;
+
+            myBitArray = new BitArray(new int[] { Convert.ToInt32(chkManageEmployees.Tag) });
+            if (permissionBitArray.And(myBitArray) == (myBitArray))
+                chkManageEmployees.Checked = true;
+        }
+        private void _LoadData()
+        {
+            _User = clsUsers.FindByUserID(_UserID);
+            if (_User == null)
+            {
+                MessageBox.Show($"No User with user id = {_UserID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            tbUserName.Text = _User.UserName;
+            tbPassword.Text = _User.Password;
+            tbConfirmPassword.Text = _User.Password;
+
+            if (_User.IsActive)
+                rbActive.Checked = true;
+            else
+                rbDisactive.Checked = true;
+
+            CheckPermission();
+
 
         }
 
@@ -199,10 +264,10 @@ namespace GymMangementSystem
 
         private void tbUserName_Validating(object sender, CancelEventArgs e)
         {
-            if (tbPassword.Text != tbConfirmPassword.Text)
-                errorProvider1.SetError(tbConfirmPassword, "ConfirmPassword does not match Password.");
+            if (clsUsers.IsUsernameExist(tbUserName.Text))
+                errorProvider1.SetError(tbUserName, "this username already in user choose another one.");
             else
-                errorProvider1.SetError(tbConfirmPassword, "");
+                errorProvider1.SetError(tbUserName, "");
         }
     }
 }
