@@ -29,25 +29,78 @@
         private void InitializeComponent()
         {
             this.ctrlUserDetails1 = new GymMangementSystem.ctrlUserDetails();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTitle2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // ctrlUserDetails1
             // 
             this.ctrlUserDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlUserDetails1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctrlUserDetails1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlUserDetails1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ctrlUserDetails1.Location = new System.Drawing.Point(0, 36);
             this.ctrlUserDetails1.Name = "ctrlUserDetails1";
-            this.ctrlUserDetails1.Size = new System.Drawing.Size(887, 420);
+            this.ctrlUserDetails1.Size = new System.Drawing.Size(887, 423);
             this.ctrlUserDetails1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.lblTitle2);
+            this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(887, 37);
+            this.panel4.TabIndex = 14;
+            // 
+            // lblTitle2
+            // 
+            this.lblTitle2.AutoSize = true;
+            this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle2.ForeColor = System.Drawing.Color.White;
+            this.lblTitle2.Location = new System.Drawing.Point(51, 5);
+            this.lblTitle2.Name = "lblTitle2";
+            this.lblTitle2.Size = new System.Drawing.Size(124, 26);
+            this.lblTitle2.TabIndex = 2;
+            this.lblTitle2.Text = "User Details";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(44, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 32);
+            this.panel1.TabIndex = 15;
             // 
             // frmShowUserDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 420);
+            this.ClientSize = new System.Drawing.Size(887, 459);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlUserDetails1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowUserDetails";
-            this.Text = "frmShowUserDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -55,5 +108,9 @@
         #endregion
 
         private ctrlUserDetails ctrlUserDetails1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle2;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }
