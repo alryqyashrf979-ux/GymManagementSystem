@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,18 @@ namespace GymMangementSystem
             ctrlUserDetails1.LoadUserInfo(UserID);
         }
 
-       
+        private void frmChangePassword_Load(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void txtCurrentPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (clsHashing.Hashing(txtCurrentPassword.Text) != ctrlUserDetails1.UserInfo.Password)
+                errorProvider1.SetError(txtCurrentPassword, "Current password is not correct !");
+            else
+                errorProvider1.SetError(txtCurrentPassword, "");
+        }
     }
 }

@@ -14,6 +14,12 @@ namespace GymMangementSystem
     public partial class ctrlUserDetails : UserControl
     {
        private clsUsers _User;
+
+        public clsUsers UserInfo
+        {
+            get { return _User; }
+        }
+
         public ctrlUserDetails()
         {
             InitializeComponent();
