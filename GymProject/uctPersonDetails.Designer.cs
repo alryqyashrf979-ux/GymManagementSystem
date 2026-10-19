@@ -62,6 +62,9 @@ namespace GymMangementSystem
             this.label3 = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lnkEditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -70,9 +73,6 @@ namespace GymMangementSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.lnkEditPersonInfo = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -88,6 +88,7 @@ namespace GymMangementSystem
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel1.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -95,7 +96,6 @@ namespace GymMangementSystem
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // picPersonalImage
@@ -495,6 +495,47 @@ namespace GymMangementSystem
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // guna2VSeparator2
+            // 
+            this.guna2VSeparator2.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2VSeparator2.FillThickness = 2;
+            this.guna2VSeparator2.Location = new System.Drawing.Point(470, 73);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 249);
+            this.guna2VSeparator2.TabIndex = 80;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel5.BorderRadius = 4;
+            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.lnkEditPersonInfo);
+            this.guna2Panel5.Controls.Add(this.picPersonalImage);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(944, 55);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(219, 234);
+            this.guna2Panel5.TabIndex = 69;
+            // 
+            // lnkEditPersonInfo
+            // 
+            this.lnkEditPersonInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkEditPersonInfo.AutoSize = true;
+            this.lnkEditPersonInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkEditPersonInfo.Enabled = false;
+            this.lnkEditPersonInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkEditPersonInfo.Location = new System.Drawing.Point(27, 200);
+            this.lnkEditPersonInfo.Name = "lnkEditPersonInfo";
+            this.lnkEditPersonInfo.Size = new System.Drawing.Size(174, 31);
+            this.lnkEditPersonInfo.TabIndex = 45;
+            this.lnkEditPersonInfo.TabStop = true;
+            this.lnkEditPersonInfo.Text = "Edit Person Info";
+            this.lnkEditPersonInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -582,7 +623,7 @@ namespace GymMangementSystem
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
             this.pictureBox2.Location = new System.Drawing.Point(9, 6);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
@@ -590,47 +631,6 @@ namespace GymMangementSystem
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel5.BorderRadius = 4;
-            this.guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.guna2Panel5.BorderThickness = 1;
-            this.guna2Panel5.Controls.Add(this.lnkEditPersonInfo);
-            this.guna2Panel5.Controls.Add(this.picPersonalImage);
-            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(944, 55);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(219, 234);
-            this.guna2Panel5.TabIndex = 69;
-            // 
-            // guna2VSeparator2
-            // 
-            this.guna2VSeparator2.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2VSeparator2.FillThickness = 2;
-            this.guna2VSeparator2.Location = new System.Drawing.Point(470, 73);
-            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 249);
-            this.guna2VSeparator2.TabIndex = 80;
-            // 
-            // lnkEditPersonInfo
-            // 
-            this.lnkEditPersonInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.lnkEditPersonInfo.AutoSize = true;
-            this.lnkEditPersonInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkEditPersonInfo.Enabled = false;
-            this.lnkEditPersonInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkEditPersonInfo.Location = new System.Drawing.Point(27, 200);
-            this.lnkEditPersonInfo.Name = "lnkEditPersonInfo";
-            this.lnkEditPersonInfo.Size = new System.Drawing.Size(174, 31);
-            this.lnkEditPersonInfo.TabIndex = 45;
-            this.lnkEditPersonInfo.TabStop = true;
-            this.lnkEditPersonInfo.Text = "Edit Person Info";
-            this.lnkEditPersonInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked);
             // 
             // uctPersonDetails
             // 
@@ -660,6 +660,8 @@ namespace GymMangementSystem
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -673,8 +675,6 @@ namespace GymMangementSystem
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
