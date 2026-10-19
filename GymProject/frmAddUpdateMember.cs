@@ -135,7 +135,7 @@ namespace GymMangementSystem
                 MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            uctPersonDetailsWithFilter1.DisableFiltering();
             txtPersonName.Text = _Member.EmergencyContactInfo.Name;
             txtRelationship.Text=_Member.EmergencyContactInfo.Relationship;
             txtPhoneNumber.Text=_Member.EmergencyContactInfo.PhoneNumber;
@@ -153,6 +153,38 @@ namespace GymMangementSystem
 
             if (_Mode == enMode.Update)
                 _LoadDate();
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            _Member.IsActive = tgschIsActive.Checked;
+            _Member.PersonID = uctPersonDetailsWithFilter1.PersonID;
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
     }

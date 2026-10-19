@@ -25,7 +25,7 @@ namespace DataBusinessLayer
         public enMode Mode = enMode.AddNew;
 
 
-        private clsEmergencyContacts(string name, string relationship, string phoneNumber, int contactID)
+        protected clsEmergencyContacts(string name, string relationship, string phoneNumber, int contactID)
         {
             Name = name;
             Relationship = relationship;
