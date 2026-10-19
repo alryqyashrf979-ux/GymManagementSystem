@@ -36,6 +36,7 @@
             this.dgvShowUserList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showUserDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cbIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.showUserDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowUserList)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -133,14 +133,21 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(167, 48);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // showUserDetailsToolStripMenuItem
+            // 
+            this.showUserDetailsToolStripMenuItem.Name = "showUserDetailsToolStripMenuItem";
+            this.showUserDetailsToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showUserDetailsToolStripMenuItem.Text = "Show user Details";
+            this.showUserDetailsToolStripMenuItem.Click += new System.EventHandler(this.showUserDetailsToolStripMenuItem_Click);
             // 
             // guna2Separator1
             // 
@@ -276,13 +283,6 @@
             this.cbIsActive.TabIndex = 108;
             this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
             // 
-            // showUserDetailsToolStripMenuItem
-            // 
-            this.showUserDetailsToolStripMenuItem.Name = "showUserDetailsToolStripMenuItem";
-            this.showUserDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.showUserDetailsToolStripMenuItem.Text = "Show user Details";
-            this.showUserDetailsToolStripMenuItem.Click += new System.EventHandler(this.showUserDetailsToolStripMenuItem_Click);
-            // 
             // frmManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +302,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmManageUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.frmManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowUserList)).EndInit();
