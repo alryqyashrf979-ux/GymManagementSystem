@@ -63,13 +63,16 @@ namespace DataBusinessLayer
             //call DataAccess Layer 
 
             this._UserID = clsUsersData.AddNewUser(this.PersonID, this.UserName,
-                this.Password,this.Permission,this.IsActive);
+                clsHashing.Hashing(this.Password),this.Permission,this.IsActive);
 
             return (this._UserID != -1);
         }
         private bool _UpdateUser()
         {
             //call DataAccess Layer 
+
+            if (this.Password.Length != 64)
+                this.Password = clsHashing.Hashing(this.Password);
 
             return clsUsersData.UpdateUser(this.UserID, this.PersonID, this.UserName,
                 this.Password,this.Permission ,this.IsActive);
