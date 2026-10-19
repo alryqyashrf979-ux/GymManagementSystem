@@ -109,5 +109,10 @@ namespace GymMangementSystem
             tbSearch.Text = PersonID.ToString();
             uctPersonDetails1.LoadPersonInfo(PersonID);
         }
+
+        private void btnSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
     }
 }
