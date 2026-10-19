@@ -306,7 +306,7 @@
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GymMangementSystem.Properties.Resources.file_00000000b7008243ac6af8813b1919f7;
+            this.guna2PictureBox1.Image = global::GymMangementSystem.Properties.Resources.Dnabale;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(-4, 2);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
