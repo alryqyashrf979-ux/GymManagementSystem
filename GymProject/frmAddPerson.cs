@@ -34,8 +34,10 @@ namespace GymMangementSystem
 
         public frmAddPerson(int PersonID)
         {
+            InitializeComponent();
             this._PersonID = PersonID;
             this._Mode = enMode.Update;
+
 
         }
 
@@ -92,6 +94,7 @@ namespace GymMangementSystem
             txtEmail.Text=_Person.Email;
             txtAddress.Text = _Person.Address;
             txtPhoneNumber.Text = _Person.PhoneNumber;
+            txtNationalNo.Text = _Person.NationalNo;
 
 
             cmCountries.SelectedIndex = _Person.NationalityCountryID;
