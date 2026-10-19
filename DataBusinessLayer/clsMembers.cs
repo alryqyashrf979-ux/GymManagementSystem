@@ -21,7 +21,7 @@ namespace DataBusinessLayer
         public int PersonID { set; get; }
         public DateTime LastSubscriptionDate { set; get; }
         public bool IsActive { set; get; }
-        public int ContactPersonInfoID { set; get; }
+        public int EmergencyContactID { set; get; }
 
        public  clsEmergencyContacts EmergencyContactInfo { set; get; }
  public        clsPeople PersonInfo { set; get; }
@@ -33,7 +33,7 @@ namespace DataBusinessLayer
             PersonID = -1;
             LastSubscriptionDate = default(DateTime);
             IsActive = false;
-            ContactPersonInfoID = -1;
+            EmergencyContactID = -1;
             EmergencyContactInfo = null;
             Mode = enMode.add;
             PersonInfo = null;
@@ -45,7 +45,7 @@ namespace DataBusinessLayer
             this.PersonID = personID;
             this.LastSubscriptionDate = lastSubscriptionDate;
             this.IsActive = IsActive;
-            this.ContactPersonInfoID = ContactPersonInfoID;
+            this.EmergencyContactID = ContactPersonInfoID;
             this.EmergencyContactInfo = clsEmergencyContacts.Find(ContactPersonInfoID);
             this.PersonInfo = clsPeople.Find(PersonID);
             Mode = enMode.edit;
@@ -70,11 +70,11 @@ namespace DataBusinessLayer
         }
         private bool _Update()
         {
-            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
+            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionDate, this.IsActive, this.EmergencyContactID);
         }
         private bool _Add()
         {
-            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactPersonInfoID);
+            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionDate, this.IsActive, this.EmergencyContactID);
             return _MemberID != -1;
         }
         public bool Save()
