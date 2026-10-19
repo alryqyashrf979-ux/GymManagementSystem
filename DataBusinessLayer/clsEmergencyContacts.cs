@@ -11,9 +11,9 @@ namespace DataBusinessLayer
     public class clsEmergencyContacts
     {
 
-        public string Name { get; set; }
+        public string EmergencyContactPersonName { get; set; }
         public string Relationship { get; set; }
-        public string PhoneNumber { get; set; }
+        public string EmergencyContactPhoneNumber { get; set; }
 
         private int _ContactID = -1;
         public int ContactID
@@ -27,9 +27,9 @@ namespace DataBusinessLayer
 
         protected clsEmergencyContacts(string name, string relationship, string phoneNumber, int contactID)
         {
-            Name = name;
+            EmergencyContactPersonName = name;
             Relationship = relationship;
-            PhoneNumber = phoneNumber;
+            EmergencyContactPhoneNumber = phoneNumber;
             _ContactID = contactID;
 
             Mode=enMode.Update;
@@ -37,9 +37,9 @@ namespace DataBusinessLayer
 
         public clsEmergencyContacts()
         {
-            Name = string.Empty;
+            EmergencyContactPersonName = string.Empty;
             Relationship = string.Empty;
-            PhoneNumber = string.Empty;
+            EmergencyContactPhoneNumber = string.Empty;
             _ContactID = -1;
 
             Mode = enMode.AddNew;
@@ -49,14 +49,14 @@ namespace DataBusinessLayer
         private bool _AddNewContact()
         {
 
-            this._ContactID = clsEmergencyContactsData.AddEmergencyContact(this.Name, this.Relationship, this.PhoneNumber);
+            this._ContactID = clsEmergencyContactsData.AddEmergencyContact(this.EmergencyContactPersonName, this.Relationship, this.EmergencyContactPhoneNumber);
             return this._ContactID != -1;
 
         }
 
         private bool _UpdateContact()
         {
-            return clsEmergencyContactsData.UpdateEmergencyContact(this.ContactID, this.Name, this.Relationship, this.PhoneNumber);
+            return clsEmergencyContactsData.UpdateEmergencyContact(this.ContactID, this.EmergencyContactPersonName, this.Relationship, this.EmergencyContactPhoneNumber);
         }   
 
 
