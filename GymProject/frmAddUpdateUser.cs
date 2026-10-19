@@ -121,13 +121,15 @@ namespace GymMangementSystem
                 rbYes.Checked = true;
                 return;
             }
-                chkManagePeople.Checked = ((Convert.ToInt32(_User.Permission)&Convert.ToInt32(chkManagePeople.Tag))== Convert.ToInt32(chkManagePeople.Tag));
-                chkManageUsers.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageUsers.Tag)) == Convert.ToInt32(chkManageUsers.Tag));
-                chkManagePayments.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManagePayments.Tag)) == Convert.ToInt32(chkManagePayments.Tag));
-                chkManageEmployees.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageEmployees.Tag)) == Convert.ToInt32(chkManageEmployees.Tag));
-                chkManageMembers.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageMembers.Tag)) == Convert.ToInt32(chkManageMembers.Tag));
-                chkManageClasses.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageClasses.Tag)) == Convert.ToInt32(chkManageClasses.Tag));
-                chkManageTrainers.Checked = ((Convert.ToInt32(_User.Permission) & Convert.ToInt32(chkManageTrainers.Tag)) == Convert.ToInt32(chkManageTrainers.Tag));
+            int perm = Convert.ToInt32(_User.Permission);
+
+                chkManagePeople.Checked = ((perm & Convert.ToInt32(chkManagePeople.Tag))== Convert.ToInt32(chkManagePeople.Tag));
+                chkManageUsers.Checked = ((perm & Convert.ToInt32(chkManageUsers.Tag)) == Convert.ToInt32(chkManageUsers.Tag));
+                chkManagePayments.Checked = ((perm & Convert.ToInt32(chkManagePayments.Tag)) == Convert.ToInt32(chkManagePayments.Tag));
+                chkManageEmployees.Checked = ((perm & Convert.ToInt32(chkManageEmployees.Tag)) == Convert.ToInt32(chkManageEmployees.Tag));
+                chkManageMembers.Checked = ((perm & Convert.ToInt32(chkManageMembers.Tag)) == Convert.ToInt32(chkManageMembers.Tag));
+                chkManageClasses.Checked = ((perm & Convert.ToInt32(chkManageClasses.Tag)) == Convert.ToInt32(chkManageClasses.Tag));
+                chkManageTrainers.Checked = ((perm & Convert.ToInt32(chkManageTrainers.Tag)) == Convert.ToInt32(chkManageTrainers.Tag));
         }
         private void _LoadData()
         {
@@ -187,40 +189,48 @@ namespace GymMangementSystem
                 _Permission -= permissionNumber;
                 
         }
-        private void chkManagePeople_CheckedChanged(object sender, EventArgs e)
+
+        private void SetCheckboxChanged(object sender, EventArgs e)
         {
-            SetPermission(chkManagePeople, Convert.ToInt32(chkManagePeople.Tag));
+            CheckBox checkbox = sender as CheckBox;
+            SetPermission(checkbox, Convert.ToInt32(checkbox.Tag));
         }
 
-        private void chkManageUsers_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPermission(chkManageUsers, Convert.ToInt32(chkManageUsers.Tag));
-        }
 
-        private void chkManageMembers_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPermission(chkManageMembers, Convert.ToInt32(chkManageMembers.Tag));
-        }
+        //private void chkManagePeople_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManagePeople, Convert.ToInt32(chkManagePeople.Tag));
+        //}
 
-        private void chkManagePayments_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPermission(chkManagePayments, Convert.ToInt32(chkManagePayments.Tag));
-        }
+        //private void chkManageUsers_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManageUsers, Convert.ToInt32(chkManageUsers.Tag));
+        //}
 
-        private void chkManageEmployees_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPermission(chkManageEmployees, Convert.ToInt32(chkManageEmployees.Tag));
-        }
+        //private void chkManageMembers_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManageMembers, Convert.ToInt32(chkManageMembers.Tag));
+        //}
 
-        private void chkManageTrainers_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPermission(chkManageTrainers, Convert.ToInt32(chkManageTrainers.Tag));
-        }
+        //private void chkManagePayments_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManagePayments, Convert.ToInt32(chkManagePayments.Tag));
+        //}
 
-        private void chkManageClasses_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPermission(chkManageClasses, Convert.ToInt32(chkManageClasses.Tag));
-        }
+        //private void chkManageEmployees_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManageEmployees, Convert.ToInt32(chkManageEmployees.Tag));
+        //}
+
+        //private void chkManageTrainers_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManageTrainers, Convert.ToInt32(chkManageTrainers.Tag));
+        //}
+
+        //private void chkManageClasses_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    SetPermission(chkManageClasses, Convert.ToInt32(chkManageClasses.Tag));
+        //}
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -231,8 +241,10 @@ namespace GymMangementSystem
             }
 
             _User.UserName = tbUserName.Text.Trim();
-            if(clsHashing.Hashing(tbConfirmPassword.Text.Trim())!= clsHashing.Hashing(_User.Password))
-            _User.Password=clsHashing.Hashing(tbConfirmPassword.Text.Trim());
+            //if(clsHashing.Hashing(tbConfirmPassword.Text.Trim())!= clsHashing.Hashing(_User.Password))
+            //_User.Password=clsHashing.Hashing(tbConfirmPassword.Text.Trim());
+
+            _User.Password = tbConfirmPassword.Text.Trim();
 
             _User.Permission = Convert.ToSByte(_Permission);
             _User.IsActive = rbActive.Checked;
