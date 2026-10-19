@@ -32,9 +32,15 @@ namespace GymMangementSystem
             lblUsername.Text = _User.UserName;
             lblUserID.Text = UserID.ToString();
             if (_User.IsActive)
+            {
                 lblsActive.Text = "Yes";
+                lblsActive.BackColor=Color.FromArgb(220, 252, 231);
+            }
             else
+            {
                 lblsActive.Text = "No";
+                lblsActive.BackColor = Color.FromArgb(199,123,123);
+            }
         }
         private void ctrlUserDetails_Load(object sender, EventArgs e)
         {

@@ -12,19 +12,14 @@ namespace GymMangementSystem
 {
     public partial class frmChangePassword : Form
     {
-        public frmChangePassword()
+        private int _UserID = -1;
+        public frmChangePassword(int UserID)
         {
             InitializeComponent();
+            _UserID = UserID;
+            ctrlUserDetails1.LoadUserInfo(UserID);
         }
 
-        private void txtCurrentPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
