@@ -13,12 +13,16 @@ namespace GymMangementSystem
 {
     public partial class uctPersonDetails : UserControl
     {
-        private int _PersonID;
+        private int _PersonID=-1;
+        private clsCountries _CountryInfo;
         public int PersonID
         {
             get { return _PersonID; }
         }
-
+        public clsCountries CountryInfo
+        {
+            get { return _CountryInfo; }
+        }
         private clsPeople _PersonInfo;
 
         public clsPeople PersonInfo
@@ -61,8 +65,10 @@ namespace GymMangementSystem
 
         private void _FillPersonInfo()
         {
+            _CountryInfo = clsCountries.Find(_PersonInfo.NationalityCountryID);
+
             lbAddress.Text = _PersonInfo.Address;
-            lbCountry.Text = clsCountries.Find(_PersonInfo.NationalityCountryID).CountryName;
+            lbCountry.Text =_CountryInfo .CountryName;
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
             lbEmail.Text = _PersonInfo.Email.ToString();
             lbGender.Text = _PersonInfo.Gender == 0 ? "Male" : "Female";
@@ -72,6 +78,7 @@ namespace GymMangementSystem
             lbPhone.Text = _PersonInfo.PhoneNumber;
 
             _LoadPersonImage();
+            _PersonID = _PersonInfo.PersonID;
         }
 
         public void LoadPersonInfo(int PersonID)

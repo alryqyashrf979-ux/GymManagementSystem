@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,19 @@ namespace GymMangementSystem
 {
     public partial class uctPersonDetailsWithFilter : UserControl
     {
+        public int PersonID
+        {
+            get { return uctPersonDetails1.PersonID; }
+        }
+        public clsCountries CountryInfo
+        {
+            get { return uctPersonDetails1.CountryInfo; }
+        }
         public uctPersonDetailsWithFilter()
         {
             InitializeComponent();
         }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void FIndNow()
         {
             if (tbSearch.Text.Trim() == "")
             {
@@ -32,12 +40,39 @@ namespace GymMangementSystem
             {
                 uctPersonDetails1.LoadPersonInfo(tbSearch.Text);
             }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            FIndNow();
 
         }
 
         public void FocusOnTbSearch()
         {
             tbSearch.Focus();
+        }
+
+        public void DisableFiltering()
+        {
+      
+            gbFilter.Enabled = false;
+        }
+
+        public void SetValueInTextbox(int value)
+        {
+            tbSearch.Text = value.ToString();
+       
+        }
+        public void LoadPersonInfo(int PersonID)
+        {
+            uctPersonDetails1.LoadPersonInfo(PersonID);
         }
 
         private void cbOptions_SelectedIndexChanged(object sender, EventArgs e)

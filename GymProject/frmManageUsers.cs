@@ -141,6 +141,14 @@ namespace GymMangementSystem
         {
             Form frm = new frmAddUpdateUser();
             frm.ShowDialog();
+            frmManageUsers_Load(null, null);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateUser((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmManageUsers_Load(null, null);
         }
     }
 }

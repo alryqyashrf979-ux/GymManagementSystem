@@ -32,7 +32,7 @@ namespace DataAccessLayer
 
                     conn.Open();
 
-                    command.Parameters.AddWithValue("@Permission", Permission);
+                    command.Parameters.AddWithValue("@Permission",Convert.ToInt16(Permission));
                     command.Parameters.AddWithValue("@PersonID", PersonID);
                     command.Parameters.AddWithValue("@UserName", UserName);
                     command.Parameters.AddWithValue("@Password", Password);
@@ -79,7 +79,7 @@ namespace DataAccessLayer
 
                     conn.Open();
 
-                    command.Parameters.AddWithValue("@Permission", Permission);
+                    command.Parameters.AddWithValue("@Permission",Convert.ToInt16(Permission));
                     command.Parameters.AddWithValue("@PersonID", PersonID);
                     command.Parameters.AddWithValue("@UserName", UserName);
                     command.Parameters.AddWithValue("@Password", Password);
@@ -234,6 +234,37 @@ namespace DataAccessLayer
         }
 
 
+        public static bool IsUserNameExist(string Username)
+        {
+
+            string query = "SELECT Found=1 FROM Users WHERE Username = @Username";
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@Username", Username);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        return reader.HasRows;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
+
 
         public static bool IsUserExistByPersonID(int PersonID)
         {
@@ -292,7 +323,7 @@ namespace DataAccessLayer
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
-                    Permission = (sbyte)reader["Permission"];
+                    Permission = Convert.ToSByte(reader["Permission"]);
 
 
                 }

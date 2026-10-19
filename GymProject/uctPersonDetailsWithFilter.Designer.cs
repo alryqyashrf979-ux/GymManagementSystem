@@ -29,41 +29,59 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbSearch = new GymMangementSystem.MyTextBox();
             this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.gbFilter);
             this.panel1.Controls.Add(this.uctPersonDetails1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 376);
             this.panel1.TabIndex = 0;
             // 
-            // groupBox1
+            // gbFilter
             // 
-            this.groupBox1.Controls.Add(this.guna2CircleButton1);
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.tbSearch);
-            this.groupBox1.Controls.Add(this.cbOptions);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(882, 64);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
+            this.gbFilter.Controls.Add(this.guna2CircleButton1);
+            this.gbFilter.Controls.Add(this.btnSearch);
+            this.gbFilter.Controls.Add(this.tbSearch);
+            this.gbFilter.Controls.Add(this.cbOptions);
+            this.gbFilter.Controls.Add(this.label1);
+            this.gbFilter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFilter.Location = new System.Drawing.Point(5, 3);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(882, 64);
+            this.gbFilter.TabIndex = 3;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "Filter";
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(771, 20);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(46, 36);
+            this.guna2CircleButton1.TabIndex = 9;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // btnSearch
             // 
@@ -75,10 +93,11 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
-            this.btnSearch.Location = new System.Drawing.Point(710, 20);
+            this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSearch.Location = new System.Drawing.Point(709, 20);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnSearch.Size = new System.Drawing.Size(37, 36);
+            this.btnSearch.Size = new System.Drawing.Size(51, 36);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -146,23 +165,6 @@
             this.uctPersonDetails1.Size = new System.Drawing.Size(882, 302);
             this.uctPersonDetails1.TabIndex = 2;
             // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = global::GymMangementSystem.Properties.Resources.AddUser;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(766, 20);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(37, 36);
-            this.guna2CircleButton1.TabIndex = 9;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
             // uctPersonDetailsWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,8 +174,8 @@
             this.Name = "uctPersonDetailsWithFilter";
             this.Size = new System.Drawing.Size(900, 383);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -182,7 +184,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private uctPersonDetails uctPersonDetails1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbFilter;
         private Guna.UI2.WinForms.Guna2CircleButton btnSearch;
         private MyTextBox tbSearch;
         private Guna.UI2.WinForms.Guna2ComboBox cbOptions;

@@ -17,8 +17,7 @@ namespace DataBusinessLayer
 
         private int _UserID = -1;
         public int UserID { get { return _UserID; } }
-        private int _PersonID;
-        public int PersonID { get { return _PersonID; } }
+        public int PersonID { get; set; }
         public clsPeople PersonInfo;
         public string UserName { set; get; }
         public string Password { set; get; }
@@ -29,7 +28,7 @@ namespace DataBusinessLayer
 
         {
             this._UserID = -1;
-            this._PersonID = -1;
+            this.PersonID = -1;
             this.UserName = "";
             this.Password = "";
             this.IsActive = true;
@@ -44,7 +43,7 @@ namespace DataBusinessLayer
 
         {
             this._UserID = UserID;
-            this._PersonID = PersonID;
+            this.PersonID = PersonID;
             this.Permission = Permission;
             this.PersonInfo = clsPeople.Find(PersonID);
             this.UserName = Username;
@@ -96,7 +95,10 @@ namespace DataBusinessLayer
 
             return false;
         }
-
+        static public bool IsUsernameExist(string username)
+        {
+            return clsUsersData.IsUserNameExist(username);
+        }
 
         public static clsUsers FindByUserID(int UserID)
         {
