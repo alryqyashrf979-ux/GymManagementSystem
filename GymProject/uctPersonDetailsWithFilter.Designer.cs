@@ -34,14 +34,15 @@
             this.btnSearch = new Guna.UI2.WinForms.Guna2CircleButton();
             this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.tbSearch = new GymMangementSystem.MyTextBox();
+            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.guna2Panel1.SuspendLayout();
             this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
@@ -142,15 +143,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Find By :";
             // 
-            // uctPersonDetails1
-            // 
-            this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetails1.Location = new System.Drawing.Point(7, 89);
-            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1176, 372);
-            this.uctPersonDetails1.TabIndex = 6;
-            // 
             // tbSearch
             // 
             this.tbSearch.BorderRadius = 15;
@@ -175,6 +167,15 @@
             this.tbSearch.Size = new System.Drawing.Size(304, 42);
             this.tbSearch.TabIndex = 7;
             this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
+            // 
+            // uctPersonDetails1
+            // 
+            this.uctPersonDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.uctPersonDetails1.Location = new System.Drawing.Point(7, 86);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetails1.Name = "uctPersonDetails1";
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1175, 368);
+            this.uctPersonDetails1.TabIndex = 6;
             // 
             // uctPersonDetailsWithFilter
             // 
