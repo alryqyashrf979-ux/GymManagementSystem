@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbSearch = new GymMangementSystem.MyTextBox();
@@ -37,33 +37,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.gbFilter);
             this.panel1.Controls.Add(this.uctPersonDetails1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 376);
             this.panel1.TabIndex = 0;
             // 
-            // groupBox1
+            // gbFilter
             // 
-            this.groupBox1.Controls.Add(this.guna2CircleButton1);
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.tbSearch);
-            this.groupBox1.Controls.Add(this.cbOptions);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(882, 64);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
+            this.gbFilter.Controls.Add(this.guna2CircleButton1);
+            this.gbFilter.Controls.Add(this.btnSearch);
+            this.gbFilter.Controls.Add(this.tbSearch);
+            this.gbFilter.Controls.Add(this.cbOptions);
+            this.gbFilter.Controls.Add(this.label1);
+            this.gbFilter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFilter.Location = new System.Drawing.Point(5, 3);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(882, 64);
+            this.gbFilter.TabIndex = 3;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "Filter";
             // 
             // guna2CircleButton1
             // 
@@ -174,8 +174,8 @@
             this.Name = "uctPersonDetailsWithFilter";
             this.Size = new System.Drawing.Size(900, 383);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -184,7 +184,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private uctPersonDetails uctPersonDetails1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbFilter;
         private Guna.UI2.WinForms.Guna2CircleButton btnSearch;
         private MyTextBox tbSearch;
         private Guna.UI2.WinForms.Guna2ComboBox cbOptions;

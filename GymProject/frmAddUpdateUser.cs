@@ -32,6 +32,7 @@ namespace GymMangementSystem
         {
             InitializeComponent();
             _Mode = enMode.UpdateMode;
+            _UserID = UserID;
         }
 
         private void frmAddUpdateUser_Activated(object sender, EventArgs e)
@@ -73,6 +74,8 @@ namespace GymMangementSystem
         {
             _ResetDefaultValues();
 
+            if (_Mode == enMode.UpdateMode)
+                _LoadData();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -143,12 +146,17 @@ namespace GymMangementSystem
         private void _LoadData()
         {
             _User = clsUsers.FindByUserID(_UserID);
+
+            uctPersonDetailsWithFilter1.DisableFiltering();
             if (_User == null)
             {
                 MessageBox.Show($"No User with user id = {_UserID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            uctPersonDetailsWithFilter1.SetValueInTextbox(_User.PersonID);
+            uctPersonDetailsWithFilter1.LoadPersonInfo(_User.PersonID);
+            
             tbUserName.Text = _User.UserName;
             tbPassword.Text = _User.Password;
             tbConfirmPassword.Text = _User.Password;

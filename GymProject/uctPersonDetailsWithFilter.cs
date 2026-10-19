@@ -59,6 +59,22 @@ namespace GymMangementSystem
             tbSearch.Focus();
         }
 
+        public void DisableFiltering()
+        {
+      
+            gbFilter.Enabled = false;
+        }
+
+        public void SetValueInTextbox(int value)
+        {
+            tbSearch.Text = value.ToString();
+       
+        }
+        public void LoadPersonInfo(int PersonID)
+        {
+            uctPersonDetails1.LoadPersonInfo(PersonID);
+        }
+
         private void cbOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
             tbSearch.Clear();
