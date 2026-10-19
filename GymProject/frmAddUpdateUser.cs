@@ -188,5 +188,21 @@ namespace GymMangementSystem
                 MessageBox.Show("Error : User did not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+
+        private void tbConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbPassword.Text != tbConfirmPassword.Text)
+                errorProvider1.SetError(tbConfirmPassword, "ConfirmPassword does not match Password.");
+            else
+                errorProvider1.SetError(tbConfirmPassword, "");
+        }
+
+        private void tbUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbPassword.Text != tbConfirmPassword.Text)
+                errorProvider1.SetError(tbConfirmPassword, "ConfirmPassword does not match Password.");
+            else
+                errorProvider1.SetError(tbConfirmPassword, "");
+        }
     }
 }

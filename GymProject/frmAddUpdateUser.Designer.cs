@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -86,6 +87,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tcUserInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -106,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcUserInfo
@@ -309,7 +312,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Setting;
             this.pictureBox11.Location = new System.Drawing.Point(9, 3);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(40, 27);
@@ -617,12 +620,14 @@
             this.tbConfirmPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.tbConfirmPassword.IsRequired = true;
             this.tbConfirmPassword.Location = new System.Drawing.Point(471, 219);
+            this.tbConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
             this.tbConfirmPassword.PasswordChar = '*';
             this.tbConfirmPassword.PlaceholderText = "Confirm Password";
             this.tbConfirmPassword.SelectedText = "";
             this.tbConfirmPassword.Size = new System.Drawing.Size(367, 36);
             this.tbConfirmPassword.TabIndex = 15;
+            this.tbConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.tbConfirmPassword_Validating);
             // 
             // label7
             // 
@@ -652,6 +657,7 @@
             this.tbPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.tbPassword.IsRequired = true;
             this.tbPassword.Location = new System.Drawing.Point(467, 147);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.PlaceholderText = "Password";
@@ -687,11 +693,13 @@
             this.tbUserName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.tbUserName.IsRequired = true;
             this.tbUserName.Location = new System.Drawing.Point(37, 150);
+            this.tbUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.PlaceholderText = "User Name";
             this.tbUserName.SelectedText = "";
             this.tbUserName.Size = new System.Drawing.Size(367, 36);
             this.tbUserName.TabIndex = 9;
+            this.tbUserName.Validating += new System.ComponentModel.CancelEventHandler(this.tbUserName_Validating);
             // 
             // label5
             // 
@@ -789,7 +797,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Verfication;
             this.pictureBox7.Location = new System.Drawing.Point(4, 231);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 27);
@@ -890,6 +898,10 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -930,6 +942,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -994,5 +1007,6 @@
         private System.Windows.Forms.CheckBox chkManagePayments;
         private System.Windows.Forms.CheckBox chkManageEmployees;
         private System.Windows.Forms.CheckBox chkManagePeople;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

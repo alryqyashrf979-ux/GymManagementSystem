@@ -234,6 +234,37 @@ namespace DataAccessLayer
         }
 
 
+        public static bool IsUserNameExist(string Username)
+        {
+
+            string query = "SELECT Found=1 FROM Users WHERE Username = @Username";
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@Username", Username);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        return reader.HasRows;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
+
 
         public static bool IsUserExistByPersonID(int PersonID)
         {
