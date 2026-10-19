@@ -476,8 +476,9 @@
             this.guna2Panel2.Controls.Add(this.rbActive);
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.Controls.Add(this.pictureBox7);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(242)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(837, 42);
             this.guna2Panel2.TabIndex = 0;
