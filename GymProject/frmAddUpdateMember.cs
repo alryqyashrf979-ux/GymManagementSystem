@@ -16,6 +16,15 @@ namespace GymMangementSystem
         public frmAddUpdateMember()
         {
             InitializeComponent();
+            _Mode = enMode.Addnew;
+        }
+
+        private int _MemberID = -1;
+        public frmAddUpdateMember(int memberID)
+        {
+            InitializeComponent();
+            _MemberID = memberID;
+            _Mode = enMode.Update;
         }
 
 
@@ -72,6 +81,78 @@ namespace GymMangementSystem
 
 
 
+
+        }
+
+        clsMembers _Member;
+
+        void _SetDefaultValues()
+        {
+
+            if(_Mode==enMode.Addnew)
+            {
+                lblTitle1.Text = "Add New Member";
+                lblTitle2.Text = "Add New Member";
+                this.Text="Add New Member"; 
+                _Member = new clsMembers();
+
+            }
+            else
+            {
+                lblTitle2.Text = "Update Member";
+                lblTitle1.Text = "Update Member";
+                this.Text = "Update Member";
+
+
+            }
+
+            txtPersonName.Text = string.Empty;
+            lblMemberID.Text = "???";
+            lblPersonID.Text = "???";
+            txtPhoneNumber.Text = string.Empty;
+            txtRelationship.Text= string.Empty;
+            lblEmergencyContactID.Text = "???";
+
+            dtLastSubscriptionDate.MaxDate = DateTime.Today;
+            dtLastSubscriptionDate.MinDate = DateTime.Today;
+
+            btnSave.Enabled = false;
+            tpLoginInfo.Enabled = false;
+            tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpPersonalInfo"];
+            tgschIsActive.Checked = true;
+
+        }
+
+        void _LoadDate()
+        {
+
+            _Member = clsMembers.FindMemberUsingMemberID(_MemberID);
+
+
+            if (_Member == null)
+            {
+
+                MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            txtPersonName.Text = _Member.EmergencyContactInfo.Name;
+            txtRelationship.Text=_Member.EmergencyContactInfo.Relationship;
+            txtPhoneNumber.Text=_Member.EmergencyContactInfo.PhoneNumber;
+            tgschIsActive.Checked = _Member.IsActive;
+            lblEmergencyContactID.Text = _Member.EmergencyContactID.ToString();
+            lblPersonID.Text=uctPersonDetailsWithFilter1.PersonID.ToString();
+            lblMemberID.Text = _Member.MemberID.ToString();
+
+
+
+        }
+        private void frmAddUpdateMember_Load(object sender, EventArgs e)
+        {
+            _SetDefaultValues();
+
+            if (_Mode == enMode.Update)
+                _LoadDate();
 
         }
     }
