@@ -34,5 +34,18 @@ namespace GymMangementSystem
             else
                 errorProvider1.SetError(txtCurrentPassword, "");
         }
+
+        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNewPassword.Text != txtConfirmPassword.Text)
+                errorProvider1.SetError(txtConfirmPassword, "Confirm password does not match new password !");
+            else
+                errorProvider1.SetError(txtConfirmPassword, "");
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

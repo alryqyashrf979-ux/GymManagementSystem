@@ -36,7 +36,7 @@
             this.ctrlUserDetails1 = new GymMangementSystem.ctrlUserDetails();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
-            this.lblConfirmPassword = new GymMangementSystem.MyTextBox();
+            this.txtConfirmPassword = new GymMangementSystem.MyTextBox();
             this.lable11 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtNewPassword = new GymMangementSystem.MyTextBox();
@@ -99,7 +99,7 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.Controls.Add(this.btnChangePassword);
-            this.guna2GroupBox1.Controls.Add(this.lblConfirmPassword);
+            this.guna2GroupBox1.Controls.Add(this.txtConfirmPassword);
             this.guna2GroupBox1.Controls.Add(this.lable11);
             this.guna2GroupBox1.Controls.Add(this.pictureBox3);
             this.guna2GroupBox1.Controls.Add(this.txtNewPassword);
@@ -135,31 +135,33 @@
             this.btnChangePassword.Size = new System.Drawing.Size(314, 45);
             this.btnChangePassword.TabIndex = 16;
             this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // lblConfirmPassword
+            // txtConfirmPassword
             // 
-            this.lblConfirmPassword.BorderRadius = 5;
-            this.lblConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblConfirmPassword.DefaultText = "";
-            this.lblConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lblConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.lblConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblConfirmPassword.ErrorMessage = "Confirm password is required";
-            this.lblConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblConfirmPassword.ForeColor = System.Drawing.Color.Black;
-            this.lblConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblConfirmPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.lblConfirmPassword.IsRequired = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(71, 251);
-            this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.PasswordChar = '*';
-            this.lblConfirmPassword.PlaceholderText = "Confirm Password";
-            this.lblConfirmPassword.SelectedText = "";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(244, 31);
-            this.lblConfirmPassword.TabIndex = 16;
+            this.txtConfirmPassword.BorderRadius = 5;
+            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.DefaultText = "";
+            this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPassword.ErrorMessage = "Confirm password is required";
+            this.txtConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtConfirmPassword.IsRequired = true;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(71, 251);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
+            this.txtConfirmPassword.PlaceholderText = "Confirm Password";
+            this.txtConfirmPassword.SelectedText = "";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(244, 31);
+            this.txtConfirmPassword.TabIndex = 16;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
             // lable11
             // 
@@ -319,7 +321,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MyTextBox txtCurrentPassword;
-        private MyTextBox lblConfirmPassword;
+        private MyTextBox txtConfirmPassword;
         private System.Windows.Forms.Label lable11;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
