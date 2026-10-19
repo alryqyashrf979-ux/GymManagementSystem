@@ -65,30 +65,14 @@ namespace GymMangementSystem
             gbFilter.Enabled = false;
         }
 
-        public void SetValueInTextbox(int value)
-        {
-            tbSearch.Text = value.ToString();
-       
-        }
+      
         public void LoadPersonInfo(int PersonID)
         {
             uctPersonDetails1.LoadPersonInfo(PersonID);
+            tbSearch.Text = PersonID.ToString();
         }
 
-        private void cbOptions_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tbSearch.Clear();
-            tbSearch.Focus();
-
-            if (cbOptions.Text == "Person ID")
-            {
-                tbSearch.InputType = MyTextBox.TextType.Numeric;
-            }
-            else
-            {
-                tbSearch.InputType = MyTextBox.TextType.Text;
-            }
-        }
+     
 
         private void tbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -110,9 +94,19 @@ namespace GymMangementSystem
             uctPersonDetails1.LoadPersonInfo(PersonID);
         }
 
-        private void btnSearch_KeyPress(object sender, KeyPressEventArgs e)
+        private void cbOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+            tbSearch.Clear();
+            tbSearch.Focus();
+
+            if (cbOptions.Text == "Person ID")
+            {
+                tbSearch.InputType = MyTextBox.TextType.Numeric;
+            }
+            else
+            {
+                tbSearch.InputType = MyTextBox.TextType.Text;
+            }
         }
     }
 }

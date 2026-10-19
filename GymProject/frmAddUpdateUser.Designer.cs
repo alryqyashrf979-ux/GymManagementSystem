@@ -38,12 +38,12 @@
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
+            this.rbDisactive = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rbActive = new Guna.UI2.WinForms.Guna2RadioButton();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.rbNo = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbYes = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlPermission = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -57,10 +57,10 @@
             this.chkManageMembers = new System.Windows.Forms.CheckBox();
             this.chkManagePeople = new System.Windows.Forms.CheckBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.rbDisactive = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbActive = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.rbYes = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbNo = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -122,7 +122,7 @@
             this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 22);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
-            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpPersonalInfo.Size = new System.Drawing.Size(903, 496);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
@@ -187,7 +187,7 @@
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
             this.btnNext.Location = new System.Drawing.Point(776, 457);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(119, 36);
             this.btnNext.TabIndex = 12;
@@ -208,10 +208,10 @@
             // tpLoginInfo
             // 
             this.tpLoginInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.tpLoginInfo.Controls.Add(this.rbDisactive);
             this.tpLoginInfo.Controls.Add(this.panel1);
+            this.tpLoginInfo.Controls.Add(this.rbActive);
             this.tpLoginInfo.Controls.Add(this.pictureBox12);
-            this.tpLoginInfo.Controls.Add(this.rbNo);
-            this.tpLoginInfo.Controls.Add(this.rbYes);
             this.tpLoginInfo.Controls.Add(this.guna2Panel1);
             this.tpLoginInfo.Controls.Add(this.label2);
             this.tpLoginInfo.Controls.Add(this.pictureBox2);
@@ -236,10 +236,28 @@
             this.tpLoginInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 22);
             this.tpLoginInfo.Name = "tpLoginInfo";
-            this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpLoginInfo.Size = new System.Drawing.Size(903, 496);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
+            // 
+            // rbDisactive
+            // 
+            this.rbDisactive.AutoSize = true;
+            this.rbDisactive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbDisactive.CheckedState.BorderThickness = 0;
+            this.rbDisactive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbDisactive.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbDisactive.CheckedState.InnerOffset = -4;
+            this.rbDisactive.Location = new System.Drawing.Point(235, 221);
+            this.rbDisactive.Name = "rbDisactive";
+            this.rbDisactive.Size = new System.Drawing.Size(49, 25);
+            this.rbDisactive.TabIndex = 62;
+            this.rbDisactive.Text = "No";
+            this.rbDisactive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbDisactive.UncheckedState.BorderThickness = 2;
+            this.rbDisactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbDisactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // panel1
             // 
@@ -274,6 +292,24 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // rbActive
+            // 
+            this.rbActive.AutoSize = true;
+            this.rbActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbActive.CheckedState.BorderThickness = 0;
+            this.rbActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbActive.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbActive.CheckedState.InnerOffset = -4;
+            this.rbActive.Location = new System.Drawing.Point(169, 221);
+            this.rbActive.Name = "rbActive";
+            this.rbActive.Size = new System.Drawing.Size(51, 25);
+            this.rbActive.TabIndex = 61;
+            this.rbActive.Text = "Yes";
+            this.rbActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbActive.UncheckedState.BorderThickness = 2;
+            this.rbActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.Verfication;
@@ -283,43 +319,6 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 65;
             this.pictureBox12.TabStop = false;
-            // 
-            // rbNo
-            // 
-            this.rbNo.AutoSize = true;
-            this.rbNo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbNo.CheckedState.BorderThickness = 0;
-            this.rbNo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbNo.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbNo.CheckedState.InnerOffset = -4;
-            this.rbNo.Location = new System.Drawing.Point(223, 221);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(49, 25);
-            this.rbNo.TabIndex = 64;
-            this.rbNo.Text = "No";
-            this.rbNo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbNo.UncheckedState.BorderThickness = 2;
-            this.rbNo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbNo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rbYes
-            // 
-            this.rbYes.AutoSize = true;
-            this.rbYes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbYes.CheckedState.BorderThickness = 0;
-            this.rbYes.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbYes.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbYes.CheckedState.InnerOffset = -4;
-            this.rbYes.Location = new System.Drawing.Point(157, 221);
-            this.rbYes.Name = "rbYes";
-            this.rbYes.Size = new System.Drawing.Size(51, 25);
-            this.rbYes.TabIndex = 63;
-            this.rbYes.Tag = "-1";
-            this.rbYes.Text = "Yes";
-            this.rbYes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbYes.UncheckedState.BorderThickness = 2;
-            this.rbYes.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbYes.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // guna2Panel1
             // 
@@ -347,7 +346,7 @@
             this.pnlPermission.Controls.Add(this.chkManageMembers);
             this.pnlPermission.Controls.Add(this.chkManagePeople);
             this.pnlPermission.Location = new System.Drawing.Point(3, 49);
-            this.pnlPermission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPermission.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPermission.Name = "pnlPermission";
             this.pnlPermission.Size = new System.Drawing.Size(837, 150);
             this.pnlPermission.TabIndex = 70;
@@ -478,52 +477,16 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderRadius = 5;
-            this.guna2Panel2.Controls.Add(this.rbDisactive);
-            this.guna2Panel2.Controls.Add(this.rbActive);
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.Controls.Add(this.pictureBox7);
+            this.guna2Panel2.Controls.Add(this.rbYes);
+            this.guna2Panel2.Controls.Add(this.rbNo);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel2.Location = new System.Drawing.Point(4, 4);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(837, 42);
             this.guna2Panel2.TabIndex = 0;
-            // 
-            // rbDisactive
-            // 
-            this.rbDisactive.AutoSize = true;
-            this.rbDisactive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbDisactive.CheckedState.BorderThickness = 0;
-            this.rbDisactive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbDisactive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbDisactive.CheckedState.InnerOffset = -4;
-            this.rbDisactive.Location = new System.Drawing.Point(282, 9);
-            this.rbDisactive.Name = "rbDisactive";
-            this.rbDisactive.Size = new System.Drawing.Size(49, 25);
-            this.rbDisactive.TabIndex = 62;
-            this.rbDisactive.Text = "No";
-            this.rbDisactive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbDisactive.UncheckedState.BorderThickness = 2;
-            this.rbDisactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbDisactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rbActive
-            // 
-            this.rbActive.AutoSize = true;
-            this.rbActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbActive.CheckedState.BorderThickness = 0;
-            this.rbActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbActive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbActive.CheckedState.InnerOffset = -4;
-            this.rbActive.Location = new System.Drawing.Point(216, 9);
-            this.rbActive.Name = "rbActive";
-            this.rbActive.Size = new System.Drawing.Size(51, 25);
-            this.rbActive.TabIndex = 61;
-            this.rbActive.Text = "Yes";
-            this.rbActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbActive.UncheckedState.BorderThickness = 2;
-            this.rbActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // label8
             // 
@@ -545,6 +508,45 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
+            // 
+            // rbYes
+            // 
+            this.rbYes.AutoSize = true;
+            this.rbYes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbYes.CheckedState.BorderThickness = 0;
+            this.rbYes.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbYes.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbYes.CheckedState.InnerOffset = -4;
+            this.rbYes.Location = new System.Drawing.Point(202, 9);
+            this.rbYes.Name = "rbYes";
+            this.rbYes.Size = new System.Drawing.Size(51, 25);
+            this.rbYes.TabIndex = 63;
+            this.rbYes.Tag = "-1";
+            this.rbYes.Text = "Yes";
+            this.rbYes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbYes.UncheckedState.BorderThickness = 2;
+            this.rbYes.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbYes.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbYes.CheckedChanged += new System.EventHandler(this.rbYes_CheckedChanged);
+            // 
+            // rbNo
+            // 
+            this.rbNo.AutoSize = true;
+            this.rbNo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbNo.CheckedState.BorderThickness = 0;
+            this.rbNo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbNo.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbNo.CheckedState.InnerOffset = -4;
+            this.rbNo.Location = new System.Drawing.Point(268, 9);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(49, 25);
+            this.rbNo.TabIndex = 64;
+            this.rbNo.Text = "No";
+            this.rbNo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbNo.UncheckedState.BorderThickness = 2;
+            this.rbNo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbNo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbNo.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
             // 
             // label2
             // 
@@ -834,11 +836,12 @@
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSave.Location = new System.Drawing.Point(786, 11);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(109, 30);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -859,7 +862,7 @@
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
             this.btnClose.Location = new System.Drawing.Point(660, 11);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(117, 30);
             this.btnClose.TabIndex = 15;
