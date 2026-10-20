@@ -35,8 +35,11 @@ namespace DataBusinessLayer
         public int NationalityCountryID { set; get; }
         public string ImagePath { set; get; }
 
-        
-
+       private clsCountries _CountryInfo;
+        public clsCountries CountryInfo
+        {
+            get=>_CountryInfo;
+        }
 
         public clsPeople()
 
@@ -53,7 +56,7 @@ namespace DataBusinessLayer
             this.ImagePath = "";
             this.NationalNo= "";
             this.Gender ='0';
-
+            _CountryInfo = null;
 
             Mode = enMode.AddNew;
         }
@@ -77,7 +80,7 @@ namespace DataBusinessLayer
             this.Email = Email;
             this.NationalityCountryID = NationalityCountryID;
             this.ImagePath = ImagePath;
-
+            _CountryInfo = clsCountries.Find(NationalityCountryID);
             Mode = enMode.Update;
         }
 
