@@ -52,11 +52,11 @@ namespace DataBusinessLayer
 
         static public bool DoesMemberExistByPersonID(int PersonID)
         {
-            return clsMembersDataAccess.DoesPersonExistByPersonID(PersonID);
+            return clsMembersDataAccess.DoesMemberExistByPersonID(PersonID);
         }
         static public bool DoesMemberExistByMemberID(int MemberID)
         {
-            return clsMembersDataAccess.DoesPersonExistByMemberID(MemberID);
+            return clsMembersDataAccess.DoesMemberExistByMemberID(MemberID);
         }
         public bool Delete()
         {

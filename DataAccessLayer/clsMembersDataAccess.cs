@@ -32,7 +32,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
 
             }
         }
-        static public bool DoesPersonExistByMemberID(int MemberID)
+        static public bool DoesMemberExistByMemberID(int MemberID)
         {
             string Query = "select Found = 1 from Members where MemberID = @MemberID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -45,12 +45,13 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
                     return (Reader.HasRows);
             }
         }
-        static public bool DoesPersonExistByPersonID(int PersonID)
+        static public bool DoesMemberExistByPersonID(int PersonID)
         {
             string Query = "select Found = 1 from Members where PersonID = @PersonID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand command = new SqlCommand(Query, con))
             {
+                con.Open();
                 command.Parameters.AddWithValue("@PersonID", PersonID);
 
                 using (SqlDataReader Reader = command.ExecuteReader())
@@ -104,7 +105,6 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
 
                 using (SqlCommand command = new SqlCommand(Query, con))
                 {
-                    con.Open();
                     command.Parameters.AddWithValue("@PersonID", PersonID);
                     command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
                     command.Parameters.AddWithValue("@IsActive", IsActive);

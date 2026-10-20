@@ -185,6 +185,7 @@
             this.btnNext.ForeColor = System.Drawing.Color.Black;
             this.btnNext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.btnNext.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Image = global::GymMangementSystem.Properties.Resources.Next_32;
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
             this.btnNext.Location = new System.Drawing.Point(1035, 563);
