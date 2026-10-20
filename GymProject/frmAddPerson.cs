@@ -97,7 +97,7 @@ namespace GymMangementSystem
             txtNationalNo.Text = _Person.NationalNo;
 
 
-            cmCountries.SelectedIndex = _Person.NationalityCountryID;
+            cmCountries.SelectedIndex = cmCountries.FindString(_Person.CountryInfo.CountryName);
 
 
 
