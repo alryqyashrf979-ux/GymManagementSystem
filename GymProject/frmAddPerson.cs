@@ -103,7 +103,7 @@ namespace GymMangementSystem
 
 
 
-            if (_Person.Gender == (char)enGender.Male)
+            if (_Person.Gender == (byte)enGender.Male)
                 rbMale.Checked=true;
             else
                 rbFemale.Checked = true;
@@ -255,9 +255,9 @@ namespace GymMangementSystem
             _Person.NationalNo = txtNationalNo.Text;
 
             if (rbMale.Checked)
-                _Person.Gender = (char)enGender.Male;
+                _Person.Gender = (byte)enGender.Male;
             else
-                _Person.Gender = (char)enGender.Female;
+                _Person.Gender = (byte)enGender.Female;
 
 
 
