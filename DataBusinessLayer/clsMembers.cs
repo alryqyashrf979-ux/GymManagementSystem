@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
@@ -98,6 +99,43 @@ namespace DataBusinessLayer
             }
             return false;
         }
+        public bool Subscription(DateTime StartDate ,clsSubscription.enSubscriptionStatus Status,int SubscriptionPlanID,int CreatedByUser)
+        {
+
+            if (this.MemberID != -1)
+            {
+
+                clsSubscriptionPlans subscriptionPlan = clsSubscriptionPlans.Find(SubscriptionPlanID);
+
+                if (subscriptionPlan == null)
+                    return false;
+
+                clsSubscription subscription = new clsSubscription();
+                subscription.MemberID = this.MemberID;
+                subscription.PlanID = SubscriptionPlanID;
+                subscription.Price = subscriptionPlan.PlanPrice;
+                subscription.StartDate = StartDate;
+                subscription.ExpirationDate = DateTime.Now.AddYears(subscriptionPlan.Duration);
+                subscription.createdByUserID = CreatedByUser;
+                subscription.Status = Status;
+
+
+
+
+
+            }
+            else
+                return false;
+
+            
+
+
+
+        }
+
+
+
+
         static public clsMembers FindMemberUsingPersonID(int personID)
         {
             int MemberID = -1; int EmergencyContactID = -1; int LastSubscriptionID=-1; bool IsActive = false;
