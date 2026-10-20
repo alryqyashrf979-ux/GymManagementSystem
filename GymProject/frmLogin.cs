@@ -25,6 +25,23 @@ namespace GymMangementSystem
             pictureBox2.Parent = pictureBox1;
             label4.Parent = pictureBox1;
             label5.Parent = pictureBox1;
+            chkRememberMe.Checked = false;
+
+            string username = string.Empty;
+            string Password = string.Empty;
+
+
+            if (clsGlobal.ReadFromWindowsRegistery(ref username, ref Password))
+            {
+                if(username!=""&&Password!="")
+                {
+                    txtUserName.Text = username;
+                    txtPassword.Text = Password;
+                    chkRememberMe.Checked = true;
+                }
+                
+            }
+           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -36,13 +53,21 @@ namespace GymMangementSystem
                 return;
             }
 
-            Form frm = new frmDashboard();
+            if (chkRememberMe.Checked)
+            {
+                clsGlobal.WriteInWindowsRegister(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+            }
+            else
+            {
+                clsGlobal.WriteInWindowsRegister("", "");
+            }
+
+            clsGlobal.CurrentUserInfo = _User;
+            Form frm = new frmDashboard(this);
+            this.Hide();
             frm.ShowDialog();
         }
 
-        private void chkRememberMe_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }

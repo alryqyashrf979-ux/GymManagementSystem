@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtPassword = new GymMangementSystem.MyTextBox();
             this.txtUserName = new GymMangementSystem.MyTextBox();
@@ -71,6 +71,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(12, 435);
             this.panel2.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel6.Location = new System.Drawing.Point(788, 15);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(12, 435);
+            this.panel6.TabIndex = 3;
             // 
             // panel3
             // 
@@ -118,7 +126,6 @@
             this.chkRememberMe.UncheckedState.BorderRadius = 0;
             this.chkRememberMe.UncheckedState.BorderThickness = 0;
             this.chkRememberMe.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chkRememberMe.CheckedChanged += new System.EventHandler(this.chkRememberMe_CheckedChanged);
             // 
             // label3
             // 
@@ -237,14 +244,6 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "V1.0.0";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.panel6.Location = new System.Drawing.Point(788, 15);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(12, 435);
-            this.panel6.TabIndex = 3;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -333,6 +332,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
