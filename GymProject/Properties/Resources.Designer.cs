@@ -413,6 +413,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PersonIcon {
+            get {
+                object obj = ResourceManager.GetObject("PersonIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PersonID {
             get {
                 object obj = ResourceManager.GetObject("PersonID", resourceCulture);
@@ -443,9 +453,29 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PhoneNumberIcon {
+            get {
+                object obj = ResourceManager.GetObject("PhoneNumberIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Photo {
             get {
                 object obj = ResourceManager.GetObject("Photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Relationship {
+            get {
+                object obj = ResourceManager.GetObject("Relationship", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
