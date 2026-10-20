@@ -22,10 +22,7 @@ namespace GymMangementSystem
             get => uctPersonDetails1.PersonInfo;
         }
 
-        public clsCountries CountryInfo
-        {
-            get { return uctPersonDetails1.CountryInfo; }
-        }
+      
         public uctPersonDetailsWithFilter()
         {
             InitializeComponent();
