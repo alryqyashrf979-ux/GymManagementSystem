@@ -19,7 +19,7 @@ namespace DataBusinessLayer
         public int MemberID { get { return _MemberID; } }
 
         public int PersonID { set; get; }
-        public DateTime LastSubscriptionDate { set; get; }
+        public int LastSubscriptionID { set; get; }
         public bool IsActive { set; get; }
         public clsPeople PersonInfo { set; get; }
 
@@ -28,18 +28,18 @@ namespace DataBusinessLayer
 
             _MemberID = -1;
             PersonID = -1;
-            LastSubscriptionDate = default(DateTime);
+            LastSubscriptionID = -1;
             IsActive = false;
             _Mode = enMode.add;
             PersonInfo = null;
             _Mode = enMode.add;
         }
-        public clsMembers(int MemberID, int personID, DateTime lastSubscriptionDate, bool IsActive, int EmergencyContactID,string ContactName,string ContactPhone,string Relationship):
+        public clsMembers(int MemberID, int personID, int lastSubscriptionID, bool IsActive, int EmergencyContactID,string ContactName,string ContactPhone,string Relationship):
                                                                                                                       base(ContactName,Relationship,ContactPhone, EmergencyContactID)
         { 
             this._MemberID = MemberID;
             this.PersonID = personID;
-            this.LastSubscriptionDate = lastSubscriptionDate;
+            this.LastSubscriptionID = lastSubscriptionID;
             this.IsActive = IsActive;
             this.PersonInfo = clsPeople.Find(PersonID);
             _Mode = enMode.edit;
@@ -67,11 +67,11 @@ namespace DataBusinessLayer
         }
         private bool _Update()
         {
-            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactID);
+            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactID);
         }
         private bool _Add()
         {
-            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionDate, this.IsActive, this.ContactID);
+            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactID);
             return _MemberID != -1;
         }
         public new bool Save()
@@ -100,9 +100,9 @@ namespace DataBusinessLayer
         }
         static public clsMembers FindMemberUsingPersonID(int personID)
         {
-            int MemberID = -1; int EmergencyContactID = -1; DateTime LastSubscriptionDate= default(DateTime); bool IsActive = false;
+            int MemberID = -1; int EmergencyContactID = -1; int LastSubscriptionID=-1; bool IsActive = false;
 
-            bool IsFound = clsMembersDataAccess.FindmemberByPersonID(personID, ref MemberID, ref LastSubscriptionDate, ref IsActive, ref EmergencyContactID);
+            bool IsFound = clsMembersDataAccess.FindmemberByPersonID(personID, ref MemberID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID);
 
 
             if (IsFound)
@@ -112,16 +112,16 @@ namespace DataBusinessLayer
 
 
 
-                return new clsMembers(MemberID, personID, LastSubscriptionDate, IsActive,ContactInfo.ContactID,
+                return new clsMembers(MemberID, personID, LastSubscriptionID, IsActive,ContactInfo.ContactID,
                     ContactInfo.EmergencyContactPersonName,ContactInfo.EmergencyContactPhoneNumber,ContactInfo.Relationship);               
             }
             return null;
         }
         static public clsMembers FindMemberUsingMemberID(int memberID)
         {
-            int PersonID = -1; int EmergencyContactID = -1; DateTime LastSubscriptionDate = default(DateTime); bool IsActive = false;
+            int PersonID = -1; int EmergencyContactID = -1; int LastSubscriptionID = -1; bool IsActive = false;
 
-            bool IsFound = clsMembersDataAccess.FindmemberByMemberID(memberID, ref PersonID, ref LastSubscriptionDate, ref IsActive, ref EmergencyContactID);
+            bool IsFound = clsMembersDataAccess.FindmemberByMemberID(memberID, ref PersonID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID);
 
             if (IsFound)
             {
@@ -130,7 +130,7 @@ namespace DataBusinessLayer
 
 
 
-                return new clsMembers(memberID, PersonID, LastSubscriptionDate, IsActive, ContactInfo.ContactID,
+                return new clsMembers(memberID, PersonID, LastSubscriptionID, IsActive, ContactInfo.ContactID,
                     ContactInfo.EmergencyContactPersonName, ContactInfo.EmergencyContactPhoneNumber, ContactInfo.Relationship);
             }
             return null;
