@@ -1,11 +1,12 @@
 ﻿using System;
+using DataBusinessLayer;
 using Microsoft.Win32;
 
 namespace GymMangementSystem
 {
     static public class clsGlobal
     {
-
+        static public clsUsers CurrentUserInfo;
         static public bool WriteInWindowsRegister(string username,string password)
         {
             string KeyPath = @"HKEY_CURRENT_USER\SOFTWARE\GMS_UserInfo";

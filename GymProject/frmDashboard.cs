@@ -12,9 +12,11 @@ namespace GymMangementSystem
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
+        private frmLogin _frmLogin;
+        public frmDashboard(frmLogin frm)
         {
             InitializeComponent();
+            _frmLogin = frm;
         }
 
         private void btnManagePeople_Click(object sender, EventArgs e)
