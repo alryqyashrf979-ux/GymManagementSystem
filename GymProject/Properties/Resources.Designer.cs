@@ -463,6 +463,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Price_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Price Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Relationship {
             get {
                 object obj = ResourceManager.GetObject("Relationship", resourceCulture);
@@ -506,6 +516,26 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Setting {
             get {
                 object obj = ResourceManager.GetObject("Setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subscription_Plan_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Subscription Plan Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SubscriptionIcon {
+            get {
+                object obj = ResourceManager.GetObject("SubscriptionIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

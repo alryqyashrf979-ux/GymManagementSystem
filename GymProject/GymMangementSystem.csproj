@@ -369,5 +369,14 @@
   <ItemGroup>
     <None Include="Resources\PhoneNumberIcon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subscription Plan Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubscriptionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Price Icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
