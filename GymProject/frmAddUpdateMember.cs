@@ -113,8 +113,7 @@ namespace GymMangementSystem
             txtRelationship.Text= string.Empty;
             lblEmergencyContactID.Text = "???";
 
-            dtLastSubscriptionDate.MaxDate = DateTime.Today;
-            dtLastSubscriptionDate.MinDate = DateTime.Today;
+         
 
             btnSave.Enabled = false;
             tpMemberInfo.Enabled = false;
@@ -144,11 +143,7 @@ namespace GymMangementSystem
             lblPersonID.Text=uctPersonDetailsWithFilter1.PersonID.ToString();
             lblMemberID.Text = _Member.MemberID.ToString();
 
-            dtLastSubscriptionDate.MaxDate= DateTime.Today;
-            dtLastSubscriptionDate.MinDate=_Member.LastSubscriptionDate;
-
-            dtLastSubscriptionDate.Value= _Member.LastSubscriptionDate;
-
+           
 
 
         }
@@ -177,7 +172,6 @@ namespace GymMangementSystem
             _Member.EmergencyContactPersonName = txtPersonName.Text;
             _Member.Relationship = txtRelationship.Text;    
             _Member.EmergencyContactPhoneNumber = txtPhoneNumber.Text;
-            _Member.LastSubscriptionDate = dtLastSubscriptionDate.Value;
 
 
 
@@ -186,6 +180,7 @@ namespace GymMangementSystem
 
                 lblTitle1.Text = "Update Member";
                 lblTitle2.Text = "Update Member";
+                this.Text = "Update Member";
                 _Mode = enMode.Update;
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();

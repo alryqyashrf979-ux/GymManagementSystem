@@ -16,7 +16,7 @@ namespace DataAccessLayer
             string Query = @"
 select M.MemberID,P.ID as PersonID, P.FirstName+' '+P.SecondName+' '+P.LastName as FullName,
 case when P.Gender = 0 then 'Male' else 'Female'  end as 'Gender',
-P.PhoneNumber,P.Email,C.CountryName,M.LastSubscriptionDate,M.EmergencyContactInfoID,M.IsActive
+P.PhoneNumber,P.Email,C.CountryName,M.LastSubscriptionID,M.EmergencyContactInfoID,M.IsActive
 from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID=P.CountryID
  ";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -71,7 +71,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
            
         }
 
-        static public bool Update(int MemberID, int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        static public bool Update(int MemberID, int PersonID, int LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
         {
             string Query = " Update Members " +
                 "set PersonID = @PersonID , " +
@@ -95,7 +95,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
             
         }
 
-        static public int Add(int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        static public int Add(int PersonID, int LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
         {
             string Query = "Insert into Members " +
                 "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID) , select SCOPE_IDENTITY();";
@@ -120,7 +120,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
 
         }
 
-        static public bool FindmemberByPersonID(int PersonID, ref int MemberID, ref DateTime LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
+        static public bool FindmemberByPersonID(int PersonID, ref int MemberID, ref int LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
         {
             string Query = "select * from Members where PersonID = @PersonID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -134,7 +134,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
                     if (reader.Read())
                     {
                         MemberID = (int)reader["MemberID"];
-                        LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
+                        LastSubscriptionDate = (int)reader["LastSubscriptionID"];
                         IsActive = (bool)reader["IsActive"];
                         ContactPersonInfo = (int)reader["ContactPersonInfo"];
                         return true;
@@ -144,7 +144,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
             return false;
         }
 
-        static public bool FindmemberByMemberID(int MemberID, ref int PersonID, ref DateTime LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
+        static public bool FindmemberByMemberID(int MemberID, ref int PersonID, ref int LastSubscriptionID, ref bool IsActive, ref int ContactPersonInfo)
         {
             string Query = "select * from Members where MemberID = @MemberID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -158,7 +158,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
                     if (reader.Read())
                     {
                         PersonID = (int)reader["PersonID"];
-                        LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
+                        LastSubscriptionID = (int)reader["LastSubscriptionID"];
                         IsActive = (bool)reader["IsActive"];
                         ContactPersonInfo = (int)reader["ContactPersonInfo"];
                         return true;
