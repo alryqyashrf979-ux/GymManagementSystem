@@ -28,7 +28,7 @@ namespace DataBusinessLayer
         }
         public string NationalNo { set; get; }
         public DateTime DateOfBirth { set; get; }
-        public char Gender { set; get; }
+        public byte Gender { set; get; }
         public string Address { set; get; }
         public string PhoneNumber { set; get; }
         public string Email { set; get; }
@@ -55,7 +55,7 @@ namespace DataBusinessLayer
             this.NationalityCountryID = -1;
             this.ImagePath = "";
             this.NationalNo= "";
-            this.Gender ='0';
+            this.Gender =0;
             _CountryInfo = null;
 
             Mode = enMode.AddNew;
@@ -63,7 +63,7 @@ namespace DataBusinessLayer
 
 
         public clsPeople(int PersonID, string FirstName, string SecondName,
-            string LastName, string NationalNo, DateTime DateOfBirth, char Gender,
+            string LastName, string NationalNo, DateTime DateOfBirth, byte Gender,
              string Address, string Phone, string Email,
             int NationalityCountryID, string ImagePath)
 
@@ -143,7 +143,7 @@ namespace DataBusinessLayer
             string FirstName = "", SecondName = "", LastName = "", NationalNo = "", Email = "", Phone = "", Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
             int NationalityCountryID = -1;
-            char Gendor = '0';
+            byte Gendor = 0;
 
             bool IsFound = clsPeopleDataAccess.GetPersonInfo
                                 (
@@ -165,7 +165,7 @@ namespace DataBusinessLayer
             string FirstName = "", SecondName = "", LastName = "", Email = "", Phone = "", Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
             int PersonID = -1, NationalityCountryID = -1;
-            char Gendor = '0';
+            byte Gendor = 0;
 
             bool IsFound = clsPeopleDataAccess.GetPersonInfo
                                 (
