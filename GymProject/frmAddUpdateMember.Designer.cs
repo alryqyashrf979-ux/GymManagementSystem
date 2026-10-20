@@ -129,7 +129,7 @@
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 58);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
             this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 503);
             this.uctPersonDetailsWithFilter1.TabIndex = 14;
@@ -185,7 +185,6 @@
             this.btnNext.ForeColor = System.Drawing.Color.Black;
             this.btnNext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.btnNext.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnNext.Image = global::GymMangementSystem.Properties.Resources.Next_64;
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
             this.btnNext.Location = new System.Drawing.Point(1035, 563);
