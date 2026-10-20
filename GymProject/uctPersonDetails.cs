@@ -49,7 +49,7 @@ namespace GymMangementSystem
 
         private void _LoadPersonImage()
         {
-            picPersonalImage.Image = _PersonInfo.Gender == '0' ? Properties.Resources.Male : Properties.Resources.Female;
+            picPersonalImage.Image = _PersonInfo.Gender == '\0' ? Properties.Resources.Male : Properties.Resources.Female;
 
             if (_PersonInfo.ImagePath == "" || _PersonInfo.ImagePath == null)
                 return;

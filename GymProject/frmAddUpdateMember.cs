@@ -40,7 +40,7 @@ namespace GymMangementSystem
 
                 btnSave.Enabled = true;
                 tpMemberInfo.Enabled = true;
-                tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpLoginInfo"];
+                tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpMemberInfo"];
                 return;
             }
 
@@ -62,7 +62,7 @@ namespace GymMangementSystem
                 {
                     btnSave.Enabled = true;
                     tpMemberInfo.Enabled = true;
-                    tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpLoginInfo"];
+                    tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpMemberInfo"];
                     lblPersonID.Text= uctPersonDetailsWithFilter1.PersonID.ToString();
 
                 }
