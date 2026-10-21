@@ -274,4 +274,10 @@
   <data name="Price Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Price Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddClasses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddClasses.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Classes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Classes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
