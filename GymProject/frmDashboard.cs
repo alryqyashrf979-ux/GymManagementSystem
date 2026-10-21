@@ -40,5 +40,16 @@ namespace GymMangementSystem
             Form frm = new frmManageMember();
             frm.ShowDialog();
         }
+
+        private void btnManageClasses_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmClasses();
+            frm.ShowDialog();
+        }
     }
 }
