@@ -14,10 +14,10 @@ namespace DataAccessLayer
         {
             DataTable dt = new DataTable();
             string Query = @"
-select M.MemberID,P.ID as PersonID, P.FirstName+' '+P.SecondName+' '+P.LastName as FullName,
-case when P.Gender = 0 then 'Male' else 'Female'  end as 'Gender',
-P.PhoneNumber,P.Email,C.CountryName,M.LastSubscriptionDate,M.EmergencyContactInfoID,M.IsActive
-from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID=P.CountryID
+         select M.MemberID,P.ID as PersonID, P.FirstName+' '+P.SecondName+' '+P.LastName as FullName,
+         case when P.Gender = 0 then 'Male' else 'Female'  end as 'Gender',
+         P.PhoneNumber,P.Email,C.CountryName,M.LastSubscriptionID,M.EmergencyContactInfoID,M.IsActive
+         from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID=P.CountryID
  ";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand command = new SqlCommand(Query, con))
@@ -71,20 +71,31 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
            
         }
 
-        static public bool Update(int MemberID, int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        static public bool Update(int MemberID, int PersonID, int LastSubscriptionID, bool IsActive, int ContactPersonInfoID,string InActivationReason)
         {
             string Query = " Update Members " +
                 "set PersonID = @PersonID , " +
                 "LastSubscriptionID = @LastSubscriptionID ," +
                 "IsActive = @IsActive , " +
-                "ContactPersonInfoID = @ContactPersonInfoID " +
+                "EmergencyContactInfoID = @ContactPersonInfoID ,InActivationReason=@InActivationReason " +
                 "where MemberID = @MemberID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             using (SqlCommand command = new SqlCommand(Query, con))
             {
                 con.Open();
                 command.Parameters.AddWithValue("@PersonID", PersonID);
-                command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+
+                if (LastSubscriptionID != -1)
+                    command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+                else
+                    command.Parameters.AddWithValue("@LastSubscriptionID", DBNull.Value);
+
+                if (InActivationReason != "")
+                    command.Parameters.AddWithValue("@InActivationReason", InActivationReason);
+                else
+                    command.Parameters.AddWithValue("@InActivationReason", DBNull.Value);
+
+
                 command.Parameters.AddWithValue("@IsActive", IsActive);
                 command.Parameters.AddWithValue("@ContactPersonInfoID", ContactPersonInfoID);
                 command.Parameters.AddWithValue("@MemberID", MemberID);
@@ -95,10 +106,10 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
             
         }
 
-        static public int Add(int PersonID, DateTime LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
+        static public int Add(int PersonID, int LastSubscriptionID, bool IsActive, int ContactPersonInfoID,string InActivationReason)
         {
             string Query = "Insert into Members " +
-                "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID) , select SCOPE_IDENTITY();";
+                "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID,@InActivationReason) ; select SCOPE_IDENTITY();";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             {
                 con.Open();
@@ -106,7 +117,18 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
                 using (SqlCommand command = new SqlCommand(Query, con))
                 {
                     command.Parameters.AddWithValue("@PersonID", PersonID);
-                    command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+
+                    if (LastSubscriptionID != -1)
+                        command.Parameters.AddWithValue("@LastSubscriptionID", LastSubscriptionID);
+                    else
+                        command.Parameters.AddWithValue("@LastSubscriptionID", DBNull.Value);
+
+                    if (InActivationReason != "")
+                        command.Parameters.AddWithValue("@InActivationReason", InActivationReason);
+                    else
+                        command.Parameters.AddWithValue("@InActivationReason", DBNull.Value);
+
+
                     command.Parameters.AddWithValue("@IsActive", IsActive);
                     command.Parameters.AddWithValue("@ContactPersonInfoID", ContactPersonInfoID);
                     object Result = command.ExecuteScalar();
@@ -120,7 +142,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
 
         }
 
-        static public bool FindmemberByPersonID(int PersonID, ref int MemberID, ref DateTime LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
+        static public bool FindMemberByPersonID(int PersonID, ref int MemberID, ref int LastSubscriptionID, ref bool IsActive, ref int ContactPersonInfoID, ref string InActivationReason)
         {
             string Query = "select * from Members where PersonID = @PersonID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -133,10 +155,21 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
 
                     if (reader.Read())
                     {
+
+                        if (reader["InActivationReason"] != DBNull.Value)
+                            InActivationReason = (string)reader["InActivationReason"];
+                        else
+                            InActivationReason = "";
+
+
+                        if (reader["LastSubscriptionID"] != DBNull.Value)
+                            LastSubscriptionID = (int)reader["LastSubscriptionID"];
+                        else
+                            LastSubscriptionID = -1;
+
                         MemberID = (int)reader["MemberID"];
-                        LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
                         IsActive = (bool)reader["IsActive"];
-                        ContactPersonInfo = (int)reader["ContactPersonInfo"];
+                        ContactPersonInfoID = (int)reader["EmergencyContactInfoID"];
                         return true;
                     }
                 }
@@ -144,7 +177,7 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
             return false;
         }
 
-        static public bool FindmemberByMemberID(int MemberID, ref int PersonID, ref DateTime LastSubscriptionDate, ref bool IsActive, ref int ContactPersonInfo)
+        static public bool FindMemberByMemberID(int MemberID, ref int PersonID, ref int LastSubscriptionID, ref bool IsActive, ref int ContactPersonInfoID,ref string InActivationReason)
         {
             string Query = "select * from Members where MemberID = @MemberID";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -157,10 +190,23 @@ from Members M  join People P on M.PersonID=P.ID join Countries C on C.CountryID
 
                     if (reader.Read())
                     {
+
+                        if (reader["InActivationReason"] != DBNull.Value)
+                            InActivationReason = (string)reader["InActivationReason"];
+                        else
+                            InActivationReason = "";
+
+
+
                         PersonID = (int)reader["PersonID"];
-                        LastSubscriptionDate = (DateTime)reader["LastSubscriptionDate"];
+
+                        if (reader["LastSubscriptionID"] != DBNull.Value)
+                            LastSubscriptionID = (int)reader["LastSubscriptionID"];
+                        else
+                            LastSubscriptionID = -1;
+
                         IsActive = (bool)reader["IsActive"];
-                        ContactPersonInfo = (int)reader["ContactPersonInfo"];
+                        ContactPersonInfoID = (int)reader["EmergencyContactInfoID"];
                         return true;
                     }
                 }

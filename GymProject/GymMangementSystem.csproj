@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
+    <Compile Include="ctrlMemebrDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlMemebrDetails.Designer.cs">
+      <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlUserDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlMemebrDetails.resx">
+      <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlUserDetails.resx">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +392,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AddClasses.png" />
+    <None Include="Resources\Subscription Plan Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubscriptionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Price Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,7 +18,7 @@ namespace DataAccessLayer
     {
         //PlamID , PlanName , PlanDescription , Availablity, PlanPrice,Duration  , Note .
 
-      public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref decimal Price,ref int Duration, ref string Note)
+      public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref double Price,ref int Duration, ref string Note)
         {
             string query = $"SELECT Name, Description, Availablity, Price,Duration, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
 
@@ -43,7 +43,7 @@ namespace DataAccessLayer
                                 Description = (string)reader["Description"];
                                 //edit spelling mistake
                                 Availablity = (bool)reader["Availablity"];
-                                Price = (decimal)reader["Price"];
+                                Price = (double)reader["Price"];
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
                                 else
@@ -62,7 +62,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        public static int Add(string Name, string Description, bool Availablity, decimal Price,int Duration, string Note)
+        public static int Add(string Name, string Description, bool Availablity, double Price,int Duration, string Note)
         {
             string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note,@Duration) ; SELECT SCOPE_IDENTITY(); ";
 
@@ -102,7 +102,7 @@ namespace DataAccessLayer
                 return -1;
             }
         }
-       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, decimal Price,int Duration, string Note)
+       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, double Price,int Duration, string Note)
         {
             // edit spelling mistake in Availiablity
             //add Price parameter to the query

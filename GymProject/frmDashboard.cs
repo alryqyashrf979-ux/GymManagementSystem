@@ -18,6 +18,10 @@ namespace GymMangementSystem
             InitializeComponent();
             _frmLogin = frm;
         }
+        public frmDashboard()
+        {
+            InitializeComponent();
+        }
 
         private void btnManagePeople_Click(object sender, EventArgs e)
         {

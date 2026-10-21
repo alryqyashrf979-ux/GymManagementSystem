@@ -47,7 +47,7 @@ namespace DataAccessLayer
             return dt;
         }
         static public bool GetPersonInfo(int PersonID, ref string FirstName, ref string SecondName,
-ref string LastName, ref string PhoneNumber, ref char Gender, ref DateTime Birthdate, ref int CountryID,
+ref string LastName, ref string PhoneNumber, ref byte Gender, ref DateTime Birthdate, ref int CountryID,
 ref string Email, ref string NationalID, ref string Address, ref string ImagePath)
         {
             bool IsFound = false;
@@ -74,7 +74,7 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
                     LastName = (string)reader["LastName"];
                     PhoneNumber = (string)reader["PhoneNumber"];
                     Birthdate = (DateTime)reader["Birthdate"];
-                    Gender = Convert.ToChar(reader["Gender"]);
+                    Gender = Convert.ToByte(reader["Gender"]);
                     CountryID = (int)reader["CountryID"];
                     Email = (string)reader["Email"];
                     NationalID = (string)reader["NationalID"];
@@ -101,7 +101,7 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
 
         // ploymorphism is used .
         static public bool GetPersonInfo(string NationalID, ref int PersonID, ref string FirstName, ref string SecondName,
-ref string LastName, ref string PhoneNumber, ref char Gender, ref DateTime Birthdate, ref int CountryID,
+ref string LastName, ref string PhoneNumber, ref byte Gender, ref DateTime Birthdate, ref int CountryID,
 ref string Email, ref string Address, ref string ImagePath)
         {
             bool IsFound = false;
@@ -128,7 +128,7 @@ ref string Email, ref string Address, ref string ImagePath)
                     LastName = (string)reader["LastName"];
                     PhoneNumber = (string)reader["PhoneNumber"];
                     Birthdate = (DateTime)reader["Birthdate"];
-                    Gender = Convert.ToChar(reader["Gender"]);
+                    Gender = Convert.ToByte(reader["Gender"]);
                     CountryID = (int)reader["CountryID"];
                     Email = (string)reader["Email"];
                     PersonID = (int)reader["ID"];
@@ -153,7 +153,7 @@ ref string Email, ref string Address, ref string ImagePath)
             return IsFound;
         }
         static public int AddNewPerson(string FirstName, string SecondName, string LastName,
-        string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
+        string PhoneNumber, byte Gender, DateTime Birthdate, int CountryID, string Email,
         string NationalID, string Address, string ImagePath)
         {
             int PersonID = -1;
@@ -211,7 +211,7 @@ ref string Email, ref string Address, ref string ImagePath)
             return PersonID;
         }
         static public bool UpdatePersonInfo(int PersonID, string FirstName, string SecondName, string LastName,
-           string PhoneNumber, char Gender, DateTime Birthdate, int CountryID, string Email,
+           string PhoneNumber, byte Gender, DateTime Birthdate, int CountryID, string Email,
            string NationalID, string Address, string ImagePath)
         {
             int rowEffect = -1;

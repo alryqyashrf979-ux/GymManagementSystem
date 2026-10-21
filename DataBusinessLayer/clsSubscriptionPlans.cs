@@ -20,7 +20,7 @@ namespace DataBusinessLayer
         public bool Availiability { set; get; }
         public int Duration { set; get; }
 
-        public decimal PlanPrice { set; get; }
+        public double PlanPrice { set; get; }
 
         public string Note { set; get; }
 
@@ -34,12 +34,12 @@ namespace DataBusinessLayer
             PlanDescription = string.Empty;
             Duration = -1;
             Availiability = true;
-            PlanPrice = default(decimal);
+            PlanPrice = default(double);
             Note = string.Empty;
             Mode = enMode.Add;
 
         }
-        public clsSubscriptionPlans(int planID, string planName, string planDescription, bool availiablity, decimal planPrice, string note,int Duration)
+        public clsSubscriptionPlans(int planID, string planName, string planDescription, bool availiablity, double planPrice, string note,int Duration)
         {
             this._PlanID = planID;
             this.PlanName = planName;
@@ -57,7 +57,7 @@ namespace DataBusinessLayer
             string PlanName = string.Empty;
             string PlanDescription = string.Empty;
             string Note = string.Empty;
-            decimal PlanPrice = default(decimal);
+            double PlanPrice = default(double);
             bool Availiablity = true;
             int Duration = -1;
 

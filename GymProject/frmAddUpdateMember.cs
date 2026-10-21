@@ -51,7 +51,7 @@ namespace GymMangementSystem
                 if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
                 {
 
-                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     btnSave.Enabled = false;
                     tpMemberInfo.Enabled = false;
                     uctPersonDetailsWithFilter1.FocusOnTbSearch();
@@ -106,6 +106,8 @@ namespace GymMangementSystem
 
             }
 
+            uctPersonDetailsWithFilter1.FocusOnTbSearch();
+            txtInActivationReason.Text = string.Empty;
             txtPersonName.Text = string.Empty;
             lblMemberID.Text = "???";
             lblPersonID.Text = "???";
@@ -113,8 +115,7 @@ namespace GymMangementSystem
             txtRelationship.Text= string.Empty;
             lblEmergencyContactID.Text = "???";
 
-            dtLastSubscriptionDate.MaxDate = DateTime.Today;
-            dtLastSubscriptionDate.MinDate = DateTime.Today;
+         
 
             btnSave.Enabled = false;
             tpMemberInfo.Enabled = false;
@@ -143,12 +144,9 @@ namespace GymMangementSystem
             lblEmergencyContactID.Text = _Member.ContactID.ToString();
             lblPersonID.Text=uctPersonDetailsWithFilter1.PersonID.ToString();
             lblMemberID.Text = _Member.MemberID.ToString();
+            txtInActivationReason.Text = _Member.InActivationReason;
 
-            dtLastSubscriptionDate.MaxDate= DateTime.Today;
-            dtLastSubscriptionDate.MinDate=_Member.LastSubscriptionDate;
-
-            dtLastSubscriptionDate.Value= _Member.LastSubscriptionDate;
-
+           
 
 
         }
@@ -177,7 +175,7 @@ namespace GymMangementSystem
             _Member.EmergencyContactPersonName = txtPersonName.Text;
             _Member.Relationship = txtRelationship.Text;    
             _Member.EmergencyContactPhoneNumber = txtPhoneNumber.Text;
-            _Member.LastSubscriptionDate = dtLastSubscriptionDate.Value;
+            _Member.InActivationReason = txtInActivationReason.Text;
 
 
 
@@ -186,9 +184,11 @@ namespace GymMangementSystem
 
                 lblTitle1.Text = "Update Member";
                 lblTitle2.Text = "Update Member";
+                this.Text = "Update Member";
                 _Mode = enMode.Update;
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();
+                uctPersonDetailsWithFilter1.DisableFiltering();
 
                 MessageBox.Show("Member saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
