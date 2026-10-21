@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAddMember = new System.Windows.Forms.Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,6 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltering = new GymMangementSystem.MyTextBox();
             this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnAddMember = new System.Windows.Forms.Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.CountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,41 +56,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembersList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAddMember
-            // 
-            this.btnAddMember.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddUser;
-            this.btnAddMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddMember.Location = new System.Drawing.Point(1644, 372);
-            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(57, 44);
-            this.btnAddMember.TabIndex = 116;
-            this.btnAddMember.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.BorderThickness = 2;
-            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
-            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1531, 885);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(142, 34);
-            this.btnClose.TabIndex = 115;
-            this.btnClose.Text = "Close";
             // 
             // lblRecord
             // 
@@ -298,6 +263,42 @@
             this.cmIsActive.Visible = false;
             this.cmIsActive.SelectedIndexChanged += new System.EventHandler(this.cmIsActiveOrno_SelectedIndexChanged);
             // 
+            // btnAddMember
+            // 
+            this.btnAddMember.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddMember.Location = new System.Drawing.Point(1644, 372);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(57, 44);
+            this.btnAddMember.TabIndex = 116;
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 2;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(1531, 885);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(142, 34);
+            this.btnClose.TabIndex = 115;
+            this.btnClose.Text = "Close";
+            // 
             // CountryName
             // 
             this.CountryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -371,12 +372,12 @@
             // Address
             // 
             this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Address.DataPropertyName = "LastSubscriptionDate";
-            this.Address.HeaderText = "Last Subscription Date";
+            this.Address.DataPropertyName = "LastSubscriptionID";
+            this.Address.HeaderText = "Last Subscription ID";
             this.Address.MinimumWidth = 6;
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
-            this.Address.Width = 200;
+            this.Address.Width = 230;
             // 
             // EmergencyContactInfoID
             // 

@@ -21,8 +21,8 @@ namespace DataBusinessLayer
             get { return _ContactID; }
         }
 
-        public enum enMode { Update=1,AddNew=2}
-        public enMode Mode = enMode.AddNew;
+        public enum enMode { Update=2,Add=1}
+        public enMode Mode = enMode.Add;
 
 
         protected clsEmergencyContacts(string name, string relationship, string phoneNumber, int contactID)
@@ -42,7 +42,7 @@ namespace DataBusinessLayer
             EmergencyContactPhoneNumber = string.Empty;
             _ContactID = -1;
 
-            Mode = enMode.AddNew;
+            Mode = enMode.Add;
 
         }
 
@@ -65,7 +65,7 @@ namespace DataBusinessLayer
 
             switch (Mode)
             {
-                case enMode.AddNew:
+                case enMode.Add:
                     if (_AddNewContact())
                     {
 

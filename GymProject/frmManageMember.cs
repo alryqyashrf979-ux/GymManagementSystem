@@ -161,5 +161,12 @@ namespace GymMangementSystem
 
             lblRecord.Text = dgvMembersList.Rows.Count.ToString();
         }
+
+        private void btnAddMember_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateMember frm=new frmAddUpdateMember();
+            frm.ShowDialog();
+            _RefreshDataTable();
+        }
     }
 }

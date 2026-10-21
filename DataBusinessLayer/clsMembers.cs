@@ -14,8 +14,9 @@ namespace DataBusinessLayer
 {
     public class clsMembers : clsEmergencyContacts
     {
-        private enum enMode{ add = 1, edit = 2 }
-        private enMode _Mode = enMode.add;
+        private enum enMode{ Add = 1, Update = 2 }
+        private enMode _Mode = enMode.Add;
+
         private int _MemberID;
         public int MemberID { get { return _MemberID; } }
 
@@ -31,9 +32,8 @@ namespace DataBusinessLayer
             PersonID = -1;
             LastSubscriptionID = -1;
             IsActive = false;
-            _Mode = enMode.add;
             PersonInfo = null;
-            _Mode = enMode.add;
+            _Mode = enMode.Add;
         }
         public clsMembers(int MemberID, int personID, int lastSubscriptionID, bool IsActive, int EmergencyContactID,string ContactName,string ContactPhone,string Relationship):
                                                                                                                       base(ContactName,Relationship,ContactPhone, EmergencyContactID)
@@ -43,7 +43,7 @@ namespace DataBusinessLayer
             this.LastSubscriptionID = lastSubscriptionID;
             this.IsActive = IsActive;
             this.PersonInfo = clsPeople.Find(PersonID);
-            _Mode = enMode.edit;
+            _Mode = enMode.Update;
         }
 
         static public DataTable GetAllMembers()
@@ -86,52 +86,25 @@ namespace DataBusinessLayer
 
             switch (_Mode)
             {
-                case enMode.add:
+                case enMode.Add:
                     {
                         if (_Add())
+                        {
+                            _Mode = enMode.Update;
                             return true;
-                        break;
+                        }
+                        else
+                            return false;
+
                     }
-                case enMode.edit:
-                    if (_Update())
-                        return true;
-                    break;
+
+                case enMode.Update:
+                    return _Update();
+
             }
             return false;
         }
-        public bool Subscription(DateTime StartDate ,clsSubscription.enSubscriptionStatus Status,int SubscriptionPlanID,int CreatedByUser)
-        {
-
-            if (this.MemberID != -1)
-            {
-
-                clsSubscriptionPlans subscriptionPlan = clsSubscriptionPlans.Find(SubscriptionPlanID);
-
-                if (subscriptionPlan == null)
-                    return false;
-
-                clsSubscription subscription = new clsSubscription();
-                subscription.MemberID = this.MemberID;
-                subscription.PlanID = SubscriptionPlanID;
-                subscription.Price = subscriptionPlan.PlanPrice;
-                subscription.StartDate = StartDate;
-                subscription.ExpirationDate = DateTime.Now.AddYears(subscriptionPlan.Duration);
-                subscription.createdByUserID = CreatedByUser;
-                subscription.Status = Status;
-
-
-
-
-
-            }
-            else
-                return false;
-
-            
-
-
-
-        }
+       
 
 
 
