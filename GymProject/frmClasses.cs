@@ -27,12 +27,7 @@ namespace GymMangementSystem
 
             if (dgvShowClasses.Rows.Count > 0)
             {
-                dgvShowClasses.Columns[0].Width = 80;
-                dgvShowClasses.Columns[1].Width = 150;
-                dgvShowClasses.Columns[2].Width = 300;
-                dgvShowClasses.Columns[3].Width = 100;
-                dgvShowClasses.Columns[4].Width = 100;
-                dgvShowClasses.Columns[5].Width = 100;
+                ResizeDGVHeader();
             }
 
             lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
@@ -89,16 +84,9 @@ namespace GymMangementSystem
             lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
         }
 
-        private void DrawHeaderOfDgvClasses()
-        {
 
-            dgvShowClasses.Columns[0].HeaderText = "Class ID";
-            dgvShowClasses.Columns[1].HeaderText = "Class Name";
-            dgvShowClasses.Columns[2].HeaderText = "Coach Name";
-            dgvShowClasses.Columns[3].HeaderText = "Start Time";
-            dgvShowClasses.Columns[4].HeaderText = "End Time";
-            dgvShowClasses.Columns[5].HeaderText = "Capacity";
-            dgvShowClasses.Columns[5].HeaderText = "Is Active";
+        private void ResizeDGVHeader()
+        {
 
             dgvShowClasses.Columns[0].Width = 80;
             dgvShowClasses.Columns[1].Width = 150;
@@ -107,28 +95,51 @@ namespace GymMangementSystem
             dgvShowClasses.Columns[4].Width = 100;
             dgvShowClasses.Columns[5].Width = 100;
         }
-        private async void dtpTime_ValueChanged(object sender, EventArgs e)
+        private void DrawHeaderOfDgvClasses()
+        {
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Class ID");
+            dt.Columns.Add("Class Name");
+            dt.Columns.Add("Coach Name");
+            dt.Columns.Add("Start Time");
+            dt.Columns.Add("End Time");
+            dt.Columns.Add("Capacity");
+            dt.Columns.Add("Is Active");
+
+            dgvShowClasses.DataSource = dt;
+
+            ResizeDGVHeader();
+
+        }
+        private void dtpTime_ValueChanged(object sender, EventArgs e)
         {
 
 
 
+            DataTable dtFilteringData;
+
+            DateTime selectedValue = dtpTime.Value;
+            TimeSpan timeSpan = selectedValue.TimeOfDay;
+            string timeString = selectedValue.ToString("HH:mm:ss");
 
 
-          //  DateTime selectedValue = dtpTime.Value;
-          //  TimeSpan timeSpan = selectedValue.TimeOfDay;
-          //  string timeString = selectedValue.ToString("HH:mm:ss");
+            if(cbValue.Text=="Start Time")
+               dtFilteringData= clsClasses.GetAllClassesByStartTime(timeString);
+            else
+               dtFilteringData= clsClasses.GetAllClassesByEndTime(timeString);
 
-           
-          ////  DataTable dtFilteringData= clsClasses.GetAllClassesByStartTime(timeString);
 
-          //  if (dtFilteringData.Rows.Count > 0)
-          //      dgvShowClasses.DataSource = dtFilteringData;
-          //  else
-          //  {
-          //      _dtClasses.DefaultView.RowFilter = $"1=0";
+            if (dtFilteringData.Rows.Count > 0)
+                dgvShowClasses.DataSource = dtFilteringData;
+            else
+            {
+                dgvShowClasses.DataSource = null;
+                DrawHeaderOfDgvClasses();
+         
 
-          //  }
-          // // _dtClasses.DefaultView.RowFilter = $"1=0";
+            }
+         
         }
 
     }
