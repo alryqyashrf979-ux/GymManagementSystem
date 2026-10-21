@@ -324,6 +324,65 @@ Classes.IsActive from Classes ;
         }
 
 
+        public static DataTable GetAllClassesByEndTime(string EndTime)
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+
+            string query =
+              @"
+ 
+      SELECT Classes.ClassID AS 'Class ID' 
+    , Classes.className AS 'Class Name' 
+    , People.FirstName+' '+People.SecondName+' '+ISNULL(People.LastName,'') AS 'Coach Name' 
+    , Classes.StartTime AS 'Start Time' 
+    , Classes.EndTime AS 'End Time' 
+    , Classes.Maximum_Capacity as 'Capacity'
+    , Classes.IsActive as 'Is Active'
+     FROM Classes inner join Coaches on Coaches.CoachID=Classes.ClassID inner join
+     Employees on Employees.EmployeeID=Coaches.EmployeeID inner join People on People.ID=Employees.PersonID where Classes.EndTime=@EndTime
+     ORDER BY Classes.IsActive DESC, Classes.CoachID ASC;
+";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@EndTime", EndTime);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                // Console.WriteLine("Error: " + ex.Message);
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
+
+
 
         public static bool DeleteClass(int ClassID)
         {
