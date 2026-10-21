@@ -99,11 +99,11 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageClasses.cs">
+    <Compile Include="frmClasses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageClasses.Designer.cs">
-      <DependentUpon>frmManageClasses.cs</DependentUpon>
+    <Compile Include="frmClasses.Designer.cs">
+      <DependentUpon>frmClasses.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageMember.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageClasses.resx">
-      <DependentUpon>frmManageClasses.cs</DependentUpon>
+    <EmbeddedResource Include="frmClasses.resx">
+      <DependentUpon>frmClasses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManagePeople.resx">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
@@ -377,6 +377,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PhoneNumberIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddClasses.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
