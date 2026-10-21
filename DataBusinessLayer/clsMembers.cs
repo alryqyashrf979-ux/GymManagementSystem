@@ -23,7 +23,21 @@ namespace DataBusinessLayer
         public int PersonID { set; get; }
         public int LastSubscriptionID { set; get; }
         public bool IsActive { set; get; }
-        public clsPeople PersonInfo { set; get; }
+        public string InActivationReason {  set; get; }
+
+
+        private clsSubscription _LastSubscriptionInfo;
+        private clsPeople _PersonInfo;
+        public clsPeople PersonInfo
+        {
+            get=> _PersonInfo;
+        }
+
+        public clsSubscription LastSubscriptionInfo
+        {
+            get => _LastSubscriptionInfo;
+        }
+
 
         public clsMembers():base()
         {
@@ -32,17 +46,25 @@ namespace DataBusinessLayer
             PersonID = -1;
             LastSubscriptionID = -1;
             IsActive = false;
-            PersonInfo = null;
+            _PersonInfo = null;
+            _LastSubscriptionInfo=null;
+            InActivationReason = string.Empty;
+
             _Mode = enMode.Add;
+
         }
-        public clsMembers(int MemberID, int personID, int lastSubscriptionID, bool IsActive, int EmergencyContactID,string ContactName,string ContactPhone,string Relationship):
+        public clsMembers(int MemberID, int personID, int lastSubscriptionID, bool IsActive, int EmergencyContactID,string InActivationReason, string ContactName,string ContactPhone,string Relationship):
                                                                                                                       base(ContactName,Relationship,ContactPhone, EmergencyContactID)
         { 
             this._MemberID = MemberID;
             this.PersonID = personID;
             this.LastSubscriptionID = lastSubscriptionID;
             this.IsActive = IsActive;
-            this.PersonInfo = clsPeople.Find(PersonID);
+            this.InActivationReason = InActivationReason;
+
+            this._PersonInfo = clsPeople.Find(PersonID);
+            this._LastSubscriptionInfo = clsSubscription.FindBySubscriptionID(LastSubscriptionID);
+
             _Mode = enMode.Update;
         }
 
@@ -68,11 +90,11 @@ namespace DataBusinessLayer
         }
         private bool _Update()
         {
-            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactID);
+            return clsMembersDataAccess.Update(this.MemberID, this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactID,this.InActivationReason);
         }
         private bool _Add()
         {
-            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactID);
+            this._MemberID = clsMembersDataAccess.Add(this.PersonID, this.LastSubscriptionID, this.IsActive, this.ContactID,this.InActivationReason);
             return _MemberID != -1;
         }
         public new bool Save()
@@ -111,9 +133,9 @@ namespace DataBusinessLayer
 
         static public clsMembers FindMemberUsingPersonID(int personID)
         {
-            int MemberID = -1; int EmergencyContactID = -1; int LastSubscriptionID=-1; bool IsActive = false;
+            int MemberID = -1; int EmergencyContactID = -1; int LastSubscriptionID=-1; bool IsActive = false; string InActivationReason = "";
 
-            bool IsFound = clsMembersDataAccess.FindmemberByPersonID(personID, ref MemberID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID);
+            bool IsFound = clsMembersDataAccess.FindMemberByPersonID(personID, ref MemberID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID,ref InActivationReason);
 
 
             if (IsFound)
@@ -123,16 +145,16 @@ namespace DataBusinessLayer
 
 
 
-                return new clsMembers(MemberID, personID, LastSubscriptionID, IsActive,ContactInfo.ContactID,
+                return new clsMembers(MemberID, personID, LastSubscriptionID, IsActive,ContactInfo.ContactID,InActivationReason,
                     ContactInfo.EmergencyContactPersonName,ContactInfo.EmergencyContactPhoneNumber,ContactInfo.Relationship);               
             }
             return null;
         }
         static public clsMembers FindMemberUsingMemberID(int memberID)
         {
-            int PersonID = -1; int EmergencyContactID = -1; int LastSubscriptionID = -1; bool IsActive = false;
+            int PersonID = -1; int EmergencyContactID = -1; int LastSubscriptionID = -1; bool IsActive = false; string InActivationReason = "";
 
-            bool IsFound = clsMembersDataAccess.FindmemberByMemberID(memberID, ref PersonID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID);
+            bool IsFound = clsMembersDataAccess.FindMemberByMemberID(memberID, ref PersonID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID,ref InActivationReason);
 
             if (IsFound)
             {
@@ -141,7 +163,7 @@ namespace DataBusinessLayer
 
 
 
-                return new clsMembers(memberID, PersonID, LastSubscriptionID, IsActive, ContactInfo.ContactID,
+                return new clsMembers(memberID, PersonID, LastSubscriptionID, IsActive, ContactInfo.ContactID,InActivationReason,
                     ContactInfo.EmergencyContactPersonName, ContactInfo.EmergencyContactPhoneNumber, ContactInfo.Relationship);
             }
             return null;
