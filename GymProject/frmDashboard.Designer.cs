@@ -47,6 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.btnManageEmployees);
             this.guna2Panel1.Controls.Add(this.btnMangePayment);
             this.guna2Panel1.Controls.Add(this.btnManageClasses);
@@ -148,6 +150,7 @@
             this.btnManageClasses.TabIndex = 12;
             this.btnManageClasses.Text = "Manage Classes";
             this.btnManageClasses.TextOffset = new System.Drawing.Point(-8, 0);
+            this.btnManageClasses.Click += new System.EventHandler(this.btnManageClasses_Click);
             // 
             // btnManageTrainers
             // 
@@ -404,6 +407,32 @@
             this.panel1.Size = new System.Drawing.Size(1028, 609);
             this.panel1.TabIndex = 9;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 5;
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.manage_classes;
+            this.guna2Button2.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.guna2Button2.ImageSize = new System.Drawing.Size(65, 39);
+            this.guna2Button2.Location = new System.Drawing.Point(6, 139);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(183, 50);
+            this.guna2Button2.TabIndex = 15;
+            this.guna2Button2.Text = "Classes";
+            this.guna2Button2.TextOffset = new System.Drawing.Point(-8, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,5 +483,6 @@
         private System.Windows.Forms.Label lblCurrentUseName;
         private System.Windows.Forms.Label lblShowUserInformation;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

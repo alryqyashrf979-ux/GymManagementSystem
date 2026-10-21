@@ -73,7 +73,7 @@ namespace GymMangementSystem
             }
             else
             {
-                MessageBox.Show("Please select a person or add a new person.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error : select a person or add a new person.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -92,16 +92,16 @@ namespace GymMangementSystem
             if(_Mode==enMode.Addnew)
             {
                 lblTitle1.Text = "Add New Member";
-                lblTitle2.Text = "Add New Member";
-                this.Text="Add New Member"; 
+                lblTitle2.Text = lblTitle1.Text;
+                this.Text= lblTitle1.Text; 
                 _Member = new clsMembers();
 
             }
             else
             {
                 lblTitle2.Text = "Update Member";
-                lblTitle1.Text = "Update Member";
-                this.Text = "Update Member";
+                lblTitle1.Text = lblTitle2.Text;
+                this.Text = lblTitle2.Text;
 
 
             }
@@ -183,8 +183,8 @@ namespace GymMangementSystem
             {
 
                 lblTitle1.Text = "Update Member";
-                lblTitle2.Text = "Update Member";
-                this.Text = "Update Member";
+                lblTitle2.Text = lblTitle1.Text;
+                this.Text = lblTitle1.Text;
                 _Mode = enMode.Update;
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();
