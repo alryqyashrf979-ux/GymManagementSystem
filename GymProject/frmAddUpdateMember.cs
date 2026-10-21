@@ -51,7 +51,7 @@ namespace GymMangementSystem
                 if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
                 {
 
-                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     btnSave.Enabled = false;
                     tpMemberInfo.Enabled = false;
                     uctPersonDetailsWithFilter1.FocusOnTbSearch();
@@ -106,6 +106,7 @@ namespace GymMangementSystem
 
             }
 
+            uctPersonDetailsWithFilter1.FocusOnTbSearch();
             txtInActivationReason.Text = string.Empty;
             txtPersonName.Text = string.Empty;
             lblMemberID.Text = "???";
@@ -187,6 +188,7 @@ namespace GymMangementSystem
                 _Mode = enMode.Update;
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();
+                uctPersonDetailsWithFilter1.DisableFiltering();
 
                 MessageBox.Show("Member saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

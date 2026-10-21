@@ -711,7 +711,7 @@
             this.txtInActivationReason.ForeColor = System.Drawing.Color.Black;
             this.txtInActivationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInActivationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtInActivationReason.IsRequired = true;
+            this.txtInActivationReason.IsRequired = false;
             this.txtInActivationReason.Location = new System.Drawing.Point(628, 151);
             this.txtInActivationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInActivationReason.Name = "txtInActivationReason";
