@@ -142,5 +142,10 @@ namespace GymMangementSystem
          
         }
 
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbValue.Text == "Class ID" || cbValue.Text == "Capacity")
+                e.Handled = !char.IsControl(e.KeyChar) && char.IsLetter(e.KeyChar);
+        }
     }
 }
