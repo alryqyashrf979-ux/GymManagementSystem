@@ -98,7 +98,7 @@ namespace DataAccessLayer
         static public int Add(int PersonID, int LastSubscriptionID, bool IsActive, int ContactPersonInfoID)
         {
             string Query = "Insert into Members " +
-                "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID) , select SCOPE_IDENTITY();";
+                "values (@PersonID , @LastSubscriptionID , @IsActive , @ContactPersonInfoID) ; select SCOPE_IDENTITY();";
             using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
             {
                 con.Open();
