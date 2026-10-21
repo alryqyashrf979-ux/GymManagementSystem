@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -35,6 +36,15 @@ namespace GymMangementSystem
             }
 
             lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
+
+        }
+
+        private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbIsActive.Visible = (cbValue.Text == "Is Active" && cbValue.Text != "None");
+            dtpTime.Visible = (cbValue.Text != "None" && (cbValue.Text == "Start Time" || cbValue.Text == "End Time"));
+            txtSearch.Visible = (!dtpTime.Visible && !cbIsActive.Visible && cbValue.Text != "None");
+     
         }
     }
 }
