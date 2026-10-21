@@ -46,5 +46,48 @@ namespace GymMangementSystem
             txtSearch.Visible = (!dtpTime.Visible && !cbIsActive.Visible && cbValue.Text != "None");
      
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            StringBuilder FilterValue = new StringBuilder();
+            switch (cbValue.Text)
+            {
+                case "Class ID":
+                    FilterValue.Append("ClassID");
+                    break;
+
+                case "Class Name":
+                    FilterValue.Append("Class Name");
+                    break;
+
+                case "Coach Name":
+                    FilterValue.Append("CoachName");
+                    break;
+
+
+                case "Capacity":
+                    FilterValue.Append("Capacity");
+                    break;
+
+            }
+
+            if (FilterValue.ToString() == "" || txtSearch.Text == "")
+            {
+                _dtClasses.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
+                return;
+            }
+
+            if(cbValue.Text=="Capacity"||cbValue.Text=="Class ID")
+            {
+                _dtClasses.DefaultView.RowFilter = $"{FilterValue}={Convert.ToInt32(txtSearch.Text)}";
+            }
+            else
+                _dtClasses.DefaultView.RowFilter = $"[{cbValue.Text}] like '{txtSearch.Text}%'";
+
+            lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
+
+
+        }
     }
 }
