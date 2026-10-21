@@ -161,7 +161,10 @@ namespace DataBusinessLayer
         }
 
 
-
+        public static DataTable GetAllClassesByStartTime(string StartTime)
+        {
+            return clsClassesData.GetAllClassesByStartTime(StartTime);
+        }
 
     }
 }
