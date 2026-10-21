@@ -106,6 +106,7 @@ namespace GymMangementSystem
 
             }
 
+            txtInActivationReason.Text = string.Empty;
             txtPersonName.Text = string.Empty;
             lblMemberID.Text = "???";
             lblPersonID.Text = "???";
@@ -142,6 +143,7 @@ namespace GymMangementSystem
             lblEmergencyContactID.Text = _Member.ContactID.ToString();
             lblPersonID.Text=uctPersonDetailsWithFilter1.PersonID.ToString();
             lblMemberID.Text = _Member.MemberID.ToString();
+            txtInActivationReason.Text = _Member.InActivationReason;
 
            
 
@@ -172,6 +174,7 @@ namespace GymMangementSystem
             _Member.EmergencyContactPersonName = txtPersonName.Text;
             _Member.Relationship = txtRelationship.Text;    
             _Member.EmergencyContactPhoneNumber = txtPhoneNumber.Text;
+            _Member.InActivationReason = txtInActivationReason.Text;
 
 
 
