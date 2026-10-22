@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace DataAccessLayer
 {
     public class DataAccessSettings
     {
 
-        public static string ConnectionString = "Server=.;Database=GymManagementSystem;User Id=sa;Password=123456;";
+       public static string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
     }
 }
