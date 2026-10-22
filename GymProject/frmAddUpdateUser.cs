@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataBusinessLayer;
+using System.Runtime.CompilerServices;
 
 namespace GymMangementSystem
 {
@@ -241,6 +242,11 @@ namespace GymMangementSystem
             else
                 MessageBox.Show("Error : User did not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

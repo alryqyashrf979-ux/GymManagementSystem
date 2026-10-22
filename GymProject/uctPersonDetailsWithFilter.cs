@@ -29,11 +29,7 @@ namespace GymMangementSystem
         }
         private void FIndNow()
         {
-            if (tbSearch.Text.Trim() == "")
-            {
-                ((MyTextBox)tbSearch).IsRequired = true;
-                return;
-            }
+           
             if (cbOptions.Text == "Person ID")
             {
                 uctPersonDetails1.LoadPersonInfo(Convert.ToInt32(tbSearch.Text));
