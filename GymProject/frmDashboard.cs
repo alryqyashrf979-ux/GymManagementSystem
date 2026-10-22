@@ -43,13 +43,13 @@ namespace GymMangementSystem
 
         private void btnManageClasses_Click(object sender, EventArgs e)
         {
-
+            Form frm = new frmClasses();
+            frm.ShowDialog();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Form frm = new frmClasses();
-            frm.ShowDialog();
+           
         }
     }
 }
