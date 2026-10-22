@@ -31,7 +31,7 @@ namespace GymMangementSystem
 
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbIsActive.Visible = (cbValue.Text == "Is Active" && cbValue.Text != "None");
+            cbIsActive.Visible = (cbValue.Text == "Is Active");
             dtpTime.Visible = (cbValue.Text != "None" && (cbValue.Text == "Start Time" || cbValue.Text == "End Time"));
             txtSearch.Visible = (!dtpTime.Visible && !cbIsActive.Visible && cbValue.Text != "None");
             txtSearch.Clear();
@@ -50,7 +50,7 @@ namespace GymMangementSystem
 
             if(cbValue.Text=="Capacity"||cbValue.Text=="Class ID")
             {
-                _dtClasses.DefaultView.RowFilter = $"[{cbValue.Text}]={Convert.ToInt32(txtSearch.Text)}";
+                _dtClasses.DefaultView.RowFilter = $"[{cbValue.Text}]={txtSearch.Text}";
             }
             else
                 _dtClasses.DefaultView.RowFilter = $"[{cbValue.Text}] like '{txtSearch.Text}%'";
@@ -84,19 +84,19 @@ namespace GymMangementSystem
         private void dtpTime_ValueChanged(object sender, EventArgs e)
         {
 
+          
+
+            //DataTable dtFilteringData;
+
+            //DateTime selectedValue = dtpTime.Value;
+            //TimeSpan timeSpan = selectedValue.TimeOfDay;
+            //string timeString = selectedValue.ToString("HH:mm:ss");
 
 
-            DataTable dtFilteringData;
-
-            DateTime selectedValue = dtpTime.Value;
-            TimeSpan timeSpan = selectedValue.TimeOfDay;
-            string timeString = selectedValue.ToString("HH:mm:ss");
-
-
-            if(cbValue.Text=="Start Time")
-               dtFilteringData= clsClasses.GetAllClassesByStartTime(timeString);
-            else
-               dtFilteringData= clsClasses.GetAllClassesByEndTime(timeString);
+            //if(cbValue.Text=="Start Time")
+            //   dtFilteringData= clsClasses.GetAllClassesByStartTime(timeString);
+            //else
+            //   dtFilteringData= clsClasses.GetAllClassesByEndTime(timeString);
 
 
             //if (dtFilteringData.Rows.Count > 0)
@@ -105,16 +105,26 @@ namespace GymMangementSystem
             //{
             //    dgvShowClasses.DataSource = null;
             //    DrawHeaderOfDgvClasses();
-         
+
 
             //}
-         
+
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (cbValue.Text == "Class ID" || cbValue.Text == "Capacity")
                 e.Handled = !char.IsControl(e.KeyChar) && char.IsLetter(e.KeyChar);
+        }
+
+        private void dtpTime_CloseUp(object sender, EventArgs e)
+        {
+
+
+
+         
+
+
         }
     }
 }
