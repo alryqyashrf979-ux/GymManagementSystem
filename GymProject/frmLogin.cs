@@ -64,7 +64,7 @@ namespace GymMangementSystem
 
 
             if (chkRememberMe.Checked)
-                clsGlobal.WriteInWindowsRegister(_User.UserName,_User.Password);
+                clsGlobal.WriteInWindowsRegister(txtUserName.Text.Trim(), txtPassword.Text.Trim());
             else
                 clsGlobal.WriteInWindowsRegister("", "");
             
