@@ -105,7 +105,7 @@
             this.tcMemberInfo.Controls.Add(this.tpMemberInfo);
             this.tcMemberInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.tcMemberInfo.Location = new System.Drawing.Point(0, 0);
-            this.tcMemberInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcMemberInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tcMemberInfo.Name = "tcMemberInfo";
             this.tcMemberInfo.SelectedIndex = 0;
             this.tcMemberInfo.Size = new System.Drawing.Size(1221, 662);
@@ -119,9 +119,9 @@
             this.tpPersonalInfo.Controls.Add(this.btnNext);
             this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
-            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Size = new System.Drawing.Size(1213, 633);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
@@ -130,7 +130,7 @@
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 58);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
             this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 502);
             this.uctPersonDetailsWithFilter1.TabIndex = 14;
@@ -142,7 +142,7 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(4, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1205, 46);
             this.panel4.TabIndex = 13;
@@ -164,7 +164,7 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(56, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,9 +204,9 @@
             this.tpMemberInfo.Controls.Add(this.guna2Panel1);
             this.tpMemberInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpMemberInfo.Name = "tpMemberInfo";
-            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tpMemberInfo.Size = new System.Drawing.Size(1213, 633);
             this.tpMemberInfo.TabIndex = 1;
             this.tpMemberInfo.Text = "Member Info";
@@ -218,7 +218,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1205, 46);
             this.panel1.TabIndex = 66;
@@ -240,7 +240,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -283,7 +283,7 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Location = new System.Drawing.Point(27, 71);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1156, 482);
             this.guna2Panel1.TabIndex = 29;
@@ -292,7 +292,7 @@
             // 
             this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.UnActive;
             this.pictureBox13.Location = new System.Drawing.Point(363, 142);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(52, 38);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,9 +368,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.PersonID;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(13, 153);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -381,7 +381,7 @@
             // 
             this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Relationship;
             this.pictureBox11.Location = new System.Drawing.Point(441, 364);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(47, 44);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -409,7 +409,7 @@
             // 
             this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.PhoneNumberIcon;
             this.pictureBox6.Location = new System.Drawing.Point(809, 378);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(41, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -432,7 +432,7 @@
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
             this.pictureBox5.Location = new System.Drawing.Point(5, 374);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(43, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -441,9 +441,9 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.IsActive;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
             this.pictureBox9.Location = new System.Drawing.Point(611, 62);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(52, 41);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -454,7 +454,7 @@
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PhoneNumberIcon;
             this.pictureBox4.Location = new System.Drawing.Point(7, 289);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -514,7 +514,7 @@
             this.txtPhoneNumber.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
             this.txtPhoneNumber.IsRequired = true;
             this.txtPhoneNumber.Location = new System.Drawing.Point(849, 414);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PlaceholderText = "Phone Number";
             this.txtPhoneNumber.SelectedText = "";
@@ -586,7 +586,7 @@
             this.txtRelationship.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtRelationship.IsRequired = true;
             this.txtRelationship.Location = new System.Drawing.Point(483, 409);
-            this.txtRelationship.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRelationship.Margin = new System.Windows.Forms.Padding(5);
             this.txtRelationship.Name = "txtRelationship";
             this.txtRelationship.PlaceholderText = "Relationship";
             this.txtRelationship.SelectedText = "";
@@ -597,7 +597,7 @@
             // 
             this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
             this.pictureBox8.Location = new System.Drawing.Point(315, 60);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(32, 33);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -618,9 +618,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.PersonID;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(13, 62);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -644,7 +644,7 @@
             this.txtPersonName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtPersonName.IsRequired = true;
             this.txtPersonName.Location = new System.Drawing.Point(52, 409);
-            this.txtPersonName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPersonName.Margin = new System.Windows.Forms.Padding(5);
             this.txtPersonName.Name = "txtPersonName";
             this.txtPersonName.PlaceholderText = "Contact Person Name";
             this.txtPersonName.SelectedText = "";
@@ -659,7 +659,7 @@
             this.guna2Panel2.Controls.Add(this.pictureBox7);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel2.Location = new System.Drawing.Point(3, 1);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1149, 52);
             this.guna2Panel2.TabIndex = 1;
@@ -680,7 +680,7 @@
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
             this.pictureBox7.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(45, 43);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -707,7 +707,7 @@
             this.guna2Panel5.Controls.Add(this.pictureBox12);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel5.Location = new System.Drawing.Point(3, 230);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(1149, 52);
             this.guna2Panel5.TabIndex = 1;
@@ -728,7 +728,7 @@
             // 
             this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.PhoneNumberIcon;
             this.pictureBox12.Location = new System.Drawing.Point(5, 4);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(41, 41);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -743,7 +743,7 @@
             this.guna2Panel3.Controls.Add(this.btnClose);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.guna2Panel3.Location = new System.Drawing.Point(4, 665);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1213, 63);
             this.guna2Panel3.TabIndex = 16;
@@ -800,15 +800,6 @@
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // uctPersonDetailsWithFilter1
-            // 
-            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(8, 71);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
-            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 475);
-            this.uctPersonDetailsWithFilter1.TabIndex = 14;
             // 
             // frmAddUpdateMember
             // 
