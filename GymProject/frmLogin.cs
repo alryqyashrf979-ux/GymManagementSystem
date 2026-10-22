@@ -53,14 +53,21 @@ namespace GymMangementSystem
                 return;
             }
 
+
+            if(!_User.IsActive)
+            {
+                txtUserName.Focus();
+                MessageBox.Show("Your Account is not Active , contact Admin", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (chkRememberMe.Checked)
-            {
                 clsGlobal.WriteInWindowsRegister(txtUserName.Text.Trim(), txtPassword.Text.Trim());
-            }
             else
-            {
                 clsGlobal.WriteInWindowsRegister("", "");
-            }
+            
+
 
             clsGlobal.CurrentUserInfo = _User;
             Form frm = new frmDashboard(this);
