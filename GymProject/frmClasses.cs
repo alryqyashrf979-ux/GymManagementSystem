@@ -25,11 +25,6 @@ namespace GymMangementSystem
         {
             dgvShowClasses.DataSource = _dtClasses;
 
-            if (dgvShowClasses.Rows.Count > 0)
-            {
-                ResizeDGVHeader();
-            }
-
             lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
 
         }
@@ -85,33 +80,7 @@ namespace GymMangementSystem
         }
 
 
-        private void ResizeDGVHeader()
-        {
-
-            dgvShowClasses.Columns[0].Width = 80;
-            dgvShowClasses.Columns[1].Width = 150;
-            dgvShowClasses.Columns[2].Width = 300;
-            dgvShowClasses.Columns[3].Width = 100;
-            dgvShowClasses.Columns[4].Width = 100;
-            dgvShowClasses.Columns[5].Width = 100;
-        }
-        private void DrawHeaderOfDgvClasses()
-        {
-
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Class ID");
-            dt.Columns.Add("Class Name");
-            dt.Columns.Add("Coach Name");
-            dt.Columns.Add("Start Time");
-            dt.Columns.Add("End Time");
-            dt.Columns.Add("Capacity");
-            dt.Columns.Add("Is Active");
-
-            dgvShowClasses.DataSource = dt;
-
-            ResizeDGVHeader();
-
-        }
+     
         private void dtpTime_ValueChanged(object sender, EventArgs e)
         {
 
@@ -130,15 +99,15 @@ namespace GymMangementSystem
                dtFilteringData= clsClasses.GetAllClassesByEndTime(timeString);
 
 
-            if (dtFilteringData.Rows.Count > 0)
-                dgvShowClasses.DataSource = dtFilteringData;
-            else
-            {
-                dgvShowClasses.DataSource = null;
-                DrawHeaderOfDgvClasses();
+            //if (dtFilteringData.Rows.Count > 0)
+            //    dgvShowClasses.DataSource = dtFilteringData;
+            //else
+            //{
+            //    dgvShowClasses.DataSource = null;
+            //    DrawHeaderOfDgvClasses();
          
 
-            }
+            //}
          
         }
 
