@@ -93,6 +93,12 @@
     <Compile Include="frmAddPerson.Designer.cs">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUpdateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateClass.Designer.cs">
+      <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
