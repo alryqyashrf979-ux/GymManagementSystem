@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void frmAddUpdateClass_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

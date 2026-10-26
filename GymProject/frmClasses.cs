@@ -117,14 +117,10 @@ namespace GymMangementSystem
                 e.Handled = !char.IsControl(e.KeyChar) && char.IsLetter(e.KeyChar);
         }
 
-        private void dtpTime_CloseUp(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-
-
-         
-
-
+            Form frm = new frmAddUpdateClass();
+            frm.ShowDialog();
         }
     }
 }
