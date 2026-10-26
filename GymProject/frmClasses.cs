@@ -147,5 +147,11 @@ namespace GymMangementSystem
             if (cbValue.Text == "Class ID" || cbValue.Text == "Capacity")
                 e.Handled = !char.IsControl(e.KeyChar) && char.IsLetter(e.KeyChar);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateClass();
+            frm.ShowDialog();
+        }
     }
 }

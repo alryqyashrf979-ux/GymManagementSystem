@@ -201,6 +201,7 @@
             this.button1.Size = new System.Drawing.Size(43, 36);
             this.button1.TabIndex = 108;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -333,6 +334,7 @@
             this.Controls.Add(this.dgvShowClasses);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmClasses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmManageClasses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowClasses)).EndInit();
             this.panel4.ResumeLayout(false);

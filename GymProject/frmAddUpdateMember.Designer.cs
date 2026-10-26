@@ -120,7 +120,7 @@
             this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 22);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
-            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpPersonalInfo.Size = new System.Drawing.Size(908, 512);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
@@ -185,7 +185,7 @@
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
             this.btnNext.Location = new System.Drawing.Point(776, 461);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(119, 36);
             this.btnNext.TabIndex = 12;
@@ -200,7 +200,7 @@
             this.tpMemberInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
             this.tpMemberInfo.Name = "tpMemberInfo";
-            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpMemberInfo.Size = new System.Drawing.Size(908, 512);
             this.tpMemberInfo.TabIndex = 1;
             this.tpMemberInfo.Text = "Member Info";
@@ -379,7 +379,7 @@
             this.tgschIsActive.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.tgschIsActive.CheckedState.InnerColor = System.Drawing.Color.White;
             this.tgschIsActive.Location = new System.Drawing.Point(562, 79);
-            this.tgschIsActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tgschIsActive.Margin = new System.Windows.Forms.Padding(2);
             this.tgschIsActive.Name = "tgschIsActive";
             this.tgschIsActive.Size = new System.Drawing.Size(40, 16);
             this.tgschIsActive.TabIndex = 33;
@@ -627,7 +627,7 @@
             this.guna2Panel2.Controls.Add(this.pictureBox7);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel2.Location = new System.Drawing.Point(2, 1);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(862, 42);
             this.guna2Panel2.TabIndex = 1;
@@ -672,7 +672,7 @@
             this.guna2Panel5.Controls.Add(this.pictureBox12);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel5.Location = new System.Drawing.Point(2, 187);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(862, 42);
             this.guna2Panel5.TabIndex = 1;
@@ -730,7 +730,7 @@
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSave.Location = new System.Drawing.Point(786, 11);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(109, 30);
             this.btnSave.TabIndex = 16;
@@ -756,7 +756,7 @@
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
             this.btnClose.Location = new System.Drawing.Point(660, 11);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(117, 30);
             this.btnClose.TabIndex = 15;
@@ -772,7 +772,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.tcMemberInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddUpdateMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Member";
