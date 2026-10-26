@@ -103,20 +103,20 @@
             // ctrlMemebrDetails1
             // 
             this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(2, 53);
+            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 59);
             this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
             this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
-            this.ctrlMemebrDetails1.TabIndex = 0;
+            this.ctrlMemebrDetails1.TabIndex = 19;
             // 
             // frmShowMemberDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1206, 819);
+            this.Controls.Add(this.ctrlMemebrDetails1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.ctrlMemebrDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmShowMemberDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -130,11 +130,10 @@
         }
 
         #endregion
-
-        private ctrlMemebrDetails ctrlMemebrDetails1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ctrlMemebrDetails ctrlMemebrDetails1;
     }
 }
