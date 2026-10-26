@@ -51,7 +51,6 @@ namespace GymMangementSystem
         void _LoadData()
         {
             uctPersonDetails1.LoadPersonInfo(_MemberInfo.PersonID);
-            _MemberID = _MemberInfo.MemberID;
             lblEmergencyContactID.Text = _MemberInfo.ContactID.ToString();
             lblEmergencyContactPersonName.Text = _MemberInfo.EmergencyContactPersonName;
             lblEmergencyContactPhone.Text = _MemberInfo.EmergencyContactPhoneNumber;
@@ -96,48 +95,13 @@ namespace GymMangementSystem
             _LoadData();
 
         }
-        public void LoadMemberInfoByNationalNu(string NationalNu )
-        {
-            _MemberInfo=clsMembers.FindMemberUsingNationalNu( NationalNu );
-
-            if (_MemberInfo == null)
-            {
-                _ResetMemberData();
-                MessageBox.Show("No Member with National Nu=" + NationalNu.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            _LoadData();
-
-        }
 
 
         private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MessageBox.Show("Not Emplemented...");
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-
-
-
-
-
-
-
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
