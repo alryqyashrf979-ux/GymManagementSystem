@@ -27,7 +27,7 @@ namespace GymMangementSystem
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (_Mode == enMode.UpdateMode)
-            {
+        {
                 btnSave.Enabled = true;
                 tpSubscriptionInfo.Enabled = true;
                 tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];

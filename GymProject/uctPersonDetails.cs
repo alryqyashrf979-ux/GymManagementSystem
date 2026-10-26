@@ -74,7 +74,7 @@ namespace GymMangementSystem
             lbAdress.Text = _PersonInfo.Address;
             lbCountry.Text =PersonInfo.CountryInfo .CountryName;
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
-            lbEmail.Text = _PersonInfo.Email.ToString();
+            lbAdress.Text = _PersonInfo.Email.ToString();
             lbGender.Text = _PersonInfo.Gender == 0 ? "Male" : "Female";
             t.Text = _PersonInfo.FullName;
             lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
@@ -127,6 +127,11 @@ namespace GymMangementSystem
             frm.ShowDialog();
             LoadPersonInfo(PersonInfo.PersonID);
 
+
+        }
+
+        private void lnkEditPersonInfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
 
         }
     }

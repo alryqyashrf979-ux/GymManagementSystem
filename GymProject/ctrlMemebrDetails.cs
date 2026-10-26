@@ -114,9 +114,25 @@ namespace GymMangementSystem
 
         private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Not Emplemented...");
+
         }
 
-      
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -170,11 +170,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gbFiltering);
-            this.Controls.Add(this.ctrlMemebrDetails1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.Name = "ctrlMemberDetailsWithFiltering";
-            this.Size = new System.Drawing.Size(1210, 804);
+            this.Size = new System.Drawing.Size(1205, 454);
             this.Load += new System.EventHandler(this.ctrlMemberDetailsWithFiltering_Load);
             this.gbFiltering.ResumeLayout(false);
             this.gbFiltering.PerformLayout();

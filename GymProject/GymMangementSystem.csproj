@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
+    <Compile Include="ctrlMemberDetailsWithFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlMemberDetailsWithFiltering.Designer.cs">
+      <DependentUpon>ctrlMemberDetailsWithFiltering.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlClassDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="frmAddPerson.Designer.cs">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSubscription.Designer.cs">
+      <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateClass.cs">
       <SubType>Form</SubType>
@@ -227,6 +239,9 @@
     <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlMemberDetailsWithFiltering.resx">
+      <DependentUpon>ctrlMemberDetailsWithFiltering.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlClassDetails.resx">
       <DependentUpon>ctrlClassDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddPerson.resx">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSubscription.resx">
+      <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateClass.resx">
       <DependentUpon>frmAddUpdateClass.cs</DependentUpon>

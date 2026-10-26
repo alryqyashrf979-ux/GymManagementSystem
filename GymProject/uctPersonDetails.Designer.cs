@@ -30,10 +30,9 @@ namespace GymMangementSystem
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbPhone = new System.Windows.Forms.Label();
+            this.picPersonalImage = new System.Windows.Forms.PictureBox();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.lbCountry = new System.Windows.Forms.Label();
             this.lbDateOfBirth = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
@@ -61,10 +60,11 @@ namespace GymMangementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lnkEditPersonInfo = new System.Windows.Forms.LinkLabel();
-            this.picPersonalImage = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -74,10 +74,62 @@ namespace GymMangementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
+            this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.guna2Panel2);
+            this.guna2Panel1.Controls.Add(this.lbPhone);
+            this.guna2Panel1.Controls.Add(this.guna2VSeparator2);
+            this.guna2Panel1.Controls.Add(this.lbCountry);
+            this.guna2Panel1.Controls.Add(this.lbDateOfBirth);
+            this.guna2Panel1.Controls.Add(this.pictureBox16);
+            this.guna2Panel1.Controls.Add(this.label17);
+            this.guna2Panel1.Controls.Add(this.pictureBox17);
+            this.guna2Panel1.Controls.Add(this.label18);
+            this.guna2Panel1.Controls.Add(this.pictureBox18);
+            this.guna2Panel1.Controls.Add(this.label19);
+            this.guna2Panel1.Controls.Add(this.lbPersonID);
+            this.guna2Panel1.Controls.Add(this.label12);
+            this.guna2Panel1.Controls.Add(this.lbAdress);
+            this.guna2Panel1.Controls.Add(this.lbEmail);
+            this.guna2Panel1.Controls.Add(this.lbGender);
+            this.guna2Panel1.Controls.Add(this.lbNationalNo);
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.pictureBox12);
+            this.guna2Panel1.Controls.Add(this.pictureBox14);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.label13);
+            this.guna2Panel1.Controls.Add(this.label15);
+            this.guna2Panel1.Controls.Add(this.label16);
+            this.guna2Panel1.Controls.Add(this.pictureBox13);
+            this.guna2Panel1.Controls.Add(this.t);
+            this.guna2Panel1.Controls.Add(this.pictureBox15);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.guna2Panel5);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(2, 2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1181, 334);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhone.Location = new System.Drawing.Point(687, 229);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(74, 25);
+            this.lbPhone.TabIndex = 169;
+            this.lbPhone.Text = "[????]";
+            // 
+            // picPersonalImage
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
@@ -117,57 +169,21 @@ namespace GymMangementSystem
             this.guna2Panel1.Size = new System.Drawing.Size(1181, 334);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Panel2
+            // guna2VSeparator2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderRadius = 5;
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.pictureBox2);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 2);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1173, 52);
-            this.guna2Panel2.TabIndex = 171;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label2.Location = new System.Drawing.Point(52, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Person Information";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lbPhone
-            // 
-            this.lbPhone.AutoSize = true;
-            this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhone.Location = new System.Drawing.Point(692, 242);
-            this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(74, 25);
-            this.lbPhone.TabIndex = 169;
-            this.lbPhone.Text = "[????]";
+            this.guna2VSeparator2.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2VSeparator2.FillThickness = 2;
+            this.guna2VSeparator2.Location = new System.Drawing.Point(462, 189);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 140);
+            this.guna2VSeparator2.TabIndex = 144;
             // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCountry.Location = new System.Drawing.Point(692, 284);
+            this.lbCountry.Location = new System.Drawing.Point(687, 271);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(74, 25);
             this.lbCountry.TabIndex = 170;
@@ -177,7 +193,7 @@ namespace GymMangementSystem
             // 
             this.lbDateOfBirth.AutoSize = true;
             this.lbDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateOfBirth.Location = new System.Drawing.Point(692, 195);
+            this.lbDateOfBirth.Location = new System.Drawing.Point(687, 182);
             this.lbDateOfBirth.Name = "lbDateOfBirth";
             this.lbDateOfBirth.Size = new System.Drawing.Size(74, 25);
             this.lbDateOfBirth.TabIndex = 168;
@@ -186,7 +202,7 @@ namespace GymMangementSystem
             // pictureBox16
             // 
             this.pictureBox16.Image = global::GymMangementSystem.Properties.Resources.Country;
-            this.pictureBox16.Location = new System.Drawing.Point(648, 281);
+            this.pictureBox16.Location = new System.Drawing.Point(643, 268);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(31, 31);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +213,7 @@ namespace GymMangementSystem
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(549, 287);
+            this.label17.Location = new System.Drawing.Point(544, 274);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(86, 22);
             this.label17.TabIndex = 166;
@@ -206,7 +222,7 @@ namespace GymMangementSystem
             // pictureBox17
             // 
             this.pictureBox17.Image = global::GymMangementSystem.Properties.Resources.PhoneNumberIcon;
-            this.pictureBox17.Location = new System.Drawing.Point(648, 240);
+            this.pictureBox17.Location = new System.Drawing.Point(643, 227);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(31, 31);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +233,7 @@ namespace GymMangementSystem
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(562, 249);
+            this.label18.Location = new System.Drawing.Point(557, 236);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(73, 22);
             this.label18.TabIndex = 164;
@@ -226,7 +242,7 @@ namespace GymMangementSystem
             // pictureBox18
             // 
             this.pictureBox18.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox18.Location = new System.Drawing.Point(648, 192);
+            this.pictureBox18.Location = new System.Drawing.Point(643, 179);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(31, 31);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,7 +253,7 @@ namespace GymMangementSystem
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(502, 201);
+            this.label19.Location = new System.Drawing.Point(497, 188);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(133, 22);
             this.label19.TabIndex = 162;
@@ -267,7 +283,7 @@ namespace GymMangementSystem
             // 
             this.lbAdress.AutoSize = true;
             this.lbAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAdress.Location = new System.Drawing.Point(185, 300);
+            this.lbAdress.Location = new System.Drawing.Point(205, 299);
             this.lbAdress.Name = "lbAdress";
             this.lbAdress.Size = new System.Drawing.Size(74, 25);
             this.lbAdress.TabIndex = 159;
@@ -276,10 +292,10 @@ namespace GymMangementSystem
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lbEmail.Location = new System.Drawing.Point(186, 255);
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(205, 256);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(61, 20);
+            this.lbEmail.Size = new System.Drawing.Size(74, 25);
             this.lbEmail.TabIndex = 158;
             this.lbEmail.Text = "[????]";
             // 
@@ -287,7 +303,7 @@ namespace GymMangementSystem
             // 
             this.lbGender.AutoSize = true;
             this.lbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGender.Location = new System.Drawing.Point(185, 206);
+            this.lbGender.Location = new System.Drawing.Point(205, 207);
             this.lbGender.Name = "lbGender";
             this.lbGender.Size = new System.Drawing.Size(74, 25);
             this.lbGender.TabIndex = 157;
@@ -297,7 +313,7 @@ namespace GymMangementSystem
             // 
             this.lbNationalNo.AutoSize = true;
             this.lbNationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNationalNo.Location = new System.Drawing.Point(186, 154);
+            this.lbNationalNo.Location = new System.Drawing.Point(205, 154);
             this.lbNationalNo.Name = "lbNationalNo";
             this.lbNationalNo.Size = new System.Drawing.Size(74, 25);
             this.lbNationalNo.TabIndex = 156;
@@ -306,7 +322,7 @@ namespace GymMangementSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Location;
-            this.pictureBox1.Location = new System.Drawing.Point(144, 295);
+            this.pictureBox1.Location = new System.Drawing.Point(163, 295);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,7 +332,7 @@ namespace GymMangementSystem
             // pictureBox12
             // 
             this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.Email;
-            this.pictureBox12.Location = new System.Drawing.Point(146, 248);
+            this.pictureBox12.Location = new System.Drawing.Point(165, 248);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(30, 30);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -326,7 +342,7 @@ namespace GymMangementSystem
             // pictureBox14
             // 
             this.pictureBox14.Image = global::GymMangementSystem.Properties.Resources.Gendor;
-            this.pictureBox14.Location = new System.Drawing.Point(147, 203);
+            this.pictureBox14.Location = new System.Drawing.Point(166, 203);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(30, 29);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -376,7 +392,7 @@ namespace GymMangementSystem
             // pictureBox13
             // 
             this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.PersonID;
-            this.pictureBox13.Location = new System.Drawing.Point(147, 157);
+            this.pictureBox13.Location = new System.Drawing.Point(166, 157);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(30, 22);
@@ -389,7 +405,7 @@ namespace GymMangementSystem
             this.t.AutoSize = true;
             this.t.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t.ForeColor = System.Drawing.Color.Red;
-            this.t.Location = new System.Drawing.Point(186, 107);
+            this.t.Location = new System.Drawing.Point(205, 107);
             this.t.Name = "t";
             this.t.Size = new System.Drawing.Size(74, 25);
             this.t.TabIndex = 147;
@@ -398,7 +414,7 @@ namespace GymMangementSystem
             // pictureBox15
             // 
             this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox15.Location = new System.Drawing.Point(145, 99);
+            this.pictureBox15.Location = new System.Drawing.Point(164, 99);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(31, 35);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -424,7 +440,7 @@ namespace GymMangementSystem
             this.guna2Panel5.Controls.Add(this.lnkEditPersonInfo);
             this.guna2Panel5.Controls.Add(this.picPersonalImage);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(952, 65);
+            this.guna2Panel5.Location = new System.Drawing.Point(944, 65);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(219, 234);
@@ -445,34 +461,56 @@ namespace GymMangementSystem
             this.lnkEditPersonInfo.TabStop = true;
             this.lnkEditPersonInfo.Text = "Edit Person Info";
             this.lnkEditPersonInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked);
+            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked_1);
             // 
-            // picPersonalImage
+            // label2
             // 
-            this.picPersonalImage.BackColor = System.Drawing.Color.Transparent;
-            this.picPersonalImage.Image = global::GymMangementSystem.Properties.Resources.Male;
-            this.picPersonalImage.Location = new System.Drawing.Point(16, 9);
-            this.picPersonalImage.Margin = new System.Windows.Forms.Padding(4);
-            this.picPersonalImage.Name = "picPersonalImage";
-            this.picPersonalImage.Size = new System.Drawing.Size(188, 187);
-            this.picPersonalImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPersonalImage.TabIndex = 2;
-            this.picPersonalImage.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(52, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(247, 29);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Person Information";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderRadius = 5;
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Controls.Add(this.pictureBox2);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(3, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1173, 52);
+            this.guna2Panel2.TabIndex = 171;
             // 
             // uctPersonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uctPersonDetails";
             this.Size = new System.Drawing.Size(1187, 339);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
@@ -483,7 +521,9 @@ namespace GymMangementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPersonalImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -492,6 +532,7 @@ namespace GymMangementSystem
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lbPhone;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private System.Windows.Forms.Label lbCountry;
         private System.Windows.Forms.Label lbDateOfBirth;
         private System.Windows.Forms.PictureBox pictureBox16;
