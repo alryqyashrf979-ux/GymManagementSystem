@@ -441,5 +441,29 @@
   <ItemGroup>
     <None Include="Resources\Description.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapacityCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SechedulingCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TimeCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IsActiveCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DescriptionCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoteCircle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
