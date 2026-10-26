@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class frmAddSubscription : Form
+    public partial class frmShowMemberDetails : Form
     {
-        public frmAddSubscription()
+        public frmShowMemberDetails()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace GymMangementSystem
         private void frmAddSubscription_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
