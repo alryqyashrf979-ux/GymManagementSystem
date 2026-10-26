@@ -114,10 +114,10 @@
             // ctrlUserDetails1
             // 
             this.ctrlUserDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlUserDetails1.Location = new System.Drawing.Point(1, 45);
+            this.ctrlUserDetails1.Location = new System.Drawing.Point(1, 48);
             this.ctrlUserDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlUserDetails1.Name = "ctrlUserDetails1";
-            this.ctrlUserDetails1.Size = new System.Drawing.Size(1189, 490);
+            this.ctrlUserDetails1.Size = new System.Drawing.Size(1189, 488);
             this.ctrlUserDetails1.TabIndex = 18;
             // 
             // frmShowUserDetails
