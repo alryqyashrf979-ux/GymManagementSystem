@@ -546,6 +546,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ctrlClassDetails";
             this.Size = new System.Drawing.Size(678, 395);
+            this.Load += new System.EventHandler(this.ctrlClassDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox11)).EndInit();

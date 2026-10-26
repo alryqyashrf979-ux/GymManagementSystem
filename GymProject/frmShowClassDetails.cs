@@ -16,5 +16,12 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void frmShowClassDetails_Load(object sender, EventArgs e)
+        {
+            ctrlClassDetails1.LoadClassInfo(2);
+            lblClassName.Text = ctrlClassDetails1.Class?.className ?? "Class Name";
+            lblDescription.Text = ctrlClassDetails1.Class?.Description ?? "Description";
+        }
     }
 }
