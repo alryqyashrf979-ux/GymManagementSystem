@@ -36,15 +36,15 @@ namespace GymMangementSystem
         private void _ResetPersonInformation()
         {
             lnkEditPersonInfo.Enabled = false;  
-            lbAddress.Text = "???";
-            lbCountry.Text = "???";
-            lbDateOfBirth.Text = "???";
-            lbEmail.Text = "???";
-            lbGender.Text = "???";
-            lbName.Text = "???";
-            lbNationalNo.Text = "???";
-            lbPersonID.Text = "???";
-            lbPhone.Text = "???";
+            lbAdress.Text = "[????]";
+            lbCountry.Text = "[????]";
+            lbDateOfBirth.Text = "[????]";
+            lbAdress.Text = "[????]";
+            lbGender.Text = "[????]";
+            t.Text = "[????]";
+            lbNationalNo.Text = "[????]";
+            lbPersonID.Text = "[????]";
+            lbPhone.Text = "[????]";
             _PersonID = -1;
             picPersonalImage.Image = Properties.Resources.Male;
         }
@@ -66,12 +66,12 @@ namespace GymMangementSystem
         private void _FillPersonInfo()
         {
             lnkEditPersonInfo.Enabled = true;
-            lbAddress.Text = _PersonInfo.Address;
+            lbAdress.Text = _PersonInfo.Address;
             lbCountry.Text =PersonInfo.CountryInfo .CountryName;
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
-            lbEmail.Text = _PersonInfo.Email.ToString();
+            lbAdress.Text = _PersonInfo.Email.ToString();
             lbGender.Text = _PersonInfo.Gender == 0 ? "Male" : "Female";
-            lbName.Text = _PersonInfo.FullName;
+            t.Text = _PersonInfo.FullName;
             lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
             lbPersonID.Text = _PersonInfo.PersonID.ToString();
             lbPhone.Text = _PersonInfo.PhoneNumber;
@@ -122,6 +122,11 @@ namespace GymMangementSystem
             frm.ShowDialog();
             LoadPersonInfo(PersonInfo.PersonID);
 
+
+        }
+
+        private void lnkEditPersonInfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
 
         }
     }
