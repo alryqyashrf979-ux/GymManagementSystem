@@ -32,19 +32,19 @@ namespace GymMangementSystem
         void _ResetMemberData()
         {
             txtInActivationReason.Text= string.Empty;
-            lblEmergencyContactID.Text = "???";
-            lblEmergencyContactPhone.Text = "???";
-            lblLastSubscriptionID.Text = "???";
-            lblMemberID.Text = "???";
-            lblRelationship.Text = "???";
-            lblEmergencyContactPersonName.Text = "???";
+            lblEmergencyContactID.Text = "[????]";
+            lblEmergencyContactPhone.Text = "[????]";
+            lblLastSubscriptionID.Text = "[????]";
+            lblMemberID.Text = "[????]";
+            lblRelationship.Text = "[????]";
+            lblEmergencyContactPersonName.Text = "[????]";
             tgschIsActive.Checked = true;
         }
 
 
         void _LoadData()
         {
-
+            uctPersonDetails1.LoadPersonInfo(_MemberInfo.PersonID);
             lblEmergencyContactID.Text = _MemberInfo.ContactID.ToString();
             lblEmergencyContactPersonName.Text = _MemberInfo.EmergencyContactPersonName;
             lblEmergencyContactPhone.Text = _MemberInfo.EmergencyContactPhoneNumber;
@@ -53,6 +53,9 @@ namespace GymMangementSystem
             lblRelationship.Text = _MemberInfo.Relationship;
             tgschIsActive.Checked = _MemberInfo.IsActive;
             txtInActivationReason.Text = _MemberInfo.InActivationReason;
+
+            lnkShowLastSubscriptionInfo.Enabled = (_MemberInfo.LastSubscriptionID != -1);
+
         }
 
 
@@ -70,6 +73,8 @@ namespace GymMangementSystem
             _LoadData();
 
         }
+
+
         public void LoadMemberInfoByPersonID(int PersonID )
         {
             _MemberInfo=clsMembers.FindMemberUsingPersonID( PersonID );
@@ -86,38 +91,11 @@ namespace GymMangementSystem
         }
 
 
-
-
-
-
-
-
         private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MessageBox.Show("Not Emplemented...");
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-
-
-
-
-
-
-
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
