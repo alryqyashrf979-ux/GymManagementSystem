@@ -32,6 +32,7 @@
             this.lblClassName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.btnActive = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlClassDetails1 = new GymMangementSystem.ctrlClassDetails();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -40,6 +41,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Panel1.Controls.Add(this.btnActive);
             this.guna2Panel1.Controls.Add(this.lblDescription);
             this.guna2Panel1.Controls.Add(this.lblClassName);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
@@ -81,6 +83,25 @@
             this.lblDescription.TabIndex = 17;
             this.lblDescription.Text = "Description";
             // 
+            // btnActive
+            // 
+            this.btnActive.BackColor = System.Drawing.Color.Transparent;
+            this.btnActive.BorderRadius = 13;
+            this.btnActive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnActive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnActive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnActive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnActive.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.btnActive.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnActive.ForeColor = System.Drawing.Color.Black;
+            this.btnActive.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.btnActive.Location = new System.Drawing.Point(578, 12);
+            this.btnActive.Name = "btnActive";
+            this.btnActive.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.btnActive.Size = new System.Drawing.Size(87, 25);
+            this.btnActive.TabIndex = 18;
+            this.btnActive.Text = "Active";
+            // 
             // ctrlClassDetails1
             // 
             this.ctrlClassDetails1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -115,5 +136,6 @@
         private System.Windows.Forms.Label lblClassName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDescription;
+        private Guna.UI2.WinForms.Guna2Button btnActive;
     }
 }
