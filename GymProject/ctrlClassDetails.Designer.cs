@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbPersonID = new System.Windows.Forms.Label();
+            this.lblClassD = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblClassName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCoachID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblStartDay = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEndDay = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblEndTIme = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblStartTime = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblIsActive = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblCapacity = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblNote = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -87,30 +87,30 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.lblNote);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.guna2CirclePictureBox11);
             this.panel1.Controls.Add(this.guna2CirclePictureBox10);
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.lblDescription);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lblEndTIme);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.lblStartTime);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.lblIsActive);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.lblCapacity);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lblEndDay);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.guna2CirclePictureBox9);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblStartDay);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblCoachID);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblClassName);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbPersonID);
+            this.panel1.Controls.Add(this.lblClassD);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.guna2CirclePictureBox7);
             this.panel1.Controls.Add(this.guna2CirclePictureBox6);
@@ -127,16 +127,16 @@
             this.panel1.Size = new System.Drawing.Size(678, 395);
             this.panel1.TabIndex = 0;
             // 
-            // lbPersonID
+            // lblClassD
             // 
-            this.lbPersonID.AutoSize = true;
-            this.lbPersonID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPersonID.ForeColor = System.Drawing.Color.Black;
-            this.lbPersonID.Location = new System.Drawing.Point(45, 27);
-            this.lbPersonID.Name = "lbPersonID";
-            this.lbPersonID.Size = new System.Drawing.Size(31, 21);
-            this.lbPersonID.TabIndex = 17;
-            this.lbPersonID.Text = "???";
+            this.lblClassD.AutoSize = true;
+            this.lblClassD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassD.ForeColor = System.Drawing.Color.Black;
+            this.lblClassD.Location = new System.Drawing.Point(45, 27);
+            this.lblClassD.Name = "lblClassD";
+            this.lblClassD.Size = new System.Drawing.Size(31, 21);
+            this.lblClassD.TabIndex = 17;
+            this.lblClassD.Text = "???";
             // 
             // label3
             // 
@@ -149,16 +149,16 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Class ID";
             // 
-            // label1
+            // lblClassName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(44, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 21);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "???";
+            this.lblClassName.AutoSize = true;
+            this.lblClassName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassName.ForeColor = System.Drawing.Color.Black;
+            this.lblClassName.Location = new System.Drawing.Point(44, 89);
+            this.lblClassName.Name = "lblClassName";
+            this.lblClassName.Size = new System.Drawing.Size(31, 21);
+            this.lblClassName.TabIndex = 19;
+            this.lblClassName.Text = "???";
             // 
             // label2
             // 
@@ -171,16 +171,16 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Class Name";
             // 
-            // label4
+            // lblCoachID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(45, 151);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 21);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "???";
+            this.lblCoachID.AutoSize = true;
+            this.lblCoachID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoachID.ForeColor = System.Drawing.Color.Black;
+            this.lblCoachID.Location = new System.Drawing.Point(45, 151);
+            this.lblCoachID.Name = "lblCoachID";
+            this.lblCoachID.Size = new System.Drawing.Size(31, 21);
+            this.lblCoachID.TabIndex = 21;
+            this.lblCoachID.Text = "???";
             // 
             // label5
             // 
@@ -193,16 +193,16 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Coach ID";
             // 
-            // label6
+            // lblStartDay
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(45, 207);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 21);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "???";
+            this.lblStartDay.AutoSize = true;
+            this.lblStartDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDay.ForeColor = System.Drawing.Color.Black;
+            this.lblStartDay.Location = new System.Drawing.Point(45, 207);
+            this.lblStartDay.Name = "lblStartDay";
+            this.lblStartDay.Size = new System.Drawing.Size(31, 21);
+            this.lblStartDay.TabIndex = 23;
+            this.lblStartDay.Text = "???";
             // 
             // label7
             // 
@@ -215,16 +215,16 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Start Day";
             // 
-            // label8
+            // lblEndDay
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(46, 273);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 21);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "???";
+            this.lblEndDay.AutoSize = true;
+            this.lblEndDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDay.ForeColor = System.Drawing.Color.Black;
+            this.lblEndDay.Location = new System.Drawing.Point(46, 273);
+            this.lblEndDay.Name = "lblEndDay";
+            this.lblEndDay.Size = new System.Drawing.Size(31, 21);
+            this.lblEndDay.TabIndex = 26;
+            this.lblEndDay.Text = "???";
             // 
             // label9
             // 
@@ -237,17 +237,17 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "End Day";
             // 
-            // label10
+            // lblDescription
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(52, 358);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 21);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "???";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.Black;
+            this.lblDescription.Location = new System.Drawing.Point(52, 358);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(31, 21);
+            this.lblDescription.TabIndex = 36;
+            this.lblDescription.Text = "???";
             // 
             // label11
             // 
@@ -261,16 +261,16 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Description";
             // 
-            // label12
+            // lblEndTIme
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(364, 262);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 21);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "???";
+            this.lblEndTIme.AutoSize = true;
+            this.lblEndTIme.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndTIme.ForeColor = System.Drawing.Color.Black;
+            this.lblEndTIme.Location = new System.Drawing.Point(364, 262);
+            this.lblEndTIme.Name = "lblEndTIme";
+            this.lblEndTIme.Size = new System.Drawing.Size(31, 21);
+            this.lblEndTIme.TabIndex = 34;
+            this.lblEndTIme.Text = "???";
             // 
             // label13
             // 
@@ -283,16 +283,16 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "End Time";
             // 
-            // label14
+            // lblStartTime
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(364, 188);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 21);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "???";
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTime.ForeColor = System.Drawing.Color.Black;
+            this.lblStartTime.Location = new System.Drawing.Point(364, 188);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(31, 21);
+            this.lblStartTime.TabIndex = 32;
+            this.lblStartTime.Text = "???";
             // 
             // label15
             // 
@@ -305,16 +305,16 @@
             this.label15.TabIndex = 31;
             this.label15.Text = "Start Time";
             // 
-            // label16
+            // lblIsActive
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(363, 116);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 21);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "???";
+            this.lblIsActive.AutoSize = true;
+            this.lblIsActive.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsActive.ForeColor = System.Drawing.Color.Black;
+            this.lblIsActive.Location = new System.Drawing.Point(363, 116);
+            this.lblIsActive.Name = "lblIsActive";
+            this.lblIsActive.Size = new System.Drawing.Size(31, 21);
+            this.lblIsActive.TabIndex = 30;
+            this.lblIsActive.Text = "???";
             // 
             // label17
             // 
@@ -327,16 +327,16 @@
             this.label17.TabIndex = 29;
             this.label17.Text = "Is Active";
             // 
-            // label18
+            // lblCapacity
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(364, 44);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(31, 21);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "???";
+            this.lblCapacity.AutoSize = true;
+            this.lblCapacity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacity.ForeColor = System.Drawing.Color.Black;
+            this.lblCapacity.Location = new System.Drawing.Point(364, 44);
+            this.lblCapacity.Name = "lblCapacity";
+            this.lblCapacity.Size = new System.Drawing.Size(31, 21);
+            this.lblCapacity.TabIndex = 28;
+            this.lblCapacity.Text = "???";
             // 
             // label19
             // 
@@ -349,17 +349,17 @@
             this.label19.TabIndex = 27;
             this.label19.Text = "Capacity";
             // 
-            // label20
+            // lblNote
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(367, 358);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 21);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "???";
+            this.lblNote.AutoSize = true;
+            this.lblNote.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNote.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNote.ForeColor = System.Drawing.Color.Black;
+            this.lblNote.Location = new System.Drawing.Point(367, 358);
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Size = new System.Drawing.Size(31, 21);
+            this.lblNote.TabIndex = 40;
+            this.lblNote.Text = "???";
             // 
             // label21
             // 
@@ -574,29 +574,29 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label lbPersonID;
+        private System.Windows.Forms.Label lblClassD;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCoachID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblClassName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblEndTIme;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblIsActive;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblCapacity;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEndDay;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox9;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblStartDay;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblNote;
         private System.Windows.Forms.Label label21;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
         private System.Windows.Forms.Panel panel3;
