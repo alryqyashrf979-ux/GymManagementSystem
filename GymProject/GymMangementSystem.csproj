@@ -111,11 +111,11 @@
     <Compile Include="frmAddPerson.Designer.cs">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddSubscription.cs">
+    <Compile Include="frmShowMemberDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddSubscription.Designer.cs">
-      <DependentUpon>frmAddSubscription.cs</DependentUpon>
+    <Compile Include="frmShowMemberDetails.Designer.cs">
+      <DependentUpon>frmShowMemberDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateClass.cs">
       <SubType>Form</SubType>
@@ -266,8 +266,8 @@
     <EmbeddedResource Include="frmAddPerson.resx">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddSubscription.resx">
-      <DependentUpon>frmAddSubscription.cs</DependentUpon>
+    <EmbeddedResource Include="frmShowMemberDetails.resx">
+      <DependentUpon>frmShowMemberDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateClass.resx">
       <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
