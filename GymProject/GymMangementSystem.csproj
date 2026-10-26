@@ -215,6 +215,9 @@
     <EmbeddedResource Include="frmAddPerson.resx">
       <DependentUpon>frmAddPerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateClass.resx">
+      <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddSubscription.resx">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,6 +455,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AddClasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExclamationMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capacity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IsActiveVerfiy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dnable3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Description.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

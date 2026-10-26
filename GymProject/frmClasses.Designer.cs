@@ -213,6 +213,18 @@
             this.label2.TabIndex = 103;
             this.label2.Text = "#Records:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddClasses;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(883, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 36);
+            this.button1.TabIndex = 108;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Classes;
