@@ -65,6 +65,9 @@
             this.txtDescription = new GymMangementSystem.MyTextBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.lblClassID = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCapacity)).BeginInit();
@@ -79,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -221,7 +225,7 @@
             this.dtpStartTime.ShowUpDown = true;
             this.dtpStartTime.Size = new System.Drawing.Size(126, 36);
             this.dtpStartTime.TabIndex = 125;
-            this.dtpStartTime.Value = new System.DateTime(2026, 10, 26, 16, 7, 0, 0);
+            this.dtpStartTime.Value = new System.DateTime(2026, 10, 26, 16, 0, 0, 0);
             // 
             // dtpEndTime
             // 
@@ -240,7 +244,7 @@
             this.dtpEndTime.ShowUpDown = true;
             this.dtpEndTime.Size = new System.Drawing.Size(126, 36);
             this.dtpEndTime.TabIndex = 126;
-            this.dtpEndTime.Value = new System.DateTime(2026, 10, 26, 16, 7, 0, 0);
+            this.dtpEndTime.Value = new System.DateTime(2026, 10, 26, 17, 30, 0, 0);
             // 
             // cbStartDay
             // 
@@ -264,6 +268,7 @@
             this.cbStartDay.Location = new System.Drawing.Point(287, 200);
             this.cbStartDay.Name = "cbStartDay";
             this.cbStartDay.Size = new System.Drawing.Size(128, 36);
+            this.cbStartDay.StartIndex = 0;
             this.cbStartDay.TabIndex = 127;
             // 
             // cbEndDay
@@ -288,6 +293,7 @@
             this.cbEndDay.Location = new System.Drawing.Point(435, 200);
             this.cbEndDay.Name = "cbEndDay";
             this.cbEndDay.Size = new System.Drawing.Size(128, 36);
+            this.cbEndDay.StartIndex = 6;
             this.cbEndDay.TabIndex = 128;
             // 
             // label7
@@ -337,6 +343,11 @@
             this.nudCapacity.Size = new System.Drawing.Size(144, 36);
             this.nudCapacity.TabIndex = 137;
             this.nudCapacity.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.nudCapacity.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             // 
             // label10
             // 
@@ -496,18 +507,18 @@
             this.txtClassName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtClassName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtClassName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtClassName.ErrorMessage = "This Field is Required";
+            this.txtClassName.ErrorMessage = "Class Name is Required";
             this.txtClassName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtClassName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClassName.ForeColor = System.Drawing.Color.Black;
             this.txtClassName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtClassName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtClassName.IsRequired = false;
+            this.txtClassName.IsRequired = true;
             this.txtClassName.Location = new System.Drawing.Point(64, 70);
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.PlaceholderText = "Enter Class Name...";
             this.txtClassName.SelectedText = "";
-            this.txtClassName.Size = new System.Drawing.Size(407, 32);
+            this.txtClassName.Size = new System.Drawing.Size(313, 32);
             this.txtClassName.TabIndex = 0;
             // 
             // txtNote
@@ -566,7 +577,6 @@
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.Enabled = false;
             this.btnSave.FillColor = System.Drawing.Color.Transparent;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
@@ -581,6 +591,7 @@
             this.btnSave.Size = new System.Drawing.Size(109, 30);
             this.btnSave.TabIndex = 144;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -606,13 +617,53 @@
             this.btnClose.Size = new System.Drawing.Size(117, 30);
             this.btnClose.TabIndex = 143;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblClassID
+            // 
+            this.lblClassID.AllowDrop = true;
+            this.lblClassID.AutoSize = true;
+            this.lblClassID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassID.ForeColor = System.Drawing.Color.Black;
+            this.lblClassID.Location = new System.Drawing.Point(529, 78);
+            this.lblClassID.Name = "lblClassID";
+            this.lblClassID.Size = new System.Drawing.Size(31, 21);
+            this.lblClassID.TabIndex = 146;
+            this.lblClassID.Text = "???";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
+            this.pictureBox2.Location = new System.Drawing.Point(416, 74);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 145;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AllowDrop = true;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(455, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 21);
+            this.label11.TabIndex = 147;
+            this.label11.Text = "Class ID :";
             // 
             // frmAddUpdateClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblClassID);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtClassName);
@@ -666,6 +717,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -710,5 +762,8 @@
         private MyTextBox txtClassName;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private System.Windows.Forms.Label lblClassID;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label11;
     }
 }

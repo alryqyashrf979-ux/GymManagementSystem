@@ -45,7 +45,7 @@ namespace DataBusinessLayer
             this.RegisterationDate = RegisterationDate;
             this.Mode = enMode.Update;
             UserInfo = clsUsers.FindByUserID(RegisteredByUserID);
-            ClassInfo = clsClasses.GetClassInfoByClassID(ClassID);
+            ClassInfo = clsClasses.Find(ClassID);
             MemberInfo = clsMembers.FindMemberUsingMemberID(MemberID);
         }
 

@@ -480,6 +480,7 @@ Classes.IsActive from Classes ;
                         Description = "";
                     }
 
+                    className = (string)reader["ClassName"];
                     Maximum_Capacity = (byte)reader["Maximum_Capacity"];
                     IsActive = (bool)reader["IsActive"];
                     CoachID = (int)reader["CoachID"];
