@@ -113,9 +113,29 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CapacityCircle {
+            get {
+                object obj = ResourceManager.GetObject("CapacityCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Classes {
             get {
                 object obj = ResourceManager.GetObject("Classes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClassID {
+            get {
+                object obj = ResourceManager.GetObject("ClassID", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Description {
             get {
                 object obj = ResourceManager.GetObject("Description", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DescriptionCircle {
+            get {
+                object obj = ResourceManager.GetObject("DescriptionCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +296,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap IsActive {
             get {
                 object obj = ResourceManager.GetObject("IsActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IsActiveCircle {
+            get {
+                object obj = ResourceManager.GetObject("IsActiveCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,6 +503,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NoteCircle {
+            get {
+                object obj = ResourceManager.GetObject("NoteCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Password {
             get {
                 object obj = ResourceManager.GetObject("Password", resourceCulture);
@@ -476,6 +526,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap People_400 {
             get {
                 object obj = ResourceManager.GetObject("People 400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PersonCircle {
+            get {
+                object obj = ResourceManager.GetObject("PersonCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -593,6 +653,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SechedulingCircle {
+            get {
+                object obj = ResourceManager.GetObject("SechedulingCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Setting {
             get {
                 object obj = ResourceManager.GetObject("Setting", resourceCulture);
@@ -626,6 +696,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Time {
             get {
                 object obj = ResourceManager.GetObject("Time", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TimeCircle {
+            get {
+                object obj = ResourceManager.GetObject("TimeCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
