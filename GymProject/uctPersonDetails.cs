@@ -74,7 +74,7 @@ namespace GymMangementSystem
             lbAdress.Text = _PersonInfo.Address;
             lbCountry.Text =PersonInfo.CountryInfo .CountryName;
             lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
-            lbAdress.Text = _PersonInfo.Email.ToString();
+            lbEmail.Text = _PersonInfo.Email.ToString();
             lbGender.Text = _PersonInfo.Gender == 0 ? "Male" : "Female";
             t.Text = _PersonInfo.FullName;
             lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
