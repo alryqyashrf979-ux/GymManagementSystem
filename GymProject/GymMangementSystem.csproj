@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
+    <Compile Include="ctrlClassDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlClassDetails.Designer.cs">
+      <DependentUpon>ctrlClassDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlMemberDetailsWithFiltering.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlClassDetails.resx">
+      <DependentUpon>ctrlClassDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemberDetailsWithFiltering.resx">
       <DependentUpon>ctrlMemberDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
