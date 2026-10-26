@@ -109,11 +109,11 @@ namespace GymMangementSystem
             uctPersonDetailsWithFilter1.FocusOnTbSearch();
             txtInActivationReason.Text = string.Empty;
             txtPersonName.Text = string.Empty;
-            lblMemberID.Text = "???";
-            lblPersonID.Text = "???";
+            lblMemberID.Text = "[???]";
+            lblPersonID.Text = "[???]";
             txtPhoneNumber.Text = string.Empty;
             txtRelationship.Text= string.Empty;
-            lblEmergencyContactID.Text = "???";
+            lblEmergencyContactID.Text = "[???]";
 
          
 

@@ -34,7 +34,6 @@ namespace GymMangementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbPhone = new System.Windows.Forms.Label();
-            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.lbCountry = new System.Windows.Forms.Label();
             this.lbDateOfBirth = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
@@ -86,7 +85,6 @@ namespace GymMangementSystem
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.lbPhone);
-            this.guna2Panel1.Controls.Add(this.guna2VSeparator2);
             this.guna2Panel1.Controls.Add(this.lbCountry);
             this.guna2Panel1.Controls.Add(this.lbDateOfBirth);
             this.guna2Panel1.Controls.Add(this.pictureBox16);
@@ -159,27 +157,17 @@ namespace GymMangementSystem
             // 
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhone.Location = new System.Drawing.Point(687, 229);
+            this.lbPhone.Location = new System.Drawing.Point(684, 242);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(74, 25);
             this.lbPhone.TabIndex = 169;
             this.lbPhone.Text = "[????]";
             // 
-            // guna2VSeparator2
-            // 
-            this.guna2VSeparator2.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2VSeparator2.FillThickness = 2;
-            this.guna2VSeparator2.Location = new System.Drawing.Point(462, 189);
-            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(13, 140);
-            this.guna2VSeparator2.TabIndex = 144;
-            // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCountry.Location = new System.Drawing.Point(687, 271);
+            this.lbCountry.Location = new System.Drawing.Point(684, 284);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(74, 25);
             this.lbCountry.TabIndex = 170;
@@ -189,7 +177,7 @@ namespace GymMangementSystem
             // 
             this.lbDateOfBirth.AutoSize = true;
             this.lbDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateOfBirth.Location = new System.Drawing.Point(687, 182);
+            this.lbDateOfBirth.Location = new System.Drawing.Point(684, 195);
             this.lbDateOfBirth.Name = "lbDateOfBirth";
             this.lbDateOfBirth.Size = new System.Drawing.Size(74, 25);
             this.lbDateOfBirth.TabIndex = 168;
@@ -198,7 +186,7 @@ namespace GymMangementSystem
             // pictureBox16
             // 
             this.pictureBox16.Image = global::GymMangementSystem.Properties.Resources.Country;
-            this.pictureBox16.Location = new System.Drawing.Point(643, 268);
+            this.pictureBox16.Location = new System.Drawing.Point(640, 281);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(31, 31);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,7 +197,7 @@ namespace GymMangementSystem
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(544, 274);
+            this.label17.Location = new System.Drawing.Point(541, 287);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(86, 22);
             this.label17.TabIndex = 166;
@@ -218,7 +206,7 @@ namespace GymMangementSystem
             // pictureBox17
             // 
             this.pictureBox17.Image = global::GymMangementSystem.Properties.Resources.PhoneNumberIcon;
-            this.pictureBox17.Location = new System.Drawing.Point(643, 227);
+            this.pictureBox17.Location = new System.Drawing.Point(640, 240);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(31, 31);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -229,7 +217,7 @@ namespace GymMangementSystem
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(557, 236);
+            this.label18.Location = new System.Drawing.Point(554, 249);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(73, 22);
             this.label18.TabIndex = 164;
@@ -238,7 +226,7 @@ namespace GymMangementSystem
             // pictureBox18
             // 
             this.pictureBox18.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox18.Location = new System.Drawing.Point(643, 179);
+            this.pictureBox18.Location = new System.Drawing.Point(640, 192);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(31, 31);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,7 +237,7 @@ namespace GymMangementSystem
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(497, 188);
+            this.label19.Location = new System.Drawing.Point(494, 201);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(133, 22);
             this.label19.TabIndex = 162;
@@ -436,7 +424,7 @@ namespace GymMangementSystem
             this.guna2Panel5.Controls.Add(this.lnkEditPersonInfo);
             this.guna2Panel5.Controls.Add(this.picPersonalImage);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(944, 65);
+            this.guna2Panel5.Location = new System.Drawing.Point(952, 65);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(219, 234);
@@ -504,7 +492,6 @@ namespace GymMangementSystem
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lbPhone;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private System.Windows.Forms.Label lbCountry;
         private System.Windows.Forms.Label lbDateOfBirth;
         private System.Windows.Forms.PictureBox pictureBox16;

@@ -66,8 +66,8 @@ namespace GymMangementSystem
             tbUserName.Text =string.Empty;
             tbPassword.Text = string.Empty;
             tbConfirmPassword.Text = string.Empty;
-            lblPersonID.Text = "???";
-            lblUserID.Text = "???";
+            lblPersonID.Text = "[???]";
+            lblUserID.Text = "[???]";
             _SetCheckedValueForAllChkBox(false);
             rbActive.Checked = true;
             rbNo.Checked = true;
