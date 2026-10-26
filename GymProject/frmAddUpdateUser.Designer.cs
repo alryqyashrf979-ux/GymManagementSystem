@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateUser));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -78,14 +79,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.tbConfirmPassword = new GymMangementSystem.MyTextBox();
             this.tbPassword = new GymMangementSystem.MyTextBox();
             this.tbUserName = new GymMangementSystem.MyTextBox();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -107,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -116,7 +114,7 @@
             // 
             // tpPersonalInfo
             // 
-            this.tpPersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.tpPersonalInfo.BackColor = System.Drawing.Color.White;
             this.tpPersonalInfo.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.tpPersonalInfo.Controls.Add(this.panel4);
             this.tpPersonalInfo.Controls.Add(this.btnNext);
@@ -128,6 +126,15 @@
             this.tpPersonalInfo.Size = new System.Drawing.Size(1207, 613);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
+            // 
+            // uctPersonDetailsWithFilter1
+            // 
+            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(5, 64);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 478);
+            this.uctPersonDetailsWithFilter1.TabIndex = 14;
             // 
             // panel4
             // 
@@ -183,7 +190,7 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1035, 563);
+            this.btnNext.Location = new System.Drawing.Point(1040, 552);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 44);
@@ -205,7 +212,7 @@
             // 
             // tpLoginInfo
             // 
-            this.tpLoginInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.tpLoginInfo.BackColor = System.Drawing.Color.White;
             this.tpLoginInfo.Controls.Add(this.rbDisactive);
             this.tpLoginInfo.Controls.Add(this.panel1);
             this.tpLoginInfo.Controls.Add(this.rbActive);
@@ -606,14 +613,14 @@
             // lblPersonID
             // 
             this.lblPersonID.AutoSize = true;
-            this.lblPersonID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblPersonID.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonID.Location = new System.Drawing.Point(788, 123);
+            this.lblPersonID.Location = new System.Drawing.Point(771, 126);
             this.lblPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersonID.Name = "lblPersonID";
-            this.lblPersonID.Size = new System.Drawing.Size(39, 27);
+            this.lblPersonID.Size = new System.Drawing.Size(55, 22);
             this.lblPersonID.TabIndex = 21;
-            this.lblPersonID.Text = "???";
+            this.lblPersonID.Text = "[???]";
             // 
             // label10
             // 
@@ -678,14 +685,14 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblUserID.ForeColor = System.Drawing.Color.Black;
             this.lblUserID.Location = new System.Drawing.Point(168, 123);
             this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(39, 27);
+            this.lblUserID.Size = new System.Drawing.Size(55, 22);
             this.lblUserID.TabIndex = 6;
-            this.lblUserID.Text = "???";
+            this.lblUserID.Text = "[???]";
             // 
             // label3
             // 
@@ -765,81 +772,6 @@
             this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.BorderRadius = 5;
-            this.guna2Panel3.Controls.Add(this.btnSave);
-            this.guna2Panel3.Controls.Add(this.btnClose);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(5, 650);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1205, 63);
-            this.guna2Panel3.TabIndex = 15;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BorderRadius = 5;
-            this.btnSave.BorderThickness = 1;
-            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.Enabled = false;
-            this.btnSave.FillColor = System.Drawing.Color.Transparent;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1048, 14);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 37);
-            this.btnSave.TabIndex = 16;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.BorderThickness = 1;
-            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(880, 14);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(156, 37);
-            this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
-            // uctPersonDetailsWithFilter1
-            // 
-            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 58);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
-            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 497);
-            this.uctPersonDetailsWithFilter1.TabIndex = 14;
-            // 
             // tbConfirmPassword
             // 
             this.tbConfirmPassword.BorderRadius = 5;
@@ -916,14 +848,68 @@
             this.tbUserName.TabIndex = 9;
             this.tbUserName.Validating += new System.ComponentModel.CancelEventHandler(this.tbUserName_Validating);
             // 
+            // btnSave
+            // 
+            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSave.BorderRadius = 5;
+            this.btnSave.BorderThickness = 1;
+            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.Enabled = false;
+            this.btnSave.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSave.Location = new System.Drawing.Point(1057, 661);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(145, 37);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(880, 661);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(156, 37);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(1215, 714);
-            this.Controls.Add(this.guna2Panel3);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1215, 707);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcUserInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -957,7 +943,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1001,7 +986,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton rbNo;
         private Guna.UI2.WinForms.Guna2RadioButton rbYes;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.Panel panel1;

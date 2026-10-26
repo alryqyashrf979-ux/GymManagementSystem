@@ -33,7 +33,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.ctrlUserDetails1 = new GymMangementSystem.ctrlUserDetails();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.txtConfirmPassword = new GymMangementSystem.MyTextBox();
@@ -46,6 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlUserDetails1 = new GymMangementSystem.ctrlUserDetails();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -91,15 +92,6 @@
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
             // 
-            // ctrlUserDetails1
-            // 
-            this.ctrlUserDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlUserDetails1.Location = new System.Drawing.Point(10, 44);
-            this.ctrlUserDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ctrlUserDetails1.Name = "ctrlUserDetails1";
-            this.ctrlUserDetails1.Size = new System.Drawing.Size(1183, 518);
-            this.ctrlUserDetails1.TabIndex = 0;
-            // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -117,10 +109,10 @@
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(1194, 51);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(1194, 53);
             this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(443, 505);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(443, 478);
             this.guna2GroupBox1.TabIndex = 15;
             this.guna2GroupBox1.Text = "Change Password";
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(35, 0);
@@ -137,7 +129,7 @@
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.Image = global::GymMangementSystem.Properties.Resources.LockWhite;
-            this.btnChangePassword.Location = new System.Drawing.Point(19, 370);
+            this.btnChangePassword.Location = new System.Drawing.Point(19, 402);
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(419, 55);
@@ -161,7 +153,7 @@
             this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtConfirmPassword.IsRequired = true;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(95, 309);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(95, 317);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
@@ -175,7 +167,7 @@
             // 
             this.lable11.AutoSize = true;
             this.lable11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable11.Location = new System.Drawing.Point(97, 278);
+            this.lable11.Location = new System.Drawing.Point(97, 286);
             this.lable11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lable11.Name = "lable11";
             this.lable11.Size = new System.Drawing.Size(183, 28);
@@ -186,7 +178,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(21, 281);
+            this.pictureBox3.Location = new System.Drawing.Point(21, 289);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 47);
@@ -210,7 +202,7 @@
             this.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtNewPassword.IsRequired = true;
-            this.txtNewPassword.Location = new System.Drawing.Point(95, 197);
+            this.txtNewPassword.Location = new System.Drawing.Point(95, 205);
             this.txtNewPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
@@ -223,7 +215,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 166);
+            this.label2.Location = new System.Drawing.Point(93, 174);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 28);
@@ -234,7 +226,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 169);
+            this.pictureBox2.Location = new System.Drawing.Point(17, 177);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 47);
@@ -258,7 +250,7 @@
             this.txtCurrentPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCurrentPassword.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtCurrentPassword.IsRequired = true;
-            this.txtCurrentPassword.Location = new System.Drawing.Point(95, 89);
+            this.txtCurrentPassword.Location = new System.Drawing.Point(95, 97);
             this.txtCurrentPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
             this.txtCurrentPassword.PasswordChar = '*';
@@ -272,7 +264,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 58);
+            this.label1.Location = new System.Drawing.Point(93, 66);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 28);
@@ -283,7 +275,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 68);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 47);
@@ -295,16 +287,52 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // ctrlUserDetails1
+            // 
+            this.ctrlUserDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlUserDetails1.Location = new System.Drawing.Point(0, 51);
+            this.ctrlUserDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlUserDetails1.Name = "ctrlUserDetails1";
+            this.ctrlUserDetails1.Size = new System.Drawing.Size(1189, 490);
+            this.ctrlUserDetails1.TabIndex = 16;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(1364, 537);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(272, 45);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1644, 560);
+            this.ClientSize = new System.Drawing.Size(1644, 586);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.ctrlUserDetails1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.ctrlUserDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmChangePassword";
@@ -325,8 +353,6 @@
         }
 
         #endregion
-
-        private ctrlUserDetails ctrlUserDetails1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -342,5 +368,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private ctrlUserDetails ctrlUserDetails1;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }

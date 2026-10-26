@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.gbFilter = new System.Windows.Forms.GroupBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbSearch = new GymMangementSystem.MyTextBox();
             this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.guna2Panel1.SuspendLayout();
             this.gbFilter.SuspendLayout();
             this.SuspendLayout();
@@ -48,20 +48,12 @@
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.uctPersonDetails1);
             this.guna2Panel1.Controls.Add(this.gbFilter);
+            this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(3, 2);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1195, 465);
+            this.guna2Panel1.Size = new System.Drawing.Size(1195, 436);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // uctPersonDetails1
-            // 
-            this.uctPersonDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.uctPersonDetails1.Location = new System.Drawing.Point(7, 86);
-            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1175, 368);
-            this.uctPersonDetails1.TabIndex = 6;
             // 
             // gbFilter
             // 
@@ -71,10 +63,10 @@
             this.gbFilter.Controls.Add(this.cbOptions);
             this.gbFilter.Controls.Add(this.label1);
             this.gbFilter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFilter.Location = new System.Drawing.Point(7, 6);
-            this.gbFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFilter.Location = new System.Drawing.Point(5, 6);
+            this.gbFilter.Margin = new System.Windows.Forms.Padding(4);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFilter.Padding = new System.Windows.Forms.Padding(4);
             this.gbFilter.Size = new System.Drawing.Size(1176, 79);
             this.gbFilter.TabIndex = 5;
             this.gbFilter.TabStop = false;
@@ -93,7 +85,7 @@
             this.guna2CircleButton1.Image = global::GymMangementSystem.Properties.Resources.AddUser;
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(40, 40);
             this.guna2CircleButton1.Location = new System.Drawing.Point(956, 27);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.Size = new System.Drawing.Size(61, 44);
@@ -113,7 +105,7 @@
             this.btnSearch.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
             this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSearch.Location = new System.Drawing.Point(873, 27);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnSearch.Size = new System.Drawing.Size(68, 44);
@@ -137,7 +129,7 @@
             this.tbSearch.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
             this.tbSearch.IsRequired = true;
             this.tbSearch.Location = new System.Drawing.Point(552, 30);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(5);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PlaceholderText = "";
             this.tbSearch.SelectedText = "";
@@ -160,7 +152,7 @@
             "Person ID",
             "National No"});
             this.cbOptions.Location = new System.Drawing.Point(279, 31);
-            this.cbOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOptions.Margin = new System.Windows.Forms.Padding(4);
             this.cbOptions.Name = "cbOptions";
             this.cbOptions.Size = new System.Drawing.Size(264, 36);
             this.cbOptions.StartIndex = 0;
@@ -178,15 +170,24 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Find By :";
             // 
+            // uctPersonDetails1
+            // 
+            this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
+            this.uctPersonDetails1.Location = new System.Drawing.Point(3, 88);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetails1.Name = "uctPersonDetails1";
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
+            this.uctPersonDetails1.TabIndex = 6;
+            // 
             // uctPersonDetailsWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uctPersonDetailsWithFilter";
-            this.Size = new System.Drawing.Size(1201, 471);
+            this.Size = new System.Drawing.Size(1201, 441);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
