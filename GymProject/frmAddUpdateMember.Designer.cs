@@ -194,8 +194,7 @@
             this.tpMemberInfo.Controls.Add(this.panel1);
             this.tpMemberInfo.Controls.Add(this.guna2Panel1);
             this.tpMemberInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
-            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tpMemberInfo.Size = new System.Drawing.Size(1213, 633);

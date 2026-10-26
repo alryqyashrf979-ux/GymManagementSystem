@@ -280,4 +280,25 @@
   <data name="Classes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Classes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Capacity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capacity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dnable3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dnable3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExclamationMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExclamationMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IsActiveVerfiy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IsActiveVerfiy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Description" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Description.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
