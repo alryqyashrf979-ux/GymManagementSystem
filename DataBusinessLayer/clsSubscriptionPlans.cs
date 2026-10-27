@@ -134,5 +134,9 @@ namespace DataBusinessLayer
         {
             return clsSubscriptionPlansDataAccess.GetAllSubscriptionPlans();
         }
+        public static DataTable GetAllAvailabilityPlanNames()
+        {
+            return clsSubscriptionPlansDataAccess.GetAllAvailabilityPlanNames();
+        }
     }
 }
