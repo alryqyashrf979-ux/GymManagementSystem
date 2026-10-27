@@ -87,6 +87,12 @@
     <Compile Include="frmAddUpdateClass.Designer.cs">
       <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUpdateClassRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateClassRegistration.Designer.cs">
+      <DependentUpon>frmAddUpdateClassRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateClass.resx">
       <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateClassRegistration.resx">
+      <DependentUpon>frmAddUpdateClassRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateMember.resx">
       <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
@@ -476,6 +485,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PersonWithDnable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonWithDnableWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
