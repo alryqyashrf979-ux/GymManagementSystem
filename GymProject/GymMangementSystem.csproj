@@ -135,6 +135,12 @@
     <Compile Include="frmClasses.Designer.cs">
       <DependentUpon>frmClasses.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManageClassRegisteration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageClassRegisteration.Designer.cs">
+      <DependentUpon>frmManageClassRegisteration.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManageMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClasses.resx">
       <DependentUpon>frmClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageClassRegisteration.resx">
+      <DependentUpon>frmManageClassRegisteration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManagePeople.resx">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
@@ -497,6 +506,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PersonWithDnableWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassRegesteration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassRegesterationWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
