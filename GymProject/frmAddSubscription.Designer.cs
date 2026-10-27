@@ -98,7 +98,7 @@
             this.tpMemberInfo.BackColor = System.Drawing.Color.White;
             this.tpMemberInfo.Controls.Add(this.btnNext);
             this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
-            this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
             this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpMemberInfo.Name = "tpMemberInfo";
@@ -144,12 +144,12 @@
             // tpSubscriptionInfo
             // 
             this.tpSubscriptionInfo.BackColor = System.Drawing.Color.White;
-            this.tpSubscriptionInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 25);
             this.tpSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpSubscriptionInfo.Name = "tpSubscriptionInfo";
             this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpSubscriptionInfo.Size = new System.Drawing.Size(1211, 854);
+            this.tpSubscriptionInfo.Size = new System.Drawing.Size(1211, 862);
             this.tpSubscriptionInfo.TabIndex = 1;
             this.tpSubscriptionInfo.Text = "Subscription Info";
             // 
