@@ -107,5 +107,27 @@ namespace GymMangementSystem
             if (e.KeyChar == (char)13)
                 btnFind.PerformClick();
         }
+
+
+        public void LoadMemberDetalsByMemberID(int MemberID)
+        {
+
+
+
+
+
+        }
+
+
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+        }
     }
 }
