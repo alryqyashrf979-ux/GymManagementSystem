@@ -28,125 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.txtFiltering = new GymMangementSystem.MyTextBox();
-            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFind = new Guna.UI2.WinForms.Guna2Button();
-            this.cmFilteringType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.ctrlMemebrDetails1 = new GymMangementSystem.ctrlMemebrDetails();
-            this.gbFiltering.SuspendLayout();
+            this.grbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmFilterType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.grbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbFiltering
+            // ctrlMemebrDetails1
             // 
-            this.gbFiltering.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gbFiltering.BorderRadius = 5;
-            this.gbFiltering.Controls.Add(this.txtFiltering);
-            this.gbFiltering.Controls.Add(this.btnAddNewMember);
-            this.gbFiltering.Controls.Add(this.btnFind);
-            this.gbFiltering.Controls.Add(this.cmFilteringType);
-            this.gbFiltering.Controls.Add(this.label9);
-            this.gbFiltering.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.gbFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFiltering.ForeColor = System.Drawing.Color.Black;
-            this.gbFiltering.Location = new System.Drawing.Point(4, 4);
-            this.gbFiltering.Name = "gbFiltering";
-            this.gbFiltering.Size = new System.Drawing.Size(1202, 81);
-            this.gbFiltering.TabIndex = 2;
-            this.gbFiltering.Text = "Filter";
+            this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 90);
+            this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
+            this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
+            this.ctrlMemebrDetails1.TabIndex = 0;
             // 
-            // txtFiltering
+            // grbFilter
             // 
-            this.txtFiltering.BorderRadius = 5;
-            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFiltering.DefaultText = "";
-            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.ErrorMessage = "This Field is Required";
-            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtFiltering.ForeColor = System.Drawing.Color.Black;
-            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtFiltering.IsRequired = true;
-            this.txtFiltering.Location = new System.Drawing.Point(485, 33);
-            this.txtFiltering.Margin = new System.Windows.Forms.Padding(5);
-            this.txtFiltering.Name = "txtFiltering";
-            this.txtFiltering.PlaceholderText = "Search...";
-            this.txtFiltering.SelectedText = "";
-            this.txtFiltering.Size = new System.Drawing.Size(291, 35);
-            this.txtFiltering.TabIndex = 90;
-            this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
+            this.grbFilter.BorderColor = System.Drawing.Color.Gainsboro;
+            this.grbFilter.BorderRadius = 5;
+            this.grbFilter.Controls.Add(this.btnAddNewPerson);
+            this.grbFilter.Controls.Add(this.btnSearch);
+            this.grbFilter.Controls.Add(this.txtFilterValue);
+            this.grbFilter.Controls.Add(this.cmFilterType);
+            this.grbFilter.Controls.Add(this.label9);
+            this.grbFilter.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.grbFilter.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbFilter.ForeColor = System.Drawing.Color.Black;
+            this.grbFilter.Location = new System.Drawing.Point(4, 4);
+            this.grbFilter.Name = "grbFilter";
+            this.grbFilter.Size = new System.Drawing.Size(1202, 81);
+            this.grbFilter.TabIndex = 2;
+            this.grbFilter.Text = "Filter";
             // 
-            // btnAddNewMember
+            // btnAddNewPerson
             // 
-            this.btnAddNewMember.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddNewMember.BorderRadius = 5;
-            this.btnAddNewMember.BorderThickness = 1;
-            this.btnAddNewMember.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewMember.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewMember.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddUser;
-            this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewMember.Location = new System.Drawing.Point(940, 32);
-            this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(77, 36);
-            this.btnAddNewMember.TabIndex = 89;
-            this.btnAddNewMember.Click += new System.EventHandler(this.btnAddNewMember_Click);
+            this.btnAddNewPerson.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddNewPerson.BorderRadius = 5;
+            this.btnAddNewPerson.BorderThickness = 1;
+            this.btnAddNewPerson.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPerson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewPerson.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPerson.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewPerson.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewPerson.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPerson.Image = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddNewPerson.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddNewPerson.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddNewPerson.Location = new System.Drawing.Point(960, 32);
+            this.btnAddNewPerson.Name = "btnAddNewPerson";
+            this.btnAddNewPerson.Size = new System.Drawing.Size(77, 36);
+            this.btnAddNewPerson.TabIndex = 89;
             // 
-            // btnFind
+            // btnSearch
             // 
-            this.btnFind.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnFind.BorderRadius = 5;
-            this.btnFind.BorderThickness = 1;
-            this.btnFind.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFind.FillColor = System.Drawing.Color.Transparent;
-            this.btnFind.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.Black;
-            this.btnFind.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnFind.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
-            this.btnFind.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnFind.Location = new System.Drawing.Point(841, 32);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(77, 36);
-            this.btnFind.TabIndex = 88;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            this.btnSearch.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSearch.BorderRadius = 5;
+            this.btnSearch.BorderThickness = 1;
+            this.btnSearch.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
+            this.btnSearch.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSearch.Location = new System.Drawing.Point(861, 32);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(77, 36);
+            this.btnSearch.TabIndex = 88;
             // 
-            // cmFilteringType
+            // txtFilterValue
             // 
-            this.cmFilteringType.BackColor = System.Drawing.Color.Transparent;
-            this.cmFilteringType.BorderRadius = 5;
-            this.cmFilteringType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmFilteringType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmFilteringType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmFilteringType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmFilteringType.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.cmFilteringType.ForeColor = System.Drawing.Color.Black;
-            this.cmFilteringType.ItemHeight = 30;
-            this.cmFilteringType.Items.AddRange(new object[] {
+            this.txtFilterValue.BackColor = System.Drawing.Color.Transparent;
+            this.txtFilterValue.BorderRadius = 5;
+            this.txtFilterValue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFilterValue.DefaultText = "";
+            this.txtFilterValue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFilterValue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFilterValue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFilterValue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFilterValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFilterValue.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFilterValue.ForeColor = System.Drawing.Color.Black;
+            this.txtFilterValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFilterValue.Location = new System.Drawing.Point(495, 32);
+            this.txtFilterValue.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtFilterValue.Name = "txtFilterValue";
+            this.txtFilterValue.PlaceholderText = "Search...";
+            this.txtFilterValue.SelectedText = "";
+            this.txtFilterValue.Size = new System.Drawing.Size(320, 36);
+            this.txtFilterValue.TabIndex = 87;
+            // 
+            // cmFilterType
+            // 
+            this.cmFilterType.BackColor = System.Drawing.Color.Transparent;
+            this.cmFilterType.BorderRadius = 5;
+            this.cmFilterType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmFilterType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmFilterType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmFilterType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmFilterType.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cmFilterType.ForeColor = System.Drawing.Color.Black;
+            this.cmFilterType.ItemHeight = 30;
+            this.cmFilterType.Items.AddRange(new object[] {
             "National No.",
-            "Member ID"});
-            this.cmFilteringType.Location = new System.Drawing.Point(226, 32);
-            this.cmFilteringType.Name = "cmFilteringType";
-            this.cmFilteringType.Size = new System.Drawing.Size(249, 36);
-            this.cmFilteringType.StartIndex = 0;
-            this.cmFilteringType.TabIndex = 86;
-            this.cmFilteringType.SelectedIndexChanged += new System.EventHandler(this.cmFilteringType_SelectedIndexChanged);
+            "Person ID"});
+            this.cmFilterType.Location = new System.Drawing.Point(226, 32);
+            this.cmFilterType.Name = "cmFilterType";
+            this.cmFilterType.Size = new System.Drawing.Size(249, 36);
+            this.cmFilterType.StartIndex = 0;
+            this.cmFilterType.TabIndex = 86;
             // 
             // label9
             // 
@@ -158,24 +160,18 @@
             this.label9.TabIndex = 85;
             this.label9.Text = "FindBy:";
             // 
-            // ctrlMemebrDetails1
-            // 
-            this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 90);
-            this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
-            this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
-            this.ctrlMemebrDetails1.TabIndex = 0;
-            // 
             // ctrlMemberDetailsWithFiltering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.grbFilter);
+            this.Controls.Add(this.ctrlMemebrDetails1);
             this.Name = "ctrlMemberDetailsWithFiltering";
-            this.Size = new System.Drawing.Size(1205, 454);
+            this.Size = new System.Drawing.Size(1210, 804);
             this.Load += new System.EventHandler(this.ctrlMemberDetailsWithFiltering_Load);
-            this.gbFiltering.ResumeLayout(false);
-            this.gbFiltering.PerformLayout();
+            this.grbFilter.ResumeLayout(false);
+            this.grbFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -183,11 +179,11 @@
         #endregion
 
         private ctrlMemebrDetails ctrlMemebrDetails1;
-        private Guna.UI2.WinForms.Guna2GroupBox gbFiltering;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
-        private Guna.UI2.WinForms.Guna2Button btnFind;
-        private Guna.UI2.WinForms.Guna2ComboBox cmFilteringType;
+        private Guna.UI2.WinForms.Guna2GroupBox grbFilter;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewPerson;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtFilterValue;
+        private Guna.UI2.WinForms.Guna2ComboBox cmFilterType;
         private System.Windows.Forms.Label label9;
-        private MyTextBox txtFiltering;
     }
 }
