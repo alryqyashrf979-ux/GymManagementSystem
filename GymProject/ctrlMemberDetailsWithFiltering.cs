@@ -29,11 +29,6 @@ namespace GymMangementSystem
             get => ctrlMemebrDetails1.MemberInfo;
         }
 
-        public int MemberID
-        {
-            get => ctrlMemebrDetails1.MemberID;
-        }
-
         public bool EnableFiltering 
         {
 
@@ -106,78 +101,6 @@ namespace GymMangementSystem
         {
             if (e.KeyChar == (char)13)
                 btnFind.PerformClick();
-        }
-
-        public clsMembers MemberInfo
-        {
-            get => ctrlMemebrDetails1.MemberInfo;
-        }
-
-        public bool EnableFiltering 
-        {
-
-            set
-            {
-                gbFiltering.Enabled = value;
-            }
-
-            get
-            {
-                return gbFiltering.Enabled;
-            }
-        
-        }
-
-        public new void  Focus()
-        {
-            txtFiltering.Focus();
-        }
-
-        void Find()
-        {
-
-            if(cmFilteringType.Text=="Member ID")
-            {
-                ctrlMemebrDetails1.LoadMemberInfoByMemberID(Convert.ToInt32(txtFiltering.Text));
-            }
-            else
-            {
-                ctrlMemebrDetails1.LoadMemberInfoByNationalNu(txtFiltering.Text);
-            }
-        }
-
-        private void ShowDataBack(object sender ,int MemberID )
-        {
-            cmFilteringType.Text = "Member ID";
-            txtFiltering.Text = MemberID.ToString();
-            Find();
-        }
-
-        private void btnFind_Click(object sender, EventArgs e)
-        {
-            if (!this.ValidateChildren())
-            {
-                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Focus();
-                return;
-            }
-
-            Find();
-
-        }
-
-        private void btnAddNewMember_Click(object sender, EventArgs e)
-        {
-            frmAddUpdateMember frm = new frmAddUpdateMember();
-            frm.DataBack += ShowDataBack;
-            frm.ShowDialog();
-
-        }
-
-        private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtFiltering.Text = string.Empty;
-            txtFiltering.InputType = (cmFilteringType.Text == "Member ID") ? MyTextBox.TextType.Numeric : MyTextBox.TextType.Text;
         }
     }
 }
