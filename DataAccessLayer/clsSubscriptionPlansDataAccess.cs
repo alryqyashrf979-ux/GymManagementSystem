@@ -267,5 +267,38 @@ namespace DataAccessLayer
             }
         }
 
+
+        public static DataTable GetAllAvailabilityPlanNames()
+        {
+            DataTable dt = new DataTable();
+            string Query = @"select  Name from SubscriptionPlans ";
+            try
+            {
+                //Handle Exception
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(Query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+
+
     }
-    }
+}
