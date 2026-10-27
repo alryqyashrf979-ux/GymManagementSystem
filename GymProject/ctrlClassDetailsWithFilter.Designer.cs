@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.cbClasses = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.gbFilter = new System.Windows.Forms.GroupBox();
             this.ctrlClassDetails1 = new GymMangementSystem.ctrlClassDetails();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -51,21 +51,35 @@
             this.guna2Panel1.Size = new System.Drawing.Size(696, 477);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2ComboBox1
+            // gbFilter
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 7;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(228, 24);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(389, 36);
-            this.guna2ComboBox1.TabIndex = 156;
+            this.gbFilter.Controls.Add(this.cbClasses);
+            this.gbFilter.Controls.Add(this.label6);
+            this.gbFilter.Controls.Add(this.pictureBox2);
+            this.gbFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFilter.Location = new System.Drawing.Point(20, 2);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(657, 68);
+            this.gbFilter.TabIndex = 3;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "Filter";
+            // 
+            // cbClasses
+            // 
+            this.cbClasses.BackColor = System.Drawing.Color.Transparent;
+            this.cbClasses.BorderRadius = 7;
+            this.cbClasses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbClasses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbClasses.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbClasses.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbClasses.ForeColor = System.Drawing.Color.Black;
+            this.cbClasses.ItemHeight = 30;
+            this.cbClasses.Location = new System.Drawing.Point(228, 24);
+            this.cbClasses.Name = "cbClasses";
+            this.cbClasses.Size = new System.Drawing.Size(389, 36);
+            this.cbClasses.TabIndex = 156;
+            this.cbClasses.SelectedIndexChanged += new System.EventHandler(this.cbClasses_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -88,19 +102,6 @@
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
             // 
-            // gbFilter
-            // 
-            this.gbFilter.Controls.Add(this.guna2ComboBox1);
-            this.gbFilter.Controls.Add(this.label6);
-            this.gbFilter.Controls.Add(this.pictureBox2);
-            this.gbFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFilter.Location = new System.Drawing.Point(20, 2);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(657, 68);
-            this.gbFilter.TabIndex = 3;
-            this.gbFilter.TabStop = false;
-            this.gbFilter.Text = "Filter";
-            // 
             // ctrlClassDetails1
             // 
             this.ctrlClassDetails1.Location = new System.Drawing.Point(7, 74);
@@ -117,9 +118,9 @@
             this.Name = "ctrlClassDetailsWithFilter";
             this.Size = new System.Drawing.Size(703, 489);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -128,7 +129,7 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.GroupBox gbFilter;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbClasses;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ctrlClassDetails ctrlClassDetails1;

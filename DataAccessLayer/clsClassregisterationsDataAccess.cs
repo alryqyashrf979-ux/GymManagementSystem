@@ -50,7 +50,7 @@ namespace DataAccessLayer
                     {
                         MemberID = (int)reader["memberID"];
                         ClassID = (int)reader["ClassID"];
-                        UserID = (int)reader["UserID"];
+                        UserID = (int)reader["RegisteredByUser"];
                         RegisterationDate = (DateTime)reader["RegisterationDate"];
                         return true;
                     }
@@ -83,7 +83,7 @@ namespace DataAccessLayer
             string Query = "update ClassRegisterations " +
                    "set MemberID =@MemberID ," +
                    "ClassID = @ClassID ," +
-                   "UserID =@UserID  ," +
+                   "RegisteredByUser =@UserID  ," +
                    "RegisterationDate = @RegisterationDate " +
                    "where ClassRegisterationID = @ClassRegisterationID";
             using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
