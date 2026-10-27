@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblMemberID = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblClassRegistrationID = new System.Windows.Forms.Label();
+            this.lblRegistrationDate = new System.Windows.Forms.Label();
+            this.lblRegisteredBy = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -69,6 +69,17 @@
             this.panel4.Size = new System.Drawing.Size(704, 56);
             this.panel4.TabIndex = 90;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(68, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 17);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "Register member for a fitness class";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -88,16 +99,16 @@
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Class Registration";
             // 
-            // label1
+            // pictureBox10
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(68, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 17);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "Register member for a fitness class";
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PersonWithDnableWhite;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(62, 56);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
             // 
             // label2
             // 
@@ -132,16 +143,16 @@
             this.label4.TabIndex = 114;
             this.label4.Text = "Registered By :";
             // 
-            // label5
+            // lblMemberID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(516, 580);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 21);
-            this.label5.TabIndex = 147;
-            this.label5.Text = "???";
+            this.lblMemberID.AutoSize = true;
+            this.lblMemberID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberID.ForeColor = System.Drawing.Color.Black;
+            this.lblMemberID.Location = new System.Drawing.Point(516, 580);
+            this.lblMemberID.Name = "lblMemberID";
+            this.lblMemberID.Size = new System.Drawing.Size(34, 21);
+            this.lblMemberID.TabIndex = 147;
+            this.lblMemberID.Text = "???";
             // 
             // linkLabel1
             // 
@@ -178,6 +189,7 @@
             this.btnSave.Size = new System.Drawing.Size(109, 30);
             this.btnSave.TabIndex = 146;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -203,17 +215,7 @@
             this.btnClose.Size = new System.Drawing.Size(117, 30);
             this.btnClose.TabIndex = 145;
             this.btnClose.Text = "Close";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PersonWithDnableWhite;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(62, 56);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox1
             // 
@@ -225,38 +227,38 @@
             this.pictureBox1.TabIndex = 149;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // lblClassRegistrationID
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(237, 561);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 21);
-            this.label6.TabIndex = 151;
-            this.label6.Text = "???";
+            this.lblClassRegistrationID.AutoSize = true;
+            this.lblClassRegistrationID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassRegistrationID.ForeColor = System.Drawing.Color.Black;
+            this.lblClassRegistrationID.Location = new System.Drawing.Point(237, 561);
+            this.lblClassRegistrationID.Name = "lblClassRegistrationID";
+            this.lblClassRegistrationID.Size = new System.Drawing.Size(34, 21);
+            this.lblClassRegistrationID.TabIndex = 151;
+            this.lblClassRegistrationID.Text = "???";
             // 
-            // label7
+            // lblRegistrationDate
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(519, 613);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 21);
-            this.label7.TabIndex = 152;
-            this.label7.Text = "???";
+            this.lblRegistrationDate.AutoSize = true;
+            this.lblRegistrationDate.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrationDate.ForeColor = System.Drawing.Color.Black;
+            this.lblRegistrationDate.Location = new System.Drawing.Point(505, 613);
+            this.lblRegistrationDate.Name = "lblRegistrationDate";
+            this.lblRegistrationDate.Size = new System.Drawing.Size(34, 21);
+            this.lblRegistrationDate.TabIndex = 152;
+            this.lblRegistrationDate.Text = "???";
             // 
-            // label8
+            // lblRegisteredBy
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(213, 604);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 21);
-            this.label8.TabIndex = 153;
-            this.label8.Text = "???";
+            this.lblRegisteredBy.AutoSize = true;
+            this.lblRegisteredBy.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisteredBy.ForeColor = System.Drawing.Color.Black;
+            this.lblRegisteredBy.Location = new System.Drawing.Point(213, 604);
+            this.lblRegisteredBy.Name = "lblRegisteredBy";
+            this.lblRegisteredBy.Size = new System.Drawing.Size(34, 21);
+            this.lblRegisteredBy.TabIndex = 153;
+            this.lblRegisteredBy.Text = "???";
             // 
             // pictureBox2
             // 
@@ -305,11 +307,11 @@
             this.ClientSize = new System.Drawing.Size(704, 702);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblRegisteredBy);
+            this.Controls.Add(this.lblRegistrationDate);
+            this.Controls.Add(this.lblClassRegistrationID);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblMemberID);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label4);
@@ -322,6 +324,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateClassRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmAddUpdateClassRegistration_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -346,13 +349,13 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblMemberID;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ctrlClassDetailsWithFilter ctrlClassDetailsWithFilter1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblClassRegistrationID;
+        private System.Windows.Forms.Label lblRegistrationDate;
+        private System.Windows.Forms.Label lblRegisteredBy;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
