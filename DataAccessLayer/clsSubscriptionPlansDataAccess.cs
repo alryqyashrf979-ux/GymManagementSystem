@@ -18,7 +18,7 @@ namespace DataAccessLayer
     {
         //PlamID , PlanName , PlanDescription , Availablity, PlanPrice,Duration  , Note .
 
-      public  static bool FindPlan(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref double Price,ref int Duration, ref string Note)
+      public  static bool FindPlanByPlanID(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref double Price,ref int Duration, ref string Note)
         {
             string query = $"SELECT Name, Description, Availablity, Price,Duration, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
 
@@ -39,6 +39,50 @@ namespace DataAccessLayer
                             if (reader.Read())
                             {
                                 Name = (string)reader["Name"];
+                                Duration = (int)reader["Duration"];
+                                Description = (string)reader["Description"];
+                                //edit spelling mistake
+                                Availablity = (bool)reader["Availablity"];
+                                Price = (double)reader["Price"];
+                                if (reader["Note"] == DBNull.Value)
+                                    Note = string.Empty;
+                                else
+                                    Note = (string)reader["Note"];
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return false;
+        }
+        public static bool FindPlanByPlanName(string PlanName, ref int PlanID, ref string Description, ref bool Availablity, ref double Price, ref int Duration, ref string Note)
+        {
+            string query = $"SELECT Name, Description, Availablity, Price,Duration, Note FROM SubscriptionPlans WHERE Name = @PlanName";
+
+            //Handle Exception
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    //Open the database Connection 
+
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PlanName", PlanName);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                PlanID = (int)reader["PlanID"];
+                                PlanName = (string)reader["Name"];
                                 Duration = (int)reader["Duration"];
                                 Description = (string)reader["Description"];
                                 //edit spelling mistake
