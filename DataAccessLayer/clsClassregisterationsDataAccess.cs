@@ -13,7 +13,7 @@ namespace DataAccessLayer
         static public DataTable GetAllClassRegisterationInfo()
         {
             DataTable dt = new DataTable();
-            string Query = @"SELECT  ClassRegisterationID AS [Class Registeration ID],   P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Member Full Name],
+            string Query = @"SELECT  ClassRegisterationID AS [Class Registeration ID],   P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Member Name],
                    C.ClassName AS [Class Name],  C.StartTime AS [Start Time],ClassRegisterations.RegisterationDate as 'Registeration Date' 
                    FROM ClassRegisterations INNER JOIN Members M  
                    ON M.MemberID = ClassRegisterations.MemberID INNER JOIN People P
