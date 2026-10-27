@@ -129,10 +129,5 @@ namespace GymMangementSystem
 
 
         }
-
-        private void lnkEditPersonInfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
     }
 }
