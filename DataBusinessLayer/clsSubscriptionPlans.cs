@@ -17,7 +17,7 @@ namespace DataBusinessLayer
 
         public string PlanName { set; get; }
         public string PlanDescription { set; get; }
-        public bool Availiability { set; get; }
+        public bool IsAvailable { set; get; }
         public int Duration { set; get; }
 
         public double PlanPrice { set; get; }
@@ -33,18 +33,18 @@ namespace DataBusinessLayer
             PlanName = string.Empty;
             PlanDescription = string.Empty;
             Duration = -1;
-            Availiability = true;
+            IsAvailable = true;
             PlanPrice = default(double);
             Note = string.Empty;
             Mode = enMode.Add;
 
         }
-        public clsSubscriptionPlans(int planID, string planName, string planDescription, bool availiablity, double planPrice, string note,int Duration)
+        public clsSubscriptionPlans(int planID, string planName, string planDescription, bool IsAvailable, double planPrice, string note,int Duration)
         {
             this._PlanID = planID;
             this.PlanName = planName;
             this.PlanDescription = planDescription;
-            this.Availiability = availiablity;
+            this.IsAvailable = IsAvailable;
             this.PlanPrice = planPrice;
             this.Duration = Duration;
             this.Note = note;
@@ -58,11 +58,11 @@ namespace DataBusinessLayer
             string PlanDescription = string.Empty;
             string Note = string.Empty;
             double PlanPrice = default(double);
-            bool Availiablity = true;
+            bool IsAvailable = true;
             int Duration = -1;
 
-            if (clsSubscriptionPlansDataAccess.FindPlanByPlanID(PlanID, ref PlanName, ref PlanDescription, ref Availiablity, ref PlanPrice,ref Duration, ref Note))
-                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note,Duration);
+            if (clsSubscriptionPlansDataAccess.FindPlanByPlanID(PlanID, ref PlanName, ref PlanDescription, ref IsAvailable, ref PlanPrice,ref Duration, ref Note))
+                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, IsAvailable, PlanPrice, Note,Duration);
             else return null;
         }
         public static clsSubscriptionPlans Find(string PlanName)
@@ -71,17 +71,17 @@ namespace DataBusinessLayer
             string PlanDescription = string.Empty;
             string Note = string.Empty;
             double PlanPrice = default(double);
-            bool Availiablity = true;
+            bool IsAvailable = true;
             int Duration = -1;
 
-            if (clsSubscriptionPlansDataAccess.FindPlanByPlanName(PlanName, ref PlanID, ref PlanDescription, ref Availiablity, ref PlanPrice,ref Duration, ref Note))
-                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note,Duration);
+            if (clsSubscriptionPlansDataAccess.FindPlanByPlanName(PlanName, ref PlanID, ref PlanDescription, ref IsAvailable, ref PlanPrice,ref Duration, ref Note))
+                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, IsAvailable, PlanPrice, Note,Duration);
             else return null;
         }
 
         private bool _Add()
         {
-            this._PlanID = clsSubscriptionPlansDataAccess.Add(this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice,this.Duration, this.Note);
+            this._PlanID = clsSubscriptionPlansDataAccess.Add(this.PlanName, this.PlanDescription, this.IsAvailable, this.PlanPrice,this.Duration, this.Note);
             return this._PlanID > -1;
         }
 
@@ -89,7 +89,7 @@ namespace DataBusinessLayer
         // 
         private bool _Update()
         {
-            return clsSubscriptionPlansDataAccess.Update(this.PlanID,this.PlanName, this.PlanDescription, this.Availiability, this.PlanPrice,this.Duration, this.Note);
+            return clsSubscriptionPlansDataAccess.Update(this.PlanID,this.PlanName, this.PlanDescription, this.IsAvailable, this.PlanPrice,this.Duration, this.Note);
         }
         public bool Save()
         {
@@ -124,11 +124,11 @@ namespace DataBusinessLayer
         }
         public bool Activate()
         {
-            return clsSubscriptionPlansDataAccess.SetAvailiability(this.PlanID, true);
+            return clsSubscriptionPlansDataAccess.SetAvailability(this.PlanID, true);
         }
         public bool Deactivate()
         {
-            return clsSubscriptionPlansDataAccess.SetAvailiability(this.PlanID, false);
+            return clsSubscriptionPlansDataAccess.SetAvailability(this.PlanID, false);
         }
         public static DataTable GetAllSubscriptionPlans()
         {

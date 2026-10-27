@@ -18,9 +18,9 @@ namespace DataAccessLayer
     {
         //PlamID , PlanName , PlanDescription , Availablity, PlanPrice,Duration  , Note .
 
-      public  static bool FindPlanByPlanID(int PlanID, ref string Name, ref string Description, ref bool Availablity, ref double Price,ref int Duration, ref string Note)
+      public  static bool FindPlanByPlanID(int PlanID, ref string Name, ref string Description, ref bool IsAvailable, ref double Price,ref int Duration, ref string Note)
         {
-            string query = $"SELECT Name, Description, Availablity, Price,Duration, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
+            string query = $"SELECT Name, Description, IsAvailable, Price,Duration, Note FROM SubscriptionPlans WHERE PlanID = @PlanID";
 
             //Handle Exception
             try
@@ -42,7 +42,7 @@ namespace DataAccessLayer
                                 Duration = (int)reader["Duration"];
                                 Description = (string)reader["Description"];
                                 //edit spelling mistake
-                                Availablity = (bool)reader["Availablity"];
+                                IsAvailable = (bool)reader["IsAvailable"];
                                 Price = (double)reader["Price"];
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
@@ -61,9 +61,9 @@ namespace DataAccessLayer
 
             return false;
         }
-        public static bool FindPlanByPlanName(string PlanName, ref int PlanID, ref string Description, ref bool Availablity, ref double Price, ref int Duration, ref string Note)
+        public static bool FindPlanByPlanName(string PlanName, ref int PlanID, ref string Description, ref bool IsAvailable, ref double Price, ref int Duration, ref string Note)
         {
-            string query = $"SELECT Name, Description, Availablity, Price,Duration, Note FROM SubscriptionPlans WHERE Name = @PlanName";
+            string query = $"SELECT Name, Description, IsAvailable, Price,Duration, Note FROM SubscriptionPlans WHERE Name = @PlanName";
 
             //Handle Exception
             try
@@ -86,7 +86,7 @@ namespace DataAccessLayer
                                 Duration = (int)reader["Duration"];
                                 Description = (string)reader["Description"];
                                 //edit spelling mistake
-                                Availablity = (bool)reader["Availablity"];
+                                IsAvailable = (bool)reader["IsAvailable"];
                                 Price = (double)reader["Price"];
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
@@ -106,9 +106,9 @@ namespace DataAccessLayer
             return false;
         }
 
-        public static int Add(string Name, string Description, bool Availablity, double Price,int Duration, string Note)
+        public static int Add(string Name, string Description, bool IsAvailable, double Price,int Duration, string Note)
         {
-            string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@Availablity,@Price,@Note,@Duration) ; SELECT SCOPE_IDENTITY(); ";
+            string Query = " insert into SubscriptionPlans \r\nvalues (@Name,@Description,@IsAvailable,@Price,@Note,@Duration) ; SELECT SCOPE_IDENTITY(); ";
 
             //Handle Exception
 
@@ -125,7 +125,7 @@ namespace DataAccessLayer
                         cmd.Parameters.AddWithValue("@Name", Name);
                         cmd.Parameters.AddWithValue("@Duration", Duration);
                         cmd.Parameters.AddWithValue("@Description", Description);
-                        cmd.Parameters.AddWithValue("@Availablity", Availablity);
+                        cmd.Parameters.AddWithValue("@IsAvailable", IsAvailable);
                         cmd.Parameters.AddWithValue("@Price", Price);
                         if (!string.IsNullOrEmpty(Note))
                             cmd.Parameters.AddWithValue("@Note", Note);
@@ -146,11 +146,11 @@ namespace DataAccessLayer
                 return -1;
             }
         }
-       public static bool Update(int PlanID,string Name, string Description, bool Availiablity, double Price,int Duration, string Note)
+       public static bool Update(int PlanID,string Name, string Description, bool IsAvailable, double Price,int Duration, string Note)
         {
             // edit spelling mistake in Availiablity
             //add Price parameter to the query
-            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description,Price=@Price, Availiablity= @Availiablity, Note = @Note,Duration=@Duration \r\nwhere PlanID = @PlanID  ";
+            string Query = "\r\nupdate SubscriptionPlans \r\nset Name= @Name, Description = @Description,Price=@Price, IsAvailable= @IsAvailable, Note = @Note,Duration=@Duration \r\nwhere PlanID = @PlanID  ";
 
             //Handle Exception
             try
@@ -170,7 +170,7 @@ namespace DataAccessLayer
                         cmd.Parameters.AddWithValue("@Description", Description);
 
                         //edit spelling mistake in Availiablity
-                        cmd.Parameters.AddWithValue("@Availiablity", Availiablity);
+                        cmd.Parameters.AddWithValue("@IsAvailable", IsAvailable);
                         cmd.Parameters.AddWithValue("@Price", Price);
 
                         if (!string.IsNullOrEmpty(Note))
@@ -213,9 +213,9 @@ namespace DataAccessLayer
                 return false;
             }
         }
-        public static bool SetAvailiability(int PlanID, bool Availiability)
+        public static bool SetAvailability(int PlanID, bool IsAvailable)
         {
-            string Query = " Update SubscriptionPlans set Availiablity =@Availiability where PlanID = @PlanID ";
+            string Query = " Update SubscriptionPlans set IsAvailable =@IsAvailable where PlanID = @PlanID ";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -226,7 +226,7 @@ namespace DataAccessLayer
                     using (SqlCommand cmd = new SqlCommand(Query, conn))
                     {
                         cmd.Parameters.AddWithValue("@PlanID", PlanID);
-                        cmd.Parameters.AddWithValue("@Availiability", Availiability);
+                        cmd.Parameters.AddWithValue("@IsAvailable", IsAvailable);
 
                         return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
                     }
