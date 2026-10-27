@@ -39,12 +39,10 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
-            this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcSubscriptionInfo.SuspendLayout();
             this.tpMemberInfo.SuspendLayout();
-            this.tpSubscriptionInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -137,7 +135,6 @@
             // tpSubscriptionInfo
             // 
             this.tpSubscriptionInfo.BackColor = System.Drawing.Color.White;
-            this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionPlanDetails1);
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 25);
             this.tpSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4);
@@ -207,14 +204,6 @@
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1207, 802);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
             // 
-            // ctrlSubscriptionPlanDetails1
-            // 
-            this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(249, 113);
-            this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
-            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(642, 461);
-            this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
-            // 
             // frmAddSubscription
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -234,7 +223,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.tcSubscriptionInfo.ResumeLayout(false);
             this.tpMemberInfo.ResumeLayout(false);
-            this.tpSubscriptionInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -250,6 +238,5 @@
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
-        private ctrlSubscriptionPlanDetails ctrlSubscriptionPlanDetails1;
     }
 }

@@ -31,7 +31,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.cmFilteringType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.guna2Panel1.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             this.gbFiltering.BorderColor = System.Drawing.Color.Gainsboro;
             this.gbFiltering.BorderRadius = 5;
-            this.gbFiltering.Controls.Add(this.cmFilteringType);
+            this.gbFiltering.Controls.Add(this.cmFiltering);
             this.gbFiltering.Controls.Add(this.label9);
             this.gbFiltering.CustomBorderColor = System.Drawing.Color.Transparent;
             this.gbFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -72,25 +72,22 @@
             this.gbFiltering.TabIndex = 3;
             this.gbFiltering.Text = "Filter";
             // 
-            // cmFilteringType
+            // cmFiltering
             // 
-            this.cmFilteringType.BackColor = System.Drawing.Color.Transparent;
-            this.cmFilteringType.BorderRadius = 5;
-            this.cmFilteringType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmFilteringType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmFilteringType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmFilteringType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmFilteringType.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.cmFilteringType.ForeColor = System.Drawing.Color.Black;
-            this.cmFilteringType.ItemHeight = 30;
-            this.cmFilteringType.Items.AddRange(new object[] {
-            "National No.",
-            "Member ID"});
-            this.cmFilteringType.Location = new System.Drawing.Point(218, 33);
-            this.cmFilteringType.Name = "cmFilteringType";
-            this.cmFilteringType.Size = new System.Drawing.Size(355, 36);
-            this.cmFilteringType.StartIndex = 0;
-            this.cmFilteringType.TabIndex = 86;
+            this.cmFiltering.BackColor = System.Drawing.Color.Transparent;
+            this.cmFiltering.BorderRadius = 5;
+            this.cmFiltering.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmFiltering.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmFiltering.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cmFiltering.ForeColor = System.Drawing.Color.Black;
+            this.cmFiltering.ItemHeight = 30;
+            this.cmFiltering.Location = new System.Drawing.Point(218, 33);
+            this.cmFiltering.Name = "cmFiltering";
+            this.cmFiltering.Size = new System.Drawing.Size(355, 36);
+            this.cmFiltering.StartIndex = 0;
+            this.cmFiltering.TabIndex = 86;
             // 
             // label9
             // 
@@ -131,7 +128,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private ctrlSubscriptionPlanDetails ctrlSubscriptionPlanDetails1;
         private Guna.UI2.WinForms.Guna2GroupBox gbFiltering;
-        private Guna.UI2.WinForms.Guna2ComboBox cmFilteringType;
+        private Guna.UI2.WinForms.Guna2ComboBox cmFiltering;
         private System.Windows.Forms.Label label9;
     }
 }
