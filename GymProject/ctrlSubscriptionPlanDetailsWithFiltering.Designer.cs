@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cmFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.guna2Panel1.SuspendLayout();
             this.gbFiltering.SuspendLayout();
             this.SuspendLayout();
@@ -45,16 +45,8 @@
             this.guna2Panel1.Controls.Add(this.ctrlSubscriptionPlanDetails1);
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(691, 560);
+            this.guna2Panel1.Size = new System.Drawing.Size(691, 566);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // ctrlSubscriptionPlanDetails1
-            // 
-            this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(5, 88);
-            this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
-            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(678, 461);
-            this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
             // 
             // gbFiltering
             // 
@@ -82,21 +74,29 @@
             this.cmFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.cmFiltering.ForeColor = System.Drawing.Color.Black;
             this.cmFiltering.ItemHeight = 30;
-            this.cmFiltering.Location = new System.Drawing.Point(218, 33);
+            this.cmFiltering.Location = new System.Drawing.Point(216, 35);
             this.cmFiltering.Name = "cmFiltering";
             this.cmFiltering.Size = new System.Drawing.Size(355, 36);
-            this.cmFiltering.StartIndex = 0;
             this.cmFiltering.TabIndex = 86;
+            this.cmFiltering.SelectedIndexChanged += new System.EventHandler(this.cmFiltering_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(79, 40);
+            this.label9.Location = new System.Drawing.Point(77, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 22);
             this.label9.TabIndex = 85;
             this.label9.Text = "Select Plan :";
+            // 
+            // ctrlSubscriptionPlanDetails1
+            // 
+            this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(5, 88);
+            this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
+            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(678, 473);
+            this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
             // 
             // ctrlSubscriptionPlanDetailsWithFiltering
             // 
@@ -106,7 +106,8 @@
             this.Controls.Add(this.gbFiltering);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionPlanDetailsWithFiltering";
-            this.Size = new System.Drawing.Size(697, 568);
+            this.Size = new System.Drawing.Size(697, 574);
+            this.Load += new System.EventHandler(this.ctrlSubscriptionPlanDetailsWithFiltering_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFiltering.ResumeLayout(false);
             this.gbFiltering.PerformLayout();
