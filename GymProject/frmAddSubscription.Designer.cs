@@ -34,14 +34,12 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
-            this.ctrlMemberDetailsWithFiltering2 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcUserInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
-            this.tpLoginInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -53,7 +51,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1214, 46);
+            this.panel4.Size = new System.Drawing.Size(1219, 46);
             this.panel4.TabIndex = 14;
             // 
             // lblTitle2
@@ -89,7 +87,7 @@
             this.tcUserInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tcUserInfo.Name = "tcUserInfo";
             this.tcUserInfo.SelectedIndex = 0;
-            this.tcUserInfo.Size = new System.Drawing.Size(1214, 947);
+            this.tcUserInfo.Size = new System.Drawing.Size(1219, 947);
             this.tcUserInfo.TabIndex = 15;
             // 
             // tpPersonalInfo
@@ -101,46 +99,38 @@
             this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(1206, 918);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(1211, 918);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
-            // 
-            // ctrlMemberDetailsWithFiltering1
-            // 
-            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(3, 3);
-            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
-            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1198, 855);
-            this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
             // 
             // tpLoginInfo
             // 
             this.tpLoginInfo.BackColor = System.Drawing.Color.White;
-            this.tpLoginInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering2);
             this.tpLoginInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 25);
             this.tpLoginInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpLoginInfo.Name = "tpLoginInfo";
             this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpLoginInfo.Size = new System.Drawing.Size(1206, 918);
+            this.tpLoginInfo.Size = new System.Drawing.Size(1211, 918);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
             // 
-            // ctrlMemberDetailsWithFiltering2
+            // ctrlMemberDetailsWithFiltering1
             // 
-            this.ctrlMemberDetailsWithFiltering2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.ctrlMemberDetailsWithFiltering2.Location = new System.Drawing.Point(9, 259);
-            this.ctrlMemberDetailsWithFiltering2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctrlMemberDetailsWithFiltering2.Name = "ctrlMemberDetailsWithFiltering2";
-            this.ctrlMemberDetailsWithFiltering2.Size = new System.Drawing.Size(1205, 454);
-            this.ctrlMemberDetailsWithFiltering2.TabIndex = 0;
+            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(1, 2);
+            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1207, 851);
+            this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
             // 
             // frmAddSubscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1214, 1047);
+            this.ClientSize = new System.Drawing.Size(1219, 1047);
             this.Controls.Add(this.tcUserInfo);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -152,7 +142,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.tcUserInfo.ResumeLayout(false);
             this.tpPersonalInfo.ResumeLayout(false);
-            this.tpLoginInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,6 +154,5 @@
         private System.Windows.Forms.TabPage tpPersonalInfo;
         private System.Windows.Forms.TabPage tpLoginInfo;
         private ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering1;
-        private ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering2;
     }
 }

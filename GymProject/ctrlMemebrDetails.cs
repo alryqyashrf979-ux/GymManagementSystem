@@ -96,7 +96,7 @@ namespace GymMangementSystem
             if (_MemberInfo == null)
             {
                 _ResetMemberData();
-                MessageBox.Show("No Member with Person ID=" + NationalNu.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Member with National Nu=" + NationalNu.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
