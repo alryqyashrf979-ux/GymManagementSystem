@@ -89,6 +89,20 @@ namespace GymMangementSystem
             _LoadData();
 
         }
+        public void LoadMemberInfoByNationalNu(string NationalNu )
+        {
+            _MemberInfo=clsMembers.nati( PersonID );
+
+            if (_MemberInfo == null)
+            {
+                _ResetMemberData();
+                MessageBox.Show("No Member with Person ID=" + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _LoadData();
+
+        }
 
 
         private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

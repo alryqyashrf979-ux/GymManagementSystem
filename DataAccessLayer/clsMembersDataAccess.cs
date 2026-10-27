@@ -176,6 +176,42 @@ namespace DataAccessLayer
             }
             return false;
         }
+        static public bool FindMemberByNationalNu(string NationalNu, ref int PersonID,ref int MemberID, ref int LastSubscriptionID, ref bool IsActive, ref int ContactPersonInfoID, ref string InActivationReason)
+        {
+            string Query = @"select Members.* from Members inner join People  on Members.PersonID =People.ID 
+                                where People.NationalID=@NationalNu";
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(Query, con))
+            {
+                con.Open();
+                cmd.Parameters.AddWithValue("@NationalNu", NationalNu);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+
+                    if (reader.Read())
+                    {
+
+                        if (reader["InActivationReason"] != DBNull.Value)
+                            InActivationReason = (string)reader["InActivationReason"];
+                        else
+                            InActivationReason = "";
+
+
+                        if (reader["LastSubscriptionID"] != DBNull.Value)
+                            LastSubscriptionID = (int)reader["LastSubscriptionID"];
+                        else
+                            LastSubscriptionID = -1;
+
+                        PersonID = (int)reader["PersonID"];
+                        MemberID = (int)reader["MemberID"];
+                        IsActive = (bool)reader["IsActive"];
+                        ContactPersonInfoID = (int)reader["EmergencyContactInfoID"];
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
 
         static public bool FindMemberByMemberID(int MemberID, ref int PersonID, ref int LastSubscriptionID, ref bool IsActive, ref int ContactPersonInfoID,ref string InActivationReason)
         {
