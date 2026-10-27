@@ -176,6 +176,7 @@ namespace GymMangementSystem
 
         private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtFiltering.Text = string.Empty;
             txtFiltering.InputType = (cmFilteringType.Text == "Member ID") ? MyTextBox.TextType.Numeric : MyTextBox.TextType.Text;
         }
     }

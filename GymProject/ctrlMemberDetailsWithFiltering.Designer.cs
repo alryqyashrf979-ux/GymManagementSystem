@@ -28,23 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlMemebrDetails1 = new GymMangementSystem.ctrlMemebrDetails();
             this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtFiltering = new GymMangementSystem.MyTextBox();
             this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.cmFilteringType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtFiltering = new GymMangementSystem.MyTextBox();
+            this.ctrlMemebrDetails1 = new GymMangementSystem.ctrlMemebrDetails();
             this.gbFiltering.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ctrlMemebrDetails1
-            // 
-            this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 90);
-            this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
-            this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
-            this.ctrlMemebrDetails1.TabIndex = 0;
             // 
             // gbFiltering
             // 
@@ -63,6 +55,30 @@
             this.gbFiltering.Size = new System.Drawing.Size(1202, 81);
             this.gbFiltering.TabIndex = 2;
             this.gbFiltering.Text = "Filter";
+            // 
+            // txtFiltering
+            // 
+            this.txtFiltering.BorderRadius = 5;
+            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiltering.DefaultText = "";
+            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.ErrorMessage = "This Field is Required";
+            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFiltering.ForeColor = System.Drawing.Color.Black;
+            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFiltering.IsRequired = true;
+            this.txtFiltering.Location = new System.Drawing.Point(485, 33);
+            this.txtFiltering.Margin = new System.Windows.Forms.Padding(5);
+            this.txtFiltering.Name = "txtFiltering";
+            this.txtFiltering.PlaceholderText = "Search...";
+            this.txtFiltering.SelectedText = "";
+            this.txtFiltering.Size = new System.Drawing.Size(291, 35);
+            this.txtFiltering.TabIndex = 90;
             // 
             // btnAddNewMember
             // 
@@ -100,7 +116,7 @@
             this.btnFind.FillColor = System.Drawing.Color.Transparent;
             this.btnFind.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFind.ForeColor = System.Drawing.Color.Black;
-            this.btnFind.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnFind.HoverState.FillColor = System.Drawing.Color.White;
             this.btnFind.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
             this.btnFind.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
@@ -123,7 +139,7 @@
             this.cmFilteringType.ItemHeight = 30;
             this.cmFilteringType.Items.AddRange(new object[] {
             "National No.",
-            "Memebr ID"});
+            "Member ID"});
             this.cmFilteringType.Location = new System.Drawing.Point(226, 32);
             this.cmFilteringType.Name = "cmFilteringType";
             this.cmFilteringType.Size = new System.Drawing.Size(249, 36);
@@ -141,29 +157,13 @@
             this.label9.TabIndex = 85;
             this.label9.Text = "FindBy:";
             // 
-            // txtFiltering
+            // ctrlMemebrDetails1
             // 
-            this.txtFiltering.BorderRadius = 5;
-            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFiltering.DefaultText = "";
-            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.ErrorMessage = "This Field is Required";
-            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtFiltering.ForeColor = System.Drawing.Color.Black;
-            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
-            this.txtFiltering.IsRequired = true;
-            this.txtFiltering.Location = new System.Drawing.Point(485, 33);
-            this.txtFiltering.Margin = new System.Windows.Forms.Padding(5);
-            this.txtFiltering.Name = "txtFiltering";
-            this.txtFiltering.PlaceholderText = "Search...";
-            this.txtFiltering.SelectedText = "";
-            this.txtFiltering.Size = new System.Drawing.Size(291, 35);
-            this.txtFiltering.TabIndex = 90;
+            this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 90);
+            this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
+            this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
+            this.ctrlMemebrDetails1.TabIndex = 0;
             // 
             // ctrlMemberDetailsWithFiltering
             // 

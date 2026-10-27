@@ -157,7 +157,7 @@ namespace GymMangementSystem
             // 
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhone.Location = new System.Drawing.Point(684, 242);
+            this.lbPhone.Location = new System.Drawing.Point(692, 242);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(74, 25);
             this.lbPhone.TabIndex = 169;
@@ -167,7 +167,7 @@ namespace GymMangementSystem
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCountry.Location = new System.Drawing.Point(684, 284);
+            this.lbCountry.Location = new System.Drawing.Point(692, 284);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(74, 25);
             this.lbCountry.TabIndex = 170;
@@ -177,7 +177,7 @@ namespace GymMangementSystem
             // 
             this.lbDateOfBirth.AutoSize = true;
             this.lbDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateOfBirth.Location = new System.Drawing.Point(684, 195);
+            this.lbDateOfBirth.Location = new System.Drawing.Point(692, 195);
             this.lbDateOfBirth.Name = "lbDateOfBirth";
             this.lbDateOfBirth.Size = new System.Drawing.Size(74, 25);
             this.lbDateOfBirth.TabIndex = 168;
@@ -186,7 +186,7 @@ namespace GymMangementSystem
             // pictureBox16
             // 
             this.pictureBox16.Image = global::GymMangementSystem.Properties.Resources.Country;
-            this.pictureBox16.Location = new System.Drawing.Point(640, 281);
+            this.pictureBox16.Location = new System.Drawing.Point(648, 281);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(31, 31);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +197,7 @@ namespace GymMangementSystem
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(541, 287);
+            this.label17.Location = new System.Drawing.Point(549, 287);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(86, 22);
             this.label17.TabIndex = 166;
@@ -206,7 +206,7 @@ namespace GymMangementSystem
             // pictureBox17
             // 
             this.pictureBox17.Image = global::GymMangementSystem.Properties.Resources.PhoneNumberIcon;
-            this.pictureBox17.Location = new System.Drawing.Point(640, 240);
+            this.pictureBox17.Location = new System.Drawing.Point(648, 240);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(31, 31);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +217,7 @@ namespace GymMangementSystem
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(554, 249);
+            this.label18.Location = new System.Drawing.Point(562, 249);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(73, 22);
             this.label18.TabIndex = 164;
@@ -226,7 +226,7 @@ namespace GymMangementSystem
             // pictureBox18
             // 
             this.pictureBox18.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox18.Location = new System.Drawing.Point(640, 192);
+            this.pictureBox18.Location = new System.Drawing.Point(648, 192);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(31, 31);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,7 +237,7 @@ namespace GymMangementSystem
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(494, 201);
+            this.label19.Location = new System.Drawing.Point(502, 201);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(133, 22);
             this.label19.TabIndex = 162;
@@ -267,7 +267,7 @@ namespace GymMangementSystem
             // 
             this.lbAdress.AutoSize = true;
             this.lbAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAdress.Location = new System.Drawing.Point(205, 299);
+            this.lbAdress.Location = new System.Drawing.Point(185, 300);
             this.lbAdress.Name = "lbAdress";
             this.lbAdress.Size = new System.Drawing.Size(74, 25);
             this.lbAdress.TabIndex = 159;
@@ -276,10 +276,10 @@ namespace GymMangementSystem
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.Location = new System.Drawing.Point(205, 256);
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lbEmail.Location = new System.Drawing.Point(186, 255);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(74, 25);
+            this.lbEmail.Size = new System.Drawing.Size(61, 20);
             this.lbEmail.TabIndex = 158;
             this.lbEmail.Text = "[????]";
             // 
@@ -287,7 +287,7 @@ namespace GymMangementSystem
             // 
             this.lbGender.AutoSize = true;
             this.lbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGender.Location = new System.Drawing.Point(205, 207);
+            this.lbGender.Location = new System.Drawing.Point(185, 206);
             this.lbGender.Name = "lbGender";
             this.lbGender.Size = new System.Drawing.Size(74, 25);
             this.lbGender.TabIndex = 157;
@@ -297,7 +297,7 @@ namespace GymMangementSystem
             // 
             this.lbNationalNo.AutoSize = true;
             this.lbNationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNationalNo.Location = new System.Drawing.Point(205, 154);
+            this.lbNationalNo.Location = new System.Drawing.Point(186, 154);
             this.lbNationalNo.Name = "lbNationalNo";
             this.lbNationalNo.Size = new System.Drawing.Size(74, 25);
             this.lbNationalNo.TabIndex = 156;
@@ -306,7 +306,7 @@ namespace GymMangementSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Location;
-            this.pictureBox1.Location = new System.Drawing.Point(163, 295);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 295);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,7 +316,7 @@ namespace GymMangementSystem
             // pictureBox12
             // 
             this.pictureBox12.Image = global::GymMangementSystem.Properties.Resources.Email;
-            this.pictureBox12.Location = new System.Drawing.Point(165, 248);
+            this.pictureBox12.Location = new System.Drawing.Point(146, 248);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(30, 30);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -326,7 +326,7 @@ namespace GymMangementSystem
             // pictureBox14
             // 
             this.pictureBox14.Image = global::GymMangementSystem.Properties.Resources.Gendor;
-            this.pictureBox14.Location = new System.Drawing.Point(166, 203);
+            this.pictureBox14.Location = new System.Drawing.Point(147, 203);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(30, 29);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -376,7 +376,7 @@ namespace GymMangementSystem
             // pictureBox13
             // 
             this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.PersonID;
-            this.pictureBox13.Location = new System.Drawing.Point(166, 157);
+            this.pictureBox13.Location = new System.Drawing.Point(147, 157);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(30, 22);
@@ -389,7 +389,7 @@ namespace GymMangementSystem
             this.t.AutoSize = true;
             this.t.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t.ForeColor = System.Drawing.Color.Red;
-            this.t.Location = new System.Drawing.Point(205, 107);
+            this.t.Location = new System.Drawing.Point(186, 107);
             this.t.Name = "t";
             this.t.Size = new System.Drawing.Size(74, 25);
             this.t.TabIndex = 147;
@@ -398,7 +398,7 @@ namespace GymMangementSystem
             // pictureBox15
             // 
             this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox15.Location = new System.Drawing.Point(164, 99);
+            this.pictureBox15.Location = new System.Drawing.Point(145, 99);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(31, 35);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
