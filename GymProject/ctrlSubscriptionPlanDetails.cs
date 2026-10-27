@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,13 @@ namespace GymMangementSystem
         clsSubscriptionPlans _PlanInfo;
 
 
-       void _ResetData()
+        public clsSubscriptionPlans PlanInfo
+        {
+            get => _PlanInfo;
+        }
+
+
+       void _ResetPlanData()
         {
 
             lblPlanID.Text = "[????]";
@@ -35,15 +42,31 @@ namespace GymMangementSystem
         }
 
 
+        void _LoadData()
+        {
 
+            lblPlanID.Text = _PlanInfo.PlanID.ToString();
+            lblPlanName.Text=_PlanInfo.PlanName.ToString();
+            lblPrice.Text=_PlanInfo.PlanPrice.ToString();
+            tgschIsAvailable.Checked = _PlanInfo.Availiability;
+            txtNotes.Text = _PlanInfo.Note;
+            txtDescription.Text = _PlanInfo.PlanDescription;
+
+
+        }
 
         public void LoadPlanDataByPlanName(string PlanName)
         {
             _PlanInfo = clsSubscriptionPlans.Find(PlanName);
 
+            if (_PlanInfo == null)
+            {
+                _ResetPlanData();
+                MessageBox.Show("No Member with Person ID=" + PlanName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-
-
+            _LoadData();
 
         }
 
