@@ -93,6 +93,12 @@
     <Compile Include="ctrlSubscriptionPlanDetails.Designer.cs">
       <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlSubscriptionPlanDetailsWithFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSubscriptionPlanDetailsWithFiltering.Designer.cs">
+      <DependentUpon>ctrlSubscriptionPlanDetailsWithFiltering.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlSubscriptionPlanDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlSubscriptionPlanDetails.resx">
       <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlSubscriptionPlanDetailsWithFiltering.resx">
+      <DependentUpon>ctrlSubscriptionPlanDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlSubscriptionPlanDetails.resx">
       <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>

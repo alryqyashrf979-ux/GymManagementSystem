@@ -31,23 +31,16 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tgschIsAvailable = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNotes = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPlanName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblPlanID = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -65,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +88,7 @@
             this.guna2Panel1.Controls.Add(this.label14);
             this.guna2Panel1.Location = new System.Drawing.Point(3, 6);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(634, 452);
+            this.guna2Panel1.Size = new System.Drawing.Size(672, 452);
             this.guna2Panel1.TabIndex = 0;
             // 
             // tgschIsAvailable
@@ -139,16 +131,6 @@
             this.txtDescription.Size = new System.Drawing.Size(399, 83);
             this.txtDescription.TabIndex = 218;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox5.Location = new System.Drawing.Point(142, 348);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 217;
-            this.pictureBox5.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -183,16 +165,6 @@
             this.txtNotes.Size = new System.Drawing.Size(399, 83);
             this.txtNotes.TabIndex = 215;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox4.Location = new System.Drawing.Point(142, 246);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 159;
-            this.pictureBox4.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -202,16 +174,6 @@
             this.label9.Size = new System.Drawing.Size(64, 22);
             this.label9.TabIndex = 157;
             this.label9.Text = "Note :";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(142, 197);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 156;
-            this.pictureBox3.TabStop = false;
             // 
             // lblPrice
             // 
@@ -233,16 +195,6 @@
             this.label6.TabIndex = 154;
             this.label6.Text = "Price :";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(142, 152);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 153;
-            this.pictureBox2.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -252,16 +204,6 @@
             this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 151;
             this.label4.Text = "Available :";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(142, 104);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 150;
-            this.pictureBox1.TabStop = false;
             // 
             // lblPlanName
             // 
@@ -283,16 +225,6 @@
             this.label2.TabIndex = 148;
             this.label2.Text = "Plan Name :";
             // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox15.Location = new System.Drawing.Point(142, 58);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 147;
-            this.pictureBox15.TabStop = false;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
@@ -303,7 +235,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(3, 2);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(627, 43);
+            this.guna2Panel3.Size = new System.Drawing.Size(664, 43);
             this.guna2Panel3.TabIndex = 105;
             // 
             // label8
@@ -317,17 +249,6 @@
             this.label8.Size = new System.Drawing.Size(253, 27);
             this.label8.TabIndex = 54;
             this.label8.Text = "Subscription Plan Details";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(42, 35);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 53;
-            this.pictureBox7.TabStop = false;
             // 
             // lblPlanID
             // 
@@ -352,7 +273,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox5.Location = new System.Drawing.Point(142, 355);
+            this.pictureBox5.Location = new System.Drawing.Point(142, 348);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -362,7 +283,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox4.Location = new System.Drawing.Point(142, 253);
+            this.pictureBox4.Location = new System.Drawing.Point(142, 246);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,7 +293,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(142, 204);
+            this.pictureBox3.Location = new System.Drawing.Point(142, 197);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -382,7 +303,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(142, 153);
+            this.pictureBox2.Location = new System.Drawing.Point(142, 152);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -392,7 +313,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(142, 105);
+            this.pictureBox1.Location = new System.Drawing.Point(142, 104);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -402,7 +323,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox15.Location = new System.Drawing.Point(142, 59);
+            this.pictureBox15.Location = new System.Drawing.Point(142, 58);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(31, 35);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -427,7 +348,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionPlanDetails";
-            this.Size = new System.Drawing.Size(642, 461);
+            this.Size = new System.Drawing.Size(678, 461);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
@@ -438,8 +359,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
