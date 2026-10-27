@@ -63,7 +63,7 @@ namespace DataAccessLayer
         }
         public static bool FindPlanByPlanName(string PlanName, ref int PlanID, ref string Description, ref bool IsAvailable, ref double Price, ref int Duration, ref string Note)
         {
-            string query = $"SELECT Name, Description, IsAvailable, Price,Duration, Note FROM SubscriptionPlans WHERE Name = @PlanName";
+            string query = $"SELECT PlanID, Description, IsAvailable, Price,Duration, Note FROM SubscriptionPlans WHERE Name = @PlanName";
 
             //Handle Exception
             try
@@ -82,12 +82,11 @@ namespace DataAccessLayer
                             if (reader.Read())
                             {
                                 PlanID = (int)reader["PlanID"];
-                                PlanName = (string)reader["Name"];
                                 Duration = (int)reader["Duration"];
                                 Description = (string)reader["Description"];
                                 //edit spelling mistake
                                 IsAvailable = (bool)reader["IsAvailable"];
-                                Price = (double)reader["Price"];
+                                Price = Convert.ToDouble( reader["Price"]);
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
                                 else

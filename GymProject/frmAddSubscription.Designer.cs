@@ -160,7 +160,7 @@
             // 
             this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(28, 55);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(65, 40);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(697, 574);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 0;
