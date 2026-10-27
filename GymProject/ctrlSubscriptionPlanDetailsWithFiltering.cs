@@ -36,9 +36,17 @@ namespace GymMangementSystem
 
         }
 
+        public void LoadAvailabilityPlanNames()
+        {
+            cmFiltering.DisplayMember = "Name";
+            cmFiltering.DataSource = clsSubscriptionPlans.GetAllAvailabilityPlanNames();
+
+        }
+
+
         private void ctrlSubscriptionPlanDetailsWithFiltering_Load(object sender, EventArgs e)
         {
-            cmFiltering.DataSource = clsSubscriptionPlans.GetAllSubscriptionPlans();
+           
         }
     }
 }

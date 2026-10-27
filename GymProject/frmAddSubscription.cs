@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void frmAddSubscription_Load(object sender, EventArgs e)
+        {
+            ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
+        }
     }
 }
