@@ -28,35 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlClassDetails1 = new GymMangementSystem.ctrlClassDetails();
-            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.gbFilter.SuspendLayout();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.ctrlClassDetails1 = new GymMangementSystem.ctrlClassDetails();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ctrlClassDetails1
+            // guna2Panel1
             // 
-            this.ctrlClassDetails1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ctrlClassDetails1.Location = new System.Drawing.Point(0, 75);
-            this.ctrlClassDetails1.Name = "ctrlClassDetails1";
-            this.ctrlClassDetails1.Size = new System.Drawing.Size(682, 395);
-            this.ctrlClassDetails1.TabIndex = 0;
-            // 
-            // gbFilter
-            // 
-            this.gbFilter.Controls.Add(this.guna2ComboBox1);
-            this.gbFilter.Controls.Add(this.label6);
-            this.gbFilter.Controls.Add(this.pictureBox2);
-            this.gbFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFilter.Location = new System.Drawing.Point(3, 3);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(676, 68);
-            this.gbFilter.TabIndex = 1;
-            this.gbFilter.TabStop = false;
-            this.gbFilter.Text = "Filter";
+            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.gbFilter);
+            this.guna2Panel1.Controls.Add(this.ctrlClassDetails1);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 9);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(696, 477);
+            this.guna2Panel1.TabIndex = 0;
             // 
             // guna2ComboBox1
             // 
@@ -95,28 +88,49 @@
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
             // 
+            // gbFilter
+            // 
+            this.gbFilter.Controls.Add(this.guna2ComboBox1);
+            this.gbFilter.Controls.Add(this.label6);
+            this.gbFilter.Controls.Add(this.pictureBox2);
+            this.gbFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFilter.Location = new System.Drawing.Point(20, 2);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(657, 68);
+            this.gbFilter.TabIndex = 3;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "Filter";
+            // 
+            // ctrlClassDetails1
+            // 
+            this.ctrlClassDetails1.Location = new System.Drawing.Point(7, 74);
+            this.ctrlClassDetails1.Name = "ctrlClassDetails1";
+            this.ctrlClassDetails1.Size = new System.Drawing.Size(686, 395);
+            this.ctrlClassDetails1.TabIndex = 2;
+            // 
             // ctrlClassDetailsWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gbFilter);
-            this.Controls.Add(this.ctrlClassDetails1);
+            this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlClassDetailsWithFilter";
-            this.Size = new System.Drawing.Size(682, 470);
+            this.Size = new System.Drawing.Size(703, 489);
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ctrlClassDetails ctrlClassDetails1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.GroupBox gbFilter;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private ctrlClassDetails ctrlClassDetails1;
     }
 }
