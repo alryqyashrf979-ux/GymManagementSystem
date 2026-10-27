@@ -33,6 +33,11 @@ namespace GymMangementSystem
         private enum enGender { Male = 0, Female = 1 };
 
 
+
+        public void ResetData()
+        {
+            _ResetPersonInformation();
+        }
         private void _ResetPersonInformation()
         {
             lnkEditPersonInfo.Enabled = false;  
