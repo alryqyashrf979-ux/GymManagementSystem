@@ -125,7 +125,10 @@ namespace DataBusinessLayer
         {
             return clsClassesData.GetAllClasses();
         }
-
+        public static DataTable GetAllActiveClassesNamesAndIDs()
+        {
+            return clsClassesData.GetAllActiveClassesNamesAndIDs();
+        }
         public static bool DeleteClass(int ClassID)
         {
             return clsClassesData.DeleteClass(ClassID);
