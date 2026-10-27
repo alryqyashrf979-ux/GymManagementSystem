@@ -27,6 +27,7 @@ namespace GymMangementSystem
             _Mode = enMode.Update;
         }
 
+        public event EventHandler<int> DataBack;
 
 
         enum enMode { Addnew = 1, Update = 2 };
@@ -189,6 +190,8 @@ namespace GymMangementSystem
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();
                 uctPersonDetailsWithFilter1.DisableFiltering();
+
+                DataBack?.Invoke(this, _Member.MemberID);
 
                 MessageBox.Show("Member saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

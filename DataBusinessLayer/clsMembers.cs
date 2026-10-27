@@ -150,6 +150,25 @@ namespace DataBusinessLayer
             }
             return null;
         }
+        static public clsMembers FindMemberUsingNationalNu(string NationalNu)
+        {
+            int MemberID = -1; int EmergencyContactID = -1; int LastSubscriptionID=-1; bool IsActive = false; string InActivationReason = "";int PersonID = -1;
+
+            bool IsFound = clsMembersDataAccess.FindMemberByNationalNu(NationalNu,ref PersonID, ref MemberID, ref LastSubscriptionID, ref IsActive, ref EmergencyContactID,ref InActivationReason);
+
+
+            if (IsFound)
+            {
+
+                clsEmergencyContacts ContactInfo = clsEmergencyContacts.Find(EmergencyContactID);
+
+
+
+                return new clsMembers(MemberID, PersonID, LastSubscriptionID, IsActive,ContactInfo.ContactID,InActivationReason,
+                    ContactInfo.EmergencyContactPersonName,ContactInfo.EmergencyContactPhoneNumber,ContactInfo.Relationship);               
+            }
+            return null;
+        }
         static public clsMembers FindMemberUsingMemberID(int memberID)
         {
             int PersonID = -1; int EmergencyContactID = -1; int LastSubscriptionID = -1; bool IsActive = false; string InActivationReason = "";
