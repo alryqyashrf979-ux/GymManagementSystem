@@ -47,7 +47,7 @@ namespace GymMangementSystem
 
             lblPlanID.Text = _PlanInfo.PlanID.ToString();
             lblPlanName.Text=_PlanInfo.PlanName.ToString();
-            lblPrice.Text=_PlanInfo.PlanPrice.ToString();
+            lblPrice.Text=_PlanInfo.PlanPrice.ToString()+"$";
             tgschIsAvailable.Checked = _PlanInfo.IsAvailable;
             txtNotes.Text = _PlanInfo.Note;
             txtDescription.Text = _PlanInfo.PlanDescription;
