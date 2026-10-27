@@ -69,6 +69,12 @@
     <Compile Include="ctrlMemebrDetails.Designer.cs">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlSubscriptionPlanDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSubscriptionPlanDetails.Designer.cs">
+      <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlUserDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemebrDetails.resx">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlSubscriptionPlanDetails.resx">
+      <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlUserDetails.resx">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
