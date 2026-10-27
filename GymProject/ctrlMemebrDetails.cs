@@ -91,12 +91,12 @@ namespace GymMangementSystem
         }
         public void LoadMemberInfoByNationalNu(string NationalNu )
         {
-            _MemberInfo=clsMembers.nati( PersonID );
+            _MemberInfo=clsMembers.FindMemberUsingNationalNu( NationalNu );
 
             if (_MemberInfo == null)
             {
                 _ResetMemberData();
-                MessageBox.Show("No Member with Person ID=" + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Member with Person ID=" + NationalNu.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
