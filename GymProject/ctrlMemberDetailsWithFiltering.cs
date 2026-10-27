@@ -21,7 +21,7 @@ namespace GymMangementSystem
 
         private void ctrlMemberDetailsWithFiltering_Load(object sender, EventArgs e)
         {
-
+            txtFiltering.Focus();
         }
 
         public clsMembers MemberInfo
@@ -92,8 +92,15 @@ namespace GymMangementSystem
 
         private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFiltering.Text = string.Empty;
+            txtFiltering.Clear();
+            txtFiltering.Focus();
             txtFiltering.InputType = (cmFilteringType.Text == "Member ID") ? MyTextBox.TextType.Numeric : MyTextBox.TextType.Text;
+        }
+
+        private void txtFiltering_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                btnFind.PerformClick();
         }
     }
 }

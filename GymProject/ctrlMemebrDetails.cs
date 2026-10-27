@@ -31,6 +31,9 @@ namespace GymMangementSystem
 
         void _ResetMemberData()
         {
+            uctPersonDetails1.ResetData();
+
+
             txtInActivationReason.Text= string.Empty;
             lblEmergencyContactID.Text = "[????]";
             lblEmergencyContactPhone.Text = "[????]";
