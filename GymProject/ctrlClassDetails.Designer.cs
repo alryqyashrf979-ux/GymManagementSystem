@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblClassD = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblClassName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblCoachID = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblStartDay = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEndDay = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNote = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox10 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblEndTIme = new System.Windows.Forms.Label();
@@ -49,15 +46,17 @@
             this.label17 = new System.Windows.Forms.Label();
             this.lblCapacity = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.lblNote = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox10 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblEndDay = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox9 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblStartDay = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblCoachID = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblClassName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblClassD = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox7 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -66,7 +65,8 @@
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox8 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.panel1.SuspendLayout();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox9)).BeginInit();
@@ -80,274 +80,78 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // guna2Panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lblNote);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox11);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox10);
-            this.panel1.Controls.Add(this.lblDescription);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.lblEndTIme);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.lblStartTime);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.lblIsActive);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.lblCapacity);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.lblEndDay);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox9);
-            this.panel1.Controls.Add(this.lblStartDay);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.lblCoachID);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.lblClassName);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblClassD);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox7);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox6);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox5);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox4);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox3);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox2);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox8);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(678, 395);
-            this.panel1.TabIndex = 0;
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.panel4);
+            this.guna2Panel1.Controls.Add(this.panel3);
+            this.guna2Panel1.Controls.Add(this.panel2);
+            this.guna2Panel1.Controls.Add(this.lblNote);
+            this.guna2Panel1.Controls.Add(this.label21);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox11);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox10);
+            this.guna2Panel1.Controls.Add(this.lblDescription);
+            this.guna2Panel1.Controls.Add(this.label11);
+            this.guna2Panel1.Controls.Add(this.lblEndTIme);
+            this.guna2Panel1.Controls.Add(this.label13);
+            this.guna2Panel1.Controls.Add(this.lblStartTime);
+            this.guna2Panel1.Controls.Add(this.label15);
+            this.guna2Panel1.Controls.Add(this.lblIsActive);
+            this.guna2Panel1.Controls.Add(this.label17);
+            this.guna2Panel1.Controls.Add(this.lblCapacity);
+            this.guna2Panel1.Controls.Add(this.label19);
+            this.guna2Panel1.Controls.Add(this.lblEndDay);
+            this.guna2Panel1.Controls.Add(this.label9);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox9);
+            this.guna2Panel1.Controls.Add(this.lblStartDay);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.lblCoachID);
+            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Controls.Add(this.lblClassName);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.lblClassD);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox7);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox6);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox5);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox4);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox3);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox2);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox8);
+            this.guna2Panel1.Controls.Add(this.panel5);
+            this.guna2Panel1.FillColor = System.Drawing.Color.White;
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(672, 389);
+            this.guna2Panel1.TabIndex = 0;
             // 
-            // lblClassD
+            // panel4
             // 
-            this.lblClassD.AutoSize = true;
-            this.lblClassD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassD.ForeColor = System.Drawing.Color.Black;
-            this.lblClassD.Location = new System.Drawing.Point(45, 27);
-            this.lblClassD.Name = "lblClassD";
-            this.lblClassD.Size = new System.Drawing.Size(31, 21);
-            this.lblClassD.TabIndex = 17;
-            this.lblClassD.Text = "???";
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Location = new System.Drawing.Point(318, 336);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 50);
+            this.panel4.TabIndex = 78;
             // 
-            // label3
+            // panel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(47, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 16);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Class ID";
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Location = new System.Drawing.Point(12, 321);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(650, 1);
+            this.panel3.TabIndex = 79;
             // 
-            // lblClassName
+            // panel2
             // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassName.ForeColor = System.Drawing.Color.Black;
-            this.lblClassName.Location = new System.Drawing.Point(44, 89);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(31, 21);
-            this.lblClassName.TabIndex = 19;
-            this.lblClassName.Text = "???";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(46, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Class Name";
-            // 
-            // lblCoachID
-            // 
-            this.lblCoachID.AutoSize = true;
-            this.lblCoachID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoachID.ForeColor = System.Drawing.Color.Black;
-            this.lblCoachID.Location = new System.Drawing.Point(45, 151);
-            this.lblCoachID.Name = "lblCoachID";
-            this.lblCoachID.Size = new System.Drawing.Size(31, 21);
-            this.lblCoachID.TabIndex = 21;
-            this.lblCoachID.Text = "???";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(47, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Coach ID";
-            // 
-            // lblStartDay
-            // 
-            this.lblStartDay.AutoSize = true;
-            this.lblStartDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDay.ForeColor = System.Drawing.Color.Black;
-            this.lblStartDay.Location = new System.Drawing.Point(45, 207);
-            this.lblStartDay.Name = "lblStartDay";
-            this.lblStartDay.Size = new System.Drawing.Size(31, 21);
-            this.lblStartDay.TabIndex = 23;
-            this.lblStartDay.Text = "???";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(47, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 16);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Start Day";
-            // 
-            // lblEndDay
-            // 
-            this.lblEndDay.AutoSize = true;
-            this.lblEndDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDay.ForeColor = System.Drawing.Color.Black;
-            this.lblEndDay.Location = new System.Drawing.Point(46, 273);
-            this.lblEndDay.Name = "lblEndDay";
-            this.lblEndDay.Size = new System.Drawing.Size(31, 21);
-            this.lblEndDay.TabIndex = 26;
-            this.lblEndDay.Text = "???";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(48, 255);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 16);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "End Day";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription.Location = new System.Drawing.Point(52, 358);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(31, 21);
-            this.lblDescription.TabIndex = 36;
-            this.lblDescription.Text = "???";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(54, 340);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 16);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Description";
-            // 
-            // lblEndTIme
-            // 
-            this.lblEndTIme.AutoSize = true;
-            this.lblEndTIme.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndTIme.ForeColor = System.Drawing.Color.Black;
-            this.lblEndTIme.Location = new System.Drawing.Point(364, 262);
-            this.lblEndTIme.Name = "lblEndTIme";
-            this.lblEndTIme.Size = new System.Drawing.Size(31, 21);
-            this.lblEndTIme.TabIndex = 34;
-            this.lblEndTIme.Text = "???";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(366, 244);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 16);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "End Time";
-            // 
-            // lblStartTime
-            // 
-            this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartTime.ForeColor = System.Drawing.Color.Black;
-            this.lblStartTime.Location = new System.Drawing.Point(364, 188);
-            this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(31, 21);
-            this.lblStartTime.TabIndex = 32;
-            this.lblStartTime.Text = "???";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(366, 170);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 16);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Start Time";
-            // 
-            // lblIsActive
-            // 
-            this.lblIsActive.AutoSize = true;
-            this.lblIsActive.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIsActive.ForeColor = System.Drawing.Color.Black;
-            this.lblIsActive.Location = new System.Drawing.Point(363, 116);
-            this.lblIsActive.Name = "lblIsActive";
-            this.lblIsActive.Size = new System.Drawing.Size(31, 21);
-            this.lblIsActive.TabIndex = 30;
-            this.lblIsActive.Text = "???";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(365, 98);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 16);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "Is Active";
-            // 
-            // lblCapacity
-            // 
-            this.lblCapacity.AutoSize = true;
-            this.lblCapacity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacity.ForeColor = System.Drawing.Color.Black;
-            this.lblCapacity.Location = new System.Drawing.Point(364, 44);
-            this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(31, 21);
-            this.lblCapacity.TabIndex = 28;
-            this.lblCapacity.Text = "???";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Gray;
-            this.label19.Location = new System.Drawing.Point(366, 26);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(55, 16);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "Capacity";
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Location = new System.Drawing.Point(318, 9);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 304);
+            this.panel2.TabIndex = 77;
             // 
             // lblNote
             // 
@@ -355,10 +159,10 @@
             this.lblNote.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblNote.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote.ForeColor = System.Drawing.Color.Black;
-            this.lblNote.Location = new System.Drawing.Point(367, 358);
+            this.lblNote.Location = new System.Drawing.Point(371, 356);
             this.lblNote.Name = "lblNote";
             this.lblNote.Size = new System.Drawing.Size(31, 21);
-            this.lblNote.TabIndex = 40;
+            this.lblNote.TabIndex = 76;
             this.lblNote.Text = "???";
             // 
             // label21
@@ -367,103 +171,293 @@
             this.label21.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Gray;
-            this.label21.Location = new System.Drawing.Point(369, 340);
+            this.label21.Location = new System.Drawing.Point(373, 338);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(33, 16);
-            this.label21.TabIndex = 39;
+            this.label21.TabIndex = 75;
             this.label21.Text = "Note";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(314, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 304);
-            this.panel2.TabIndex = 41;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Location = new System.Drawing.Point(11, 324);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(650, 1);
-            this.panel3.TabIndex = 42;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Location = new System.Drawing.Point(314, 330);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 50);
-            this.panel4.TabIndex = 42;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Location = new System.Drawing.Point(6, 330);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(661, 53);
-            this.panel5.TabIndex = 43;
             // 
             // guna2CirclePictureBox11
             // 
             this.guna2CirclePictureBox11.Image = global::GymMangementSystem.Properties.Resources.TimeCircle;
             this.guna2CirclePictureBox11.ImageRotate = 0F;
-            this.guna2CirclePictureBox11.Location = new System.Drawing.Point(321, 231);
+            this.guna2CirclePictureBox11.Location = new System.Drawing.Point(325, 237);
             this.guna2CirclePictureBox11.Name = "guna2CirclePictureBox11";
             this.guna2CirclePictureBox11.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox11.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox11.TabIndex = 38;
+            this.guna2CirclePictureBox11.TabIndex = 74;
             this.guna2CirclePictureBox11.TabStop = false;
             // 
             // guna2CirclePictureBox10
             // 
             this.guna2CirclePictureBox10.Image = global::GymMangementSystem.Properties.Resources.CapacityCircle;
             this.guna2CirclePictureBox10.ImageRotate = 0F;
-            this.guna2CirclePictureBox10.Location = new System.Drawing.Point(320, 13);
+            this.guna2CirclePictureBox10.Location = new System.Drawing.Point(324, 19);
             this.guna2CirclePictureBox10.Name = "guna2CirclePictureBox10";
             this.guna2CirclePictureBox10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox10.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox10.TabIndex = 37;
+            this.guna2CirclePictureBox10.TabIndex = 73;
             this.guna2CirclePictureBox10.TabStop = false;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.Black;
+            this.lblDescription.Location = new System.Drawing.Point(56, 356);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(31, 21);
+            this.lblDescription.TabIndex = 72;
+            this.lblDescription.Text = "???";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(58, 338);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 16);
+            this.label11.TabIndex = 71;
+            this.label11.Text = "Description";
+            // 
+            // lblEndTIme
+            // 
+            this.lblEndTIme.AutoSize = true;
+            this.lblEndTIme.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndTIme.ForeColor = System.Drawing.Color.Black;
+            this.lblEndTIme.Location = new System.Drawing.Point(368, 268);
+            this.lblEndTIme.Name = "lblEndTIme";
+            this.lblEndTIme.Size = new System.Drawing.Size(31, 21);
+            this.lblEndTIme.TabIndex = 70;
+            this.lblEndTIme.Text = "???";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(370, 250);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 16);
+            this.label13.TabIndex = 69;
+            this.label13.Text = "End Time";
+            // 
+            // lblStartTime
+            // 
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTime.ForeColor = System.Drawing.Color.Black;
+            this.lblStartTime.Location = new System.Drawing.Point(368, 194);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(31, 21);
+            this.lblStartTime.TabIndex = 68;
+            this.lblStartTime.Text = "???";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Gray;
+            this.label15.Location = new System.Drawing.Point(370, 176);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(68, 16);
+            this.label15.TabIndex = 67;
+            this.label15.Text = "Start Time";
+            // 
+            // lblIsActive
+            // 
+            this.lblIsActive.AutoSize = true;
+            this.lblIsActive.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsActive.ForeColor = System.Drawing.Color.Black;
+            this.lblIsActive.Location = new System.Drawing.Point(367, 122);
+            this.lblIsActive.Name = "lblIsActive";
+            this.lblIsActive.Size = new System.Drawing.Size(31, 21);
+            this.lblIsActive.TabIndex = 66;
+            this.lblIsActive.Text = "???";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Gray;
+            this.label17.Location = new System.Drawing.Point(369, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(55, 16);
+            this.label17.TabIndex = 65;
+            this.label17.Text = "Is Active";
+            // 
+            // lblCapacity
+            // 
+            this.lblCapacity.AutoSize = true;
+            this.lblCapacity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacity.ForeColor = System.Drawing.Color.Black;
+            this.lblCapacity.Location = new System.Drawing.Point(368, 50);
+            this.lblCapacity.Name = "lblCapacity";
+            this.lblCapacity.Size = new System.Drawing.Size(31, 21);
+            this.lblCapacity.TabIndex = 64;
+            this.lblCapacity.Text = "???";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Gray;
+            this.label19.Location = new System.Drawing.Point(370, 32);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(55, 16);
+            this.label19.TabIndex = 63;
+            this.label19.Text = "Capacity";
+            // 
+            // lblEndDay
+            // 
+            this.lblEndDay.AutoSize = true;
+            this.lblEndDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDay.ForeColor = System.Drawing.Color.Black;
+            this.lblEndDay.Location = new System.Drawing.Point(50, 279);
+            this.lblEndDay.Name = "lblEndDay";
+            this.lblEndDay.Size = new System.Drawing.Size(31, 21);
+            this.lblEndDay.TabIndex = 62;
+            this.lblEndDay.Text = "???";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(52, 261);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 16);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "End Day";
             // 
             // guna2CirclePictureBox9
             // 
             this.guna2CirclePictureBox9.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
             this.guna2CirclePictureBox9.ImageRotate = 0F;
-            this.guna2CirclePictureBox9.Location = new System.Drawing.Point(1, 255);
+            this.guna2CirclePictureBox9.Location = new System.Drawing.Point(5, 261);
             this.guna2CirclePictureBox9.Name = "guna2CirclePictureBox9";
             this.guna2CirclePictureBox9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox9.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox9.TabIndex = 24;
+            this.guna2CirclePictureBox9.TabIndex = 60;
             this.guna2CirclePictureBox9.TabStop = false;
+            // 
+            // lblStartDay
+            // 
+            this.lblStartDay.AutoSize = true;
+            this.lblStartDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDay.ForeColor = System.Drawing.Color.Black;
+            this.lblStartDay.Location = new System.Drawing.Point(49, 213);
+            this.lblStartDay.Name = "lblStartDay";
+            this.lblStartDay.Size = new System.Drawing.Size(31, 21);
+            this.lblStartDay.TabIndex = 59;
+            this.lblStartDay.Text = "???";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(51, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 16);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "Start Day";
+            // 
+            // lblCoachID
+            // 
+            this.lblCoachID.AutoSize = true;
+            this.lblCoachID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoachID.ForeColor = System.Drawing.Color.Black;
+            this.lblCoachID.Location = new System.Drawing.Point(49, 157);
+            this.lblCoachID.Name = "lblCoachID";
+            this.lblCoachID.Size = new System.Drawing.Size(31, 21);
+            this.lblCoachID.TabIndex = 57;
+            this.lblCoachID.Text = "???";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(51, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 16);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Coach ID";
+            // 
+            // lblClassName
+            // 
+            this.lblClassName.AutoSize = true;
+            this.lblClassName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassName.ForeColor = System.Drawing.Color.Black;
+            this.lblClassName.Location = new System.Drawing.Point(48, 95);
+            this.lblClassName.Name = "lblClassName";
+            this.lblClassName.Size = new System.Drawing.Size(31, 21);
+            this.lblClassName.TabIndex = 55;
+            this.lblClassName.Text = "???";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(50, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Class Name";
+            // 
+            // lblClassD
+            // 
+            this.lblClassD.AutoSize = true;
+            this.lblClassD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassD.ForeColor = System.Drawing.Color.Black;
+            this.lblClassD.Location = new System.Drawing.Point(49, 33);
+            this.lblClassD.Name = "lblClassD";
+            this.lblClassD.Size = new System.Drawing.Size(31, 21);
+            this.lblClassD.TabIndex = 53;
+            this.lblClassD.Text = "???";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(51, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Class ID";
             // 
             // guna2CirclePictureBox7
             // 
             this.guna2CirclePictureBox7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2CirclePictureBox7.Image = global::GymMangementSystem.Properties.Resources.DescriptionCircle;
             this.guna2CirclePictureBox7.ImageRotate = 0F;
-            this.guna2CirclePictureBox7.Location = new System.Drawing.Point(9, 333);
+            this.guna2CirclePictureBox7.Location = new System.Drawing.Point(13, 331);
             this.guna2CirclePictureBox7.Name = "guna2CirclePictureBox7";
             this.guna2CirclePictureBox7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox7.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox7.TabIndex = 14;
+            this.guna2CirclePictureBox7.TabIndex = 50;
             this.guna2CirclePictureBox7.TabStop = false;
             // 
             // guna2CirclePictureBox6
             // 
             this.guna2CirclePictureBox6.Image = global::GymMangementSystem.Properties.Resources.IsActiveCircle;
             this.guna2CirclePictureBox6.ImageRotate = 0F;
-            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(320, 88);
+            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(324, 94);
             this.guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
             this.guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox6.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox6.TabIndex = 13;
+            this.guna2CirclePictureBox6.TabIndex = 49;
             this.guna2CirclePictureBox6.TabStop = false;
             // 
             // guna2CirclePictureBox5
@@ -471,84 +465,92 @@
             this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2CirclePictureBox5.Image = global::GymMangementSystem.Properties.Resources.NoteCircle;
             this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(321, 330);
+            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(325, 328);
             this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
             this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox5.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox5.TabIndex = 12;
+            this.guna2CirclePictureBox5.TabIndex = 48;
             this.guna2CirclePictureBox5.TabStop = false;
             // 
             // guna2CirclePictureBox4
             // 
             this.guna2CirclePictureBox4.Image = global::GymMangementSystem.Properties.Resources.ClassID;
             this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(3, -6);
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(9, 4);
             this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
             this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox4.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox4.TabIndex = 11;
+            this.guna2CirclePictureBox4.TabIndex = 47;
             this.guna2CirclePictureBox4.TabStop = false;
             // 
             // guna2CirclePictureBox3
             // 
             this.guna2CirclePictureBox3.Image = global::GymMangementSystem.Properties.Resources.TimeCircle;
             this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(321, 158);
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(325, 164);
             this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
             this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox3.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox3.TabIndex = 10;
+            this.guna2CirclePictureBox3.TabIndex = 46;
             this.guna2CirclePictureBox3.TabStop = false;
             // 
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(0, 189);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(4, 195);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox2.TabIndex = 9;
+            this.guna2CirclePictureBox2.TabIndex = 45;
             this.guna2CirclePictureBox2.TabStop = false;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::GymMangementSystem.Properties.Resources.CapacityCircle;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(-3, 57);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1, 63);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 8;
+            this.guna2CirclePictureBox1.TabIndex = 44;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
             // guna2CirclePictureBox8
             // 
             this.guna2CirclePictureBox8.Image = global::GymMangementSystem.Properties.Resources.PersonCircle;
             this.guna2CirclePictureBox8.ImageRotate = 0F;
-            this.guna2CirclePictureBox8.Location = new System.Drawing.Point(1, 121);
+            this.guna2CirclePictureBox8.Location = new System.Drawing.Point(5, 127);
             this.guna2CirclePictureBox8.Name = "guna2CirclePictureBox8";
             this.guna2CirclePictureBox8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox8.Size = new System.Drawing.Size(42, 49);
             this.guna2CirclePictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox8.TabIndex = 15;
+            this.guna2CirclePictureBox8.TabIndex = 51;
             this.guna2CirclePictureBox8.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Location = new System.Drawing.Point(7, 327);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(661, 53);
+            this.panel5.TabIndex = 80;
             // 
             // ctrlClassDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlClassDetails";
             this.Size = new System.Drawing.Size(678, 395);
             this.Load += new System.EventHandler(this.ctrlClassDetails_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox9)).EndInit();
@@ -566,21 +568,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox8;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox7;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label lblClassD;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblCoachID;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblClassName;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblNote;
+        private System.Windows.Forms.Label label21;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label label11;
@@ -597,12 +591,20 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox9;
         private System.Windows.Forms.Label lblStartDay;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblNote;
-        private System.Windows.Forms.Label label21;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblCoachID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblClassName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblClassD;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox7;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox8;
         private System.Windows.Forms.Panel panel5;
     }
 }

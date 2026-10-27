@@ -21,5 +21,10 @@ namespace GymMangementSystem
         {
             this.ActiveControl = null;
         }
+
+        private void myTextBox1_Enter(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }
