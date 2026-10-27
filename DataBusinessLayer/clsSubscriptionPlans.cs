@@ -61,7 +61,20 @@ namespace DataBusinessLayer
             bool Availiablity = true;
             int Duration = -1;
 
-            if (clsSubscriptionPlansDataAccess.FindPlan(PlanID, ref PlanName, ref PlanDescription, ref Availiablity, ref PlanPrice,ref Duration, ref Note))
+            if (clsSubscriptionPlansDataAccess.FindPlanByPlanID(PlanID, ref PlanName, ref PlanDescription, ref Availiablity, ref PlanPrice,ref Duration, ref Note))
+                return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note,Duration);
+            else return null;
+        }
+        public static clsSubscriptionPlans Find(string PlanName)
+        {
+            int PlanID = -1;
+            string PlanDescription = string.Empty;
+            string Note = string.Empty;
+            double PlanPrice = default(double);
+            bool Availiablity = true;
+            int Duration = -1;
+
+            if (clsSubscriptionPlansDataAccess.FindPlanByPlanName(PlanName, ref PlanID, ref PlanDescription, ref Availiablity, ref PlanPrice,ref Duration, ref Note))
                 return new clsSubscriptionPlans(PlanID, PlanName, PlanDescription, Availiablity, PlanPrice, Note,Duration);
             else return null;
         }

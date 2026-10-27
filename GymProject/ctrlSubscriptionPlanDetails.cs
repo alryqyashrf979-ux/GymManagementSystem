@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,50 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+
+        clsSubscriptionPlans _PlanInfo;
+
+
+       void _ResetData()
+        {
+
+            lblPlanID.Text = "[????]";
+            lblPlanName.Text = "[????]";
+            lblPrice.Text = "[$$$]";
+            tgschIsAvailable.Checked= true;
+            txtDescription.Text = string.Empty;
+            txtNotes.Text = string.Empty;
+
+        }
+
+
+
+
+        public void LoadPlanDataByPlanName(string PlanName)
+        {
+            _PlanInfo = clsSubscriptionPlans.Find(PlanName);
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
