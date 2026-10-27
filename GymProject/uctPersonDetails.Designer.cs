@@ -445,7 +445,7 @@ namespace GymMangementSystem
             this.lnkEditPersonInfo.TabStop = true;
             this.lnkEditPersonInfo.Text = "Edit Person Info";
             this.lnkEditPersonInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked_1);
+            this.lnkEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEditPersonInfo_LinkClicked);
             // 
             // picPersonalImage
             // 
