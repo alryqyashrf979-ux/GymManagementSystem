@@ -265,6 +265,53 @@ Classes.IsActive from Classes ;
 
         }
 
+           public static DataTable GetAllActiveClassesNamesAndIDs()
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string query =
+              @"
+  select ClassID,ClassName from Classes where IsActive=1;
+";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                // Console.WriteLine("Error: " + ex.Message);
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
+
+
         public static DataTable GetAllClassesByStartTime(string StartTime)
         {
 
