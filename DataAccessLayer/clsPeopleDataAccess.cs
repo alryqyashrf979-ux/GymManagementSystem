@@ -76,8 +76,12 @@ ref string Email, ref string NationalID, ref string Address, ref string ImagePat
                     Birthdate = (DateTime)reader["Birthdate"];
                     Gender = Convert.ToByte(reader["Gender"]);
                     CountryID = (int)reader["CountryID"];
-                    Email = (string)reader["Email"];
-                    NationalID = (string)reader["NationalID"];
+
+                    if (reader["Email"] != DBNull.Value)
+                        Email = (string)reader["Email"];
+                    else
+                        Email = "";
+                        NationalID = (string)reader["NationalID"];
                     Address = (string)reader["Address"];
 
                     if (reader["ImagePath"] != DBNull.Value)

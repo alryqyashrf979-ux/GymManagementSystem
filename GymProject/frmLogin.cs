@@ -50,17 +50,25 @@ namespace GymMangementSystem
             if (_User==null)
             {
                 MessageBox.Show("Invalid Username/Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUserName.Focus();
                 return;
             }
 
+
+            if(!_User.IsActive)
+            {
+                txtUserName.Focus();
+                MessageBox.Show("Your Account is not Active , contact Admin", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (chkRememberMe.Checked)
-            {
-                clsGlobal.WriteInWindowsRegister(txtUserName.Text.Trim(), txtPassword.Text.Trim());
-            }
+                clsGlobal.WriteInWindowsRegister(_User.UserName,_User.Password);
             else
-            {
                 clsGlobal.WriteInWindowsRegister("", "");
-            }
+            
+
 
             clsGlobal.CurrentUserInfo = _User;
             Form frm = new frmDashboard(this);

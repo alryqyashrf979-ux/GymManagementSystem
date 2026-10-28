@@ -148,8 +148,12 @@ namespace DataBusinessLayer
 
             bool IsActive = false;
 
+            if (Password.Length < 64)
+                Password = clsHashing.Hashing(Password);
+
+
             bool IsFound = clsUsersData.GetUserInfoByUsernameAndPassword
-                                (UserName,clsHashing.Hashing(Password), ref UserID, ref PersonID, ref IsActive,ref Permission);
+                                (UserName,Password, ref UserID, ref PersonID, ref IsActive,ref Permission);
 
             if (IsFound)
                 //we return new object of that User with the right data
