@@ -191,6 +191,7 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    conn.Open();
                     command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -200,8 +201,8 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                             PlanID = (int)reader["PlanID"];
                             StartDate = (DateTime)reader["StartDate"];
                             ExpirationDate = (DateTime)reader["ExpirationDate"];
-                            Price = (double)reader["Price"];
-                            Status = (byte)reader["Status"];
+                            Price =Convert.ToDouble (reader["Price"]);
+                            Status =Convert.ToByte (reader["Status"]);
                             CreatedByUserID = (int)reader["CreatedByUserID"];
 
 

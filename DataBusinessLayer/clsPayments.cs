@@ -20,9 +20,9 @@ namespace DataBusinessLayer
         public DateTime PaymentDate { set; get; }
         public int CreatedByUserID { set; get; }
 
-        public clsUsers UserInfo;
-        public clsSubscription SubscriptionInfo;
-
+        public clsUsers UserInfo { get; private set; }
+        public clsSubscription SubscriptionInfo { get; private set; }
+        public clsMembers MemberInfo { get; private set; }
         public enum enMode { AddMode=1,UpdateMode=2 }
         private enMode _Mode = enMode.AddMode;
 
@@ -38,6 +38,7 @@ namespace DataBusinessLayer
             this.CreatedByUserID = -1;
             this.UserInfo = new clsUsers(); 
             this.SubscriptionInfo = new clsSubscription();
+            this.MemberInfo = new clsMembers();
             _Mode = enMode.AddMode;
         }
 
@@ -56,7 +57,7 @@ namespace DataBusinessLayer
 
             this.SubscriptionInfo = clsSubscription.FindBySubscriptionID(SubscriptionID);
             this.UserInfo = clsUsers.FindByUserID(CreatedByUserID);
-
+            this.MemberInfo = clsMembers.FindMemberUsingMemberID(SubscriptionInfo.MemberID);
             _Mode = enMode.UpdateMode;
         }
 
@@ -100,7 +101,7 @@ namespace DataBusinessLayer
         {
             return clsPaymentData.GetAllPayments();
         }
-        static public object Find(int PaymentID)
+        static public clsPayments Find(int PaymentID)
         {
             
            int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;

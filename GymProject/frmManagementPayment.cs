@@ -23,5 +23,10 @@ namespace GymMangementSystem
             dgvPayment.DataSource = clsPayments.GetAllPayments();
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
         }
+
+        private void dgvPayment_Click(object sender, EventArgs e)
+        {
+            ctrlPaymentDetails1.LoadPaymentInfo((int)dgvPayment.CurrentRow.Cells[0].Value);
+        }
     }
 }

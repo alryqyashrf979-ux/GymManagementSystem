@@ -81,6 +81,12 @@
     <Compile Include="ctrlMemebrDetails.Designer.cs">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlPaymentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlPaymentDetails.Designer.cs">
+      <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlSubscriptionPlanDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemebrDetails.resx">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlPaymentDetails.resx">
+      <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlSubscriptionPlanDetails.resx">
       <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
@@ -566,6 +575,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ClassRegesterationWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentMethod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remaining.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemainingCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubscriptionName.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
