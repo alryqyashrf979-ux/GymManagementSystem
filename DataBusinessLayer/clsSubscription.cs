@@ -155,7 +155,10 @@ namespace DataBusinessLayer
             return clsSubscriptionsData.GetAllSubscriptions();
         }
 
-
+        public bool HasExistingSubscription(int MemberID)
+        {
+            return clsSubscriptionsData.HasExistingSubscription(MemberID);
+        }
         public static bool TerminateSubscription(int SubscriptionID)
         {
             return clsSubscriptionsData.UpdateSubscriptionStatus(SubscriptionID, (byte)enSubscriptionStatus.Expired);

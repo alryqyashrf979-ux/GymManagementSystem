@@ -90,6 +90,37 @@ namespace DataAccessLayer
 
         }
 
+
+
+        static public bool HasExistingSubscription(int MemberID)
+        {
+            bool IsFound = false;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = @"select found =1 from Subscriptions where MemberID=@MemberID and Subscriptions.Status in (1,4);";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@MemberID", MemberID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                IsFound = reader.HasRows;
+            }
+            catch (Exception ex)
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
+
+
+
         public static bool DeleteSubscription(int SubscriptionID)
         {
             string sql = "DELETE FROM Subscriptions WHERE SubscriptionID = @SubscriptionID";
@@ -260,6 +291,9 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                 return false;
             }
         }
+
+
+
 
 
 

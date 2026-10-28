@@ -38,7 +38,7 @@ namespace GymMangementSystem
             {
                 //if (clsSubscription.d)
                 //{
-                //    MessageBox.Show("Selected Member already has An Active Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    MessageBox.Show("Selected Member already has an Existingw Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //    ctrlMemberDetailsWithFiltering1.Focus();
                 //}
                 //else
