@@ -96,7 +96,10 @@ namespace DataBusinessLayer
             }
             return false;
         }
-
+        static public DataTable GetAllPayments()
+        {
+            return clsPaymentData.GetAllPayments();
+        }
         static public object Find(int PaymentID)
         {
             
