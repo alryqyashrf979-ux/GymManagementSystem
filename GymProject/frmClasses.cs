@@ -122,5 +122,10 @@ namespace GymMangementSystem
             Form frm = new frmAddUpdateClass();
             frm.ShowDialog();
         }
+
+        private void btnAddClass_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
