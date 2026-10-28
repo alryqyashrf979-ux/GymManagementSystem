@@ -21,8 +21,11 @@ namespace GymMangementSystem
 
         clsMembers _MemberInfo; 
 
-
-
+        private int _MemberID=-1;
+        public int MemberID
+        {
+            get => _MemberID;
+        }
         public clsMembers MemberInfo
         {
             get => _MemberInfo;
@@ -31,20 +34,24 @@ namespace GymMangementSystem
 
         void _ResetMemberData()
         {
+            uctPersonDetails1.ResetData();
+
+            _MemberID = -1;
             txtInActivationReason.Text= string.Empty;
-            lblEmergencyContactID.Text = "???";
-            lblEmergencyContactPhone.Text = "???";
-            lblLastSubscriptionID.Text = "???";
-            lblMemberID.Text = "???";
-            lblRelationship.Text = "???";
-            lblEmergencyContactPersonName.Text = "???";
+            lblEmergencyContactID.Text = "[????]";
+            lblEmergencyContactPhone.Text = "[????]";
+            lblLastSubscriptionID.Text = "[????]";
+            lblMemberID.Text = "[????]";
+            lblRelationship.Text = "[????]";
+            lblEmergencyContactPersonName.Text = "[????]";
             tgschIsActive.Checked = true;
         }
 
 
         void _LoadData()
         {
-
+            uctPersonDetails1.LoadPersonInfo(_MemberInfo.PersonID);
+            _MemberID = _MemberInfo.MemberID;
             lblEmergencyContactID.Text = _MemberInfo.ContactID.ToString();
             lblEmergencyContactPersonName.Text = _MemberInfo.EmergencyContactPersonName;
             lblEmergencyContactPhone.Text = _MemberInfo.EmergencyContactPhoneNumber;
@@ -53,6 +60,9 @@ namespace GymMangementSystem
             lblRelationship.Text = _MemberInfo.Relationship;
             tgschIsActive.Checked = _MemberInfo.IsActive;
             txtInActivationReason.Text = _MemberInfo.InActivationReason;
+
+            lnkShowLastSubscriptionInfo.Enabled = (_MemberInfo.LastSubscriptionID != -1);
+
         }
 
 
@@ -70,6 +80,8 @@ namespace GymMangementSystem
             _LoadData();
 
         }
+
+
         public void LoadMemberInfoByPersonID(int PersonID )
         {
             _MemberInfo=clsMembers.FindMemberUsingPersonID( PersonID );
@@ -84,17 +96,27 @@ namespace GymMangementSystem
             _LoadData();
 
         }
+        public void LoadMemberInfoByNationalNu(string NationalNu )
+        {
+            _MemberInfo=clsMembers.FindMemberUsingNationalNu( NationalNu );
 
+            if (_MemberInfo == null)
+            {
+                _ResetMemberData();
+                MessageBox.Show("No Member with National Nu=" + NationalNu.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            _LoadData();
 
-
-
-
+        }
 
 
         private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MessageBox.Show("Not Emplemented...");
         }
+
+      
     }
 }

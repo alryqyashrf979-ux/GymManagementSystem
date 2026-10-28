@@ -1,0 +1,258 @@
+﻿namespace GymMangementSystem
+{
+    partial class frmAddSubscription
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddSubscription));
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTitle2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.tcSubscriptionInfo = new System.Windows.Forms.TabControl();
+            this.tpMemberInfo = new System.Windows.Forms.TabPage();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
+            this.tpSubscriptionInfo = new System.Windows.Forms.TabPage();
+            this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.tcSubscriptionInfo.SuspendLayout();
+            this.tpMemberInfo.SuspendLayout();
+            this.tpSubscriptionInfo.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel4.Controls.Add(this.lblTitle2);
+            this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1219, 46);
+            this.panel4.TabIndex = 14;
+            // 
+            // lblTitle2
+            // 
+            this.lblTitle2.AutoSize = true;
+            this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle2.ForeColor = System.Drawing.Color.White;
+            this.lblTitle2.Location = new System.Drawing.Point(63, 6);
+            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle2.Name = "lblTitle2";
+            this.lblTitle2.Size = new System.Drawing.Size(212, 32);
+            this.lblTitle2.TabIndex = 2;
+            this.lblTitle2.Text = "Add Subscription";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
+            // tcSubscriptionInfo
+            // 
+            this.tcSubscriptionInfo.Controls.Add(this.tpMemberInfo);
+            this.tcSubscriptionInfo.Controls.Add(this.tpSubscriptionInfo);
+            this.tcSubscriptionInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tcSubscriptionInfo.Location = new System.Drawing.Point(0, 46);
+            this.tcSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.tcSubscriptionInfo.Name = "tcSubscriptionInfo";
+            this.tcSubscriptionInfo.SelectedIndex = 0;
+            this.tcSubscriptionInfo.Size = new System.Drawing.Size(1219, 891);
+            this.tcSubscriptionInfo.TabIndex = 15;
+            // 
+            // tpMemberInfo
+            // 
+            this.tpMemberInfo.BackColor = System.Drawing.Color.White;
+            this.tpMemberInfo.Controls.Add(this.btnNext);
+            this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
+            this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.tpMemberInfo.Name = "tpMemberInfo";
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.tpMemberInfo.Size = new System.Drawing.Size(1211, 862);
+            this.tpMemberInfo.TabIndex = 0;
+            this.tpMemberInfo.Text = "Member Info";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BorderRadius = 5;
+            this.btnNext.BorderThickness = 1;
+            this.btnNext.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnNext.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnNext.Location = new System.Drawing.Point(1044, 811);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(159, 44);
+            this.btnNext.TabIndex = 17;
+            this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // ctrlMemberDetailsWithFiltering1
+            // 
+            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(1, 2);
+            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1207, 802);
+            this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
+            // 
+            // tpSubscriptionInfo
+            // 
+            this.tpSubscriptionInfo.BackColor = System.Drawing.Color.White;
+            this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionPlanDetailsWithFiltering1);
+            this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.tpSubscriptionInfo.Name = "tpSubscriptionInfo";
+            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.tpSubscriptionInfo.Size = new System.Drawing.Size(1211, 862);
+            this.tpSubscriptionInfo.TabIndex = 1;
+            this.tpSubscriptionInfo.Text = "Subscription Info";
+            // 
+            // ctrlSubscriptionPlanDetailsWithFiltering1
+            // 
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(65, 40);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(697, 574);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 0;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSave.BorderRadius = 5;
+            this.btnSave.BorderThickness = 1;
+            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.Enabled = false;
+            this.btnSave.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSave.Location = new System.Drawing.Point(1065, 946);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(145, 37);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Save";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(888, 946);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(156, 37);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "Close";
+            // 
+            // frmAddSubscription
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1219, 992);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.tcSubscriptionInfo);
+            this.Controls.Add(this.panel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "frmAddSubscription";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add Subscription";
+            this.Load += new System.EventHandler(this.frmAddSubscription_Load);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.tcSubscriptionInfo.ResumeLayout(false);
+            this.tpMemberInfo.ResumeLayout(false);
+            this.tpSubscriptionInfo.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblTitle2;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.TabControl tcSubscriptionInfo;
+        private System.Windows.Forms.TabPage tpMemberInfo;
+        private System.Windows.Forms.TabPage tpSubscriptionInfo;
+        private ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering1;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
+        private ctrlSubscriptionPlanDetailsWithFiltering ctrlSubscriptionPlanDetailsWithFiltering1;
+    }
+}
