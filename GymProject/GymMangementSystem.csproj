@@ -117,6 +117,12 @@
     <Compile Include="frmAddSubscription.Designer.cs">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManagementPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManagementPayment.Designer.cs">
+      <DependentUpon>frmManagementPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmShowMemberDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddSubscription.resx">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagementPayment.resx">
+      <DependentUpon>frmManagementPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowMemberDetails.resx">
       <DependentUpon>frmShowMemberDetails.cs</DependentUpon>
