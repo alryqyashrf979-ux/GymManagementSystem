@@ -30,40 +30,40 @@
         {
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblExpirationDate = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPlanID = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.dtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCreatedBy = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
+            this.d = new System.Windows.Forms.Label();
+            this.h = new System.Windows.Forms.Label();
+            this.lblSubscriptionID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
+            this.lnkShowMemberInof = new System.Windows.Forms.LinkLabel();
+            this.lnkShowUserInfo = new System.Windows.Forms.LinkLabel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lnkEditPersonInfo = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -100,46 +100,35 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Subscription Information";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Details;
-            this.pictureBox7.Location = new System.Drawing.Point(4, -5);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(47, 51);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 53;
-            this.pictureBox7.TabStop = false;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.linkLabel1);
-            this.guna2Panel1.Controls.Add(this.lnkEditPersonInfo);
+            this.guna2Panel1.Controls.Add(this.lnkShowUserInfo);
+            this.guna2Panel1.Controls.Add(this.lnkShowMemberInof);
             this.guna2Panel1.Controls.Add(this.pictureBox9);
             this.guna2Panel1.Controls.Add(this.pictureBox8);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
-            this.guna2Panel1.Controls.Add(this.label15);
+            this.guna2Panel1.Controls.Add(this.lblExpirationDate);
             this.guna2Panel1.Controls.Add(this.pictureBox2);
             this.guna2Panel1.Controls.Add(this.label16);
             this.guna2Panel1.Controls.Add(this.pictureBox6);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.lblPlanID);
             this.guna2Panel1.Controls.Add(this.label13);
-            this.guna2Panel1.Controls.Add(this.label11);
+            this.guna2Panel1.Controls.Add(this.lblStatus);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label12);
-            this.guna2Panel1.Controls.Add(this.dtDateOfBirth);
+            this.guna2Panel1.Controls.Add(this.dtStartDate);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Controls.Add(this.lblCreatedBy);
             this.guna2Panel1.Controls.Add(this.pictureBox15);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.pictureBox5);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.lblMemberID);
+            this.guna2Panel1.Controls.Add(this.pictureBox5);
+            this.guna2Panel1.Controls.Add(this.d);
+            this.guna2Panel1.Controls.Add(this.h);
+            this.guna2Panel1.Controls.Add(this.lblSubscriptionID);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.label14);
             this.guna2Panel1.Controls.Add(this.label6);
@@ -150,55 +139,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1095, 334);
             this.guna2Panel1.TabIndex = 107;
             // 
-            // pictureBox9
+            // lblExpirationDate
             // 
-            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox9.Location = new System.Drawing.Point(204, 219);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(33, 41);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 177;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
-            this.pictureBox8.Location = new System.Drawing.Point(204, 165);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(33, 41);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 174;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox4.Location = new System.Drawing.Point(732, 67);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 41);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 165;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(250, 229);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 22);
-            this.label15.TabIndex = 176;
-            this.label15.Text = "[yyyy/mm/dd]";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox2.Location = new System.Drawing.Point(202, 114);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 164;
-            this.pictureBox2.TabStop = false;
+            this.lblExpirationDate.AutoSize = true;
+            this.lblExpirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpirationDate.Location = new System.Drawing.Point(250, 229);
+            this.lblExpirationDate.Name = "lblExpirationDate";
+            this.lblExpirationDate.Size = new System.Drawing.Size(126, 22);
+            this.lblExpirationDate.TabIndex = 176;
+            this.lblExpirationDate.Text = "[yyyy/mm/dd]";
             // 
             // label16
             // 
@@ -210,35 +159,15 @@
             this.label16.TabIndex = 175;
             this.label16.Text = "Expiration Date :";
             // 
-            // pictureBox6
+            // lblPlanID
             // 
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Status;
-            this.pictureBox6.Location = new System.Drawing.Point(732, 159);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(42, 45);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 171;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox1.Location = new System.Drawing.Point(202, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 163;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(777, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 22);
-            this.label3.TabIndex = 108;
-            this.label3.Text = "[????]";
+            this.lblPlanID.AutoSize = true;
+            this.lblPlanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlanID.Location = new System.Drawing.Point(777, 76);
+            this.lblPlanID.Name = "lblPlanID";
+            this.lblPlanID.Size = new System.Drawing.Size(66, 22);
+            this.lblPlanID.TabIndex = 108;
+            this.lblPlanID.Text = "[????]";
             // 
             // label13
             // 
@@ -250,15 +179,15 @@
             this.label13.TabIndex = 173;
             this.label13.Text = "Start Date :";
             // 
-            // label11
+            // lblStatus
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(780, 170);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 22);
-            this.label11.TabIndex = 170;
-            this.label11.Text = "[????]";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(780, 170);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(66, 22);
+            this.lblStatus.TabIndex = 170;
+            this.lblStatus.Text = "[????]";
             // 
             // label7
             // 
@@ -280,24 +209,24 @@
             this.label12.TabIndex = 169;
             this.label12.Text = "Status :";
             // 
-            // dtDateOfBirth
+            // dtStartDate
             // 
-            this.dtDateOfBirth.BackColor = System.Drawing.Color.Transparent;
-            this.dtDateOfBirth.BorderColor = System.Drawing.Color.Gainsboro;
-            this.dtDateOfBirth.BorderRadius = 5;
-            this.dtDateOfBirth.BorderThickness = 1;
-            this.dtDateOfBirth.Checked = true;
-            this.dtDateOfBirth.FillColor = System.Drawing.Color.White;
-            this.dtDateOfBirth.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtDateOfBirth.Location = new System.Drawing.Point(254, 283);
-            this.dtDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtDateOfBirth.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            this.dtDateOfBirth.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
-            this.dtDateOfBirth.Name = "dtDateOfBirth";
-            this.dtDateOfBirth.Size = new System.Drawing.Size(219, 32);
-            this.dtDateOfBirth.TabIndex = 172;
-            this.dtDateOfBirth.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtStartDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtStartDate.BorderColor = System.Drawing.Color.Gainsboro;
+            this.dtStartDate.BorderRadius = 5;
+            this.dtStartDate.BorderThickness = 1;
+            this.dtStartDate.Checked = true;
+            this.dtStartDate.FillColor = System.Drawing.Color.White;
+            this.dtStartDate.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtStartDate.Location = new System.Drawing.Point(254, 283);
+            this.dtStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtStartDate.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtStartDate.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.Size = new System.Drawing.Size(219, 32);
+            this.dtStartDate.TabIndex = 172;
+            this.dtStartDate.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -309,75 +238,55 @@
             this.label4.TabIndex = 107;
             this.label4.Text = "Plan ID:";
             // 
-            // label5
+            // lblCreatedBy
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(778, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 22);
-            this.label5.TabIndex = 161;
-            this.label5.Text = "[????]";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox15.Location = new System.Drawing.Point(732, 112);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(35, 41);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 162;
-            this.pictureBox15.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(249, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 22);
-            this.label1.TabIndex = 106;
-            this.label1.Text = "[????]";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
-            this.pictureBox5.Location = new System.Drawing.Point(187, 281);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 35);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 168;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(249, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 22);
-            this.label9.TabIndex = 167;
-            this.label9.Text = "[yyyy/mm/dd]";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 22);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "Member ID:";
+            this.lblCreatedBy.AutoSize = true;
+            this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreatedBy.Location = new System.Drawing.Point(778, 120);
+            this.lblCreatedBy.Name = "lblCreatedBy";
+            this.lblCreatedBy.Size = new System.Drawing.Size(66, 22);
+            this.lblCreatedBy.TabIndex = 161;
+            this.lblCreatedBy.Text = "[????]";
             // 
             // lblMemberID
             // 
             this.lblMemberID.AutoSize = true;
             this.lblMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberID.Location = new System.Drawing.Point(250, 77);
+            this.lblMemberID.Location = new System.Drawing.Point(249, 121);
             this.lblMemberID.Name = "lblMemberID";
             this.lblMemberID.Size = new System.Drawing.Size(66, 22);
-            this.lblMemberID.TabIndex = 104;
+            this.lblMemberID.TabIndex = 106;
             this.lblMemberID.Text = "[????]";
+            // 
+            // d
+            // 
+            this.d.AutoSize = true;
+            this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d.Location = new System.Drawing.Point(249, 175);
+            this.d.Name = "d";
+            this.d.Size = new System.Drawing.Size(126, 22);
+            this.d.TabIndex = 167;
+            this.d.Text = "[yyyy/mm/dd]";
+            // 
+            // h
+            // 
+            this.h.AutoSize = true;
+            this.h.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.h.Location = new System.Drawing.Point(23, 128);
+            this.h.Name = "h";
+            this.h.Size = new System.Drawing.Size(111, 22);
+            this.h.TabIndex = 105;
+            this.h.Text = "Member ID:";
+            // 
+            // lblSubscriptionID
+            // 
+            this.lblSubscriptionID.AutoSize = true;
+            this.lblSubscriptionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubscriptionID.Location = new System.Drawing.Point(250, 77);
+            this.lblSubscriptionID.Name = "lblSubscriptionID";
+            this.lblSubscriptionID.Size = new System.Drawing.Size(66, 22);
+            this.lblSubscriptionID.TabIndex = 104;
+            this.lblSubscriptionID.Text = "[????]";
             // 
             // label10
             // 
@@ -419,6 +328,129 @@
             this.lblPrice.TabIndex = 158;
             this.lblPrice.Text = "[$$$]";
             // 
+            // lnkShowMemberInof
+            // 
+            this.lnkShowMemberInof.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkShowMemberInof.AutoSize = true;
+            this.lnkShowMemberInof.BackColor = System.Drawing.Color.Transparent;
+            this.lnkShowMemberInof.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowMemberInof.Enabled = false;
+            this.lnkShowMemberInof.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkShowMemberInof.Location = new System.Drawing.Point(878, 244);
+            this.lnkShowMemberInof.Name = "lnkShowMemberInof";
+            this.lnkShowMemberInof.Size = new System.Drawing.Size(207, 31);
+            this.lnkShowMemberInof.TabIndex = 178;
+            this.lnkShowMemberInof.TabStop = true;
+            this.lnkShowMemberInof.Text = "Show Member Info";
+            this.lnkShowMemberInof.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            // 
+            // lnkShowUserInfo
+            // 
+            this.lnkShowUserInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkShowUserInfo.AutoSize = true;
+            this.lnkShowUserInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lnkShowUserInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowUserInfo.Enabled = false;
+            this.lnkShowUserInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkShowUserInfo.Location = new System.Drawing.Point(878, 287);
+            this.lnkShowUserInfo.Name = "lnkShowUserInfo";
+            this.lnkShowUserInfo.Size = new System.Drawing.Size(166, 31);
+            this.lnkShowUserInfo.TabIndex = 179;
+            this.lnkShowUserInfo.TabStop = true;
+            this.lnkShowUserInfo.Text = "Show User Info";
+            this.lnkShowUserInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Details;
+            this.pictureBox7.Location = new System.Drawing.Point(4, -5);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(47, 51);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 53;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox9.Location = new System.Drawing.Point(204, 219);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(33, 41);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 177;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
+            this.pictureBox8.Location = new System.Drawing.Point(204, 165);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(33, 41);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 174;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox4.Location = new System.Drawing.Point(732, 67);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 41);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 165;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox2.Location = new System.Drawing.Point(202, 114);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 164;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Status;
+            this.pictureBox6.Location = new System.Drawing.Point(732, 159);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 171;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox1.Location = new System.Drawing.Point(202, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 163;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox15.Location = new System.Drawing.Point(732, 112);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(35, 41);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 162;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
+            this.pictureBox5.Location = new System.Drawing.Point(187, 281);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 35);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 168;
+            this.pictureBox5.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Price_Icon;
@@ -429,38 +461,6 @@
             this.pictureBox3.TabIndex = 159;
             this.pictureBox3.TabStop = false;
             // 
-            // lnkEditPersonInfo
-            // 
-            this.lnkEditPersonInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.lnkEditPersonInfo.AutoSize = true;
-            this.lnkEditPersonInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lnkEditPersonInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkEditPersonInfo.Enabled = false;
-            this.lnkEditPersonInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkEditPersonInfo.Location = new System.Drawing.Point(878, 244);
-            this.lnkEditPersonInfo.Name = "lnkEditPersonInfo";
-            this.lnkEditPersonInfo.Size = new System.Drawing.Size(207, 31);
-            this.lnkEditPersonInfo.TabIndex = 178;
-            this.lnkEditPersonInfo.TabStop = true;
-            this.lnkEditPersonInfo.Text = "Show Member Info";
-            this.lnkEditPersonInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Enabled = false;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(878, 287);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(166, 31);
-            this.linkLabel1.TabIndex = 179;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Show User Info";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            // 
             // ctrlSubscriptionDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -469,12 +469,12 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionDetails";
-            this.Size = new System.Drawing.Size(1103, 351);
+            this.Size = new System.Drawing.Size(1103, 345);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -497,31 +497,31 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblExpirationDate;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPlanID;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtDateOfBirth;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtStartDate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblCreatedBy;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMemberID;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label d;
+        private System.Windows.Forms.Label h;
+        private System.Windows.Forms.Label lblSubscriptionID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.LinkLabel lnkEditPersonInfo;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkShowMemberInof;
+        private System.Windows.Forms.LinkLabel lnkShowUserInfo;
     }
 }
