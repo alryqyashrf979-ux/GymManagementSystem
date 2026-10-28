@@ -19,6 +19,7 @@ namespace DataBusinessLayer
         public enSubscriptionStatus Status { set; get; }
         public DateTime StartDate { set; get; }
         public DateTime ExpirationDate { set; get; }
+        public DateTime RegistrationDate { private set; get; }
         public double Price { set; get; }
         public int createdByUserID { set; get; }
 
@@ -29,14 +30,14 @@ namespace DataBusinessLayer
         public clsSubscriptionPlans PlanInfo { get { return _PlanInfo; } }
 
 
-        public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3, Frozen = 4, Changed = 5 }
+        public enum enSubscriptionStatus { Active = 1, Expired = 2, Canceled = 3, Frozen = 4, Changed = 5,Scheduled=6 }
 
 
         public enum enModeSubscription { AddNew = 1, Update = 2 }
 
         public enModeSubscription Mode = enModeSubscription.AddNew;
 
-        private clsSubscription(int SubscriptionID, int MemberID, int PlanID, enSubscriptionStatus Status, DateTime StartDate, DateTime ExpirationDate, double Price, int createdByUserID)
+        private clsSubscription(int SubscriptionID, int MemberID, int PlanID, enSubscriptionStatus Status, DateTime StartDate, DateTime ExpirationDate,DateTime RegistrationDate, double Price, int createdByUserID)
         {
             this._SubscriptionID = SubscriptionID;
             this.MemberID = MemberID;
@@ -46,6 +47,7 @@ namespace DataBusinessLayer
             this.ExpirationDate = ExpirationDate;
             this.Price = Price;
             this.createdByUserID = createdByUserID;
+            this.RegistrationDate = RegistrationDate;
 
             this._MemberInfo=clsMembers.FindMemberUsingMemberID(MemberID);
             this._PlanInfo=clsSubscriptionPlans.Find(PlanID);
@@ -63,6 +65,7 @@ namespace DataBusinessLayer
             this.ExpirationDate = DateTime.Now.AddMonths(1);
             this.Price = 0.0;
             this.createdByUserID = -1;
+           
 
             Mode = enModeSubscription.AddNew;
         }
@@ -113,10 +116,11 @@ namespace DataBusinessLayer
             DateTime ExpirationDate = DateTime.Now.AddMonths(1);
             double Price = 0.0;
             int createdByUserID = -1;
+            DateTime RegistrationDate = DateTime.Now;
 
-            bool IsFound = clsSubscriptionsData.FindSubscriptionBySubscriptionID(SubscriptionID, ref MemberID, ref PlanID, ref StartDate, ref ExpirationDate, ref Price, ref Status, ref createdByUserID);
+            bool IsFound = clsSubscriptionsData.FindSubscriptionBySubscriptionID(SubscriptionID, ref MemberID, ref PlanID, ref StartDate, ref ExpirationDate,ref RegistrationDate, ref Price, ref Status, ref createdByUserID);
             if (IsFound)
-                return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, Price, createdByUserID);
+                return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, RegistrationDate, Price, createdByUserID);
             else
                 return null;
         }
@@ -129,14 +133,15 @@ namespace DataBusinessLayer
             DateTime StartDate = DateTime.Now;
             DateTime ExpirationDate = DateTime.Now.AddMonths(1);
             double Price = 0.0;
+            DateTime RegistrationDate = DateTime.Now;
             int createdByUserID = -1;
 
 
             bool IsFound = clsSubscriptionsData.FindSubscriptionByMemberID(MemberID, ref
-                SubscriptionID, ref PlanID, ref StartDate, ref ExpirationDate, ref Price, ref Status, ref createdByUserID);
+                SubscriptionID, ref PlanID, ref StartDate, ref ExpirationDate, ref RegistrationDate, ref Price, ref Status, ref createdByUserID);
 
             if (IsFound)
-                return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, Price, createdByUserID);
+                return new clsSubscription(SubscriptionID, MemberID, PlanID, (enSubscriptionStatus)Status, StartDate, ExpirationDate, RegistrationDate, Price, createdByUserID);
             else
                 return null;
         }
