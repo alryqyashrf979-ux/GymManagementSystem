@@ -133,6 +133,7 @@
             this.btnNext.Size = new System.Drawing.Size(159, 44);
             this.btnNext.TabIndex = 17;
             this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // ctrlMemberDetailsWithFiltering1
             // 

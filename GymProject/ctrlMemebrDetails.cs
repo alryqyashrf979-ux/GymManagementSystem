@@ -21,8 +21,11 @@ namespace GymMangementSystem
 
         clsMembers _MemberInfo; 
 
-
-
+        private int _MemberID=-1;
+        public int MemberID
+        {
+            get => _MemberID;
+        }
         public clsMembers MemberInfo
         {
             get => _MemberInfo;
@@ -33,7 +36,7 @@ namespace GymMangementSystem
         {
             uctPersonDetails1.ResetData();
 
-
+            _MemberID = -1;
             txtInActivationReason.Text= string.Empty;
             lblEmergencyContactID.Text = "[????]";
             lblEmergencyContactPhone.Text = "[????]";
@@ -48,6 +51,7 @@ namespace GymMangementSystem
         void _LoadData()
         {
             uctPersonDetails1.LoadPersonInfo(_MemberInfo.PersonID);
+            _MemberID = _MemberInfo.MemberID;
             lblEmergencyContactID.Text = _MemberInfo.ContactID.ToString();
             lblEmergencyContactPersonName.Text = _MemberInfo.EmergencyContactPersonName;
             lblEmergencyContactPhone.Text = _MemberInfo.EmergencyContactPhoneNumber;
