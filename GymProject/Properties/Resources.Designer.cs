@@ -203,6 +203,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Details {
+            get {
+                object obj = ResourceManager.GetObject("Details", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dnabale {
             get {
                 object obj = ResourceManager.GetObject("Dnabale", resourceCulture);
@@ -666,6 +676,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Photo {
             get {
                 object obj = ResourceManager.GetObject("Photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Plan_Name {
+            get {
+                object obj = ResourceManager.GetObject("Plan Name", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
