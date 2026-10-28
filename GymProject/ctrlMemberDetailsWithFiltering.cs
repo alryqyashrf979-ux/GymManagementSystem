@@ -29,6 +29,11 @@ namespace GymMangementSystem
             get => ctrlMemebrDetails1.MemberInfo;
         }
 
+        public int MemberID
+        {
+            get => ctrlMemebrDetails1.MemberID;
+        }
+
         public bool EnableFiltering 
         {
 
