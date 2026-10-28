@@ -19,8 +19,8 @@ namespace DataAccessLayer
         {
 
 
-            string sql = "INSERT INTO Subscriptions (MemberID, PlanID, StartDate, ExpirationDate, Price, Status, CreatedByUserID) " +
-                         "VALUES (@MemberID, @PlanID, @StartDate, @ExpirationDate, @Price, @Status, @CreatedByUserID); " +
+            string sql = "INSERT INTO Subscriptions (MemberID, PlanID, StartDate, ExpirationDate, RegistrationDate,Price, Status, CreatedByUserID) " +
+                         "VALUES (@MemberID, @PlanID, @StartDate, @ExpirationDate,@RegistrationDate, @Price, @Status, @CreatedByUserID); " +
                          "SELECT SCOPE_IDENTITY();"; // This will return the last inserted identity value
 
 
@@ -36,6 +36,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@Price", Price);
                     command.Parameters.AddWithValue("@Status", Status);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                    command.Parameters.AddWithValue("@RegistrationDate", DateTime.Now);
 
 
                     object result = command.ExecuteScalar();
@@ -96,7 +97,7 @@ namespace DataAccessLayer
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = @"select found =1 from Subscriptions where MemberID=@MemberID and Subscriptions.Status in (1,4);";
+            string query = @"select found =1 from Subscriptions where MemberID=@MemberID and Subscriptions.Status in (1,4,6);";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@MemberID", MemberID);
@@ -167,6 +168,7 @@ namespace DataAccessLayer
         WHEN 3 THEN 'Canceled'
         WHEN 4 THEN 'Frozen'
         WHEN 5 THEN 'Changed'
+        WHEN 6 THEN 'Scheduled'
         ELSE 'Unknown'
     END AS 'Status', 
     Users.Username AS 'Created By User ID' 
@@ -211,12 +213,12 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
             }
         }
 
-        public static bool FindSubscriptionBySubscriptionID(int SubscriptionID, ref int MemberID, ref int PlanID, ref DateTime StartDate, ref DateTime ExpirationDate,
+        public static bool FindSubscriptionBySubscriptionID(int SubscriptionID, ref int MemberID, ref int PlanID, ref DateTime StartDate, ref DateTime ExpirationDate,ref DateTime RegistrationDate,
             ref double Price, ref byte Status, ref int CreatedByUserID)
         {
 
 
-            string sql = "SELECT MemberID, PlanID, StartDate, ExpirationDate, Price, Status, CreatedByUserID FROM Subscriptions WHERE SubscriptionID = @SubscriptionID";
+            string sql = "SELECT MemberID, PlanID, StartDate, ExpirationDate,RegistrationDate, Price, Status, CreatedByUserID FROM Subscriptions WHERE SubscriptionID = @SubscriptionID";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -232,8 +234,9 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                             PlanID = (int)reader["PlanID"];
                             StartDate = (DateTime)reader["StartDate"];
                             ExpirationDate = (DateTime)reader["ExpirationDate"];
-                            Price =Convert.ToDouble (reader["Price"]);
-                            Status =Convert.ToByte (reader["Status"]);
+                            RegistrationDate = (DateTime)reader["RegistrationDate"];
+                            Price = Convert.ToDouble(reader["Price"]);
+                            Status = (byte)reader["Status"];
                             CreatedByUserID = (int)reader["CreatedByUserID"];
 
 
@@ -252,11 +255,11 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
             }
         }
 
-        public static bool FindSubscriptionByMemberID(int MemberID, ref int SubscriptionID, ref int PlanID, ref DateTime StartDate, ref DateTime ExpirationDate,
+        public static bool FindSubscriptionByMemberID(int MemberID, ref int SubscriptionID, ref int PlanID, ref DateTime StartDate, ref DateTime ExpirationDate, ref DateTime RegistrationDate,
             ref double Price, ref byte Status, ref int CreatedByUserID)
         {
 
-            string sql = "SELECT SubscriptionID, PlanID, StartDate, ExpirationDate, Price, Status, CreatedByUserID FROM Subscriptions WHERE MemberID = @MemberID";
+            string sql = "SELECT SubscriptionID, PlanID, StartDate, ExpirationDate,RegistrationDate, Price, Status, CreatedByUserID FROM Subscriptions WHERE MemberID = @MemberID";
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -271,7 +274,9 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                             PlanID = (int)reader["PlanID"];
                             StartDate = (DateTime)reader["StartDate"];
                             ExpirationDate = (DateTime)reader["ExpirationDate"];
-                            Price = (double)reader["Price"];
+                            RegistrationDate = (DateTime)reader["RegistrationDate"];
+
+                            Price = Convert.ToDouble(reader["Price"]);
                             Status = (byte)reader["Status"];
                             CreatedByUserID = (int)reader["CreatedByUserID"];
 
