@@ -36,19 +36,19 @@ namespace GymMangementSystem
 
             if (ctrlMemberDetailsWithFiltering1.MemberID != -1)
             {
-                //if (clsSubscription.d)
-                //{
-                //    MessageBox.Show("Selected Member already has an Existingw Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    ctrlMemberDetailsWithFiltering1.Focus();
-                //}
-                //else
-                //{
-                //    btnSave.Enabled = true;
-                //    tpSubscriptionInfo.Enabled = true;
-                //    //lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
-                //    tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
+                if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
+                {
+                    MessageBox.Show("Selected Member already has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ctrlMemberDetailsWithFiltering1.Focus();
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    tpSubscriptionInfo.Enabled = true;
+                    //lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
+                    tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
 
-                //}
+                }
             }
             else
             {

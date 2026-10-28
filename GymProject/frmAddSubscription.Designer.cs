@@ -37,14 +37,33 @@
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.tpSubscriptionInfo = new System.Windows.Forms.TabPage();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblMemberID = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcSubscriptionInfo.SuspendLayout();
             this.tpMemberInfo.SuspendLayout();
             this.tpSubscriptionInfo.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -127,7 +146,7 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1044, 811);
+            this.btnNext.Location = new System.Drawing.Point(1043, 809);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 44);
@@ -147,6 +166,8 @@
             // tpSubscriptionInfo
             // 
             this.tpSubscriptionInfo.BackColor = System.Drawing.Color.White;
+            this.tpSubscriptionInfo.Controls.Add(this.guna2Panel3);
+            this.tpSubscriptionInfo.Controls.Add(this.guna2Panel1);
             this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionPlanDetailsWithFiltering1);
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 25);
@@ -157,11 +178,88 @@
             this.tpSubscriptionInfo.TabIndex = 1;
             this.tpSubscriptionInfo.Text = "Subscription Info";
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderRadius = 5;
+            this.guna2Panel3.Controls.Add(this.label8);
+            this.guna2Panel3.Controls.Add(this.pictureBox7);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(36, 620);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1069, 43);
+            this.guna2Panel3.TabIndex = 105;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(51, 11);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(254, 27);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "Subscription Information";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
+            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(42, 35);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 53;
+            this.pictureBox7.TabStop = false;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
+            this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.pictureBox3);
+            this.guna2Panel1.Controls.Add(this.lblPrice);
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.lblMemberID);
+            this.guna2Panel1.Controls.Add(this.label14);
+            this.guna2Panel1.Location = new System.Drawing.Point(35, 619);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1074, 218);
+            this.guna2Panel1.TabIndex = 105;
+            // 
+            // lblMemberID
+            // 
+            this.lblMemberID.AutoSize = true;
+            this.lblMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberID.Location = new System.Drawing.Point(172, 69);
+            this.lblMemberID.Name = "lblMemberID";
+            this.lblMemberID.Size = new System.Drawing.Size(66, 22);
+            this.lblMemberID.TabIndex = 104;
+            this.lblMemberID.Text = "[????]";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(11, 69);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(152, 22);
+            this.label14.TabIndex = 103;
+            this.label14.Text = "Subscription ID:";
+            // 
             // ctrlSubscriptionPlanDetailsWithFiltering1
             // 
             this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(65, 40);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(65, 37);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(697, 574);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 0;
@@ -217,6 +315,96 @@
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "Close";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(172, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 22);
+            this.label1.TabIndex = 106;
+            this.label1.Text = "[????]";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 22);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "Member ID:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(172, 163);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 22);
+            this.label3.TabIndex = 108;
+            this.label3.Text = "[????]";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 22);
+            this.label4.TabIndex = 107;
+            this.label4.Text = "Plan ID:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Price_Icon;
+            this.pictureBox3.Location = new System.Drawing.Point(449, 157);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 159;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(486, 163);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(55, 22);
+            this.lblPrice.TabIndex = 158;
+            this.lblPrice.Text = "[$$$]";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(375, 161);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 22);
+            this.label6.TabIndex = 157;
+            this.label6.Text = "Price :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(792, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 22);
+            this.label5.TabIndex = 161;
+            this.label5.Text = "[????]";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(636, 163);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 22);
+            this.label7.TabIndex = 160;
+            this.label7.Text = "Created By :";
+            // 
             // frmAddSubscription
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -238,6 +426,12 @@
             this.tcSubscriptionInfo.ResumeLayout(false);
             this.tpMemberInfo.ResumeLayout(false);
             this.tpSubscriptionInfo.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,5 +448,20 @@
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private ctrlSubscriptionPlanDetailsWithFiltering ctrlSubscriptionPlanDetailsWithFiltering1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label lblMemberID;
+        private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label6;
     }
 }

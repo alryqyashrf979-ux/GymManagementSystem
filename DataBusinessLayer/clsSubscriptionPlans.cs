@@ -12,6 +12,7 @@ namespace DataBusinessLayer
     {
 
         //PlanID , PlanName , PlanDescription , Availablity, PlanPrice  , Note .
+
         private int _PlanID = -1;
         public int PlanID { get { return _PlanID; } }
 
