@@ -81,6 +81,12 @@
     <Compile Include="ctrlMemebrDetails.Designer.cs">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlSubscriptionDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSubscriptionDetails.Designer.cs">
+      <DependentUpon>ctrlSubscriptionDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlPaymentDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemebrDetails.resx">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlSubscriptionDetails.resx">
+      <DependentUpon>ctrlSubscriptionDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlPaymentDetails.resx">
       <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
@@ -602,6 +611,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add Subscription Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Subscription Icon2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

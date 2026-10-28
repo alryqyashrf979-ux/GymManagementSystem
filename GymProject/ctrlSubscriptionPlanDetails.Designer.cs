@@ -88,7 +88,7 @@
             this.guna2Panel1.Controls.Add(this.label14);
             this.guna2Panel1.Location = new System.Drawing.Point(4, 6);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(672, 459);
+            this.guna2Panel1.Size = new System.Drawing.Size(827, 341);
             this.guna2Panel1.TabIndex = 0;
             // 
             // tgschIsAvailable
@@ -98,7 +98,7 @@
             this.tgschIsAvailable.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tgschIsAvailable.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.tgschIsAvailable.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.tgschIsAvailable.Location = new System.Drawing.Point(186, 160);
+            this.tgschIsAvailable.Location = new System.Drawing.Point(533, 67);
             this.tgschIsAvailable.Name = "tgschIsAvailable";
             this.tgschIsAvailable.Size = new System.Drawing.Size(54, 20);
             this.tgschIsAvailable.TabIndex = 219;
@@ -122,20 +122,20 @@
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Location = new System.Drawing.Point(179, 355);
+            this.txtDescription.Location = new System.Drawing.Point(198, 244);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "Description";
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(399, 83);
+            this.txtDescription.Size = new System.Drawing.Size(447, 83);
             this.txtDescription.TabIndex = 218;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 361);
+            this.label7.Location = new System.Drawing.Point(31, 250);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 22);
             this.label7.TabIndex = 216;
@@ -156,20 +156,20 @@
             this.txtNotes.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotes.ForeColor = System.Drawing.Color.Black;
             this.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNotes.Location = new System.Drawing.Point(179, 253);
+            this.txtNotes.Location = new System.Drawing.Point(199, 153);
             this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.PlaceholderText = "Notes";
             this.txtNotes.SelectedText = "";
-            this.txtNotes.Size = new System.Drawing.Size(399, 83);
+            this.txtNotes.Size = new System.Drawing.Size(446, 83);
             this.txtNotes.TabIndex = 215;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 258);
+            this.label9.Location = new System.Drawing.Point(26, 153);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 22);
             this.label9.TabIndex = 157;
@@ -179,7 +179,7 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(182, 209);
+            this.lblPrice.Location = new System.Drawing.Point(529, 116);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(55, 22);
             this.lblPrice.TabIndex = 155;
@@ -189,7 +189,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 209);
+            this.label6.Location = new System.Drawing.Point(359, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 22);
             this.label6.TabIndex = 154;
@@ -199,7 +199,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 158);
+            this.label4.Location = new System.Drawing.Point(359, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 151;
@@ -209,7 +209,7 @@
             // 
             this.lblPlanName.AutoSize = true;
             this.lblPlanName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlanName.Location = new System.Drawing.Point(182, 110);
+            this.lblPlanName.Location = new System.Drawing.Point(194, 110);
             this.lblPlanName.Name = "lblPlanName";
             this.lblPlanName.Size = new System.Drawing.Size(66, 22);
             this.lblPlanName.TabIndex = 149;
@@ -219,7 +219,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 110);
+            this.label2.Location = new System.Drawing.Point(24, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 22);
             this.label2.TabIndex = 148;
@@ -235,7 +235,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(3, 2);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(664, 43);
+            this.guna2Panel3.Size = new System.Drawing.Size(819, 43);
             this.guna2Panel3.TabIndex = 105;
             // 
             // label8
@@ -254,7 +254,7 @@
             // 
             this.lblPlanID.AutoSize = true;
             this.lblPlanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlanID.Location = new System.Drawing.Point(183, 64);
+            this.lblPlanID.Location = new System.Drawing.Point(195, 64);
             this.lblPlanID.Name = "lblPlanID";
             this.lblPlanID.Size = new System.Drawing.Size(66, 22);
             this.lblPlanID.TabIndex = 104;
@@ -264,7 +264,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 64);
+            this.label14.Location = new System.Drawing.Point(24, 64);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(81, 22);
             this.label14.TabIndex = 103;
@@ -273,7 +273,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.DescriptionCircle;
-            this.pictureBox5.Location = new System.Drawing.Point(140, 355);
+            this.pictureBox5.Location = new System.Drawing.Point(159, 244);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -283,7 +283,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.NoteCircle;
-            this.pictureBox4.Location = new System.Drawing.Point(139, 251);
+            this.pictureBox4.Location = new System.Drawing.Point(159, 151);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(33, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -293,7 +293,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Price_Icon;
-            this.pictureBox3.Location = new System.Drawing.Point(138, 200);
+            this.pictureBox3.Location = new System.Drawing.Point(485, 107);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 39);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,7 +303,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.IsActiveCircle;
-            this.pictureBox2.Location = new System.Drawing.Point(140, 147);
+            this.pictureBox2.Location = new System.Drawing.Point(487, 54);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -313,7 +313,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Plan_Name;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(152, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,7 +323,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox15.Location = new System.Drawing.Point(144, 53);
+            this.pictureBox15.Location = new System.Drawing.Point(156, 53);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(35, 41);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -348,7 +348,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionPlanDetails";
-            this.Size = new System.Drawing.Size(678, 471);
+            this.Size = new System.Drawing.Size(840, 349);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);

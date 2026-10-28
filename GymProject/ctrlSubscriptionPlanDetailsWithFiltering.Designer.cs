@@ -45,7 +45,7 @@
             this.guna2Panel1.Controls.Add(this.ctrlSubscriptionPlanDetails1);
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(691, 566);
+            this.guna2Panel1.Size = new System.Drawing.Size(844, 450);
             this.guna2Panel1.TabIndex = 0;
             // 
             // gbFiltering
@@ -57,9 +57,9 @@
             this.gbFiltering.CustomBorderColor = System.Drawing.Color.Transparent;
             this.gbFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFiltering.ForeColor = System.Drawing.Color.Black;
-            this.gbFiltering.Location = new System.Drawing.Point(12, 6);
+            this.gbFiltering.Location = new System.Drawing.Point(12, 8);
             this.gbFiltering.Name = "gbFiltering";
-            this.gbFiltering.Size = new System.Drawing.Size(670, 84);
+            this.gbFiltering.Size = new System.Drawing.Size(819, 84);
             this.gbFiltering.TabIndex = 3;
             this.gbFiltering.Text = "Filter";
             // 
@@ -74,7 +74,7 @@
             this.cmFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.cmFiltering.ForeColor = System.Drawing.Color.Black;
             this.cmFiltering.ItemHeight = 30;
-            this.cmFiltering.Location = new System.Drawing.Point(216, 35);
+            this.cmFiltering.Location = new System.Drawing.Point(262, 31);
             this.cmFiltering.Name = "cmFiltering";
             this.cmFiltering.Size = new System.Drawing.Size(355, 36);
             this.cmFiltering.TabIndex = 86;
@@ -84,7 +84,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(77, 41);
+            this.label9.Location = new System.Drawing.Point(123, 37);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 22);
             this.label9.TabIndex = 85;
@@ -93,9 +93,9 @@
             // ctrlSubscriptionPlanDetails1
             // 
             this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(5, 88);
+            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(3, 93);
             this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
-            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(678, 473);
+            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(838, 355);
             this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
             // 
             // ctrlSubscriptionPlanDetailsWithFiltering
@@ -106,7 +106,7 @@
             this.Controls.Add(this.gbFiltering);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionPlanDetailsWithFiltering";
-            this.Size = new System.Drawing.Size(697, 574);
+            this.Size = new System.Drawing.Size(855, 456);
             this.Load += new System.EventHandler(this.ctrlSubscriptionPlanDetailsWithFiltering_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFiltering.ResumeLayout(false);
