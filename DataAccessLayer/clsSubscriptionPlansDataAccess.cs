@@ -40,10 +40,10 @@ namespace DataAccessLayer
                             {
                                 Name = (string)reader["Name"];
                                 Duration = (int)reader["Duration"];
-                                Description = (string)reader["Description"];
+                                Description = reader["Description"]?.ToString();
                                 //edit spelling mistake
                                 IsAvailable = (bool)reader["IsAvailable"];
-                                Price = (double)reader["Price"];
+                                Price =Convert.ToDouble (reader["Price"]);
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
                                 else
