@@ -16,13 +16,65 @@ namespace GymMangementSystem
         public frmAddSubscription()
         {
             InitializeComponent();
+            _Mode = enMode.AddMode;
+        }
+
+
+        int _SubscriptionID;
+
+        public frmAddSubscription(int SubscriptionID)
+        {
+            InitializeComponent();
+            _Mode = enMode.UpdateMode;
+            _SubscriptionID = SubscriptionID;
+
         }
         public enum enMode { AddMode, UpdateMode }
         enMode _Mode = enMode.AddMode;
 
         clsSubscription _Subscription;
+
+
+        void _LoadData()
+        {
+
+
+
+            _Subscription = clsSubscription.FindBySubscriptionID(_SubscriptionID);
+
+
+            if (_Subscription == null)
+            {
+
+                MessageBox.Show($"Subscription with ID {_SubscriptionID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnSave.Enabled = false;
+                return;
+
+            }
+
+            lblTitle2.Text = "Update SubscriPtion";
+            this.Text = "Update Subscription";
+
+            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_Subscription.MemberID);
+            ctrlSubscriptionDetails1.LoadSubscriptionDetails(_SubscriptionID);
+            ctrlSubscriptionPlanDetailsWithFiltering1.LoadPlanDetailsByPlanName(_Subscription.PlanInfo.PlanName);
+
+            ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
+            ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
+
+
+        }
+
         private void frmAddSubscription_Load(object sender, EventArgs e)
         {
+
+            _Subscription = new clsSubscription();
+            this.Text = "Add Subscription";
+            lblTitle2.Text = "Add Subscription";
+
+            if (_Mode == enMode.UpdateMode)
+                _LoadData();
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -70,15 +122,31 @@ namespace GymMangementSystem
 
 
             _Subscription.StartDate = ctrlSubscriptionDetails1.StartDate;
-            _Subscription.PlanID = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanID;
-            _Subscription.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
-            _Subscription.Price = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice;
-            _Subscription.createdByUserID=clsGlobal.CurrentUserInfo.UserID;
+            _Subscription.createdByUserID = clsGlobal.CurrentUserInfo.UserID;
 
+            if (_Mode == enMode.AddMode)
+            {
+                _Subscription.PlanID = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanID;
+                _Subscription.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
+                _Subscription.Price = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice;
+            }
 
             if (_Subscription.Save())
             {
                 _Mode = enMode.UpdateMode;
+
+                lblTitle2.Text = "Update SubscriPtion";
+                this.Text = "Update Subscription";
+
+
+                btnSave.Enabled = (_Subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
+
+
+                if(!btnSave.Enabled)
+                    MessageBox.Show()
+
+                ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
+                ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
 
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);

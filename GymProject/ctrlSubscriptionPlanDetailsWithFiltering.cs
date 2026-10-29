@@ -36,6 +36,12 @@ namespace GymMangementSystem
 
         }
 
+        public void LoadPlanDetailsByPlanName(string PlanName)
+        {
+            cmFiltering.Text=PlanName;
+            ctrlSubscriptionPlanDetails1.LoadPlanDataByPlanName(PlanName);
+        }
+
         public void LoadAvailabilityPlanNames()
         {
             cmFiltering.DisplayMember = "Name";

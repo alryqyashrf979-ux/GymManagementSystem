@@ -54,6 +54,17 @@ namespace GymMangementSystem
             txtFiltering.Focus();
         }
 
+
+       public void LoadMemberInfoByMemberID(int MemberID)
+        {
+            cmFilteringType.Text = "Member ID";
+            txtFiltering.Text = MemberID.ToString();
+            Find();
+
+        }
+
+
+
         void Find()
         {
 
@@ -69,9 +80,7 @@ namespace GymMangementSystem
 
         private void ShowDataBack(object sender ,int MemberID )
         {
-            cmFilteringType.Text = "Member ID";
-            txtFiltering.Text = MemberID.ToString();
-            Find();
+            LoadMemberInfoByMemberID(MemberID);
         }
 
         private void btnFind_Click(object sender, EventArgs e)
