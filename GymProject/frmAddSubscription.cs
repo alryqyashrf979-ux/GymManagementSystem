@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DataBusinessLayer.clsSubscription;
 
 namespace GymMangementSystem
 {
@@ -80,6 +82,7 @@ namespace GymMangementSystem
             lblTitle2.Text = "Add Subscription";
             ctrlSubscriptionDetails1.ResetSubscriptionData();
             tpSubscriptionInfo.Enabled = false;
+        
 
 
 
@@ -101,7 +104,7 @@ namespace GymMangementSystem
                 return;
             }
 
-            if(ctrlMemberDetailsWithFiltering1.MemberID==-1)
+            if (ctrlMemberDetailsWithFiltering1.MemberID == -1)
             {
                 btnNext.Enabled = false;
                 tpSubscriptionInfo.Enabled = false;
@@ -110,9 +113,11 @@ namespace GymMangementSystem
                 MessageBox.Show("Please Select a member .", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else
+                tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
 
 
-          
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -145,10 +150,11 @@ namespace GymMangementSystem
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 btnSave.Enabled = (_Subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
-                MessageBox.Show("The start date cannot be changed because this subscription is already active.", "Subscription connot be Modified", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ctrlSubscriptionDetails1.EnableStartDate =btnSave.Enabled;
 
 
                 if (!btnSave.Enabled)
+                    MessageBox.Show("The start date cannot be changed because this subscription is already active.", "Subscription connot be Modified", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     
 
                 ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
@@ -186,7 +192,6 @@ namespace GymMangementSystem
                     btnSave.Enabled = true;
                     tpSubscriptionInfo.Enabled = true;
                     ctrlSubscriptionDetails1.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
-                    tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
 
                 }
             }
