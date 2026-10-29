@@ -28,15 +28,26 @@ namespace GymMangementSystem
         }
 
 
+
+        public DateTime StartDate
+        {
+            set => dtStartDate.Value = value;
+            get=> dtStartDate.Value;
+        }
+    
+
         public clsSubscription SubscriptionInfo
         {
             get => _SubscriptionInfo;
         }
 
-        public DateTime StartDate
+       
+        public bool EnableStartDate
         {
-            get => dtStartDate.Value;
+            set =>dtStartDate.Enabled = value;  
+            get => dtStartDate.Enabled; 
         }
+
 
         public int MemberID
         {
@@ -83,11 +94,10 @@ namespace GymMangementSystem
             lnkShowMemberInof.Enabled = (_SubscriptionInfo.MemberID != -1);
             lnkShowUserInfo.Enabled= (_SubscriptionInfo.createdByUserID != -1);
 
-            
-
-            dtStartDate.MaxDate = _SubscriptionInfo.StartDate;
             dtStartDate.Value = _SubscriptionInfo.StartDate;
 
+            dtStartDate.MaxDate= _SubscriptionInfo.RegistrationDate.AddDays(14);
+            dtStartDate.MinDate = DateTime.Today;
 
             dtStartDate.Enabled = false;
         }

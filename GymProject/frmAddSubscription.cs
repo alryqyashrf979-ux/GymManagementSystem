@@ -35,6 +35,11 @@ namespace GymMangementSystem
         clsSubscription _Subscription;
 
 
+
+
+       
+
+
         void _LoadData()
         {
 
@@ -64,7 +69,7 @@ namespace GymMangementSystem
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
 
-
+            ctrlSubscriptionDetails1.EnableStartDate = true;
         }
 
         private void frmAddSubscription_Load(object sender, EventArgs e)
@@ -80,6 +85,9 @@ namespace GymMangementSystem
 
             if (_Mode == enMode.UpdateMode)
                 _LoadData();
+            else
+                ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
+
 
         }
 
@@ -177,7 +185,6 @@ namespace GymMangementSystem
                     btnNext.Enabled = true;
                     btnSave.Enabled = true;
                     tpSubscriptionInfo.Enabled = true;
-                    ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
                     ctrlSubscriptionDetails1.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
                     tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
 
