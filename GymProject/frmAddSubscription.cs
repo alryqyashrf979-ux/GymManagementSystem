@@ -93,29 +93,18 @@ namespace GymMangementSystem
                 return;
             }
 
-            if (ctrlMemberDetailsWithFiltering1.MemberID != -1)
+            if(ctrlMemberDetailsWithFiltering1.MemberID==-1)
             {
-                if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
-                {
-                    MessageBox.Show("Selected Member already has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ctrlMemberDetailsWithFiltering1.Focus();
-                }
-                else
-                {
+                btnNext.Enabled = false;
+                tpSubscriptionInfo.Enabled = false;
+                btnSave.Enabled = false;
 
-                    btnSave.Enabled = true;
-                    tpSubscriptionInfo.Enabled = true;
-                    ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
-                    ctrlSubscriptionDetails1.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
-                    tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
+                MessageBox.Show("Please Select a member .", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Select a Member", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ctrlMemberDetailsWithFiltering1.Focus();
-            }
+
+          
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -168,6 +157,33 @@ namespace GymMangementSystem
 
 
 
+
+        }
+
+        private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberDetailsWithFiltering.MemberEventArgs e)
+        {
+
+            if (e.MemberInfo.MemberID != -1)
+            {
+                if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
+                {
+                    MessageBox.Show("Selected Member already has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ctrlMemberDetailsWithFiltering1.Focus();
+                    btnNext.Enabled = false;
+                    btnSave.Enabled = false;
+                }
+                else
+                {
+                    btnNext.Enabled = true;
+                    btnSave.Enabled = true;
+                    tpSubscriptionInfo.Enabled = true;
+                    ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
+                    ctrlSubscriptionDetails1.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
+                    tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
+
+                }
+            }
+           
 
         }
     }

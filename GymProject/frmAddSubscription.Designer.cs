@@ -146,6 +146,7 @@
             this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1207, 802);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberDetailsWithFiltering.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
             // 
             // tpSubscriptionInfo
             // 
