@@ -13,6 +13,7 @@ namespace GymMangementSystem
 {
     public partial class frmManagementPayment : Form
     {
+        static public DataTable _dtAllPayments;
         public frmManagementPayment()
         {
             InitializeComponent();
@@ -20,13 +21,68 @@ namespace GymMangementSystem
 
         private void frmManagementPayment_Load(object sender, EventArgs e)
         {
-            dgvPayment.DataSource = clsPayments.GetAllPayments();
+            _dtAllPayments= clsPayments.GetAllPayments();
+            dgvPayment.DataSource = _dtAllPayments;
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
         }
 
         private void dgvPayment_Click(object sender, EventArgs e)
         {
             ctrlPaymentDetails1.LoadPaymentInfo((int)dgvPayment.CurrentRow.Cells[0].Value);
+        }
+
+        private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbMethod.Visible = (cbValue.Text == "Method");
+            txtSearch.Visible = !(cbValue.Text.Trim() == "None"||cbValue.Text=="Method");
+
+            txtSearch.Clear();
+            txtSearch.Focus();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearch.Text.Trim()))
+            {
+                _dtAllPayments.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
+                return;
+            }
+
+            if (cbValue.Text == "Username")
+                _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text}] like '{txtSearch.Text.Trim()}%'";
+            else if (cbValue.Text == "Subscription ID" || cbValue.Text == "Payment ID")
+                _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text}] = {txtSearch.Text.Trim()}";
+
+            lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbValue.Text == "Subscription ID" || cbValue.Text == "Payment ID")
+                e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbMethod.Text == "All")
+            {
+                _dtAllPayments.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
+                return;
+            }
+
+            if(cbMethod.Text.Trim()== "Cash")
+                _dtAllPayments.DefaultView.RowFilter = $"[Payment {cbValue.Text}] like 'Cash%'";
+            else
+                _dtAllPayments.DefaultView.RowFilter = $"[Payment {cbValue.Text}] like 'Card%'";
+
+            lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
         }
     }
 }
