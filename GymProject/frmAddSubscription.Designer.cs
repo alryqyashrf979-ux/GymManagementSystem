@@ -177,7 +177,7 @@
             // 
             this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(339, 34);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(347, 39);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(855, 456);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 2;
@@ -185,7 +185,7 @@
             // ctrlSubscriptionDetails1
             // 
             this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(85, 500);
+            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(95, 505);
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
             this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1109, 342);
             this.ctrlSubscriptionDetails1.TabIndex = 1;
@@ -215,6 +215,7 @@
             this.btnSave.Size = new System.Drawing.Size(145, 37);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -240,6 +241,7 @@
             this.btnClose.Size = new System.Drawing.Size(156, 37);
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmAddSubscription
             // 
