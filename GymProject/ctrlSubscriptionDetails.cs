@@ -28,6 +28,7 @@ namespace GymMangementSystem
         }
 
 
+        int _MaxAllowDays = 14;
 
         public DateTime StartDate
         {
@@ -96,7 +97,7 @@ namespace GymMangementSystem
 
             dtStartDate.Value = _SubscriptionInfo.StartDate;
 
-            dtStartDate.MaxDate= _SubscriptionInfo.RegistrationDate.AddDays(14);
+            dtStartDate.MaxDate= _SubscriptionInfo.RegistrationDate.AddDays(_MaxAllowDays);
             dtStartDate.MinDate = DateTime.Today;
 
             dtStartDate.Enabled = EnableStartDate;
