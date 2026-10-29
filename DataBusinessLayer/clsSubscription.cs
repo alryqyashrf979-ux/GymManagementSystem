@@ -16,7 +16,8 @@ namespace DataBusinessLayer
         public int SubscriptionID { get { return _SubscriptionID; } }
         public int MemberID { set; get; }
         public int PlanID { set; get; }
-        public enSubscriptionStatus Status { set; get; }
+        public enSubscriptionStatus Status { set; get;}
+        public string StatusString { get => _GetStatus(); }
         public DateTime StartDate { set; get; }
         public DateTime ExpirationDate { set; get; }
         public DateTime RegistrationDate { private set; get; }
@@ -146,7 +147,37 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        private string _GetStatus()
+        {
 
+
+            switch (Status)
+            {
+
+                case clsSubscription.enSubscriptionStatus.Active:
+                    return "Active";
+
+                case clsSubscription.enSubscriptionStatus.Scheduled:
+                    return "Scheduled";
+
+                case clsSubscription.enSubscriptionStatus.Frozen:
+                    return "Frozen";
+
+                case clsSubscription.enSubscriptionStatus.Canceled:
+                    return "Canceled";
+
+                case clsSubscription.enSubscriptionStatus.Changed:
+                    return "Changed";
+
+                case clsSubscription.enSubscriptionStatus.Expired:
+                    return "Expired";
+
+                default:
+                    return "UnKnown";
+            }
+
+
+        }
 
         public static bool DeleteSubscription(int SubscriptionID)
         {
