@@ -14,7 +14,7 @@ namespace DataAccessLayer
         {
             DataTable dt = new DataTable();
             string query = @"select PaymentID as 'Payment ID',SubscriptionID as 'Subscription ID',PaymentAmount as 'Payment Amount',
-                ActualAmount as 'Actual Amount',TotalRemaining as 'Total Remaining',case PaymentMethod when 1 then' Cash' when 2 then 'Card'
+                ActualAmount as 'Actual Amount',TotalRemaining as 'Total Remaining',case PaymentMethod when 1 then 'Cash' when 2 then 'Card'
                  else 'Unknown' end as 'Payment Method' ,PaymentDate as 'Date',Users.Username as 'Username' from Payments inner join 
                  Users on Users.UserID =Payments.CreatedByUserID";
 
