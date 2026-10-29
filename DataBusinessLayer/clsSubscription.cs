@@ -19,7 +19,7 @@ namespace DataBusinessLayer
         public enSubscriptionStatus Status { set; get;}
         public string StatusString { get => _GetStatus(); }
         public DateTime StartDate { set; get; }
-        public DateTime ExpirationDate { set; get; }
+        public DateTime ExpirationDate { private set; get; }
         public DateTime RegistrationDate { private set; get; }
         public double Price { set; get; }
         public int createdByUserID { set; get; }

@@ -19,9 +19,10 @@ namespace GymMangementSystem
         }
         public enum enMode { AddMode, UpdateMode }
         enMode _Mode = enMode.AddMode;
+
+        clsSubscription _Subscription;
         private void frmAddSubscription_Load(object sender, EventArgs e)
         {
-            ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -43,9 +44,11 @@ namespace GymMangementSystem
                 }
                 else
                 {
+
                     btnSave.Enabled = true;
                     tpSubscriptionInfo.Enabled = true;
-                    //lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
+                    ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
+                    ctrlSubscriptionDetails1.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
                     tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
 
                 }
@@ -55,6 +58,41 @@ namespace GymMangementSystem
                 MessageBox.Show("Please Select a Member", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ctrlMemberDetailsWithFiltering1.Focus();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+
+            _Subscription.StartDate = ctrlSubscriptionDetails1.StartDate;
+            _Subscription.PlanID = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanID;
+            _Subscription.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
+            _Subscription.Price = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice;
+            _Subscription.createdByUserID=clsGlobal.CurrentUserInfo.UserID;
+
+
+            if (_Subscription.Save())
+            {
+                _Mode = enMode.UpdateMode;
+
+                ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
+                MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+            }
+            else
+                MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+
+
+
         }
     }
 }
