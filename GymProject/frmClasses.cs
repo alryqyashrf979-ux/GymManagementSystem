@@ -84,30 +84,29 @@ namespace GymMangementSystem
         private void dtpTime_ValueChanged(object sender, EventArgs e)
         {
 
-          
-
-            //DataTable dtFilteringData;
-
-            //DateTime selectedValue = dtpTime.Value;
-            //TimeSpan timeSpan = selectedValue.TimeOfDay;
-            //string timeString = selectedValue.ToString("HH:mm:ss");
 
 
-            //if(cbValue.Text=="Start Time")
-            //   dtFilteringData= clsClasses.GetAllClassesByStartTime(timeString);
-            //else
-            //   dtFilteringData= clsClasses.GetAllClassesByEndTime(timeString);
+            DataTable dtFilteringData;
+
+            DateTime selectedValue = dtpTime.Value;
+            TimeSpan timeSpan = selectedValue.TimeOfDay;
+            string timeString = selectedValue.ToString("HH:mm:ss");
 
 
-            //if (dtFilteringData.Rows.Count > 0)
-            //    dgvShowClasses.DataSource = dtFilteringData;
-            //else
-            //{
-            //    dgvShowClasses.DataSource = null;
-            //    DrawHeaderOfDgvClasses();
+            if (cbValue.Text == "Start Time")
+                dtFilteringData = clsClasses.GetAllClassesByStartTime(timeString);
+            else
+                dtFilteringData = clsClasses.GetAllClassesByEndTime(timeString);
 
 
-            //}
+            if (dtFilteringData.Rows.Count > 0)
+                dgvShowClasses.DataSource = dtFilteringData;
+            else
+            {
+                dgvShowClasses.DataSource = null;
+
+
+            }
 
         }
 
