@@ -62,7 +62,21 @@ namespace GymMangementSystem
             if (_PlanInfo == null)
             {
                 _ResetPlanData();
-                MessageBox.Show("No Member with Person ID=" + PlanName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Plan with Plan Name=" + PlanName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _LoadData();
+
+        }
+        public void LoadPlanDataByPlanID(int PlanID)
+        {
+            _PlanInfo = clsSubscriptionPlans.Find(PlanID);
+
+            if (_PlanInfo == null)
+            {
+                _ResetPlanData();
+                MessageBox.Show("No Plan with Plan ID=" + PlanID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

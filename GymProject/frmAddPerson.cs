@@ -80,7 +80,7 @@ namespace GymMangementSystem
             {
 
                 MessageBox.Show($"Person with ID {_PersonID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnSave.Enabled = true;
+                btnSave.Enabled = false;
                 return;
             }
 
