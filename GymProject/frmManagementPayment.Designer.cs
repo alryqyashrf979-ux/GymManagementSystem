@@ -52,6 +52,7 @@
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbMethod = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -115,9 +116,6 @@
             "None",
             "Payment ID",
             "Subscription ID",
-            "Amount",
-            "Actual Amount",
-            "Total Remaining",
             "Method",
             "Date",
             "Username"});
@@ -334,6 +332,29 @@
             this.cbMethod.Visible = false;
             this.cbMethod.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
+            // dtpTime
+            // 
+            this.dtpTime.BackColor = System.Drawing.Color.Transparent;
+            this.dtpTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dtpTime.BorderRadius = 5;
+            this.dtpTime.BorderThickness = 1;
+            this.dtpTime.Checked = true;
+            this.dtpTime.CustomFormat = "yyyy/MM/dd";
+            this.dtpTime.FillColor = System.Drawing.Color.White;
+            this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
+            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTime.Location = new System.Drawing.Point(335, 183);
+            this.dtpTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.ShowUpDown = true;
+            this.dtpTime.Size = new System.Drawing.Size(156, 29);
+            this.dtpTime.TabIndex = 124;
+            this.dtpTime.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
+            this.dtpTime.Visible = false;
+            this.dtpTime.ValueChanged += new System.EventHandler(this.dtpTime_ValueChanged);
+            // 
             // ctrlPaymentDetails1
             // 
             this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1065, 215);
@@ -347,6 +368,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.dtpTime);
             this.Controls.Add(this.cbMethod);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblRecord);
@@ -393,5 +415,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private ctrlPaymentDetails ctrlPaymentDetails1;
         private Guna.UI2.WinForms.Guna2ComboBox cbMethod;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTime;
     }
 }
