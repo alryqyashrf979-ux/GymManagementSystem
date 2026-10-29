@@ -59,6 +59,8 @@ namespace GymMangementSystem
             ctrlSubscriptionDetails1.LoadSubscriptionDetails(_SubscriptionID);
             ctrlSubscriptionPlanDetailsWithFiltering1.LoadPlanDetailsByPlanName(_Subscription.PlanInfo.PlanName);
 
+            btnSave.Enabled = (_Subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
+
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
 
@@ -71,6 +73,10 @@ namespace GymMangementSystem
             _Subscription = new clsSubscription();
             this.Text = "Add Subscription";
             lblTitle2.Text = "Add Subscription";
+            ctrlSubscriptionDetails1.ResetSubscriptionData();
+            tpSubscriptionInfo.Enabled = false;
+
+
 
             if (_Mode == enMode.UpdateMode)
                 _LoadData();
@@ -122,6 +128,7 @@ namespace GymMangementSystem
 
 
             _Subscription.StartDate = ctrlSubscriptionDetails1.StartDate;
+            _Subscription.ExpirationDate = _Subscription.StartDate.AddDays(ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.Duration);
             _Subscription.createdByUserID = clsGlobal.CurrentUserInfo.UserID;
 
             if (_Mode == enMode.AddMode)
@@ -138,18 +145,19 @@ namespace GymMangementSystem
                 lblTitle2.Text = "Update SubscriPtion";
                 this.Text = "Update Subscription";
 
+                MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 btnSave.Enabled = (_Subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
+                MessageBox.Show("The start date cannot be changed because this subscription is already active.", "Subscription connot be Modified", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
-                if(!btnSave.Enabled)
-                    MessageBox.Show()
+                if (!btnSave.Enabled)
+                    
 
                 ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
                 ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
 
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
-                MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 
             }

@@ -471,6 +471,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionDetails";
             this.Size = new System.Drawing.Size(1103, 345);
+            this.Load += new System.EventHandler(this.ctrlSubscriptionDetails_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

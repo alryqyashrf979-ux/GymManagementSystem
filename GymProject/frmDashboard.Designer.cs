@@ -331,7 +331,8 @@
             this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(202, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(826, 64);
             this.guna2Panel3.TabIndex = 1;
@@ -402,6 +403,7 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 609);
             this.panel1.TabIndex = 9;

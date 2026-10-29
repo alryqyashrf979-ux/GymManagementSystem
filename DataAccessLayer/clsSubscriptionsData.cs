@@ -29,6 +29,7 @@ namespace DataAccessLayer
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    conn.Open();
                     command.Parameters.AddWithValue("@MemberID", MemberID);
                     command.Parameters.AddWithValue("@PlanID", PlanID);
                     command.Parameters.AddWithValue("@StartDate", StartDate);
@@ -69,18 +70,22 @@ namespace DataAccessLayer
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-                using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
-                    command.Parameters.AddWithValue("@MemberID", MemberID);
-                    command.Parameters.AddWithValue("@PlanID", PlanID);
-                    command.Parameters.AddWithValue("@StartDate", StartDate);
-                    command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
-                    command.Parameters.AddWithValue("@Price", Price);
-                    command.Parameters.AddWithValue("@Status", Status);
-                    command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                    conn.Open();
 
-                    return command.ExecuteNonQuery() > 0;
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+                        command.Parameters.AddWithValue("@MemberID", MemberID);
+                        command.Parameters.AddWithValue("@PlanID", PlanID);
+                        command.Parameters.AddWithValue("@StartDate", StartDate);
+                        command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
+                        command.Parameters.AddWithValue("@Price", Price);
+                        command.Parameters.AddWithValue("@Status", Status);
+                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
+                        return command.ExecuteNonQuery() > 0;
+                    }
                 }
             }
             catch (Exception ex)
@@ -128,10 +133,14 @@ namespace DataAccessLayer
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-                using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
-                    return command.ExecuteNonQuery() > 0;
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+                        return command.ExecuteNonQuery() > 0;
+                    }
                 }
             }
             catch (Exception ex)
@@ -188,23 +197,27 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
             try
             {
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
-                using (SqlCommand command = new SqlCommand(sql, conn))
-                using (SqlDataReader Reader = command.ExecuteReader())
                 {
+                    conn.Open();
 
-
-                    if (Reader.HasRows)
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    using (SqlDataReader Reader = command.ExecuteReader())
                     {
-                        dt.Load(Reader);
-                        return dt;
+
+
+                        if (Reader.HasRows)
+                        {
+                            dt.Load(Reader);
+                            return dt;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+
+
+
                     }
-                    else
-                    {
-                        return null;
-                    }
-
-
-
                 }
             }
             catch (Exception ex)
@@ -265,6 +278,9 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    conn.Open();
+
+
                     command.Parameters.AddWithValue("@MemberID", MemberID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
