@@ -99,7 +99,7 @@ namespace GymMangementSystem
             dtStartDate.MaxDate= _SubscriptionInfo.RegistrationDate.AddDays(14);
             dtStartDate.MinDate = DateTime.Today;
 
-            dtStartDate.Enabled = false;
+            dtStartDate.Enabled = EnableStartDate;
         }
 
 

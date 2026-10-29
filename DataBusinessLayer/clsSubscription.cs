@@ -74,12 +74,16 @@ namespace DataBusinessLayer
 
         private bool _AddSubscription()
         {
+            this.Status = (StartDate.Date == DateTime.Today.Date) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
+
             _SubscriptionID = clsSubscriptionsData.AddNewSubscription(this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
             return _SubscriptionID != -1;
         }
 
         private bool _UpdateSubscription()
         {
+            this.Status = (StartDate.Date ==RegistrationDate.Date) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
+
             return clsSubscriptionsData.UpdateSubscription(this.SubscriptionID, this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
         }
 
@@ -87,6 +91,8 @@ namespace DataBusinessLayer
 
         public bool Save()
         {
+
+
             switch (Mode)
             {
                 case enModeSubscription.AddNew:
