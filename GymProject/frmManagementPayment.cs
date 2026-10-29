@@ -35,8 +35,8 @@ namespace GymMangementSystem
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbMethod.Visible = (cbValue.Text == "Method");
-            txtSearch.Visible = !(cbValue.Text.Trim() == "None"||cbValue.Text=="Method");
-
+            txtSearch.Visible = !(cbValue.Text.Trim() == "None"||cbValue.Text=="Method"|| cbValue.Text == "Date");
+            dtpTime.Visible = (cbValue.Text == "Date");
             txtSearch.Clear();
             txtSearch.Focus();
         }
@@ -83,6 +83,19 @@ namespace GymMangementSystem
 
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
 
+        }
+
+        private void dtpTime_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedValue = dtpTime.Value;
+            TimeSpan timeSpan = selectedValue.TimeOfDay;
+            string timeString = selectedValue.ToString("yyyy/MM/dd");
+
+
+
+            _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text.Trim()}] = '{timeString}' ";
+
+            lblRecord.Text = dgvPayment.Rows.Count.ToString();
         }
     }
 }
