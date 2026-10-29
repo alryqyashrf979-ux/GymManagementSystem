@@ -86,27 +86,18 @@ namespace GymMangementSystem
 
 
 
-            DataTable dtFilteringData;
+        
 
             DateTime selectedValue = dtpTime.Value;
             TimeSpan timeSpan = selectedValue.TimeOfDay;
-            string timeString = selectedValue.ToString("HH:mm:ss");
+            string timeString = selectedValue.ToString("HH:mm:ss tt");
 
 
-            if (cbValue.Text == "Start Time")
-                dtFilteringData = clsClasses.GetAllClassesByStartTime(timeString);
-            else
-                dtFilteringData = clsClasses.GetAllClassesByEndTime(timeString);
+          
+                _dtClasses.DefaultView.RowFilter = $"[{cbValue.Text.Trim()}] = '{timeString}' ";
 
+            lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
 
-            if (dtFilteringData.Rows.Count > 0)
-                dgvShowClasses.DataSource = dtFilteringData;
-            else
-            {
-                dgvShowClasses.DataSource = null;
-
-
-            }
 
         }
 
