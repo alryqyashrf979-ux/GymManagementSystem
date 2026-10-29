@@ -24,6 +24,19 @@ namespace GymMangementSystem
             txtFiltering.Focus();
         }
 
+
+
+        public event EventHandler<clsMembers>SelectedMember;
+
+
+        protected virtual void OnMemberSelected(object sender ,clsMembers Member)
+        {
+
+            SelectedMember?.Invoke(sender, Member);
+
+        }
+
+
         public clsMembers MemberInfo
         {
             get => ctrlMemebrDetails1.MemberInfo;
@@ -55,7 +68,7 @@ namespace GymMangementSystem
         }
 
 
-       public void LoadMemberInfoByMemberID(int MemberID)
+        public void LoadMemberInfoByMemberID(int MemberID)
         {
             cmFilteringType.Text = "Member ID";
             txtFiltering.Text = MemberID.ToString();
@@ -76,6 +89,9 @@ namespace GymMangementSystem
             {
                 ctrlMemebrDetails1.LoadMemberInfoByNationalNu(txtFiltering.Text);
             }
+
+            if(ctrlMemebrDetails1.MemberInfo!=null)
+            OnMemberSelected(this, ctrlMemebrDetails1.MemberInfo);
         }
 
         private void ShowDataBack(object sender ,int MemberID )

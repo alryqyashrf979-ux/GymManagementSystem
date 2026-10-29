@@ -47,7 +47,7 @@ namespace GymMangementSystem
         }
 
 
-        void _ResetSubscriptionData()
+        public void ResetSubscriptionData()
         {
 
 
@@ -64,6 +64,7 @@ namespace GymMangementSystem
 
             dtStartDate.MaxDate = DateTime.Today.AddDays(14);
             dtStartDate.MinDate = DateTime.Now;
+            dtStartDate.Value = DateTime.Now;
 
 
         }
@@ -100,7 +101,7 @@ namespace GymMangementSystem
 
             if (_SubscriptionInfo == null)
             {
-                _ResetSubscriptionData();
+                ResetSubscriptionData();
                 MessageBox.Show("No Subscription with Subscription ID=" + SubscriptionID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -108,8 +109,8 @@ namespace GymMangementSystem
             _LoadData();
         }
 
-
-
-
+        private void ctrlSubscriptionDetails_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
