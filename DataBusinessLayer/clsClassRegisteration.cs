@@ -70,7 +70,7 @@ namespace DataBusinessLayer
         }
         private bool _Add()
         {
-            this._ClassRegisterationID = clsClassregisterationsDataAccess.Add(this.MemberID, this.ClassID, this.RegisteredByUserID, this.RegisterationDate);
+            this._ClassRegisterationID = clsClassregisterationsDataAccess.Add(this.MemberID, this.ClassID, this.RegisteredByUserID,this.RegisterationDate);
             return (this._ClassRegisterationID != -1);
         }
 

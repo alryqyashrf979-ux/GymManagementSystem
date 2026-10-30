@@ -17,6 +17,10 @@ namespace GymMangementSystem
         enum enMode { AddMode,UpdateMode}
         private enMode _Mode = enMode.AddMode;
         private int _ClassRegisterationID = -1;
+
+        int _MemberID = -1;
+
+
         public frmAddUpdateClassRegistration()
         {
             InitializeComponent();
@@ -32,19 +36,19 @@ namespace GymMangementSystem
         {
             ctrlClassDetailsWithFilter1.FillCbClasses();
             // because it is not connect with frmLogin so CurrentUserInfo = null.
-            lblRegisteredBy.Text = "1";
             //  lblRegisteredBy.Text = clsGlobal.CurrentUserInfo.UserName;
 
 
 
             if (_Mode == enMode.AddMode)
             {
-                lblTitle2.Text = "Add Class Registeration";
+                lblTitle.Text = "Add Class Registeration";
                 _ClassRegisteration = new clsClassRegisteration();
             }
 
-            lblClassRegistrationID.Text = "???";
-            lblMemberID.Text = "???";
+            lblRegisteredBy.Text = "[????]";
+            lblClassRegistrationID.Text = "[????]";
+            lblMemberID.Text = "[????]";
             lblRegistrationDate.Text = DateTime.Now.ToString();
            
         }
@@ -60,7 +64,7 @@ namespace GymMangementSystem
 
             lblClassRegistrationID.Text = _ClassRegisteration.ClassRegisterationID.ToString();
             lblMemberID.Text = _ClassRegisteration.MemberID.ToString();
-            lblRegisteredBy.Text = _ClassRegisteration.RegisteredByUserID.ToString();
+            lblRegisteredBy.Text = _ClassRegisteration.UserInfo.UserName;
             lblRegistrationDate.Text =_ClassRegisteration.RegisterationDate.ToString();
           //  ctrlClassDetailsWithFilter1.EnableFilter = false;
             ctrlClassDetailsWithFilter1.SetClassIDInCbClasses = _ClassRegisteration.ClassID;
@@ -78,24 +82,27 @@ namespace GymMangementSystem
             this.Close();
         }
 
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            lblMemberID.Text = "2";//for demo because member screen is not ready.
-            if (lblMemberID.Text == "???")
+            lblMemberID.Text = "2";//for ]demo because member screen is not ready.
+            if (_MemberID==-1)
             {
                 MessageBox.Show("Error : You have to select a member first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            _ClassRegisteration.RegisteredByUserID=Convert.ToInt32(lblRegisteredBy.Text);
-            _ClassRegisteration.RegisterationDate =Convert.ToDateTime(lblRegistrationDate.Text);
-            _ClassRegisteration.MemberID=Convert.ToInt32(lblMemberID.Text);
+            _ClassRegisteration.MemberID = _MemberID;
+            _ClassRegisteration.RegisteredByUserID = clsGlobal.CurrentUserInfo.UserID;
+            _ClassRegisteration.RegisterationDate = DateTime.Now;
             _ClassRegisteration.ClassID = ctrlClassDetailsWithFilter1.ClassID;
 
             if (_ClassRegisteration.Save())
             {
-                lblTitle2.Text = "Update Class Registeration";
+                lblTitle.Text = "Update Class Registeration";
                 lblClassRegistrationID.Text = _ClassRegisteration.ClassRegisterationID.ToString();
+                lblRegisteredBy.Text = clsGlobal.CurrentUserInfo.UserName;
                 _Mode = enMode.UpdateMode;
 
                 MessageBox.Show("Recored saved successfully .", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
