@@ -89,7 +89,6 @@ namespace GymMangementSystem
         
 
             DateTime selectedValue = dtpTime.Value;
-            TimeSpan timeSpan = selectedValue.TimeOfDay;
             string timeString = selectedValue.ToString("HH:mm:ss tt");
 
 

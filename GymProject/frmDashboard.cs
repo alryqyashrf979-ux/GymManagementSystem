@@ -54,7 +54,7 @@ namespace GymMangementSystem
 
         private void btnMangePayment_Click(object sender, EventArgs e)
         {
-            Form frm = new frmManagementPayment();
+            Form frm = new frmManagePayments();
             frm.ShowDialog();
         }
     }

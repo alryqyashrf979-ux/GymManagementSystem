@@ -220,7 +220,7 @@ Classes.IsActive from Classes ;
               @"
        SELECT Classes.ClassID AS 'Class ID' 
      , Classes.className AS 'Class Name' 
-     , People.FirstName+' '+People.SecondName+' '+ISNULL(People.LastName,'') AS 'Coach Name' 
+     , People.FirstName+' '+People.SecondName+' '+People.LastName AS 'Coach Name' 
      ,Replace(Replace(Format(cast( Classes.StartTime AS datetime ),'hh:mm:ss tt'),'AM','ص'),'PM','م') as 'Start Time'
      ,Replace(Replace(Format(cast( Classes.EndTime AS datetime) ,'hh:mm:ss tt'),'AM','ص'),'PM','م') as 'End Time' 
      , Classes.Maximum_Capacity as 'Capacity'
