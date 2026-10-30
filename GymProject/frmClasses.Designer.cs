@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvShowClasses = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
@@ -48,13 +55,6 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddClass = new Guna.UI2.WinForms.Guna2Button();
             this.dtpTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowClasses)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -66,20 +66,21 @@
             this.dgvShowClasses.AllowUserToAddRows = false;
             this.dgvShowClasses.AllowUserToDeleteRows = false;
             this.dgvShowClasses.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgvShowClasses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvShowClasses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvShowClasses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvShowClasses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvShowClasses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvShowClasses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowClasses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowClasses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvShowClasses.ColumnHeadersHeight = 35;
             this.dgvShowClasses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvShowClasses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -90,39 +91,39 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvShowClasses.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShowClasses.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvShowClasses.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvShowClasses.Location = new System.Drawing.Point(3, 250);
-            this.dgvShowClasses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvShowClasses.Location = new System.Drawing.Point(5, 307);
+            this.dgvShowClasses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvShowClasses.Name = "dgvShowClasses";
             this.dgvShowClasses.ReadOnly = true;
             this.dgvShowClasses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowClasses.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowClasses.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvShowClasses.RowHeadersVisible = false;
             this.dgvShowClasses.RowHeadersWidth = 65;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvShowClasses.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvShowClasses.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvShowClasses.RowTemplate.Height = 35;
             this.dgvShowClasses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowClasses.Size = new System.Drawing.Size(1370, 461);
+            this.dgvShowClasses.Size = new System.Drawing.Size(1371, 541);
             this.dgvShowClasses.TabIndex = 87;
             this.dgvShowClasses.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvShowClasses.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -134,219 +135,6 @@
             this.dgvShowClasses.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvShowClasses.ThemeStyle.RowsStyle.Height = 35;
             this.dgvShowClasses.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.lblTitle2);
-            this.panel4.Controls.Add(this.pictureBox10);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1370, 37);
-            this.panel4.TabIndex = 88;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(44, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 34);
-            this.panel1.TabIndex = 109;
-            // 
-            // lblTitle2
-            // 
-            this.lblTitle2.AutoSize = true;
-            this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(46, 5);
-            this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(80, 26);
-            this.lblTitle2.TabIndex = 2;
-            this.lblTitle2.Text = "Classes";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Classes;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(8, 739);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
-            this.guna2Separator1.TabIndex = 105;
-            // 
-            // lblRecord
-            // 
-            this.lblRecord.AutoSize = true;
-            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(111, 719);
-            this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(38, 20);
-            this.lblRecord.TabIndex = 104;
-            this.lblRecord.Text = "N/A";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 718);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
-            this.label2.TabIndex = 103;
-            this.label2.Text = "#Records:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Classes;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1370, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 106;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cbIsActive
-            // 
-            this.cbIsActive.BackColor = System.Drawing.Color.Transparent;
-            this.cbIsActive.BorderRadius = 5;
-            this.cbIsActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbIsActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbIsActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbIsActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbIsActive.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.cbIsActive.ForeColor = System.Drawing.Color.Black;
-            this.cbIsActive.ItemHeight = 30;
-            this.cbIsActive.Items.AddRange(new object[] {
-            "All",
-            "Yes",
-            "No"});
-            this.cbIsActive.Location = new System.Drawing.Point(238, 208);
-            this.cbIsActive.Name = "cbIsActive";
-            this.cbIsActive.Size = new System.Drawing.Size(131, 36);
-            this.cbIsActive.StartIndex = 0;
-            this.cbIsActive.TabIndex = 112;
-            this.cbIsActive.Visible = false;
-            this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
-            // 
-            // cbValue
-            // 
-            this.cbValue.BackColor = System.Drawing.Color.Transparent;
-            this.cbValue.BorderRadius = 5;
-            this.cbValue.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbValue.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbValue.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.cbValue.ForeColor = System.Drawing.Color.Black;
-            this.cbValue.ItemHeight = 30;
-            this.cbValue.Items.AddRange(new object[] {
-            "None",
-            "Class ID",
-            "Class Name",
-            "Coach Name",
-            "Start Time",
-            "End Time",
-            "Capacity",
-            "Is Active"});
-            this.cbValue.Location = new System.Drawing.Point(80, 209);
-            this.cbValue.Name = "cbValue";
-            this.cbValue.Size = new System.Drawing.Size(145, 36);
-            this.cbValue.StartIndex = 0;
-            this.cbValue.TabIndex = 111;
-            this.cbValue.SelectedIndexChanged += new System.EventHandler(this.cbValue_SelectedIndexChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 213);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 18);
-            this.label9.TabIndex = 110;
-            this.label9.Text = "Filter By:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderRadius = 5;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(235, 209);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search...";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(159, 31);
-            this.txtSearch.TabIndex = 109;
-            this.txtSearch.Visible = false;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
-            // 
-            // btnAddClass
-            // 
-            this.btnAddClass.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddClass.BorderRadius = 5;
-            this.btnAddClass.BorderThickness = 1;
-            this.btnAddClass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnAddClass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddClass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddClass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddClass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddClass.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddClass.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClass.ForeColor = System.Drawing.Color.Black;
-            this.btnAddClass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnAddClass.Image = global::GymMangementSystem.Properties.Resources.AddClasses;
-            this.btnAddClass.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnAddClass.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnAddClass.Location = new System.Drawing.Point(1295, 211);
-            this.btnAddClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAddClass.Name = "btnAddClass";
-            this.btnAddClass.Size = new System.Drawing.Size(70, 34);
-            this.btnAddClass.TabIndex = 114;
-            this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
-            // 
-            // dtpTime
-            // 
-            this.dtpTime.BackColor = System.Drawing.Color.Transparent;
-            this.dtpTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.dtpTime.BorderRadius = 5;
-            this.dtpTime.BorderThickness = 1;
-            this.dtpTime.Checked = true;
-            this.dtpTime.CustomFormat = "hh:mm:ss tt";
-            this.dtpTime.FillColor = System.Drawing.Color.White;
-            this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
-            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpTime.Location = new System.Drawing.Point(238, 209);
-            this.dtpTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTime.Name = "dtpTime";
-            this.dtpTime.ShowUpDown = true;
-            this.dtpTime.Size = new System.Drawing.Size(156, 29);
-            this.dtpTime.TabIndex = 116;
-            this.dtpTime.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
-            this.dtpTime.Visible = false;
-            this.dtpTime.ValueChanged += new System.EventHandler(this.dtpTime_ValueChanged);
             // 
             // column1
             // 
@@ -424,12 +212,237 @@
             this.Column7.ReadOnly = true;
             this.Column7.Width = 120;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.lblTitle2);
+            this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1376, 46);
+            this.panel4.TabIndex = 88;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(59, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 42);
+            this.panel1.TabIndex = 109;
+            // 
+            // lblTitle2
+            // 
+            this.lblTitle2.AutoSize = true;
+            this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle2.ForeColor = System.Drawing.Color.White;
+            this.lblTitle2.Location = new System.Drawing.Point(61, 6);
+            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle2.Name = "lblTitle2";
+            this.lblTitle2.Size = new System.Drawing.Size(97, 32);
+            this.lblTitle2.TabIndex = 2;
+            this.lblTitle2.Text = "Classes";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Classes;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(11, 906);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(203, 12);
+            this.guna2Separator1.TabIndex = 105;
+            // 
+            // lblRecord
+            // 
+            this.lblRecord.AutoSize = true;
+            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecord.Location = new System.Drawing.Point(148, 881);
+            this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(49, 25);
+            this.lblRecord.TabIndex = 104;
+            this.lblRecord.Text = "N/A";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 880);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 25);
+            this.label2.TabIndex = 103;
+            this.label2.Text = "#Records:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Classes;
+            this.pictureBox1.Location = new System.Drawing.Point(94, 42);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1141, 251);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 106;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbIsActive
+            // 
+            this.cbIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.cbIsActive.BorderRadius = 5;
+            this.cbIsActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbIsActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIsActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbIsActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbIsActive.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            this.cbIsActive.ForeColor = System.Drawing.Color.Black;
+            this.cbIsActive.ItemHeight = 30;
+            this.cbIsActive.Items.AddRange(new object[] {
+            "All",
+            "Yes",
+            "No"});
+            this.cbIsActive.Location = new System.Drawing.Point(317, 256);
+            this.cbIsActive.Margin = new System.Windows.Forms.Padding(4);
+            this.cbIsActive.Name = "cbIsActive";
+            this.cbIsActive.Size = new System.Drawing.Size(173, 36);
+            this.cbIsActive.StartIndex = 0;
+            this.cbIsActive.TabIndex = 112;
+            this.cbIsActive.Visible = false;
+            this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
+            // 
+            // cbValue
+            // 
+            this.cbValue.BackColor = System.Drawing.Color.Transparent;
+            this.cbValue.BorderRadius = 5;
+            this.cbValue.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbValue.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbValue.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            this.cbValue.ForeColor = System.Drawing.Color.Black;
+            this.cbValue.ItemHeight = 30;
+            this.cbValue.Items.AddRange(new object[] {
+            "None",
+            "Class ID",
+            "Class Name",
+            "Coach Name",
+            "Start Time",
+            "End Time",
+            "Capacity",
+            "Is Active"});
+            this.cbValue.Location = new System.Drawing.Point(107, 257);
+            this.cbValue.Margin = new System.Windows.Forms.Padding(4);
+            this.cbValue.Name = "cbValue";
+            this.cbValue.Size = new System.Drawing.Size(192, 36);
+            this.cbValue.StartIndex = 0;
+            this.cbValue.TabIndex = 111;
+            this.cbValue.SelectedIndexChanged += new System.EventHandler(this.cbValue_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(9, 262);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 22);
+            this.label9.TabIndex = 110;
+            this.label9.Text = "Filter By:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderRadius = 5;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(313, 257);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search...";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(212, 38);
+            this.txtSearch.TabIndex = 109;
+            this.txtSearch.Visible = false;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            // 
+            // btnAddClass
+            // 
+            this.btnAddClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddClass.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddClass.BorderRadius = 5;
+            this.btnAddClass.BorderThickness = 1;
+            this.btnAddClass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnAddClass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddClass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddClass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddClass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddClass.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddClass.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClass.ForeColor = System.Drawing.Color.Black;
+            this.btnAddClass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnAddClass.Image = global::GymMangementSystem.Properties.Resources.AddClasses;
+            this.btnAddClass.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddClass.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAddClass.Location = new System.Drawing.Point(1275, 262);
+            this.btnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddClass.Name = "btnAddClass";
+            this.btnAddClass.Size = new System.Drawing.Size(93, 42);
+            this.btnAddClass.TabIndex = 114;
+            this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
+            // 
+            // dtpTime
+            // 
+            this.dtpTime.BackColor = System.Drawing.Color.Transparent;
+            this.dtpTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dtpTime.BorderRadius = 5;
+            this.dtpTime.BorderThickness = 1;
+            this.dtpTime.Checked = true;
+            this.dtpTime.CustomFormat = "hh:mm:ss tt";
+            this.dtpTime.FillColor = System.Drawing.Color.White;
+            this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
+            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpTime.Location = new System.Drawing.Point(317, 257);
+            this.dtpTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.ShowUpDown = true;
+            this.dtpTime.Size = new System.Drawing.Size(208, 36);
+            this.dtpTime.TabIndex = 116;
+            this.dtpTime.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
+            this.dtpTime.Visible = false;
+            this.dtpTime.ValueChanged += new System.EventHandler(this.dtpTime_ValueChanged);
+            // 
             // frmClasses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1376, 922);
             this.Controls.Add(this.dtpTime);
             this.Controls.Add(this.btnAddClass);
             this.Controls.Add(this.cbIsActive);
@@ -442,10 +455,10 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dgvShowClasses);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmClasses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManageClasses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowClasses)).EndInit();
             this.panel4.ResumeLayout(false);
