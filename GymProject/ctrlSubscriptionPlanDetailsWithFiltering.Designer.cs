@@ -107,7 +107,6 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionPlanDetailsWithFiltering";
             this.Size = new System.Drawing.Size(855, 456);
-            this.Load += new System.EventHandler(this.ctrlSubscriptionPlanDetailsWithFiltering_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFiltering.ResumeLayout(false);
             this.gbFiltering.PerformLayout();

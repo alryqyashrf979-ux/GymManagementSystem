@@ -70,7 +70,7 @@
             this.lblTitle2.Location = new System.Drawing.Point(63, 6);
             this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(212, 32);
+            this.lblTitle2.Size = new System.Drawing.Size(172, 26);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Add Subscription";
             // 
@@ -104,11 +104,11 @@
             this.tpMemberInfo.Controls.Add(this.btnNext);
             this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
             this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
             this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpMemberInfo.Size = new System.Drawing.Size(1211, 862);
+            this.tpMemberInfo.Size = new System.Drawing.Size(1211, 865);
             this.tpMemberInfo.TabIndex = 0;
             this.tpMemberInfo.Text = "Member Info";
             // 
@@ -143,6 +143,7 @@
             this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
             this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(1, 2);
+            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1207, 802);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
@@ -155,11 +156,11 @@
             this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionPlanDetailsWithFiltering1);
             this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionDetails1);
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 22);
             this.tpSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpSubscriptionInfo.Name = "tpSubscriptionInfo";
             this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpSubscriptionInfo.Size = new System.Drawing.Size(1211, 862);
+            this.tpSubscriptionInfo.Size = new System.Drawing.Size(1211, 865);
             this.tpSubscriptionInfo.TabIndex = 1;
             this.tpSubscriptionInfo.Text = "Subscription Info";
             // 
@@ -179,6 +180,7 @@
             this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(347, 39);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(855, 456);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 2;
@@ -186,9 +188,12 @@
             // ctrlSubscriptionDetails1
             // 
             this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionDetails1.EnableStartDate = true;
             this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(95, 505);
+            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
             this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1109, 342);
+            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 1;
             // 
             // btnSave
@@ -249,7 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1219, 992);
+            this.ClientSize = new System.Drawing.Size(1219, 749);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcSubscriptionInfo);

@@ -46,13 +46,8 @@ namespace GymMangementSystem
         {
             cmFiltering.DisplayMember = "Name";
             cmFiltering.DataSource = clsSubscriptionPlans.GetAllAvailabilityPlanNames();
-
+          //  cmFiltering.SelectedValue = "PlanID";
         }
 
-
-        private void ctrlSubscriptionPlanDetailsWithFiltering_Load(object sender, EventArgs e)
-        {
-           
-        }
     }
 }
