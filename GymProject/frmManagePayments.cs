@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class frmManagementPayment : Form
+    public partial class frmManagePayments : Form
     {
         static public DataTable _dtAllPayments;
-        public frmManagementPayment()
+        public frmManagePayments()
         {
             InitializeComponent();
         }
