@@ -101,6 +101,7 @@ namespace GymMangementSystem
                 }
                 else
                 {
+                    tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
                     btnSave.Enabled = true;
                     tpLoginInfo.Enabled = true;
                     lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
@@ -143,6 +144,7 @@ namespace GymMangementSystem
                 return;
             }
 
+            tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
             uctPersonDetailsWithFilter1.LoadPersonInfo(_User.PersonID);
             lblPersonID.Text = _User.PersonID.ToString();
             tbUserName.Text = _User.UserName;
@@ -237,6 +239,7 @@ namespace GymMangementSystem
                 lblTitle2.Text = "Update User";
                 _Mode = enMode.UpdateMode;
                 lblUserID.Text = _User.UserID.ToString();
+                uctPersonDetailsWithFilter1.DisableFiltering();
                 MessageBox.Show("User saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

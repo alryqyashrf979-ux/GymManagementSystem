@@ -249,7 +249,7 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                             ExpirationDate = (DateTime)reader["ExpirationDate"];
                             RegistrationDate = (DateTime)reader["RegistrationDate"];
                             Price = Convert.ToDouble(reader["Price"]);
-                            Status = (byte)reader["Status"];
+                            Status = Convert.ToByte(reader["Status"]);
                             CreatedByUserID = (int)reader["CreatedByUserID"];
 
 
