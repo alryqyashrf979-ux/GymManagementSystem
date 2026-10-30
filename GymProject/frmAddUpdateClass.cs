@@ -18,6 +18,7 @@ namespace GymMangementSystem
         private int _ClassID=-1;
         private clsClasses _Class;
 
+        int _CoachID = -1;
         public frmAddUpdateClass()
         {
             InitializeComponent();
@@ -99,7 +100,7 @@ namespace GymMangementSystem
             //for demo and when coach management is ready we will link it with it.
             lblCoachID.Text = "1";
 
-            if (lblCoachID.Text == "???")
+            if (_CoachID==-1)
             {
                 MessageBox.Show("Coach ID is required !", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -113,7 +114,7 @@ namespace GymMangementSystem
             _Class.EndDay = cbEndDay.Text;
             _Class.Note = txtNote.Text;
             _Class.Description = txtDescription.Text;
-            _Class.CoachID =Convert.ToInt32(lblCoachID.Text);
+            _Class.CoachID = _CoachID;
             _Class.Maximum_Capacity =Convert.ToByte(nudCapacity.Value) ;
             _Class.IsActive = tgschIsActive.Checked;
 
