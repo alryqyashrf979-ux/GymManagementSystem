@@ -278,6 +278,9 @@
     <EmbeddedResource Include="frmAddSubscription.resx">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManageMember.resx">
+      <DependentUpon>frmManageMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManagePayments.resx">
       <DependentUpon>frmManagePayments.cs</DependentUpon>
     </EmbeddedResource>

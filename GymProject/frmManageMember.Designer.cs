@@ -28,22 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvMembersList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtFiltering = new GymMangementSystem.MyTextBox();
-            this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnAddMember = new System.Windows.Forms.Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.CountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +48,18 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmergencyContactInfoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnAddMember = new System.Windows.Forms.Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFiltering = new GymMangementSystem.MyTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembersList)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRecord
             // 
+            this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecord.Location = new System.Drawing.Point(113, 871);
@@ -69,6 +70,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 869);
@@ -123,20 +125,21 @@
             this.dgvMembersList.AllowUserToAddRows = false;
             this.dgvMembersList.AllowUserToDeleteRows = false;
             this.dgvMembersList.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvMembersList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMembersList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvMembersList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvMembersList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMembersList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvMembersList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvMembersList.ColumnHeadersHeight = 35;
             this.dgvMembersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvMembersList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -150,36 +153,36 @@
             this.Address,
             this.EmergencyContactInfoID,
             this.Column1});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMembersList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMembersList.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvMembersList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMembersList.Location = new System.Drawing.Point(2, 427);
             this.dgvMembersList.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMembersList.Name = "dgvMembersList";
             this.dgvMembersList.ReadOnly = true;
             this.dgvMembersList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembersList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembersList.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvMembersList.RowHeadersVisible = false;
             this.dgvMembersList.RowHeadersWidth = 65;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvMembersList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvMembersList.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvMembersList.RowTemplate.Height = 35;
             this.dgvMembersList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMembersList.Size = new System.Drawing.Size(1697, 417);
@@ -194,110 +197,7 @@
             this.dgvMembersList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMembersList.ThemeStyle.RowsStyle.Height = 35;
             this.dgvMembersList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(2, 899);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
-            this.guna2Separator1.TabIndex = 117;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(4, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 59);
-            this.label1.TabIndex = 118;
-            this.label1.Text = "Manage Members";
-            // 
-            // txtFiltering
-            // 
-            this.txtFiltering.BorderRadius = 5;
-            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFiltering.DefaultText = "";
-            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.ErrorMessage = "This Field is Required";
-            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtFiltering.IsRequired = false;
-            this.txtFiltering.Location = new System.Drawing.Point(324, 378);
-            this.txtFiltering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFiltering.Name = "txtFiltering";
-            this.txtFiltering.PlaceholderText = "Search...";
-            this.txtFiltering.SelectedText = "";
-            this.txtFiltering.Size = new System.Drawing.Size(264, 36);
-            this.txtFiltering.TabIndex = 119;
-            this.txtFiltering.Visible = false;
-            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
-            // 
-            // cmIsActive
-            // 
-            this.cmIsActive.BackColor = System.Drawing.Color.Transparent;
-            this.cmIsActive.BorderRadius = 5;
-            this.cmIsActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmIsActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmIsActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmIsActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmIsActive.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.cmIsActive.ForeColor = System.Drawing.Color.Black;
-            this.cmIsActive.ItemHeight = 30;
-            this.cmIsActive.Items.AddRange(new object[] {
-            "All",
-            "Yes",
-            "No"});
-            this.cmIsActive.Location = new System.Drawing.Point(337, 380);
-            this.cmIsActive.Name = "cmIsActive";
-            this.cmIsActive.Size = new System.Drawing.Size(216, 36);
-            this.cmIsActive.StartIndex = 0;
-            this.cmIsActive.TabIndex = 120;
-            this.cmIsActive.Visible = false;
-            this.cmIsActive.SelectedIndexChanged += new System.EventHandler(this.cmIsActiveOrno_SelectedIndexChanged);
-            // 
-            // btnAddMember
-            // 
-            this.btnAddMember.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddUser;
-            this.btnAddMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddMember.Location = new System.Drawing.Point(1644, 372);
-            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(57, 44);
-            this.btnAddMember.TabIndex = 116;
-            this.btnAddMember.UseVisualStyleBackColor = true;
-            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.BorderThickness = 2;
-            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
-            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1531, 885);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(142, 34);
-            this.btnClose.TabIndex = 115;
-            this.btnClose.Text = "Close";
+            this.dgvMembersList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembersList_CellContentClick);
             // 
             // CountryName
             // 
@@ -398,6 +298,113 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 150;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(2, 899);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
+            this.guna2Separator1.TabIndex = 117;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label1.Location = new System.Drawing.Point(4, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(389, 59);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "Manage Members";
+            // 
+            // cmIsActive
+            // 
+            this.cmIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.cmIsActive.BorderRadius = 5;
+            this.cmIsActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmIsActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmIsActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmIsActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmIsActive.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cmIsActive.ForeColor = System.Drawing.Color.Black;
+            this.cmIsActive.ItemHeight = 30;
+            this.cmIsActive.Items.AddRange(new object[] {
+            "All",
+            "Yes",
+            "No"});
+            this.cmIsActive.Location = new System.Drawing.Point(337, 380);
+            this.cmIsActive.Name = "cmIsActive";
+            this.cmIsActive.Size = new System.Drawing.Size(216, 36);
+            this.cmIsActive.StartIndex = 0;
+            this.cmIsActive.TabIndex = 120;
+            this.cmIsActive.Visible = false;
+            this.cmIsActive.SelectedIndexChanged += new System.EventHandler(this.cmIsActiveOrno_SelectedIndexChanged);
+            // 
+            // btnAddMember
+            // 
+            this.btnAddMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddMember.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddMember.Location = new System.Drawing.Point(1644, 372);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(57, 44);
+            this.btnAddMember.TabIndex = 116;
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 2;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(1531, 885);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(142, 34);
+            this.btnClose.TabIndex = 115;
+            this.btnClose.Text = "Close";
+            // 
+            // txtFiltering
+            // 
+            this.txtFiltering.BorderRadius = 5;
+            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiltering.DefaultText = "";
+            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.ErrorMessage = "This Field is Required";
+            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFiltering.IsRequired = false;
+            this.txtFiltering.Location = new System.Drawing.Point(324, 378);
+            this.txtFiltering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiltering.Name = "txtFiltering";
+            this.txtFiltering.PlaceholderText = "Search...";
+            this.txtFiltering.SelectedText = "";
+            this.txtFiltering.Size = new System.Drawing.Size(264, 36);
+            this.txtFiltering.TabIndex = 119;
+            this.txtFiltering.Visible = false;
+            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
             // 
             // frmManageMember
             // 
