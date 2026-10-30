@@ -19,11 +19,6 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
-        private void ctrlMemberDetailsWithFiltering_Load(object sender, EventArgs e)
-        {
-            txtFiltering.Focus();
-        }
-
         public class MemberEventArgs : EventArgs
         {
             public clsMembers MemberInfo { get; }

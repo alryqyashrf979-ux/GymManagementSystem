@@ -125,38 +125,21 @@ namespace GymMangementSystem
             lblRecord.Text = dtMembers.Rows.Count.ToString();
         }
 
-        StringBuilder FilterColumn = new StringBuilder();
-        StringBuilder FilterValue=new StringBuilder();  
+
         private void cmIsActiveOrno_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            FilterColumn.Clear();
-            FilterValue.Clear();
-            FilterColumn.Append("IsActive");
-
-
-
-            switch (cmIsActive.Text)
+            if (cmIsActive.Text == "All")
             {
-                case "All":
-                    FilterValue.Append("All");
-                    break;
-
-                case "Yes":
-                    FilterValue.Append("True");
-                    break;
-
-                case "No":
-                    FilterValue.Append("False");
-                    break;
-
+                dtMembers.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvMembersList.Rows.Count.ToString();
+                return;
             }
 
-
-            if (FilterValue.ToString() == "All")
-                dtMembers.DefaultView.RowFilter = "";
+           if(cmIsActive.Text=="Yes")
+                dtMembers.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text}] = 'True'";
             else
-                dtMembers.DefaultView.RowFilter = $"{FilterColumn.ToString()} = '{FilterValue.ToString()}'";
+                dtMembers.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text}] = 'False'";
 
 
             lblRecord.Text = dgvMembersList.Rows.Count.ToString();

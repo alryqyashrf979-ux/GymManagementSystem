@@ -98,14 +98,7 @@ namespace GymMangementSystem
                 _Member = new clsMembers();
 
             }
-            else
-            {
-                lblTitle2.Text = "Update Member";
-                lblTitle1.Text = lblTitle2.Text;
-                this.Text = lblTitle2.Text;
-
-
-            }
+   
 
             uctPersonDetailsWithFilter1.FocusOnTbSearch();
             txtInActivationReason.Text = string.Empty;
@@ -137,6 +130,11 @@ namespace GymMangementSystem
                 MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            lblTitle2.Text = "Update Member";
+            lblTitle1.Text = lblTitle2.Text;
+            this.Text = lblTitle2.Text;
+
             uctPersonDetailsWithFilter1.DisableFiltering();
             txtPersonName.Text = _Member.EmergencyContactPersonName; ;
             txtRelationship.Text=_Member.Relationship;

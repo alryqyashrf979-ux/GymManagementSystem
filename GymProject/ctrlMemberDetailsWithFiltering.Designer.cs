@@ -175,7 +175,6 @@
             this.Controls.Add(this.ctrlMemebrDetails1);
             this.Name = "ctrlMemberDetailsWithFiltering";
             this.Size = new System.Drawing.Size(1210, 804);
-            this.Load += new System.EventHandler(this.ctrlMemberDetailsWithFiltering_Load);
             this.gbFiltering.ResumeLayout(false);
             this.gbFiltering.PerformLayout();
             this.ResumeLayout(false);

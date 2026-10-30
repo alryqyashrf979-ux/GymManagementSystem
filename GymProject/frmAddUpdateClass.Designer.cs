@@ -244,7 +244,7 @@
             this.dtpEndTime.ShowUpDown = true;
             this.dtpEndTime.Size = new System.Drawing.Size(126, 36);
             this.dtpEndTime.TabIndex = 126;
-            this.dtpEndTime.Value = new System.DateTime(2026, 10, 26, 17, 30, 0, 0);
+            this.dtpEndTime.Value = new System.DateTime(2026, 10, 30, 17, 30, 0, 0);
             // 
             // cbStartDay
             // 
@@ -515,6 +515,7 @@
             this.txtClassName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtClassName.IsRequired = true;
             this.txtClassName.Location = new System.Drawing.Point(64, 70);
+            this.txtClassName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.PlaceholderText = "Enter Class Name...";
             this.txtClassName.SelectedText = "";
@@ -538,6 +539,7 @@
             this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtNote.IsRequired = false;
             this.txtNote.Location = new System.Drawing.Point(445, 328);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNote.Name = "txtNote";
             this.txtNote.PlaceholderText = "Enter Note...";
             this.txtNote.SelectedText = "";
@@ -561,6 +563,7 @@
             this.txtDescription.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtDescription.IsRequired = false;
             this.txtDescription.Location = new System.Drawing.Point(30, 330);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "Enter Description...";
             this.txtDescription.SelectedText = "";
