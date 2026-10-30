@@ -47,8 +47,8 @@ namespace GymMangementSystem
             txtDescription.Text = _Class.Description ?? string.Empty;
             dtpStartTime.Value =DateTime.Today.Add(_Class.StartTime);
             dtpEndTime.Value = DateTime.Today.Add(_Class.EndTime);
-            cbStartDay.SelectedIndex = clsClasses.SelectIndexOfDayOfWeak(_Class.StartDay);
-            cbEndDay.SelectedIndex = clsClasses.SelectIndexOfDayOfWeak(_Class.EndDay);
+            cbStartDay.SelectedIndex = cbStartDay.FindString(_Class.StartDay);
+            cbEndDay.SelectedIndex = cbEndDay.FindString(_Class.EndDay);
             lblCoachID.Text = _Class.CoachID.ToString();
             nudCapacity.Value = _Class.Maximum_Capacity;
             tgschIsActive.Checked = _Class.IsActive;
