@@ -39,6 +39,12 @@ namespace GymMangementSystem
             dtpTime.Visible = (cbValue.Text == "Date");
             txtSearch.Clear();
             txtSearch.Focus();
+
+
+            _dtAllPayments.DefaultView.RowFilter = "";
+            lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -87,13 +93,8 @@ namespace GymMangementSystem
 
         private void dtpTime_ValueChanged(object sender, EventArgs e)
         {
-            DateTime selectedValue = dtpTime.Value;
-            TimeSpan timeSpan = selectedValue.TimeOfDay;
-            string timeString = selectedValue.ToString("yyyy/MM/dd");
-
-
-
-            _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text.Trim()}] = '{timeString}' ";
+           
+            _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text.Trim()}] = '{dtpTime.Value.Date}' ";
 
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
         }

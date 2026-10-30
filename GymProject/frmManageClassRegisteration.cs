@@ -85,6 +85,8 @@ namespace GymMangementSystem
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtSearch.Visible = (cbValue.Text.Trim() != "None");
+            _dtAllClassRegisteration.DefaultView.RowFilter = "";
+            lblRecord.Text = dgvClassRegisteration.Rows.Count.ToString();
             txtSearch.Clear();
             txtSearch.Focus();
         }
