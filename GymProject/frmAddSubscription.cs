@@ -36,6 +36,7 @@ namespace GymMangementSystem
 
         clsSubscription _Subscription;
 
+        public event 
 
 
 
@@ -196,6 +197,12 @@ namespace GymMangementSystem
                 }
             }
            
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpMemberInfo"];
 
         }
     }

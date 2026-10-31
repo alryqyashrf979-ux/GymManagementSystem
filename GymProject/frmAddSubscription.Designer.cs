@@ -38,6 +38,7 @@
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.tpSubscriptionInfo = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
             this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
@@ -154,6 +155,7 @@
             // 
             this.tpSubscriptionInfo.BackColor = System.Drawing.Color.White;
             this.tpSubscriptionInfo.Controls.Add(this.pictureBox1);
+            this.tpSubscriptionInfo.Controls.Add(this.guna2Button1);
             this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionPlanDetailsWithFiltering1);
             this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionDetails1);
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
@@ -168,32 +170,61 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Add_Subscription_Icon2;
-            this.pictureBox1.Location = new System.Drawing.Point(-48, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(-22, 17);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(389, 322);
+            this.pictureBox1.Size = new System.Drawing.Size(381, 322);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Image = global::GymMangementSystem.Properties.Resources.Back;
+            this.guna2Button1.ImageOffset = new System.Drawing.Point(-5, 1);
+            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button1.Location = new System.Drawing.Point(2, 778);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(131, 38);
+            this.guna2Button1.TabIndex = 19;
+            this.guna2Button1.Text = "Back";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // ctrlSubscriptionPlanDetailsWithFiltering1
             // 
             this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(348, 5);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(361, 17);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(855, 456);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(854, 456);
             this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 2;
             // 
             // ctrlSubscriptionDetails1
             // 
             this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionDetails1.EnableStartDate = true;
-            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(95, 462);
+            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(132, 474);
             this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
-            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1109, 342);
+            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1079, 342);
             this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 1;
             // 
@@ -292,6 +323,7 @@
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private ctrlSubscriptionDetails ctrlSubscriptionDetails1;
         private ctrlSubscriptionPlanDetailsWithFiltering ctrlSubscriptionPlanDetailsWithFiltering1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

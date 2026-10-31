@@ -621,5 +621,8 @@
   <ItemGroup>
     <None Include="Resources\Add Subscription Icon2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
