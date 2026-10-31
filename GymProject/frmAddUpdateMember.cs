@@ -184,7 +184,6 @@ namespace GymMangementSystem
                 lblTitle1.Text = "Update Member";
                 lblTitle2.Text = lblTitle1.Text;
                 this.Text = lblTitle1.Text;
-                _Mode = enMode.Update;
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();
                 uctPersonDetailsWithFilter1.DisableFiltering();
@@ -192,6 +191,12 @@ namespace GymMangementSystem
                 DataBack?.Invoke(this, _Member.MemberID);
 
                 MessageBox.Show("Member saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                lnkAddSubscription.Enabled = (_Mode == enMode.Addnew);
+                _Mode = enMode.Update;
+
+
             }
             else
                 MessageBox.Show("Error : Member did Not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -204,6 +209,17 @@ namespace GymMangementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtInActivationReason_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnkAddSubscription_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddSubscription frm = new frmAddSubscription();
+            
         }
     }
 }

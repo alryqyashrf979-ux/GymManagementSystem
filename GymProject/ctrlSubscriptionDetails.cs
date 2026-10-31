@@ -24,7 +24,8 @@ namespace GymMangementSystem
 
         private void lnkShowMemberInof_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmShowMemberDetails frm = new frmShowMemberDetails(_SubscriptionInfo.MemberID);
+            frm.ShowDialog();
         }
 
 
@@ -122,6 +123,12 @@ namespace GymMangementSystem
 
         private void ctrlSubscriptionDetails_Load(object sender, EventArgs e)
         {
+        }
+
+        private void lnkShowUserInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmShowUserDetails frm = new frmShowUserDetails(_SubscriptionInfo.createdByUserID);
+            frm.ShowDialog();
         }
     }
 }

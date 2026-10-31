@@ -43,7 +43,7 @@
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.ctrlSubscriptionPlanDetails1);
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(4, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(844, 450);
             this.guna2Panel1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // ctrlSubscriptionPlanDetails1
             // 
             this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(3, 93);
+            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(4, 93);
             this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
             this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(838, 355);
             this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.gbFiltering.CustomBorderColor = System.Drawing.Color.Transparent;
             this.gbFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFiltering.ForeColor = System.Drawing.Color.Black;
-            this.gbFiltering.Location = new System.Drawing.Point(12, 8);
+            this.gbFiltering.Location = new System.Drawing.Point(15, 8);
             this.gbFiltering.Name = "gbFiltering";
             this.gbFiltering.Size = new System.Drawing.Size(819, 84);
             this.gbFiltering.TabIndex = 3;

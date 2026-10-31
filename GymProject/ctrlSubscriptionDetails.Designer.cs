@@ -85,7 +85,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(5, 5);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1089, 44);
+            this.guna2Panel3.Size = new System.Drawing.Size(1068, 44);
             this.guna2Panel3.TabIndex = 106;
             // 
             // label8
@@ -147,7 +147,7 @@
             this.guna2Panel1.Controls.Add(this.pictureBox3);
             this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1095, 334);
+            this.guna2Panel1.Size = new System.Drawing.Size(1074, 334);
             this.guna2Panel1.TabIndex = 107;
             // 
             // lnkShowUserInfo
@@ -158,13 +158,14 @@
             this.lnkShowUserInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkShowUserInfo.Enabled = false;
             this.lnkShowUserInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowUserInfo.Location = new System.Drawing.Point(878, 287);
+            this.lnkShowUserInfo.Location = new System.Drawing.Point(859, 287);
             this.lnkShowUserInfo.Name = "lnkShowUserInfo";
             this.lnkShowUserInfo.Size = new System.Drawing.Size(166, 31);
             this.lnkShowUserInfo.TabIndex = 179;
             this.lnkShowUserInfo.TabStop = true;
             this.lnkShowUserInfo.Text = "Show User Info";
             this.lnkShowUserInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowUserInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkShowUserInfo_LinkClicked);
             // 
             // lnkShowMemberInof
             // 
@@ -174,7 +175,7 @@
             this.lnkShowMemberInof.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkShowMemberInof.Enabled = false;
             this.lnkShowMemberInof.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowMemberInof.Location = new System.Drawing.Point(878, 244);
+            this.lnkShowMemberInof.Location = new System.Drawing.Point(859, 244);
             this.lnkShowMemberInof.Name = "lnkShowMemberInof";
             this.lnkShowMemberInof.Size = new System.Drawing.Size(207, 31);
             this.lnkShowMemberInof.TabIndex = 178;
@@ -206,7 +207,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox4.Location = new System.Drawing.Point(732, 67);
+            this.pictureBox4.Location = new System.Drawing.Point(722, 67);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -246,7 +247,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Status;
-            this.pictureBox6.Location = new System.Drawing.Point(732, 159);
+            this.pictureBox6.Location = new System.Drawing.Point(722, 159);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(42, 45);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -267,7 +268,7 @@
             // 
             this.lblPlanID.AutoSize = true;
             this.lblPlanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlanID.Location = new System.Drawing.Point(777, 76);
+            this.lblPlanID.Location = new System.Drawing.Point(767, 76);
             this.lblPlanID.Name = "lblPlanID";
             this.lblPlanID.Size = new System.Drawing.Size(66, 22);
             this.lblPlanID.TabIndex = 108;
@@ -287,7 +288,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(780, 170);
+            this.lblStatus.Location = new System.Drawing.Point(770, 170);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 22);
             this.lblStatus.TabIndex = 170;
@@ -297,17 +298,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(605, 122);
+            this.label7.Location = new System.Drawing.Point(507, 128);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 22);
+            this.label7.Size = new System.Drawing.Size(170, 22);
             this.label7.TabIndex = 160;
-            this.label7.Text = "Created By :";
+            this.label7.Text = "Created By User :";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(607, 168);
+            this.label12.Location = new System.Drawing.Point(597, 168);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 22);
             this.label12.TabIndex = 169;
@@ -336,7 +337,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(606, 81);
+            this.label4.Location = new System.Drawing.Point(596, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 22);
             this.label4.TabIndex = 107;
@@ -346,7 +347,7 @@
             // 
             this.lblCreatedBy.AutoSize = true;
             this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatedBy.Location = new System.Drawing.Point(778, 120);
+            this.lblCreatedBy.Location = new System.Drawing.Point(768, 120);
             this.lblCreatedBy.Name = "lblCreatedBy";
             this.lblCreatedBy.Size = new System.Drawing.Size(66, 22);
             this.lblCreatedBy.TabIndex = 161;
@@ -355,7 +356,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox15.Location = new System.Drawing.Point(732, 112);
+            this.pictureBox15.Location = new System.Drawing.Point(722, 112);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(35, 41);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -436,7 +437,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(607, 219);
+            this.label6.Location = new System.Drawing.Point(597, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 22);
             this.label6.TabIndex = 157;
@@ -446,7 +447,7 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(783, 219);
+            this.lblPrice.Location = new System.Drawing.Point(773, 219);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(55, 22);
             this.lblPrice.TabIndex = 158;
@@ -455,7 +456,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Price_Icon;
-            this.pictureBox3.Location = new System.Drawing.Point(737, 213);
+            this.pictureBox3.Location = new System.Drawing.Point(727, 213);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -470,7 +471,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlSubscriptionDetails";
-            this.Size = new System.Drawing.Size(1103, 345);
+            this.Size = new System.Drawing.Size(1082, 345);
             this.Load += new System.EventHandler(this.ctrlSubscriptionDetails_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
