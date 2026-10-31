@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class frmAddUpdateFreezeSubscription : Form
+    public partial class frmAddUpdateFrozenSubscription : Form
     {
-        public frmAddUpdateFreezeSubscription()
+        public frmAddUpdateFrozenSubscription()
         {
             InitializeComponent();
         }
