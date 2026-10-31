@@ -74,7 +74,7 @@ namespace GymMangementSystem
             lnkShowMemberInof.Enabled = false;
             lnkShowUserInfo.Enabled = false;
 
-            dtStartDate.MaxDate = DateTime.Today.AddDays(14);
+            dtStartDate.MaxDate = DateTime.Today.AddDays(_MaxAllowDays);
             dtStartDate.MinDate = DateTime.Now;
             dtStartDate.Value = DateTime.Now;
 

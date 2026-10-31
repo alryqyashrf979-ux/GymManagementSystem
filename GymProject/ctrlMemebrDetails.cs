@@ -19,8 +19,8 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
-     
-        public int MemberID{ get;private set;}
+
+        public int MemberID { get; private set; } = -1;
         public clsMembers MemberInfo{ get; private set; }
 
 
