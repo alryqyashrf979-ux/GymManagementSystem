@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cmFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ctrlSubscriptionPlanDetails1 = new GymMangementSystem.ctrlSubscriptionPlanDetails();
             this.guna2Panel1.SuspendLayout();
             this.gbFiltering.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +47,14 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(844, 450);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // ctrlSubscriptionPlanDetails1
+            // 
+            this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(3, 93);
+            this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
+            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(838, 355);
+            this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
             // 
             // gbFiltering
             // 
@@ -90,18 +98,10 @@
             this.label9.TabIndex = 85;
             this.label9.Text = "Select Plan :";
             // 
-            // ctrlSubscriptionPlanDetails1
-            // 
-            this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(3, 93);
-            this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
-            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(838, 355);
-            this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
-            // 
             // ctrlSubscriptionPlanDetailsWithFiltering
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gbFiltering);
             this.Controls.Add(this.guna2Panel1);

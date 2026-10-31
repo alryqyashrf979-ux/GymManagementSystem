@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.lblLastSubscriptionID = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lnkShowLastSubscriptionInfo = new System.Windows.Forms.LinkLabel();
+            this.txtInActivationReason = new GymMangementSystem.MyTextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
-            this.txtInActivationReason = new GymMangementSystem.MyTextBox();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -111,6 +111,15 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1199, 706);
             this.guna2Panel2.TabIndex = 2;
             // 
+            // uctPersonDetails1
+            // 
+            this.uctPersonDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.uctPersonDetails1.Location = new System.Drawing.Point(5, 2);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetails1.Name = "uctPersonDetails1";
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1188, 339);
+            this.uctPersonDetails1.TabIndex = 117;
+            // 
             // lblLastSubscriptionID
             // 
             this.lblLastSubscriptionID.AutoSize = true;
@@ -156,6 +165,35 @@
             this.lnkShowLastSubscriptionInfo.Text = "Show Last Subscription Info";
             this.lnkShowLastSubscriptionInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkShowLastSubscriptionInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkShowLastSubscriptionInfo_LinkClicked);
+            // 
+            // txtInActivationReason
+            // 
+            this.txtInActivationReason.AutoScroll = true;
+            this.txtInActivationReason.AutoSize = true;
+            this.txtInActivationReason.BorderRadius = 5;
+            this.txtInActivationReason.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtInActivationReason.DefaultText = "";
+            this.txtInActivationReason.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtInActivationReason.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtInActivationReason.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtInActivationReason.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtInActivationReason.ErrorMessage = "This Field is Required";
+            this.txtInActivationReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtInActivationReason.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtInActivationReason.ForeColor = System.Drawing.Color.Black;
+            this.txtInActivationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtInActivationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtInActivationReason.IsRequired = false;
+            this.txtInActivationReason.Location = new System.Drawing.Point(275, 460);
+            this.txtInActivationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInActivationReason.Multiline = true;
+            this.txtInActivationReason.Name = "txtInActivationReason";
+            this.txtInActivationReason.PlaceholderText = "InActivation Reason";
+            this.txtInActivationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInActivationReason.SelectedText = "";
+            this.txtInActivationReason.Size = new System.Drawing.Size(368, 94);
+            this.txtInActivationReason.TabIndex = 94;
+            this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // pictureBox13
             // 
@@ -443,48 +481,10 @@
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
             // 
-            // uctPersonDetails1
-            // 
-            this.uctPersonDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.uctPersonDetails1.Location = new System.Drawing.Point(5, 2);
-            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1188, 339);
-            this.uctPersonDetails1.TabIndex = 117;
-            // 
-            // txtInActivationReason
-            // 
-            this.txtInActivationReason.AutoScroll = true;
-            this.txtInActivationReason.AutoSize = true;
-            this.txtInActivationReason.BorderRadius = 5;
-            this.txtInActivationReason.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInActivationReason.DefaultText = "";
-            this.txtInActivationReason.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtInActivationReason.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtInActivationReason.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtInActivationReason.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtInActivationReason.ErrorMessage = "This Field is Required";
-            this.txtInActivationReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInActivationReason.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtInActivationReason.ForeColor = System.Drawing.Color.Black;
-            this.txtInActivationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInActivationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtInActivationReason.IsRequired = false;
-            this.txtInActivationReason.Location = new System.Drawing.Point(275, 460);
-            this.txtInActivationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtInActivationReason.Multiline = true;
-            this.txtInActivationReason.Name = "txtInActivationReason";
-            this.txtInActivationReason.PlaceholderText = "InActivation Reason";
-            this.txtInActivationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInActivationReason.SelectedText = "";
-            this.txtInActivationReason.Size = new System.Drawing.Size(368, 94);
-            this.txtInActivationReason.TabIndex = 94;
-            this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
-            // 
             // ctrlMemebrDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel2);
             this.Name = "ctrlMemebrDetails";
