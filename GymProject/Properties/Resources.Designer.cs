@@ -73,6 +73,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("add_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_Subscription_Icon {
             get {
                 object obj = ResourceManager.GetObject("add Subscription Icon", resourceCulture);
@@ -133,6 +143,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Capacity {
             get {
                 object obj = ResourceManager.GetObject("Capacity", resourceCulture);
@@ -146,6 +166,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap CapacityCircle {
             get {
                 object obj = ResourceManager.GetObject("CapacityCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Change_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Change_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +336,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap file_000000009be4824391a90a2907bdb04d {
             get {
                 object obj = ResourceManager.GetObject("file_000000009be4824391a90a2907bdb04d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap freeze_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("freeze_icon_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
