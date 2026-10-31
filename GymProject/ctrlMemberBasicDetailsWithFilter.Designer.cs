@@ -45,23 +45,25 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.uctPersonDetails1);
             this.guna2Panel1.Controls.Add(this.gbFilter);
             this.guna2Panel1.Controls.Add(this.ctrlMemberBasicDetails1);
-            this.guna2Panel1.Location = new System.Drawing.Point(4, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(955, 539);
+            this.guna2Panel1.Size = new System.Drawing.Size(1194, 674);
             this.guna2Panel1.TabIndex = 0;
             // 
             // uctPersonDetails1
             // 
             this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetails1.Location = new System.Drawing.Point(2, 81);
+            this.uctPersonDetails1.Location = new System.Drawing.Point(2, 101);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(950, 271);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1188, 339);
             this.uctPersonDetails1.TabIndex = 8;
             // 
             // gbFilter
@@ -75,9 +77,11 @@
             this.gbFilter.Controls.Add(this.label6);
             this.gbFilter.Controls.Add(this.pictureBox2);
             this.gbFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFilter.Location = new System.Drawing.Point(16, 15);
+            this.gbFilter.Location = new System.Drawing.Point(20, 19);
+            this.gbFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(920, 63);
+            this.gbFilter.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFilter.Size = new System.Drawing.Size(1150, 79);
             this.gbFilter.TabIndex = 6;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
@@ -96,9 +100,10 @@
             this.guna2ComboBox1.Items.AddRange(new object[] {
             "National No",
             "Member ID"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(242, 21);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(302, 26);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(165, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(205, 36);
             this.guna2ComboBox1.TabIndex = 159;
             // 
             // btnAddNewMember
@@ -118,10 +123,10 @@
             this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddUser;
             this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewMember.Location = new System.Drawing.Point(830, 23);
+            this.btnAddNewMember.Location = new System.Drawing.Point(1038, 29);
             this.btnAddNewMember.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(62, 29);
+            this.btnAddNewMember.Size = new System.Drawing.Size(78, 36);
             this.btnAddNewMember.TabIndex = 158;
             // 
             // btnFind
@@ -141,10 +146,10 @@
             this.btnFind.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
             this.btnFind.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnFind.Location = new System.Drawing.Point(751, 23);
+            this.btnFind.Location = new System.Drawing.Point(939, 29);
             this.btnFind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(62, 29);
+            this.btnFind.Size = new System.Drawing.Size(78, 36);
             this.btnFind.TabIndex = 157;
             // 
             // txtValue
@@ -163,11 +168,12 @@
             this.txtValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtValue.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtValue.IsRequired = false;
-            this.txtValue.Location = new System.Drawing.Point(413, 19);
+            this.txtValue.Location = new System.Drawing.Point(516, 24);
+            this.txtValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValue.Name = "txtValue";
             this.txtValue.PlaceholderText = "";
             this.txtValue.SelectedText = "";
-            this.txtValue.Size = new System.Drawing.Size(322, 36);
+            this.txtValue.Size = new System.Drawing.Size(402, 45);
             this.txtValue.TabIndex = 156;
             // 
             // label6
@@ -175,18 +181,20 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(100, 25);
+            this.label6.Location = new System.Drawing.Point(125, 31);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 21);
+            this.label6.Size = new System.Drawing.Size(167, 27);
             this.label6.TabIndex = 154;
             this.label6.Text = "Select Member :";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.NameImage;
-            this.pictureBox2.Location = new System.Drawing.Point(42, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(52, 21);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 38);
+            this.pictureBox2.Size = new System.Drawing.Size(91, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
@@ -196,19 +204,21 @@
             this.ctrlMemberBasicDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(5, 355);
+            this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(6, 444);
+            this.ctrlMemberBasicDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
-            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(944, 177);
+            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(1180, 221);
             this.ctrlMemberBasicDetails1.TabIndex = 9;
             // 
             // ctrlMemberBasicDetailsWithFilter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ctrlMemberBasicDetailsWithFilter";
-            this.Size = new System.Drawing.Size(962, 545);
+            this.Size = new System.Drawing.Size(1202, 681);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
