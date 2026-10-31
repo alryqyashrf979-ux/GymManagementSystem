@@ -18,6 +18,7 @@ namespace GymMangementSystem
         private int _ClassID=-1;
         private clsClasses _Class;
 
+        int _CoachID = -1;
         public frmAddUpdateClass()
         {
             InitializeComponent();
@@ -47,8 +48,8 @@ namespace GymMangementSystem
             txtDescription.Text = _Class.Description ?? string.Empty;
             dtpStartTime.Value =DateTime.Today.Add(_Class.StartTime);
             dtpEndTime.Value = DateTime.Today.Add(_Class.EndTime);
-            cbStartDay.SelectedIndex = clsClasses.SelectIndexOfDayOfWeak(_Class.StartDay);
-            cbEndDay.SelectedIndex = clsClasses.SelectIndexOfDayOfWeak(_Class.EndDay);
+            cbStartDay.SelectedIndex = cbStartDay.FindString(_Class.StartDay);
+            cbEndDay.SelectedIndex = cbEndDay.FindString(_Class.EndDay);
             lblCoachID.Text = _Class.CoachID.ToString();
             nudCapacity.Value = _Class.Maximum_Capacity;
             tgschIsActive.Checked = _Class.IsActive;
@@ -99,7 +100,7 @@ namespace GymMangementSystem
             //for demo and when coach management is ready we will link it with it.
             lblCoachID.Text = "1";
 
-            if (lblCoachID.Text == "???")
+            if (_CoachID==-1)
             {
                 MessageBox.Show("Coach ID is required !", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -113,7 +114,7 @@ namespace GymMangementSystem
             _Class.EndDay = cbEndDay.Text;
             _Class.Note = txtNote.Text;
             _Class.Description = txtDescription.Text;
-            _Class.CoachID =Convert.ToInt32(lblCoachID.Text);
+            _Class.CoachID = _CoachID;
             _Class.Maximum_Capacity =Convert.ToByte(nudCapacity.Value) ;
             _Class.IsActive = tgschIsActive.Checked;
 

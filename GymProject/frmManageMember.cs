@@ -151,5 +151,10 @@ namespace GymMangementSystem
             frm.ShowDialog();
             _RefreshDataTable();
         }
+
+        private void dgvMembersList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
