@@ -30,17 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblShowUserInformation = new System.Windows.Forms.Label();
-            this.lblCurrentUseName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pbCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnSubscriPtions = new Guna.UI2.WinForms.Guna2Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.manageSubscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.freezeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnManageEmployees = new Guna.UI2.WinForms.Guna2Button();
             this.btnMangePayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageClasses = new Guna.UI2.WinForms.Guna2Button();
@@ -48,18 +44,22 @@
             this.btnManageMember = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnManagePeople = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.manageSubscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.freezeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblShowUserInformation = new System.Windows.Forms.Label();
+            this.lblCurrentUseName = new System.Windows.Forms.Label();
+            this.pbCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -72,7 +72,7 @@
             this.guna2Panel1.Controls.Add(this.btnManageMember);
             this.guna2Panel1.Controls.Add(this.btnManageUser);
             this.guna2Panel1.Controls.Add(this.btnManagePeople);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnDashboard);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
@@ -83,134 +83,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(269, 884);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageSubscriptionsToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(323, 86);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 142);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Stronger Today | Healther Tomorrw";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 116);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 23);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Gym Management System";
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel3.BorderRadius = 5;
-            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.lblShowUserInformation);
-            this.guna2Panel3.Controls.Add(this.lblCurrentUseName);
-            this.guna2Panel3.Controls.Add(this.pbCurrentUser);
-            this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1102, 79);
-            this.guna2Panel3.TabIndex = 1;
-            // 
-            // lblShowUserInformation
-            // 
-            this.lblShowUserInformation.AutoSize = true;
-            this.lblShowUserInformation.BackColor = System.Drawing.Color.Transparent;
-            this.lblShowUserInformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblShowUserInformation.Location = new System.Drawing.Point(1328, 46);
-            this.lblShowUserInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblShowUserInformation.Name = "lblShowUserInformation";
-            this.lblShowUserInformation.Size = new System.Drawing.Size(27, 28);
-            this.lblShowUserInformation.TabIndex = 10;
-            this.lblShowUserInformation.Text = "⌄";
-            // 
-            // lblCurrentUseName
-            // 
-            this.lblCurrentUseName.AutoSize = true;
-            this.lblCurrentUseName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrentUseName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCurrentUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblCurrentUseName.Location = new System.Drawing.Point(1352, 50);
-            this.lblCurrentUseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCurrentUseName.Name = "lblCurrentUseName";
-            this.lblCurrentUseName.Size = new System.Drawing.Size(144, 21);
-            this.lblCurrentUseName.TabIndex = 9;
-            this.lblCurrentUseName.Text = "Current Admin  ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label3.Location = new System.Drawing.Point(269, 82);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 41);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Welcome Back";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label4.Location = new System.Drawing.Point(275, 124);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Here\'s what\'s happening at your gym today.";
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1371, 884);
-            this.panel1.TabIndex = 9;
-            // 
-            // pbCurrentUser
-            // 
-            this.pbCurrentUser.BackColor = System.Drawing.Color.Transparent;
-            this.pbCurrentUser.FillColor = System.Drawing.Color.Transparent;
-            this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
-            this.pbCurrentUser.ImageRotate = 0F;
-            this.pbCurrentUser.Location = new System.Drawing.Point(1265, 7);
-            this.pbCurrentUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbCurrentUser.Name = "pbCurrentUser";
-            this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbCurrentUser.Size = new System.Drawing.Size(64, 64);
-            this.pbCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCurrentUser.TabIndex = 8;
-            this.pbCurrentUser.TabStop = false;
             // 
             // btnSubscriPtions
             // 
@@ -238,6 +110,62 @@
             this.btnSubscriPtions.Text = "Subscriptioins";
             this.btnSubscriPtions.TextOffset = new System.Drawing.Point(-3, 0);
             this.btnSubscriPtions.Click += new System.EventHandler(this.btnSubscriPtions_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageSubscriptionsToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(323, 58);
+            // 
+            // manageSubscriptionsToolStripMenuItem
+            // 
+            this.manageSubscriptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addSubscriptionToolStripMenuItem,
+            this.cancelSubscriptionToolStripMenuItem,
+            this.freezeSubscriptionToolStripMenuItem,
+            this.changeSubscriptionToolStripMenuItem});
+            this.manageSubscriptionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageSubscriptionsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.ManageSubscription44;
+            this.manageSubscriptionsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.manageSubscriptionsToolStripMenuItem.Name = "manageSubscriptionsToolStripMenuItem";
+            this.manageSubscriptionsToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
+            this.manageSubscriptionsToolStripMenuItem.Text = "Manage Subscriptions";
+            this.manageSubscriptionsToolStripMenuItem.Click += new System.EventHandler(this.manageSubscriptionsToolStripMenuItem_Click);
+            // 
+            // addSubscriptionToolStripMenuItem
+            // 
+            this.addSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
+            this.addSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addSubscriptionToolStripMenuItem.Name = "addSubscriptionToolStripMenuItem";
+            this.addSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
+            this.addSubscriptionToolStripMenuItem.Text = "Add Subscription";
+            this.addSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.addSubscriptionToolStripMenuItem_Click);
+            // 
+            // cancelSubscriptionToolStripMenuItem
+            // 
+            this.cancelSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Cancel_32x32;
+            this.cancelSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
+            this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
+            this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
+            // 
+            // freezeSubscriptionToolStripMenuItem
+            // 
+            this.freezeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.freeze_icon_32x32;
+            this.freezeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.freezeSubscriptionToolStripMenuItem.Name = "freezeSubscriptionToolStripMenuItem";
+            this.freezeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
+            this.freezeSubscriptionToolStripMenuItem.Text = "Freeze Subscription";
+            // 
+            // changeSubscriptionToolStripMenuItem
+            // 
+            this.changeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
+            this.changeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.changeSubscriptionToolStripMenuItem.Name = "changeSubscriptionToolStripMenuItem";
+            this.changeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
+            this.changeSubscriptionToolStripMenuItem.Text = "Change Subscription";
             // 
             // btnManageEmployees
             // 
@@ -419,31 +347,57 @@
             this.btnManagePeople.TextOffset = new System.Drawing.Point(-6, 0);
             this.btnManagePeople.Click += new System.EventHandler(this.btnManagePeople_Click);
             // 
-            // guna2Button1
+            // btnDashboard
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.Checked = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button1.Image = global::GymMangementSystem.Properties.Resources.file_000000009be4824391a90a2907bdb04d;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(-18, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(75, 39);
-            this.guna2Button1.Location = new System.Drawing.Point(5, 257);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(244, 62);
-            this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "Dashboard";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(-13, 0);
+            this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.BorderRadius = 5;
+            this.btnDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDashboard.Checked = true;
+            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnDashboard.Image = global::GymMangementSystem.Properties.Resources.file_000000009be4824391a90a2907bdb04d;
+            this.btnDashboard.ImageOffset = new System.Drawing.Point(-18, 0);
+            this.btnDashboard.ImageSize = new System.Drawing.Size(75, 39);
+            this.btnDashboard.Location = new System.Drawing.Point(5, 257);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(244, 62);
+            this.btnDashboard.TabIndex = 7;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextOffset = new System.Drawing.Point(-13, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 142);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(240, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Stronger Today | Healther Tomorrw";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(4, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(258, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Gym Management System";
             // 
             // guna2PictureBox1
             // 
@@ -459,52 +413,99 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // manageSubscriptionsToolStripMenuItem
+            // guna2Panel3
             // 
-            this.manageSubscriptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addSubscriptionToolStripMenuItem,
-            this.cancelSubscriptionToolStripMenuItem,
-            this.freezeSubscriptionToolStripMenuItem,
-            this.changeSubscriptionToolStripMenuItem});
-            this.manageSubscriptionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageSubscriptionsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.ManageSubscription44;
-            this.manageSubscriptionsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.manageSubscriptionsToolStripMenuItem.Name = "manageSubscriptionsToolStripMenuItem";
-            this.manageSubscriptionsToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
-            this.manageSubscriptionsToolStripMenuItem.Text = "Manage Subscriptions";
-            this.manageSubscriptionsToolStripMenuItem.Click += new System.EventHandler(this.manageSubscriptionsToolStripMenuItem_Click);
+            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
+            this.guna2Panel3.BorderRadius = 5;
+            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.lblShowUserInformation);
+            this.guna2Panel3.Controls.Add(this.lblCurrentUseName);
+            this.guna2Panel3.Controls.Add(this.pbCurrentUser);
+            this.guna2Panel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1102, 79);
+            this.guna2Panel3.TabIndex = 1;
             // 
-            // addSubscriptionToolStripMenuItem
+            // lblShowUserInformation
             // 
-            this.addSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
-            this.addSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.addSubscriptionToolStripMenuItem.Name = "addSubscriptionToolStripMenuItem";
-            this.addSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
-            this.addSubscriptionToolStripMenuItem.Text = "Add Subscription";
+            this.lblShowUserInformation.AutoSize = true;
+            this.lblShowUserInformation.BackColor = System.Drawing.Color.Transparent;
+            this.lblShowUserInformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblShowUserInformation.Location = new System.Drawing.Point(1328, 46);
+            this.lblShowUserInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblShowUserInformation.Name = "lblShowUserInformation";
+            this.lblShowUserInformation.Size = new System.Drawing.Size(27, 28);
+            this.lblShowUserInformation.TabIndex = 10;
+            this.lblShowUserInformation.Text = "⌄";
             // 
-            // cancelSubscriptionToolStripMenuItem
+            // lblCurrentUseName
             // 
-            this.cancelSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Cancel_32x32;
-            this.cancelSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
-            this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
-            this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
+            this.lblCurrentUseName.AutoSize = true;
+            this.lblCurrentUseName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurrentUseName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCurrentUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblCurrentUseName.Location = new System.Drawing.Point(1352, 50);
+            this.lblCurrentUseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurrentUseName.Name = "lblCurrentUseName";
+            this.lblCurrentUseName.Size = new System.Drawing.Size(144, 21);
+            this.lblCurrentUseName.TabIndex = 9;
+            this.lblCurrentUseName.Text = "Current Admin  ";
             // 
-            // freezeSubscriptionToolStripMenuItem
+            // pbCurrentUser
             // 
-            this.freezeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.freeze_icon_32x32;
-            this.freezeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.freezeSubscriptionToolStripMenuItem.Name = "freezeSubscriptionToolStripMenuItem";
-            this.freezeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
-            this.freezeSubscriptionToolStripMenuItem.Text = "Freeze Subscription";
+            this.pbCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbCurrentUser.FillColor = System.Drawing.Color.Transparent;
+            this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
+            this.pbCurrentUser.ImageRotate = 0F;
+            this.pbCurrentUser.Location = new System.Drawing.Point(1265, 7);
+            this.pbCurrentUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbCurrentUser.Name = "pbCurrentUser";
+            this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbCurrentUser.Size = new System.Drawing.Size(64, 64);
+            this.pbCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCurrentUser.TabIndex = 8;
+            this.pbCurrentUser.TabStop = false;
             // 
-            // changeSubscriptionToolStripMenuItem
+            // label3
             // 
-            this.changeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
-            this.changeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.changeSubscriptionToolStripMenuItem.Name = "changeSubscriptionToolStripMenuItem";
-            this.changeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
-            this.changeSubscriptionToolStripMenuItem.Text = "Change Subscription";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label3.Location = new System.Drawing.Point(269, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 41);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Welcome Back";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label4.Location = new System.Drawing.Point(275, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(297, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Here\'s what\'s happening at your gym today.";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1371, 884);
+            this.panel1.TabIndex = 9;
             // 
             // frmDashboard
             // 
@@ -527,10 +528,10 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,7 +543,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnManageUser;
         private Guna.UI2.WinForms.Guna2Button btnManagePeople;
         private Guna.UI2.WinForms.Guna2Button btnManageMember;

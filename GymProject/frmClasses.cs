@@ -118,5 +118,10 @@ namespace GymMangementSystem
             frm.ShowDialog();
             frmManageClasses_Load(null, null);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
