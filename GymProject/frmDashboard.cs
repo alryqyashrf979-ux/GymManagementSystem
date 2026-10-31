@@ -62,5 +62,11 @@ namespace GymMangementSystem
         {
             contextMenuStrip1.Show(btnSubscriPtions, new Point(btnSubscriPtions.Width, 0));
         }
+
+        private void manageSubscriptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageSubscription frm =new frmManageSubscription();
+            frm.ShowDialog();   
+        }
     }
 }

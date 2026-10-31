@@ -159,15 +159,10 @@ namespace DataAccessLayer
             string sql = @"
                    
 
-
-
-
-
-
  SELECT 
     SubscriptionID AS 'Subscription ID', 
     People.FirstName + ' ' + People.SecondName + ' ' + People.LastName AS 'Member Name', 
-    SubscriptionPlans.Name AS 'Plan', 
+    SubscriptionPlans.Name AS 'Plan Name', 
     StartDate AS 'Start Date', 
     ExpirationDate AS 'Expiration Date', 
     subscriptions.Price AS 'Price', 
@@ -180,7 +175,7 @@ namespace DataAccessLayer
         WHEN 6 THEN 'Scheduled'
         ELSE 'Unknown'
     END AS 'Status', 
-    Users.Username AS 'Created By User ID' 
+    Users.Username AS 'Created By User' 
 FROM Subscriptions
 JOIN Members ON Subscriptions.MemberID = Members.MemberID 
 JOIN People ON Members.PersonID = People.ID

@@ -90,7 +90,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageSubscriptionsToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(323, 58);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(323, 86);
             // 
             // label1
             // 
@@ -472,6 +472,7 @@
             this.manageSubscriptionsToolStripMenuItem.Name = "manageSubscriptionsToolStripMenuItem";
             this.manageSubscriptionsToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
             this.manageSubscriptionsToolStripMenuItem.Text = "Manage Subscriptions";
+            this.manageSubscriptionsToolStripMenuItem.Click += new System.EventHandler(this.manageSubscriptionsToolStripMenuItem_Click);
             // 
             // addSubscriptionToolStripMenuItem
             // 
