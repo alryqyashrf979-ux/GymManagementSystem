@@ -30,11 +30,7 @@ namespace GymMangementSystem
 
             this.MemberID = -1;
      
-            lblEmergencyContactID.Text = "[????]";
-            lblEmergencyContactPhone.Text = "[????]";
-
-            lblRelationship.Text = "[????]";
-            lblEmergencyContactPersonName.Text = "[????]";
+        
       
         }
 
@@ -43,11 +39,9 @@ namespace GymMangementSystem
         {
             uctPersonDetails1.LoadPersonInfo(MemberInfo.PersonID);
             ctrlMemberBasicDetails1.LoadMemberInfoByMemberID(MemberInfo.MemberID);
+            ctrlEmergencyContact1.LoadEmergencyContactInfo(MemberInfo.ContactID);
             this.MemberID = MemberInfo.MemberID;
-            lblRelationship.Text = MemberInfo.Relationship;
-            lblEmergencyContactID.Text = MemberInfo.ContactID.ToString();
-            lblEmergencyContactPersonName.Text = MemberInfo.EmergencyContactPersonName;
-            lblEmergencyContactPhone.Text = MemberInfo.EmergencyContactPhoneNumber;
+ 
         }
 
 

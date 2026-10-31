@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
+    <Compile Include="ctrlEmergencyContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlEmergencyContact.Designer.cs">
+      <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlMemberBasicDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlEmergencyContact.resx">
+      <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemberBasicDetails.resx">
       <DependentUpon>ctrlMemberBasicDetails.cs</DependentUpon>
     </EmbeddedResource>
