@@ -161,7 +161,7 @@
             // ctrlMemebrDetails1
             // 
             this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 76);
+            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 70);
             this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
             this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
             this.ctrlMemebrDetails1.TabIndex = 0;
