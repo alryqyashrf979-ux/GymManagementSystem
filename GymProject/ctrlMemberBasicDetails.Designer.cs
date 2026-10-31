@@ -264,8 +264,8 @@
             // 
             // ctrlMemberBasicDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlMemberBasicDetails";
             this.Size = new System.Drawing.Size(780, 174);

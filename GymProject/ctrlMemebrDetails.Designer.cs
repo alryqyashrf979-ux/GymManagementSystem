@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ctrlEmergencyContact1 = new GymMangementSystem.ctrlEmergencyContact();
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.ctrlMemberBasicDetails1 = new GymMangementSystem.ctrlMemberBasicDetails();
-            this.ctrlEmergencyContact1 = new GymMangementSystem.ctrlEmergencyContact();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +46,17 @@
             this.guna2Panel2.Controls.Add(this.ctrlMemberBasicDetails1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(1, 2);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(959, 565);
             this.guna2Panel2.TabIndex = 2;
+            // 
+            // ctrlEmergencyContact1
+            // 
+            this.ctrlEmergencyContact1.Location = new System.Drawing.Point(3, 443);
+            this.ctrlEmergencyContact1.Name = "ctrlEmergencyContact1";
+            this.ctrlEmergencyContact1.Size = new System.Drawing.Size(954, 137);
+            this.ctrlEmergencyContact1.TabIndex = 119;
             // 
             // uctPersonDetails1
             // 
@@ -63,15 +70,8 @@
             // 
             this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(2, 279);
             this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
-            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(950, 231);
+            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(950, 166);
             this.ctrlMemberBasicDetails1.TabIndex = 118;
-            // 
-            // ctrlEmergencyContact1
-            // 
-            this.ctrlEmergencyContact1.Location = new System.Drawing.Point(3, 443);
-            this.ctrlEmergencyContact1.Name = "ctrlEmergencyContact1";
-            this.ctrlEmergencyContact1.Size = new System.Drawing.Size(954, 137);
-            this.ctrlEmergencyContact1.TabIndex = 119;
             // 
             // ctrlMemebrDetails
             // 
@@ -79,7 +79,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlMemebrDetails";
             this.Size = new System.Drawing.Size(962, 570);
             this.guna2Panel2.ResumeLayout(false);
