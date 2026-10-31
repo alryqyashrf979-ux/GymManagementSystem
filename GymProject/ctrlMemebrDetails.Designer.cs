@@ -48,40 +48,46 @@
             this.guna2Panel2.Location = new System.Drawing.Point(1, 2);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(959, 565);
+            this.guna2Panel2.Size = new System.Drawing.Size(1199, 703);
             this.guna2Panel2.TabIndex = 2;
             // 
             // ctrlEmergencyContact1
             // 
-            this.ctrlEmergencyContact1.Location = new System.Drawing.Point(3, 443);
+            this.ctrlEmergencyContact1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlEmergencyContact1.BackColor = System.Drawing.Color.White;
+            this.ctrlEmergencyContact1.Location = new System.Drawing.Point(5, 550);
+            this.ctrlEmergencyContact1.Margin = new System.Windows.Forms.Padding(5);
             this.ctrlEmergencyContact1.Name = "ctrlEmergencyContact1";
-            this.ctrlEmergencyContact1.Size = new System.Drawing.Size(954, 137);
+            this.ctrlEmergencyContact1.Size = new System.Drawing.Size(1185, 148);
             this.ctrlEmergencyContact1.TabIndex = 119;
             // 
             // uctPersonDetails1
             // 
             this.uctPersonDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.uctPersonDetails1.Location = new System.Drawing.Point(4, 2);
+            this.uctPersonDetails1.Location = new System.Drawing.Point(5, 2);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(5);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(950, 274);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1188, 342);
             this.uctPersonDetails1.TabIndex = 117;
             // 
             // ctrlMemberBasicDetails1
             // 
-            this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(2, 279);
+            this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(5, 341);
+            this.ctrlMemberBasicDetails1.Margin = new System.Windows.Forms.Padding(5);
             this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
-            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(950, 166);
+            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(1185, 208);
             this.ctrlMemberBasicDetails1.TabIndex = 118;
             // 
             // ctrlMemebrDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlMemebrDetails";
-            this.Size = new System.Drawing.Size(962, 570);
+            this.Size = new System.Drawing.Size(1202, 710);
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
