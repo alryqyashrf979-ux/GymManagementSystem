@@ -50,9 +50,9 @@
             this.gbFiltering.CustomBorderColor = System.Drawing.Color.Transparent;
             this.gbFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFiltering.ForeColor = System.Drawing.Color.Black;
-            this.gbFiltering.Location = new System.Drawing.Point(4, 4);
+            this.gbFiltering.Location = new System.Drawing.Point(4, 5);
             this.gbFiltering.Name = "gbFiltering";
-            this.gbFiltering.Size = new System.Drawing.Size(1202, 81);
+            this.gbFiltering.Size = new System.Drawing.Size(1202, 66);
             this.gbFiltering.TabIndex = 2;
             this.gbFiltering.Text = "Filter";
             // 
@@ -72,7 +72,7 @@
             this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtFiltering.IsRequired = true;
-            this.txtFiltering.Location = new System.Drawing.Point(485, 33);
+            this.txtFiltering.Location = new System.Drawing.Point(485, 17);
             this.txtFiltering.Margin = new System.Windows.Forms.Padding(5);
             this.txtFiltering.Name = "txtFiltering";
             this.txtFiltering.PlaceholderText = "Search...";
@@ -98,7 +98,7 @@
             this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddUser;
             this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewMember.Location = new System.Drawing.Point(940, 32);
+            this.btnAddNewMember.Location = new System.Drawing.Point(940, 16);
             this.btnAddNewMember.Name = "btnAddNewMember";
             this.btnAddNewMember.Size = new System.Drawing.Size(77, 36);
             this.btnAddNewMember.TabIndex = 89;
@@ -121,7 +121,7 @@
             this.btnFind.Image = global::GymMangementSystem.Properties.Resources.SearchPerson;
             this.btnFind.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnFind.Location = new System.Drawing.Point(841, 32);
+            this.btnFind.Location = new System.Drawing.Point(841, 16);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(77, 36);
             this.btnFind.TabIndex = 88;
@@ -141,7 +141,7 @@
             this.cmFilteringType.Items.AddRange(new object[] {
             "National No.",
             "Member ID"});
-            this.cmFilteringType.Location = new System.Drawing.Point(226, 32);
+            this.cmFilteringType.Location = new System.Drawing.Point(226, 16);
             this.cmFilteringType.Name = "cmFilteringType";
             this.cmFilteringType.Size = new System.Drawing.Size(249, 36);
             this.cmFilteringType.StartIndex = 0;
@@ -152,7 +152,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(120, 38);
+            this.label9.Location = new System.Drawing.Point(120, 22);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 22);
             this.label9.TabIndex = 85;
@@ -161,7 +161,7 @@
             // ctrlMemebrDetails1
             // 
             this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 90);
+            this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 76);
             this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
             this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
             this.ctrlMemebrDetails1.TabIndex = 0;
