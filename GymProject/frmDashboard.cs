@@ -23,28 +23,40 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
+        void _SelectbtnDashBoard()
+        {
+            btnDashboard.Checked = true;
+        }
+
         private void btnManagePeople_Click(object sender, EventArgs e)
         {
             Form frm = new frmManagePeople();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
         }
 
         private void btnManageUser_Click(object sender, EventArgs e)
         {
             Form frm = new frmManageUsers();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
 
         private void btnManageMember_Click(object sender, EventArgs e)
         {
             Form frm = new frmManageMember();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
 
         private void btnManageClasses_Click(object sender, EventArgs e)
         {
             Form frm = new frmClasses();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -56,6 +68,8 @@ namespace GymMangementSystem
         {
             Form frm = new frmManagePayments();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
 
         private void btnSubscriPtions_Click(object sender, EventArgs e)
@@ -66,7 +80,17 @@ namespace GymMangementSystem
         private void manageSubscriptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmManageSubscription frm =new frmManageSubscription();
-            frm.ShowDialog();   
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+
+        }
+
+        private void addSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddSubscription frm =new frmAddSubscription();
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
     }
 }
