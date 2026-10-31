@@ -17,12 +17,17 @@ namespace DataAccessLayer
         public static int AddNewSubscription(int MemberID,
              int PlanID, DateTime StartDate, DateTime ExpirationDate, double Price, byte Status, int CreatedByUserID)
         {
+            
+   
 
-
-            string sql = "INSERT INTO Subscriptions (MemberID, PlanID, StartDate, ExpirationDate, RegistrationDate,Price, Status, CreatedByUserID) " +
-                         "VALUES (@MemberID, @PlanID, @StartDate, @ExpirationDate,@RegistrationDate, @Price, @Status, @CreatedByUserID); " +
-                         "SELECT SCOPE_IDENTITY();"; // This will return the last inserted identity value
-
+            string sql = 
+                       "DECLARE @NewSubID INT; " +
+                       "INSERT INTO Subscriptions (MemberID, PlanID, StartDate, ExpirationDate, RegistrationDate, Price, Status, CreatedByUserID) " +
+                       "VALUES (@MemberID, @PlanID, @StartDate, @ExpirationDate, @RegistrationDate, @Price, @Status, @CreatedByUserID); " +
+                       "SET @NewSubID = SCOPE_IDENTITY(); " +
+                       "UPDATE Members SET LastSubscriptionID = @NewSubID WHERE MemberID = @MemberID; " +
+                       "SELECT @NewSubID;";
+                       
 
             try
             {
