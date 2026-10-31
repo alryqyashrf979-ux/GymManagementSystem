@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -145,6 +146,7 @@ namespace GymMangementSystem
             lblMemberID.Text = _Member.MemberID.ToString();
             txtInActivationReason.Text = _Member.InActivationReason;
 
+            lnkAddSubscription.Enabled = false;
            
 
 
@@ -206,6 +208,14 @@ namespace GymMangementSystem
 
         }
 
+
+        void AddedSubscription(object Sender,clsSubscription AddedSusbcription )
+        {
+           _Member.LastSubscriptionID= AddedSusbcription.SubscriptionID;
+            lnkAddSubscription.Enabled = false;
+            MessageBox.Show($"Subscription Added Successfully with ID [{AddedSusbcription.SubscriptionID}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -219,7 +229,9 @@ namespace GymMangementSystem
         private void lnkAddSubscription_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmAddSubscription frm = new frmAddSubscription();
-            
+            frm.AddedSubscription += AddedSubscription;
+            frm.LoadMemberDetails(_Member.MemberID);
+            frm.ShowDialog();
         }
     }
 }

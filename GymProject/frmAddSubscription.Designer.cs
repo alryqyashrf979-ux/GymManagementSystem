@@ -317,7 +317,6 @@
         private System.Windows.Forms.TabControl tcSubscriptionInfo;
         private System.Windows.Forms.TabPage tpMemberInfo;
         private System.Windows.Forms.TabPage tpSubscriptionInfo;
-        private ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering1;
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
@@ -325,5 +324,6 @@
         private ctrlSubscriptionPlanDetailsWithFiltering ctrlSubscriptionPlanDetailsWithFiltering1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering1;
     }
 }

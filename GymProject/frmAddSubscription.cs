@@ -31,16 +31,16 @@ namespace GymMangementSystem
             _SubscriptionID = SubscriptionID;
 
         }
+       
+
+       
+
         public enum enMode { AddMode, UpdateMode }
         enMode _Mode = enMode.AddMode;
 
         clsSubscription _Subscription;
 
-        public event 
-
-
-
-       
+        public event EventHandler<clsSubscription> AddedSubscription;
 
 
         void _LoadData()
@@ -82,7 +82,7 @@ namespace GymMangementSystem
             this.Text = "Add Subscription";
             lblTitle2.Text = "Add Subscription";
             ctrlSubscriptionDetails1.ResetSubscriptionData();
-            tpSubscriptionInfo.Enabled = false;
+            tpSubscriptionInfo.Enabled = (ctrlMemberDetailsWithFiltering1.MemberID != -1);
         
 
 
@@ -145,6 +145,9 @@ namespace GymMangementSystem
             {
                 _Mode = enMode.UpdateMode;
 
+
+                AddedSubscription?.Invoke(this, _Subscription);
+
                 lblTitle2.Text = "Update SubscriPtion";
                 this.Text = "Update Subscription";
 
@@ -199,6 +202,13 @@ namespace GymMangementSystem
            
 
         }
+
+        public void LoadMemberDetails(int MemberID)
+        {
+            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(MemberID);
+            ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
+        }
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
