@@ -243,6 +243,12 @@
     <Compile Include="frmShowUserDetails.Designer.cs">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </Compile>
+    <None Include="frmManageSubscription">
+      <SubType>Form</SubType>
+    </None>
+    <Compile Include="ManageSubscription.Designer.cs">
+      <DependentUpon>frmManageSubscription</DependentUpon>
+    </Compile>
     <Compile Include="MyTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -665,6 +671,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Change_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subscriptions.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
