@@ -654,5 +654,17 @@
   <ItemGroup>
     <None Include="Resources\ManageSubscription441.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\freeze_icon_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
