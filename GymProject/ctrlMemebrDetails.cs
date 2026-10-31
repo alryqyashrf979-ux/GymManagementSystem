@@ -29,32 +29,25 @@ namespace GymMangementSystem
             uctPersonDetails1.ResetData();
 
             this.MemberID = -1;
-            txtInActivationReason.Text= string.Empty;
+     
             lblEmergencyContactID.Text = "[????]";
             lblEmergencyContactPhone.Text = "[????]";
-            lblLastSubscriptionID.Text = "[????]";
-            lblMemberID.Text = "[????]";
+
             lblRelationship.Text = "[????]";
             lblEmergencyContactPersonName.Text = "[????]";
-            tgschIsActive.Checked = true;
+      
         }
 
 
         void _LoadData()
         {
             uctPersonDetails1.LoadPersonInfo(MemberInfo.PersonID);
+            ctrlMemberBasicDetails1.LoadMemberInfoByMemberID(MemberInfo.MemberID);
             this.MemberID = MemberInfo.MemberID;
+            lblRelationship.Text = MemberInfo.Relationship;
             lblEmergencyContactID.Text = MemberInfo.ContactID.ToString();
             lblEmergencyContactPersonName.Text = MemberInfo.EmergencyContactPersonName;
             lblEmergencyContactPhone.Text = MemberInfo.EmergencyContactPhoneNumber;
-            lblLastSubscriptionID.Text=MemberInfo.LastSubscriptionID.ToString();
-            lblMemberID.Text=MemberInfo.MemberID.ToString();
-            lblRelationship.Text = MemberInfo.Relationship;
-            tgschIsActive.Checked = MemberInfo.IsActive;
-            txtInActivationReason.Text = MemberInfo.InActivationReason;
-
-            lnkShowLastSubscriptionInfo.Enabled = (MemberInfo.LastSubscriptionID != -1);
-
         }
 
 
