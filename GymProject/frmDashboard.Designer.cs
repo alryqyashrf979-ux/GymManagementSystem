@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnManageEmployees = new Guna.UI2.WinForms.Guna2Button();
             this.btnMangePayment = new Guna.UI2.WinForms.Guna2Button();
@@ -47,14 +48,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnSubscriPtions = new Guna.UI2.WinForms.Guna2Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.manageSubscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.freezeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnSubscriPtions);
             this.guna2Panel1.Controls.Add(this.btnManageEmployees);
             this.guna2Panel1.Controls.Add(this.btnMangePayment);
             this.guna2Panel1.Controls.Add(this.btnManageClasses);
@@ -91,7 +103,7 @@
             this.btnManageEmployees.Image = global::GymMangementSystem.Properties.Resources.Manage_employees;
             this.btnManageEmployees.ImageOffset = new System.Drawing.Point(-1, 0);
             this.btnManageEmployees.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManageEmployees.Location = new System.Drawing.Point(5, 730);
+            this.btnManageEmployees.Location = new System.Drawing.Point(5, 765);
             this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageEmployees.Name = "btnManageEmployees";
             this.btnManageEmployees.Size = new System.Drawing.Size(244, 62);
@@ -116,7 +128,7 @@
             this.btnMangePayment.Image = global::GymMangementSystem.Properties.Resources.manage_payments;
             this.btnMangePayment.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnMangePayment.ImageSize = new System.Drawing.Size(55, 39);
-            this.btnMangePayment.Location = new System.Drawing.Point(5, 662);
+            this.btnMangePayment.Location = new System.Drawing.Point(5, 699);
             this.btnMangePayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMangePayment.Name = "btnMangePayment";
             this.btnMangePayment.Size = new System.Drawing.Size(244, 62);
@@ -142,7 +154,7 @@
             this.btnManageClasses.Image = global::GymMangementSystem.Properties.Resources.manage_classes;
             this.btnManageClasses.ImageOffset = new System.Drawing.Point(-8, 0);
             this.btnManageClasses.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManageClasses.Location = new System.Drawing.Point(5, 594);
+            this.btnManageClasses.Location = new System.Drawing.Point(5, 634);
             this.btnManageClasses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageClasses.Name = "btnManageClasses";
             this.btnManageClasses.Size = new System.Drawing.Size(244, 62);
@@ -168,7 +180,7 @@
             this.btnManageTrainers.Image = global::GymMangementSystem.Properties.Resources.manageTrainers;
             this.btnManageTrainers.ImageOffset = new System.Drawing.Point(-6, 0);
             this.btnManageTrainers.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManageTrainers.Location = new System.Drawing.Point(5, 526);
+            this.btnManageTrainers.Location = new System.Drawing.Point(5, 568);
             this.btnManageTrainers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageTrainers.Name = "btnManageTrainers";
             this.btnManageTrainers.Size = new System.Drawing.Size(244, 62);
@@ -219,7 +231,7 @@
             this.btnManageUser.Image = global::GymMangementSystem.Properties.Resources.manageUsers;
             this.btnManageUser.ImageOffset = new System.Drawing.Point(-10, 0);
             this.btnManageUser.ImageSize = new System.Drawing.Size(80, 39);
-            this.btnManageUser.Location = new System.Drawing.Point(5, 391);
+            this.btnManageUser.Location = new System.Drawing.Point(5, 394);
             this.btnManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageUser.Name = "btnManageUser";
             this.btnManageUser.Size = new System.Drawing.Size(244, 62);
@@ -245,7 +257,7 @@
             this.btnManagePeople.Image = global::GymMangementSystem.Properties.Resources.managepeople;
             this.btnManagePeople.ImageOffset = new System.Drawing.Point(-8, 0);
             this.btnManagePeople.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManagePeople.Location = new System.Drawing.Point(5, 322);
+            this.btnManagePeople.Location = new System.Drawing.Point(5, 327);
             this.btnManagePeople.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManagePeople.Name = "btnManagePeople";
             this.btnManagePeople.Size = new System.Drawing.Size(244, 62);
@@ -272,7 +284,7 @@
             this.guna2Button1.Image = global::GymMangementSystem.Properties.Resources.file_000000009be4824391a90a2907bdb04d;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(-18, 0);
             this.guna2Button1.ImageSize = new System.Drawing.Size(75, 39);
-            this.guna2Button1.Location = new System.Drawing.Point(5, 250);
+            this.guna2Button1.Location = new System.Drawing.Point(5, 257);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(244, 62);
@@ -334,7 +346,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1102, 79);
             this.guna2Panel3.TabIndex = 1;
@@ -407,12 +419,92 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1371, 884);
             this.panel1.TabIndex = 9;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1371, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // btnSubscriPtions
+            // 
+            this.btnSubscriPtions.BackColor = System.Drawing.Color.Transparent;
+            this.btnSubscriPtions.BorderRadius = 5;
+            this.btnSubscriPtions.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSubscriPtions.ContextMenuStrip = this.contextMenuStrip1;
+            this.btnSubscriPtions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubscriPtions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubscriPtions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSubscriPtions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnSubscriPtions.FillColor = System.Drawing.Color.Transparent;
+            this.btnSubscriPtions.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubscriPtions.ForeColor = System.Drawing.Color.White;
+            this.btnSubscriPtions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnSubscriPtions.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnSubscriPtions.Image = global::GymMangementSystem.Properties.Resources.manageMembers;
+            this.btnSubscriPtions.ImageOffset = new System.Drawing.Point(-10, 0);
+            this.btnSubscriPtions.ImageSize = new System.Drawing.Size(55, 39);
+            this.btnSubscriPtions.Location = new System.Drawing.Point(3, 515);
+            this.btnSubscriPtions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSubscriPtions.Name = "btnSubscriPtions";
+            this.btnSubscriPtions.Size = new System.Drawing.Size(244, 62);
+            this.btnSubscriPtions.TabIndex = 15;
+            this.btnSubscriPtions.Text = "Subscriptioins";
+            this.btnSubscriPtions.TextOffset = new System.Drawing.Point(-7, 0);
+            this.btnSubscriPtions.Click += new System.EventHandler(this.btnSubscriPtions_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageSubscriptionsToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 28);
+            // 
+            // manageSubscriptionsToolStripMenuItem
+            // 
+            this.manageSubscriptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addSubscriptionToolStripMenuItem,
+            this.cancelSubscriptionToolStripMenuItem,
+            this.freezeSubscriptionToolStripMenuItem,
+            this.changeSubscriptionToolStripMenuItem});
+            this.manageSubscriptionsToolStripMenuItem.Name = "manageSubscriptionsToolStripMenuItem";
+            this.manageSubscriptionsToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
+            this.manageSubscriptionsToolStripMenuItem.Text = "Manage Subscriptions";
+            // 
+            // addSubscriptionToolStripMenuItem
+            // 
+            this.addSubscriptionToolStripMenuItem.Name = "addSubscriptionToolStripMenuItem";
+            this.addSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.addSubscriptionToolStripMenuItem.Text = "Add Subscription";
+            // 
+            // cancelSubscriptionToolStripMenuItem
+            // 
+            this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
+            this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
+            // 
+            // freezeSubscriptionToolStripMenuItem
+            // 
+            this.freezeSubscriptionToolStripMenuItem.Name = "freezeSubscriptionToolStripMenuItem";
+            this.freezeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.freezeSubscriptionToolStripMenuItem.Text = "Freeze Subscription";
+            // 
+            // changeSubscriptionToolStripMenuItem
+            // 
+            this.changeSubscriptionToolStripMenuItem.Name = "changeSubscriptionToolStripMenuItem";
+            this.changeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.changeSubscriptionToolStripMenuItem.Text = "Change Subscription";
             // 
             // frmDashboard
             // 
@@ -427,6 +519,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -438,6 +531,9 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,5 +560,13 @@
         private System.Windows.Forms.Label lblCurrentUseName;
         private System.Windows.Forms.Label lblShowUserInformation;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnSubscriPtions;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem manageSubscriptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addSubscriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelSubscriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem freezeSubscriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeSubscriptionToolStripMenuItem;
     }
 }

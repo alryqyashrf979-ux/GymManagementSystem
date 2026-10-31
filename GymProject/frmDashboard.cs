@@ -57,5 +57,10 @@ namespace GymMangementSystem
             Form frm = new frmManagePayments();
             frm.ShowDialog();
         }
+
+        private void btnSubscriPtions_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(btnSubscriPtions, new Point(btnSubscriPtions.Width, 0));
+        }
     }
 }
