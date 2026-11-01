@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateFrozenSubscription));
-            this.ctrlMemberBasicDetailsWithFilter1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
+            this.ctrlMemberBasicDetailsWithFilter1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -103,7 +103,7 @@
 
         #endregion
 
-        private ctrlMemberBasicDetailsWithFilter ctrlMemberBasicDetailsWithFilter1;
+        private ctrlMemberDetailsWithFiltering ctrlMemberBasicDetailsWithFilter1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;

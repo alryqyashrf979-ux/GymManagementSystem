@@ -40,8 +40,8 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlEmergencyContact1 = new GymMangementSystem.ctrlEmergencyContact();
-            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
+            this.ctrlEmergencyContact1 = new GymMangementSystem.ctrlEmergencyContactDetails();
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
             this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
             this.panel4.SuspendLayout();
@@ -265,7 +265,7 @@
             this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(966, 517);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
-            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberDetailsWithFiltering.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
             // 
             // ctrlSubscriptionPlanDetailsWithFiltering1
             // 
@@ -331,7 +331,7 @@
         private ctrlSubscriptionPlanDetailsWithFiltering ctrlSubscriptionPlanDetailsWithFiltering1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering1;
-        private ctrlEmergencyContact ctrlEmergencyContact1;
+        public ctrlMemberBasicDetailsWithFilter ctrlMemberDetailsWithFiltering1;
+        private ctrlEmergencyContactDetails ctrlEmergencyContact1;
     }
 }
