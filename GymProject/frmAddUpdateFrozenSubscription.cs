@@ -67,19 +67,22 @@ namespace GymMangementSystem
             lblFrozenByUser.Text = "[????]";
             lblFrozenSubscriptionID.Text = "[????]";
             lblSubscriptionID.Text = "[????]";
-
+            txtFees.Text = "0";
             lblTitle.Text = "Add Frozen Subscription";
             this.Text=lblTitle.Text;
 
             if (_Mode == enMode.Addnew)
                 _FrozenSubscriptionInf = new clsFrozenSubscription();
 
+            dtEndDate.MaxDate = DateTime.Now.AddYears(2);
+            dtStartDate.MaxDate = DateTime.Now;
 
             dtStartDate.MinDate = DateTime.Now;
             dtEndDate.MinDate = DateTime.Now;
 
 
-
+            dtStartDate.Value = DateTime.Now;
+            dtEndDate.Value = DateTime.Now;
         }
 
         void _LoadData()
@@ -103,14 +106,14 @@ namespace GymMangementSystem
             lblFrozenByUser.Text = _FrozenSubscriptionInf.FrozenByUserInfo.UserName;
             lblFrozenSubscriptionID.Text = _FrozenSubscriptionInf.FreezeID.ToString();
             lblSubscriptionID.Text = _FrozenSubscriptionInf.SubscriptionID.ToString();
-            rdYes.Checked = _FrozenSubscriptionInf.IsFeesPaid;
             txtFreezeReason.Text= _FrozenSubscriptionInf.FreezeReason.ToString();
-
+            txtFees.Text = _FrozenSubscriptionInf.FreezeFee.ToString();
 
 
             if(_FrozenSubscriptionInf.FreezeStartDate.Date<DateTime.Now.Date)
             {
                 dtStartDate.Enabled = false;
+                dtStartDate.MinDate = _FrozenSubscriptionInf.FreezeStartDate;
             }
           
             dtStartDate.Value=_FrozenSubscriptionInf.FreezeStartDate;
@@ -133,6 +136,17 @@ namespace GymMangementSystem
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+
+            if (txtFees.Text == "" || txtFees.Text == "0")
+                _FrozenSubscriptionInf.IsFeesPaid = false;
+            else
+                _FrozenSubscriptionInf.IsFeesPaid = true;
+
+
+
+
+            if(_FrozenSubscriptionInf.IsFeesPaid)
+                _FrozenSubscriptionInf.FreezeFee=Convert.ToDouble(txtFees.Text);
 
 
 
