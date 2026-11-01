@@ -85,19 +85,10 @@ namespace GymMangementSystem
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
+        //private void TakeFocusAway(object sender, EventArgs e)
+        //{
+        //    this.ActiveControl = null;
+        //}
     }
 }
