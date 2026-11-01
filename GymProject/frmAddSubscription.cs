@@ -181,9 +181,10 @@ namespace GymMangementSystem
         private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
         {
 
-            if (e.MemberInfo != null)
-            {
-                ctrlEmergencyContact1.LoadEmergencyContactInfo(e.MemberInfo.MemberID);
+
+            if (e.MemberInfo == null)
+                return;
+
 
                 if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
                 {
@@ -199,10 +200,9 @@ namespace GymMangementSystem
                     tpSubscriptionInfo.Enabled = true;
                     ctrlSubscriptionDetails1.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
 
-                }
-            }
-            else
-                ctrlEmergencyContact1.ResetEmergencyContactData();
+               }
+            
+          
 
 
 
