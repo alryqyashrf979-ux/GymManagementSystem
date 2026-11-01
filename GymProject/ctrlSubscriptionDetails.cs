@@ -74,6 +74,7 @@ namespace GymMangementSystem
             lblRegistration.Text = "[yyyy/mm/dd]";
             lnkShowMemberInof.Enabled = false;
             lnkShowUserInfo.Enabled = false;
+            dtStartDate.Enabled = false;
 
             dtStartDate.MaxDate = DateTime.Today.AddDays(_MaxAllowDays);
             dtStartDate.MinDate = DateTime.Today;
@@ -96,10 +97,13 @@ namespace GymMangementSystem
             lnkShowMemberInof.Enabled = (_SubscriptionInfo.MemberID != -1);
             lnkShowUserInfo.Enabled= (_SubscriptionInfo.createdByUserID != -1);
 
+            dtStartDate.MaxDate = _SubscriptionInfo.RegistrationDate.AddDays(_MaxAllowDays);
+
+            dtStartDate.MinDate = DateTime.Now.CompareTo(_SubscriptionInfo.StartDate)<0?DateTime.Now: _SubscriptionInfo.StartDate;
+
             dtStartDate.Value = _SubscriptionInfo.StartDate;
 
-            dtStartDate.MaxDate= _SubscriptionInfo.RegistrationDate.AddDays(_MaxAllowDays);
-            dtStartDate.MinDate = DateTime.Today;
+           
 
             dtStartDate.Enabled = EnableStartDate;
         }
@@ -133,7 +137,7 @@ namespace GymMangementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+         //   Form frm=new fr
         }
     }
 }
