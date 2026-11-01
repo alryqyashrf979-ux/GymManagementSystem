@@ -52,7 +52,7 @@ namespace DataBusinessLayer
 
             _Mode = enMode.Add;
 
-        }
+        }//
         public clsMembers(int MemberID, int personID, int lastSubscriptionID, bool IsActive, int EmergencyContactID,string InActivationReason, string ContactName,string ContactPhone,string Relationship):
                                                                                                                       base(ContactName,Relationship,ContactPhone, EmergencyContactID)
         { 
@@ -63,6 +63,7 @@ namespace DataBusinessLayer
             this.InActivationReason = InActivationReason;
 
             this._PersonInfo = clsPeople.Find(PersonID);
+            //
             this._LastSubscriptionInfo = clsSubscription.FindBySubscriptionID(LastSubscriptionID);
 
             _Mode = enMode.Update;

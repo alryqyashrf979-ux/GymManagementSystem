@@ -49,8 +49,8 @@ namespace DataBusinessLayer
             this.Price = Price;
             this.createdByUserID = createdByUserID;
             this.RegistrationDate = RegistrationDate;
-
-            this._MemberInfo=clsMembers.FindMemberUsingMemberID(MemberID);
+            // if you call this compistion it will get exception stackOverFlow that mean will git in infinite loop because you have compistion for memberinfo in clsSubscription and you have compistion for subscription in clsMember
+          //  this._MemberInfo=clsMembers.FindMemberUsingMemberID(MemberID);
             this._PlanInfo=clsSubscriptionPlans.Find(PlanID);
 
             Mode = enModeSubscription.Update;

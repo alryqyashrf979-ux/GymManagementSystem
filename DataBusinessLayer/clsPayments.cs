@@ -118,5 +118,14 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        static public int SelectPaymentIDBySubscriptionID(int SubscriptionID)
+        {
+            return clsPaymentData.SelectPaymentIDBySubscriptionID(SubscriptionID);
+        }
+
+        public int SelectPaymentID()
+        {
+            return clsPaymentData.SelectPaymentIDBySubscriptionID(this.SubscriptionID);
+        }
     }
 }

@@ -169,5 +169,26 @@ namespace DataAccessLayer
             return false;
         }
        
+        static public int SelectPaymentIDBySubscriptionID(int SubscriptionID)
+        {
+            string query = @"select top 1 PaymentID from Payments where SubscriptionID=@SubscriptionID order by PaymentDate desc;";
+
+            using (SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command=new SqlCommand(query, connection))
+                {
+          
+                    command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+
+                            object Resault= command.ExecuteScalar();
+                            if (Resault != null && int.TryParse(Resault.ToString(), out int PaymentID))
+                                return PaymentID;
+                           else
+                            return -1;
+                    
+                }
+            }
+        }
     }
 }
