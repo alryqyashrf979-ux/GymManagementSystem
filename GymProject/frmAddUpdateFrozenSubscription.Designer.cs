@@ -28,17 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateFrozenSubscription));
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pnlFrozenSubscription = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtFees = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblFreezingDuration = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFreezeReason = new GymMangementSystem.MyTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.dtStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblFrozenByUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,20 +54,16 @@
             this.lblFrozenSubscriptionID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ctrlMemberBasicDetailsWithFilter1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
-            this.txtFees = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.pnlFrozenSubscription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -86,6 +89,18 @@
             this.lblTitle.Size = new System.Drawing.Size(298, 32);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Add Frozen Subscription";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(56, 49);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
             // 
             // pnlFrozenSubscription
             // 
@@ -116,6 +131,39 @@
             this.pnlFrozenSubscription.Size = new System.Drawing.Size(1180, 208);
             this.pnlFrozenSubscription.TabIndex = 16;
             // 
+            // txtFees
+            // 
+            this.txtFees.BackColor = System.Drawing.Color.Transparent;
+            this.txtFees.BorderRadius = 5;
+            this.txtFees.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFees.DefaultText = "";
+            this.txtFees.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFees.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFees.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFees.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFees.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFees.Font = new System.Drawing.Font("Segoe UI Emoji", 11.2F, System.Drawing.FontStyle.Bold);
+            this.txtFees.ForeColor = System.Drawing.Color.Black;
+            this.txtFees.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFees.Location = new System.Drawing.Point(787, 84);
+            this.txtFees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFees.Name = "txtFees";
+            this.txtFees.PlaceholderText = "Fees";
+            this.txtFees.SelectedText = "";
+            this.txtFees.Size = new System.Drawing.Size(297, 34);
+            this.txtFees.TabIndex = 162;
+            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(551, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 22);
+            this.label6.TabIndex = 160;
+            this.label6.Text = "Fees:";
+            // 
             // lblFreezingDuration
             // 
             this.lblFreezingDuration.AutoSize = true;
@@ -138,6 +186,16 @@
             this.label8.Size = new System.Drawing.Size(196, 27);
             this.label8.TabIndex = 158;
             this.label8.Text = "Freezing Duration :";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.money_32;
+            this.pictureBox2.Location = new System.Drawing.Point(749, 84);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 161;
+            this.pictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -194,6 +252,17 @@
             this.label4.TabIndex = 152;
             this.label4.Text = "End Date :";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox1.Location = new System.Drawing.Point(208, 158);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 151;
+            this.pictureBox1.TabStop = false;
+            // 
             // dtEndDate
             // 
             this.dtEndDate.BackColor = System.Drawing.Color.Transparent;
@@ -224,6 +293,17 @@
             this.label1.Size = new System.Drawing.Size(121, 27);
             this.label1.TabIndex = 149;
             this.label1.Text = "Start Date :";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox11.Location = new System.Drawing.Point(208, 109);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(47, 34);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 148;
+            this.pictureBox11.TabStop = false;
             // 
             // dtStartDate
             // 
@@ -324,39 +404,6 @@
             this.ctrlMemberBasicDetailsWithFilter1.TabIndex = 15;
             this.ctrlMemberBasicDetailsWithFilter1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberBasicDetailsWithFilter1_OnMemberSelected);
             // 
-            // txtFees
-            // 
-            this.txtFees.BackColor = System.Drawing.Color.Transparent;
-            this.txtFees.BorderRadius = 5;
-            this.txtFees.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFees.DefaultText = "";
-            this.txtFees.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFees.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFees.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFees.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFees.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFees.Font = new System.Drawing.Font("Segoe UI Emoji", 11.2F, System.Drawing.FontStyle.Bold);
-            this.txtFees.ForeColor = System.Drawing.Color.Black;
-            this.txtFees.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFees.Location = new System.Drawing.Point(787, 84);
-            this.txtFees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtFees.Name = "txtFees";
-            this.txtFees.PlaceholderText = "Fees";
-            this.txtFees.SelectedText = "";
-            this.txtFees.Size = new System.Drawing.Size(297, 34);
-            this.txtFees.TabIndex = 162;
-            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(551, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 22);
-            this.label6.TabIndex = 160;
-            this.label6.Text = "Fees:";
-            // 
             // btnSave
             // 
             this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
@@ -409,49 +456,9 @@
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "Close";
             // 
-            // pictureBox2
+            // errorProvider1
             // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.money_32;
-            this.pictureBox2.Location = new System.Drawing.Point(749, 84);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 161;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox1.Location = new System.Drawing.Point(208, 158);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 151;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox11.Location = new System.Drawing.Point(208, 109);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(47, 34);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 148;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 49);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddUpdateFrozenSubscription
             // 
@@ -472,12 +479,13 @@
             this.Load += new System.EventHandler(this.frmAddUpdateFrozenSubscription_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.pnlFrozenSubscription.ResumeLayout(false);
             this.pnlFrozenSubscription.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -509,5 +517,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFees;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
