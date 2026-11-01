@@ -181,8 +181,10 @@ namespace GymMangementSystem
         private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberDetailsWithFiltering.MemberEventArgs e)
         {
 
-            if (e.MemberInfo.MemberID != -1)
+            if (e.MemberInfo != null)
             {
+                ctrlEmergencyContact1.LoadEmergencyContactInfo(e.MemberInfo.MemberID);
+
                 if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
                 {
                     MessageBox.Show("Selected Member already has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -199,7 +201,10 @@ namespace GymMangementSystem
 
                 }
             }
-           
+            else
+                ctrlEmergencyContact1.ResetEmergencyContactData();
+
+
 
         }
 
