@@ -42,8 +42,8 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txtInActivationReason = new GymMangementSystem.MyTextBox();
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
+            this.txtInActivationReason = new GymMangementSystem.MyTextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -55,7 +55,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.lblLastSubscriptionID);
             this.guna2Panel1.Controls.Add(this.lblMemberID);
@@ -71,7 +71,7 @@
             this.guna2Panel1.Controls.Add(this.txtInActivationReason);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Location = new System.Drawing.Point(3, 339);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1179, 218);
             this.guna2Panel1.TabIndex = 0;
@@ -131,7 +131,7 @@
             this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.UnActive;
             this.pictureBox13.Location = new System.Drawing.Point(224, 106);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(39, 29);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,7 +196,7 @@
             // 
             this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.IsActive;
             this.pictureBox9.Location = new System.Drawing.Point(718, 60);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(39, 35);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1179, 44);
             this.guna2Panel3.TabIndex = 129;
@@ -233,12 +233,21 @@
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
             this.pictureBox7.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(42, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
+            // 
+            // uctPersonDetails1
+            // 
+            this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
+            this.uctPersonDetails1.Location = new System.Drawing.Point(0, 0);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetails1.Name = "uctPersonDetails1";
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
+            this.uctPersonDetails1.TabIndex = 1;
             // 
             // txtInActivationReason
             // 
@@ -270,15 +279,6 @@
             this.txtInActivationReason.TabIndex = 136;
             this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
             // 
-            // uctPersonDetails1
-            // 
-            this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetails1.Location = new System.Drawing.Point(0, 0);
-            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
-            this.uctPersonDetails1.TabIndex = 1;
-            // 
             // ctrlMemberBasicDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -286,7 +286,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.uctPersonDetails1);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctrlMemberBasicDetails";
             this.Size = new System.Drawing.Size(1187, 558);
             this.guna2Panel1.ResumeLayout(false);
