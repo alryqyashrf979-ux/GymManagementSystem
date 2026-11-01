@@ -74,6 +74,8 @@ namespace GymMangementSystem
             lblRegistration.Text = "[yyyy/mm/dd]";
             lnkShowMemberInof.Enabled = false;
             lnkShowUserInfo.Enabled = false;
+            lkShowPlanDetails.Enabled = false;
+
             dtStartDate.Enabled = false;
 
             dtStartDate.MaxDate = DateTime.Today.AddDays(_MaxAllowDays);
@@ -137,7 +139,8 @@ namespace GymMangementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-         //   Form frm=new fr
+            Form frm = new frmShowPlanDetails(_SubscriptionInfo.PlanID);
+            frm.ShowDialog();
         }
     }
 }
