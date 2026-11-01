@@ -44,6 +44,7 @@ namespace GymMangementSystem
             lblLastSubscriptionID.Text = "[????]";
             lblMemberID.Text = "[????]";
             tgschIsActive.Checked = true;
+            lnkShowLastSubscriptionInfo.Enabled = false;
             MemberID = -1;
         }
 
@@ -90,6 +91,12 @@ namespace GymMangementSystem
 
             _LoadData();
 
+        }
+
+        private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form frm = new frmShowSubscriptionDetails(MemberInfo.LastSubscriptionID);
+            frm.ShowDialog();
         }
     }
 }

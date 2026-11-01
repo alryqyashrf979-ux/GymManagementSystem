@@ -41,7 +41,7 @@ namespace GymMangementSystem
 
             nudPaymentAmount.Value = 0;
             cmPaymentMethod.SelectedIndex = 0;
-
+            tpPaymentInfo.Enabled = false;
         }
         private void _LoadData()
         {
