@@ -12,9 +12,17 @@ namespace GymMangementSystem
 {
     public partial class frmShowSubscriptionDetails : Form
     {
-        public frmShowSubscriptionDetails()
+        private int _SubscriptionID = -1;
+        public frmShowSubscriptionDetails(int SubscriptionID)
         {
             InitializeComponent();
+            _SubscriptionID = SubscriptionID;
+        }
+
+        private void frmShowSubscriptionDetails_Load(object sender, EventArgs e)
+        {
+            ctrlSubscriptionDetails1.LoadSubscriptionDetails(_SubscriptionID);
+            ctrlSubscriptionDetails1.EnableStartDate = false;
         }
     }
 }

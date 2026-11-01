@@ -103,7 +103,7 @@ namespace GymMangementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form frm = new frmShowSubscriptionDetails();
+            Form frm = new frmShowSubscriptionDetails(ctrlPaymentDetails1.Payment.SubscriptionID);
             frm.ShowDialog();
         }
     }

@@ -82,6 +82,7 @@ namespace GymMangementSystem
             this.Text = "Add Subscription";
             lblTitle2.Text = "Add Subscription";
             ctrlSubscriptionDetails1.ResetSubscriptionData();
+            ctrlSubscriptionDetails1.EnableStartDate = true;
             tpSubscriptionInfo.Enabled = (ctrlMemberDetailsWithFiltering1.MemberID != -1);
         
 
