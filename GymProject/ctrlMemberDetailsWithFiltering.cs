@@ -94,7 +94,7 @@ namespace GymMangementSystem
                 ctrlMemebrDetails1.LoadMemberInfoByNationalNu(txtFiltering.Text);
             }
 
-            if (ctrlMemebrDetails1.MemberInfo != null)
+           // if (ctrlMemebrDetails1.MemberInfo != null)
                 SelectedMember(this, new MemberEventArgs(ctrlMemebrDetails1.MemberInfo));
         }
 

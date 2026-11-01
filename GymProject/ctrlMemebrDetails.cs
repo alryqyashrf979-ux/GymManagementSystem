@@ -39,7 +39,6 @@ namespace GymMangementSystem
         {
             uctPersonDetails1.LoadPersonInfo(MemberInfo.PersonID);
             ctrlMemberBasicDetails1.LoadMemberInfoByMemberID(MemberInfo.MemberID);
-            ctrlEmergencyContact1.LoadEmergencyContactInfo(MemberInfo.ContactID);
             this.MemberID = MemberInfo.MemberID;
  
         }

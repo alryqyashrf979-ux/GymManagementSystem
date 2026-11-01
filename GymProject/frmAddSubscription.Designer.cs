@@ -35,14 +35,15 @@
             this.tcSubscriptionInfo = new System.Windows.Forms.TabControl();
             this.tpMemberInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.tpSubscriptionInfo = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
-            this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlEmergencyContact1 = new GymMangementSystem.ctrlEmergencyContact();
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
+            this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
+            this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcSubscriptionInfo.SuspendLayout();
@@ -58,9 +59,8 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1226, 41);
+            this.panel4.Size = new System.Drawing.Size(981, 33);
             this.panel4.TabIndex = 14;
             // 
             // lblTitle2
@@ -68,10 +68,9 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(62, 2);
-            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle2.Location = new System.Drawing.Point(50, 2);
             this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(212, 32);
+            this.lblTitle2.Size = new System.Drawing.Size(172, 26);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Add Subscription";
             // 
@@ -80,9 +79,8 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 41);
+            this.pictureBox10.Size = new System.Drawing.Size(45, 33);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -92,26 +90,25 @@
             this.tcSubscriptionInfo.Controls.Add(this.tpMemberInfo);
             this.tcSubscriptionInfo.Controls.Add(this.tpSubscriptionInfo);
             this.tcSubscriptionInfo.ItemSize = new System.Drawing.Size(1, 1);
-            this.tcSubscriptionInfo.Location = new System.Drawing.Point(5, 40);
-            this.tcSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcSubscriptionInfo.Location = new System.Drawing.Point(4, 32);
             this.tcSubscriptionInfo.Multiline = true;
             this.tcSubscriptionInfo.Name = "tcSubscriptionInfo";
             this.tcSubscriptionInfo.RightToLeftLayout = true;
             this.tcSubscriptionInfo.SelectedIndex = 0;
-            this.tcSubscriptionInfo.Size = new System.Drawing.Size(1225, 831);
+            this.tcSubscriptionInfo.Size = new System.Drawing.Size(980, 665);
             this.tcSubscriptionInfo.TabIndex = 15;
             // 
             // tpMemberInfo
             // 
             this.tpMemberInfo.BackColor = System.Drawing.Color.White;
             this.tpMemberInfo.Controls.Add(this.btnNext);
+            this.tpMemberInfo.Controls.Add(this.ctrlEmergencyContact1);
             this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
             this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 5);
-            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpMemberInfo.Name = "tpMemberInfo";
-            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tpMemberInfo.Size = new System.Drawing.Size(1217, 822);
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpMemberInfo.Size = new System.Drawing.Size(972, 656);
             this.tpMemberInfo.TabIndex = 0;
             // 
             // btnNext
@@ -132,24 +129,13 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1045, 775);
+            this.btnNext.Location = new System.Drawing.Point(840, 614);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(159, 45);
+            this.btnNext.Size = new System.Drawing.Size(127, 36);
             this.btnNext.TabIndex = 17;
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // ctrlMemberDetailsWithFiltering1
-            // 
-            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(2, -5);
-            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
-            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1208, 776);
-            this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
-            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberDetailsWithFiltering.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
             // 
             // tpSubscriptionInfo
             // 
@@ -160,20 +146,19 @@
             this.tpSubscriptionInfo.Controls.Add(this.ctrlSubscriptionDetails1);
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 5);
-            this.tpSubscriptionInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpSubscriptionInfo.Name = "tpSubscriptionInfo";
-            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tpSubscriptionInfo.Size = new System.Drawing.Size(1217, 822);
+            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpSubscriptionInfo.Size = new System.Drawing.Size(972, 656);
             this.tpSubscriptionInfo.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Add_Subscription_Icon2;
-            this.pictureBox1.Location = new System.Drawing.Point(-22, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(-18, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(381, 322);
+            this.pictureBox1.Size = new System.Drawing.Size(305, 258);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -199,34 +184,13 @@
             this.guna2Button1.Image = global::GymMangementSystem.Properties.Resources.Back;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(-5, 1);
             this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(2, 778);
+            this.guna2Button1.Location = new System.Drawing.Point(2, 622);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(131, 38);
+            this.guna2Button1.Size = new System.Drawing.Size(105, 30);
             this.guna2Button1.TabIndex = 19;
             this.guna2Button1.Text = "Back";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // ctrlSubscriptionPlanDetailsWithFiltering1
-            // 
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(361, 18);
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(854, 456);
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 2;
-            // 
-            // ctrlSubscriptionDetails1
-            // 
-            this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionDetails1.EnableStartDate = true;
-            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(132, 474);
-            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
-            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1079, 342);
-            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            this.ctrlSubscriptionDetails1.TabIndex = 1;
             // 
             // btnSave
             // 
@@ -247,10 +211,10 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1069, 874);
+            this.btnSave.Location = new System.Drawing.Point(855, 699);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 38);
+            this.btnSave.Size = new System.Drawing.Size(116, 30);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -273,21 +237,64 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(891, 874);
+            this.btnClose.Location = new System.Drawing.Point(713, 699);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(156, 38);
+            this.btnClose.Size = new System.Drawing.Size(125, 30);
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ctrlEmergencyContact1
+            // 
+            this.ctrlEmergencyContact1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlEmergencyContact1.BackColor = System.Drawing.Color.White;
+            this.ctrlEmergencyContact1.Location = new System.Drawing.Point(14, 502);
+            this.ctrlEmergencyContact1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlEmergencyContact1.Name = "ctrlEmergencyContact1";
+            this.ctrlEmergencyContact1.Size = new System.Drawing.Size(948, 118);
+            this.ctrlEmergencyContact1.TabIndex = 120;
+            // 
+            // ctrlMemberDetailsWithFiltering1
+            // 
+            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(2, -4);
+            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(966, 517);
+            this.ctrlMemberDetailsWithFiltering1.TabIndex = 13;
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberDetailsWithFiltering.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
+            // 
+            // ctrlSubscriptionPlanDetailsWithFiltering1
+            // 
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(289, 14);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(683, 365);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 2;
+            // 
+            // ctrlSubscriptionDetails1
+            // 
+            this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionDetails1.EnableStartDate = true;
+            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(106, 379);
+            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
+            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(863, 274);
+            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.ctrlSubscriptionDetails1.TabIndex = 1;
+            // 
             // frmAddSubscription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1226, 922);
+            this.ClientSize = new System.Drawing.Size(981, 733);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcSubscriptionInfo);
@@ -325,5 +332,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         public ctrlMemberDetailsWithFiltering ctrlMemberDetailsWithFiltering1;
+        private ctrlEmergencyContact ctrlEmergencyContact1;
     }
 }

@@ -28,7 +28,7 @@ namespace GymMangementSystem
             lblEmergencyContactPhone.Text = EmergencyContactInfo.EmergencyContactPhoneNumber;
         }
 
-        private void _ResetMemberData()
+        public void ResetEmergencyContactData()
         {
             lblEmergencyContactID.Text = "[????]";
             lblEmergencyContactPhone.Text = "[????]";
@@ -44,7 +44,7 @@ namespace GymMangementSystem
 
             if (EmergencyContactInfo == null)
             {
-                _ResetMemberData();
+                ResetEmergencyContactData();
                 MessageBox.Show("No emergency contact with contact ID=" + ContactID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
