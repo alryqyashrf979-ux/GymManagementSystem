@@ -150,13 +150,17 @@ namespace GymMangementSystem
 
         private void txtFees_Validating(object sender, CancelEventArgs e)
         {
-             else if (!clsValidation.IsNumber(txtFees.Text.Trim()))
+            if (!clsValidation.IsNumber(txtFees.Text.Trim()))
             {
 
                 e.Cancel = true;
                 errorProvider1.SetError(txtFees, "Invalid Number!");
                 return;
 
+            }
+            else
+            {
+                errorProvider1.SetError(txtFees, "");
             }
             
         }
