@@ -105,7 +105,7 @@
             this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 5);
             this.tpMemberInfo.Name = "tpMemberInfo";
-            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpMemberInfo.Size = new System.Drawing.Size(972, 667);
             this.tpMemberInfo.TabIndex = 0;
             // 
@@ -113,7 +113,7 @@
             // 
             this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
             this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(2, -5);
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(2, -6);
             this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(966, 629);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 18;
@@ -155,8 +155,8 @@
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 5);
             this.tpSubscriptionInfo.Name = "tpSubscriptionInfo";
-            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpSubscriptionInfo.Size = new System.Drawing.Size(972, 656);
+            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSubscriptionInfo.Size = new System.Drawing.Size(972, 667);
             this.tpSubscriptionInfo.TabIndex = 1;
             // 
             // pictureBox1
