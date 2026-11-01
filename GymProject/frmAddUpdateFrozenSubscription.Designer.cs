@@ -275,12 +275,12 @@
             this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtEndDate.Location = new System.Drawing.Point(264, 161);
             this.dtEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtEndDate.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            this.dtEndDate.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
+            this.dtEndDate.MaxDate = new System.DateTime(2027, 7, 20, 0, 0, 0, 0);
+            this.dtEndDate.MinDate = new System.DateTime(2026, 11, 6, 0, 0, 0, 0);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(219, 32);
             this.dtEndDate.TabIndex = 150;
-            this.dtEndDate.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtEndDate.Value = new System.DateTime(2026, 11, 6, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -317,12 +317,12 @@
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtStartDate.Location = new System.Drawing.Point(264, 112);
             this.dtStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtStartDate.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            this.dtStartDate.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
+            this.dtStartDate.MaxDate = new System.DateTime(2027, 7, 20, 0, 0, 0, 0);
+            this.dtStartDate.MinDate = new System.DateTime(2026, 11, 6, 0, 0, 0, 0);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(219, 32);
             this.dtStartDate.TabIndex = 147;
-            this.dtStartDate.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtStartDate.Value = new System.DateTime(2026, 11, 6, 0, 0, 0, 0);
             // 
             // lblFrozenByUser
             // 

@@ -61,6 +61,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -116,6 +117,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.linkLabel1);
             this.guna2Panel1.Controls.Add(this.lnkShowUserInfo);
             this.guna2Panel1.Controls.Add(this.lnkShowMemberInof);
             this.guna2Panel1.Controls.Add(this.pictureBox9);
@@ -158,7 +160,7 @@
             this.lnkShowUserInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkShowUserInfo.Enabled = false;
             this.lnkShowUserInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowUserInfo.Location = new System.Drawing.Point(859, 287);
+            this.lnkShowUserInfo.Location = new System.Drawing.Point(701, 287);
             this.lnkShowUserInfo.Name = "lnkShowUserInfo";
             this.lnkShowUserInfo.Size = new System.Drawing.Size(166, 31);
             this.lnkShowUserInfo.TabIndex = 179;
@@ -175,7 +177,7 @@
             this.lnkShowMemberInof.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkShowMemberInof.Enabled = false;
             this.lnkShowMemberInof.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowMemberInof.Location = new System.Drawing.Point(859, 244);
+            this.lnkShowMemberInof.Location = new System.Drawing.Point(488, 287);
             this.lnkShowMemberInof.Name = "lnkShowMemberInof";
             this.lnkShowMemberInof.Size = new System.Drawing.Size(207, 31);
             this.lnkShowMemberInof.TabIndex = 178;
@@ -463,6 +465,23 @@
             this.pictureBox3.TabIndex = 159;
             this.pictureBox3.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.linkLabel1.Enabled = false;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(873, 287);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(195, 31);
+            this.linkLabel1.TabIndex = 180;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Show Plan Details";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ctrlSubscriptionDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -526,5 +545,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel lnkShowMemberInof;
         private System.Windows.Forms.LinkLabel lnkShowUserInfo;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

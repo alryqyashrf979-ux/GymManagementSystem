@@ -130,5 +130,10 @@ namespace GymMangementSystem
             frmShowUserDetails frm = new frmShowUserDetails(_SubscriptionInfo.createdByUserID);
             frm.ShowDialog();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
