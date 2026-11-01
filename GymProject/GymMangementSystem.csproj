@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
+    <Compile Include="clsValidation.cs" />
     <Compile Include="ctrlEmergencyContact.cs">
       <SubType>UserControl</SubType>
     </Compile>
