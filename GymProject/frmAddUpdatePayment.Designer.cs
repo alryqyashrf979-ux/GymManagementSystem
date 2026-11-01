@@ -33,25 +33,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tcPayment = new System.Windows.Forms.TabControl();
+            this.tpMemberInfo = new System.Windows.Forms.TabPage();
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.tpPaymentInfo = new System.Windows.Forms.TabPage();
+            this.nudPaymentAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.cmPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.myTextBox1 = new GymMangementSystem.MyTextBox();
             this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tcPayment.SuspendLayout();
+            this.tpMemberInfo.SuspendLayout();
+            this.tpPaymentInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPaymentAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
             this.SuspendLayout();
@@ -99,30 +100,30 @@
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
             // 
-            // tabControl1
+            // tcPayment
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tcPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 30);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(974, 586);
-            this.tabControl1.TabIndex = 91;
+            this.tcPayment.Controls.Add(this.tpMemberInfo);
+            this.tcPayment.Controls.Add(this.tpPaymentInfo);
+            this.tcPayment.Location = new System.Drawing.Point(0, 30);
+            this.tcPayment.Name = "tcPayment";
+            this.tcPayment.SelectedIndex = 0;
+            this.tcPayment.Size = new System.Drawing.Size(974, 586);
+            this.tcPayment.TabIndex = 91;
             // 
-            // tabPage1
+            // tpMemberInfo
             // 
-            this.tabPage1.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
-            this.tabPage1.Controls.Add(this.btnNext);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(966, 560);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
+            this.tpMemberInfo.Controls.Add(this.btnNext);
+            this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
+            this.tpMemberInfo.Name = "tpMemberInfo";
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpMemberInfo.Size = new System.Drawing.Size(966, 560);
+            this.tpMemberInfo.TabIndex = 0;
+            this.tpMemberInfo.Text = "Member Info";
+            this.tpMemberInfo.UseVisualStyleBackColor = true;
             // 
             // ctrlMemberDetailsWithFiltering1
             // 
@@ -133,6 +134,7 @@
             this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(968, 509);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
             // 
             // btnNext
             // 
@@ -158,43 +160,56 @@
             this.btnNext.Size = new System.Drawing.Size(135, 35);
             this.btnNext.TabIndex = 20;
             this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // tabPage2
+            // tpPaymentInfo
             // 
-            this.tabPage2.Controls.Add(this.guna2ComboBox1);
-            this.tabPage2.Controls.Add(this.guna2CirclePictureBox1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.guna2CirclePictureBox6);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.myTextBox1);
-            this.tabPage2.Controls.Add(this.ctrlPaymentDetails1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(966, 560);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tpPaymentInfo.Controls.Add(this.nudPaymentAmount);
+            this.tpPaymentInfo.Controls.Add(this.cmPaymentMethod);
+            this.tpPaymentInfo.Controls.Add(this.guna2CirclePictureBox1);
+            this.tpPaymentInfo.Controls.Add(this.label2);
+            this.tpPaymentInfo.Controls.Add(this.guna2CirclePictureBox6);
+            this.tpPaymentInfo.Controls.Add(this.label1);
+            this.tpPaymentInfo.Controls.Add(this.ctrlPaymentDetails1);
+            this.tpPaymentInfo.Location = new System.Drawing.Point(4, 22);
+            this.tpPaymentInfo.Name = "tpPaymentInfo";
+            this.tpPaymentInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPaymentInfo.Size = new System.Drawing.Size(966, 560);
+            this.tpPaymentInfo.TabIndex = 1;
+            this.tpPaymentInfo.Text = "Payment Info";
+            this.tpPaymentInfo.UseVisualStyleBackColor = true;
             // 
-            // guna2ComboBox1
+            // nudPaymentAmount
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 7;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.nudPaymentAmount.BackColor = System.Drawing.Color.Transparent;
+            this.nudPaymentAmount.BorderRadius = 7;
+            this.nudPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudPaymentAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudPaymentAmount.Location = new System.Drawing.Point(198, 6);
+            this.nudPaymentAmount.Name = "nudPaymentAmount";
+            this.nudPaymentAmount.Size = new System.Drawing.Size(299, 36);
+            this.nudPaymentAmount.TabIndex = 105;
+            this.nudPaymentAmount.UpDownButtonFillColor = System.Drawing.Color.White;
+            // 
+            // cmPaymentMethod
+            // 
+            this.cmPaymentMethod.BackColor = System.Drawing.Color.Transparent;
+            this.cmPaymentMethod.BorderRadius = 7;
+            this.cmPaymentMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmPaymentMethod.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmPaymentMethod.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmPaymentMethod.ForeColor = System.Drawing.Color.Black;
+            this.cmPaymentMethod.ItemHeight = 30;
+            this.cmPaymentMethod.Items.AddRange(new object[] {
             "Cash",
             "Card"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(198, 59);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(299, 36);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 104;
+            this.cmPaymentMethod.Location = new System.Drawing.Point(198, 59);
+            this.cmPaymentMethod.Name = "cmPaymentMethod";
+            this.cmPaymentMethod.Size = new System.Drawing.Size(299, 36);
+            this.cmPaymentMethod.StartIndex = 0;
+            this.cmPaymentMethod.TabIndex = 104;
             // 
             // guna2CirclePictureBox1
             // 
@@ -241,30 +256,6 @@
             this.label1.Size = new System.Drawing.Size(137, 21);
             this.label1.TabIndex = 99;
             this.label1.Text = "Payment Amount :";
-            // 
-            // myTextBox1
-            // 
-            this.myTextBox1.BorderRadius = 7;
-            this.myTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.myTextBox1.DefaultText = "";
-            this.myTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.myTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.myTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox1.ErrorMessage = "This Field is Required";
-            this.myTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.myTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.myTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox1.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.myTextBox1.IsRequired = false;
-            this.myTextBox1.Location = new System.Drawing.Point(198, 9);
-            this.myTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.myTextBox1.Name = "myTextBox1";
-            this.myTextBox1.PlaceholderText = "Enter Amount...";
-            this.myTextBox1.SelectedText = "";
-            this.myTextBox1.Size = new System.Drawing.Size(300, 34);
-            this.myTextBox1.TabIndex = 100;
             // 
             // ctrlPaymentDetails1
             // 
@@ -326,6 +317,7 @@
             this.btnClose.Size = new System.Drawing.Size(134, 30);
             this.btnClose.TabIndex = 21;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmAddUpdatePayment
             // 
@@ -335,18 +327,20 @@
             this.ClientSize = new System.Drawing.Size(978, 655);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcPayment);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmAddUpdatePayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmAddUpdatePayment_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tcPayment.ResumeLayout(false);
+            this.tpMemberInfo.ResumeLayout(false);
+            this.tpPaymentInfo.ResumeLayout(false);
+            this.tpPaymentInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPaymentAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
             this.ResumeLayout(false);
@@ -359,19 +353,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private System.Windows.Forms.TabControl tcPayment;
+        private System.Windows.Forms.TabPage tpMemberInfo;
+        private System.Windows.Forms.TabPage tpPaymentInfo;
+        private Guna.UI2.WinForms.Guna2ComboBox cmPaymentMethod;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
-        private MyTextBox myTextBox1;
         private System.Windows.Forms.Label label1;
         private ctrlPaymentDetails ctrlPaymentDetails1;
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private ctrlMemberBasicDetailsWithFilter ctrlMemberDetailsWithFiltering1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudPaymentAmount;
     }
 }
