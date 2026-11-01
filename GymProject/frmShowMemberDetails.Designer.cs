@@ -56,7 +56,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1004, 768);
+            this.btnClose.Location = new System.Drawing.Point(1001, 823);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(196, 44);
@@ -104,8 +104,9 @@
             // 
             this.ctrlMemebrDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.ctrlMemebrDetails1.Location = new System.Drawing.Point(4, 59);
+            this.ctrlMemebrDetails1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlMemebrDetails1.Name = "ctrlMemebrDetails1";
-            this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 713);
+            this.ctrlMemebrDetails1.Size = new System.Drawing.Size(1202, 754);
             this.ctrlMemebrDetails1.TabIndex = 19;
             // 
             // frmShowMemberDetails
@@ -113,7 +114,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1206, 819);
+            this.ClientSize = new System.Drawing.Size(1206, 874);
             this.Controls.Add(this.ctrlMemebrDetails1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnClose);
