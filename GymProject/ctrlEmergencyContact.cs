@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class ctrlEmergencyContact : UserControl
+    public partial class ctrlEmergencyContactDetails : UserControl
     {
         public clsEmergencyContacts EmergencyContactInfo { get; private set; }
-        public ctrlEmergencyContact()
+        public ctrlEmergencyContactDetails()
         {
             InitializeComponent();
         }

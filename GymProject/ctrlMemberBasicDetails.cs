@@ -15,7 +15,7 @@ namespace GymMangementSystem
     public partial class ctrlMemberBasicDetails : UserControl
     {
         public clsMembers MemberInfo { get; private set; }
-
+        public int MemberID { get; private set; } = -1;
         public ctrlMemberBasicDetails()
         {
             InitializeComponent();
@@ -23,19 +23,28 @@ namespace GymMangementSystem
 
         private void _LoadData()
         {
+            uctPersonDetails1.LoadPersonInfo(MemberInfo.PersonID);
             lblLastSubscriptionID.Text = MemberInfo.LastSubscriptionID.ToString();
             lblMemberID.Text = MemberInfo.MemberID.ToString();
             tgschIsActive.Checked = MemberInfo.IsActive;
             txtInActivationReason.Text = MemberInfo.InActivationReason;
             lnkShowLastSubscriptionInfo.Enabled = (MemberInfo.LastSubscriptionID != -1);
+            MemberID= MemberInfo.MemberID;
 
+        }
+
+        public void ResetMemberData()
+        {
+            _ResetMemberData();
         }
         private void _ResetMemberData()
         {
+            uctPersonDetails1.ResetData();
             txtInActivationReason.Text = string.Empty;
             lblLastSubscriptionID.Text = "[????]";
             lblMemberID.Text = "[????]";
             tgschIsActive.Checked = true;
+            MemberID = -1;
         }
 
         public void LoadMemberInfoByMemberID(int MemberID)

@@ -178,7 +178,7 @@ namespace GymMangementSystem
 
         }
 
-        private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberDetailsWithFiltering.MemberEventArgs e)
+        private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
         {
 
             if (e.MemberInfo != null)

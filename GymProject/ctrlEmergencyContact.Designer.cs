@@ -1,6 +1,6 @@
 ﻿namespace GymMangementSystem
 {
-    partial class ctrlEmergencyContact
+    partial class ctrlEmergencyContactDetails
     {
         /// <summary> 
         /// Required designer variable.

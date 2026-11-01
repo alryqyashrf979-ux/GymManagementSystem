@@ -27,6 +27,8 @@ namespace GymMangementSystem
         void _ResetMemberData()
         {
             uctPersonDetails1.ResetData();
+            ctrlEmergencyContactDetails1.ResetEmergencyContactData();
+            ctrlMemberBasicDetails1.ResetMemberData();
 
             this.MemberID = -1;
      
@@ -38,6 +40,7 @@ namespace GymMangementSystem
         void _LoadData()
         {
             uctPersonDetails1.LoadPersonInfo(MemberInfo.PersonID);
+            ctrlEmergencyContactDetails1.LoadEmergencyContactInfo(MemberInfo.ContactID);
             ctrlMemberBasicDetails1.LoadMemberInfoByMemberID(MemberInfo.MemberID);
             this.MemberID = MemberInfo.MemberID;
  
