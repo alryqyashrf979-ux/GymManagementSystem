@@ -108,7 +108,7 @@
             this.tcMemberInfo.Location = new System.Drawing.Point(0, 0);
             this.tcMemberInfo.Name = "tcMemberInfo";
             this.tcMemberInfo.SelectedIndex = 0;
-            this.tcMemberInfo.Size = new System.Drawing.Size(1227, 626);
+            this.tcMemberInfo.Size = new System.Drawing.Size(973, 529);
             this.tcMemberInfo.TabIndex = 1;
             // 
             // tpPersonalInfo
@@ -121,7 +121,7 @@
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 22);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(1219, 597);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(965, 600);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             // 
@@ -131,9 +131,9 @@
             this.panel4.Controls.Add(this.lblTitle2);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1211, 45);
+            this.panel4.Size = new System.Drawing.Size(957, 45);
             this.panel4.TabIndex = 13;
             // 
             // lblTitle2
@@ -191,10 +191,10 @@
             this.tpMemberInfo.Controls.Add(this.guna2Panel1);
             this.tpMemberInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
-            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpMemberInfo.Size = new System.Drawing.Size(1219, 597);
+            this.tpMemberInfo.Size = new System.Drawing.Size(965, 503);
             this.tpMemberInfo.TabIndex = 1;
             this.tpMemberInfo.Text = "Member Info";
             // 
@@ -204,9 +204,9 @@
             this.panel1.Controls.Add(this.lblTitle1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1211, 46);
+            this.panel1.Size = new System.Drawing.Size(957, 46);
             this.panel1.TabIndex = 66;
             // 
             // lblTitle1
@@ -226,7 +226,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -267,10 +267,10 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
-            this.guna2Panel1.Location = new System.Drawing.Point(27, 57);
+            this.guna2Panel1.Location = new System.Drawing.Point(2, 57);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(885, 428);
+            this.guna2Panel1.Size = new System.Drawing.Size(959, 441);
             this.guna2Panel1.TabIndex = 29;
             // 
             // lnkAddSubscription
@@ -281,9 +281,9 @@
             this.lnkAddSubscription.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkAddSubscription.Enabled = false;
             this.lnkAddSubscription.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkAddSubscription.Location = new System.Drawing.Point(951, 261);
+            this.lnkAddSubscription.Location = new System.Drawing.Point(750, 311);
             this.lnkAddSubscription.Name = "lnkAddSubscription";
-            this.lnkAddSubscription.Size = new System.Drawing.Size(191, 31);
+            this.lnkAddSubscription.Size = new System.Drawing.Size(156, 26);
             this.lnkAddSubscription.TabIndex = 179;
             this.lnkAddSubscription.TabStop = true;
             this.lnkAddSubscription.Text = "Add Subscription";
@@ -361,7 +361,7 @@
             this.tgschIsActive.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.tgschIsActive.CheckedState.InnerColor = System.Drawing.Color.White;
             this.tgschIsActive.Location = new System.Drawing.Point(562, 79);
-            this.tgschIsActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tgschIsActive.Margin = new System.Windows.Forms.Padding(2);
             this.tgschIsActive.Name = "tgschIsActive";
             this.tgschIsActive.Size = new System.Drawing.Size(40, 16);
             this.tgschIsActive.TabIndex = 33;
@@ -535,11 +535,12 @@
             this.guna2Panel2.BorderRadius = 5;
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.Controls.Add(this.pictureBox7);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(2, 1);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(862, 42);
+            this.guna2Panel2.Size = new System.Drawing.Size(959, 42);
             this.guna2Panel2.TabIndex = 1;
             // 
             // label8
@@ -582,9 +583,9 @@
             this.guna2Panel5.Controls.Add(this.pictureBox12);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel5.Location = new System.Drawing.Point(2, 241);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(862, 42);
+            this.guna2Panel5.Size = new System.Drawing.Size(957, 42);
             this.guna2Panel5.TabIndex = 1;
             // 
             // label12
@@ -627,7 +628,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1068, 634);
+            this.btnSave.Location = new System.Drawing.Point(856, 534);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(109, 30);
@@ -653,7 +654,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(900, 634);
+            this.btnClose.Location = new System.Drawing.Point(724, 534);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(117, 30);
@@ -690,14 +691,14 @@
             this.txtInActivationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInActivationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtInActivationReason.IsRequired = false;
-            this.txtInActivationReason.Location = new System.Drawing.Point(651, 142);
+            this.txtInActivationReason.Location = new System.Drawing.Point(483, 129);
             this.txtInActivationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInActivationReason.Multiline = true;
             this.txtInActivationReason.Name = "txtInActivationReason";
             this.txtInActivationReason.PlaceholderText = "InActivation Reason";
             this.txtInActivationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtInActivationReason.SelectedText = "";
-            this.txtInActivationReason.Size = new System.Drawing.Size(368, 95);
+            this.txtInActivationReason.Size = new System.Drawing.Size(368, 90);
             this.txtInActivationReason.TabIndex = 74;
             this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
             this.txtInActivationReason.TextChanged += new System.EventHandler(this.txtInActivationReason_TextChanged);
@@ -718,12 +719,12 @@
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
             this.txtPhoneNumber.IsRequired = true;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(848, 481);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(665, 395);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PlaceholderText = "Phone Number";
             this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(251, 33);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(197, 33);
             this.txtPhoneNumber.TabIndex = 65;
             // 
             // txtRelationship
@@ -742,12 +743,12 @@
             this.txtRelationship.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRelationship.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtRelationship.IsRequired = true;
-            this.txtRelationship.Location = new System.Drawing.Point(482, 476);
+            this.txtRelationship.Location = new System.Drawing.Point(330, 390);
             this.txtRelationship.Margin = new System.Windows.Forms.Padding(5);
             this.txtRelationship.Name = "txtRelationship";
             this.txtRelationship.PlaceholderText = "Relationship";
             this.txtRelationship.SelectedText = "";
-            this.txtRelationship.Size = new System.Drawing.Size(289, 38);
+            this.txtRelationship.Size = new System.Drawing.Size(268, 38);
             this.txtRelationship.TabIndex = 13;
             // 
             // txtPersonName
@@ -766,26 +767,26 @@
             this.txtPersonName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPersonName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtPersonName.IsRequired = true;
-            this.txtPersonName.Location = new System.Drawing.Point(51, 476);
+            this.txtPersonName.Location = new System.Drawing.Point(41, 390);
             this.txtPersonName.Margin = new System.Windows.Forms.Padding(5);
             this.txtPersonName.Name = "txtPersonName";
             this.txtPersonName.PlaceholderText = "Contact Person Name";
             this.txtPersonName.SelectedText = "";
-            this.txtPersonName.Size = new System.Drawing.Size(368, 38);
+            this.txtPersonName.Size = new System.Drawing.Size(246, 38);
             this.txtPersonName.TabIndex = 11;
             // 
             // frmAddUpdateMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1227, 680);
+            this.ClientSize = new System.Drawing.Size(973, 570);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcMemberInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddUpdateMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Member";
