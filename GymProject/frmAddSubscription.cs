@@ -219,6 +219,13 @@ namespace GymMangementSystem
         {
             tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpMemberInfo"];
 
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpMemberInfo"];
+
         }
     }
 }

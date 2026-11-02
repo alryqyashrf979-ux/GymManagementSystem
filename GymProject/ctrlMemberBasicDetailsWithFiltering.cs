@@ -113,8 +113,8 @@ namespace GymMangementSystem
 
             Find();
 
-        }
 
+        }
         private void btnAddNewMember_Click(object sender, EventArgs e)
         {
             frmAddUpdateMember frm = new frmAddUpdateMember();

@@ -21,6 +21,7 @@ namespace GymMangementSystem
         }
 
         private int _MemberID = -1;
+        private int _LastSubscriptionID = -1;
         public frmAddUpdateMember(int memberID)
         {
             InitializeComponent();
@@ -212,8 +213,11 @@ namespace GymMangementSystem
         void AddedSubscription(object Sender,clsSubscription AddedSusbcription )
         {
            _Member.LastSubscriptionID= AddedSusbcription.SubscriptionID;
+            lblLastSubscriptionID.Text = AddedSusbcription.SubscriptionID.ToString();
+            _LastSubscriptionID = AddedSusbcription.SubscriptionID;
             lnkAddSubscription.Enabled = false;
-            MessageBox.Show($"Subscription Added Successfully with ID [{AddedSusbcription.SubscriptionID}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Subscription Added Successfully with ID [{AddedSusbcription.SubscriptionID}]", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -232,6 +236,19 @@ namespace GymMangementSystem
             frm.AddedSubscription += AddedSubscription;
             frm.LoadMemberDetails(_Member.MemberID);
             frm.ShowDialog();
+            
+        }
+
+        private void frmAddUpdateMember_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          
+
+        }
+
+        private void frmAddUpdateMember_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_LastSubscriptionID != -1)
+                DataBack?.Invoke(this, _Member.MemberID);
         }
     }
 }

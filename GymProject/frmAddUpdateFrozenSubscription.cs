@@ -165,9 +165,10 @@ namespace GymMangementSystem
             _FrozenSubscriptionInf.FreezeStartDate=dtStartDate.Value;
             _FrozenSubscriptionInf.FreezeEndDate=dtEndDate.Value;
             _FrozenSubscriptionInf.FrozenByUserID = clsGlobal.CurrentUserInfo.UserID;
+            _FrozenSubscriptionInf.IsFrozen = (_FrozenSubscriptionInf.FreezeStartDate.Date == DateTime.Today.Date);
 
 
-            if(_FrozenSubscriptionInf.Save())
+            if (_FrozenSubscriptionInf.Save())
             {
 
 

@@ -88,6 +88,9 @@ namespace DataBusinessLayer
 
         private bool _AddNewFreezeSubscription()
         {
+
+
+
             this._FreezeID = clsFrozenSubscriptionData.AddNewFreezeSubscription(
                 this.SubscriptionID,
                 this.FreezeEndDate,
@@ -124,7 +127,6 @@ namespace DataBusinessLayer
         {
             TimeSpan duration = FreezeEndDate - FreezeStartDate;
             this.FreezingDuration = (byte)Math.Max(0, duration.Days);
-            this.IsFrozen = (this.FreezeStartDate.Date == DateTime.Today.Date);
 
             switch (Mode)
             {
