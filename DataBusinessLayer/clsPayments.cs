@@ -19,12 +19,14 @@ namespace DataBusinessLayer
         public int PaymentMethod { set; get; }
         public DateTime PaymentDate { set; get; }
         public int CreatedByUserID { set; get; }
-
+        public byte Status { set; get; }
         public clsUsers UserInfo { get; private set; }
         public clsSubscription SubscriptionInfo { get; private set; }
         public clsMembers MemberInfo { get; private set; }
         public enum enMode { AddMode=1,UpdateMode=2 }
         private enMode _Mode = enMode.AddMode;
+        public enum enStatus { Pending=1,Completed=2,Refunded=3,PartiallyRefunded=4 }
+        private enStatus _eStatus = enStatus.Pending;
 
         public clsPayments()
         {
@@ -43,7 +45,7 @@ namespace DataBusinessLayer
         }
 
         private clsPayments(int PaymentID,int SubscriptionID,double PaymentAmount,double ActualAmount,double TotalRemaining,
-            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID)
+            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID,byte Status)
         {
             _PaymentID = PaymentID;
             this.SubscriptionID = SubscriptionID;
@@ -53,7 +55,7 @@ namespace DataBusinessLayer
             this.PaymentMethod = PaymentMethod;
             this.PaymentDate = PaymentDate;
             this.CreatedByUserID = CreatedByUserID;
-
+            this.Status = Status;
 
             this.SubscriptionInfo = clsSubscription.FindBySubscriptionID(SubscriptionID);
             this.UserInfo = clsUsers.FindByUserID(CreatedByUserID);
@@ -107,13 +109,14 @@ namespace DataBusinessLayer
            int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;
 
           double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
+            byte Status = 0;
 
           DateTime  PaymentDate = DateTime.Now;
 
-            bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID);
+            bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
 
             if (IsFound)
-                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID);
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,Status);
             else
                 return null;
         }
@@ -126,6 +129,27 @@ namespace DataBusinessLayer
         public int SelectPaymentID()
         {
             return clsPaymentData.SelectPaymentIDBySubscriptionID(this.SubscriptionID);
+        }
+
+        public string SelectStatusString()
+        {
+            switch ((enStatus)Status)
+            {
+                case enStatus.Pending:
+                    return "Pending";
+
+                case enStatus.Completed:
+                    return "Completed";
+
+                case enStatus.Refunded:
+                    return "Refunded";
+
+                case enStatus.PartiallyRefunded:
+                    return "Partially Refunded";
+
+                default:
+                   return "Unknown";
+            }
         }
     }
 }

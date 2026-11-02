@@ -35,7 +35,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcPayment = new System.Windows.Forms.TabControl();
             this.tpMemberInfo = new System.Windows.Forms.TabPage();
-            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -45,9 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
+            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcPayment.SuspendLayout();
@@ -126,17 +126,6 @@
             this.tpMemberInfo.Text = "Member Info";
             this.tpMemberInfo.UseVisualStyleBackColor = true;
             // 
-            // ctrlMemberDetailsWithFiltering1
-            // 
-            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(5, 5);
-            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
-            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(968, 509);
-            this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
-            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
-            // 
             // btnNext
             // 
             this.btnNext.BorderColor = System.Drawing.Color.Gainsboro;
@@ -185,7 +174,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(514, 504);
+            this.linkLabel1.Location = new System.Drawing.Point(725, 521);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(230, 25);
             this.linkLabel1.TabIndex = 106;
@@ -271,16 +260,6 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "Payment Amount :";
             // 
-            // ctrlPaymentDetails1
-            // 
-            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(503, 3);
-            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(458, 550);
-            this.ctrlPaymentDetails1.TabIndex = 98;
-            // 
             // btnSave
             // 
             this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
@@ -333,6 +312,27 @@
             this.btnClose.TabIndex = 21;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // ctrlMemberDetailsWithFiltering1
+            // 
+            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(5, 5);
+            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(968, 509);
+            this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
+            // 
+            // ctrlPaymentDetails1
+            // 
+            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(503, 3);
+            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(458, 550);
+            this.ctrlPaymentDetails1.TabIndex = 98;
             // 
             // frmAddUpdatePayment
             // 
