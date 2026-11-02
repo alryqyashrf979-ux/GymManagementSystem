@@ -207,7 +207,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(943, 35);
             this.guna2Panel3.TabIndex = 129;
@@ -270,7 +270,7 @@
             this.uctPersonDetails1.Location = new System.Drawing.Point(0, 0);
             this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(950, 267);
             this.uctPersonDetails1.TabIndex = 1;
             // 
             // ctrlMemberBasicDetails

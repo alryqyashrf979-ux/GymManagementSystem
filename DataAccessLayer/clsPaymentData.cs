@@ -149,7 +149,8 @@ namespace DataAccessLayer
                        using(SqlDataReader reader = command.ExecuteReader())
                         {
                             if(reader.Read())
-                       {     SubscriptionID = (int)reader["SubscriptionID"];
+                            { 
+                            SubscriptionID = (int)reader["SubscriptionID"];
                             PaymentAmount =Convert.ToDouble((reader)["PaymentAmount"]);
                             ActualAmount = Convert.ToDouble((reader)["ActualAmount"]);
                             TotalRemaining = Convert.ToDouble((reader)["TotalRemaining"]);
@@ -157,9 +158,10 @@ namespace DataAccessLayer
                             PaymentDate = (DateTime)reader["PaymentDate"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
                                 Status = Convert.ToByte(reader["Status"]);
+                                return true;
                             }
 
-                            return true;
+                           
 
                         }
                     }
