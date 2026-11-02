@@ -14,15 +14,15 @@ namespace DataBusinessLayer
 
         private int _SubscriptionID;
         public int SubscriptionID { get { return _SubscriptionID; } }
-        public int MemberID { set; get; }
-        public int PlanID { set; get; }
-        public enSubscriptionStatus Status { set; get;}
+        public int MemberID { private set; get; }
+        public int PlanID { private set; get; }
+        public enSubscriptionStatus Status { private set; get;}
         public string StatusString { get => _GetStatus(); }
-        public DateTime StartDate { set; get; }
-        public DateTime ExpirationDate {  set; get; }
+        public DateTime StartDate { private set; get; }
+        public DateTime ExpirationDate {  private set; get; }
         public DateTime RegistrationDate { private set; get; }
-        public double Price { set; get; }
-        public int createdByUserID { set; get; }
+        public double Price {private set; get; }
+        public int createdByUserID { private set; get; }
 
         private clsMembers _MemberInfo;
         private clsSubscriptionPlans _PlanInfo;
@@ -76,20 +76,19 @@ namespace DataBusinessLayer
         {
             this.Status = (StartDate.Date == DateTime.Today.Date) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
 
-            _SubscriptionID = clsSubscriptionsData.AddNewSubscription(this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
+            _SubscriptionID = clsSubscriptionsData.AddNewSubscription(this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, DateTime.Today,this.Price, (byte)this.Status, this.createdByUserID);
             return _SubscriptionID != -1;
         }
 
         private bool _UpdateSubscription()
         {
-            this.Status = (StartDate.Date ==RegistrationDate.Date) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
 
             return clsSubscriptionsData.UpdateSubscription(this.SubscriptionID, this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, this.Price, (byte)this.Status, this.createdByUserID);
         }
 
 
 
-        public bool Save()
+        private bool Save()
         {
 
 
@@ -111,6 +110,40 @@ namespace DataBusinessLayer
             }
             return false;
         }
+
+
+
+        public bool AddSubscription(DateTime StartDate,int MemberID,int PlanID,int CreatedByUserID)
+        {
+
+            clsSubscriptionPlans _Plan = clsSubscriptionPlans.Find(PlanID);
+
+            if (_Plan == null)
+                return false;
+
+
+
+            this.Status = (StartDate.Date == DateTime.Today) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
+            this.StartDate = StartDate;
+            this.MemberID = MemberID;
+            this.Price = _Plan.PlanPrice;
+            this.createdByUserID = createdByUserID;
+            this.ExpirationDate = this.StartDate.AddDays(_Plan.Duration);
+
+            return this.Save();
+
+        }
+      
+        public bool UpdateSubscription(DateTime StartDate,int CreatedByUserID)
+        {
+
+            this.Status = (StartDate.Date == DateTime.Today) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
+            this.StartDate = StartDate;
+            this.createdByUserID = createdByUserID;
+
+            return this.Save();
+        }
+
 
 
 
