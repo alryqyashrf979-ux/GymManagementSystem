@@ -34,15 +34,15 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcSubscriptionInfo = new System.Windows.Forms.TabControl();
             this.tpMemberInfo = new System.Windows.Forms.TabPage();
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpSubscriptionInfo = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberDetailsWithFiltering();
             this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
             this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcSubscriptionInfo.SuspendLayout();
@@ -105,9 +105,20 @@
             this.tpMemberInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 5);
             this.tpMemberInfo.Name = "tpMemberInfo";
-            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpMemberInfo.Size = new System.Drawing.Size(972, 667);
             this.tpMemberInfo.TabIndex = 0;
+            // 
+            // ctrlMemberDetailsWithFiltering1
+            // 
+            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(2, -6);
+            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(966, 629);
+            this.ctrlMemberDetailsWithFiltering1.TabIndex = 18;
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
             // 
             // btnNext
             // 
@@ -145,7 +156,7 @@
             this.tpSubscriptionInfo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.tpSubscriptionInfo.Location = new System.Drawing.Point(4, 5);
             this.tpSubscriptionInfo.Name = "tpSubscriptionInfo";
-            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpSubscriptionInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tpSubscriptionInfo.Size = new System.Drawing.Size(972, 667);
             this.tpSubscriptionInfo.TabIndex = 1;
             // 
@@ -189,70 +200,6 @@
             this.guna2Button1.Text = "Back";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // btnSave
-            // 
-            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BorderRadius = 5;
-            this.btnSave.BorderThickness = 1;
-            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.Enabled = false;
-            this.btnSave.FillColor = System.Drawing.Color.Transparent;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(855, 713);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(264, 30);
-            this.btnSave.TabIndex = 19;
-            this.btnSave.Text = "Save & continue to payment";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.BorderThickness = 1;
-            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(713, 713);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(125, 30);
-            this.btnClose.TabIndex = 18;
-            this.btnClose.Text = "Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // ctrlMemberDetailsWithFiltering1
-            // 
-            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(2, -6);
-            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
-            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(966, 629);
-            this.ctrlMemberDetailsWithFiltering1.TabIndex = 18;
-            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
-            // 
             // ctrlSubscriptionPlanDetailsWithFiltering1
             // 
             this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
@@ -274,13 +221,66 @@
             this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 1;
             // 
+            // btnSave
+            // 
+            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSave.BorderRadius = 5;
+            this.btnSave.BorderThickness = 1;
+            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.Enabled = false;
+            this.btnSave.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSave.Location = new System.Drawing.Point(709, 713);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(264, 30);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Save && continue to payment";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(567, 713);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(125, 30);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmAddSubscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(981, 599);
+            this.ClientSize = new System.Drawing.Size(981, 747);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcSubscriptionInfo);
