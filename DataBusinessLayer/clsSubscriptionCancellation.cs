@@ -14,8 +14,8 @@ namespace DataBusinessLayer
         public int CancellationID { get { return _CancellationID; } }
         public int SubscriptionID { get; set; }
         public int CancelledByUserID { get; set; }
-        public byte ElapsedDays { get; set; }
-        public DateTime CancellationDate { get; set; }
+        public short ElapsedDays { get; set; }
+        public DateTime CancellationDate { get; private set; }
         public string CancellationReason { get; set; }
         public double Refund { get; set; }
 
@@ -39,7 +39,7 @@ namespace DataBusinessLayer
         }
 
 
-        private clsSubscriptionCancellation(int CancellationID, int SubscriptionID, int UserID, byte ElapsedDays, DateTime CancellationDate,
+        private clsSubscriptionCancellation(int CancellationID, int SubscriptionID, int UserID, short ElapsedDays, DateTime CancellationDate,
             string CancellationReason, double Refund)
         {
             this._CancellationID = CancellationID;
@@ -72,25 +72,21 @@ namespace DataBusinessLayer
 
         private bool _UpdateSubscriptionCancellation()
         {
-            return clsSubscriptionCancellationData.UpdateSubscriptionCancellation(this._CancellationID, this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancellationDate, this.CancelledByUserID);
+            return clsSubscriptionCancellationData.UpdateSubscriptionCancellation(this._CancellationID, this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancelledByUserID);
         }
 
-        public static void HandleRefund(int SubscriptionID, ref double Refund, ref int LapsedDays, ref double OneDayFee, ref double UsedAmount)
+        public static void HandleRefund(int SubscriptionID, ref double Refund, ref short LapsedDays, ref double OneDayFee, ref double UsedAmount)
         {
             clsSubscription Subscription = clsSubscription.FindBySubscriptionID(SubscriptionID);
-            //int PlanID = clsSubscriptionPlansDataAccess.SelectPlanIDBySubscriptionID(this.SubscriptionID);
-            //int PlanID = Subscription.PlanID;
-            //int Duration = clsSubscriptionPlansDataAccess.SelectDurationFromPlan(PlanID);
+           
             int Duration = (Subscription.ExpirationDate - Subscription.StartDate).Days;
-            double Fees = Subscription.Price;
-            DateTime StartDate = Subscription.StartDate;
 
-            OneDayFee = Fees / Duration;
-            LapsedDays = (DateTime.Now - StartDate).Days;
+            OneDayFee = Subscription.Price / Duration;
+            LapsedDays = (short)(DateTime.Now - Subscription.StartDate).Days;
 
             UsedAmount = OneDayFee * LapsedDays;
 
-            Refund = Fees - UsedAmount;
+            Refund = Subscription.Price - UsedAmount;
 
         }
 
@@ -113,10 +109,10 @@ namespace DataBusinessLayer
             return false;
         }
 
-        static public object Find(int CancellationID)
+        static public clsSubscriptionCancellation Find(int CancellationID)
         {
             int SubscriptionID = -1, CancelledByUserID = -1;
-            byte ElapsedDays = 0;
+            short ElapsedDays = 0;
             DateTime CancellationDate = DateTime.Now;
             string CancellationReason = string.Empty;
             double Refund = 0;
