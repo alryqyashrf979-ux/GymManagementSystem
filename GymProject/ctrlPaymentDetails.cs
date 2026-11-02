@@ -30,7 +30,7 @@ namespace GymMangementSystem
             lblSubscriptionID.Text = "???";
             lblTotalRemaining.Text = "???";
             lblPlanName.Text = "???";
-
+            lblStatus.Text = "???";
         }
         public void LoadPaymentInfo(int PaymentID)
         {
@@ -41,6 +41,7 @@ namespace GymMangementSystem
                 return;
             }
 
+            lblStatus.Text = Payment.SelectStatusString();
             lblActualAmount.Text = Payment.ActualAmount.ToString();
             lblCreatedBy.Text =Payment.UserInfo.UserName;
             lblMemberName.Text =Payment.MemberInfo.PersonInfo.FullName;

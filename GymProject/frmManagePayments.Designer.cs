@@ -47,6 +47,8 @@
             this.cbMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.cmStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.PaymentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubscriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +58,6 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -124,7 +124,7 @@
             "Date",
             "Username",
             "Status"});
-            this.cbValue.Location = new System.Drawing.Point(91, 178);
+            this.cbValue.Location = new System.Drawing.Point(91, 134);
             this.cbValue.Name = "cbValue";
             this.cbValue.Size = new System.Drawing.Size(237, 36);
             this.cbValue.StartIndex = 0;
@@ -135,7 +135,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 187);
+            this.label9.Location = new System.Drawing.Point(17, 143);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 18);
@@ -155,7 +155,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(335, 178);
+            this.txtSearch.Location = new System.Drawing.Point(335, 134);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search...";
@@ -205,7 +205,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayment.GridColor = System.Drawing.Color.Black;
-            this.dgvPayment.Location = new System.Drawing.Point(1, 221);
+            this.dgvPayment.Location = new System.Drawing.Point(1, 177);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -218,7 +218,7 @@
             this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayment.RowHeadersVisible = false;
             this.dgvPayment.RowHeadersWidth = 51;
-            this.dgvPayment.Size = new System.Drawing.Size(1082, 485);
+            this.dgvPayment.Size = new System.Drawing.Size(1082, 534);
             this.dgvPayment.TabIndex = 115;
             this.dgvPayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPayment.ThemeStyle.GridColor = System.Drawing.Color.Black;
@@ -280,7 +280,7 @@
             "All",
             "Cash",
             "Card"});
-            this.cbMethod.Location = new System.Drawing.Point(334, 178);
+            this.cbMethod.Location = new System.Drawing.Point(334, 134);
             this.cbMethod.Name = "cbMethod";
             this.cbMethod.Size = new System.Drawing.Size(130, 36);
             this.cbMethod.StartIndex = 0;
@@ -299,7 +299,7 @@
             this.dtpTime.FillColor = System.Drawing.Color.White;
             this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTime.Location = new System.Drawing.Point(335, 185);
+            this.dtpTime.Location = new System.Drawing.Point(335, 141);
             this.dtpTime.Margin = new System.Windows.Forms.Padding(2);
             this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -329,93 +329,13 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1229, 711);
+            this.btnClose.Location = new System.Drawing.Point(1229, 716);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(125, 30);
             this.btnClose.TabIndex = 125;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // PaymentID
-            // 
-            this.PaymentID.DataPropertyName = "Payment ID";
-            this.PaymentID.FillWeight = 90.9377F;
-            this.PaymentID.HeaderText = "Payment ID";
-            this.PaymentID.MinimumWidth = 6;
-            this.PaymentID.Name = "PaymentID";
-            this.PaymentID.ReadOnly = true;
-            // 
-            // SubscriptionID
-            // 
-            this.SubscriptionID.DataPropertyName = "Subscription ID";
-            this.SubscriptionID.FillWeight = 100.5998F;
-            this.SubscriptionID.HeaderText = "Subscription ID";
-            this.SubscriptionID.MinimumWidth = 6;
-            this.SubscriptionID.Name = "SubscriptionID";
-            this.SubscriptionID.ReadOnly = true;
-            // 
-            // PaymentAmount
-            // 
-            this.PaymentAmount.DataPropertyName = "Payment Amount";
-            this.PaymentAmount.FillWeight = 89.84593F;
-            this.PaymentAmount.HeaderText = "Amount";
-            this.PaymentAmount.MinimumWidth = 6;
-            this.PaymentAmount.Name = "PaymentAmount";
-            this.PaymentAmount.ReadOnly = true;
-            // 
-            // ActualAmount
-            // 
-            this.ActualAmount.DataPropertyName = "Actual Amount";
-            this.ActualAmount.FillWeight = 114.0091F;
-            this.ActualAmount.HeaderText = "Actual Amount";
-            this.ActualAmount.MinimumWidth = 6;
-            this.ActualAmount.Name = "ActualAmount";
-            this.ActualAmount.ReadOnly = true;
-            // 
-            // TotalRemaining
-            // 
-            this.TotalRemaining.DataPropertyName = "Total Remaining";
-            this.TotalRemaining.FillWeight = 137.0558F;
-            this.TotalRemaining.HeaderText = "Total Remaining";
-            this.TotalRemaining.MinimumWidth = 6;
-            this.TotalRemaining.Name = "TotalRemaining";
-            this.TotalRemaining.ReadOnly = true;
-            // 
-            // PaymentMethod
-            // 
-            this.PaymentMethod.DataPropertyName = "Payment Method";
-            this.PaymentMethod.FillWeight = 65.75207F;
-            this.PaymentMethod.HeaderText = "Method";
-            this.PaymentMethod.MinimumWidth = 6;
-            this.PaymentMethod.Name = "PaymentMethod";
-            this.PaymentMethod.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.FillWeight = 100.5998F;
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.FillWeight = 100.5998F;
-            this.Username.HeaderText = "Username";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.FillWeight = 100.5998F;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
             // 
             // cmStatus
             // 
@@ -434,7 +354,7 @@
             "Completed",
             "Refunded",
             "Partailly Refunded"});
-            this.cmStatus.Location = new System.Drawing.Point(335, 179);
+            this.cmStatus.Location = new System.Drawing.Point(335, 135);
             this.cmStatus.Name = "cmStatus";
             this.cmStatus.Size = new System.Drawing.Size(209, 36);
             this.cmStatus.StartIndex = 0;
@@ -446,11 +366,91 @@
             // 
             this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1090, 221);
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1086, 172);
             this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 485);
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 539);
             this.ctrlPaymentDetails1.TabIndex = 122;
+            // 
+            // PaymentID
+            // 
+            this.PaymentID.DataPropertyName = "Payment ID";
+            this.PaymentID.FillWeight = 93.54671F;
+            this.PaymentID.HeaderText = "Payment ID";
+            this.PaymentID.MinimumWidth = 6;
+            this.PaymentID.Name = "PaymentID";
+            this.PaymentID.ReadOnly = true;
+            // 
+            // SubscriptionID
+            // 
+            this.SubscriptionID.DataPropertyName = "Subscription ID";
+            this.SubscriptionID.FillWeight = 103.486F;
+            this.SubscriptionID.HeaderText = "Subscription ID";
+            this.SubscriptionID.MinimumWidth = 6;
+            this.SubscriptionID.Name = "SubscriptionID";
+            this.SubscriptionID.ReadOnly = true;
+            // 
+            // PaymentAmount
+            // 
+            this.PaymentAmount.DataPropertyName = "Payment Amount";
+            this.PaymentAmount.FillWeight = 92.42361F;
+            this.PaymentAmount.HeaderText = "Amount";
+            this.PaymentAmount.MinimumWidth = 6;
+            this.PaymentAmount.Name = "PaymentAmount";
+            this.PaymentAmount.ReadOnly = true;
+            // 
+            // ActualAmount
+            // 
+            this.ActualAmount.DataPropertyName = "Actual Amount";
+            this.ActualAmount.FillWeight = 117.28F;
+            this.ActualAmount.HeaderText = "Actual Amount";
+            this.ActualAmount.MinimumWidth = 6;
+            this.ActualAmount.Name = "ActualAmount";
+            this.ActualAmount.ReadOnly = true;
+            // 
+            // TotalRemaining
+            // 
+            this.TotalRemaining.DataPropertyName = "Total Remaining";
+            this.TotalRemaining.FillWeight = 140.9879F;
+            this.TotalRemaining.HeaderText = "Total Remaining";
+            this.TotalRemaining.MinimumWidth = 6;
+            this.TotalRemaining.Name = "TotalRemaining";
+            this.TotalRemaining.ReadOnly = true;
+            // 
+            // PaymentMethod
+            // 
+            this.PaymentMethod.DataPropertyName = "Payment Method";
+            this.PaymentMethod.FillWeight = 67.6385F;
+            this.PaymentMethod.HeaderText = "Method";
+            this.PaymentMethod.MinimumWidth = 6;
+            this.PaymentMethod.Name = "PaymentMethod";
+            this.PaymentMethod.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.FillWeight = 103.486F;
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.FillWeight = 77.66496F;
+            this.Username.HeaderText = "Username";
+            this.Username.MinimumWidth = 6;
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.FillWeight = 103.486F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // frmManagePayments
             // 
@@ -501,6 +501,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbMethod;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpTime;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private Guna.UI2.WinForms.Guna2ComboBox cmStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubscriptionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentAmount;
@@ -510,6 +511,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private Guna.UI2.WinForms.Guna2ComboBox cmStatus;
     }
 }

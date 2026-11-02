@@ -133,7 +133,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool Find(int PaymentID,ref int SubscriptionID,ref double PaymentAmount,ref double ActualAmount,ref double TotalRemaining, ref int PaymentMethod,ref DateTime PaymentDate,ref int CreatedByUserID)
+        static public bool Find(int PaymentID,ref int SubscriptionID,ref double PaymentAmount,ref double ActualAmount,ref double TotalRemaining, ref int PaymentMethod,ref DateTime PaymentDate,ref int CreatedByUserID,ref byte Status)
         {
             string query = " select *from Payments where PaymentID=@PaymentID; ";
 
@@ -156,6 +156,7 @@ namespace DataAccessLayer
                             PaymentMethod = (int)reader["PaymentMethod"];
                             PaymentDate = (DateTime)reader["PaymentDate"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
+                                Status = Convert.ToByte(reader["Status"]);
                             }
 
                             return true;
