@@ -42,8 +42,8 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.txtInActivationReason = new GymMangementSystem.MyTextBox();
+            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -54,7 +54,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.lblLastSubscriptionID);
@@ -240,15 +240,6 @@
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
             // 
-            // uctPersonDetails1
-            // 
-            this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetails1.Location = new System.Drawing.Point(0, 0);
-            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
-            this.uctPersonDetails1.TabIndex = 1;
-            // 
             // txtInActivationReason
             // 
             this.txtInActivationReason.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -273,11 +264,21 @@
             this.txtInActivationReason.Multiline = true;
             this.txtInActivationReason.Name = "txtInActivationReason";
             this.txtInActivationReason.PlaceholderText = "InActivation Reason";
+            this.txtInActivationReason.ReadOnly = true;
             this.txtInActivationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtInActivationReason.SelectedText = "";
             this.txtInActivationReason.Size = new System.Drawing.Size(368, 94);
             this.txtInActivationReason.TabIndex = 136;
             this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
+            // 
+            // uctPersonDetails1
+            // 
+            this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
+            this.uctPersonDetails1.Location = new System.Drawing.Point(0, 0);
+            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetails1.Name = "uctPersonDetails1";
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
+            this.uctPersonDetails1.TabIndex = 1;
             // 
             // ctrlMemberBasicDetails
             // 

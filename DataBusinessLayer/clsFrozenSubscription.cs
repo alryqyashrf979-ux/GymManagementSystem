@@ -72,7 +72,7 @@ namespace DataBusinessLayer
             this.SubscriptionID = -1;
             this.FreezeStartDate = DateTime.Now;
             this.FreezeEndDate = DateTime.Now.AddDays(7);
-            this.UnFreezeDate = DateTime.MinValue;
+            this.UnFreezeDate = null;
             this.FreezingDuration = 0;
             this.FreezeFee = 0.0;
             this.FreezeReason = string.Empty;
@@ -95,7 +95,7 @@ namespace DataBusinessLayer
                 this.FreezingDuration,
                 this.FreezeFee,
                 this.FreezeReason,
-                this.IsFeesPaid,
+                this.IsFrozen,
                 this.IsFrozen,
                 this.FrozenByUserID
             );
@@ -109,8 +109,7 @@ namespace DataBusinessLayer
                 this.FreezeID,
                 this.SubscriptionID,
                 this.FreezeEndDate,
-                this.FreezeStartDate,
-                this.UnFreezeDate,
+                this.FreezeStartDate,this.UnFreezeDate,
                 this.FreezingDuration,
                 this.FreezeFee,
                 this.FreezeReason,
@@ -124,7 +123,8 @@ namespace DataBusinessLayer
         public bool Save()
         {
             TimeSpan duration = FreezeEndDate - FreezeStartDate;
-                    this.FreezingDuration = (byte)Math.Max(0, duration.Days);
+            this.FreezingDuration = (byte)Math.Max(0, duration.Days);
+            this.IsFrozen = (this.FreezeStartDate.Date == DateTime.Today.Date);
 
             switch (Mode)
             {

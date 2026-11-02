@@ -41,6 +41,7 @@
             this.lblTitle1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lnkAddSubscription = new System.Windows.Forms.LinkLabel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtInActivationReason = new GymMangementSystem.MyTextBox();
@@ -76,7 +77,6 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.lnkAddSubscription = new System.Windows.Forms.LinkLabel();
             this.tcMemberInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -109,7 +109,7 @@
             this.tcMemberInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tcMemberInfo.Name = "tcMemberInfo";
             this.tcMemberInfo.SelectedIndex = 0;
-            this.tcMemberInfo.Size = new System.Drawing.Size(1221, 662);
+            this.tcMemberInfo.Size = new System.Drawing.Size(1221, 626);
             this.tcMemberInfo.TabIndex = 1;
             // 
             // tpPersonalInfo
@@ -123,17 +123,17 @@
             this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(1213, 633);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(1213, 597);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             // 
             // uctPersonDetailsWithFilter1
             // 
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(8, 71);
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(8, 70);
             this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 475);
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 450);
             this.uctPersonDetailsWithFilter1.TabIndex = 14;
             // 
             // panel4
@@ -145,7 +145,7 @@
             this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1205, 46);
+            this.panel4.Size = new System.Drawing.Size(1205, 45);
             this.panel4.TabIndex = 13;
             // 
             // lblTitle2
@@ -167,7 +167,7 @@
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox10.Size = new System.Drawing.Size(56, 45);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -190,7 +190,7 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1037, 566);
+            this.btnNext.Location = new System.Drawing.Point(1046, 543);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 44);
@@ -207,7 +207,7 @@
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpMemberInfo.Size = new System.Drawing.Size(1213, 633);
+            this.tpMemberInfo.Size = new System.Drawing.Size(1213, 597);
             this.tpMemberInfo.TabIndex = 1;
             this.tpMemberInfo.Text = "Member Info";
             // 
@@ -283,11 +283,28 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
-            this.guna2Panel1.Location = new System.Drawing.Point(27, 71);
+            this.guna2Panel1.Location = new System.Drawing.Point(27, 57);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1156, 527);
             this.guna2Panel1.TabIndex = 29;
+            // 
+            // lnkAddSubscription
+            // 
+            this.lnkAddSubscription.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkAddSubscription.AutoSize = true;
+            this.lnkAddSubscription.BackColor = System.Drawing.Color.Transparent;
+            this.lnkAddSubscription.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkAddSubscription.Enabled = false;
+            this.lnkAddSubscription.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkAddSubscription.Location = new System.Drawing.Point(951, 261);
+            this.lnkAddSubscription.Name = "lnkAddSubscription";
+            this.lnkAddSubscription.Size = new System.Drawing.Size(191, 31);
+            this.lnkAddSubscription.TabIndex = 179;
+            this.lnkAddSubscription.TabStop = true;
+            this.lnkAddSubscription.Text = "Add Subscription";
+            this.lnkAddSubscription.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkAddSubscription.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAddSubscription_LinkClicked);
             // 
             // pictureBox13
             // 
@@ -756,7 +773,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1064, 675);
+            this.btnSave.Location = new System.Drawing.Point(1068, 634);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(145, 37);
@@ -782,7 +799,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(896, 675);
+            this.btnClose.Location = new System.Drawing.Point(900, 634);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(156, 37);
@@ -790,30 +807,13 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lnkAddSubscription
-            // 
-            this.lnkAddSubscription.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.lnkAddSubscription.AutoSize = true;
-            this.lnkAddSubscription.BackColor = System.Drawing.Color.Transparent;
-            this.lnkAddSubscription.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkAddSubscription.Enabled = false;
-            this.lnkAddSubscription.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkAddSubscription.Location = new System.Drawing.Point(951, 261);
-            this.lnkAddSubscription.Name = "lnkAddSubscription";
-            this.lnkAddSubscription.Size = new System.Drawing.Size(191, 31);
-            this.lnkAddSubscription.TabIndex = 179;
-            this.lnkAddSubscription.TabStop = true;
-            this.lnkAddSubscription.Text = "Add Subscription";
-            this.lnkAddSubscription.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkAddSubscription.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAddSubscription_LinkClicked);
-            // 
             // frmAddUpdateMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1221, 722);
+            this.ClientSize = new System.Drawing.Size(1221, 680);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcMemberInfo);
