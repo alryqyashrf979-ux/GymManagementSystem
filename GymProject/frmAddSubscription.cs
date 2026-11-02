@@ -130,18 +130,17 @@ namespace GymMangementSystem
         {
 
 
-            _Subscription.StartDate = ctrlSubscriptionDetails1.StartDate;
-            _Subscription.ExpirationDate = _Subscription.StartDate.AddDays(ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.Duration);
-            _Subscription.createdByUserID = clsGlobal.CurrentUserInfo.UserID;
+            bool IsSaved = false;
 
             if (_Mode == enMode.AddMode)
             {
-                _Subscription.PlanID = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanID;
-                _Subscription.MemberID = ctrlMemberDetailsWithFiltering1.MemberID;
-                _Subscription.Price = ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice;
+                IsSaved = _Subscription.AddSubscription(ctrlSubscriptionDetails1.StartDate, ctrlMemberDetailsWithFiltering1.MemberID,
+                    ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanID, clsGlobal.CurrentUserInfo.UserID);
             }
+            else
+                IsSaved = _Subscription.UpdateSubscription(ctrlSubscriptionDetails1.StartDate, clsGlobal.CurrentUserInfo.UserID);
 
-            if (_Subscription.Save())
+            if (IsSaved)
             {
                 _Mode = enMode.UpdateMode;
 
@@ -154,19 +153,19 @@ namespace GymMangementSystem
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 btnSave.Enabled = (_Subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
-                ctrlSubscriptionDetails1.EnableStartDate =btnSave.Enabled;
+                ctrlSubscriptionDetails1.EnableStartDate = btnSave.Enabled;
 
 
                 if (!btnSave.Enabled)
                     MessageBox.Show("The start date cannot be changed because this subscription is already active.", "Subscription connot be Modified", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    
+
 
                 ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
                 ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
 
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
 
-                
+
             }
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
