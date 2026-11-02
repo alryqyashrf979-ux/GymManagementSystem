@@ -35,8 +35,10 @@ namespace GymMangementSystem
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbMethod.Visible = (cbValue.Text == "Method");
-            txtSearch.Visible = !(cbValue.Text.Trim() == "None"||cbValue.Text=="Method"|| cbValue.Text == "Date");
+            txtSearch.Visible = !(cbValue.Text.Trim() == "None"||cbValue.Text=="Method"|| cbValue.Text == "Date"|| cbValue.Text == "Status");
             dtpTime.Visible = (cbValue.Text == "Date");
+            cmStatus.Visible = (cbValue.Text == "Status");
+
             txtSearch.Clear();
             txtSearch.Focus();
 
@@ -102,6 +104,22 @@ namespace GymMangementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmStatus.Text == "All")
+            {
+                _dtAllPayments.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
+                return;
+            }
+
+            _dtAllPayments.DefaultView.RowFilter = $"{cbValue.Text} like '{cmStatus.Text.Trim()}%'";
+            lblRecord.Text = dgvPayment.Rows.Count.ToString();
+
+
         }
     }
 }
