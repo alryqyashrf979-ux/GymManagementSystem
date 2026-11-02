@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateMember));
             this.tcMemberInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -44,7 +43,6 @@
             this.lnkAddSubscription = new System.Windows.Forms.LinkLabel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtInActivationReason = new GymMangementSystem.MyTextBox();
             this.lblLastSubscriptionID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,16 +56,13 @@
             this.lblPersonID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new GymMangementSystem.MyTextBox();
             this.lblEmergencyContactID = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtRelationship = new GymMangementSystem.MyTextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtPersonName = new GymMangementSystem.MyTextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -77,6 +72,11 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
+            this.txtInActivationReason = new GymMangementSystem.MyTextBox();
+            this.txtPhoneNumber = new GymMangementSystem.MyTextBox();
+            this.txtRelationship = new GymMangementSystem.MyTextBox();
+            this.txtPersonName = new GymMangementSystem.MyTextBox();
             this.tcMemberInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -109,7 +109,7 @@
             this.tcMemberInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tcMemberInfo.Name = "tcMemberInfo";
             this.tcMemberInfo.SelectedIndex = 0;
-            this.tcMemberInfo.Size = new System.Drawing.Size(1221, 626);
+            this.tcMemberInfo.Size = new System.Drawing.Size(1227, 626);
             this.tcMemberInfo.TabIndex = 1;
             // 
             // tpPersonalInfo
@@ -123,18 +123,9 @@
             this.tpPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(1213, 597);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(1219, 597);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
-            // 
-            // uctPersonDetailsWithFilter1
-            // 
-            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(8, 70);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
-            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1201, 450);
-            this.uctPersonDetailsWithFilter1.TabIndex = 14;
             // 
             // panel4
             // 
@@ -145,7 +136,7 @@
             this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1205, 45);
+            this.panel4.Size = new System.Drawing.Size(1211, 45);
             this.panel4.TabIndex = 13;
             // 
             // lblTitle2
@@ -190,7 +181,7 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(1046, 543);
+            this.btnNext.Location = new System.Drawing.Point(1047, 543);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(159, 44);
@@ -207,7 +198,7 @@
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 25);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpMemberInfo.Size = new System.Drawing.Size(1213, 597);
+            this.tpMemberInfo.Size = new System.Drawing.Size(1219, 597);
             this.tpMemberInfo.TabIndex = 1;
             this.tpMemberInfo.Text = "Member Info";
             // 
@@ -220,7 +211,7 @@
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 46);
+            this.panel1.Size = new System.Drawing.Size(1211, 46);
             this.panel1.TabIndex = 66;
             // 
             // lblTitle1
@@ -328,38 +319,6 @@
             this.label1.Size = new System.Drawing.Size(215, 27);
             this.label1.TabIndex = 75;
             this.label1.Text = "InActivation Reason :";
-            // 
-            // txtInActivationReason
-            // 
-            this.txtInActivationReason.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtInActivationReason.AutoScroll = true;
-            this.txtInActivationReason.AutoSize = true;
-            this.txtInActivationReason.BorderRadius = 5;
-            this.txtInActivationReason.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInActivationReason.DefaultText = "";
-            this.txtInActivationReason.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtInActivationReason.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtInActivationReason.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtInActivationReason.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtInActivationReason.ErrorMessage = "This Field is Required";
-            this.txtInActivationReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInActivationReason.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtInActivationReason.ForeColor = System.Drawing.Color.Black;
-            this.txtInActivationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInActivationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtInActivationReason.IsRequired = false;
-            this.txtInActivationReason.Location = new System.Drawing.Point(651, 142);
-            this.txtInActivationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtInActivationReason.Multiline = true;
-            this.txtInActivationReason.Name = "txtInActivationReason";
-            this.txtInActivationReason.PlaceholderText = "InActivation Reason";
-            this.txtInActivationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInActivationReason.SelectedText = "";
-            this.txtInActivationReason.Size = new System.Drawing.Size(368, 95);
-            this.txtInActivationReason.TabIndex = 74;
-            this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
-            this.txtInActivationReason.TextChanged += new System.EventHandler(this.txtInActivationReason_TextChanged);
             // 
             // lblLastSubscriptionID
             // 
@@ -516,30 +475,6 @@
             this.label10.TabIndex = 26;
             this.label10.Text = "Person ID :";
             // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.BorderRadius = 5;
-            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneNumber.DefaultText = "";
-            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.ErrorMessage = "This Field is Required";
-            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
-            this.txtPhoneNumber.IsRequired = true;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(848, 481);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PlaceholderText = "Phone Number";
-            this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(251, 33);
-            this.txtPhoneNumber.TabIndex = 65;
-            // 
             // lblEmergencyContactID
             // 
             this.lblEmergencyContactID.AutoSize = true;
@@ -588,30 +523,6 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Member ID :";
             // 
-            // txtRelationship
-            // 
-            this.txtRelationship.BorderRadius = 5;
-            this.txtRelationship.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRelationship.DefaultText = "";
-            this.txtRelationship.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRelationship.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRelationship.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRelationship.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRelationship.ErrorMessage = "This Field is Required";
-            this.txtRelationship.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRelationship.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRelationship.ForeColor = System.Drawing.Color.Black;
-            this.txtRelationship.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRelationship.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtRelationship.IsRequired = true;
-            this.txtRelationship.Location = new System.Drawing.Point(482, 476);
-            this.txtRelationship.Margin = new System.Windows.Forms.Padding(5);
-            this.txtRelationship.Name = "txtRelationship";
-            this.txtRelationship.PlaceholderText = "Relationship";
-            this.txtRelationship.SelectedText = "";
-            this.txtRelationship.Size = new System.Drawing.Size(289, 38);
-            this.txtRelationship.TabIndex = 13;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
@@ -645,30 +556,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
-            // 
-            // txtPersonName
-            // 
-            this.txtPersonName.BorderRadius = 5;
-            this.txtPersonName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPersonName.DefaultText = "";
-            this.txtPersonName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPersonName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPersonName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPersonName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPersonName.ErrorMessage = "This Field is Required";
-            this.txtPersonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPersonName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPersonName.ForeColor = System.Drawing.Color.Black;
-            this.txtPersonName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPersonName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtPersonName.IsRequired = true;
-            this.txtPersonName.Location = new System.Drawing.Point(51, 476);
-            this.txtPersonName.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPersonName.Name = "txtPersonName";
-            this.txtPersonName.PlaceholderText = "Contact Person Name";
-            this.txtPersonName.SelectedText = "";
-            this.txtPersonName.Size = new System.Drawing.Size(368, 38);
-            this.txtPersonName.TabIndex = 11;
             // 
             // guna2Panel2
             // 
@@ -807,13 +694,126 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // uctPersonDetailsWithFilter1
+            // 
+            this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(4, 65);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1210, 472);
+            this.uctPersonDetailsWithFilter1.TabIndex = 14;
+            // 
+            // txtInActivationReason
+            // 
+            this.txtInActivationReason.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtInActivationReason.AutoScroll = true;
+            this.txtInActivationReason.AutoSize = true;
+            this.txtInActivationReason.BorderRadius = 5;
+            this.txtInActivationReason.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtInActivationReason.DefaultText = "";
+            this.txtInActivationReason.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtInActivationReason.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtInActivationReason.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtInActivationReason.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtInActivationReason.ErrorMessage = "This Field is Required";
+            this.txtInActivationReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtInActivationReason.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtInActivationReason.ForeColor = System.Drawing.Color.Black;
+            this.txtInActivationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtInActivationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtInActivationReason.IsRequired = false;
+            this.txtInActivationReason.Location = new System.Drawing.Point(651, 142);
+            this.txtInActivationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInActivationReason.Multiline = true;
+            this.txtInActivationReason.Name = "txtInActivationReason";
+            this.txtInActivationReason.PlaceholderText = "InActivation Reason";
+            this.txtInActivationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInActivationReason.SelectedText = "";
+            this.txtInActivationReason.Size = new System.Drawing.Size(368, 95);
+            this.txtInActivationReason.TabIndex = 74;
+            this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
+            this.txtInActivationReason.TextChanged += new System.EventHandler(this.txtInActivationReason_TextChanged);
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.BorderRadius = 5;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.ErrorMessage = "This Field is Required";
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
+            this.txtPhoneNumber.IsRequired = true;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(848, 481);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PlaceholderText = "Phone Number";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(251, 33);
+            this.txtPhoneNumber.TabIndex = 65;
+            // 
+            // txtRelationship
+            // 
+            this.txtRelationship.BorderRadius = 5;
+            this.txtRelationship.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRelationship.DefaultText = "";
+            this.txtRelationship.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRelationship.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRelationship.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRelationship.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRelationship.ErrorMessage = "This Field is Required";
+            this.txtRelationship.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRelationship.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRelationship.ForeColor = System.Drawing.Color.Black;
+            this.txtRelationship.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRelationship.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtRelationship.IsRequired = true;
+            this.txtRelationship.Location = new System.Drawing.Point(482, 476);
+            this.txtRelationship.Margin = new System.Windows.Forms.Padding(5);
+            this.txtRelationship.Name = "txtRelationship";
+            this.txtRelationship.PlaceholderText = "Relationship";
+            this.txtRelationship.SelectedText = "";
+            this.txtRelationship.Size = new System.Drawing.Size(289, 38);
+            this.txtRelationship.TabIndex = 13;
+            // 
+            // txtPersonName
+            // 
+            this.txtPersonName.BorderRadius = 5;
+            this.txtPersonName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPersonName.DefaultText = "";
+            this.txtPersonName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPersonName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPersonName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPersonName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPersonName.ErrorMessage = "This Field is Required";
+            this.txtPersonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPersonName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonName.ForeColor = System.Drawing.Color.Black;
+            this.txtPersonName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPersonName.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtPersonName.IsRequired = true;
+            this.txtPersonName.Location = new System.Drawing.Point(51, 476);
+            this.txtPersonName.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPersonName.Name = "txtPersonName";
+            this.txtPersonName.PlaceholderText = "Contact Person Name";
+            this.txtPersonName.SelectedText = "";
+            this.txtPersonName.Size = new System.Drawing.Size(368, 38);
+            this.txtPersonName.TabIndex = 11;
+            // 
             // frmAddUpdateMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1221, 680);
+            this.ClientSize = new System.Drawing.Size(1227, 680);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcMemberInfo);

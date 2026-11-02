@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.gbFilter = new System.Windows.Forms.GroupBox();
-            this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tbSearch = new GymMangementSystem.MyTextBox();
+            this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
             this.gbFilter.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -48,7 +48,7 @@
             this.gbFilter.Controls.Add(this.cbOptions);
             this.gbFilter.Controls.Add(this.label1);
             this.gbFilter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFilter.Location = new System.Drawing.Point(8, 1);
+            this.gbFilter.Location = new System.Drawing.Point(9, 3);
             this.gbFilter.Margin = new System.Windows.Forms.Padding(4);
             this.gbFilter.Name = "gbFilter";
             this.gbFilter.Padding = new System.Windows.Forms.Padding(4);
@@ -56,39 +56,6 @@
             this.gbFilter.TabIndex = 5;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
-            // 
-            // cbOptions
-            // 
-            this.cbOptions.BackColor = System.Drawing.Color.Transparent;
-            this.cbOptions.BorderRadius = 5;
-            this.cbOptions.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOptions.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbOptions.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbOptions.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.cbOptions.ForeColor = System.Drawing.Color.Black;
-            this.cbOptions.ItemHeight = 30;
-            this.cbOptions.Items.AddRange(new object[] {
-            "Person ID",
-            "National No"});
-            this.cbOptions.Location = new System.Drawing.Point(275, 31);
-            this.cbOptions.Margin = new System.Windows.Forms.Padding(4);
-            this.cbOptions.Name = "cbOptions";
-            this.cbOptions.Size = new System.Drawing.Size(264, 36);
-            this.cbOptions.StartIndex = 0;
-            this.cbOptions.TabIndex = 6;
-            this.cbOptions.SelectedIndexChanged += new System.EventHandler(this.cbOptions_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(151, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 26);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Find By :";
             // 
             // btnAddNewMember
             // 
@@ -138,19 +105,6 @@
             this.btnSearch.TabIndex = 90;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
-            this.guna2Panel1.BorderRadius = 5;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.gbFilter);
-            this.guna2Panel1.Controls.Add(this.uctPersonDetails1);
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1202, 427);
-            this.guna2Panel1.TabIndex = 7;
-            // 
             // tbSearch
             // 
             this.tbSearch.BorderRadius = 5;
@@ -176,25 +130,71 @@
             this.tbSearch.TabIndex = 7;
             this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
             // 
+            // cbOptions
+            // 
+            this.cbOptions.BackColor = System.Drawing.Color.Transparent;
+            this.cbOptions.BorderRadius = 5;
+            this.cbOptions.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOptions.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbOptions.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbOptions.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cbOptions.ForeColor = System.Drawing.Color.Black;
+            this.cbOptions.ItemHeight = 30;
+            this.cbOptions.Items.AddRange(new object[] {
+            "Person ID",
+            "National No"});
+            this.cbOptions.Location = new System.Drawing.Point(275, 31);
+            this.cbOptions.Margin = new System.Windows.Forms.Padding(4);
+            this.cbOptions.Name = "cbOptions";
+            this.cbOptions.Size = new System.Drawing.Size(264, 36);
+            this.cbOptions.StartIndex = 0;
+            this.cbOptions.TabIndex = 6;
+            this.cbOptions.SelectedIndexChanged += new System.EventHandler(this.cbOptions_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(151, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Find By :";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
+            this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.gbFilter);
+            this.guna2Panel1.Controls.Add(this.uctPersonDetails1);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1203, 439);
+            this.guna2Panel1.TabIndex = 7;
+            // 
             // uctPersonDetails1
             // 
             this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetails1.Location = new System.Drawing.Point(8, 85);
+            this.uctPersonDetails1.Location = new System.Drawing.Point(9, 89);
             this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(1185, 339);
             this.uctPersonDetails1.TabIndex = 6;
             this.uctPersonDetails1.Load += new System.EventHandler(this.uctPersonDetails1_Load);
             // 
             // uctPersonDetailsWithFilter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uctPersonDetailsWithFilter";
-            this.Size = new System.Drawing.Size(1209, 434);
+            this.Size = new System.Drawing.Size(1209, 445);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
