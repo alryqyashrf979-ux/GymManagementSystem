@@ -65,7 +65,7 @@ namespace DataBusinessLayer
 
         private bool _AddSubscriptionCancellationID()
         {
-            this._CancellationID = clsSubscriptionCancellationData.AddSubscriptionCancellation(this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, this.CancellationDate, this.CancelledByUserID);
+            this._CancellationID = clsSubscriptionCancellationData.AddSubscriptionCancellation(this.SubscriptionID, this.CancellationReason, this.Refund, this.ElapsedDays, DateTime.Today, this.CancelledByUserID);
 
             return this._CancellationID != -1;
         }
