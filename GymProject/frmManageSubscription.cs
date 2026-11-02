@@ -34,7 +34,7 @@ namespace GymMangementSystem
             SubscriptionsList = clsSubscription.GetAllSubscriptions();
             dgvSubscriptionsList.DataSource = SubscriptionsList;
 
-            lblRecord.Text=SubscriptionsList.Rows.Count.ToString();
+            lblRecord.Text=dgvSubscriptionsList.Rows.Count.ToString();
         }
 
         private void cmSelectTypeOfFiltering_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace GymMangementSystem
             txtFiltering.InputType = (cmSelectTypeOfFiltering.Text == "Subscription ID") ? MyTextBox.TextType.Numeric : MyTextBox.TextType.Text;
 
             SubscriptionsList.DefaultView.RowFilter = "";
-            lblRecord.Text = SubscriptionsList.Rows.Count.ToString();
+            lblRecord.Text = dgvSubscriptionsList.Rows.Count.ToString();
 
 
             if (txtFiltering.Visible)
@@ -70,7 +70,7 @@ namespace GymMangementSystem
             if(txtFiltering.Text == "")
             {
                 SubscriptionsList.DefaultView.RowFilter = "";
-                lblRecord.Text = SubscriptionsList.Rows.Count.ToString();
+                lblRecord.Text = dgvSubscriptionsList.Rows.Count.ToString();
                 return;
             }
 
@@ -81,7 +81,7 @@ namespace GymMangementSystem
 
 
 
-            lblRecord.Text = SubscriptionsList.Rows.Count.ToString();
+            lblRecord.Text = dgvSubscriptionsList.Rows.Count.ToString();
 
         }
 
@@ -92,7 +92,7 @@ namespace GymMangementSystem
             if(cmStatus.Text=="All")
             {
                 SubscriptionsList.DefaultView.RowFilter = "";
-                lblRecord.Text = SubscriptionsList.Rows.Count.ToString();
+                lblRecord.Text = dgvSubscriptionsList.Rows.Count.ToString();
                 return; 
             }
 
@@ -109,14 +109,14 @@ namespace GymMangementSystem
             if(cmPlanNames.SelectedIndex==-1)
             {
                 SubscriptionsList.DefaultView.RowFilter = "";
-                lblRecord.Text = SubscriptionsList.Rows.Count.ToString();
+                lblRecord.Text = dgvSubscriptionsList.Rows.Count.ToString();
 
                 return;
             }
 
            
                 SubscriptionsList.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text.Trim()}] like '{cmPlanNames.Text}'";
-                lblRecord.Text = SubscriptionsList.Rows.Count.ToString();
+                lblRecord.Text = dgvSubscriptionsList.Rows.Count.ToString();
             
 
         }
