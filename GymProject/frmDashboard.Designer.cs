@@ -150,6 +150,7 @@
             this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
             this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(304, 38);
             this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
+            this.cancelSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.cancelSubscriptionToolStripMenuItem_Click);
             // 
             // freezeSubscriptionToolStripMenuItem
             // 

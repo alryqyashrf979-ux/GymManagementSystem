@@ -100,5 +100,12 @@ namespace GymMangementSystem
             _SelectbtnDashBoard();
 
         }
+
+        private void cancelSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateCancelSubscription frm = new frmAddUpdateCancelSubscription();
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+        }
     }
 }
