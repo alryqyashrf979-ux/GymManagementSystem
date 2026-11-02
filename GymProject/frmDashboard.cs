@@ -92,5 +92,13 @@ namespace GymMangementSystem
             _SelectbtnDashBoard();
 
         }
+
+        private void freezeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateFrozenSubscription frm =new frmAddUpdateFrozenSubscription();
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+
+        }
     }
 }

@@ -41,7 +41,8 @@ namespace GymMangementSystem
 
         private void ctrlMemberBasicDetailsWithFilter1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
         {
-
+            btnSave.Enabled = false;
+            pnlFrozenSubscription.Enabled = false;
 
             if (e.MemberInfo == null)
                 return;
@@ -55,6 +56,8 @@ namespace GymMangementSystem
 
             _SubscriptionID=e.MemberInfo.LastSubscriptionID;    
             lblSubscriptionID.Text=_SubscriptionID.ToString();
+            btnSave.Enabled = true;
+            pnlFrozenSubscription.Enabled = true;
 
         }
 
@@ -70,19 +73,20 @@ namespace GymMangementSystem
             txtFees.Text = "0";
             lblTitle.Text = "Add Frozen Subscription";
             this.Text=lblTitle.Text;
+            rdNo.Checked = true;
 
             if (_Mode == enMode.Addnew)
                 _FrozenSubscriptionInf = new clsFrozenSubscription();
+            dtStartDate.MinDate = DateTime.Today;
+            dtEndDate.MinDate = DateTime.Today;
 
-            dtEndDate.MaxDate = DateTime.Now.AddYears(2);
-            dtStartDate.MaxDate = DateTime.Now;
-
-            dtStartDate.MinDate = DateTime.Now;
-            dtEndDate.MinDate = DateTime.Now;
+            dtEndDate.MaxDate = DateTime.Today.AddYears(2);
+            dtStartDate.MaxDate = DateTime.Today.AddMonths(5);
 
 
-            dtStartDate.Value = DateTime.Now;
-            dtEndDate.Value = DateTime.Now;
+
+            dtStartDate.Value = DateTime.Today.Date;
+            dtEndDate.Value = DateTime.Today;
         }
 
         void _LoadData()
@@ -108,7 +112,7 @@ namespace GymMangementSystem
             lblSubscriptionID.Text = _FrozenSubscriptionInf.SubscriptionID.ToString();
             txtFreezeReason.Text= _FrozenSubscriptionInf.FreezeReason.ToString();
             txtFees.Text = _FrozenSubscriptionInf.FreezeFee.ToString();
-
+            rdYes.Checked = _FrozenSubscriptionInf.IsFeesPaid;
 
             if(_FrozenSubscriptionInf.FreezeStartDate.Date<DateTime.Now.Date)
             {
@@ -137,25 +141,61 @@ namespace GymMangementSystem
         {
 
 
-            if (txtFees.Text == "" || txtFees.Text == "0")
-                _FrozenSubscriptionInf.IsFeesPaid = false;
+
+            if (!this.ValidateChildren())
+                return;
+
+
+            if (dtStartDate.Value.Date > dtEndDate.Value.Date)
+            {
+                MessageBox.Show("Start Date can not be greater then End Date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            if (txtFees.Text != "" && txtFees.Text != "0")
+                _FrozenSubscriptionInf.FreezeFee = Convert.ToDouble(txtFees.Text);
+
+
+
+
+            _FrozenSubscriptionInf.IsFeesPaid = rdYes.Checked;
+            _FrozenSubscriptionInf.SubscriptionID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID;
+            _FrozenSubscriptionInf.FreezeStartDate=dtStartDate.Value;
+            _FrozenSubscriptionInf.FreezeEndDate=dtEndDate.Value;
+            _FrozenSubscriptionInf.FrozenByUserID = clsGlobal.CurrentUserInfo.UserID;
+
+
+            if(_FrozenSubscriptionInf.Save())
+            {
+
+
+
+                lblFreezingDuration.Text = _FrozenSubscriptionInf.FreezingDuration.ToString();
+                lblFrozenByUser.Text = _FrozenSubscriptionInf.FrozenByUserID.ToString();
+                lblFrozenSubscriptionID.Text = _FrozenSubscriptionInf.FreezeID.ToString();
+
+                lblTitle.Text = "Update Frozen Subscription";
+                this.Text = lblTitle.Text;
+
+                MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
             else
-                _FrozenSubscriptionInf.IsFeesPaid = true;
-
-
-
-
-            if(_FrozenSubscriptionInf.IsFeesPaid)
-                _FrozenSubscriptionInf.FreezeFee=Convert.ToDouble(txtFees.Text);
-
-
-
+                MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 
 
 
         }
+
+
+
+
+
+        
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -177,6 +217,11 @@ namespace GymMangementSystem
                 errorProvider1.SetError(txtFees, "");
             }
             
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

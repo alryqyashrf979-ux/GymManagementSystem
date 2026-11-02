@@ -700,5 +700,8 @@
   <ItemGroup>
     <None Include="Resources\money 32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreezeIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

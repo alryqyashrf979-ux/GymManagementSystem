@@ -28,7 +28,7 @@ namespace DataAccessLayer
            ,[FreezeFee]
            ,[FreezeReason]
            ,[IsFeesPaid]
-           ,[Status]
+           ,[IsFrozen]
            ,[FrozenByUserID]
            ,[unfrozenByUserID])
      VALUES
@@ -44,6 +44,9 @@ namespace DataAccessLayer
            ,@FrozenByUserID
            ,@unfrozenByUserID);
                Select scope_Identity(); 
+                
+ UPDATE Subscriptions 
+ SET Status =4  WHERE Subscriptions.SubscriptionID=@SubscriptionID;
                  ";
 
 
@@ -61,7 +64,7 @@ namespace DataAccessLayer
                     cmd.Parameters.AddWithValue("@FreezeStartDate", FreezeStartDate);
                     cmd.Parameters.AddWithValue("@FreezeEndDate", FreezeEndDate);
 
-                    cmd.Parameters.AddWithValue("@UnFreezeDate",DateTime.Now);
+                    cmd.Parameters.AddWithValue("@UnFreezeDate",DBNull.Value);
                     cmd.Parameters.AddWithValue("@FreezingDuration", FreezingDuration);
 
 
@@ -105,15 +108,15 @@ namespace DataAccessLayer
 
 
         public static bool UpdateFrozenSubscription(int FreezeID, int SubscriptionID,
-            DateTime FreezeEndDate,DateTime FreezeStartDate,DateTime? UnFreezeDate, byte FreezingDuration, double FreezeFee,
+            DateTime FreezeEndDate,DateTime FreezeStartDate, DateTime? UnFreezeDate, byte FreezingDuration, double FreezeFee,
             string FreezeReason, bool IsFeesPaid, bool IsFrozen, int FrozenByUserID,int unfrozenByUserID)
         {
 
             string sql = @"UPDATE [dbo].[FrozenSubscriptions]
    SET [SubscriptionID] = @SubscriptionID
+      ,[UnFreezeDate] = @UnFreezeDate
       ,[FreezeStartDate] = @FreezeStartDate
       ,[FreezeEndDate] = @FreezeEndDate
-      ,[UnFreezeDate] = @UnFreezeDate
       ,[FreezingDuration] = @FreezingDuration
       ,[FreezeFee] = @FreezeFee
       ,[FreezeReason] = @FreezeReason
@@ -138,20 +141,21 @@ namespace DataAccessLayer
                     conn.Open();
 
 
+                    cmd.Parameters.AddWithValue("@FrozenByUserID", FrozenByUserID);
                     cmd.Parameters.AddWithValue("@FreezeID", FreezeID);
                     cmd.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
                     cmd.Parameters.AddWithValue("@FreezeStartDate", FreezeStartDate);
                     cmd.Parameters.AddWithValue("@FreezeEndDate", FreezeEndDate);
 
-                    if (UnFreezeDate.HasValue)
-                        cmd.Parameters.AddWithValue("@UnFreezeDate", UnFreezeDate);
+
+                    if(UnFreezeDate.HasValue)
+                    cmd.Parameters.AddWithValue("@UnFreezeDate", UnFreezeDate);
                     else
-                        cmd.Parameters.AddWithValue("@UnFreezeDate", DBNull.Value);
+                    cmd.Parameters.AddWithValue("@UnFreezeDate", DBNull.Value);
 
 
 
-
-                    cmd.Parameters.AddWithValue("@IsFrozen", IsFrozen);
+                        cmd.Parameters.AddWithValue("@IsFrozen", IsFrozen);
                     cmd.Parameters.AddWithValue("@FreezingDuration", FreezingDuration);
 
                     if (FreezeFee > 0)

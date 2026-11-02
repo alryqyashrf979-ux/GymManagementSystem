@@ -106,5 +106,10 @@ namespace GymMangementSystem
                 tbSearch.InputType = MyTextBox.TextType.Text;
             }
         }
+
+        private void uctPersonDetails1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
