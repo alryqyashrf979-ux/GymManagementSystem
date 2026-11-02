@@ -89,15 +89,15 @@
             this.lblTitle.Location = new System.Drawing.Point(61, 8);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(298, 32);
+            this.lblTitle.Size = new System.Drawing.Size(297, 32);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Add Frozen Subscription";
+            this.lblTitle.Text = "Add Cancel Subscription";
             // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.White;
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.FreezeIcon;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.CancelIcon;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
