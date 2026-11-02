@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DataBusinessLayer.clsPayments;
 
 namespace GymMangementSystem
 {
@@ -84,12 +85,19 @@ namespace GymMangementSystem
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (ctrlMemberDetailsWithFiltering1.MemberID != -1)
-            {
-                btnSave.Enabled = true;
-                tpPaymentInfo.Enabled = true;
-                tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
-               ctrlPaymentDetails1.LoadPaymentInfo(clsPayments.SelectPaymentIDBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID));
+            if(ctrlMemberDetailsWithFiltering1.MemberID!=-1)
+          { 
+                if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
+                {
+                    btnSave.Enabled = true;
+                    tpPaymentInfo.Enabled = true;
+                    tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
+                    ctrlPaymentDetails1.LoadPaymentInfo(clsPayments.SelectPaymentIDBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID));
+
+
+                }
+                else
+                    MessageBox.Show("Select a member that has supscription !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 MessageBox.Show("Select a member first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -110,6 +118,27 @@ namespace GymMangementSystem
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            _PaymentInfo.PaymentAmount=Convert.ToDouble( nudPaymentAmount.Value);
+            _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
+          //  _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
+            _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
+            _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
+            _PaymentInfo.TotalRemaining = Math.Max(0, _PaymentInfo.ActualAmount - _PaymentInfo.PaymentAmount);// this mean choose the max one.
+            _PaymentInfo.PaymentDate = DateTime.Now;
+            _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? (byte)clsPayments.enStatus.Completed : (byte)clsPayments.enStatus.Pending;
+
+
+            if (_PaymentInfo.Save())
+            {
+
+            }
         }
     }
 }
