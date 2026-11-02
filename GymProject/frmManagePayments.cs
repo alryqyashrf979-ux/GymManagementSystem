@@ -19,11 +19,15 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
-        private void frmManagementPayment_Load(object sender, EventArgs e)
+        private void _RefreshData()
         {
-            _dtAllPayments= clsPayments.GetAllPayments();
+            _dtAllPayments = clsPayments.GetAllPayments();
             dgvPayment.DataSource = _dtAllPayments;
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
+        }
+        private void frmManagementPayment_Load(object sender, EventArgs e)
+        {
+            _RefreshData();
 
         }
 
@@ -126,6 +130,7 @@ namespace GymMangementSystem
         {
             Form frm = new frmAddUpdatePayment();
             frm.ShowDialog();
+            _RefreshData();
         }
     }
 }

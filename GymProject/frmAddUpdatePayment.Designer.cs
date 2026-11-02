@@ -39,7 +39,7 @@
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkShowSubscriptionDetails = new System.Windows.Forms.LinkLabel();
             this.nudPaymentAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.cmPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -192,7 +192,7 @@
             // 
             // tpPaymentInfo
             // 
-            this.tpPaymentInfo.Controls.Add(this.linkLabel1);
+            this.tpPaymentInfo.Controls.Add(this.lnkShowSubscriptionDetails);
             this.tpPaymentInfo.Controls.Add(this.nudPaymentAmount);
             this.tpPaymentInfo.Controls.Add(this.cmPaymentMethod);
             this.tpPaymentInfo.Controls.Add(this.label2);
@@ -208,17 +208,17 @@
             this.tpPaymentInfo.Text = "Payment Info";
             this.tpPaymentInfo.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // lnkShowSubscriptionDetails
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(725, 521);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(230, 25);
-            this.linkLabel1.TabIndex = 106;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Show Subscription Details";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkShowSubscriptionDetails.AutoSize = true;
+            this.lnkShowSubscriptionDetails.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkShowSubscriptionDetails.Location = new System.Drawing.Point(725, 521);
+            this.lnkShowSubscriptionDetails.Name = "lnkShowSubscriptionDetails";
+            this.lnkShowSubscriptionDetails.Size = new System.Drawing.Size(230, 25);
+            this.lnkShowSubscriptionDetails.TabIndex = 106;
+            this.lnkShowSubscriptionDetails.TabStop = true;
+            this.lnkShowSubscriptionDetails.Text = "Show Subscription Details";
+            this.lnkShowSubscriptionDetails.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // nudPaymentAmount
             // 
@@ -409,7 +409,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkShowSubscriptionDetails;
         private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
     }
 }

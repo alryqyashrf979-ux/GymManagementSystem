@@ -37,11 +37,11 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,int PaymentMethod, int CreatedByUserID)
+        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,double TotalRemaining,int PaymentMethod, int CreatedByUserID,byte Status)
         {
             string query = " INSERT INTO [dbo].[Payments]" +
-                " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID])" +
-                " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@PaymentAmount-@ActualAmount,@PaymentMethod,@PaymentDate,@CreatedByUserID);" +
+                " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID],[Status])" +
+                " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@TotalRemaining,@PaymentMethod,@PaymentDate,@CreatedByUserID,@Status);" +
                 " SELECT SCOPE_IDENTITY(); ";
 
             try
@@ -55,6 +55,8 @@ namespace DataAccessLayer
                         command.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
                         command.Parameters.AddWithValue("@ActualAmount", ActualAmount);
                         command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
+                        command.Parameters.AddWithValue("@Status", Status);
+                        command.Parameters.AddWithValue("@TotalRemaining", TotalRemaining);
                         command.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
                         command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 

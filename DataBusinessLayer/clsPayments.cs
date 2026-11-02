@@ -72,7 +72,7 @@ namespace DataBusinessLayer
 
         private bool _AddPayment()
         {
-            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount, this.PaymentMethod, this.CreatedByUserID);
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining, this.PaymentMethod, this.CreatedByUserID,this.Status);
 
             return this._PaymentID != -1;
         }
@@ -91,7 +91,7 @@ namespace DataBusinessLayer
                 case enMode.AddMode:
                     if (_AddPayment())
                     {
-                        _Mode = enMode.AddMode;
+                        _Mode = enMode.UpdateMode;
                         return true;
                     }
                     else
