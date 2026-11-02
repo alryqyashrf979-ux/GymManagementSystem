@@ -85,9 +85,12 @@ namespace GymMangementSystem
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(ctrlMemberDetailsWithFiltering1.MemberID!=-1)
+            btnSave.Enabled = false;
+            tpPaymentInfo.Enabled = false;
+
+            if (ctrlMemberDetailsWithFiltering1.MemberID!=-1)
           { 
-                if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
+                if (ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID!=-1)
                 {
                     btnSave.Enabled = true;
                     tpPaymentInfo.Enabled = true;
@@ -139,6 +142,13 @@ namespace GymMangementSystem
             {
 
             }
+        }
+
+        private void btnAddNewMember_Click(object sender, EventArgs e)
+        {
+            frmAddSubscription frm = new frmAddSubscription();
+            frm.LoadMemberDetails(ctrlMemberDetailsWithFiltering1.MemberID);
+            frm.ShowDialog();
         }
     }
 }

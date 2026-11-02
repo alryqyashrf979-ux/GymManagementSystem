@@ -32,9 +32,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcPayment = new System.Windows.Forms.TabControl();
             this.tpMemberInfo = new System.Windows.Forms.TabPage();
+            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.nudPaymentAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -42,20 +45,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcPayment.SuspendLayout();
             this.tpMemberInfo.SuspendLayout();
             this.tpPaymentInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaymentAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -90,6 +91,17 @@
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Add/Update Payment";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.AddPaymentCircle;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
             // tcPayment
             // 
             this.tcPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -105,6 +117,7 @@
             // 
             // tpMemberInfo
             // 
+            this.tpMemberInfo.Controls.Add(this.btnAddNewMember);
             this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
             this.tpMemberInfo.Controls.Add(this.btnNext);
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
@@ -114,6 +127,31 @@
             this.tpMemberInfo.TabIndex = 0;
             this.tpMemberInfo.Text = "Member Info";
             this.tpMemberInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNewMember
+            // 
+            this.btnAddNewMember.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddNewMember.BorderRadius = 5;
+            this.btnAddNewMember.BorderThickness = 1;
+            this.btnAddNewMember.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewMember.Enabled = false;
+            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewMember.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewMember.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddNewMember.Location = new System.Drawing.Point(759, 20);
+            this.btnAddNewMember.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNewMember.Name = "btnAddNewMember";
+            this.btnAddNewMember.Size = new System.Drawing.Size(62, 29);
+            this.btnAddNewMember.TabIndex = 90;
+            this.btnAddNewMember.Click += new System.EventHandler(this.btnAddNewMember_Click);
             // 
             // ctrlMemberDetailsWithFiltering1
             // 
@@ -125,6 +163,32 @@
             this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(968, 509);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
             this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BorderRadius = 5;
+            this.btnNext.BorderThickness = 1;
+            this.btnNext.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnNext.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnNext.Location = new System.Drawing.Point(823, 516);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(135, 35);
+            this.btnNext.TabIndex = 20;
+            this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // tpPaymentInfo
             // 
@@ -218,6 +282,32 @@
             this.ctrlPaymentDetails1.Size = new System.Drawing.Size(458, 550);
             this.ctrlPaymentDetails1.TabIndex = 98;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::GymMangementSystem.Properties.Resources.Money;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(-2, 52);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 48);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 103;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox6
+            // 
+            this.guna2CirclePictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox6.Image = global::GymMangementSystem.Properties.Resources.Money;
+            this.guna2CirclePictureBox6.ImageRotate = 0F;
+            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(-2, -5);
+            this.guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
+            this.guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox6.Size = new System.Drawing.Size(45, 48);
+            this.guna2CirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox6.TabIndex = 101;
+            this.guna2CirclePictureBox6.TabStop = false;
+            // 
             // btnSave
             // 
             this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
@@ -271,69 +361,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnNext
-            // 
-            this.btnNext.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnNext.BorderRadius = 5;
-            this.btnNext.BorderThickness = 1;
-            this.btnNext.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNext.FillColor = System.Drawing.Color.Transparent;
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnNext.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(823, 516);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(135, 35);
-            this.btnNext.TabIndex = 20;
-            this.btnNext.Text = "Next";
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::GymMangementSystem.Properties.Resources.Money;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(-2, 52);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 48);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 103;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // guna2CirclePictureBox6
-            // 
-            this.guna2CirclePictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox6.Image = global::GymMangementSystem.Properties.Resources.Money;
-            this.guna2CirclePictureBox6.ImageRotate = 0F;
-            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(-2, -5);
-            this.guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
-            this.guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox6.Size = new System.Drawing.Size(45, 48);
-            this.guna2CirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox6.TabIndex = 101;
-            this.guna2CirclePictureBox6.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.AddPaymentCircle;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
             // frmAddUpdatePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -350,6 +377,7 @@
             this.Load += new System.EventHandler(this.frmAddUpdatePayment_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.tcPayment.ResumeLayout(false);
             this.tpMemberInfo.ResumeLayout(false);
             this.tpPaymentInfo.ResumeLayout(false);
@@ -357,7 +385,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPaymentAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,5 +410,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
     }
 }

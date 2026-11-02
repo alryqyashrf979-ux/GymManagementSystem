@@ -121,5 +121,11 @@ namespace GymMangementSystem
 
 
         }
+
+        private void btnAddNewPayment_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdatePayment();
+            frm.ShowDialog();
+        }
     }
 }

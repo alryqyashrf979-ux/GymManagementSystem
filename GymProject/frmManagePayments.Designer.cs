@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagePayments));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.cbValue = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,13 +56,12 @@
             this.cbMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cmStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
-            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddNewPayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -94,6 +94,17 @@
             this.lblTitle2.Size = new System.Drawing.Size(220, 26);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Payment Management";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PaymentDetails;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
             // 
             // cbValue
             // 
@@ -161,20 +172,20 @@
             this.dgvPayment.AllowUserToAddRows = false;
             this.dgvPayment.AllowUserToDeleteRows = false;
             this.dgvPayment.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPayment.ColumnHeadersHeight = 30;
             this.dgvPayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PaymentID,
@@ -186,26 +197,26 @@
             this.Date,
             this.Username,
             this.Status});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPayment.GridColor = System.Drawing.Color.Black;
             this.dgvPayment.Location = new System.Drawing.Point(1, 177);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPayment.RowHeadersVisible = false;
             this.dgvPayment.RowHeadersWidth = 51;
             this.dgvPayment.Size = new System.Drawing.Size(1082, 534);
@@ -406,38 +417,29 @@
             this.cmStatus.Visible = false;
             this.cmStatus.SelectedIndexChanged += new System.EventHandler(this.cmStatus_SelectedIndexChanged);
             // 
-            // ctrlPaymentDetails1
+            // btnAddNewPayment
             // 
-            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1086, 172);
-            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 539);
-            this.ctrlPaymentDetails1.TabIndex = 122;
-            // 
-            // btnAddNewMember
-            // 
-            this.btnAddNewMember.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddNewMember.BorderRadius = 5;
-            this.btnAddNewMember.BorderThickness = 1;
-            this.btnAddNewMember.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnAddNewMember.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewMember.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddPyament;
-            this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewMember.Location = new System.Drawing.Point(1302, 137);
-            this.btnAddNewMember.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(62, 29);
-            this.btnAddNewMember.TabIndex = 127;
+            this.btnAddNewPayment.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddNewPayment.BorderRadius = 5;
+            this.btnAddNewPayment.BorderThickness = 1;
+            this.btnAddNewPayment.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewPayment.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPayment.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewPayment.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewPayment.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPayment.Image = global::GymMangementSystem.Properties.Resources.AddPyament;
+            this.btnAddNewPayment.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddNewPayment.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddNewPayment.Location = new System.Drawing.Point(1302, 137);
+            this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNewPayment.Name = "btnAddNewPayment";
+            this.btnAddNewPayment.Size = new System.Drawing.Size(62, 29);
+            this.btnAddNewPayment.TabIndex = 127;
+            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
             // 
             // btnClose
             // 
@@ -465,16 +467,15 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pictureBox10
+            // ctrlPaymentDetails1
             // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PaymentDetails;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
+            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1086, 172);
+            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 539);
+            this.ctrlPaymentDetails1.TabIndex = 122;
             // 
             // frmManagePayments
             // 
@@ -482,7 +483,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.btnAddNewMember);
+            this.Controls.Add(this.btnAddNewPayment);
             this.Controls.Add(this.cmStatus);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dtpTime);
@@ -502,8 +503,8 @@
             this.Load += new System.EventHandler(this.frmManagementPayment_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,6 +537,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewPayment;
     }
 }
