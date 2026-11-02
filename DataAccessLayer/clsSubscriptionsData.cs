@@ -15,7 +15,7 @@ namespace DataAccessLayer
 
 
         public static int AddNewSubscription(int MemberID,
-             int PlanID, DateTime StartDate, DateTime ExpirationDate, double Price, byte Status, int CreatedByUserID)
+             int PlanID, DateTime StartDate, DateTime ExpirationDate, DateTime RegistrationDate, double Price, byte Status, int CreatedByUserID)
         {
             
    
@@ -42,7 +42,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@Price", Price);
                     command.Parameters.AddWithValue("@Status", Status);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-                    command.Parameters.AddWithValue("@RegistrationDate", DateTime.Now);
+                    command.Parameters.AddWithValue("@RegistrationDate", RegistrationDate);
 
 
                     object result = command.ExecuteScalar();
