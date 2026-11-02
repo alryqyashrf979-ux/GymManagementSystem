@@ -15,7 +15,9 @@ namespace DataAccessLayer
             DataTable dt = new DataTable();
             string query = @"select PaymentID as 'Payment ID',SubscriptionID as 'Subscription ID',PaymentAmount as 'Payment Amount',
                 ActualAmount as 'Actual Amount',TotalRemaining as 'Total Remaining',case PaymentMethod when 1 then 'Cash' when 2 then 'Card'
-                 else 'Unknown' end as 'Payment Method' ,Format(cast(PaymentDate as datetime),'yyyy/MM/dd') as 'Date',Users.Username as 'Username' from Payments inner join 
+                 else 'Unknown' end as 'Payment Method' ,Format(cast(PaymentDate as datetime),'yyyy/MM/dd') as 'Date',Users.Username as 'Username',
+                 case Status when 1 then 'Pending'
+                 when 2 then 'Completed' when 3 then 'Refunded' when 4 then 'Partially Refund' else 'Unknown' end as 'Status' from Payments inner join 
                  Users on Users.UserID =Payments.CreatedByUserID";
 
             using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))

@@ -106,5 +106,10 @@ namespace GymMangementSystem
             Form frm = new frmShowSubscriptionDetails(ctrlPaymentDetails1.Payment.SubscriptionID);
             frm.ShowDialog();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
