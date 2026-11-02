@@ -34,7 +34,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddSubscriptionCancellation(int SubscriptionID, string CancellationReason, double RefundAmount, byte ElapsedDays,
+        static public int AddSubscriptionCancellation(int SubscriptionID, string CancellationReason, double RefundAmount, short ElapsedDays,
             DateTime CancellationDate, int CancelledByUSerID)
         {
             string query = " INSERT INTO [dbo].[SubscriptionCancellations]([SubscriptionID] ,[CancellationReason],[RefundAmount]," +
@@ -75,15 +75,14 @@ namespace DataAccessLayer
             return -1;
         }
 
-        static public bool UpdateSubscriptionCancellation(int SubscriptionCancellationID, int SubscriptionID, string CancellationReason, double RefundAmount, byte ElapsedDays,
-            DateTime CancellationDate, int CancelledByUSerID)
+        static public bool UpdateSubscriptionCancellation(int SubscriptionCancellationID, int SubscriptionID, string CancellationReason, double RefundAmount, short ElapsedDays,
+             int CancelledByUSerID)
         {
             string query = "UPDATE [dbo].[SubscriptionCancellations] SET " +
                 "[SubscriptionID] = @SubscriptionID ," +
                 "[CancellationReason] = @CancellationReason," +
                 "[RefundAmount] = @RefundAmount ," +
                 "[ElapsedDays] = @ElapsedDays ," +
-                "[CancellationDate] = @CancellationDate ," +
                 "[CancelledByUSerID] = @CancelledByUSerID" +
                 " Where SubscriptionCancellationID=@SubscriptionCancellationID;";
 
@@ -104,7 +103,6 @@ namespace DataAccessLayer
 
                         command.Parameters.AddWithValue("@RefundAmount", RefundAmount);
                         command.Parameters.AddWithValue("@ElapsedDays", ElapsedDays);
-                        command.Parameters.AddWithValue("@CancellationDate", CancellationDate);
                         command.Parameters.AddWithValue("@CancelledByUSerID", CancelledByUSerID);
 
                         return command.ExecuteNonQuery() > 0;
@@ -144,7 +142,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool Find(int SubscriptionCancellationID, ref int SubscriptionID, ref string CancellationReason, ref double RefundAmount, ref byte ElapsedDays,
+        static public bool Find(int SubscriptionCancellationID, ref int SubscriptionID, ref string CancellationReason, ref double RefundAmount, ref short ElapsedDays,
            ref DateTime CancellationDate, ref int CancelledByUSerID)
         {
             string query = "select *from SubscriptionCancellations where SubscriptionCancellationID=@SubscriptionCancellationID;";
@@ -163,7 +161,7 @@ namespace DataAccessLayer
                             SubscriptionID = (int)reader["SubscriptionID"];
                             CancellationReason = (string)reader["CancellationReason"];
                             RefundAmount = (double)reader["RefundAmount"];
-                            ElapsedDays = (byte)reader["ElapsedDays"];
+                            ElapsedDays = (short)reader["ElapsedDays"];
                             CancellationDate = (DateTime)reader["CancellationDate"];
                             CancelledByUSerID = (int)reader["CancelledByUSerID"];
 
