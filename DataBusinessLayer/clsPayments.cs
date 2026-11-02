@@ -27,6 +27,8 @@ namespace DataBusinessLayer
         private enMode _Mode = enMode.AddMode;
         public enum enStatus { Pending=1,Completed=2,Refunded=3,PartiallyRefunded=4 }
         private enStatus _eStatus = enStatus.Pending;
+        public enum enPaymentMethod { Cash=1,Card=2};
+        private enPaymentMethod _Method = enPaymentMethod.Cash;
 
         public clsPayments()
         {
@@ -82,6 +84,8 @@ namespace DataBusinessLayer
 
         public bool Save()
         {
+            
+
             switch (_Mode)
             {
                 case enMode.AddMode:
@@ -149,6 +153,20 @@ namespace DataBusinessLayer
 
                 default:
                    return "Unknown";
+            }
+        }
+
+        public string SelectPaymentMethod()
+        {
+            switch ((enPaymentMethod)PaymentMethod)
+            {
+                case enPaymentMethod.Cash:
+                    return "Cash";
+                case enPaymentMethod.Card:
+                    return "Card";
+
+                default:
+                    return "Unknown";
             }
         }
     }
