@@ -167,7 +167,9 @@ namespace GymMangementSystem
 
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
 
-                
+                frmAddUpdatePayment frm = new frmAddUpdatePayment();
+                frm.PrepareForContinuePayment(_Subscription.SubscriptionID,_Subscription.MemberID);
+                frm.ShowDialog();
             }
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
