@@ -127,7 +127,7 @@ namespace GymMangementSystem
 
             _PaymentInfo.PaymentAmount=Convert.ToDouble( nudPaymentAmount.Value);
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
-          //  _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
+            _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
             _PaymentInfo.TotalRemaining = Math.Max(0, _PaymentInfo.ActualAmount - _PaymentInfo.PaymentAmount);// this mean choose the max one.

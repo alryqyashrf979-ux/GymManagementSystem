@@ -731,6 +731,15 @@
     <None Include="Resources\FreezeIcon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\StatusCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPaymentCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPyament.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\CancelIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
