@@ -167,8 +167,7 @@ namespace GymMangementSystem
 
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
 
-                frmAddUpdatePayment frm = new frmAddUpdatePayment();
-                frm.PrepareForContinuePayment(_Subscription.SubscriptionID,_Subscription.MemberID);
+                frmAddUpdatePayment frm = new frmAddUpdatePayment(_Subscription.MemberID);
                 frm.ShowDialog();
             }
             else

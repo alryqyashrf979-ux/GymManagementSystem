@@ -14,58 +14,54 @@ namespace GymMangementSystem
 {
     public partial class frmAddUpdatePayment : Form
     {
-        enum enMode { AddMode, UpdateMode }
-        private enMode _Mode = enMode.AddMode;
+        enum enMode { ExistSubscription, NewSubscription }
+        private enMode _Mode = enMode.ExistSubscription;
         private int _PaymentID = -1;
         private clsPayments _PaymentInfo;
-
-        private int _SubscriptionID=-1;
+        private clsMembers _MemberInfo;
         private int _MemberID=-1;
+        private int _SubscriptionID=-1;
 
-        private bool _IsContinueToPayment = false;
         public frmAddUpdatePayment()
         {
             InitializeComponent();
-            _Mode = enMode.AddMode;
+            _Mode = enMode.ExistSubscription;
         }
-        public frmAddUpdatePayment(int PaymentID)
+        public frmAddUpdatePayment(int MemberID)
         {
             InitializeComponent();
-            _Mode = enMode.UpdateMode;
-            _PaymentID = PaymentID;
+            _Mode = enMode.NewSubscription;
+            _MemberID = MemberID;
         }
     
         private void _ResetDefaultValues()
         {
-            if (_Mode == enMode.AddMode)
-            {
+            
                 lblTitle2.Text = "Add Payment";
                 _PaymentInfo = new clsPayments();
-            }
-            else
-                lblTitle2.Text = "Update Payment";
-
+      
             nudPaymentAmount.Value = 0;
             cmPaymentMethod.SelectedIndex = 0;
             tpPaymentInfo.Enabled = false;
 
-            if(_IsContinueToPayment)// in case come from frmAddUpdateSubscription .
-            PrepareForContinuePayment(_SubscriptionID,_MemberID);
+
         }
         private void _LoadData()
         {
-            _PaymentInfo = clsPayments.Find(_PaymentID);
-            if (_PaymentInfo == null)
+            _MemberInfo = clsMembers.FindMemberUsingMemberID(_MemberID);
+            if (_MemberInfo == null)
             {
-                MessageBox.Show($"Payment with ID {_PaymentID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_PaymentInfo.MemberInfo.MemberID);
+            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberInfo.MemberID);
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
             btnSave.Enabled = true;
-            ctrlPaymentDetails1.LoadPaymentInfo(_PaymentID);
+            tpPaymentInfo.Enabled = true;
+            lnkShowSubscriptionDetails.Enabled = true;
+            _SubscriptionID = _MemberInfo.LastSubscriptionID;
 
         }
     
@@ -76,7 +72,7 @@ namespace GymMangementSystem
         {
             _ResetDefaultValues();
 
-            if (_Mode == enMode.UpdateMode)
+            if (_Mode == enMode.NewSubscription)
                 _LoadData();
 
 
@@ -144,11 +140,21 @@ namespace GymMangementSystem
             _PaymentInfo.PaymentAmount=Convert.ToDouble( nudPaymentAmount.Value);
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
-            double OldPaymentAmount = ctrlPaymentDetails1.Payment == null ? 0 :ctrlPaymentDetails1.Payment.ActualAmount- ctrlPaymentDetails1.Payment.TotalRemaining;
-            _PaymentInfo.TotalRemaining = Math.Max(0, ctrlPaymentDetails1.Payment.ActualAmount - (_PaymentInfo.PaymentAmount+ OldPaymentAmount));// this mean choose the max one.
-            _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
-            _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? (byte)clsPayments.enStatus.Completed : (byte)clsPayments.enStatus.Pending;
+            double OldPaymentAmount = ctrlPaymentDetails1.Payment == null ? 0 :ctrlPaymentDetails1.Payment.ActualAmount- ctrlPaymentDetails1.Payment.TotalRemaining;
+         
+            if (_Mode==enMode.ExistSubscription)
+            {
+                _PaymentInfo.TotalRemaining = Math.Max(0, ctrlPaymentDetails1.Payment.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
+                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? (byte)clsPayments.enStatus.Completed : (byte)clsPayments.enStatus.Pending;
+            }
+            else
+            {
+                _PaymentInfo.TotalRemaining = Math.Max(0, _PaymentInfo.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
+                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? (byte)clsPayments.enStatus.Completed : (byte)clsPayments.enStatus.Pending;
+            }
+
+            _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
 
 
             if (_PaymentInfo.Save())
@@ -169,17 +175,6 @@ namespace GymMangementSystem
             frm.ShowDialog();
         }
 
-        public void PrepareForContinuePayment(int SubscriptionID,int MemberID)
-        {                                                                        //you will say why call it from reset function because in normal way we make btnsave and tabpage disable but in this case we prepare form.
-            lnkShowSubscriptionDetails.Enabled = true;
-            this._SubscriptionID = SubscriptionID;
-            this._MemberID = MemberID;
-
-            btnSave.Enabled = true;
-            tpPaymentInfo.Enabled = true;
-            tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
-            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(MemberID);
-            _IsContinueToPayment = true;
-        }
+      
     }
 }
