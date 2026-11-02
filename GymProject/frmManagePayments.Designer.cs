@@ -36,19 +36,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.cbValue = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvPayment = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.lblRecord = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbMethod = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dtpTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.cmStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.PaymentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubscriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +49,19 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lblRecord = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbMethod = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cmStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
+            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -93,17 +94,6 @@
             this.lblTitle2.Size = new System.Drawing.Size(220, 26);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Payment Management";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PaymentDetails;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
             // 
             // cbValue
             // 
@@ -233,145 +223,6 @@
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvPayment.Click += new System.EventHandler(this.dgvPayment_Click);
             // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(4, 735);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
-            this.guna2Separator1.TabIndex = 121;
-            // 
-            // lblRecord
-            // 
-            this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblRecord.AutoSize = true;
-            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(99, 714);
-            this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(38, 20);
-            this.lblRecord.TabIndex = 120;
-            this.lblRecord.Text = "N/A";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 713);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
-            this.label2.TabIndex = 119;
-            this.label2.Text = "#Records:";
-            // 
-            // cbMethod
-            // 
-            this.cbMethod.BackColor = System.Drawing.Color.Transparent;
-            this.cbMethod.BorderRadius = 5;
-            this.cbMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMethod.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMethod.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMethod.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.cbMethod.ForeColor = System.Drawing.Color.Black;
-            this.cbMethod.ItemHeight = 30;
-            this.cbMethod.Items.AddRange(new object[] {
-            "All",
-            "Cash",
-            "Card"});
-            this.cbMethod.Location = new System.Drawing.Point(334, 134);
-            this.cbMethod.Name = "cbMethod";
-            this.cbMethod.Size = new System.Drawing.Size(130, 36);
-            this.cbMethod.StartIndex = 0;
-            this.cbMethod.TabIndex = 123;
-            this.cbMethod.Visible = false;
-            this.cbMethod.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
-            // 
-            // dtpTime
-            // 
-            this.dtpTime.BackColor = System.Drawing.Color.Transparent;
-            this.dtpTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.dtpTime.BorderRadius = 5;
-            this.dtpTime.BorderThickness = 1;
-            this.dtpTime.Checked = true;
-            this.dtpTime.CustomFormat = "yyyy/MM/dd";
-            this.dtpTime.FillColor = System.Drawing.Color.White;
-            this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
-            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTime.Location = new System.Drawing.Point(335, 141);
-            this.dtpTime.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTime.Name = "dtpTime";
-            this.dtpTime.ShowUpDown = true;
-            this.dtpTime.Size = new System.Drawing.Size(156, 29);
-            this.dtpTime.TabIndex = 124;
-            this.dtpTime.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
-            this.dtpTime.Visible = false;
-            this.dtpTime.ValueChanged += new System.EventHandler(this.dtpTime_ValueChanged);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.BorderThickness = 1;
-            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1229, 716);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(125, 30);
-            this.btnClose.TabIndex = 125;
-            this.btnClose.Text = "Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // cmStatus
-            // 
-            this.cmStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmStatus.BorderRadius = 5;
-            this.cmStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmStatus.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.cmStatus.ForeColor = System.Drawing.Color.Black;
-            this.cmStatus.ItemHeight = 30;
-            this.cmStatus.Items.AddRange(new object[] {
-            "All",
-            "Pending",
-            "Completed",
-            "Refunded",
-            "Partailly Refunded"});
-            this.cmStatus.Location = new System.Drawing.Point(335, 135);
-            this.cmStatus.Name = "cmStatus";
-            this.cmStatus.Size = new System.Drawing.Size(209, 36);
-            this.cmStatus.StartIndex = 0;
-            this.cmStatus.TabIndex = 126;
-            this.cmStatus.Visible = false;
-            this.cmStatus.SelectedIndexChanged += new System.EventHandler(this.cmStatus_SelectedIndexChanged);
-            // 
-            // ctrlPaymentDetails1
-            // 
-            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1086, 172);
-            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 539);
-            this.ctrlPaymentDetails1.TabIndex = 122;
-            // 
             // PaymentID
             // 
             this.PaymentID.DataPropertyName = "Payment ID";
@@ -452,12 +303,186 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(4, 735);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
+            this.guna2Separator1.TabIndex = 121;
+            // 
+            // lblRecord
+            // 
+            this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblRecord.AutoSize = true;
+            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecord.Location = new System.Drawing.Point(99, 714);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(38, 20);
+            this.lblRecord.TabIndex = 120;
+            this.lblRecord.Text = "N/A";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 713);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.TabIndex = 119;
+            this.label2.Text = "#Records:";
+            // 
+            // cbMethod
+            // 
+            this.cbMethod.BackColor = System.Drawing.Color.Transparent;
+            this.cbMethod.BorderRadius = 5;
+            this.cbMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMethod.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMethod.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMethod.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            this.cbMethod.ForeColor = System.Drawing.Color.Black;
+            this.cbMethod.ItemHeight = 30;
+            this.cbMethod.Items.AddRange(new object[] {
+            "All",
+            "Cash",
+            "Card"});
+            this.cbMethod.Location = new System.Drawing.Point(334, 134);
+            this.cbMethod.Name = "cbMethod";
+            this.cbMethod.Size = new System.Drawing.Size(130, 36);
+            this.cbMethod.StartIndex = 0;
+            this.cbMethod.TabIndex = 123;
+            this.cbMethod.Visible = false;
+            this.cbMethod.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            // 
+            // dtpTime
+            // 
+            this.dtpTime.BackColor = System.Drawing.Color.Transparent;
+            this.dtpTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dtpTime.BorderRadius = 5;
+            this.dtpTime.BorderThickness = 1;
+            this.dtpTime.Checked = true;
+            this.dtpTime.CustomFormat = "yyyy/MM/dd";
+            this.dtpTime.FillColor = System.Drawing.Color.White;
+            this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
+            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTime.Location = new System.Drawing.Point(335, 141);
+            this.dtpTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.ShowUpDown = true;
+            this.dtpTime.Size = new System.Drawing.Size(156, 29);
+            this.dtpTime.TabIndex = 124;
+            this.dtpTime.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
+            this.dtpTime.Visible = false;
+            this.dtpTime.ValueChanged += new System.EventHandler(this.dtpTime_ValueChanged);
+            // 
+            // cmStatus
+            // 
+            this.cmStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmStatus.BorderRadius = 5;
+            this.cmStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmStatus.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            this.cmStatus.ForeColor = System.Drawing.Color.Black;
+            this.cmStatus.ItemHeight = 30;
+            this.cmStatus.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Completed",
+            "Refunded",
+            "Partailly Refunded"});
+            this.cmStatus.Location = new System.Drawing.Point(335, 135);
+            this.cmStatus.Name = "cmStatus";
+            this.cmStatus.Size = new System.Drawing.Size(209, 36);
+            this.cmStatus.StartIndex = 0;
+            this.cmStatus.TabIndex = 126;
+            this.cmStatus.Visible = false;
+            this.cmStatus.SelectedIndexChanged += new System.EventHandler(this.cmStatus_SelectedIndexChanged);
+            // 
+            // ctrlPaymentDetails1
+            // 
+            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1086, 172);
+            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 539);
+            this.ctrlPaymentDetails1.TabIndex = 122;
+            // 
+            // btnAddNewMember
+            // 
+            this.btnAddNewMember.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddNewMember.BorderRadius = 5;
+            this.btnAddNewMember.BorderThickness = 1;
+            this.btnAddNewMember.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewMember.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewMember.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddPyament;
+            this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddNewMember.Location = new System.Drawing.Point(1302, 137);
+            this.btnAddNewMember.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNewMember.Name = "btnAddNewMember";
+            this.btnAddNewMember.Size = new System.Drawing.Size(62, 29);
+            this.btnAddNewMember.TabIndex = 127;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(1229, 716);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(125, 30);
+            this.btnClose.TabIndex = 125;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PaymentDetails;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
             // frmManagePayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.btnAddNewMember);
             this.Controls.Add(this.cmStatus);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dtpTime);
@@ -477,8 +502,8 @@
             this.Load += new System.EventHandler(this.frmManagementPayment_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,5 +536,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
     }
 }

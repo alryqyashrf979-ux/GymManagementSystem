@@ -479,7 +479,7 @@
             // guna2CirclePictureBox11
             // 
             this.guna2CirclePictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox11.Image = global::GymMangementSystem.Properties.Resources.Status;
+            this.guna2CirclePictureBox11.Image = global::GymMangementSystem.Properties.Resources.StatusCircle;
             this.guna2CirclePictureBox11.ImageRotate = 0F;
             this.guna2CirclePictureBox11.Location = new System.Drawing.Point(1, 476);
             this.guna2CirclePictureBox11.Name = "guna2CirclePictureBox11";
