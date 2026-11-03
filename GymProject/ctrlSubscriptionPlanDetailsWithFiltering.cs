@@ -22,7 +22,7 @@ namespace GymMangementSystem
         {
             get => ctrlSubscriptionPlanDetails1.PlanInfo;
         }
-
+        public int PlanID { get => ctrlSubscriptionPlanDetails1.PlanID; }
         public bool EnableFiltering
         {
             get => cmFiltering.Enabled;
