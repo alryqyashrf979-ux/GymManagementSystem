@@ -48,7 +48,7 @@ namespace DataBusinessLayer
         }
 
         private clsPayments(int PaymentID,int SubscriptionID,double PaymentAmount,double ActualAmount,double TotalRemaining,
-            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID,byte Status)
+            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID,enStatus Status)
         {
             _PaymentID = PaymentID;
             this.SubscriptionID = SubscriptionID;
@@ -73,7 +73,7 @@ namespace DataBusinessLayer
 
         private bool _AddPayment()
         {
-            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining, this.PaymentMethod, this.CreatedByUserID,this.Status);
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining, this.PaymentMethod, this.CreatedByUserID,(byte)this.Status);
 
             return this._PaymentID != -1;
         }
@@ -121,7 +121,7 @@ namespace DataBusinessLayer
             bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
 
             if (IsFound)
-                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,Status);
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
             else
                 return null;
         }
@@ -139,7 +139,7 @@ namespace DataBusinessLayer
             bool IsFound = clsPaymentData.Find(ref PaymentID,  SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
 
             if (IsFound)
-                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,Status);
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
             else
                 return null;
         }
@@ -147,7 +147,7 @@ namespace DataBusinessLayer
       //Edit by aim
         private string GetStatusString()
         {
-            switch ((enStatus)Status)
+            switch (this.Status)
             {
                 case enStatus.Pending:
                     return "Pending";
