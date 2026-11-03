@@ -16,7 +16,8 @@ namespace DataAccessLayer
             string query = @"
                               select R.RefundID as 'Refund ID',P.FirstName+' '+P.SecondName+' '+isnull(P.LastName,' ') as 'Member Name',
                               R.SubscriptionID as 'Subscription ID',R.RefundAmount as 'Amount',R.RefundDate as 'Date',
-                              U.Username as 'Refunded By',R.RefundedReason as 'Reason' from Refund R inner join Subscriptions S 
+                              U.Username as 'Refunded By',case RefundMethod when 1 then 'Cash' when 2 then Card else 'Unknown' end 
+                              as 'Method' ,R.RefundedReason as 'Reason' from Refund R inner join Subscriptions S 
                              on S.SubscriptionID=R.SubscriptionID inner join Members M on M.MemberID=S.MemberID inner join People P 
                               on P.ID=M.PersonID inner join Users U on U.UserID=R.RefundedByUserID ;
                           ";
@@ -38,12 +39,27 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount, double TotalRemaining, int PaymentMethod, int CreatedByUserID, byte Status)
+        static public int AddPayment(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, string RefundedReason)
         {
-            string query = " INSERT INTO [dbo].[Payments]" +
-                " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID],[Status])" +
-                " VALUES (@SubscriptionID,@PaymentAmount,@ActualAmount,@TotalRemaining,@PaymentMethod,@PaymentDate,@CreatedByUserID,@Status);" +
-                " SELECT SCOPE_IDENTITY(); ";
+            string query = @" INSERT INTO [dbo].[Refund]
+           ([SubscriptionID]
+           ,[RefundAmount]
+           ,[RefundDate]
+           ,[RefundedByUserID]
+           ,[RefundMethod]
+           ,[RefundedReason])
+     VALUES
+           (@SubscriptionID,
+           ,@RefundAmount,
+           ,@RefundDate,
+           ,@RefundedByUserID,
+           ,@RefundMethod
+           ,@RefundedReason,);
+            SELECT SCOPE_IDENTITY();
+";
+
+
+
 
             try
             {
@@ -53,13 +69,11 @@ namespace DataAccessLayer
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
-                        command.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
-                        command.Parameters.AddWithValue("@ActualAmount", ActualAmount);
-                        command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
-                        command.Parameters.AddWithValue("@Status", Status);
-                        command.Parameters.AddWithValue("@TotalRemaining", TotalRemaining);
-                        command.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
-                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@RefundAmount", RefundAmount);
+                        command.Parameters.AddWithValue("@RefundDate", DateTime.Now);
+                        command.Parameters.AddWithValue("@RefundedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@RefundedReason", RefundedReason);
+                        command.Parameters.AddWithValue("@RefundMethod", RefundMethod);
 
                         object Resault = command.ExecuteScalar();
                         if (Resault != null && int.TryParse(Resault.ToString(), out int Value))
