@@ -148,9 +148,9 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool Find(int PaymentID, ref int SubscriptionID, ref double PaymentAmount, ref double ActualAmount, ref double TotalRemaining, ref int PaymentMethod, ref DateTime PaymentDate, ref int CreatedByUserID, ref byte Status)
+        static public bool Find(int RefundID, ref int SubscriptionID, ref double RefundAmount, ref byte RefundMethod, ref DateTime RefundDate, ref int CreatedByUserID)
         {
-            string query = " select *from Payments where PaymentID=@PaymentID; ";
+            string query = " select *from Refund where RefundID=@RefundID; ";
 
             try
             {
@@ -159,20 +159,17 @@ namespace DataAccessLayer
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("PaymentID", PaymentID);
+                        command.Parameters.AddWithValue("@RefundID", RefundID);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
                                 SubscriptionID = (int)reader["SubscriptionID"];
-                                PaymentAmount = Convert.ToDouble((reader)["PaymentAmount"]);
-                                ActualAmount = Convert.ToDouble((reader)["ActualAmount"]);
-                                TotalRemaining = Convert.ToDouble((reader)["TotalRemaining"]);
-                                PaymentMethod = (int)reader["PaymentMethod"];
-                                PaymentDate = (DateTime)reader["PaymentDate"];
+                                RefundAmount = Convert.ToDouble((reader)["RefundAmount"]);
+                                RefundMethod =Convert.ToByte (reader["RefundMethod"]);
+                                RefundDate = (DateTime)reader["PaymentDate"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
-                                Status = Convert.ToByte(reader["Status"]);
                                 return true;
                             }
 
