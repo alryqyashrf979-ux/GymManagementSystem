@@ -125,8 +125,7 @@ namespace DataBusinessLayer
 
         public bool Save()
         {
-            TimeSpan duration = FreezeEndDate - FreezeStartDate;
-            this.FreezingDuration = (byte)Math.Max(0, duration.Days);
+            
 
             switch (Mode)
             {

@@ -45,8 +45,7 @@ namespace DataAccessLayer
            ,@unfrozenByUserID);
                Select scope_Identity(); 
                 
- UPDATE Subscriptions 
- SET Status =4  WHERE Subscriptions.SubscriptionID=@SubscriptionID;
+
                  ";
 
 
