@@ -326,6 +326,7 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
                 using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    conn.Open();
                     command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
                     command.Parameters.AddWithValue("@Status", Status);
                     return command.ExecuteNonQuery() > 0;

@@ -35,8 +35,13 @@ namespace GymMangementSystem
             if (e.MemberInfo == null)
                 return;
 
+            if (e.MemberInfo.LastSubscriptionID == -1)
+            {
+                MessageBox.Show("this Member does not has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            if (e.MemberInfo.LastSubscriptionID == -1 || e.MemberInfo.LastSubscriptionInfo.Status!=clsSubscription.enSubscriptionStatus.Active)
+            if (e.MemberInfo.LastSubscriptionID == -1 || e.MemberInfo.LastSubscriptionInfo.Status != clsSubscription.enSubscriptionStatus.Active)
             {
                 MessageBox.Show("No Active Subscription found for this member.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
