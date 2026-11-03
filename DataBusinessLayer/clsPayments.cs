@@ -179,5 +179,10 @@ namespace DataBusinessLayer
                     return "Unknown";
             }
         }
+
+        static public bool IsPaymentStatusCompeleted(int SubscriptionID)
+        {
+            return ((enStatus)clsPaymentData.SelectPaymentStatusOfSubscription(SubscriptionID) == enStatus.Completed);
+        }
     }
 }
