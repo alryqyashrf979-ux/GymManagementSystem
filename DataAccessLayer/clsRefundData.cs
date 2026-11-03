@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal class clsRefundData
+    public static class clsRefundData
     {
         static public DataTable GetAllRefunds()
         {
@@ -39,7 +39,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddRefund(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, string RefundedReason)
+        static public int AddRefund(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, StringBuilder RefundedReason)
         {
             string query = @" INSERT INTO [dbo].[Refund]
            ([SubscriptionID]
@@ -88,7 +88,7 @@ namespace DataAccessLayer
             return -1;
         }
 
-        static public bool UpdateRefund(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, string RefundedReason)
+        static public bool UpdateRefund(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, StringBuilder RefundedReason)
         {
             string query = @"UPDATE [dbo].[Refund]
    SET [SubscriptionID] = SubscriptionID, 
