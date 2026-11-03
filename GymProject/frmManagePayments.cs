@@ -33,7 +33,7 @@ namespace GymMangementSystem
 
         private void dgvPayment_Click(object sender, EventArgs e)
         {
-            ctrlPaymentDetails1.LoadPaymentInfo((int)dgvPayment.CurrentRow.Cells[0].Value);
+            ctrlPaymentDetails1.LoadPaymentByPaymentID((int)dgvPayment.CurrentRow.Cells[0].Value);
         }
 
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
