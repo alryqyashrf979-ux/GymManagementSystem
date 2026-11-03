@@ -42,8 +42,8 @@
             // ctrlSubscriptionPlanDetails1
             // 
             this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(-3, -1);
-            this.ctrlSubscriptionPlanDetails1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(3, 36);
+            this.ctrlSubscriptionPlanDetails1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
             this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(672, 279);
             this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(662, 37);
+            this.panel4.Size = new System.Drawing.Size(676, 37);
             this.panel4.TabIndex = 92;
             // 
             // panel1
@@ -108,10 +108,10 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(522, 243);
+            this.btnClose.Location = new System.Drawing.Point(524, 325);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(134, 30);
+            this.btnClose.Size = new System.Drawing.Size(148, 30);
             this.btnClose.TabIndex = 93;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -121,13 +121,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(662, 280);
+            this.ClientSize = new System.Drawing.Size(676, 364);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlSubscriptionPlanDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowPlanDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Plan Details";
             this.Load += new System.EventHandler(this.frmShowPlanDetails_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
