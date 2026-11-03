@@ -18,6 +18,7 @@ namespace GymMangementSystem
         private enMode _Mode = enMode.ExistSubscription;
         private int _MemberID=-1;
         private decimal _Value = 0;
+        private int _SubscriptionID = -1;
         public frmAddUpdatePayment()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace GymMangementSystem
             //}
 
             ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberID);
+            _SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
             btnSave.Enabled = true;
@@ -129,8 +131,8 @@ namespace GymMangementSystem
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // _SubscriptionID = ctrlPaymentDetails1.Payment == null ? _SubscriptionID : ctrlPaymentDetails1.Payment.SubscriptionID;
-            //_SubscriptionID = ctrlPaymentDetails1.Payment?.SubscriptionID ?? _SubscriptionID;
-            Form frm = new frmShowSubscriptionDetails(ctrlPaymentDetails1.PaymentInfo.SubscriptionID);
+           int SubscriptionID = ctrlPaymentDetails1.PaymentInfo?.SubscriptionID ?? _SubscriptionID;
+            Form frm = new frmShowSubscriptionDetails(SubscriptionID);
             frm.ShowDialog();
         }
 
@@ -156,6 +158,7 @@ namespace GymMangementSystem
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
+           
             double OldPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 :ctrlPaymentDetails1.PaymentInfo.ActualAmount- ctrlPaymentDetails1.PaymentInfo.TotalRemaining;
          
             if (_Mode==enMode.ExistSubscription)
