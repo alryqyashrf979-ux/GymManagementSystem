@@ -751,5 +751,11 @@
   <ItemGroup>
     <None Include="Resources\CancelIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefundWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refund.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

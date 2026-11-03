@@ -224,10 +224,10 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.manage_payments;
+            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.RefundWhite;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(-4, 0);
             this.guna2Button2.ImageSize = new System.Drawing.Size(55, 39);
-            this.guna2Button2.Location = new System.Drawing.Point(-6, 614);
+            this.guna2Button2.Location = new System.Drawing.Point(-10, 614);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(199, 50);
