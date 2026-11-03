@@ -47,12 +47,12 @@ namespace GymMangementSystem
         }
         private void _LoadData()
         {
-            _MemberInfo = clsMembers.FindMemberUsingMemberID(_MemberID);
-            if (_MemberInfo == null)
-            {
-                MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //_MemberInfo = clsMembers.FindMemberUsingMemberID(_MemberID);
+            //if (_MemberInfo == null)
+            //{
+            //    MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberInfo.MemberID);
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
@@ -60,7 +60,6 @@ namespace GymMangementSystem
             btnSave.Enabled = true;
             tpPaymentInfo.Enabled = true;
             lnkShowSubscriptionDetails.Enabled = true;
-            _SubscriptionID = _MemberInfo.LastSubscriptionID;
 
         }
     
@@ -79,23 +78,28 @@ namespace GymMangementSystem
 
         private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
         {
-            if (e.MemberInfo == null)
-            {
-                btnSave.Enabled = false;
-                tpPaymentInfo.Enabled = false;
+            btnSave.Enabled = false;
+            btnNext.Enabled = false;
+            tpPaymentInfo.Enabled = false;
+            //aim
 
-            }
-            else
-                btnSave.Enabled = true;
+            if (e.MemberInfo == null) return;
+
+            //if (e.MemberInfo == null)
+            //{ 
+            //    tpPaymentInfo.Enabled = false;
+
+            //}
+
+            btnNext.Enabled = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            btnSave.Enabled = false;
-            tpPaymentInfo.Enabled = false;
+           
 
             if (ctrlMemberDetailsWithFiltering1.MemberID!=-1)
-          { 
+            { 
                 if (ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID!=-1)
                 {
                     btnSave.Enabled = true;

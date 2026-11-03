@@ -107,7 +107,7 @@ namespace DataBusinessLayer
         {
             return clsPaymentData.GetAllPayments();
         }
-        static public clsPayments Find(int PaymentID)
+        static public clsPayments FindByPaymentID(int PaymentID)
         {
             
            int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;
@@ -124,17 +124,26 @@ namespace DataBusinessLayer
             else
                 return null;
         }
-
-        static public int SelectPaymentIDBySubscriptionID(int SubscriptionID)
+        //added by aim
+        static public clsPayments FindBySubscriptionID(int SubscriptionID)
         {
-            return clsPaymentData.SelectPaymentIDBySubscriptionID(SubscriptionID);
+            
+           int PaymentID = -1, PaymentMethod = -1, CreatedByUserID = -1;
+
+          double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
+            byte Status = 0;
+
+          DateTime  PaymentDate = DateTime.Now;
+
+            bool IsFound = clsPaymentData.Find(ref PaymentID,  SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
+
+            if (IsFound)
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,Status);
+            else
+                return null;
         }
 
-        public int SelectPaymentID()
-        {
-            return clsPaymentData.SelectPaymentIDBySubscriptionID(this.SubscriptionID);
-        }
-
+      
         public string SelectStatusString()
         {
             switch ((enStatus)Status)
