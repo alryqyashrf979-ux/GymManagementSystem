@@ -88,10 +88,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionDetails1.EnableStartDate = true;
-            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(0, 36);
             this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
-            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(864, 310);
+            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(864, 272);
             this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 0;
             this.ctrlSubscriptionDetails1.Load += new System.EventHandler(this.ctrlSubscriptionDetails1_Load);
@@ -114,7 +114,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(719, 274);
+            this.btnClose.Location = new System.Drawing.Point(724, 312);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(134, 30);
@@ -126,7 +126,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 310);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(864, 348);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlSubscriptionDetails1);
