@@ -163,7 +163,7 @@
             this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(5, 5);
             this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
-            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(968, 509);
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(968, 507);
             this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
             this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
             // 

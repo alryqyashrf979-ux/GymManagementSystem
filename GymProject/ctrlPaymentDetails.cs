@@ -32,25 +32,44 @@ namespace GymMangementSystem
             lblPlanName.Text = "???";
             lblStatus.Text = "???";
         }
-        public void LoadPaymentInfo(int PaymentID)
+
+        
+        void _LoadData()
         {
-            Payment = clsPayments.Find(PaymentID);
+            lblStatus.Text = Payment.SelectStatusString();
+            lblActualAmount.Text = Payment.ActualAmount.ToString();
+            lblCreatedBy.Text = Payment.UserInfo.UserName;
+            lblMemberName.Text = Payment.MemberInfo.PersonInfo.FullName;
+            lblPaymentAmount.Text = Payment.PaymentAmount.ToString();
+            lblPaymentD.Text = Payment.PaymentID.ToString();
+            lblPaymentDate.Text = Payment.PaymentDate.ToString();
+            lblPlanName.Text = Payment.SubscriptionInfo.PlanInfo.PlanName;
+            lblTotalRemaining.Text = Payment.TotalRemaining.ToString();
+            lblSubscriptionID.Text = Payment.SubscriptionID.ToString();
+        }
+
+        public void LoadPaymentByPaymentID(int PaymentID)
+        {
+            Payment = clsPayments.FindBySubscriptionID(PaymentID);
             if (Payment == null)
             {
                 _ResetDefaultValues();
                 return;
             }
 
-            lblStatus.Text = Payment.SelectStatusString();
-            lblActualAmount.Text = Payment.ActualAmount.ToString();
-            lblCreatedBy.Text =Payment.UserInfo.UserName;
-            lblMemberName.Text =Payment.MemberInfo.PersonInfo.FullName;
-            lblPaymentAmount.Text = Payment.PaymentAmount.ToString();
-            lblPaymentD.Text = Payment.PaymentID.ToString() ;
-            lblPaymentDate.Text = Payment.PaymentDate.ToString();
-            lblPlanName.Text =Payment.SubscriptionInfo.PlanInfo.PlanName ;
-            lblTotalRemaining.Text =Payment.TotalRemaining.ToString();
-            lblSubscriptionID.Text = Payment.SubscriptionID.ToString();
+            _LoadData();//Edit By aim
+        }
+        // Added by aim b\
+        public void LoadPaymentBySubscriptionID(int PaymentID)
+        {
+            Payment = clsPayments.FindBySubscriptionID(PaymentID);
+            if (Payment == null)
+            {
+                _ResetDefaultValues();
+                return;
+            }
+
+            _LoadData();//Edit By aim
         }
     }
 }
