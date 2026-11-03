@@ -57,8 +57,8 @@ namespace GymMangementSystem
             tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
             btnSave.Enabled = true;
             tpPaymentInfo.Enabled = true;
-            lnkShowSubscriptionDetails.Enabled = true;
-
+            ctrlPaymentDetails1.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
+            ctrlPaymentDetails1.EnableLnkShowSubscriptionDetails = true;
         }
     
 
@@ -113,7 +113,6 @@ namespace GymMangementSystem
                     tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
 
                     ctrlPaymentDetails1.LoadPaymentBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID);
-                lnkShowSubscriptionDetails.Enabled = (ctrlPaymentDetails1.PaymentInfo.SubscriptionID != -1);
                 btnSave.Enabled = (ctrlPaymentDetails1.PaymentInfo.Status != clsPayments.enStatus.Completed);
                 
                 
@@ -128,13 +127,7 @@ namespace GymMangementSystem
             this.Close();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // _SubscriptionID = ctrlPaymentDetails1.Payment == null ? _SubscriptionID : ctrlPaymentDetails1.Payment.SubscriptionID;
-           int SubscriptionID = ctrlPaymentDetails1.PaymentInfo?.SubscriptionID ?? _SubscriptionID;
-            Form frm = new frmShowSubscriptionDetails(SubscriptionID);
-            frm.ShowDialog();
-        }
+    
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -154,23 +147,21 @@ namespace GymMangementSystem
 
            clsPayments _PaymentInfo = new clsPayments();
 
-            _PaymentInfo.PaymentAmount=Convert.ToDouble( txtPaymentAmount.Text);
+            if (string.IsNullOrEmpty(txtPaymentAmount.Text))
+                txtPaymentAmount.Text = "0";
+           
+            _PaymentInfo.PaymentAmount = Convert.ToDouble(txtPaymentAmount.Text);
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
+
+            double OldPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 : ctrlPaymentDetails1.PaymentInfo.ActualAmount - ctrlPaymentDetails1.PaymentInfo.TotalRemaining;
+          
+            _PaymentInfo.TotalRemaining= clsPayments.CalculteTotalRemaining(_PaymentInfo.ActualAmount, OldPaymentAmount, _PaymentInfo.PaymentAmount);
            
-            double OldPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 :ctrlPaymentDetails1.PaymentInfo.ActualAmount- ctrlPaymentDetails1.PaymentInfo.TotalRemaining;
-         
-            if (_Mode==enMode.ExistSubscription)
-            {
-                _PaymentInfo.TotalRemaining = Math.Max(0, ctrlPaymentDetails1.PaymentInfo.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
-                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed :clsPayments.enStatus.Pending;
-            }
-            else
-            {
-                _PaymentInfo.TotalRemaining = Math.Max(0, _PaymentInfo.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
-                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed : clsPayments.enStatus.Pending;
-            }
+
+            _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed : clsPayments.enStatus.Pending;
+
 
             _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
 

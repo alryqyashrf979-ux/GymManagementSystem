@@ -214,8 +214,8 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                return false;
             }
+            return false;
 
         }
 

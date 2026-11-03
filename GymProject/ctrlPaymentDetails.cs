@@ -14,7 +14,14 @@ namespace GymMangementSystem
     public partial class ctrlPaymentDetails : UserControl
     {
         public clsPayments PaymentInfo { get; private set; }
-        
+        public int SubscriptionID { get; set; }
+        public bool EnableLnkShowSubscriptionDetails
+        {
+            set
+            {
+                lnkShowSubscriptionDetails.Enabled = value;
+            }
+        }
         public ctrlPaymentDetails()
         {
             InitializeComponent();
@@ -31,6 +38,7 @@ namespace GymMangementSystem
             lblTotalRemaining.Text = "???";
             lblPlanName.Text = "???";
             lblStatus.Text = "???";
+            lnkShowSubscriptionDetails.Enabled = false;
         }
 
         
@@ -46,6 +54,8 @@ namespace GymMangementSystem
             lblPlanName.Text = PaymentInfo.SubscriptionInfo.PlanInfo.PlanName;
             lblTotalRemaining.Text = PaymentInfo.TotalRemaining.ToString();
             lblSubscriptionID.Text = PaymentInfo.SubscriptionID.ToString();
+            SubscriptionID = PaymentInfo.SubscriptionID;
+            lnkShowSubscriptionDetails.Enabled = true;
         }
 
         public void LoadPaymentByPaymentID(int PaymentID)
@@ -71,6 +81,12 @@ namespace GymMangementSystem
             }
 
             _LoadData();//Edit By aim
+        }
+
+        private void lnkShowSubscriptionDetails_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form frm = new frmShowSubscriptionDetails(SubscriptionID);
+            frm.ShowDialog();
         }
     }
 }

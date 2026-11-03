@@ -184,5 +184,12 @@ namespace DataBusinessLayer
         {
             return ((enStatus)clsPaymentData.SelectPaymentStatusOfSubscription(SubscriptionID) == enStatus.Completed);
         }
+
+        static public double CalculteTotalRemaining(double ActualAmount,double perviousAmount,double CurrentAmount)
+        {
+         
+            return Math.Max(0, ActualAmount - (perviousAmount + CurrentAmount));// this mean choose the max one.
+         
+        }
     }
 }
