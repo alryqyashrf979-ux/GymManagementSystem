@@ -175,27 +175,48 @@ namespace DataAccessLayer
             }
             return false;
         }
-       
-        static public int SelectPaymentIDBySubscriptionID(int SubscriptionID)
+       //added by aim
+        static public bool Find(ref int PaymentID,  int SubscriptionID, ref double PaymentAmount, ref double ActualAmount, ref double TotalRemaining, ref int PaymentMethod, ref DateTime PaymentDate, ref int CreatedByUserID, ref byte Status)
         {
-            string query = @"select top 1 PaymentID from Payments where SubscriptionID=@SubscriptionID order by PaymentDate desc;";
+            string query = @"select top 1 * from Payments where SubscriptionID=@SubscriptionID order by PaymentDate desc;";
 
-            using (SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
+            try
             {
-                connection.Open();
-                using (SqlCommand command=new SqlCommand(query, connection))
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
-          
-                    command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
 
-                            object Resault= command.ExecuteScalar();
-                            if (Resault != null && int.TryParse(Resault.ToString(), out int PaymentID))
-                                return PaymentID;
-                           else
-                            return -1;
-                    
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                PaymentID = (int)reader["PaymentID"];
+                                PaymentAmount = Convert.ToDouble((reader)["PaymentAmount"]);
+                                ActualAmount = Convert.ToDouble((reader)["ActualAmount"]);
+                                TotalRemaining = Convert.ToDouble((reader)["TotalRemaining"]);
+                                PaymentMethod = (int)reader["PaymentMethod"];
+                                PaymentDate = (DateTime)reader["PaymentDate"];
+                                CreatedByUserID = (int)reader["CreatedByUserID"];
+                                Status = Convert.ToByte(reader["Status"]);
+
+                            }
+
+                                return true;
+                        }
+
+
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                return false;
+            }
+
         }
     }
 }
