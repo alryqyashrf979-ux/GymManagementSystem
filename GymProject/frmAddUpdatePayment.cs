@@ -194,5 +194,11 @@ namespace GymMangementSystem
           
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            tcPayment.SelectedTab = tcPayment.TabPages["tpMemberInfo"];
+
+        }
     }
 }
