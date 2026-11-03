@@ -15,26 +15,14 @@ namespace GymMangementSystem
     public partial class frmAddUpdateFrozenSubscription : Form
     {
 
-        int _SubscriptionID = -1;
-        int _FrozenSubscripionID= -1;
-        clsFrozenSubscription _FrozenSubscriptionInf;
-
-        enum enMode { Addnew = 1, Update = 2 };
-        enMode _Mode = enMode.Addnew;
-
+       
+       
 
         public frmAddUpdateFrozenSubscription()
         {
             InitializeComponent();
         }
-        public frmAddUpdateFrozenSubscription(int FrozenSubscriptionID)
-        {
-            InitializeComponent();
-            _Mode = enMode.Update;
-            _FrozenSubscripionID=FrozenSubscriptionID;
-        }
-
-
+   
 
 
 
@@ -54,8 +42,7 @@ namespace GymMangementSystem
                 return;
             }
 
-            _SubscriptionID=e.MemberInfo.LastSubscriptionID;    
-            lblSubscriptionID.Text=_SubscriptionID.ToString();
+            lblSubscriptionID.Text=e.MemberInfo.LastSubscriptionID.ToString();
             btnSave.Enabled = true;
             pnlFrozenSubscription.Enabled = true;
 
@@ -74,8 +61,7 @@ namespace GymMangementSystem
             lblTitle.Text = "Add Frozen Subscription";
             this.Text=lblTitle.Text;
 
-            if (_Mode == enMode.Addnew)
-                _FrozenSubscriptionInf = new clsFrozenSubscription();
+         
             dtStartDate.MinDate = DateTime.Today;
             dtEndDate.MinDate = DateTime.Today;
 
@@ -88,50 +74,10 @@ namespace GymMangementSystem
             dtEndDate.Value = DateTime.Today;
         }
 
-        void _LoadData()
-        {
-
-            lblTitle.Text = "Update Frozen Subscription";
-            this.Text = lblTitle.Text;
-
-            _FrozenSubscriptionInf = clsFrozenSubscription.FindByFreezeID(_FrozenSubscripionID);
-
-            if (_FrozenSubscriptionInf == null)
-            {
-
-                MessageBox.Show($"Frozen Subscription with ID {_FrozenSubscripionID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnSave.Enabled = false;
-                pnlFrozenSubscription.Enabled= false;   
-                return;
-            }
-
-            lblFreezingDuration.Text = _FrozenSubscriptionInf.FreezingDuration.ToString();
-            lblFrozenByUser.Text = _FrozenSubscriptionInf.FrozenByUserInfo.UserName;
-            lblFrozenSubscriptionID.Text = _FrozenSubscriptionInf.FreezeID.ToString();
-            lblSubscriptionID.Text = _FrozenSubscriptionInf.SubscriptionID.ToString();
-            txtFreezeReason.Text= _FrozenSubscriptionInf.FreezeReason.ToString();
-            txtFees.Text = _FrozenSubscriptionInf.FreezeFee.ToString();
-
-            if(_FrozenSubscriptionInf.FreezeStartDate.Date<DateTime.Now.Date)
-            {
-                dtStartDate.Enabled = false;
-                dtStartDate.MinDate = _FrozenSubscriptionInf.FreezeStartDate;
-            }
-          
-            dtStartDate.Value=_FrozenSubscriptionInf.FreezeStartDate;
-
-            dtEndDate.Value = _FrozenSubscriptionInf.FreezeEndDate;
-
-
-
-        }
+     
         private void frmAddUpdateFrozenSubscription_Load(object sender, EventArgs e)
         {
             _DefaultValues();
-
-
-            if (_Mode == enMode.Update)
-                _LoadData();
 
         }
 
@@ -143,6 +89,11 @@ namespace GymMangementSystem
             if (!this.ValidateChildren())
                 return;
 
+            if (MessageBox.Show("Are You Sure you want to Freeze this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+
+                return;
+            }
 
             if (dtStartDate.Value.Date > dtEndDate.Value.Date)
             {
@@ -150,20 +101,27 @@ namespace GymMangementSystem
                 return;
             }
 
-            int FrozenID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Freeze(dtStartDate.Value, dtEndDate.Value,
-                Convert.ToDouble(txtFees.Text), clsGlobal.CurrentUserInfo.UserID, txtFreezeReason.Text);
+            double Fees;
+
+            if (txtFees.Text == "")
+                Fees = 0;
+            else
+                Fees = Convert.ToDouble(txtFees.Text);
+
+
+                int FrozenID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Freeze(dtStartDate.Value, dtEndDate.Value,
+                    Fees, clsGlobal.CurrentUserInfo.UserID, txtFreezeReason.Text);
 
 
             if (FrozenID!=-1)
             {
 
-
+                btnSave.Enabled = false;
+                ctrlMemberBasicDetailsWithFilter1.EnableFiltering = false;
                 lblFreezingDuration.Text = (dtEndDate.Value.Date - dtStartDate.Value.Date).Days.ToString();
                 lblFrozenByUser.Text = clsGlobal.CurrentUserInfo.UserName;
                 lblFrozenSubscriptionID.Text = FrozenID.ToString() ;
 
-                lblTitle.Text = "Update Frozen Subscription";
-                this.Text = lblTitle.Text;
 
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -171,15 +129,7 @@ namespace GymMangementSystem
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-
-
-
         }
-
-
-
-
 
         
 
