@@ -107,5 +107,11 @@ namespace GymMangementSystem
             frm.ShowDialog();
             _SelectbtnDashBoard();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmClasses();
+            frm.ShowDialog();
+        }
     }
 }
