@@ -39,7 +39,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddPayment(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, string RefundedReason)
+        static public int AddRefund(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, string RefundedReason)
         {
             string query = @" INSERT INTO [dbo].[Refund]
            ([SubscriptionID]
@@ -88,17 +88,16 @@ namespace DataAccessLayer
             return -1;
         }
 
-        static public bool UpdatePayment(int PaymentID, int SubscriptionID, double PaymentAmount, double ActualAmount, int PaymentMethod, int CreatedByUserID)
+        static public bool UpdateRefund(int SubscriptionID, double RefundAmount, byte RefundMethod, int CreatedByUserID, string RefundedReason)
         {
-            string query = "UPDATE [dbo].[Payments] SET " +
-                "[SubscriptionID] = @SubscriptionID," +
-                "[PaymentAmount] = @PaymentAmount," +
-                "[ActualAmount] = @ActualAmount," +
-                "[TotalRemaining] = @PaymentAmount-@ActualAmount ," +
-                "[PaymentMethod] = @PaymentMethod," +
-                "[PaymentDate] = @PaymentDate," +
-                "[CreatedByUserID] = @CreatedByUserID" +
-                " WHERE PaymentID=@PaymentID;";
+            string query = @"UPDATE [dbo].[Refund]
+   SET [SubscriptionID] = SubscriptionID, 
+      ,[RefundAmount] = RefundAmount,
+      ,[RefundDate] = RefundDate,
+      ,[RefundedByUserID] = RefundedByUserID,
+      ,[RefundedReason] = RefundedReason,
+      ,[RefundMethod] = RefundMethod,
+ WHERE RefundID=@RefundID;";
 
             try
             {
@@ -107,13 +106,12 @@ namespace DataAccessLayer
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@PaymentID", PaymentID);
                         command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
-                        command.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
-                        command.Parameters.AddWithValue("@ActualAmount", ActualAmount);
-                        command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
-                        command.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
-                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@RefundAmount", RefundAmount);
+                        command.Parameters.AddWithValue("@RefundDate", DateTime.Now);
+                        command.Parameters.AddWithValue("@RefundedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@RefundedReason", RefundedReason);
+                        command.Parameters.AddWithValue("@RefundMethod", RefundMethod);
 
                         return command.ExecuteNonQuery() > 0;
                     }
