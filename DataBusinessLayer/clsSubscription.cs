@@ -145,7 +145,7 @@ namespace DataBusinessLayer
         }
 
 
-        public int Change(int ChangedByUserID, int PlanID)
+        public int Change(int ChangedByUserID, int PlanID,ref int NewsubscriptionID)
         {
 
             clsSubscription NewSubscription = new clsSubscription();
@@ -165,8 +165,8 @@ namespace DataBusinessLayer
                 return -1;
 
             this.UpdateSubscriptionStatus(enSubscriptionStatus.Changed);
-               
 
+            NewsubscriptionID = NewSubscription.SubscriptionID;
             return Change.SubscriptionChangeID;
 
         }

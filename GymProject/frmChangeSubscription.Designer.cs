@@ -34,15 +34,15 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tbChangeSubscription = new System.Windows.Forms.TabControl();
             this.tbMemberInfo = new System.Windows.Forms.TabPage();
-            this.tbChange = new System.Windows.Forms.TabPage();
-            this.ctrlMemberBasicDetailsWithFilter1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlMemberBasicDetailsWithFilter1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
+            this.tbChange = new System.Windows.Forms.TabPage();
+            this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
+            this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ctrlSubscriptionDetails1 = new GymMangementSystem.ctrlSubscriptionDetails();
-            this.ctrlSubscriptionPlanDetailsWithFiltering1 = new GymMangementSystem.ctrlSubscriptionPlanDetailsWithFiltering();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tbChangeSubscription.SuspendLayout();
@@ -110,29 +110,6 @@
             this.tbMemberInfo.TabIndex = 0;
             this.tbMemberInfo.UseVisualStyleBackColor = true;
             // 
-            // tbChange
-            // 
-            this.tbChange.Controls.Add(this.ctrlSubscriptionPlanDetailsWithFiltering1);
-            this.tbChange.Controls.Add(this.ctrlSubscriptionDetails1);
-            this.tbChange.Controls.Add(this.pictureBox1);
-            this.tbChange.Controls.Add(this.guna2Button1);
-            this.tbChange.Location = new System.Drawing.Point(4, 5);
-            this.tbChange.Name = "tbChange";
-            this.tbChange.Padding = new System.Windows.Forms.Padding(3);
-            this.tbChange.Size = new System.Drawing.Size(1210, 804);
-            this.tbChange.TabIndex = 1;
-            this.tbChange.UseVisualStyleBackColor = true;
-            // 
-            // ctrlMemberBasicDetailsWithFilter1
-            // 
-            this.ctrlMemberBasicDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberBasicDetailsWithFilter1.EnableFiltering = true;
-            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(8, 13);
-            this.ctrlMemberBasicDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlMemberBasicDetailsWithFilter1.Name = "ctrlMemberBasicDetailsWithFilter1";
-            this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(1195, 632);
-            this.ctrlMemberBasicDetailsWithFilter1.TabIndex = 0;
-            // 
             // btnNext
             // 
             this.btnNext.BorderColor = System.Drawing.Color.Gainsboro;
@@ -157,56 +134,63 @@
             this.btnNext.Size = new System.Drawing.Size(159, 45);
             this.btnNext.TabIndex = 18;
             this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click_1);
             // 
-            // btnSave
+            // ctrlMemberBasicDetailsWithFilter1
             // 
-            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BorderRadius = 5;
-            this.btnSave.BorderThickness = 1;
-            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.Transparent;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSave.Image = global::GymMangementSystem.Properties.Resources.Save_32;
-            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1075, 875);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 40);
-            this.btnSave.TabIndex = 148;
-            this.btnSave.Text = "Save";
+            this.ctrlMemberBasicDetailsWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberBasicDetailsWithFilter1.EnableFiltering = true;
+            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(8, 13);
+            this.ctrlMemberBasicDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlMemberBasicDetailsWithFilter1.Name = "ctrlMemberBasicDetailsWithFilter1";
+            this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(1195, 632);
+            this.ctrlMemberBasicDetailsWithFilter1.TabIndex = 0;
+            this.ctrlMemberBasicDetailsWithFilter1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberBasicDetailsWithFilter1_OnMemberSelected);
             // 
-            // btnClose
+            // tbChange
             // 
-            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.BorderThickness = 1;
-            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
-            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
-            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(907, 875);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(156, 40);
-            this.btnClose.TabIndex = 147;
-            this.btnClose.Text = "Close";
+            this.tbChange.Controls.Add(this.ctrlSubscriptionPlanDetailsWithFiltering1);
+            this.tbChange.Controls.Add(this.ctrlSubscriptionDetails1);
+            this.tbChange.Controls.Add(this.pictureBox1);
+            this.tbChange.Controls.Add(this.guna2Button1);
+            this.tbChange.Location = new System.Drawing.Point(4, 5);
+            this.tbChange.Name = "tbChange";
+            this.tbChange.Padding = new System.Windows.Forms.Padding(3);
+            this.tbChange.Size = new System.Drawing.Size(1210, 804);
+            this.tbChange.TabIndex = 1;
+            this.tbChange.UseVisualStyleBackColor = true;
+            // 
+            // ctrlSubscriptionPlanDetailsWithFiltering1
+            // 
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(351, 7);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(856, 456);
+            this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 23;
+            // 
+            // ctrlSubscriptionDetails1
+            // 
+            this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionDetails1.EnableStartDate = false;
+            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(120, 460);
+            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
+            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1085, 345);
+            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.ctrlSubscriptionDetails1.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.change;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(334, 322);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // guna2Button1
             // 
@@ -235,37 +219,56 @@
             this.guna2Button1.TabIndex = 20;
             this.guna2Button1.Text = "Back";
             // 
-            // pictureBox1
+            // btnSave
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.change;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 322);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.btnSave.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnSave.BorderRadius = 5;
+            this.btnSave.BorderThickness = 1;
+            this.btnSave.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSave.Image = global::GymMangementSystem.Properties.Resources.Save_32;
+            this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSave.Location = new System.Drawing.Point(1075, 875);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(145, 40);
+            this.btnSave.TabIndex = 148;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // ctrlSubscriptionDetails1
+            // btnClose
             // 
-            this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionDetails1.EnableStartDate = false;
-            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(120, 460);
-            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
-            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1085, 345);
-            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
-            this.ctrlSubscriptionDetails1.TabIndex = 22;
-            // 
-            // ctrlSubscriptionPlanDetailsWithFiltering1
-            // 
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Location = new System.Drawing.Point(351, 7);
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Name = "ctrlSubscriptionPlanDetailsWithFiltering1";
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.Size = new System.Drawing.Size(856, 456);
-            this.ctrlSubscriptionPlanDetailsWithFiltering1.TabIndex = 23;
+            this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(907, 875);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(156, 40);
+            this.btnClose.TabIndex = 147;
+            this.btnClose.Text = "Close";
             // 
             // frmChangeSubscription
             // 

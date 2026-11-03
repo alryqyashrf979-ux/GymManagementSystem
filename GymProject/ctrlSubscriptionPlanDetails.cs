@@ -28,8 +28,12 @@ namespace GymMangementSystem
             get => _PlanInfo;
         }
 
+        public int PlanID
+        {
+            private set; get;
+        } = -1;
 
-       void _ResetPlanData()
+        void _ResetPlanData()
         {
 
             lblPlanID.Text = "[????]";
@@ -38,6 +42,7 @@ namespace GymMangementSystem
             tgschIsAvailable.Checked= true;
             txtDescription.Text = string.Empty;
             txtNotes.Text = string.Empty;
+            PlanID = -1;
 
         }
 
@@ -51,6 +56,7 @@ namespace GymMangementSystem
             tgschIsAvailable.Checked = _PlanInfo.IsAvailable;
             txtNotes.Text = _PlanInfo.Note;
             txtDescription.Text = _PlanInfo.PlanDescription;
+            PlanID = PlanInfo.PlanID;
 
 
         }
