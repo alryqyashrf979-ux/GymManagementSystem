@@ -16,7 +16,6 @@ namespace GymMangementSystem
     {
         enum enMode { ExistSubscription, NewSubscription }
         private enMode _Mode = enMode.ExistSubscription;
-        private int _PaymentID = -1;
         private clsPayments _PaymentInfo;
         private clsMembers _MemberInfo;
         private int _MemberID=-1;
@@ -40,7 +39,7 @@ namespace GymMangementSystem
                 lblTitle2.Text = "Add Payment";
                 _PaymentInfo = new clsPayments();
       
-            nudPaymentAmount.Value = 0;
+            txtPaymentAmount.Text = "0";
             cmPaymentMethod.SelectedIndex = 0;
             tpPaymentInfo.Enabled = false;
 
@@ -104,7 +103,7 @@ namespace GymMangementSystem
                     tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
                     ctrlPaymentDetails1.LoadPaymentInfo(clsPayments.SelectPaymentIDBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID));
                     lnkShowSubscriptionDetails.Enabled = true;
-
+                    btnSave.Enabled = (ctrlPaymentDetails1.Payment.Status != 2);
                 }
                 else
                     MessageBox.Show("Select a member that has supscription !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -121,8 +120,8 @@ namespace GymMangementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _SubscriptionID = ctrlPaymentDetails1.Payment == null ? _SubscriptionID : ctrlPaymentDetails1.Payment.SubscriptionID;
-
+            // _SubscriptionID = ctrlPaymentDetails1.Payment == null ? _SubscriptionID : ctrlPaymentDetails1.Payment.SubscriptionID;
+            _SubscriptionID = ctrlPaymentDetails1.Payment?.SubscriptionID ?? _SubscriptionID;
             Form frm = new frmShowSubscriptionDetails(_SubscriptionID);
             frm.ShowDialog();
         }
@@ -137,7 +136,7 @@ namespace GymMangementSystem
             }
 
 
-            _PaymentInfo.PaymentAmount=Convert.ToDouble( nudPaymentAmount.Value);
+            _PaymentInfo.PaymentAmount=Convert.ToDouble( txtPaymentAmount.Text);
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
@@ -161,6 +160,7 @@ namespace GymMangementSystem
             {
                 lblTitle2.Text = "Update Payment";
                 ctrlPaymentDetails1.LoadPaymentInfo(_PaymentInfo.PaymentID);
+                btnSave.Enabled = false;
                 MessageBox.Show("Payment details saved successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -175,6 +175,24 @@ namespace GymMangementSystem
             frm.ShowDialog();
         }
 
-      
+        private void txtPaymentAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if (!decimal.TryParse(txtPaymentAmount.Text, out decimal value))
+            {
+                errorProvider1.SetError(txtPaymentAmount, "Payment amount must be valid.");
+                e.Cancel = true;
+                    return;
+            }
+                if (value <= 0)
+                {
+                    errorProvider1.SetError(txtPaymentAmount, "Payment amount must be greater than zero.");
+                    e.Cancel = true;
+                    return;
+                }
+
+                errorProvider1.SetError(txtPaymentAmount, "");
+          
+
+        }
     }
 }

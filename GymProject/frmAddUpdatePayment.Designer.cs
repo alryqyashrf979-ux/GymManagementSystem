@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdatePayment));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,8 +40,8 @@
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
+            this.txtPaymentAmount = new GymMangementSystem.MyTextBox();
             this.lnkShowSubscriptionDetails = new System.Windows.Forms.LinkLabel();
-            this.nudPaymentAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.cmPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,14 +50,15 @@
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcPayment.SuspendLayout();
             this.tpMemberInfo.SuspendLayout();
             this.tpPaymentInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPaymentAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -192,8 +194,8 @@
             // 
             // tpPaymentInfo
             // 
+            this.tpPaymentInfo.Controls.Add(this.txtPaymentAmount);
             this.tpPaymentInfo.Controls.Add(this.lnkShowSubscriptionDetails);
-            this.tpPaymentInfo.Controls.Add(this.nudPaymentAmount);
             this.tpPaymentInfo.Controls.Add(this.cmPaymentMethod);
             this.tpPaymentInfo.Controls.Add(this.label2);
             this.tpPaymentInfo.Controls.Add(this.label1);
@@ -208,6 +210,30 @@
             this.tpPaymentInfo.Text = "Payment Info";
             this.tpPaymentInfo.UseVisualStyleBackColor = true;
             // 
+            // txtPaymentAmount
+            // 
+            this.txtPaymentAmount.BorderRadius = 7;
+            this.txtPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPaymentAmount.DefaultText = "";
+            this.txtPaymentAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPaymentAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPaymentAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPaymentAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPaymentAmount.ErrorMessage = "This Field is Required";
+            this.txtPaymentAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPaymentAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPaymentAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtPaymentAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPaymentAmount.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
+            this.txtPaymentAmount.IsRequired = true;
+            this.txtPaymentAmount.Location = new System.Drawing.Point(198, 10);
+            this.txtPaymentAmount.Name = "txtPaymentAmount";
+            this.txtPaymentAmount.PlaceholderText = "";
+            this.txtPaymentAmount.SelectedText = "";
+            this.txtPaymentAmount.Size = new System.Drawing.Size(299, 36);
+            this.txtPaymentAmount.TabIndex = 107;
+            this.txtPaymentAmount.Validating += new System.ComponentModel.CancelEventHandler(this.txtPaymentAmount_Validating);
+            // 
             // lnkShowSubscriptionDetails
             // 
             this.lnkShowSubscriptionDetails.AutoSize = true;
@@ -219,18 +245,6 @@
             this.lnkShowSubscriptionDetails.TabStop = true;
             this.lnkShowSubscriptionDetails.Text = "Show Subscription Details";
             this.lnkShowSubscriptionDetails.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // nudPaymentAmount
-            // 
-            this.nudPaymentAmount.BackColor = System.Drawing.Color.Transparent;
-            this.nudPaymentAmount.BorderRadius = 7;
-            this.nudPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudPaymentAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudPaymentAmount.Location = new System.Drawing.Point(198, 6);
-            this.nudPaymentAmount.Name = "nudPaymentAmount";
-            this.nudPaymentAmount.Size = new System.Drawing.Size(299, 36);
-            this.nudPaymentAmount.TabIndex = 105;
-            this.nudPaymentAmount.UpDownButtonFillColor = System.Drawing.Color.White;
             // 
             // cmPaymentMethod
             // 
@@ -361,6 +375,10 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddUpdatePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -382,9 +400,9 @@
             this.tpMemberInfo.ResumeLayout(false);
             this.tpPaymentInfo.ResumeLayout(false);
             this.tpPaymentInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPaymentAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,7 +421,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private ctrlMemberBasicDetailsWithFilter ctrlMemberDetailsWithFiltering1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudPaymentAmount;
         private Guna.UI2.WinForms.Guna2ComboBox cmPaymentMethod;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label label2;
@@ -411,5 +428,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lnkShowSubscriptionDetails;
         private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
+        private MyTextBox txtPaymentAmount;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
