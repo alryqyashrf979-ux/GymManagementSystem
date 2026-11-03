@@ -20,7 +20,7 @@ namespace GymMangementSystem
         private clsMembers _MemberInfo;
         private int _MemberID=-1;
         private int _SubscriptionID=-1;
-
+        private decimal _Value = 0;
         public frmAddUpdatePayment()
         {
             InitializeComponent();
@@ -134,7 +134,12 @@ namespace GymMangementSystem
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            decimal TotalRemaining = Convert.ToDecimal(ctrlPaymentDetails1.Payment?.TotalRemaining ?? ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice);
+            if (_Value > TotalRemaining)
+            {
+                MessageBox.Show(txtPaymentAmount, $"Payment amount cannot exceed the remaining balance.\n Remaining Balance:{TotalRemaining:N1}\nEntered Amount:{txtPaymentAmount.Text:N2}", "Invalid Payment Amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             _PaymentInfo.PaymentAmount=Convert.ToDouble( txtPaymentAmount.Text);
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
@@ -177,21 +182,23 @@ namespace GymMangementSystem
 
         private void txtPaymentAmount_Validating(object sender, CancelEventArgs e)
         {
-            if (!decimal.TryParse(txtPaymentAmount.Text, out decimal value))
+            e.Cancel = true;
+
+            if (!decimal.TryParse(txtPaymentAmount.Text, out _Value))
             {
                 errorProvider1.SetError(txtPaymentAmount, "Payment amount must be valid.");
-                e.Cancel = true;
                     return;
             }
-                if (value <= 0)
-                {
-                    errorProvider1.SetError(txtPaymentAmount, "Payment amount must be greater than zero.");
-                    e.Cancel = true;
-                    return;
-                }
 
-                errorProvider1.SetError(txtPaymentAmount, "");
-          
+            if (_Value <= 0)
+            {
+                errorProvider1.SetError(txtPaymentAmount, "Payment amount must be greater than zero.");
+                return;
+            }
+
+
+            errorProvider1.SetError(txtPaymentAmount, "");
+            e.Cancel = false;
 
         }
 
