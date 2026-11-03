@@ -226,6 +226,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(187, 27);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtNationalNo
             // 
@@ -378,7 +379,7 @@
             this.btnSelectPhoto.ImageOffset = new System.Drawing.Point(-8, 0);
             this.btnSelectPhoto.ImageSize = new System.Drawing.Size(26, 27);
             this.btnSelectPhoto.Location = new System.Drawing.Point(28, 230);
-            this.btnSelectPhoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelectPhoto.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelectPhoto.Name = "btnSelectPhoto";
             this.btnSelectPhoto.Size = new System.Drawing.Size(178, 39);
             this.btnSelectPhoto.TabIndex = 9;
@@ -542,7 +543,7 @@
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSave.Location = new System.Drawing.Point(525, 401);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(178, 30);
             this.btnSave.TabIndex = 11;
@@ -568,7 +569,7 @@
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
             this.btnClose.Location = new System.Drawing.Point(314, 401);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(191, 30);
             this.btnClose.TabIndex = 12;
@@ -621,7 +622,7 @@
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Man_32;
             this.pictureBox5.Location = new System.Drawing.Point(133, 234);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -632,7 +633,7 @@
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Woman_32;
             this.pictureBox2.Location = new System.Drawing.Point(252, 234);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -645,7 +646,7 @@
             this.rbFemale.AutoSize = true;
             this.rbFemale.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFemale.Location = new System.Drawing.Point(282, 239);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(76, 23);
             this.rbFemale.TabIndex = 44;
@@ -659,7 +660,7 @@
             this.rbMale.Checked = true;
             this.rbMale.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMale.Location = new System.Drawing.Point(163, 239);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(2);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(61, 23);
             this.rbMale.TabIndex = 43;
@@ -680,7 +681,7 @@
             this.cmCountries.ForeColor = System.Drawing.Color.Black;
             this.cmCountries.ItemHeight = 30;
             this.cmCountries.Location = new System.Drawing.Point(681, 267);
-            this.cmCountries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmCountries.Margin = new System.Windows.Forms.Padding(2);
             this.cmCountries.Name = "cmCountries";
             this.cmCountries.Size = new System.Drawing.Size(165, 36);
             this.cmCountries.TabIndex = 8;
@@ -696,7 +697,7 @@
             this.dtDateOfBirth.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
             this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtDateOfBirth.Location = new System.Drawing.Point(682, 192);
-            this.dtDateOfBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.dtDateOfBirth.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.dtDateOfBirth.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
             this.dtDateOfBirth.Name = "dtDateOfBirth";

@@ -348,5 +348,19 @@ namespace GymMangementSystem
                 pbSelectedPhoto.Image=Resources.Male;
 
         }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEmail.Text)) 
+                return;
+
+            if (!clsValidation.ValidateEmail(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, "Error this format is not valid!");
+                e.Cancel = true;
+            }
+            else
+                errorProvider1.SetError(txtEmail, "");
+        }
     }
 }
