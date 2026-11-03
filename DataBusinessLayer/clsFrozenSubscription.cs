@@ -125,7 +125,7 @@ namespace DataBusinessLayer
 
         public bool Save()
         {
-            this.FreezingDuration = (byte)(FreezeEndDate - FreezeStartDate).Days;
+            
 
             switch (Mode)
             {
