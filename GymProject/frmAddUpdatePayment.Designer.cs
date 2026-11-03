@@ -40,6 +40,7 @@
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.txtPaymentAmount = new GymMangementSystem.MyTextBox();
             this.lnkShowSubscriptionDetails = new System.Windows.Forms.LinkLabel();
             this.cmPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -194,6 +195,7 @@
             // 
             // tpPaymentInfo
             // 
+            this.tpPaymentInfo.Controls.Add(this.btnBack);
             this.tpPaymentInfo.Controls.Add(this.txtPaymentAmount);
             this.tpPaymentInfo.Controls.Add(this.lnkShowSubscriptionDetails);
             this.tpPaymentInfo.Controls.Add(this.cmPaymentMethod);
@@ -209,6 +211,34 @@
             this.tpPaymentInfo.TabIndex = 1;
             this.tpPaymentInfo.Text = "Payment Info";
             this.tpPaymentInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnBack.BorderRadius = 5;
+            this.btnBack.BorderThickness = 1;
+            this.btnBack.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnBack.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.Image = global::GymMangementSystem.Properties.Resources.Back;
+            this.btnBack.ImageOffset = new System.Drawing.Point(-5, 1);
+            this.btnBack.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBack.Location = new System.Drawing.Point(7, 525);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(105, 30);
+            this.btnBack.TabIndex = 108;
+            this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // txtPaymentAmount
             // 
@@ -430,5 +460,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
         private MyTextBox txtPaymentAmount;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
     }
 }
