@@ -42,7 +42,6 @@
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.txtPaymentAmount = new GymMangementSystem.MyTextBox();
-            this.lnkShowSubscriptionDetails = new System.Windows.Forms.LinkLabel();
             this.cmPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -197,7 +196,6 @@
             // 
             this.tpPaymentInfo.Controls.Add(this.btnBack);
             this.tpPaymentInfo.Controls.Add(this.txtPaymentAmount);
-            this.tpPaymentInfo.Controls.Add(this.lnkShowSubscriptionDetails);
             this.tpPaymentInfo.Controls.Add(this.cmPaymentMethod);
             this.tpPaymentInfo.Controls.Add(this.label2);
             this.tpPaymentInfo.Controls.Add(this.label1);
@@ -264,18 +262,6 @@
             this.txtPaymentAmount.TabIndex = 107;
             this.txtPaymentAmount.Validating += new System.ComponentModel.CancelEventHandler(this.txtPaymentAmount_Validating);
             // 
-            // lnkShowSubscriptionDetails
-            // 
-            this.lnkShowSubscriptionDetails.AutoSize = true;
-            this.lnkShowSubscriptionDetails.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowSubscriptionDetails.Location = new System.Drawing.Point(725, 521);
-            this.lnkShowSubscriptionDetails.Name = "lnkShowSubscriptionDetails";
-            this.lnkShowSubscriptionDetails.Size = new System.Drawing.Size(230, 25);
-            this.lnkShowSubscriptionDetails.TabIndex = 106;
-            this.lnkShowSubscriptionDetails.TabStop = true;
-            this.lnkShowSubscriptionDetails.Text = "Show Subscription Details";
-            this.lnkShowSubscriptionDetails.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // cmPaymentMethod
             // 
             this.cmPaymentMethod.BackColor = System.Drawing.Color.Transparent;
@@ -324,6 +310,7 @@
             this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
             this.ctrlPaymentDetails1.Size = new System.Drawing.Size(458, 550);
+            this.ctrlPaymentDetails1.SubscriptionID = 0;
             this.ctrlPaymentDetails1.TabIndex = 98;
             // 
             // guna2CirclePictureBox1
@@ -456,7 +443,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel lnkShowSubscriptionDetails;
         private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
         private MyTextBox txtPaymentAmount;
         private System.Windows.Forms.ErrorProvider errorProvider1;

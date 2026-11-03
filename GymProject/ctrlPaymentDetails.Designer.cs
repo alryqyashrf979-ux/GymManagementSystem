@@ -60,6 +60,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lnkShowSubscriptionDetails = new System.Windows.Forms.LinkLabel();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox9)).BeginInit();
@@ -77,6 +78,7 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderRadius = 7;
+            this.guna2GroupBox1.Controls.Add(this.lnkShowSubscriptionDetails);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox10);
             this.guna2GroupBox1.Controls.Add(this.lblPlanName);
             this.guna2GroupBox1.Controls.Add(this.label4);
@@ -502,6 +504,21 @@
             this.guna2CirclePictureBox1.TabIndex = 57;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // lnkShowSubscriptionDetails
+            // 
+            this.lnkShowSubscriptionDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkShowSubscriptionDetails.AutoSize = true;
+            this.lnkShowSubscriptionDetails.BackColor = System.Drawing.Color.Transparent;
+            this.lnkShowSubscriptionDetails.Enabled = false;
+            this.lnkShowSubscriptionDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkShowSubscriptionDetails.Location = new System.Drawing.Point(130, 481);
+            this.lnkShowSubscriptionDetails.Name = "lnkShowSubscriptionDetails";
+            this.lnkShowSubscriptionDetails.Size = new System.Drawing.Size(158, 17);
+            this.lnkShowSubscriptionDetails.TabIndex = 107;
+            this.lnkShowSubscriptionDetails.TabStop = true;
+            this.lnkShowSubscriptionDetails.Text = "Show Subscription Details";
+            this.lnkShowSubscriptionDetails.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkShowSubscriptionDetails_LinkClicked);
+            // 
             // ctrlPaymentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -560,5 +577,6 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
+        private System.Windows.Forms.LinkLabel lnkShowSubscriptionDetails;
     }
 }

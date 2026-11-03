@@ -129,9 +129,10 @@ namespace GymMangementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID!=-1)
             if (!clsPayments.IsPaymentStatusCompeleted(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID))
             {
-                MessageBox.Show("Warnining!\nThis member has an outstanding balance from a prefious subscription ","Outstanding Balance Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show($"Warnining!\n\nThis member has an outstanding balance from a previous subscription \nOutstanding Balance:{clsPayments.FindBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID).TotalRemaining:N2} ","Outstanding Balance Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -170,6 +171,7 @@ namespace GymMangementSystem
 
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(_Subscription.SubscriptionID);
 
+                this.Close();
                 frmAddUpdatePayment frm = new frmAddUpdatePayment(_Subscription.MemberID);
                 frm.ShowDialog();
             }
