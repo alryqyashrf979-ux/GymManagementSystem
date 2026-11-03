@@ -149,13 +149,13 @@ namespace DataBusinessLayer
 
             clsFrozenSubscription Freeze = new clsFrozenSubscription();
 
-            Freeze.SubscriptionID = _SubscriptionID;
             Freeze.FreezeStartDate = StartDate;
             Freeze.FreezeEndDate = EndDate;
             Freeze.FreezeFee = FreezeFee;
-            Freeze.SubscriptionID = FrozenByUserID;
+            Freeze.FrozenByUserID = FrozenByUserID;
             Freeze.FreezeReason = FreezeReason;
-            Freeze.IsFrozen = true;
+            Freeze.SubscriptionID = _SubscriptionID;
+            Freeze.IsFrozen = (StartDate.Date == DateTime.Today.Date);
             Freeze.FreezingDuration = (byte)(EndDate.Date - StartDate.Date).Days;
            
             Freeze.IsFeesPaid=(FreezeFee > 0);
