@@ -90,7 +90,6 @@ namespace GymMangementSystem
             frmAddSubscription frm =new frmAddSubscription();
             frm.ShowDialog();
             _SelectbtnDashBoard();
-
         }
 
         private void freezeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,12 +111,24 @@ namespace GymMangementSystem
         {
             Form frm = new frmClasses();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
 
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
             Form frm = new frmManageRefund();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
+        }
+
+        private void changeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangeSubscription frm =new frmChangeSubscription();
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
     }
 }

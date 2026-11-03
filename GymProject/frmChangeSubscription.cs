@@ -21,5 +21,15 @@ namespace GymMangementSystem
         {
 
         }
+
+        private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
