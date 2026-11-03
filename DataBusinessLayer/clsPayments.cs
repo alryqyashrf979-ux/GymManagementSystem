@@ -13,13 +13,14 @@ namespace DataBusinessLayer
         private int _PaymentID;
         public int PaymentID { get { return _PaymentID; } }
         public int SubscriptionID { set; get; }
+        public string StatusString { get => GetStatusString(); }
         public double PaymentAmount { set; get; }
         public double ActualAmount { set; get; }
         public double TotalRemaining { set; get; }
         public int PaymentMethod { set; get; }
         public DateTime PaymentDate { set; get; }
         public int CreatedByUserID { set; get; }
-        public byte Status { set; get; }
+        public enStatus Status { set; get; }
         public clsUsers UserInfo { get; private set; }
         public clsSubscription SubscriptionInfo { get; private set; }
         public clsMembers MemberInfo { get; private set; }
@@ -47,7 +48,7 @@ namespace DataBusinessLayer
         }
 
         private clsPayments(int PaymentID,int SubscriptionID,double PaymentAmount,double ActualAmount,double TotalRemaining,
-            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID,byte Status)
+            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID,enStatus Status)
         {
             _PaymentID = PaymentID;
             this.SubscriptionID = SubscriptionID;
@@ -72,7 +73,7 @@ namespace DataBusinessLayer
 
         private bool _AddPayment()
         {
-            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining, this.PaymentMethod, this.CreatedByUserID,this.Status);
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining, this.PaymentMethod, this.CreatedByUserID,(byte)this.Status);
 
             return this._PaymentID != -1;
         }
@@ -107,7 +108,7 @@ namespace DataBusinessLayer
         {
             return clsPaymentData.GetAllPayments();
         }
-        static public clsPayments Find(int PaymentID)
+        static public clsPayments FindByPaymentID(int PaymentID)
         {
             
            int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;
@@ -120,24 +121,33 @@ namespace DataBusinessLayer
             bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
 
             if (IsFound)
-                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,Status);
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
+            else
+                return null;
+        }
+        //added by aim
+        static public clsPayments FindBySubscriptionID(int SubscriptionID)
+        {
+            
+           int PaymentID = -1, PaymentMethod = -1, CreatedByUserID = -1;
+
+          double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
+            byte Status = 0;
+
+          DateTime  PaymentDate = DateTime.Now;
+
+            bool IsFound = clsPaymentData.Find(ref PaymentID,  SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
+
+            if (IsFound)
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
             else
                 return null;
         }
 
-        static public int SelectPaymentIDBySubscriptionID(int SubscriptionID)
+      //Edit by aim
+        private string GetStatusString()
         {
-            return clsPaymentData.SelectPaymentIDBySubscriptionID(SubscriptionID);
-        }
-
-        public int SelectPaymentID()
-        {
-            return clsPaymentData.SelectPaymentIDBySubscriptionID(this.SubscriptionID);
-        }
-
-        public string SelectStatusString()
-        {
-            switch ((enStatus)Status)
+            switch (this.Status)
             {
                 case enStatus.Pending:
                     return "Pending";

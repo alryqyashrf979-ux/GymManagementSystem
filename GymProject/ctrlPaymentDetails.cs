@@ -13,7 +13,7 @@ namespace GymMangementSystem
 {
     public partial class ctrlPaymentDetails : UserControl
     {
-        public clsPayments Payment { get; private set; }
+        public clsPayments PaymentInfo { get; private set; }
         
         public ctrlPaymentDetails()
         {
@@ -32,25 +32,45 @@ namespace GymMangementSystem
             lblPlanName.Text = "???";
             lblStatus.Text = "???";
         }
-        public void LoadPaymentInfo(int PaymentID)
+
+        
+        void _LoadData()
         {
-            Payment = clsPayments.Find(PaymentID);
-            if (Payment == null)
+            lblStatus.Text = PaymentInfo.StatusString;
+            lblActualAmount.Text = PaymentInfo.ActualAmount.ToString();
+            lblCreatedBy.Text = PaymentInfo.UserInfo.UserName;
+            lblMemberName.Text = PaymentInfo.MemberInfo.PersonInfo.FullName;
+            lblPaymentAmount.Text = PaymentInfo.PaymentAmount.ToString();
+            lblPaymentD.Text = PaymentInfo.PaymentID.ToString();
+            lblPaymentDate.Text = PaymentInfo.PaymentDate.ToString();
+            lblPlanName.Text = PaymentInfo.SubscriptionInfo.PlanInfo.PlanName;
+            lblTotalRemaining.Text = PaymentInfo.TotalRemaining.ToString();
+            lblSubscriptionID.Text = PaymentInfo.SubscriptionID.ToString();
+        }
+
+        public void LoadPaymentByPaymentID(int PaymentID)
+        {
+            PaymentInfo = clsPayments.FindByPaymentID(PaymentID);
+            if (PaymentInfo == null)
             {
                 _ResetDefaultValues();
                 return;
             }
 
-            lblStatus.Text = Payment.SelectStatusString();
-            lblActualAmount.Text = Payment.ActualAmount.ToString();
-            lblCreatedBy.Text =Payment.UserInfo.UserName;
-            lblMemberName.Text =Payment.MemberInfo.PersonInfo.FullName;
-            lblPaymentAmount.Text = Payment.PaymentAmount.ToString();
-            lblPaymentD.Text = Payment.PaymentID.ToString() ;
-            lblPaymentDate.Text = Payment.PaymentDate.ToString();
-            lblPlanName.Text =Payment.SubscriptionInfo.PlanInfo.PlanName ;
-            lblTotalRemaining.Text =Payment.TotalRemaining.ToString();
-            lblSubscriptionID.Text = Payment.SubscriptionID.ToString();
+            _LoadData();//Edit By aim
+        }
+        // Added by aim \
+        public void LoadPaymentBySubscriptionID(int SubscriptionID)
+        {
+            PaymentInfo = clsPayments.FindBySubscriptionID(SubscriptionID);
+
+            if (PaymentInfo == null)
+            {
+                _ResetDefaultValues();
+                return;
+            }
+
+            _LoadData();//Edit By aim
         }
     }
 }
