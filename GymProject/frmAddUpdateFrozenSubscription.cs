@@ -73,7 +73,6 @@ namespace GymMangementSystem
             txtFees.Text = "0";
             lblTitle.Text = "Add Frozen Subscription";
             this.Text=lblTitle.Text;
-            rdNo.Checked = true;
 
             if (_Mode == enMode.Addnew)
                 _FrozenSubscriptionInf = new clsFrozenSubscription();
@@ -112,7 +111,6 @@ namespace GymMangementSystem
             lblSubscriptionID.Text = _FrozenSubscriptionInf.SubscriptionID.ToString();
             txtFreezeReason.Text= _FrozenSubscriptionInf.FreezeReason.ToString();
             txtFees.Text = _FrozenSubscriptionInf.FreezeFee.ToString();
-            rdYes.Checked = _FrozenSubscriptionInf.IsFeesPaid;
 
             if(_FrozenSubscriptionInf.FreezeStartDate.Date<DateTime.Now.Date)
             {
@@ -152,30 +150,17 @@ namespace GymMangementSystem
                 return;
             }
 
+            int FrozenID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Freeze(dtStartDate.Value, dtEndDate.Value,
+                Convert.ToDouble(txtFees.Text), clsGlobal.CurrentUserInfo.UserID, txtFreezeReason.Text);
 
 
-            if (txtFees.Text != "" && txtFees.Text != "0")
-                _FrozenSubscriptionInf.FreezeFee = Convert.ToDouble(txtFees.Text);
-
-
-
-
-            _FrozenSubscriptionInf.IsFeesPaid = rdYes.Checked;
-            _FrozenSubscriptionInf.SubscriptionID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID;
-            _FrozenSubscriptionInf.FreezeStartDate=dtStartDate.Value;
-            _FrozenSubscriptionInf.FreezeEndDate=dtEndDate.Value;
-            _FrozenSubscriptionInf.FrozenByUserID = clsGlobal.CurrentUserInfo.UserID;
-            _FrozenSubscriptionInf.IsFrozen = (_FrozenSubscriptionInf.FreezeStartDate.Date == DateTime.Today.Date);
-
-
-            if (_FrozenSubscriptionInf.Save())
+            if (FrozenID!=-1)
             {
 
 
-
-                lblFreezingDuration.Text = _FrozenSubscriptionInf.FreezingDuration.ToString();
-                lblFrozenByUser.Text = _FrozenSubscriptionInf.FrozenByUserID.ToString();
-                lblFrozenSubscriptionID.Text = _FrozenSubscriptionInf.FreezeID.ToString();
+                lblFreezingDuration.Text = (dtEndDate.Value.Date - dtStartDate.Value.Date).Days.ToString();
+                lblFrozenByUser.Text = clsGlobal.CurrentUserInfo.UserName;
+                lblFrozenSubscriptionID.Text = FrozenID.ToString() ;
 
                 lblTitle.Text = "Update Frozen Subscription";
                 this.Text = lblTitle.Text;

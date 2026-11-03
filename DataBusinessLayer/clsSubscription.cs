@@ -113,7 +113,7 @@ namespace DataBusinessLayer
 
 
 
-        public bool AddSubscription(DateTime StartDate,int MemberID,int PlanID,int CreatedByUserID)
+        public bool AddSubscription(DateTime StartDate,int MemberID,int PlanID,int createdByUserID)
         {
 
             clsSubscriptionPlans _Plan = clsSubscriptionPlans.Find(PlanID);
@@ -122,7 +122,7 @@ namespace DataBusinessLayer
                 return false;
 
 
-
+            this.PlanID = PlanID;
             this.Status = (StartDate.Date == DateTime.Today) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
             this.StartDate = StartDate;
             this.MemberID = MemberID;
@@ -143,6 +143,34 @@ namespace DataBusinessLayer
 
             return this.Save();
         }
+
+        public int Freeze(DateTime StartDate,DateTime EndDate ,double FreezeFee,int FrozenByUserID,string FreezeReason)
+        {
+
+            clsFrozenSubscription Freeze = new clsFrozenSubscription();
+
+            Freeze.SubscriptionID = _SubscriptionID;
+            Freeze.FreezeStartDate = StartDate;
+            Freeze.FreezeEndDate = EndDate;
+            Freeze.FreezeFee = FreezeFee;
+            Freeze.SubscriptionID = FrozenByUserID;
+            Freeze.FreezeReason = FreezeReason;
+            Freeze.IsFrozen = true;
+            Freeze.FreezingDuration = (byte)(EndDate.Date - StartDate.Date).Days;
+           
+            Freeze.IsFeesPaid=(FreezeFee > 0);
+
+
+            if (Freeze.Save())
+            {
+                if (!UpdateSubscriptionStatus(enSubscriptionStatus.Frozen))
+                    return -1;
+            }
+
+
+            return Freeze.FreezeID;
+        }
+
 
 
 
@@ -223,7 +251,10 @@ namespace DataBusinessLayer
             return clsSubscriptionsData.DeleteSubscription(SubscriptionID);
         }
 
-
+        public bool UpdateSubscriptionStatus(enSubscriptionStatus Status)
+        {
+            return clsSubscriptionsData.UpdateSubscriptionStatus(this.SubscriptionID, (byte)enSubscriptionStatus.Expired);
+        }
 
         public static DataTable GetAllSubscriptions()
         {
