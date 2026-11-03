@@ -68,6 +68,7 @@ namespace GymMangementSystem
             ctrlSubscriptionPlanDetailsWithFiltering1.LoadPlanDetailsByPlanName(_Subscription.PlanInfo.PlanName);
 
             btnSave.Enabled = (_Subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
+            tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
 
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
@@ -81,9 +82,8 @@ namespace GymMangementSystem
             _Subscription = new clsSubscription();
             this.Text = "Add Subscription";
             lblTitle2.Text = "Add Subscription";
-            ctrlSubscriptionDetails1.ResetSubscriptionData();
             ctrlSubscriptionDetails1.EnableStartDate = true;
-            tpSubscriptionInfo.Enabled = (ctrlMemberDetailsWithFiltering1.MemberID != -1);
+            tpSubscriptionInfo.Enabled = false ;
         
 
 
@@ -129,7 +129,11 @@ namespace GymMangementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            if (!clsPayments.IsPaymentStatusCompeleted(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID))
+            {
+                MessageBox.Show("Warnining!\nThis member has an outstanding balance from a prefious subscription ","Outstanding Balance Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
 
             bool IsSaved = false;
 
@@ -219,14 +223,8 @@ namespace GymMangementSystem
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpMemberInfo"];
-
-
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpMemberInfo"];
-
-        }
+     
     }
 }
