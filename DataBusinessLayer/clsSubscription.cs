@@ -253,7 +253,7 @@ namespace DataBusinessLayer
 
         public bool UpdateSubscriptionStatus(enSubscriptionStatus Status)
         {
-            return clsSubscriptionsData.UpdateSubscriptionStatus(this.SubscriptionID, (byte)enSubscriptionStatus.Expired);
+            return clsSubscriptionsData.UpdateSubscriptionStatus(this.SubscriptionID, (byte)Status);
         }
 
         public static DataTable GetAllSubscriptions()
