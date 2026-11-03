@@ -13,13 +13,14 @@ namespace DataBusinessLayer
         private int _PaymentID;
         public int PaymentID { get { return _PaymentID; } }
         public int SubscriptionID { set; get; }
+        public string StatusString { get => GetStatusString(); }
         public double PaymentAmount { set; get; }
         public double ActualAmount { set; get; }
         public double TotalRemaining { set; get; }
         public int PaymentMethod { set; get; }
         public DateTime PaymentDate { set; get; }
         public int CreatedByUserID { set; get; }
-        public byte Status { set; get; }
+        public enStatus Status { set; get; }
         public clsUsers UserInfo { get; private set; }
         public clsSubscription SubscriptionInfo { get; private set; }
         public clsMembers MemberInfo { get; private set; }
@@ -143,8 +144,8 @@ namespace DataBusinessLayer
                 return null;
         }
 
-      
-        public string SelectStatusString()
+      //Edit by aim
+        private string GetStatusString()
         {
             switch ((enStatus)Status)
             {
