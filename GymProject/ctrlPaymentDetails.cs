@@ -36,7 +36,7 @@ namespace GymMangementSystem
         
         void _LoadData()
         {
-            lblStatus.Text = Payment.SelectStatusString();
+            lblStatus.Text = Payment.StatusString;
             lblActualAmount.Text = Payment.ActualAmount.ToString();
             lblCreatedBy.Text = Payment.UserInfo.UserName;
             lblMemberName.Text = Payment.MemberInfo.PersonInfo.FullName;
@@ -50,7 +50,7 @@ namespace GymMangementSystem
 
         public void LoadPaymentByPaymentID(int PaymentID)
         {
-            Payment = clsPayments.FindBySubscriptionID(PaymentID);
+            Payment = clsPayments.FindByPaymentID(PaymentID);
             if (Payment == null)
             {
                 _ResetDefaultValues();
@@ -59,10 +59,11 @@ namespace GymMangementSystem
 
             _LoadData();//Edit By aim
         }
-        // Added by aim b\
-        public void LoadPaymentBySubscriptionID(int PaymentID)
+        // Added by aim \
+        public void LoadPaymentBySubscriptionID(int SubscriptionID)
         {
-            Payment = clsPayments.FindBySubscriptionID(PaymentID);
+            Payment = clsPayments.FindBySubscriptionID(SubscriptionID);
+
             if (Payment == null)
             {
                 _ResetDefaultValues();
