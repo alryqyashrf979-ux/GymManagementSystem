@@ -145,22 +145,29 @@ namespace DataBusinessLayer
         }
 
 
-        public int Change(int ChangedByUserID,int PlanID)
+        public int Change(int ChangedByUserID, int PlanID)
         {
-           
-           
 
-            if (!this.AddSubscription(DateTime.Today, this.MemberID, PlanID, ChangedByUserID))
+            clsSubscription NewSubscription = new clsSubscription();
+
+            if (!NewSubscription.AddSubscription(this.StartDate, this.MemberID, PlanID, ChangedByUserID))
                 return -1;
 
-            
+            clsSubscriptionChanges Change = new clsSubscriptionChanges();
+
+            Change.CancelledSubscriptionID = this.SubscriptionID;
+            Change.NewSubscriptionID = NewSubscription.SubscriptionID;
+            Change.ChangedByUserID = ChangedByUserID;
+            Change.ChangeDateTime = DateTime.Today;
 
 
+            if (!Change.Save())
+                return -1;
 
+            this.UpdateSubscriptionStatus(enSubscriptionStatus.Changed);
+               
 
-
-
-
+            return Change.SubscriptionChangeID;
 
         }
 
