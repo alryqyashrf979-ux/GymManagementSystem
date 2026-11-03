@@ -144,6 +144,27 @@ namespace DataBusinessLayer
             return this.Save();
         }
 
+
+        public int Change(int ChangedByUserID,int PlanID)
+        {
+           
+           
+
+            if (!this.AddSubscription(DateTime.Today, this.MemberID, PlanID, ChangedByUserID))
+                return -1;
+
+            
+
+
+
+
+
+
+
+
+        }
+
+
         public int Freeze(DateTime StartDate,DateTime EndDate ,double FreezeFee,int FrozenByUserID,string FreezeReason)
         {
 
@@ -170,6 +191,7 @@ namespace DataBusinessLayer
 
             return Freeze.FreezeID;
         }
+
 
 
 
