@@ -124,9 +124,9 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool DeletePayment(int PaymentID)
+        static public bool DeleteRefund(int RefundID)
         {
-            string query = " Delete From Payments where PaymentID=@PaymentID; ";
+            string query = " Delete From Refund where RefundID=@RefundID; ";
 
             try
             {
@@ -135,7 +135,7 @@ namespace DataAccessLayer
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                        command.Parameters.AddWithValue("@RefundID", RefundID);
 
                         return command.ExecuteNonQuery() > 0;
                     }
