@@ -16,10 +16,7 @@ namespace GymMangementSystem
     {
         enum enMode { ExistSubscription, NewSubscription }
         private enMode _Mode = enMode.ExistSubscription;
-        private clsPayments _PaymentInfo;
-        private clsMembers _MemberInfo;
         private int _MemberID=-1;
-        private int _SubscriptionID=-1;
         private decimal _Value = 0;
         public frmAddUpdatePayment()
         {
@@ -37,7 +34,6 @@ namespace GymMangementSystem
         {
             
                 lblTitle2.Text = "Add Payment";
-                _PaymentInfo = new clsPayments();
       
             txtPaymentAmount.Text = "0";
             cmPaymentMethod.SelectedIndex = 0;
@@ -54,7 +50,7 @@ namespace GymMangementSystem
             //    return;
             //}
 
-            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberInfo.MemberID);
+            ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberID);
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
             btnSave.Enabled = true;
@@ -91,6 +87,15 @@ namespace GymMangementSystem
 
             //}
 
+            if (ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID == -1)
+            {
+                MessageBox.Show("This member does not has an Existing Subscription", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+
             btnNext.Enabled = true;
         }
 
@@ -100,17 +105,16 @@ namespace GymMangementSystem
 
             if (ctrlMemberDetailsWithFiltering1.MemberID!=-1)
             { 
-                if (ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID!=-1)
-                {
+               
                     btnSave.Enabled = true;
                     tpPaymentInfo.Enabled = true;
                     tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
-                    ctrlPaymentDetails1.LoadPaymentInfo(clsPayments.SelectPaymentIDBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID));
-                    lnkShowSubscriptionDetails.Enabled = true;
-                    btnSave.Enabled = (ctrlPaymentDetails1.Payment.Status != 2);
-                }
-                else
-                    MessageBox.Show("Select a member that has supscription !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    ctrlPaymentDetails1.LoadPaymentBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID);
+                lnkShowSubscriptionDetails.Enabled = (ctrlPaymentDetails1.PaymentInfo.SubscriptionID != -1);
+                btnSave.Enabled = (ctrlPaymentDetails1.PaymentInfo.Status != clsPayments.enStatus.Completed);
+                
+                
             }
             else
                 MessageBox.Show("Select a member first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -125,8 +129,8 @@ namespace GymMangementSystem
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // _SubscriptionID = ctrlPaymentDetails1.Payment == null ? _SubscriptionID : ctrlPaymentDetails1.Payment.SubscriptionID;
-            _SubscriptionID = ctrlPaymentDetails1.Payment?.SubscriptionID ?? _SubscriptionID;
-            Form frm = new frmShowSubscriptionDetails(_SubscriptionID);
+            //_SubscriptionID = ctrlPaymentDetails1.Payment?.SubscriptionID ?? _SubscriptionID;
+            Form frm = new frmShowSubscriptionDetails(ctrlPaymentDetails1.PaymentInfo.SubscriptionID);
             frm.ShowDialog();
         }
 
@@ -138,28 +142,31 @@ namespace GymMangementSystem
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            decimal TotalRemaining = Convert.ToDecimal(ctrlPaymentDetails1.Payment?.TotalRemaining ?? ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice);
+
+            decimal TotalRemaining = Convert.ToDecimal(ctrlPaymentDetails1.PaymentInfo?.TotalRemaining ?? ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice);
             if (_Value > TotalRemaining)
             {
                 MessageBox.Show(txtPaymentAmount, $"Payment amount cannot exceed the remaining balance.\n Remaining Balance:{TotalRemaining:N1}\nEntered Amount:{txtPaymentAmount.Text:N2}", "Invalid Payment Amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+           clsPayments _PaymentInfo = new clsPayments();
+
             _PaymentInfo.PaymentAmount=Convert.ToDouble( txtPaymentAmount.Text);
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
-            double OldPaymentAmount = ctrlPaymentDetails1.Payment == null ? 0 :ctrlPaymentDetails1.Payment.ActualAmount- ctrlPaymentDetails1.Payment.TotalRemaining;
+            double OldPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 :ctrlPaymentDetails1.PaymentInfo.ActualAmount- ctrlPaymentDetails1.PaymentInfo.TotalRemaining;
          
             if (_Mode==enMode.ExistSubscription)
             {
-                _PaymentInfo.TotalRemaining = Math.Max(0, ctrlPaymentDetails1.Payment.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
-                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? (byte)clsPayments.enStatus.Completed : (byte)clsPayments.enStatus.Pending;
+                _PaymentInfo.TotalRemaining = Math.Max(0, ctrlPaymentDetails1.PaymentInfo.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
+                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed :clsPayments.enStatus.Pending;
             }
             else
             {
                 _PaymentInfo.TotalRemaining = Math.Max(0, _PaymentInfo.ActualAmount - (_PaymentInfo.PaymentAmount + OldPaymentAmount));// this mean choose the max one.
-                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? (byte)clsPayments.enStatus.Completed : (byte)clsPayments.enStatus.Pending;
+                _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed : clsPayments.enStatus.Pending;
             }
 
             _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
@@ -168,7 +175,7 @@ namespace GymMangementSystem
             if (_PaymentInfo.Save())
             {
                 lblTitle2.Text = "Update Payment";
-                ctrlPaymentDetails1.LoadPaymentInfo(_PaymentInfo.PaymentID);
+                ctrlPaymentDetails1.LoadPaymentByPaymentID(_PaymentInfo.PaymentID);
                 btnSave.Enabled = false;
                 MessageBox.Show("Payment details saved successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
