@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnActive = new Guna.UI2.WinForms.Guna2Button();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.lblClassName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.btnActive = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlClassDetails1 = new GymMangementSystem.ctrlClassDetails();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,8 +49,38 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(677, 55);
+            this.guna2Panel1.Size = new System.Drawing.Size(683, 55);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // btnActive
+            // 
+            this.btnActive.BackColor = System.Drawing.Color.Transparent;
+            this.btnActive.BorderRadius = 13;
+            this.btnActive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnActive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnActive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnActive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnActive.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.btnActive.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnActive.ForeColor = System.Drawing.Color.Black;
+            this.btnActive.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.btnActive.Location = new System.Drawing.Point(578, 12);
+            this.btnActive.Name = "btnActive";
+            this.btnActive.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.btnActive.Size = new System.Drawing.Size(87, 25);
+            this.btnActive.TabIndex = 18;
+            this.btnActive.Text = "Active";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblDescription.Location = new System.Drawing.Point(81, 27);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(70, 16);
+            this.lblDescription.TabIndex = 17;
+            this.lblDescription.Text = "Description";
             // 
             // lblClassName
             // 
@@ -72,55 +103,51 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDescription.Location = new System.Drawing.Point(81, 27);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(70, 16);
-            this.lblDescription.TabIndex = 17;
-            this.lblDescription.Text = "Description";
-            // 
-            // btnActive
-            // 
-            this.btnActive.BackColor = System.Drawing.Color.Transparent;
-            this.btnActive.BorderRadius = 13;
-            this.btnActive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnActive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnActive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnActive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnActive.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
-            this.btnActive.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnActive.ForeColor = System.Drawing.Color.Black;
-            this.btnActive.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
-            this.btnActive.Location = new System.Drawing.Point(578, 12);
-            this.btnActive.Name = "btnActive";
-            this.btnActive.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
-            this.btnActive.Size = new System.Drawing.Size(87, 25);
-            this.btnActive.TabIndex = 18;
-            this.btnActive.Text = "Active";
-            // 
             // ctrlClassDetails1
             // 
-            this.ctrlClassDetails1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ctrlClassDetails1.Location = new System.Drawing.Point(0, 52);
+            this.ctrlClassDetails1.Location = new System.Drawing.Point(0, 59);
             this.ctrlClassDetails1.Name = "ctrlClassDetails1";
             this.ctrlClassDetails1.Size = new System.Drawing.Size(677, 393);
             this.ctrlClassDetails1.TabIndex = 0;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderThickness = 2;
+            this.btnClose.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
+            this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
+            this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnClose.Location = new System.Drawing.Point(517, 458);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(156, 34);
+            this.btnClose.TabIndex = 101;
+            this.btnClose.Text = "Close";
+            // 
             // frmShowClassDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(677, 445);
+            this.ClientSize = new System.Drawing.Size(683, 499);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.ctrlClassDetails1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmShowClassDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Class Details";
             this.Load += new System.EventHandler(this.frmShowClassDetails_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -137,5 +164,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDescription;
         private Guna.UI2.WinForms.Guna2Button btnActive;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }
