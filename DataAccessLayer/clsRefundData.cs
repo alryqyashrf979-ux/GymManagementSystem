@@ -186,5 +186,43 @@ namespace DataAccessLayer
             return false;
         }
 
+        static public bool FindBySubscriptionID(int SubscriptionID, ref int RefundID, ref double RefundAmount, ref byte RefundMethod, ref DateTime RefundDate, ref int CreatedByUserID)
+        {
+            string query = " select *from Refund where SubscriptionID=@SubscriptionID; ";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@SubscriptionID", SubscriptionID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                RefundID = (int)reader["RefundID"];
+                                RefundAmount = Convert.ToDouble((reader)["RefundAmount"]);
+                                RefundMethod = Convert.ToByte(reader["RefundMethod"]);
+                                RefundDate = (DateTime)reader["PaymentDate"];
+                                CreatedByUserID = (int)reader["CreatedByUserID"];
+                                return true;
+                            }
+
+
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
+        }
+
     }
 }
