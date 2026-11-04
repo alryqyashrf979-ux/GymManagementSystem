@@ -36,7 +36,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcPayment = new System.Windows.Forms.TabControl();
             this.tpMemberInfo = new System.Windows.Forms.TabPage();
-            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
@@ -71,7 +70,7 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1708, 37);
+            this.panel4.Size = new System.Drawing.Size(1708, 46);
             this.panel4.TabIndex = 90;
             // 
             // panel1
@@ -87,7 +86,7 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(49, 5);
+            this.lblTitle2.Location = new System.Drawing.Point(49, 2);
             this.lblTitle2.Name = "lblTitle2";
             this.lblTitle2.Size = new System.Drawing.Size(210, 26);
             this.lblTitle2.TabIndex = 2;
@@ -99,7 +98,7 @@
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.AddPaymentCircle;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(45, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -114,46 +113,20 @@
             this.tcPayment.Location = new System.Drawing.Point(0, 30);
             this.tcPayment.Name = "tcPayment";
             this.tcPayment.SelectedIndex = 0;
-            this.tcPayment.Size = new System.Drawing.Size(974, 586);
+            this.tcPayment.Size = new System.Drawing.Size(984, 586);
             this.tcPayment.TabIndex = 91;
             // 
             // tpMemberInfo
             // 
-            this.tpMemberInfo.Controls.Add(this.btnAddNewMember);
             this.tpMemberInfo.Controls.Add(this.ctrlMemberDetailsWithFiltering1);
             this.tpMemberInfo.Controls.Add(this.btnNext);
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMemberInfo.Size = new System.Drawing.Size(966, 560);
+            this.tpMemberInfo.Size = new System.Drawing.Size(976, 560);
             this.tpMemberInfo.TabIndex = 0;
             this.tpMemberInfo.Text = "Member Info";
             this.tpMemberInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnAddNewMember
-            // 
-            this.btnAddNewMember.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddNewMember.BorderRadius = 5;
-            this.btnAddNewMember.BorderThickness = 1;
-            this.btnAddNewMember.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewMember.Enabled = false;
-            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewMember.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewMember.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddUser;
-            this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewMember.Location = new System.Drawing.Point(759, 20);
-            this.btnAddNewMember.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(62, 29);
-            this.btnAddNewMember.TabIndex = 90;
-            this.btnAddNewMember.Click += new System.EventHandler(this.btnAddNewMember_Click);
             // 
             // ctrlMemberDetailsWithFiltering1
             // 
@@ -443,7 +416,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
         private MyTextBox txtPaymentAmount;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2Button btnBack;

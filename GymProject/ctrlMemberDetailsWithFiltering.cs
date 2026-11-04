@@ -20,7 +20,13 @@ namespace GymMangementSystem
         }
 
 
-
+        public bool EnableBtnAddNewMember
+        {
+            set
+            {
+                ctrlMemberBasicDetailsWithFilter1.EnableBtnAddNewMember = value;
+            }
+        }
         public int MemberID
         {
             get => ctrlMemberBasicDetailsWithFilter1.MemberID;

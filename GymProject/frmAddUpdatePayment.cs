@@ -39,7 +39,7 @@ namespace GymMangementSystem
             txtPaymentAmount.Text = "0";
             cmPaymentMethod.SelectedIndex = 0;
             tpPaymentInfo.Enabled = false;
-
+            ctrlMemberDetailsWithFiltering1.EnableBtnAddNewMember = false;
 
         }
         private void _LoadData()

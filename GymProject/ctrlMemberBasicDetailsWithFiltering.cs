@@ -40,6 +40,13 @@ namespace GymMangementSystem
 
         }
 
+        public bool EnableBtnAddNewMember
+        {
+            set
+            {
+                btnAddNewMember.Enabled = value;
+            }
+        }
 
         public clsMembers MemberInfo
         {
