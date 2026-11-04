@@ -62,15 +62,14 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.lblTitle2);
             this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1708, 46);
+            this.panel4.Size = new System.Drawing.Size(978, 46);
             this.panel4.TabIndex = 90;
             // 
             // panel1
@@ -86,7 +85,7 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(49, 2);
+            this.lblTitle2.Location = new System.Drawing.Point(49, 7);
             this.lblTitle2.Name = "lblTitle2";
             this.lblTitle2.Size = new System.Drawing.Size(210, 26);
             this.lblTitle2.TabIndex = 2;
@@ -110,10 +109,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tcPayment.Controls.Add(this.tpMemberInfo);
             this.tcPayment.Controls.Add(this.tpPaymentInfo);
-            this.tcPayment.Location = new System.Drawing.Point(0, 30);
+            this.tcPayment.Location = new System.Drawing.Point(0, 42);
             this.tcPayment.Name = "tcPayment";
             this.tcPayment.SelectedIndex = 0;
-            this.tcPayment.Size = new System.Drawing.Size(984, 586);
+            this.tcPayment.Size = new System.Drawing.Size(984, 577);
             this.tcPayment.TabIndex = 91;
             // 
             // tpMemberInfo
@@ -123,7 +122,7 @@
             this.tpMemberInfo.Location = new System.Drawing.Point(4, 22);
             this.tpMemberInfo.Name = "tpMemberInfo";
             this.tpMemberInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMemberInfo.Size = new System.Drawing.Size(976, 560);
+            this.tpMemberInfo.Size = new System.Drawing.Size(976, 551);
             this.tpMemberInfo.TabIndex = 0;
             this.tpMemberInfo.Text = "Member Info";
             this.tpMemberInfo.UseVisualStyleBackColor = true;
@@ -157,7 +156,7 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnNext.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNext.Location = new System.Drawing.Point(823, 516);
+            this.btnNext.Location = new System.Drawing.Point(823, 512);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(135, 35);
@@ -178,7 +177,7 @@
             this.tpPaymentInfo.Location = new System.Drawing.Point(4, 22);
             this.tpPaymentInfo.Name = "tpPaymentInfo";
             this.tpPaymentInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPaymentInfo.Size = new System.Drawing.Size(966, 560);
+            this.tpPaymentInfo.Size = new System.Drawing.Size(976, 560);
             this.tpPaymentInfo.TabIndex = 1;
             this.tpPaymentInfo.Text = "Payment Info";
             this.tpPaymentInfo.UseVisualStyleBackColor = true;
