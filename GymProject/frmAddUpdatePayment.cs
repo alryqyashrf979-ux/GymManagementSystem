@@ -17,7 +17,6 @@ namespace GymMangementSystem
         enum enMode { ExistSubscription, NewSubscription }
         private enMode _Mode = enMode.ExistSubscription;
         private int _MemberID=-1;
-        private decimal _Value = 0;
         private int _SubscriptionID = -1;
         public frmAddUpdatePayment()
         {
@@ -139,7 +138,7 @@ namespace GymMangementSystem
             }
 
             decimal TotalRemaining = Convert.ToDecimal(ctrlPaymentDetails1.PaymentInfo?.TotalRemaining ?? ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice);
-            if (_Value > TotalRemaining)
+            if (Convert.ToDecimal(txtPaymentAmount.Text.Trim()) > TotalRemaining)
             {
                 MessageBox.Show(txtPaymentAmount, $"Payment amount cannot exceed the remaining balance.\n Remaining Balance:{TotalRemaining:N1}\nEntered Amount:{txtPaymentAmount.Text:N2}", "Invalid Payment Amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -147,11 +146,10 @@ namespace GymMangementSystem
 
            clsPayments _PaymentInfo = new clsPayments();
 
-            if (string.IsNullOrEmpty(txtPaymentAmount.Text))
-                txtPaymentAmount.Text = "0";
+          
            
             _PaymentInfo.PaymentAmount = Convert.ToDouble(txtPaymentAmount.Text);
-            _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? (int)clsPayments.enPaymentMethod.Cash : (int)clsPayments.enPaymentMethod.Card;
+            _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? clsPayments.enPaymentMethod.Cash :clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
 
@@ -189,13 +187,9 @@ namespace GymMangementSystem
         {
             e.Cancel = true;
 
-            if (!decimal.TryParse(txtPaymentAmount.Text, out _Value))
-            {
-                errorProvider1.SetError(txtPaymentAmount, "Payment amount must be valid.");
-                    return;
-            }
 
-            if (_Value <= 0)
+
+            if (txtPaymentAmount.Text =="0")
             {
                 errorProvider1.SetError(txtPaymentAmount, "Payment amount must be greater than zero.");
                 return;

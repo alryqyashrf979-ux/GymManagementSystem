@@ -117,9 +117,7 @@ namespace GymMangementSystem
 
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
-            Form frm = new frmManageRefund();
-            frm.ShowDialog();
-            _SelectbtnDashBoard();
+            
 
         }
 
