@@ -54,7 +54,6 @@
     <Compile Include="clsMembersDataAccess.cs" />
     <Compile Include="clsPaymentData.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
-    <Compile Include="clsRefundData.cs" />
     <Compile Include="clsSubscriptionCancellationData.cs" />
     <Compile Include="clsSubscriptionChangesData.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
