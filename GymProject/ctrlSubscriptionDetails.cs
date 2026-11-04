@@ -29,7 +29,7 @@ namespace GymMangementSystem
         }
 
 
-        int _MaxAllowDays = 14;
+        int _MaxStartDateDelayDays = 14;
 
         public DateTime StartDate
         {
@@ -43,12 +43,17 @@ namespace GymMangementSystem
             get => _SubscriptionInfo;
         }
 
-       
-        public bool EnableStartDate
+        private bool _EnableStartDate = false;
+        public bool EnableStartDate 
         {
-            set =>dtStartDate.Enabled = value;  
-            get => dtStartDate.Enabled; 
-        }
+            set
+            {
+                dtStartDate.Enabled = value;
+                _EnableStartDate = value;
+            }
+
+             get => dtStartDate.Enabled; 
+        } 
 
 
         public int MemberID
@@ -59,7 +64,18 @@ namespace GymMangementSystem
             }
         }
 
+        public int MaxStartDateDelayDays
+        {
+            set
+            {
+                _MaxStartDateDelayDays = value;
 
+                dtStartDate.MaxDate = DateTime.Today.AddDays(_MaxStartDateDelayDays);
+                dtStartDate.MinDate = DateTime.Today;
+                dtStartDate.Value = DateTime.Today;
+            }
+            get => _MaxStartDateDelayDays;
+        }
         public void ResetSubscriptionData()
         {
 
@@ -75,12 +91,9 @@ namespace GymMangementSystem
             lnkShowMemberInof.Enabled = false;
             lnkShowUserInfo.Enabled = false;
             lnkShowPlanDetails.Enabled = false;
+            dtStartDate.Enabled = _EnableStartDate;
 
-            dtStartDate.Enabled = false;
-
-            dtStartDate.MaxDate = DateTime.Today.AddDays(_MaxAllowDays);
-            dtStartDate.MinDate = DateTime.Today;
-            dtStartDate.Value = DateTime.Today;
+            MaxStartDateDelayDays= _MaxStartDateDelayDays;
 
 
         }
@@ -99,13 +112,11 @@ namespace GymMangementSystem
             lnkShowMemberInof.Enabled = (_SubscriptionInfo.MemberID != -1);
             lnkShowUserInfo.Enabled= (_SubscriptionInfo.createdByUserID != -1);
             lnkShowPlanDetails.Enabled=( _SubscriptionInfo.PlanID != -1);
-            dtStartDate.MaxDate = _SubscriptionInfo.RegistrationDate.AddDays(_MaxAllowDays);
+            dtStartDate.MaxDate = _SubscriptionInfo.RegistrationDate.AddDays(_MaxStartDateDelayDays);
 
-            dtStartDate.MinDate = DateTime.Now.CompareTo(_SubscriptionInfo.StartDate)<0?DateTime.Now: _SubscriptionInfo.StartDate;
+            dtStartDate.MinDate = (DateTime.Today.Date < SubscriptionInfo.StartDate.Date)?DateTime.Now: _SubscriptionInfo.StartDate;
 
             dtStartDate.Value = _SubscriptionInfo.StartDate;
-
-           
 
             dtStartDate.Enabled = EnableStartDate;
         }

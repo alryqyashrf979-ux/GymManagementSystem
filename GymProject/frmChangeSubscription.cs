@@ -97,7 +97,7 @@ namespace GymMangementSystem
 
             clsPayments LastPaymentAmount = clsPayments.FindBySubscriptionID(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID);
            
-            if(LastPaymentAmount.Status!=clsPayments.enStatus.Completed)
+            if(!clsPayments.IsPaymentStatusCompeleted(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID))
             {
                 MessageBox.Show("The member has an outstanding balance on their current subscription.\n\n please" +
                     " ensure all outstanding payments are completed before changing the subscription plan",

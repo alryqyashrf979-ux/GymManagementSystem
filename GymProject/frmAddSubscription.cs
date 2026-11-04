@@ -84,7 +84,8 @@ namespace GymMangementSystem
             lblTitle2.Text = "Add Subscription";
             ctrlSubscriptionDetails1.EnableStartDate = true;
             tpSubscriptionInfo.Enabled = false ;
-        
+
+            ctrlSubscriptionDetails1.MaxStartDateDelayDays = 14;
 
 
 

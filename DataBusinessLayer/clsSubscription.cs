@@ -74,7 +74,6 @@ namespace DataBusinessLayer
 
         private bool _AddSubscription()
         {
-            this.Status = (StartDate.Date == DateTime.Today.Date) ? enSubscriptionStatus.Active : enSubscriptionStatus.Scheduled;
 
             _SubscriptionID = clsSubscriptionsData.AddNewSubscription(this.MemberID, this.PlanID, this.StartDate, this.ExpirationDate, DateTime.Today,this.Price, (byte)this.Status, this.createdByUserID);
             return _SubscriptionID != -1;
