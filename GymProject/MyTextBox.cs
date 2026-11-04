@@ -31,7 +31,8 @@ namespace GymMangementSystem
         public enum TextType
         {
             Numeric = 1,
-            Text = 2
+            Text = 2,
+            AllowDecimalNumbers=3
         }
 
         private TextType _inputType = TextType.Text;
@@ -92,6 +93,19 @@ namespace GymMangementSystem
                 e.Handled = (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar));
             }
 
+            if(_inputType==TextType.AllowDecimalNumbers)
+            {
+
+                if(e.KeyChar=='.'&& this.Text.EndsWith("."))
+                {
+                    e.Handled=true;
+                    return;
+                }
+
+                e.Handled = (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && !char.IsControl(e.KeyChar));
+
+
+            }
 
         }
 
