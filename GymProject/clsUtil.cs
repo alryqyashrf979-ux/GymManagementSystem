@@ -26,9 +26,6 @@ namespace GymMangementSystem
         }
 
 
-
-
-
         private static bool CreateFolderIfDoesNotExists(string Path)
         {
 

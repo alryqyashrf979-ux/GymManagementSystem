@@ -120,6 +120,7 @@
             this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext.Enabled = false;
             this.btnNext.FillColor = System.Drawing.Color.Transparent;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnNext.ForeColor = System.Drawing.Color.Black;
@@ -140,7 +141,7 @@
             // 
             this.ctrlMemberBasicDetailsWithFilter1.BackColor = System.Drawing.Color.White;
             this.ctrlMemberBasicDetailsWithFilter1.EnableFiltering = true;
-            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(8, 13);
+            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(8, 15);
             this.ctrlMemberBasicDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlMemberBasicDetailsWithFilter1.Name = "ctrlMemberBasicDetailsWithFilter1";
             this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(1195, 632);
@@ -218,6 +219,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(116, 38);
             this.guna2Button1.TabIndex = 20;
             this.guna2Button1.Text = "Back";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnSave
             // 
@@ -274,6 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1239, 923);
             this.Controls.Add(this.btnSave);
@@ -282,6 +285,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmChangeSubscription";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Subscription";
             this.Load += new System.EventHandler(this.frmChangeSubscription_Load);
             this.panel4.ResumeLayout(false);

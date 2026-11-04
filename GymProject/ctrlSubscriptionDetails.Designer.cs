@@ -32,7 +32,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lkShowPlanDetails = new System.Windows.Forms.LinkLabel();
+            this.lnkShowPlanDetails = new System.Windows.Forms.LinkLabel();
             this.lnkShowUserInfo = new System.Windows.Forms.LinkLabel();
             this.lnkShowMemberInof = new System.Windows.Forms.LinkLabel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -84,7 +84,7 @@
             this.guna2Panel3.Controls.Add(this.pictureBox7);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel3.Location = new System.Drawing.Point(5, 5);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1068, 44);
             this.guna2Panel3.TabIndex = 106;
@@ -105,7 +105,7 @@
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Details;
             this.pictureBox7.Location = new System.Drawing.Point(4, -5);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(48, 51);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +117,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.lkShowPlanDetails);
+            this.guna2Panel1.Controls.Add(this.lnkShowPlanDetails);
             this.guna2Panel1.Controls.Add(this.lnkShowUserInfo);
             this.guna2Panel1.Controls.Add(this.lnkShowMemberInof);
             this.guna2Panel1.Controls.Add(this.pictureBox9);
@@ -153,22 +153,23 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1074, 334);
             this.guna2Panel1.TabIndex = 107;
             // 
-            // lkShowPlanDetails
+            // lnkShowPlanDetails
             // 
-            this.lkShowPlanDetails.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.lkShowPlanDetails.AutoSize = true;
-            this.lkShowPlanDetails.BackColor = System.Drawing.Color.Transparent;
-            this.lkShowPlanDetails.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lkShowPlanDetails.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lkShowPlanDetails.Location = new System.Drawing.Point(872, 288);
-            this.lkShowPlanDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lkShowPlanDetails.Name = "lkShowPlanDetails";
-            this.lkShowPlanDetails.Size = new System.Drawing.Size(195, 31);
-            this.lkShowPlanDetails.TabIndex = 180;
-            this.lkShowPlanDetails.TabStop = true;
-            this.lkShowPlanDetails.Text = "Show Plan Details";
-            this.lkShowPlanDetails.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lkShowPlanDetails.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkShowPlanDetails.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkShowPlanDetails.AutoSize = true;
+            this.lnkShowPlanDetails.BackColor = System.Drawing.Color.Transparent;
+            this.lnkShowPlanDetails.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowPlanDetails.Enabled = false;
+            this.lnkShowPlanDetails.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkShowPlanDetails.Location = new System.Drawing.Point(872, 288);
+            this.lnkShowPlanDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkShowPlanDetails.Name = "lnkShowPlanDetails";
+            this.lnkShowPlanDetails.Size = new System.Drawing.Size(195, 31);
+            this.lnkShowPlanDetails.TabIndex = 180;
+            this.lnkShowPlanDetails.TabStop = true;
+            this.lnkShowPlanDetails.Text = "Show Plan Details";
+            this.lnkShowPlanDetails.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowPlanDetails.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // lnkShowUserInfo
             // 
@@ -576,6 +577,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel lnkShowMemberInof;
         private System.Windows.Forms.LinkLabel lnkShowUserInfo;
-        private System.Windows.Forms.LinkLabel lkShowPlanDetails;
+        private System.Windows.Forms.LinkLabel lnkShowPlanDetails;
     }
 }

@@ -57,7 +57,7 @@ namespace GymMangementSystem
             btnNext.Enabled = true;
             btnSave.Enabled = true;
             tbChange.Enabled = true;
-
+            ctrlSubscriptionPlanDetailsWithFiltering1.LoadAvailabilityPlanNames();
 
         }
 
@@ -72,11 +72,25 @@ namespace GymMangementSystem
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+
+
+
+            if (ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice < ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Price)
+            {
+                MessageBox.Show("You cannot change to a subscription", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+
             if (MessageBox.Show("Are You Sure you want to Freeze this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
 
                 return;
             }
+
+
             int NewSubscriptionID = -1;
 
             int ChangeID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Change(clsGlobal.CurrentUserInfo.UserID, ctrlSubscriptionPlanDetailsWithFiltering1.PlanID,ref NewSubscriptionID);
@@ -89,15 +103,17 @@ namespace GymMangementSystem
                 ctrlSubscriptionPlanDetailsWithFiltering1.EnableFiltering = false;
                 ctrlSubscriptionDetails1.LoadSubscriptionDetails(NewSubscriptionID);
 
-                MessageBox.Show($"Data saved successfully with Subscription ID [{ChangeID}]", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Data saved successfully with Change Subscription ID [{ChangeID}]", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+        }
 
-
-
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            tbChangeSubscription.SelectedTab = tbChangeSubscription.TabPages["tbMemberInfo"];
 
         }
     }
