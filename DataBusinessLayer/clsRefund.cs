@@ -8,7 +8,7 @@ using DataAccessLayer;
 
 namespace DataBusinessLayer
 {
-    internal class clsRefund
+    public class clsRefund
     {
         public int RefundID { get; private set; }
         public int CreatedByUserID { set; get; }
