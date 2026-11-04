@@ -32,7 +32,7 @@ namespace GymMangementSystem
         {
             Numeric = 1,
             Text = 2,
-            AllowDecimalNumbers=3
+            DecimalNumbers=3
         }
 
         private TextType _inputType = TextType.Text;
@@ -93,7 +93,7 @@ namespace GymMangementSystem
                 e.Handled = (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar));
             }
 
-            if(_inputType==TextType.AllowDecimalNumbers)
+            if(_inputType==TextType.DecimalNumbers)
             {
 
                 if(e.KeyChar=='.'&& this.Text.EndsWith("."))

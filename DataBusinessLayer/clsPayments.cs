@@ -17,7 +17,7 @@ namespace DataBusinessLayer
         public double PaymentAmount { set; get; }
         public double ActualAmount { set; get; }
         public double TotalRemaining { set; get; }
-        public int PaymentMethod { set; get; }
+        public enPaymentMethod PaymentMethod { set; get; }
         public DateTime PaymentDate { set; get; }
         public int CreatedByUserID { set; get; }
         public enStatus Status { set; get; }
@@ -38,7 +38,7 @@ namespace DataBusinessLayer
             this.PaymentAmount = 0;
             this.ActualAmount = 0;
             this.TotalRemaining = 0;
-            this.PaymentMethod = -1;
+            this.PaymentMethod = enPaymentMethod.Cash;
             this.PaymentDate = DateTime.Now;
             this.CreatedByUserID = -1;
             this.UserInfo = new clsUsers(); 
@@ -48,7 +48,7 @@ namespace DataBusinessLayer
         }
 
         private clsPayments(int PaymentID,int SubscriptionID,double PaymentAmount,double ActualAmount,double TotalRemaining,
-            int PaymentMethod,DateTime PaymentDate,int CreatedByUserID,enStatus Status)
+            enPaymentMethod PaymentMethod,DateTime PaymentDate,int CreatedByUserID,enStatus Status)
         {
             _PaymentID = PaymentID;
             this.SubscriptionID = SubscriptionID;
@@ -73,14 +73,14 @@ namespace DataBusinessLayer
 
         private bool _AddPayment()
         {
-            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining, this.PaymentMethod, this.CreatedByUserID,(byte)this.Status);
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining,(int) this.PaymentMethod, this.CreatedByUserID,(byte)this.Status);
 
             return this._PaymentID != -1;
         }
 
         private bool _UpdatePayment()
         {
-            return clsPaymentData.UpdatePayment(this._PaymentID,this.SubscriptionID,this.PaymentAmount,this.ActualAmount,this.PaymentMethod,this.CreatedByUserID);
+            return clsPaymentData.UpdatePayment(this._PaymentID,this.SubscriptionID,this.PaymentAmount,this.ActualAmount,(int) this.PaymentMethod,this.CreatedByUserID);
         }
 
         public bool Save()
@@ -121,7 +121,7 @@ namespace DataBusinessLayer
             bool IsFound = clsPaymentData.Find(PaymentID, ref SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
 
             if (IsFound)
-                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining,(enPaymentMethod) PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
             else
                 return null;
         }
@@ -139,7 +139,7 @@ namespace DataBusinessLayer
             bool IsFound = clsPaymentData.Find(ref PaymentID,  SubscriptionID, ref PaymentAmount, ref ActualAmount, ref TotalRemaining, ref PaymentMethod, ref PaymentDate, ref CreatedByUserID,ref Status);
 
             if (IsFound)
-                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining, PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
+                return new clsPayments(PaymentID, SubscriptionID, PaymentAmount, ActualAmount, TotalRemaining,(enPaymentMethod) PaymentMethod, PaymentDate, CreatedByUserID,(enStatus)Status);
             else
                 return null;
         }
@@ -168,7 +168,7 @@ namespace DataBusinessLayer
 
         public string SelectPaymentMethod()
         {
-            switch ((enPaymentMethod)PaymentMethod)
+            switch (PaymentMethod)
             {
                 case enPaymentMethod.Cash:
                     return "Cash";
