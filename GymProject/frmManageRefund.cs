@@ -29,5 +29,11 @@ namespace GymMangementSystem
         {
             _RefreshData();
         }
+
+        private void btnAddNewRefund_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateRefund();
+            frm.ShowDialog();
+        }
     }
 }
