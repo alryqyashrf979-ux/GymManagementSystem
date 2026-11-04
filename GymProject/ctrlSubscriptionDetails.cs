@@ -74,7 +74,7 @@ namespace GymMangementSystem
             lblRegistration.Text = "[yyyy/mm/dd]";
             lnkShowMemberInof.Enabled = false;
             lnkShowUserInfo.Enabled = false;
-            lkShowPlanDetails.Enabled = false;
+            lnkShowPlanDetails.Enabled = false;
 
             dtStartDate.Enabled = false;
 
@@ -98,7 +98,7 @@ namespace GymMangementSystem
             lblStatus.Text = _SubscriptionInfo.StatusString;
             lnkShowMemberInof.Enabled = (_SubscriptionInfo.MemberID != -1);
             lnkShowUserInfo.Enabled= (_SubscriptionInfo.createdByUserID != -1);
-
+            lnkShowPlanDetails.Enabled=( _SubscriptionInfo.PlanID != -1);
             dtStartDate.MaxDate = _SubscriptionInfo.RegistrationDate.AddDays(_MaxAllowDays);
 
             dtStartDate.MinDate = DateTime.Now.CompareTo(_SubscriptionInfo.StartDate)<0?DateTime.Now: _SubscriptionInfo.StartDate;
