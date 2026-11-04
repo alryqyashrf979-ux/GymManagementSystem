@@ -113,8 +113,9 @@ namespace DataBusinessLayer
 
 
 
-        public bool AddSubscription(DateTime StartDate,int MemberID,int PlanID,int createdByUserID)
+        private bool _SetValues(DateTime StartDate, int MemberID, int PlanID, int createdByUserID)
         {
+
 
             clsSubscriptionPlans _Plan = clsSubscriptionPlans.Find(PlanID);
 
@@ -129,6 +130,16 @@ namespace DataBusinessLayer
             this.Price = _Plan.PlanPrice;
             this.createdByUserID = createdByUserID;
             this.ExpirationDate = this.StartDate.AddDays(_Plan.Duration);
+
+            return true;
+        }
+
+
+        public bool AddSubscription(DateTime StartDate,int MemberID,int PlanID,int createdByUserID)
+        {
+
+            if (!_SetValues( StartDate, MemberID, PlanID, createdByUserID))
+                return false;
 
             return this.Save();
 
@@ -145,21 +156,19 @@ namespace DataBusinessLayer
         }
 
 
-        public int Change(int ChangedByUserID, int PlanID,ref int NewsubscriptionID)
+        public int Change(int ChangedByUserID, int ChangedToPlanID,ref int NewsubscriptionID)
         {
-
-            clsSubscriptionPlans _Plan = clsSubscriptionPlans.Find(PlanID);
-
-            if (_Plan == null)
-                return -1;
-
-
 
             clsSubscription NewSubscription = new clsSubscription();
 
-            NewSubscription.PlanID = PlanID;
+            if (!NewSubscription._SetValues(this.StartDate, this.MemberID, ChangedToPlanID, ChangedByUserID))
+                return -1;
 
-            
+            NewSubscription.Price = (NewSubscription.Price - this.Price);
+
+            if (!NewSubscription.Save())
+                return -1;
+
 
             clsSubscriptionChanges Change = new clsSubscriptionChanges();
 
