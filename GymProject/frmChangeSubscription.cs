@@ -54,6 +54,11 @@ namespace GymMangementSystem
                 return;
             }
 
+
+
+
+
+
             btnNext.Enabled = true;
             btnSave.Enabled = true;
             tbChange.Enabled = true;
@@ -77,7 +82,7 @@ namespace GymMangementSystem
 
             if (ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice < ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Price)
             {
-                MessageBox.Show("You cannot change to a subscription", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You cannot change to a subscription plan with a lower price than your current plan", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -88,6 +93,17 @@ namespace GymMangementSystem
             {
 
                 return;
+            }
+
+            clsPayments LastPaymentAmount = clsPayments.FindBySubscriptionID(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID);
+           
+            if(LastPaymentAmount.Status!=clsPayments.enStatus.Completed)
+            {
+                MessageBox.Show("The member has an outstanding balance on their current subscription.\n\n please" +
+                    " ensure all outstanding payments are completed before changing the subscription plan",
+                    "Cannot Change Subscription Plan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
             }
 
 

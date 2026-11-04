@@ -148,10 +148,18 @@ namespace DataBusinessLayer
         public int Change(int ChangedByUserID, int PlanID,ref int NewsubscriptionID)
         {
 
+            clsSubscriptionPlans _Plan = clsSubscriptionPlans.Find(PlanID);
+
+            if (_Plan == null)
+                return -1;
+
+
+
             clsSubscription NewSubscription = new clsSubscription();
 
-            if (!NewSubscription.AddSubscription(this.StartDate, this.MemberID, PlanID, ChangedByUserID))
-                return -1;
+            NewSubscription.PlanID = PlanID;
+
+            
 
             clsSubscriptionChanges Change = new clsSubscriptionChanges();
 
