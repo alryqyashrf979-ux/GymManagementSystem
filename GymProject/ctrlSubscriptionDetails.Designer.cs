@@ -368,7 +368,7 @@
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(219, 32);
             this.dtStartDate.TabIndex = 172;
-            this.dtStartDate.Value = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtStartDate.Value = new System.DateTime(2008, 5, 20, 0, 0, 0, 0);
             // 
             // label4
             // 

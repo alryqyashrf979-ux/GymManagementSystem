@@ -114,7 +114,7 @@ namespace GymMangementSystem
             lnkShowPlanDetails.Enabled=( _SubscriptionInfo.PlanID != -1);
             dtStartDate.MaxDate = _SubscriptionInfo.RegistrationDate.AddDays(_MaxStartDateDelayDays);
 
-            dtStartDate.MinDate = (DateTime.Today.Date < SubscriptionInfo.StartDate.Date)?DateTime.Now: _SubscriptionInfo.StartDate;
+            dtStartDate.MinDate = (DateTime.Today.Date < SubscriptionInfo.StartDate.Date)?DateTime.Today: _SubscriptionInfo.StartDate;
 
             dtStartDate.Value = _SubscriptionInfo.StartDate;
 
