@@ -37,7 +37,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,double TotalRemaining,int PaymentMethod, int CreatedByUserID,byte Status)
+        static public int AddPayment(int SubscriptionID, double PaymentAmount, double ActualAmount,double TotalRemaining,byte PaymentMethod, int CreatedByUserID,byte Status)
         {
             string query = " INSERT INTO [dbo].[Payments]" +
                 " ([SubscriptionID],[PaymentAmount],[ActualAmount],[TotalRemaining],[PaymentMethod],[PaymentDate],[CreatedByUserID],[Status])" +
@@ -73,7 +73,7 @@ namespace DataAccessLayer
             return -1;
         }
     
-        static public bool UpdatePayment(int PaymentID,int SubscriptionID, double PaymentAmount, double ActualAmount, int PaymentMethod, int CreatedByUserID)
+        static public bool UpdatePayment(int PaymentID,int SubscriptionID, double PaymentAmount, double ActualAmount, byte PaymentMethod, int CreatedByUserID)
         {
             string query = "UPDATE [dbo].[Payments] SET " +
                 "[SubscriptionID] = @SubscriptionID," +
@@ -135,7 +135,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool Find(int PaymentID,ref int SubscriptionID,ref double PaymentAmount,ref double ActualAmount,ref double TotalRemaining, ref int PaymentMethod,ref DateTime PaymentDate,ref int CreatedByUserID,ref byte Status)
+        static public bool Find(int PaymentID,ref int SubscriptionID,ref double PaymentAmount,ref double ActualAmount,ref double TotalRemaining, ref byte PaymentMethod,ref DateTime PaymentDate,ref int CreatedByUserID,ref byte Status)
         {
             string query = " select *from Payments where PaymentID=@PaymentID; ";
 
@@ -156,7 +156,7 @@ namespace DataAccessLayer
                             PaymentAmount =Convert.ToDouble((reader)["PaymentAmount"]);
                             ActualAmount = Convert.ToDouble((reader)["ActualAmount"]);
                             TotalRemaining = Convert.ToDouble((reader)["TotalRemaining"]);
-                            PaymentMethod = (int)reader["PaymentMethod"];
+                                PaymentMethod = Convert.ToByte(reader["PaymentMethod"]);
                             PaymentDate = (DateTime)reader["PaymentDate"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
                                 Status = Convert.ToByte(reader["Status"]);
@@ -176,7 +176,7 @@ namespace DataAccessLayer
             return false;
         }
        //added by aim
-        static public bool Find(ref int PaymentID,  int SubscriptionID, ref double PaymentAmount, ref double ActualAmount, ref double TotalRemaining, ref int PaymentMethod, ref DateTime PaymentDate, ref int CreatedByUserID, ref byte Status)
+        static public bool Find(ref int PaymentID,  int SubscriptionID, ref double PaymentAmount, ref double ActualAmount, ref double TotalRemaining, ref byte PaymentMethod, ref DateTime PaymentDate, ref int CreatedByUserID, ref byte Status)
         {
             string query = @"select top 1 * from Payments where SubscriptionID=@SubscriptionID order by PaymentDate desc;";
 
@@ -198,7 +198,8 @@ namespace DataAccessLayer
                                 PaymentAmount = Convert.ToDouble((reader)["PaymentAmount"]);
                                 ActualAmount = Convert.ToDouble((reader)["ActualAmount"]);
                                 TotalRemaining = Convert.ToDouble((reader)["TotalRemaining"]);
-                                PaymentMethod = (int)reader["PaymentMethod"];
+                                PaymentMethod = Convert.ToByte(reader["PaymentMethod"]);
+
                                 PaymentDate = (DateTime)reader["PaymentDate"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
                                 Status = Convert.ToByte(reader["Status"]);

@@ -73,14 +73,14 @@ namespace DataBusinessLayer
 
         private bool _AddPayment()
         {
-            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining,(int) this.PaymentMethod, this.CreatedByUserID,(byte)this.Status);
+            this._PaymentID = clsPaymentData.AddPayment(this.SubscriptionID, this.PaymentAmount, this.ActualAmount,this.TotalRemaining,(byte) this.PaymentMethod, this.CreatedByUserID,(byte)this.Status);
 
             return this._PaymentID != -1;
         }
 
         private bool _UpdatePayment()
         {
-            return clsPaymentData.UpdatePayment(this._PaymentID,this.SubscriptionID,this.PaymentAmount,this.ActualAmount,(int) this.PaymentMethod,this.CreatedByUserID);
+            return clsPaymentData.UpdatePayment(this._PaymentID,this.SubscriptionID,this.PaymentAmount,this.ActualAmount,(byte) this.PaymentMethod,this.CreatedByUserID);
         }
 
         public bool Save()
@@ -109,8 +109,8 @@ namespace DataBusinessLayer
         public bool ExecutePayment(double PreviousRenaiming)
         {
                 this.TotalRemaining = this.ActualAmount - (this.PaymentAmount + PreviousRenaiming);
-
-                return this.Save();
+            this.Status=(TotalRemaining==0)? enStatus.Completed: enStatus.Pending;
+            return this.Save();
 
         }
 
@@ -120,8 +120,8 @@ namespace DataBusinessLayer
         }
         static public clsPayments FindByPaymentID(int PaymentID)
         {
-            
-           int SubscriptionID = -1, PaymentMethod = -1, CreatedByUserID = -1;
+
+            int SubscriptionID = -1;byte PaymentMethod = 0;int CreatedByUserID = -1;
 
           double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
             byte Status = 0;
@@ -138,8 +138,8 @@ namespace DataBusinessLayer
         //added by aim
         static public clsPayments FindBySubscriptionID(int SubscriptionID)
         {
-            
-           int PaymentID = -1, PaymentMethod = -1, CreatedByUserID = -1;
+
+            int PaymentID = -1;byte PaymentMethod = 0;int CreatedByUserID = -1;
 
           double  PaymentAmount = 0, ActualAmount = 0, TotalRemaining = 0;
             byte Status = 0;
