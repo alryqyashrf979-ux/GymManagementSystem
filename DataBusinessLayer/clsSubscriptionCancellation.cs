@@ -126,5 +126,19 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        static public (double,double) RefundFees(clsMembers MemberInfo,int ElapsedDays)
+        {
+            double TotalRemaining = clsPayments.FindBySubscriptionID(MemberInfo.LastSubscriptionID).TotalRemaining;
+            
+            int duration =MemberInfo.LastSubscriptionInfo.PlanInfo.Duration;
+            double PriceOfSubscription = MemberInfo.LastSubscriptionInfo.Price;
+        
+            double DailyFee = PriceOfSubscription / duration;
+            double Rest =PriceOfSubscription- (DailyFee * ElapsedDays);
+            double RefundFee=Rest-TotalRemaining;
+            return (Math.Floor(RefundFee),(Math.Floor(DailyFee * ElapsedDays)));
+                     //First item of tuple is a Refund and second item is how much price of elapsedDays
+        }
+
     }
 }
