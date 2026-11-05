@@ -95,10 +95,9 @@
             this.ctrlSubscriptionDetails1.EnableStartDate = true;
             this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(0, 44);
             this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ctrlSubscriptionDetails1.MaxStartDateDelayDays = 14;
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
             this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1084, 338);
-            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2026, 11, 5, 0, 0, 0, 0);
+            this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2026, 11, 6, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 0;
             this.ctrlSubscriptionDetails1.Load += new System.EventHandler(this.ctrlSubscriptionDetails1_Load);
             // 
@@ -135,7 +134,6 @@
             this.ctrlSubscriptionDetails2.EnableStartDate = false;
             this.ctrlSubscriptionDetails2.Location = new System.Drawing.Point(2, 49);
             this.ctrlSubscriptionDetails2.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlSubscriptionDetails2.MaxStartDateDelayDays = 14;
             this.ctrlSubscriptionDetails2.Name = "ctrlSubscriptionDetails2";
             this.ctrlSubscriptionDetails2.Size = new System.Drawing.Size(1082, 345);
             this.ctrlSubscriptionDetails2.StartDate = new System.DateTime(2008, 5, 20, 0, 0, 0, 0);
