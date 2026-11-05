@@ -42,10 +42,10 @@
             // ctrlSubscriptionPlanDetails1
             // 
             this.ctrlSubscriptionPlanDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(3, 36);
-            this.ctrlSubscriptionPlanDetails1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlSubscriptionPlanDetails1.Location = new System.Drawing.Point(9, 44);
+            this.ctrlSubscriptionPlanDetails1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ctrlSubscriptionPlanDetails1.Name = "ctrlSubscriptionPlanDetails1";
-            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(672, 279);
+            this.ctrlSubscriptionPlanDetails1.Size = new System.Drawing.Size(839, 355);
             this.ctrlSubscriptionPlanDetails1.TabIndex = 0;
             // 
             // panel4
@@ -56,16 +56,18 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(676, 37);
+            this.panel4.Size = new System.Drawing.Size(852, 46);
             this.panel4.TabIndex = 92;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(47, 1);
+            this.panel1.Location = new System.Drawing.Point(63, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 34);
+            this.panel1.Size = new System.Drawing.Size(1, 42);
             this.panel1.TabIndex = 109;
             // 
             // lblTitle2
@@ -73,9 +75,10 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(49, 5);
+            this.lblTitle2.Location = new System.Drawing.Point(65, 6);
+            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(123, 26);
+            this.lblTitle2.Size = new System.Drawing.Size(150, 32);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Plan Details";
             // 
@@ -84,14 +87,16 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Details;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(60, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnClose.BorderRadius = 5;
             this.btnClose.BorderThickness = 1;
@@ -108,24 +113,25 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(524, 325);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(645, 403);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(148, 30);
+            this.btnClose.Size = new System.Drawing.Size(197, 37);
             this.btnClose.TabIndex = 93;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmShowPlanDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(676, 364);
+            this.ClientSize = new System.Drawing.Size(852, 448);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlSubscriptionPlanDetails1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmShowPlanDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plan Details";

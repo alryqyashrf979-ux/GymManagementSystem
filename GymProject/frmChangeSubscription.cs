@@ -87,17 +87,7 @@ namespace GymMangementSystem
             }
 
 
-
-
-            if (MessageBox.Show("Are You Sure you want to Freeze this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
-            {
-
-                return;
-            }
-
-            clsPayments LastPaymentAmount = clsPayments.FindBySubscriptionID(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID);
-           
-            if(!clsPayments.IsPaymentStatusCompeleted(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID))
+            if (!clsPayments.IsPaymentStatusCompeleted(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID))
             {
                 MessageBox.Show("The member has an outstanding balance on their current subscription.\n\n please" +
                     " ensure all outstanding payments are completed before changing the subscription plan",
@@ -105,6 +95,15 @@ namespace GymMangementSystem
                 return;
 
             }
+
+            if (MessageBox.Show("Are You Sure you want to Freeze this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+
+                return;
+            }
+
+           
+           
 
 
             int NewSubscriptionID = -1;

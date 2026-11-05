@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubscriPtions = new Guna.UI2.WinForms.Guna2Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -66,7 +65,6 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.btnSubscriPtions);
             this.guna2Panel1.Controls.Add(this.btnManageEmployees);
@@ -88,32 +86,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(269, 922);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.RefundWhite;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(55, 39);
-            this.guna2Button2.Location = new System.Drawing.Point(-13, 756);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(265, 62);
-            this.guna2Button2.TabIndex = 17;
-            this.guna2Button2.Text = "Manage Refund";
-            this.guna2Button2.TextOffset = new System.Drawing.Point(-6, 0);
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
-            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
@@ -129,15 +101,15 @@
             this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.guna2Button1.Image = global::GymMangementSystem.Properties.Resources.ClassRegesterationWhite;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(-8, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(65, 39);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 640);
+            this.guna2Button1.ImageOffset = new System.Drawing.Point(-28, 0);
+            this.guna2Button1.ImageSize = new System.Drawing.Size(60, 55);
+            this.guna2Button1.Location = new System.Drawing.Point(-6, 640);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(200, 62);
+            this.guna2Button1.Size = new System.Drawing.Size(255, 62);
             this.guna2Button1.TabIndex = 16;
             this.guna2Button1.Text = " Classes";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(-8, 0);
+            this.guna2Button1.TextOffset = new System.Drawing.Point(-18, 0);
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnSubscriPtions
@@ -156,15 +128,15 @@
             this.btnSubscriPtions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnSubscriPtions.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnSubscriPtions.Image = global::GymMangementSystem.Properties.Resources.Subscriptions;
-            this.btnSubscriPtions.ImageOffset = new System.Drawing.Point(-12, 0);
+            this.btnSubscriPtions.ImageOffset = new System.Drawing.Point(-15, 0);
             this.btnSubscriPtions.ImageSize = new System.Drawing.Size(43, 34);
             this.btnSubscriPtions.Location = new System.Drawing.Point(3, 454);
             this.btnSubscriPtions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubscriPtions.Name = "btnSubscriPtions";
-            this.btnSubscriPtions.Size = new System.Drawing.Size(244, 62);
+            this.btnSubscriPtions.Size = new System.Drawing.Size(255, 62);
             this.btnSubscriPtions.TabIndex = 15;
             this.btnSubscriPtions.Text = "Subscriptioins";
-            this.btnSubscriPtions.TextOffset = new System.Drawing.Point(-3, 0);
+            this.btnSubscriPtions.TextOffset = new System.Drawing.Point(-5, 0);
             this.btnSubscriPtions.Click += new System.EventHandler(this.btnSubscriPtions_Click);
             // 
             // contextMenuStrip1
@@ -173,7 +145,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageSubscriptionsToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(323, 86);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(323, 58);
             // 
             // manageSubscriptionsToolStripMenuItem
             // 
@@ -241,12 +213,12 @@
             this.btnManageEmployees.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageEmployees.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageEmployees.Image = global::GymMangementSystem.Properties.Resources.Manage_employees;
-            this.btnManageEmployees.ImageOffset = new System.Drawing.Point(-1, 0);
+            this.btnManageEmployees.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnManageEmployees.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManageEmployees.Location = new System.Drawing.Point(0, 811);
+            this.btnManageEmployees.Location = new System.Drawing.Point(-3, 764);
             this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageEmployees.Name = "btnManageEmployees";
-            this.btnManageEmployees.Size = new System.Drawing.Size(265, 62);
+            this.btnManageEmployees.Size = new System.Drawing.Size(261, 62);
             this.btnManageEmployees.TabIndex = 14;
             this.btnManageEmployees.Text = "Manage Employees";
             this.btnManageEmployees.TextOffset = new System.Drawing.Point(-4, 0);
@@ -268,10 +240,10 @@
             this.btnMangePayment.Image = global::GymMangementSystem.Properties.Resources.manage_payments;
             this.btnMangePayment.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnMangePayment.ImageSize = new System.Drawing.Size(55, 39);
-            this.btnMangePayment.Location = new System.Drawing.Point(3, 695);
+            this.btnMangePayment.Location = new System.Drawing.Point(-3, 698);
             this.btnMangePayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMangePayment.Name = "btnMangePayment";
-            this.btnMangePayment.Size = new System.Drawing.Size(265, 62);
+            this.btnMangePayment.Size = new System.Drawing.Size(254, 62);
             this.btnMangePayment.TabIndex = 13;
             this.btnMangePayment.Text = "Manage Payments";
             this.btnMangePayment.TextOffset = new System.Drawing.Point(-6, 0);
@@ -292,15 +264,15 @@
             this.btnManageClasses.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageClasses.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageClasses.Image = global::GymMangementSystem.Properties.Resources.manage_classes;
-            this.btnManageClasses.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btnManageClasses.ImageOffset = new System.Drawing.Point(-11, 0);
             this.btnManageClasses.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManageClasses.Location = new System.Drawing.Point(3, 574);
+            this.btnManageClasses.Location = new System.Drawing.Point(-3, 574);
             this.btnManageClasses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageClasses.Name = "btnManageClasses";
-            this.btnManageClasses.Size = new System.Drawing.Size(267, 62);
+            this.btnManageClasses.Size = new System.Drawing.Size(265, 62);
             this.btnManageClasses.TabIndex = 12;
             this.btnManageClasses.Text = "Manage Classes";
-            this.btnManageClasses.TextOffset = new System.Drawing.Point(-8, 0);
+            this.btnManageClasses.TextOffset = new System.Drawing.Point(-10, 0);
             this.btnManageClasses.Click += new System.EventHandler(this.btnManageClasses_Click);
             // 
             // btnManageTrainers
@@ -318,9 +290,9 @@
             this.btnManageTrainers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageTrainers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageTrainers.Image = global::GymMangementSystem.Properties.Resources.manageTrainers;
-            this.btnManageTrainers.ImageOffset = new System.Drawing.Point(-6, 0);
+            this.btnManageTrainers.ImageOffset = new System.Drawing.Point(-8, 0);
             this.btnManageTrainers.ImageSize = new System.Drawing.Size(65, 39);
-            this.btnManageTrainers.Location = new System.Drawing.Point(3, 508);
+            this.btnManageTrainers.Location = new System.Drawing.Point(-3, 509);
             this.btnManageTrainers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageTrainers.Name = "btnManageTrainers";
             this.btnManageTrainers.Size = new System.Drawing.Size(261, 62);
@@ -343,7 +315,7 @@
             this.btnManageMember.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageMember.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageMember.Image = global::GymMangementSystem.Properties.Resources.manageMembers;
-            this.btnManageMember.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnManageMember.ImageOffset = new System.Drawing.Point(-6, 0);
             this.btnManageMember.ImageSize = new System.Drawing.Size(69, 39);
             this.btnManageMember.Location = new System.Drawing.Point(0, 396);
             this.btnManageMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -351,7 +323,7 @@
             this.btnManageMember.Size = new System.Drawing.Size(260, 62);
             this.btnManageMember.TabIndex = 10;
             this.btnManageMember.Text = "Manage Members";
-            this.btnManageMember.TextOffset = new System.Drawing.Point(-7, 0);
+            this.btnManageMember.TextOffset = new System.Drawing.Point(-12, 0);
             this.btnManageMember.Click += new System.EventHandler(this.btnManageMember_Click);
             // 
             // btnManageUser
@@ -369,15 +341,15 @@
             this.btnManageUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManageUser.Image = global::GymMangementSystem.Properties.Resources.manageUsers;
-            this.btnManageUser.ImageOffset = new System.Drawing.Point(-10, 0);
+            this.btnManageUser.ImageOffset = new System.Drawing.Point(-15, 0);
             this.btnManageUser.ImageSize = new System.Drawing.Size(80, 39);
             this.btnManageUser.Location = new System.Drawing.Point(0, 334);
             this.btnManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageUser.Name = "btnManageUser";
-            this.btnManageUser.Size = new System.Drawing.Size(260, 62);
+            this.btnManageUser.Size = new System.Drawing.Size(258, 62);
             this.btnManageUser.TabIndex = 9;
             this.btnManageUser.Text = "Manage Users";
-            this.btnManageUser.TextOffset = new System.Drawing.Point(-15, 0);
+            this.btnManageUser.TextOffset = new System.Drawing.Point(-19, 0);
             this.btnManageUser.Click += new System.EventHandler(this.btnManageUser_Click);
             // 
             // btnManagePeople
@@ -395,15 +367,15 @@
             this.btnManagePeople.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManagePeople.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManagePeople.Image = global::GymMangementSystem.Properties.Resources.managepeople;
-            this.btnManagePeople.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btnManagePeople.ImageOffset = new System.Drawing.Point(-13, 0);
             this.btnManagePeople.ImageSize = new System.Drawing.Size(65, 39);
             this.btnManagePeople.Location = new System.Drawing.Point(5, 267);
             this.btnManagePeople.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManagePeople.Name = "btnManagePeople";
-            this.btnManagePeople.Size = new System.Drawing.Size(244, 62);
+            this.btnManagePeople.Size = new System.Drawing.Size(253, 62);
             this.btnManagePeople.TabIndex = 8;
             this.btnManagePeople.Text = "Manage People";
-            this.btnManagePeople.TextOffset = new System.Drawing.Point(-6, 0);
+            this.btnManagePeople.TextOffset = new System.Drawing.Point(-13, 0);
             this.btnManagePeople.Click += new System.EventHandler(this.btnManagePeople_Click);
             // 
             // btnDashboard
@@ -422,7 +394,7 @@
             this.btnDashboard.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnDashboard.Image = global::GymMangementSystem.Properties.Resources.file_000000009be4824391a90a2907bdb04d;
-            this.btnDashboard.ImageOffset = new System.Drawing.Point(-18, 0);
+            this.btnDashboard.ImageOffset = new System.Drawing.Point(-19, 0);
             this.btnDashboard.ImageSize = new System.Drawing.Size(75, 39);
             this.btnDashboard.Location = new System.Drawing.Point(5, 197);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -430,7 +402,7 @@
             this.btnDashboard.Size = new System.Drawing.Size(244, 62);
             this.btnDashboard.TabIndex = 7;
             this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextOffset = new System.Drawing.Point(-13, 0);
+            this.btnDashboard.TextOffset = new System.Drawing.Point(-18, 0);
             // 
             // label1
             // 
@@ -486,7 +458,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.guna2Panel3.Location = new System.Drawing.Point(269, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1558, 79);
             this.guna2Panel3.TabIndex = 1;
@@ -561,7 +533,7 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1827, 922);
             this.panel1.TabIndex = 9;
@@ -625,6 +597,5 @@
         private System.Windows.Forms.ToolStripMenuItem freezeSubscriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeSubscriptionToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

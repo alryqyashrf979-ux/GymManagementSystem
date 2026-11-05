@@ -36,20 +36,20 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tcPayment = new System.Windows.Forms.TabControl();
             this.tpMemberInfo = new System.Windows.Forms.TabPage();
-            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tpPaymentInfo = new System.Windows.Forms.TabPage();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPaymentAmount = new GymMangementSystem.MyTextBox();
             this.cmPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlMemberDetailsWithFiltering1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
+            this.txtPaymentAmount = new GymMangementSystem.MyTextBox();
+            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tcPayment.SuspendLayout();
@@ -133,17 +133,6 @@
             this.tpMemberInfo.Text = "Member Info";
             this.tpMemberInfo.UseVisualStyleBackColor = true;
             // 
-            // ctrlMemberDetailsWithFiltering1
-            // 
-            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
-            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(6, 6);
-            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
-            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1210, 634);
-            this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
-            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
-            // 
             // btnNext
             // 
             this.btnNext.BorderColor = System.Drawing.Color.Gainsboro;
@@ -173,13 +162,13 @@
             // tpPaymentInfo
             // 
             this.tpPaymentInfo.Controls.Add(this.btnBack);
-            this.tpPaymentInfo.Controls.Add(this.txtPaymentAmount);
             this.tpPaymentInfo.Controls.Add(this.cmPaymentMethod);
             this.tpPaymentInfo.Controls.Add(this.label2);
             this.tpPaymentInfo.Controls.Add(this.label1);
-            this.tpPaymentInfo.Controls.Add(this.ctrlPaymentDetails1);
             this.tpPaymentInfo.Controls.Add(this.guna2CirclePictureBox1);
             this.tpPaymentInfo.Controls.Add(this.guna2CirclePictureBox6);
+            this.tpPaymentInfo.Controls.Add(this.txtPaymentAmount);
+            this.tpPaymentInfo.Controls.Add(this.ctrlPaymentDetails1);
             this.tpPaymentInfo.Location = new System.Drawing.Point(4, 25);
             this.tpPaymentInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tpPaymentInfo.Name = "tpPaymentInfo";
@@ -191,7 +180,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnBack.BorderRadius = 5;
@@ -209,38 +198,13 @@
             this.btnBack.Image = global::GymMangementSystem.Properties.Resources.Back;
             this.btnBack.ImageOffset = new System.Drawing.Point(-5, 1);
             this.btnBack.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBack.Location = new System.Drawing.Point(9, 656);
+            this.btnBack.Location = new System.Drawing.Point(8, 648);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(131, 38);
+            this.btnBack.Size = new System.Drawing.Size(156, 38);
             this.btnBack.TabIndex = 108;
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // txtPaymentAmount
-            // 
-            this.txtPaymentAmount.BorderRadius = 7;
-            this.txtPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPaymentAmount.DefaultText = "";
-            this.txtPaymentAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPaymentAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPaymentAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPaymentAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPaymentAmount.ErrorMessage = "This Field is Required";
-            this.txtPaymentAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPaymentAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPaymentAmount.ForeColor = System.Drawing.Color.Black;
-            this.txtPaymentAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPaymentAmount.InputType = GymMangementSystem.MyTextBox.TextType.DecimalNumbers;
-            this.txtPaymentAmount.IsRequired = true;
-            this.txtPaymentAmount.Location = new System.Drawing.Point(248, 19);
-            this.txtPaymentAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPaymentAmount.Name = "txtPaymentAmount";
-            this.txtPaymentAmount.PlaceholderText = "";
-            this.txtPaymentAmount.SelectedText = "";
-            this.txtPaymentAmount.Size = new System.Drawing.Size(374, 42);
-            this.txtPaymentAmount.TabIndex = 107;
-            this.txtPaymentAmount.Validating += new System.ComponentModel.CancelEventHandler(this.txtPaymentAmount_Validating);
             // 
             // cmPaymentMethod
             // 
@@ -284,18 +248,6 @@
             this.label1.Size = new System.Drawing.Size(172, 28);
             this.label1.TabIndex = 99;
             this.label1.Text = "Payment Amount :";
-            // 
-            // ctrlPaymentDetails1
-            // 
-            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(657, 6);
-            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(5);
-            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(545, 679);
-            this.ctrlPaymentDetails1.SubscriptionID = 0;
-            this.ctrlPaymentDetails1.TabIndex = 98;
             // 
             // guna2CirclePictureBox1
             // 
@@ -382,10 +334,59 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // ctrlMemberDetailsWithFiltering1
+            // 
+            this.ctrlMemberDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberDetailsWithFiltering1.EnableFiltering = true;
+            this.ctrlMemberDetailsWithFiltering1.Location = new System.Drawing.Point(6, 6);
+            this.ctrlMemberDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlMemberDetailsWithFiltering1.Name = "ctrlMemberDetailsWithFiltering1";
+            this.ctrlMemberDetailsWithFiltering1.Size = new System.Drawing.Size(1210, 634);
+            this.ctrlMemberDetailsWithFiltering1.TabIndex = 21;
+            this.ctrlMemberDetailsWithFiltering1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberDetailsWithFiltering1_OnMemberSelected);
+            // 
+            // txtPaymentAmount
+            // 
+            this.txtPaymentAmount.BorderRadius = 7;
+            this.txtPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPaymentAmount.DefaultText = "";
+            this.txtPaymentAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPaymentAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPaymentAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPaymentAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPaymentAmount.ErrorMessage = "This Field is Required";
+            this.txtPaymentAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPaymentAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPaymentAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtPaymentAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPaymentAmount.InputType = GymMangementSystem.MyTextBox.TextType.DecimalNumbers;
+            this.txtPaymentAmount.IsRequired = true;
+            this.txtPaymentAmount.Location = new System.Drawing.Point(248, 19);
+            this.txtPaymentAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPaymentAmount.Name = "txtPaymentAmount";
+            this.txtPaymentAmount.PlaceholderText = "";
+            this.txtPaymentAmount.SelectedText = "";
+            this.txtPaymentAmount.Size = new System.Drawing.Size(374, 42);
+            this.txtPaymentAmount.TabIndex = 107;
+            this.txtPaymentAmount.Validating += new System.ComponentModel.CancelEventHandler(this.txtPaymentAmount_Validating);
+            // 
+            // ctrlPaymentDetails1
+            // 
+            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlPaymentDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(657, 6);
+            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(5);
+            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(545, 679);
+            this.ctrlPaymentDetails1.SubscriptionID = 0;
+            this.ctrlPaymentDetails1.TabIndex = 98;
+            // 
             // frmAddUpdatePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1222, 819);
             this.Controls.Add(this.btnSave);

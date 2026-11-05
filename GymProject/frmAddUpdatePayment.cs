@@ -111,8 +111,8 @@ namespace GymMangementSystem
                     tpPaymentInfo.Enabled = true;
                     tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
 
-                    ctrlPaymentDetails1.LoadPaymentBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID);
-                btnSave.Enabled = (ctrlPaymentDetails1.PaymentInfo.Status != clsPayments.enStatus.Completed);
+                ctrlPaymentDetails1.LoadPaymentBySubscriptionID(ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID);
+                btnSave.Enabled = (ctrlPaymentDetails1.PaymentInfo?.Status !=clsPayments.enStatus.Completed);
                 
                 
             }
@@ -137,8 +137,8 @@ namespace GymMangementSystem
                 return;
             }
 
-            decimal TotalRemaining = Convert.ToDecimal(ctrlPaymentDetails1.PaymentInfo?.TotalRemaining ?? ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice);
-            if (Convert.ToDecimal(txtPaymentAmount.Text.Trim()) > TotalRemaining)
+            double TotalRemaining = (ctrlPaymentDetails1.PaymentInfo?.TotalRemaining ?? ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice);
+            if (Convert.ToDouble(txtPaymentAmount.Text.Trim()) > TotalRemaining)
             {
                 MessageBox.Show(txtPaymentAmount, $"Payment amount cannot exceed the remaining balance.\n Remaining Balance:{TotalRemaining:N1}\nEntered Amount:{txtPaymentAmount.Text:N2}", "Invalid Payment Amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -152,21 +152,22 @@ namespace GymMangementSystem
             _PaymentInfo.PaymentMethod = (cmPaymentMethod.Text == "Cash") ? clsPayments.enPaymentMethod.Cash :clsPayments.enPaymentMethod.Card;
             _PaymentInfo.CreatedByUserID = clsGlobal.CurrentUserInfo.UserID;
             _PaymentInfo.ActualAmount = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionInfo.PlanInfo.PlanPrice;
-
-            double OldPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 : ctrlPaymentDetails1.PaymentInfo.ActualAmount - ctrlPaymentDetails1.PaymentInfo.TotalRemaining;
-          
-            _PaymentInfo.TotalRemaining= clsPayments.CalculteTotalRemaining(_PaymentInfo.ActualAmount, OldPaymentAmount, _PaymentInfo.PaymentAmount);
-           
-
-            _PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed : clsPayments.enStatus.Pending;
-
-
             _PaymentInfo.SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
 
 
-            if (_PaymentInfo.Save())
+            double PreviousPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 : ctrlPaymentDetails1.PaymentInfo.PaymentAmount;
+
+
+
+            //_PaymentInfo.TotalRemaining = clsPayments.CalculteTotalRemaining(_PaymentInfo.ActualAmount, OldPaymentAmount, _PaymentInfo.PaymentAmount);
+
+            //_PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed : clsPayments.enStatus.Pending;
+
+
+
+
+            if (_PaymentInfo.ExecutePayment(PreviousPaymentAmount))
             {
-                lblTitle2.Text = "Update Payment";
                 ctrlPaymentDetails1.LoadPaymentByPaymentID(_PaymentInfo.PaymentID);
                 btnSave.Enabled = false;
                 MessageBox.Show("Payment details saved successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);

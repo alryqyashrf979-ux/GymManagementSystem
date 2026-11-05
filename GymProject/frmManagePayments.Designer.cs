@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagePayments));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -72,16 +72,18 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1370, 37);
+            this.panel4.Size = new System.Drawing.Size(1827, 46);
             this.panel4.TabIndex = 111;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(44, 3);
+            this.panel1.Location = new System.Drawing.Point(59, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 32);
+            this.panel1.Size = new System.Drawing.Size(1, 39);
             this.panel1.TabIndex = 15;
             // 
             // lblTitle2
@@ -89,9 +91,10 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(51, 5);
+            this.lblTitle2.Location = new System.Drawing.Point(68, 6);
+            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(220, 26);
+            this.lblTitle2.Size = new System.Drawing.Size(275, 32);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Payment Management";
             // 
@@ -100,8 +103,9 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PaymentDetails;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -125,9 +129,10 @@
             "Date",
             "Username",
             "Status"});
-            this.cbValue.Location = new System.Drawing.Point(91, 134);
+            this.cbValue.Location = new System.Drawing.Point(121, 165);
+            this.cbValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbValue.Name = "cbValue";
-            this.cbValue.Size = new System.Drawing.Size(237, 36);
+            this.cbValue.Size = new System.Drawing.Size(315, 36);
             this.cbValue.StartIndex = 0;
             this.cbValue.TabIndex = 118;
             this.cbValue.SelectedIndexChanged += new System.EventHandler(this.cbValue_SelectedIndexChanged);
@@ -136,10 +141,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 143);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(23, 176);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 18);
+            this.label9.Size = new System.Drawing.Size(91, 22);
             this.label9.TabIndex = 117;
             this.label9.Text = "Filter By:";
             // 
@@ -156,12 +160,12 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(335, 134);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(447, 165);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search...";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(262, 37);
+            this.txtSearch.Size = new System.Drawing.Size(349, 46);
             this.txtSearch.TabIndex = 116;
             this.txtSearch.Visible = false;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -172,20 +176,20 @@
             this.dgvPayment.AllowUserToAddRows = false;
             this.dgvPayment.AllowUserToDeleteRows = false;
             this.dgvPayment.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPayment.ColumnHeadersHeight = 30;
             this.dgvPayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PaymentID,
@@ -197,29 +201,30 @@
             this.Date,
             this.Username,
             this.Status});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayment.GridColor = System.Drawing.Color.Black;
-            this.dgvPayment.Location = new System.Drawing.Point(1, 177);
+            this.dgvPayment.Location = new System.Drawing.Point(1, 218);
+            this.dgvPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayment.RowHeadersVisible = false;
             this.dgvPayment.RowHeadersWidth = 51;
-            this.dgvPayment.Size = new System.Drawing.Size(1082, 534);
+            this.dgvPayment.Size = new System.Drawing.Size(1443, 657);
             this.dgvPayment.TabIndex = 115;
             this.dgvPayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPayment.ThemeStyle.GridColor = System.Drawing.Color.Black;
@@ -311,6 +316,7 @@
             this.Status.DataPropertyName = "Status";
             this.Status.FillWeight = 103.486F;
             this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
@@ -319,9 +325,10 @@
             this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(4, 735);
+            this.guna2Separator1.Location = new System.Drawing.Point(5, 905);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(152, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(203, 12);
             this.guna2Separator1.TabIndex = 121;
             // 
             // lblRecord
@@ -329,9 +336,10 @@
             this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(99, 714);
+            this.lblRecord.Location = new System.Drawing.Point(132, 879);
+            this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(38, 20);
+            this.lblRecord.Size = new System.Drawing.Size(49, 25);
             this.lblRecord.TabIndex = 120;
             this.lblRecord.Text = "N/A";
             // 
@@ -340,9 +348,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 713);
+            this.label2.Location = new System.Drawing.Point(5, 878);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 119;
             this.label2.Text = "#Records:";
             // 
@@ -361,9 +370,10 @@
             "All",
             "Cash",
             "Card"});
-            this.cbMethod.Location = new System.Drawing.Point(334, 134);
+            this.cbMethod.Location = new System.Drawing.Point(445, 165);
+            this.cbMethod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbMethod.Name = "cbMethod";
-            this.cbMethod.Size = new System.Drawing.Size(130, 36);
+            this.cbMethod.Size = new System.Drawing.Size(172, 36);
             this.cbMethod.StartIndex = 0;
             this.cbMethod.TabIndex = 123;
             this.cbMethod.Visible = false;
@@ -380,13 +390,13 @@
             this.dtpTime.FillColor = System.Drawing.Color.White;
             this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTime.Location = new System.Drawing.Point(335, 141);
-            this.dtpTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpTime.Location = new System.Drawing.Point(447, 174);
+            this.dtpTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
-            this.dtpTime.Size = new System.Drawing.Size(156, 29);
+            this.dtpTime.Size = new System.Drawing.Size(208, 36);
             this.dtpTime.TabIndex = 124;
             this.dtpTime.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
             this.dtpTime.Visible = false;
@@ -409,9 +419,10 @@
             "Completed",
             "Refunded",
             "Partailly Refunded"});
-            this.cmStatus.Location = new System.Drawing.Point(335, 135);
+            this.cmStatus.Location = new System.Drawing.Point(447, 166);
+            this.cmStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmStatus.Name = "cmStatus";
-            this.cmStatus.Size = new System.Drawing.Size(209, 36);
+            this.cmStatus.Size = new System.Drawing.Size(277, 36);
             this.cmStatus.StartIndex = 0;
             this.cmStatus.TabIndex = 126;
             this.cmStatus.Visible = false;
@@ -419,6 +430,7 @@
             // 
             // btnAddNewPayment
             // 
+            this.btnAddNewPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddNewPayment.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnAddNewPayment.BorderRadius = 5;
             this.btnAddNewPayment.BorderThickness = 1;
@@ -433,16 +445,17 @@
             this.btnAddNewPayment.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnAddNewPayment.Image = global::GymMangementSystem.Properties.Resources.AddPyament;
             this.btnAddNewPayment.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnAddNewPayment.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewPayment.Location = new System.Drawing.Point(1302, 137);
-            this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNewPayment.ImageSize = new System.Drawing.Size(42, 50);
+            this.btnAddNewPayment.Location = new System.Drawing.Point(1736, 169);
+            this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNewPayment.Name = "btnAddNewPayment";
-            this.btnAddNewPayment.Size = new System.Drawing.Size(62, 29);
+            this.btnAddNewPayment.Size = new System.Drawing.Size(83, 36);
             this.btnAddNewPayment.TabIndex = 127;
             this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnClose.BorderRadius = 5;
             this.btnClose.BorderThickness = 1;
@@ -459,30 +472,31 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1229, 716);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(1638, 879);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(125, 30);
+            this.btnClose.Size = new System.Drawing.Size(167, 37);
             this.btnClose.TabIndex = 125;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ctrlPaymentDetails1
             // 
-            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1086, 172);
-            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlPaymentDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1448, 212);
+            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(280, 539);
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(373, 663);
+            this.ctrlPaymentDetails1.SubscriptionID = 0;
             this.ctrlPaymentDetails1.TabIndex = 122;
             // 
             // frmManagePayments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.btnAddNewPayment);
             this.Controls.Add(this.cmStatus);
             this.Controls.Add(this.btnClose);
@@ -498,6 +512,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlPaymentDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManagePayments";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManagementPayment_Load);

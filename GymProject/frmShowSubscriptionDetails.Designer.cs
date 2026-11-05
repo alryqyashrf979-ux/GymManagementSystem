@@ -47,16 +47,18 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(864, 37);
+            this.panel4.Size = new System.Drawing.Size(1084, 46);
             this.panel4.TabIndex = 91;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(47, 1);
+            this.panel1.Location = new System.Drawing.Point(63, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 34);
+            this.panel1.Size = new System.Drawing.Size(1, 42);
             this.panel1.TabIndex = 109;
             // 
             // lblTitle2
@@ -64,9 +66,10 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(49, 5);
+            this.lblTitle2.Location = new System.Drawing.Point(65, 6);
+            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(199, 26);
+            this.lblTitle2.Size = new System.Drawing.Size(245, 32);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Subscription Details";
             // 
@@ -75,8 +78,9 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Details;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(60, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -88,16 +92,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlSubscriptionDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionDetails1.EnableStartDate = true;
-            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(0, 36);
-            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(0, 44);
+            this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ctrlSubscriptionDetails1.MaxStartDateDelayDays = 14;
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
-            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(864, 272);
+            this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1084, 338);
             this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 0;
             this.ctrlSubscriptionDetails1.Load += new System.EventHandler(this.ctrlSubscriptionDetails1_Load);
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnClose.BorderRadius = 5;
             this.btnClose.BorderThickness = 1;
@@ -114,24 +120,25 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(724, 312);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(902, 390);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(134, 30);
+            this.btnClose.Size = new System.Drawing.Size(179, 37);
             this.btnClose.TabIndex = 92;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmShowSubscriptionDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(864, 348);
+            this.ClientSize = new System.Drawing.Size(1084, 431);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlSubscriptionDetails1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmShowSubscriptionDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmShowSubscriptionDetails_Load);

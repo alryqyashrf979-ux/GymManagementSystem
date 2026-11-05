@@ -104,6 +104,16 @@ namespace DataBusinessLayer
             }
             return false;
         }
+
+
+        public bool ExecutePayment(double PreviousRenaiming)
+        {
+                this.TotalRemaining = this.ActualAmount - (this.PaymentAmount + PreviousRenaiming);
+
+                return this.Save();
+
+        }
+
         static public DataTable GetAllPayments()
         {
             return clsPaymentData.GetAllPayments();
@@ -185,11 +195,6 @@ namespace DataBusinessLayer
             return ((enStatus)clsPaymentData.SelectPaymentStatusOfSubscription(SubscriptionID) == enStatus.Completed);
         }
 
-        static public double CalculteTotalRemaining(double ActualAmount,double perviousAmount,double CurrentAmount)
-        {
-         
-            return Math.Max(0, ActualAmount - (perviousAmount + CurrentAmount));// this mean choose the max one.
-         
-        }
+      
     }
 }
