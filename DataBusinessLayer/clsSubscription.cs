@@ -316,6 +316,10 @@ namespace DataBusinessLayer
 
         }
 
+        public static bool CancelSubscription(int SubscriptionID)
+        {
+            return clsSubscriptionsData.UpdateSubscriptionStatus(SubscriptionID, (byte)enSubscriptionStatus.Canceled);
 
         }
+    }
 }
