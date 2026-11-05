@@ -34,9 +34,9 @@ namespace GymMangementSystem
         public DateTime StartDate
         {
             set => dtStartDate.Value = value;
-            get=> dtStartDate.Value;
+            get => dtStartDate.Value;
         }
-    
+
 
         public clsSubscription SubscriptionInfo
         {
@@ -72,7 +72,7 @@ namespace GymMangementSystem
 
                 dtStartDate.MaxDate = DateTime.Today.AddDays(_MaxStartDateDelayDays);
                 dtStartDate.MinDate = DateTime.Today;
-                dtStartDate.Value = DateTime.Today;
+                dtStartDate.Value = DateTime.Today.AddDays(1);
             }
             get => _MaxStartDateDelayDays;
         }
@@ -97,18 +97,18 @@ namespace GymMangementSystem
 
 
         }
-
+          
         void _LoadData()
-        {
-
+        {   
+                
             lblRegistration.Text=_SubscriptionInfo.RegistrationDate.ToString();
             lblCreatedBy.Text= _SubscriptionInfo.createdByUserID.ToString();
             lblMemberID.Text= _SubscriptionInfo.MemberID.ToString();
-            lblPlanID.Text = _SubscriptionInfo.PlanID.ToString();
+            lblPlanID.Text = _SubscriptionInfo.PlanID.ToString();   
             lblPrice.Text= _SubscriptionInfo.Price.ToString();
             lblSubscriptionID.Text= _SubscriptionInfo.SubscriptionID.ToString();
             lblExpirationDate.Text= _SubscriptionInfo.ExpirationDate.ToString();
-            lblStatus.Text = _SubscriptionInfo.StatusString;
+            lblStatus.Text = _SubscriptionInfo.StatusString;  
             lnkShowMemberInof.Enabled = (_SubscriptionInfo.MemberID != -1);
             lnkShowUserInfo.Enabled= (_SubscriptionInfo.createdByUserID != -1);
             lnkShowPlanDetails.Enabled=( _SubscriptionInfo.PlanID != -1);

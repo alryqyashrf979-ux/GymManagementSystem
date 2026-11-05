@@ -21,7 +21,7 @@ namespace GymMangementSystem
 
         private void frmShowSubscriptionDetails_Load(object sender, EventArgs e)
         {
-            ctrlSubscriptionDetails1.LoadSubscriptionDetails(_SubscriptionID);
+            ctrlSubscriptionDetails2.LoadSubscriptionDetails(_SubscriptionID);
             ctrlSubscriptionDetails1.EnableStartDate = false;
         }
 

@@ -363,12 +363,12 @@
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtStartDate.Location = new System.Drawing.Point(254, 282);
             this.dtStartDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dtStartDate.MaxDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);
+            this.dtStartDate.MaxDate = new System.DateTime(2026, 12, 20, 0, 0, 0, 0);
             this.dtStartDate.MinDate = new System.DateTime(1977, 11, 6, 0, 0, 0, 0);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(219, 32);
             this.dtStartDate.TabIndex = 172;
-            this.dtStartDate.Value = new System.DateTime(2008, 5, 20, 0, 0, 0, 0);
+            this.dtStartDate.Value = new System.DateTime(2026, 11, 7, 0, 0, 0, 0);
             // 
             // label4
             // 
