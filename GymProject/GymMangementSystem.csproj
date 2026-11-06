@@ -41,6 +41,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.8, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.8\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="GymMangementSystem">
+      <HintPath>obj\Debug\GymMangementSystem.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -65,6 +68,18 @@
     </Compile>
     <Compile Include="ctrlEmergencyContact.Designer.cs">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlEmployeeDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlEmployeeDetails.Designer.cs">
+      <DependentUpon>ctrlEmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlEmployeeDetailsWithFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlEmployeeDetailsWithFiltering.Designer.cs">
+      <DependentUpon>ctrlEmployeeDetailsWithFiltering.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlMemberBasicDetails.cs">
       <SubType>UserControl</SubType>
@@ -155,6 +170,12 @@
     </Compile>
     <Compile Include="frmAddSubscription.Designer.cs">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUpdateCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateCoach.Designer.cs">
+      <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateFrozenSubscription.cs">
       <SubType>Form</SubType>
@@ -311,6 +332,12 @@
     <EmbeddedResource Include="ctrlEmergencyContact.resx">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlEmployeeDetails.resx">
+      <DependentUpon>ctrlEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlEmployeeDetailsWithFiltering.resx">
+      <DependentUpon>ctrlEmployeeDetailsWithFiltering.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemberBasicDetails.resx">
       <DependentUpon>ctrlMemberBasicDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateCancelSubscription.resx">
       <DependentUpon>frmAddUpdateCancelSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateCoach.resx">
+      <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateFrozenSubscription.resx">
       <DependentUpon>frmAddUpdateFrozenSubscription.cs</DependentUpon>
