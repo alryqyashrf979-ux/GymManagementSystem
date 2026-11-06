@@ -19,6 +19,8 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
+        public clsEmployees EmployeeInfo { get => ctrlEmployeeDetails1.EmployeeInfo; }
+
 
         public class EmployeeEventArgs : EventArgs
         {
@@ -31,6 +33,7 @@ namespace GymMangementSystem
         }
 
 
+
         public event EventHandler<EmployeeEventArgs> OnEmployeeSelected;
 
 
@@ -40,8 +43,7 @@ namespace GymMangementSystem
             OnEmployeeSelected?.Invoke(sender, Employee);
 
         }
-
-
+     
         void Find()
         {
 
@@ -52,6 +54,9 @@ namespace GymMangementSystem
             }
             else
                 ctrlEmployeeDetails1.LoadEmployeeDataByNationalNu(txtFiltering.Text.Trim());
+
+            if (ctrlEmployeeDetails1.EmployeeInfo != null)
+                SelectedEmployee(this, new EmployeeEventArgs(ctrlEmployeeDetails1.EmployeeInfo));
 
         }
 
@@ -69,7 +74,11 @@ namespace GymMangementSystem
                 txtFiltering.InputType = MyTextBox.TextType.Numeric;
             else
                 txtFiltering.InputType = MyTextBox.TextType.Text;
+
+
+
         }
+
 
         private void txtFiltering_TextChanged(object sender, EventArgs e)
         {

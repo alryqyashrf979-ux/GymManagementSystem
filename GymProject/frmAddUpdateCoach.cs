@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void ctrlEmployeeDetailsWithFiltering1_OnEmployeeSelected(object sender, ctrlEmployeeDetailsWithFiltering.EmployeeEventArgs e)
+        {
+
+        }
     }
 }

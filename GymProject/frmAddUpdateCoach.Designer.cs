@@ -31,7 +31,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.ctrlEmployeeDetailsWithFiltering1 = new GymMangementSystem.ctrlEmployeeDetailsWithFiltering();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -41,12 +40,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSpeciality = new GymMangementSystem.MyTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNote = new GymMangementSystem.MyTextBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.txtNote = new GymMangementSystem.MyTextBox();
+            this.txtSpeciality = new GymMangementSystem.MyTextBox();
+            this.ctrlEmployeeDetailsWithFiltering1 = new GymMangementSystem.ctrlEmployeeDetailsWithFiltering();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -92,14 +92,6 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
-            // 
-            // ctrlEmployeeDetailsWithFiltering1
-            // 
-            this.ctrlEmployeeDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlEmployeeDetailsWithFiltering1.Location = new System.Drawing.Point(3, 47);
-            this.ctrlEmployeeDetailsWithFiltering1.Name = "ctrlEmployeeDetailsWithFiltering1";
-            this.ctrlEmployeeDetailsWithFiltering1.Size = new System.Drawing.Size(1194, 687);
-            this.ctrlEmployeeDetailsWithFiltering1.TabIndex = 17;
             // 
             // guna2Panel1
             // 
@@ -217,37 +209,6 @@
             this.label3.TabIndex = 161;
             this.label3.Text = "Speciality :";
             // 
-            // txtSpeciality
-            // 
-            this.txtSpeciality.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtSpeciality.AutoScroll = true;
-            this.txtSpeciality.AutoSize = true;
-            this.txtSpeciality.BorderRadius = 5;
-            this.txtSpeciality.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSpeciality.DefaultText = "";
-            this.txtSpeciality.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSpeciality.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSpeciality.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSpeciality.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSpeciality.ErrorMessage = "This Field is Required";
-            this.txtSpeciality.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSpeciality.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtSpeciality.ForeColor = System.Drawing.Color.Black;
-            this.txtSpeciality.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSpeciality.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtSpeciality.IsRequired = false;
-            this.txtSpeciality.Location = new System.Drawing.Point(168, 60);
-            this.txtSpeciality.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSpeciality.Multiline = true;
-            this.txtSpeciality.Name = "txtSpeciality";
-            this.txtSpeciality.PlaceholderText = "Note";
-            this.txtSpeciality.ReadOnly = true;
-            this.txtSpeciality.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSpeciality.SelectedText = "";
-            this.txtSpeciality.Size = new System.Drawing.Size(347, 68);
-            this.txtSpeciality.TabIndex = 163;
-            this.txtSpeciality.TextOffset = new System.Drawing.Point(0, -1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -272,37 +233,6 @@
             this.label1.Size = new System.Drawing.Size(71, 27);
             this.label1.TabIndex = 167;
             this.label1.Text = "Note :";
-            // 
-            // txtNote
-            // 
-            this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNote.AutoScroll = true;
-            this.txtNote.AutoSize = true;
-            this.txtNote.BorderRadius = 5;
-            this.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNote.DefaultText = "";
-            this.txtNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNote.ErrorMessage = "This Field is Required";
-            this.txtNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNote.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtNote.ForeColor = System.Drawing.Color.Black;
-            this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtNote.IsRequired = false;
-            this.txtNote.Location = new System.Drawing.Point(793, 35);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNote.Multiline = true;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.PlaceholderText = "Note";
-            this.txtNote.ReadOnly = true;
-            this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtNote.SelectedText = "";
-            this.txtNote.Size = new System.Drawing.Size(378, 91);
-            this.txtNote.TabIndex = 169;
-            this.txtNote.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // btnSave
             // 
@@ -353,6 +283,77 @@
             this.btnClose.Size = new System.Drawing.Size(156, 37);
             this.btnClose.TabIndex = 145;
             this.btnClose.Text = "Close";
+            // 
+            // txtNote
+            // 
+            this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNote.AutoScroll = true;
+            this.txtNote.AutoSize = true;
+            this.txtNote.BorderRadius = 5;
+            this.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNote.DefaultText = "";
+            this.txtNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNote.ErrorMessage = "This Field is Required";
+            this.txtNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNote.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtNote.ForeColor = System.Drawing.Color.Black;
+            this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtNote.IsRequired = false;
+            this.txtNote.Location = new System.Drawing.Point(793, 35);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.PlaceholderText = "Note";
+            this.txtNote.ReadOnly = true;
+            this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNote.SelectedText = "";
+            this.txtNote.Size = new System.Drawing.Size(378, 91);
+            this.txtNote.TabIndex = 169;
+            this.txtNote.TextOffset = new System.Drawing.Point(0, -1);
+            // 
+            // txtSpeciality
+            // 
+            this.txtSpeciality.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSpeciality.AutoScroll = true;
+            this.txtSpeciality.AutoSize = true;
+            this.txtSpeciality.BorderRadius = 5;
+            this.txtSpeciality.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSpeciality.DefaultText = "";
+            this.txtSpeciality.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSpeciality.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSpeciality.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSpeciality.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSpeciality.ErrorMessage = "This Field is Required";
+            this.txtSpeciality.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSpeciality.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSpeciality.ForeColor = System.Drawing.Color.Black;
+            this.txtSpeciality.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSpeciality.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtSpeciality.IsRequired = false;
+            this.txtSpeciality.Location = new System.Drawing.Point(168, 60);
+            this.txtSpeciality.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSpeciality.Multiline = true;
+            this.txtSpeciality.Name = "txtSpeciality";
+            this.txtSpeciality.PlaceholderText = "Note";
+            this.txtSpeciality.ReadOnly = true;
+            this.txtSpeciality.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSpeciality.SelectedText = "";
+            this.txtSpeciality.Size = new System.Drawing.Size(347, 68);
+            this.txtSpeciality.TabIndex = 163;
+            this.txtSpeciality.TextOffset = new System.Drawing.Point(0, -1);
+            // 
+            // ctrlEmployeeDetailsWithFiltering1
+            // 
+            this.ctrlEmployeeDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
+            this.ctrlEmployeeDetailsWithFiltering1.Location = new System.Drawing.Point(3, 47);
+            this.ctrlEmployeeDetailsWithFiltering1.Name = "ctrlEmployeeDetailsWithFiltering1";
+            this.ctrlEmployeeDetailsWithFiltering1.Size = new System.Drawing.Size(1194, 687);
+            this.ctrlEmployeeDetailsWithFiltering1.TabIndex = 17;
+            this.ctrlEmployeeDetailsWithFiltering1.OnEmployeeSelected += new System.EventHandler<GymMangementSystem.ctrlEmployeeDetailsWithFiltering.EmployeeEventArgs>(this.ctrlEmployeeDetailsWithFiltering1_OnEmployeeSelected);
             // 
             // frmAddUpdateCoach
             // 
