@@ -88,5 +88,9 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        static public DataTable GetAllShiftType()
+        {
+            return clsEmployeeShiftData.GetAllEmployeeShift();
+        }
     }
 }
