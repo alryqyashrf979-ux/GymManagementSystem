@@ -23,7 +23,7 @@ namespace GymMangementSystem
 
         }
 
-        public clsEmployees _EmployeeInfo { private set; get; }
+        public clsEmployees EmployeeInfo { private set; get; }
 
 
         private void _ResetEmployeeData()
@@ -43,13 +43,13 @@ namespace GymMangementSystem
         private void _LoadData()
         {
 
-            lblEmployeeID.Text = _EmployeeInfo.EmployeeID.ToString();
-            lblHiredDate.Text = _EmployeeInfo.HiredDate.ToString();
-            d.Text = _EmployeeInfo.Salary.ToString();
-            lblShiftID.Text = _EmployeeInfo.ShiftID.ToString();
-            lblTerminationDate.Text = _EmployeeInfo?.TerminationDate.ToString() ?? "[yyyy/mm/dd]";
-            lblTitle.Text = _EmployeeInfo.Title.ToString();
-            txtNote.Text = _EmployeeInfo.Notes;
+            lblEmployeeID.Text = EmployeeInfo.EmployeeID.ToString();
+            lblHiredDate.Text = EmployeeInfo.HiredDate.ToString();
+            d.Text = EmployeeInfo.Salary.ToString();
+            lblShiftID.Text = EmployeeInfo.ShiftID.ToString();
+            lblTerminationDate.Text = EmployeeInfo?.TerminationDate.ToString() ?? "[yyyy/mm/dd]";
+            lblTitle.Text = EmployeeInfo.Title.ToString();
+            txtNote.Text = EmployeeInfo.Notes;
             lnkShowShiftInfo.Enabled = true;
         }
 
@@ -57,9 +57,9 @@ namespace GymMangementSystem
 
         public void LoadEmployeeDataByNationalNu(string NationalNu)
         {
-            _EmployeeInfo = clsEmployees.FindByNationalNu(NationalNu);
+            EmployeeInfo = clsEmployees.FindByNationalNu(NationalNu);
 
-            if (_EmployeeInfo == null)
+            if (EmployeeInfo == null)
             {
                 _ResetEmployeeData();
                 MessageBox.Show("No Employee Found with National Nu. =" + NationalNu.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -70,9 +70,9 @@ namespace GymMangementSystem
         }
         public void LoadEmployeeDataByEmployeeID(int EmployeeID)
         {
-            _EmployeeInfo = clsEmployees.FindByEmployeeID(EmployeeID);
+            EmployeeInfo = clsEmployees.FindByEmployeeID(EmployeeID);
 
-            if (_EmployeeInfo == null)
+            if (EmployeeInfo == null)
             {
                 _ResetEmployeeData();
                 MessageBox.Show("No Employee Found with Employee ID=" + EmployeeID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
