@@ -66,6 +66,12 @@
     <Compile Include="ctrlEmergencyContact.Designer.cs">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlEmployeeDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlEmployeeDetails.Designer.cs">
+      <DependentUpon>ctrlEmployeeDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlMemberBasicDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </Compile>
     <EmbeddedResource Include="ctrlEmergencyContact.resx">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlEmployeeDetails.resx">
+      <DependentUpon>ctrlEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemberBasicDetails.resx">
       <DependentUpon>ctrlMemberBasicDetails.cs</DependentUpon>
