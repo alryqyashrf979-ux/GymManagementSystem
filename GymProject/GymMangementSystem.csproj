@@ -72,6 +72,12 @@
     <Compile Include="ctrlEmployeeDetails.Designer.cs">
       <DependentUpon>ctrlEmployeeDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlEmployeeDetailsWithFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlEmployeeDetailsWithFiltering.Designer.cs">
+      <DependentUpon>ctrlEmployeeDetailsWithFiltering.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlMemberBasicDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlEmployeeDetails.resx">
       <DependentUpon>ctrlEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlEmployeeDetailsWithFiltering.resx">
+      <DependentUpon>ctrlEmployeeDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlMemberBasicDetails.resx">
       <DependentUpon>ctrlMemberBasicDetails.cs</DependentUpon>
