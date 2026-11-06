@@ -64,7 +64,46 @@ namespace DataAccessLayer
                 return -1;
             }
         }
+       public static bool IsCoach(int EmployeeID)
+        {
 
+            string query = @" select  1 as 'Found' from Coaches where EmployeeID = @EmployeeID";
+
+            try
+            {
+                
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    conn.Open();
+
+                    using (SqlCommand com = new SqlCommand(query, conn))
+                    {
+
+
+                        com.Parameters.AddWithValue("@EmployeeID", EmployeeID);
+
+                        SqlDataReader Read=com.ExecuteReader();
+
+                        return Read.HasRows;
+
+
+                    }
+
+
+                }
+
+
+
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+
+           
+
+
+        }
         static public bool UpdateCoach(int CoachID,int EmployeeID,string Speciality,string Note)
         {
             string query = " UPDATE [dbo].[Coaches] SET [EmployeeID] = @EmployeeID,[Speciality] = @Speciality,[Note] = @Note WHERE CoachID=@CoachID; ";

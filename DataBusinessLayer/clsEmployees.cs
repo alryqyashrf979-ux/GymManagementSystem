@@ -133,6 +133,12 @@ namespace DataBusinessLayer
                 return null;
         }
 
+        public bool IsCoach()
+        {
+            return clsCoaches.IsCoach(this.EmployeeID);
+        }
+
+
         static public clsEmployees FindByPersonID(int PersonID)
         {
             int EmployeeID = -1, ShiftID = -1;
@@ -148,7 +154,7 @@ namespace DataBusinessLayer
             else
                 return null;
         }
-
+      
         static public bool TerminateEmployee(int EmployeeID)
         {
             return clsEmployeesData.TerminateEmployee(EmployeeID);

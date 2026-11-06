@@ -88,6 +88,7 @@
             this.txtFiltering.SelectedText = "";
             this.txtFiltering.Size = new System.Drawing.Size(291, 35);
             this.txtFiltering.TabIndex = 90;
+            this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
             // btnAddNewEmployee
             // 
@@ -134,6 +135,7 @@
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(78, 36);
             this.btnFind.TabIndex = 88;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cmFilteringType
             // 
@@ -155,6 +157,7 @@
             this.cmFilteringType.Size = new System.Drawing.Size(249, 36);
             this.cmFilteringType.StartIndex = 0;
             this.cmFilteringType.TabIndex = 86;
+            this.cmFilteringType.SelectedIndexChanged += new System.EventHandler(this.cmFilteringType_SelectedIndexChanged);
             // 
             // label9
             // 

@@ -93,6 +93,10 @@ namespace DataAccessLayer
             }
         }
 
+
+      
+
+
         static public bool UpdateEmployee(int EmployeeID,int PersonID,string Title,float Salary,DateTime HiredDate,string Notes,bool IsActive,int ShiftID)
         {
             string query = "UPDATE [dbo].[Employees] SET" +

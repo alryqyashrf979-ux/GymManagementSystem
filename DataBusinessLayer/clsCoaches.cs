@@ -86,7 +86,7 @@ namespace DataBusinessLayer
         }
 
 
-        static public object FindByCoachID(int CoachID)
+        static public clsCoaches FindByCoachID(int CoachID)
         {
             int EmployeeID = -1;
             string Note = string.Empty, Speciality = string.Empty;
@@ -99,7 +99,13 @@ namespace DataBusinessLayer
                 return null;
         }
 
-        static public object FindByEmployeeID(int EmployeeID)
+
+        public static bool IsCoach(int EmployeeID)
+        {
+            return clsCoachData.IsCoach(EmployeeID);
+        }
+
+        static public clsCoaches FindByEmployeeID(int EmployeeID)
         {
             int CoachID = -1;
             string Note = string.Empty, Speciality = string.Empty;
