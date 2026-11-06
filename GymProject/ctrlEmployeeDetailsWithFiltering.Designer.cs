@@ -79,7 +79,7 @@
             this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtFiltering.ForeColor = System.Drawing.Color.Black;
             this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
             this.txtFiltering.IsRequired = true;
             this.txtFiltering.Location = new System.Drawing.Point(485, 18);
             this.txtFiltering.Margin = new System.Windows.Forms.Padding(5);
