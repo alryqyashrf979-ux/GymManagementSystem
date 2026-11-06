@@ -73,7 +73,10 @@ namespace DataBusinessLayer
         {
             return clsEmployeesData.UpdateEmployee(this._EmployeeID, this.PersonID, this.Title, this.Salary, this.HiredDate, this.Notes, this.IsActive, this.ShiftID);
         }
-
+        public static DataTable GetAllEmployees()
+        {
+            return clsEmployeesData.GetAllEmployees();
+        }
         static public bool DeleteEmployee(int EmployeeID)
         {
             return clsEmployeesData.DeleteEmployee(EmployeeID);
