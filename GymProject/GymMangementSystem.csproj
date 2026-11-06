@@ -57,11 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUpdateEmployee.cs">
+    <Compile Include="frmAddUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUpdateEmployee.Designer.cs">
-      <DependentUpon>AddUpdateEmployee.cs</DependentUpon>
+    <Compile Include="frmAddUpdateEmployee.Designer.cs">
+      <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
@@ -344,8 +344,8 @@
     <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddUpdateEmployee.resx">
-      <DependentUpon>AddUpdateEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddUpdateEmployee.resx">
+      <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlEmergencyContact.resx">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
