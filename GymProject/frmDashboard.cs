@@ -129,12 +129,10 @@ namespace GymMangementSystem
 
         }
 
-        private void guna2Button2_Click_2(object sender, EventArgs e)
+        private void btnManageEmployees_Click(object sender, EventArgs e)
         {
-            frmManageCoaches frm =new frmManageCoaches();
+            Form frm = new frmManageEmployees();
             frm.ShowDialog();
-            _SelectbtnDashBoard();
-
         }
     }
 }

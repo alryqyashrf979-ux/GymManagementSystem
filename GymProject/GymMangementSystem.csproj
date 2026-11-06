@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUpdateEmployee.Designer.cs">
+      <DependentUpon>AddUpdateEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
     <Compile Include="clsValidation.cs" />
@@ -338,6 +344,9 @@
     <Compile Include="uctPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>uctPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddUpdateEmployee.resx">
+      <DependentUpon>AddUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlEmergencyContact.resx">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
     </EmbeddedResource>
