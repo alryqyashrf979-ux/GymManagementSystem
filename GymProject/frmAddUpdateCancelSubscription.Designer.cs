@@ -35,6 +35,9 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCancelSubscription = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lblElapsedDaysFees = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblElapsedDays = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,12 +60,10 @@
             this.lblSubscriptionCancellationID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ctrlMemberBasicDetailsWithFilter1 = new GymMangementSystem.ctrlMemberBasicDetailsWithFilter();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.lblElapsedDaysFees = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.pnlCancelSubscription.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -70,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -80,8 +80,9 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(954, 40);
+            this.panel4.Size = new System.Drawing.Size(1206, 49);
             this.panel4.TabIndex = 15;
             // 
             // lblTitle
@@ -89,9 +90,10 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(46, 6);
+            this.lblTitle.Location = new System.Drawing.Point(61, 7);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(241, 26);
+            this.lblTitle.Size = new System.Drawing.Size(297, 32);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Add Cancel Subscription";
             // 
@@ -101,8 +103,9 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.CancelIcon;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox10.Size = new System.Drawing.Size(56, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -126,10 +129,10 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(833, 714);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(1049, 885);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(109, 31);
+            this.btnSave.Size = new System.Drawing.Size(145, 38);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -152,10 +155,10 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(699, 714);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(870, 885);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(117, 31);
+            this.btnClose.Size = new System.Drawing.Size(156, 38);
             this.btnClose.TabIndex = 23;
             this.btnClose.Text = "Close";
             // 
@@ -189,19 +192,52 @@
             this.pnlCancelSubscription.Controls.Add(this.lblSubscriptionCancellationID);
             this.pnlCancelSubscription.Controls.Add(this.label10);
             this.pnlCancelSubscription.Enabled = false;
-            this.pnlCancelSubscription.Location = new System.Drawing.Point(5, 546);
-            this.pnlCancelSubscription.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCancelSubscription.Location = new System.Drawing.Point(7, 679);
+            this.pnlCancelSubscription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCancelSubscription.Name = "pnlCancelSubscription";
-            this.pnlCancelSubscription.Size = new System.Drawing.Size(945, 162);
+            this.pnlCancelSubscription.Size = new System.Drawing.Size(1187, 199);
             this.pnlCancelSubscription.TabIndex = 22;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox8.Location = new System.Drawing.Point(247, 119);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(31, 33);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 185;
+            this.pictureBox8.TabStop = false;
+            // 
+            // lblElapsedDaysFees
+            // 
+            this.lblElapsedDaysFees.AutoSize = true;
+            this.lblElapsedDaysFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElapsedDaysFees.Location = new System.Drawing.Point(291, 124);
+            this.lblElapsedDaysFees.Name = "lblElapsedDaysFees";
+            this.lblElapsedDaysFees.Size = new System.Drawing.Size(66, 22);
+            this.lblElapsedDaysFees.TabIndex = 184;
+            this.lblElapsedDaysFees.Text = "[????]";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(16, 122);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(200, 27);
+            this.label8.TabIndex = 183;
+            this.label8.Text = "Elapsed Day/s Fees:";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox5.Location = new System.Drawing.Point(139, 67);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Location = new System.Drawing.Point(185, 82);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox5.Size = new System.Drawing.Size(31, 33);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 182;
             this.pictureBox5.TabStop = false;
@@ -210,10 +246,9 @@
             // 
             this.lblElapsedDays.AutoSize = true;
             this.lblElapsedDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElapsedDays.Location = new System.Drawing.Point(172, 71);
-            this.lblElapsedDays.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblElapsedDays.Location = new System.Drawing.Point(229, 87);
             this.lblElapsedDays.Name = "lblElapsedDays";
-            this.lblElapsedDays.Size = new System.Drawing.Size(54, 18);
+            this.lblElapsedDays.Size = new System.Drawing.Size(66, 22);
             this.lblElapsedDays.TabIndex = 181;
             this.lblElapsedDays.Text = "[????]";
             // 
@@ -222,19 +257,20 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(9, 69);
+            this.label7.Location = new System.Drawing.Point(12, 85);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 21);
+            this.label7.Size = new System.Drawing.Size(158, 27);
             this.label7.TabIndex = 180;
             this.label7.Text = "Elapsed Day/s :";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
-            this.pictureBox1.Location = new System.Drawing.Point(553, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(737, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(31, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 173;
             this.pictureBox1.TabStop = false;
@@ -243,10 +279,9 @@
             // 
             this.lblCancellationDate.AutoSize = true;
             this.lblCancellationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCancellationDate.Location = new System.Drawing.Point(586, 12);
-            this.lblCancellationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCancellationDate.Location = new System.Drawing.Point(781, 15);
             this.lblCancellationDate.Name = "lblCancellationDate";
-            this.lblCancellationDate.Size = new System.Drawing.Size(106, 18);
+            this.lblCancellationDate.Size = new System.Drawing.Size(126, 22);
             this.lblCancellationDate.TabIndex = 172;
             this.lblCancellationDate.Text = "[yyyy/mm/dd]";
             // 
@@ -255,19 +290,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(404, 9);
+            this.label4.Location = new System.Drawing.Point(539, 11);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 21);
+            this.label4.Size = new System.Drawing.Size(193, 27);
             this.label4.TabIndex = 171;
             this.label4.Text = "Cancellation Date :";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox7.Location = new System.Drawing.Point(231, 41);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Location = new System.Drawing.Point(308, 50);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox7.Size = new System.Drawing.Size(31, 33);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 170;
             this.pictureBox7.TabStop = false;
@@ -275,10 +311,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox6.Location = new System.Drawing.Point(231, 10);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Location = new System.Drawing.Point(308, 12);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox6.Size = new System.Drawing.Size(31, 33);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 169;
             this.pictureBox6.TabStop = false;
@@ -286,10 +322,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox4.Location = new System.Drawing.Point(554, 49);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(739, 60);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox4.Size = new System.Drawing.Size(31, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 167;
             this.pictureBox4.TabStop = false;
@@ -297,10 +333,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Description;
-            this.pictureBox3.Location = new System.Drawing.Point(554, 82);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(739, 101);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(39, 39);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 166;
             this.pictureBox3.TabStop = false;
@@ -319,33 +355,32 @@
             this.txtFees.Font = new System.Drawing.Font("Segoe UI Emoji", 11.2F, System.Drawing.FontStyle.Bold);
             this.txtFees.ForeColor = System.Drawing.Color.Black;
             this.txtFees.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFees.Location = new System.Drawing.Point(167, 129);
-            this.txtFees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFees.Location = new System.Drawing.Point(223, 159);
+            this.txtFees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFees.Name = "txtFees";
             this.txtFees.PlaceholderText = "Fees";
             this.txtFees.ReadOnly = true;
             this.txtFees.SelectedText = "";
-            this.txtFees.Size = new System.Drawing.Size(213, 28);
+            this.txtFees.Size = new System.Drawing.Size(284, 34);
             this.txtFees.TabIndex = 162;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 130);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(11, 160);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 18);
+            this.label6.Size = new System.Drawing.Size(159, 22);
             this.label6.TabIndex = 160;
             this.label6.Text = "Refund Amount :";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.money_32;
-            this.pictureBox2.Location = new System.Drawing.Point(139, 129);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(185, 159);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(31, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 161;
             this.pictureBox2.TabStop = false;
@@ -355,9 +390,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(386, 82);
+            this.label5.Location = new System.Drawing.Point(515, 101);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 21);
+            this.label5.Size = new System.Drawing.Size(217, 27);
             this.label5.TabIndex = 154;
             this.label5.Text = "Cancellation Reason :";
             // 
@@ -381,14 +417,14 @@
             this.txtCancellationReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCancellationReason.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtCancellationReason.IsRequired = false;
-            this.txtCancellationReason.Location = new System.Drawing.Point(589, 80);
-            this.txtCancellationReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCancellationReason.Location = new System.Drawing.Point(785, 98);
+            this.txtCancellationReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCancellationReason.Multiline = true;
             this.txtCancellationReason.Name = "txtCancellationReason";
             this.txtCancellationReason.PlaceholderText = "Cancellation Reason";
             this.txtCancellationReason.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCancellationReason.SelectedText = "";
-            this.txtCancellationReason.Size = new System.Drawing.Size(292, 67);
+            this.txtCancellationReason.Size = new System.Drawing.Size(389, 82);
             this.txtCancellationReason.TabIndex = 153;
             this.txtCancellationReason.TextOffset = new System.Drawing.Point(0, -1);
             // 
@@ -396,10 +432,9 @@
             // 
             this.lblCanceledByUser.AutoSize = true;
             this.lblCanceledByUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCanceledByUser.Location = new System.Drawing.Point(580, 52);
-            this.lblCanceledByUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCanceledByUser.Location = new System.Drawing.Point(773, 64);
             this.lblCanceledByUser.Name = "lblCanceledByUser";
-            this.lblCanceledByUser.Size = new System.Drawing.Size(54, 18);
+            this.lblCanceledByUser.Size = new System.Drawing.Size(66, 22);
             this.lblCanceledByUser.TabIndex = 146;
             this.lblCanceledByUser.Text = "[????]";
             // 
@@ -408,9 +443,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(408, 48);
+            this.label3.Location = new System.Drawing.Point(544, 59);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 21);
+            this.label3.Size = new System.Drawing.Size(188, 27);
             this.label3.TabIndex = 145;
             this.label3.Text = "Canceled By User :";
             // 
@@ -418,10 +454,9 @@
             // 
             this.lblSubscriptionID.AutoSize = true;
             this.lblSubscriptionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubscriptionID.Location = new System.Drawing.Point(257, 45);
-            this.lblSubscriptionID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubscriptionID.Location = new System.Drawing.Point(343, 55);
             this.lblSubscriptionID.Name = "lblSubscriptionID";
-            this.lblSubscriptionID.Size = new System.Drawing.Size(54, 18);
+            this.lblSubscriptionID.Size = new System.Drawing.Size(66, 22);
             this.lblSubscriptionID.TabIndex = 144;
             this.lblSubscriptionID.Text = "[????]";
             // 
@@ -430,9 +465,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(8, 41);
+            this.label2.Location = new System.Drawing.Point(11, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 21);
+            this.label2.Size = new System.Drawing.Size(172, 27);
             this.label2.TabIndex = 143;
             this.label2.Text = "Subscription ID :";
             // 
@@ -440,10 +476,9 @@
             // 
             this.lblSubscriptionCancellationID.AutoSize = true;
             this.lblSubscriptionCancellationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubscriptionCancellationID.Location = new System.Drawing.Point(257, 13);
-            this.lblSubscriptionCancellationID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubscriptionCancellationID.Location = new System.Drawing.Point(343, 16);
             this.lblSubscriptionCancellationID.Name = "lblSubscriptionCancellationID";
-            this.lblSubscriptionCancellationID.Size = new System.Drawing.Size(54, 18);
+            this.lblSubscriptionCancellationID.Size = new System.Drawing.Size(66, 22);
             this.lblSubscriptionCancellationID.TabIndex = 142;
             this.lblSubscriptionCancellationID.Text = "[????]";
             // 
@@ -452,9 +487,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(8, 9);
+            this.label10.Location = new System.Drawing.Point(11, 11);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(242, 21);
+            this.label10.Size = new System.Drawing.Size(297, 27);
             this.label10.TabIndex = 141;
             this.label10.Text = "Subscription Cancellation ID :";
             // 
@@ -462,59 +498,27 @@
             // 
             this.ctrlMemberBasicDetailsWithFilter1.BackColor = System.Drawing.Color.White;
             this.ctrlMemberBasicDetailsWithFilter1.EnableFiltering = true;
-            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(4, 41);
-            this.ctrlMemberBasicDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(5, 49);
+            this.ctrlMemberBasicDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ctrlMemberBasicDetailsWithFilter1.Name = "ctrlMemberBasicDetailsWithFilter1";
-            this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(950, 514);
+            this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(1189, 626);
             this.ctrlMemberBasicDetailsWithFilter1.TabIndex = 0;
             this.ctrlMemberBasicDetailsWithFilter1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberBasicDetailsWithFilter1_OnMemberSelected);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox8.Location = new System.Drawing.Point(185, 97);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(23, 27);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 185;
-            this.pictureBox8.TabStop = false;
-            // 
-            // lblElapsedDaysFees
-            // 
-            this.lblElapsedDaysFees.AutoSize = true;
-            this.lblElapsedDaysFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElapsedDaysFees.Location = new System.Drawing.Point(218, 101);
-            this.lblElapsedDaysFees.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblElapsedDaysFees.Name = "lblElapsedDaysFees";
-            this.lblElapsedDaysFees.Size = new System.Drawing.Size(54, 18);
-            this.lblElapsedDaysFees.TabIndex = 184;
-            this.lblElapsedDaysFees.Text = "[????]";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(12, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 21);
-            this.label8.TabIndex = 183;
-            this.label8.Text = "Elapsed Day/s Fees:";
-            // 
             // frmAddUpdateCancelSubscription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(954, 749);
+            this.ClientSize = new System.Drawing.Size(1206, 935);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlCancelSubscription);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlMemberBasicDetailsWithFilter1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAddUpdateCancelSubscription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddUpdateCancelSubscription";
@@ -524,6 +528,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.pnlCancelSubscription.ResumeLayout(false);
             this.pnlCancelSubscription.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -531,7 +536,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
