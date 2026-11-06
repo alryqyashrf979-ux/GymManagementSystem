@@ -13,14 +13,26 @@ namespace GymMangementSystem
 {
     public partial class frmManageEmployees : Form
     {
+        static private DataTable _dtAllEmployees;
         public frmManageEmployees()
         {
             InitializeComponent();
         }
 
+        private void _RefreshData()
+        {
+            _dtAllEmployees= clsEmployees.GetAllEmployees();
+            dgvEmployees.DataSource = _dtAllEmployees;
+        }
         private void frmManageEmployees_Load(object sender, EventArgs e)
         {
-            dgvEmployees.DataSource = clsEmployees.GetAllEmployees();
+            _RefreshData();
+            lblRecord.Text = dgvEmployees.Rows.Count.ToString();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
