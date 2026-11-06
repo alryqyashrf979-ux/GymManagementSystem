@@ -46,6 +46,8 @@
             this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.dtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cmShiftType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtFiltering = new GymMangementSystem.MyTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.panel4.SuspendLayout();
@@ -258,6 +260,7 @@
             this.cmIsActive.StartIndex = 0;
             this.cmIsActive.TabIndex = 127;
             this.cmIsActive.Visible = false;
+            this.cmIsActive.SelectedIndexChanged += new System.EventHandler(this.cmIsActive_SelectedIndexChanged);
             // 
             // cmSelectTypeOfFiltering
             // 
@@ -272,21 +275,20 @@
             this.cmSelectTypeOfFiltering.ItemHeight = 30;
             this.cmSelectTypeOfFiltering.Items.AddRange(new object[] {
             "None",
-            "Person ID",
-            "Member ID",
-            "Emergency Contact ID",
-            "Full Name",
-            "Gender",
-            "Phone",
-            "Email",
-            "Country Name",
-            "IsActive"});
+            "Employee ID",
+            "Name",
+            "Title",
+            "Salary",
+            "Hired Date",
+            "Is Active",
+            "Shift Type"});
             this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(91, 239);
             this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
             this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(168, 36);
             this.cmSelectTypeOfFiltering.StartIndex = 0;
             this.cmSelectTypeOfFiltering.TabIndex = 125;
+            this.cmSelectTypeOfFiltering.SelectedIndexChanged += new System.EventHandler(this.cmSelectTypeOfFiltering_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -298,6 +300,49 @@
             this.label9.Size = new System.Drawing.Size(75, 18);
             this.label9.TabIndex = 124;
             this.label9.Text = "Filter By:";
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dtpDate.BorderRadius = 5;
+            this.dtpDate.BorderThickness = 1;
+            this.dtpDate.Checked = true;
+            this.dtpDate.CustomFormat = "dd:MM:yyyy";
+            this.dtpDate.FillColor = System.Drawing.Color.White;
+            this.dtpDate.Font = new System.Drawing.Font("Tahoma", 12.75F);
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDate.Location = new System.Drawing.Point(263, 244);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.ShowUpDown = true;
+            this.dtpDate.Size = new System.Drawing.Size(166, 29);
+            this.dtpDate.TabIndex = 128;
+            this.dtpDate.Value = new System.DateTime(2026, 10, 22, 5, 0, 0, 0);
+            this.dtpDate.Visible = false;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpTime_ValueChanged);
+            // 
+            // cmShiftType
+            // 
+            this.cmShiftType.BackColor = System.Drawing.Color.Transparent;
+            this.cmShiftType.BorderRadius = 5;
+            this.cmShiftType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmShiftType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmShiftType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmShiftType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmShiftType.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cmShiftType.ForeColor = System.Drawing.Color.Black;
+            this.cmShiftType.ItemHeight = 30;
+            this.cmShiftType.Location = new System.Drawing.Point(255, 197);
+            this.cmShiftType.Margin = new System.Windows.Forms.Padding(2);
+            this.cmShiftType.Name = "cmShiftType";
+            this.cmShiftType.Size = new System.Drawing.Size(174, 36);
+            this.cmShiftType.StartIndex = 0;
+            this.cmShiftType.TabIndex = 129;
+            this.cmShiftType.Visible = false;
+            this.cmShiftType.SelectedIndexChanged += new System.EventHandler(this.cmShiftType_SelectedIndexChanged);
             // 
             // txtFiltering
             // 
@@ -322,6 +367,7 @@
             this.txtFiltering.Size = new System.Drawing.Size(211, 29);
             this.txtFiltering.TabIndex = 126;
             this.txtFiltering.Visible = false;
+            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
             // 
             // frmManageEmployees
             // 
@@ -329,6 +375,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.cmShiftType);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.cmIsActive);
             this.Controls.Add(this.txtFiltering);
             this.Controls.Add(this.cmSelectTypeOfFiltering);
@@ -372,5 +420,7 @@
         private MyTextBox txtFiltering;
         private Guna.UI2.WinForms.Guna2ComboBox cmSelectTypeOfFiltering;
         private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDate;
+        private Guna.UI2.WinForms.Guna2ComboBox cmShiftType;
     }
 }
