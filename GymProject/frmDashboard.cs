@@ -128,5 +128,13 @@ namespace GymMangementSystem
             _SelectbtnDashBoard();
 
         }
+
+        private void guna2Button2_Click_2(object sender, EventArgs e)
+        {
+            frmManageCoaches frm =new frmManageCoaches();
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+
+        }
     }
 }
