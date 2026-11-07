@@ -32,8 +32,7 @@ namespace GymMangementSystem
         }
         private enum enGender { Male = 0, Female = 1 };
 
-
-
+     
         public void ResetData()
         {
             _ResetPersonInformation();
@@ -83,6 +82,7 @@ namespace GymMangementSystem
 
             _LoadPersonImage();
             _PersonID = _PersonInfo.PersonID;
+
         }
 
         public void LoadPersonInfo(int PersonID)

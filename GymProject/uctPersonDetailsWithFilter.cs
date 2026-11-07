@@ -35,6 +35,24 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        public class PersonEventArg : EventArgs
+        {
+            public clsPeople PersonInfo { get; }
+
+            public PersonEventArg(clsPeople PersonInfo)
+            {
+                this.PersonInfo = PersonInfo;
+            }
+        }
+
+        public event EventHandler<PersonEventArg> OnPersonSelected;
+
+        protected virtual void SelectPerson(object sender, PersonEventArg PersonInfo)
+        {
+            OnPersonSelected?.Invoke(sender, PersonInfo);
+        }
+
         private void FIndNow()
         {
            
@@ -46,6 +64,9 @@ namespace GymMangementSystem
             {
                 uctPersonDetails1.LoadPersonInfo(tbSearch.Text);
             }
+
+            SelectPerson(this, new PersonEventArg(PersonInfo));
+
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {

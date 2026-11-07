@@ -15,7 +15,7 @@ namespace DataBusinessLayer
         public int PersonID { get; set; }
         public int ShiftID { set; get; }
         public int TitleID { get; set; }
-        public float Salary { get; set; }
+        public double Salary { get; set; }
         public DateTime HiredDate { set; get; }
         public DateTime? TerminationDate { set; get; }
         public string Notes { set; get; }
@@ -47,7 +47,7 @@ namespace DataBusinessLayer
             this._Mode = enMode.AddMode;
         }
         //
-        clsEmployees(int EmployeeID,int PersonID,int ShiftID,int TitleID,float Salary,DateTime HiredDate,DateTime? TerminationDate, string Notes,bool IsActive)
+        clsEmployees(int EmployeeID,int PersonID,int ShiftID,int TitleID,double Salary,DateTime HiredDate,DateTime? TerminationDate, string Notes,bool IsActive)
         {
             this._EmployeeID = EmployeeID;
             this.PersonID = PersonID;
@@ -73,7 +73,7 @@ namespace DataBusinessLayer
 
         private bool _UpdateEmployee()
         {
-            return clsEmployeesData.UpdateEmployee(this._EmployeeID, this.PersonID, this.TitleID, this.Salary, this.HiredDate, this.Notes, this.IsActive, this.ShiftID);
+            return clsEmployeesData.UpdateEmployee(this._EmployeeID, this.PersonID, this.TitleID, this.Salary, this.HiredDate,this.TerminationDate, this.Notes, this.IsActive, this.ShiftID);
         }
         public static DataTable GetAllEmployees()
         {
@@ -108,7 +108,7 @@ namespace DataBusinessLayer
         {
             int PersonID = -1, ShiftID = -1;
             int TitleID = -1;string Notes=string.Empty;
-            float Salary = 0;
+            double Salary = 0;
             DateTime HiredDate = DateTime.Now;DateTime? TerminationDate = DateTime.Now;
             bool IsActive = false;                  //? to handle allows null
 
@@ -125,7 +125,7 @@ namespace DataBusinessLayer
         {
             int PersonID = -1, ShiftID = -1;
             int TitleID = -1;string Notes = string.Empty;
-            float Salary = 0;
+            double Salary = 0;
             DateTime HiredDate = DateTime.Now; DateTime? TerminationDate = DateTime.Now;
             bool IsActive = false;                  //? to handle allows null
             int EmployeeID = -1;
@@ -148,7 +148,7 @@ namespace DataBusinessLayer
         {
             int EmployeeID = -1, ShiftID = -1;
             int TitleID = -1;string Notes = string.Empty;
-            float Salary = 0;
+            double Salary = 0;
             DateTime HiredDate = DateTime.Now; DateTime? TerminationDate = DateTime.Now;
             bool IsActive = false;                  //? to handle allows null
 

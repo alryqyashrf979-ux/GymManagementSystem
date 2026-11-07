@@ -13,7 +13,7 @@ namespace GymMangementSystem
 {
     public partial class frmAddUpdateEmployee : Form
     {
-        private int _PersonID = -1;
+        private int _EmployeeID = -1;
         private clsEmployees _EmployeeInfo;
         public enum enMode { AddMode,UpdateMode}
         private enMode _Mode = enMode.AddMode;
@@ -23,26 +23,26 @@ namespace GymMangementSystem
             _Mode = enMode.AddMode;
         }
 
-        public frmAddUpdateEmployee(int PersonID)
+        public frmAddUpdateEmployee(int EmployeeID)
         {
             InitializeComponent();
-            _PersonID = PersonID;
+            _EmployeeID = EmployeeID;
             _Mode = enMode.UpdateMode;
         }
 
         private void _LoadData()
         {
-            _EmployeeInfo = clsEmployees.FindByPersonID(_PersonID);
+            _EmployeeInfo = clsEmployees.FindByEmployeeID(_EmployeeID);
             if (_EmployeeInfo == null)
             {
 
-                MessageBox.Show($"Employee with Person ID {_PersonID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Employee with Employee ID: {_EmployeeID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnSave.Enabled = false;
                 return;
             }
 
             uctPersonDetailsWithFilter1.EnableFiltering = false;
-            uctPersonDetailsWithFilter1.LoadPersonInfo(_PersonID);
+            uctPersonDetailsWithFilter1.LoadPersonInfo(_EmployeeInfo.PersonID);
             cmTitle.SelectedValue = _EmployeeInfo.TitleID ;
             cmShift.SelectedValue = _EmployeeInfo.ShiftID ;
             txtSalary.Text = _EmployeeInfo.Salary.ToString();
@@ -78,6 +78,49 @@ namespace GymMangementSystem
 
             if (_Mode == enMode.UpdateMode)
                 _LoadData();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _EmployeeInfo.TitleID =(int) cmTitle.SelectedValue;
+            if (string.IsNullOrEmpty(txtSalary.Text))
+                txtSalary.Text = "0";
+
+            _EmployeeInfo.Salary = Convert.ToDouble(txtSalary.Text);
+            _EmployeeInfo.Notes = txtNote.Text;
+            _EmployeeInfo.ShiftID =(int) cmShift.SelectedValue;
+            _EmployeeInfo.IsActive = gtsIsActive.Checked;
+            _EmployeeInfo.PersonID = uctPersonDetailsWithFilter1.PersonID;
+    
+            if (_EmployeeInfo.Save())
+            {
+                lblTitle2.Text = "Update Employee";
+                _Mode = enMode.UpdateMode;
+                lblEmployeeID.Text = _EmployeeInfo.EmployeeID.ToString();
+                MessageBox.Show("Data Saved Successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Error : Data Failed", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void uctPersonDetailsWithFilter1_OnPersonSelected(object sender, uctPersonDetailsWithFilter.PersonEventArg e)
+        {
+            if (e.PersonInfo == null)
+                btnSave.Enabled = false;
+            else
+                btnSave.Enabled = true;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
