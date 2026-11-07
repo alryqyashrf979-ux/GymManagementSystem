@@ -47,7 +47,6 @@ namespace GymMangementSystem
             cmShift.SelectedValue = _EmployeeInfo.ShiftID ;
             txtSalary.Text = _EmployeeInfo.Salary.ToString();
             txtNote.Text = _EmployeeInfo.Notes;
-            dtpHiredDate.Value = _EmployeeInfo.HiredDate;
             gtsIsActive.Checked = _EmployeeInfo.IsActive;
         }
 
@@ -61,7 +60,24 @@ namespace GymMangementSystem
             else
                 lblTitle2.Text = "Update Employee";
 
-          
+            cmTitle.DataSource = clsTitles.GetAllTitles();
+            cmTitle.DisplayMember = "TitleName";
+            cmTitle.ValueMember = "TitleID";
+
+            cmShift.DataSource = clsEmployeeShift.GetAllShiftType();
+            cmShift.DisplayMember = "ShiftType";
+            cmShift.ValueMember = "ShiftID";
+
+            txtSalary.Text = "0";
+            gtsIsActive.Checked = true;
+        }
+
+        private void frmAddUpdateEmployee_Load(object sender, EventArgs e)
+        {
+            _ResetDefaultValues();
+
+            if (_Mode == enMode.UpdateMode)
+                _LoadData();
         }
     }
 }

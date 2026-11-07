@@ -104,5 +104,12 @@ namespace GymMangementSystem
 
             lblRecord.Text = dgvEmployees.Rows.Count.ToString();
         }
+
+        private void btnAddPerson_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateEmployee();
+            frm.ShowDialog();
+            _RefreshData();
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace DataAccessLayer
         static public DataTable GetAllTitles()
         {
             DataTable dt = new DataTable();
-            string query = "select * from Titles;";
+            string query = "select * from JopTitles;";
 
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
             {
@@ -29,6 +29,8 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+
 
     }
 }

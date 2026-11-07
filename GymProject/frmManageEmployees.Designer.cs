@@ -145,6 +145,18 @@
             this.guna2Separator1.Size = new System.Drawing.Size(163, 10);
             this.guna2Separator1.TabIndex = 120;
             // 
+            // btnAddPerson
+            // 
+            this.btnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddPerson.BackgroundImage = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddPerson.Location = new System.Drawing.Point(1318, 241);
+            this.btnAddPerson.Name = "btnAddPerson";
+            this.btnAddPerson.Size = new System.Drawing.Size(46, 35);
+            this.btnAddPerson.TabIndex = 121;
+            this.btnAddPerson.UseVisualStyleBackColor = true;
+            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -330,7 +342,7 @@
             this.cmShiftType.Location = new System.Drawing.Point(340, 242);
             this.cmShiftType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmShiftType.Name = "cmShiftType";
-            this.cmShiftType.Size = new System.Drawing.Size(231, 36);
+            this.cmShiftType.Size = new System.Drawing.Size(174, 36);
             this.cmShiftType.TabIndex = 129;
             this.cmShiftType.Visible = false;
             this.cmShiftType.SelectedIndexChanged += new System.EventHandler(this.cmShiftType_SelectedIndexChanged);
