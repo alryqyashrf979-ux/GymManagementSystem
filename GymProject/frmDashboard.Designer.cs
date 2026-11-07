@@ -56,6 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.btnSubscriPtions);
             this.guna2Panel1.Controls.Add(this.btnManageEmployees);
@@ -368,7 +370,7 @@
             this.btnManagePeople.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnManagePeople.Image = global::GymMangementSystem.Properties.Resources.managepeople;
             this.btnManagePeople.ImageOffset = new System.Drawing.Point(-13, 0);
-            this.btnManagePeople.ImageSize = new System.Drawing.Size(65, 39);
+            this.btnManagePeople.ImageSize = new System.Drawing.Size(70, 39);
             this.btnManagePeople.Location = new System.Drawing.Point(5, 267);
             this.btnManagePeople.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManagePeople.Name = "btnManagePeople";
@@ -538,6 +540,32 @@
             this.panel1.Size = new System.Drawing.Size(1827, 922);
             this.panel1.TabIndex = 9;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 5;
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.Manage_employees;
+            this.guna2Button2.ImageOffset = new System.Drawing.Point(-12, 0);
+            this.guna2Button2.ImageSize = new System.Drawing.Size(65, 39);
+            this.guna2Button2.Location = new System.Drawing.Point(3, 839);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(261, 62);
+            this.guna2Button2.TabIndex = 17;
+            this.guna2Button2.Text = "Manage Coaches";
+            this.guna2Button2.TextOffset = new System.Drawing.Point(-12, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_2);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -597,5 +625,6 @@
         private System.Windows.Forms.ToolStripMenuItem freezeSubscriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeSubscriptionToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
