@@ -180,6 +180,12 @@
     <Compile Include="frmAddUpdateCoach.Designer.cs">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUpdateEmployeeAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateEmployeeAttendance.Designer.cs">
+      <DependentUpon>frmAddUpdateEmployeeAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUpdateFrozenSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateCoach.resx">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateEmployeeAttendance.resx">
+      <DependentUpon>frmAddUpdateEmployeeAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateFrozenSubscription.resx">
       <DependentUpon>frmAddUpdateFrozenSubscription.cs</DependentUpon>
