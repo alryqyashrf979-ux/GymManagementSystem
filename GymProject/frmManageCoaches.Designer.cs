@@ -42,6 +42,7 @@
             this.lblRecord = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddNewPayment = new Guna.UI2.WinForms.Guna2Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoaches)).BeginInit();
@@ -123,7 +124,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCoaches.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCoaches.GridColor = System.Drawing.Color.Black;
-            this.dgvCoaches.Location = new System.Drawing.Point(5, 354);
+            this.dgvCoaches.Location = new System.Drawing.Point(5, 342);
             this.dgvCoaches.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCoaches.Name = "dgvCoaches";
             this.dgvCoaches.ReadOnly = true;
@@ -137,7 +138,7 @@
             this.dgvCoaches.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCoaches.RowHeadersVisible = false;
             this.dgvCoaches.RowHeadersWidth = 51;
-            this.dgvCoaches.Size = new System.Drawing.Size(1339, 327);
+            this.dgvCoaches.Size = new System.Drawing.Size(1339, 353);
             this.dgvCoaches.TabIndex = 124;
             this.dgvCoaches.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCoaches.ThemeStyle.GridColor = System.Drawing.Color.Black;
@@ -156,7 +157,7 @@
             this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(21, 744);
+            this.guna2Separator1.Location = new System.Drawing.Point(21, 747);
             this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(163, 10);
@@ -167,7 +168,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 717);
+            this.label2.Location = new System.Drawing.Point(12, 720);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 127;
@@ -178,7 +179,7 @@
             this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(138, 717);
+            this.lblRecord.Location = new System.Drawing.Point(138, 720);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(49, 25);
             this.lblRecord.TabIndex = 126;
@@ -202,7 +203,7 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1175, 711);
+            this.btnClose.Location = new System.Drawing.Point(1175, 714);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(163, 41);
@@ -214,7 +215,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Employees;
-            this.pictureBox1.Location = new System.Drawing.Point(417, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(417, 48);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(481, 229);
@@ -222,12 +223,37 @@
             this.pictureBox1.TabIndex = 129;
             this.pictureBox1.TabStop = false;
             // 
+            // btnAddNewPayment
+            // 
+            this.btnAddNewPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewPayment.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddNewPayment.BorderRadius = 5;
+            this.btnAddNewPayment.BorderThickness = 1;
+            this.btnAddNewPayment.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewPayment.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPayment.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewPayment.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewPayment.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPayment.Image = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddNewPayment.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddNewPayment.ImageSize = new System.Drawing.Size(35, 30);
+            this.btnAddNewPayment.Location = new System.Drawing.Point(1261, 300);
+            this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddNewPayment.Name = "btnAddNewPayment";
+            this.btnAddNewPayment.Size = new System.Drawing.Size(83, 36);
+            this.btnAddNewPayment.TabIndex = 131;
+            // 
             // frmManageCoaches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1349, 767);
+            this.Controls.Add(this.btnAddNewPayment);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label2);
@@ -261,5 +287,6 @@
         private System.Windows.Forms.Label lblRecord;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewPayment;
     }
 }
