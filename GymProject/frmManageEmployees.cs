@@ -111,5 +111,11 @@ namespace GymMangementSystem
             frm.ShowDialog();
             _RefreshData();
         }
+
+        private void txtFiltering_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cmSelectTypeOfFiltering.Text == "Employee ID" || cmSelectTypeOfFiltering.Text == "Salary")
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }
