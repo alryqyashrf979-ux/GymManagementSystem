@@ -47,8 +47,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cmShiftType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtFiltering = new GymMangementSystem.MyTextBox();
             this.btnAddNewPayment = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFiltering = new GymMangementSystem.MyTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -141,7 +141,7 @@
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.guna2Separator1.FillThickness = 2;
             this.guna2Separator1.Location = new System.Drawing.Point(19, 741);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(130, 8);
             this.guna2Separator1.TabIndex = 120;
@@ -165,7 +165,7 @@
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
             this.btnClose.Location = new System.Drawing.Point(1234, 712);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 33);
             this.btnClose.TabIndex = 117;
@@ -243,7 +243,7 @@
             "Yes",
             "No"});
             this.cmIsActive.Location = new System.Drawing.Point(292, 238);
-            this.cmIsActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmIsActive.Margin = new System.Windows.Forms.Padding(2);
             this.cmIsActive.Name = "cmIsActive";
             this.cmIsActive.Size = new System.Drawing.Size(186, 36);
             this.cmIsActive.StartIndex = 0;
@@ -272,7 +272,7 @@
             "Is Active",
             "Shift Type"});
             this.cmSelectTypeOfFiltering.Location = new System.Drawing.Point(97, 235);
-            this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmSelectTypeOfFiltering.Margin = new System.Windows.Forms.Padding(2);
             this.cmSelectTypeOfFiltering.Name = "cmSelectTypeOfFiltering";
             this.cmSelectTypeOfFiltering.Size = new System.Drawing.Size(179, 36);
             this.cmSelectTypeOfFiltering.StartIndex = 0;
@@ -302,7 +302,7 @@
             this.dtpDate.Font = new System.Drawing.Font("Tahoma", 12.75F);
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(281, 240);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDate.Name = "dtpDate";
@@ -325,38 +325,12 @@
             this.cmShiftType.ForeColor = System.Drawing.Color.Black;
             this.cmShiftType.ItemHeight = 30;
             this.cmShiftType.Location = new System.Drawing.Point(281, 236);
-            this.cmShiftType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmShiftType.Margin = new System.Windows.Forms.Padding(2);
             this.cmShiftType.Name = "cmShiftType";
             this.cmShiftType.Size = new System.Drawing.Size(140, 36);
             this.cmShiftType.TabIndex = 129;
             this.cmShiftType.Visible = false;
             this.cmShiftType.SelectedIndexChanged += new System.EventHandler(this.cmShiftType_SelectedIndexChanged);
-            // 
-            // txtFiltering
-            // 
-            this.txtFiltering.BorderRadius = 5;
-            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFiltering.DefaultText = "";
-            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFiltering.ErrorMessage = "This Field is Required";
-            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.txtFiltering.IsRequired = false;
-            this.txtFiltering.Location = new System.Drawing.Point(281, 235);
-            this.txtFiltering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFiltering.Name = "txtFiltering";
-            this.txtFiltering.PlaceholderText = "Search...";
-            this.txtFiltering.SelectedText = "";
-            this.txtFiltering.Size = new System.Drawing.Size(225, 29);
-            this.txtFiltering.TabIndex = 126;
-            this.txtFiltering.Visible = false;
-            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
-            this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
             // btnAddNewPayment
             // 
@@ -377,10 +351,38 @@
             this.btnAddNewPayment.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnAddNewPayment.ImageSize = new System.Drawing.Size(35, 30);
             this.btnAddNewPayment.Location = new System.Drawing.Point(1302, 240);
-            this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewPayment.Name = "btnAddNewPayment";
             this.btnAddNewPayment.Size = new System.Drawing.Size(66, 29);
             this.btnAddNewPayment.TabIndex = 130;
+            this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
+            // 
+            // txtFiltering
+            // 
+            this.txtFiltering.BorderRadius = 5;
+            this.txtFiltering.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiltering.DefaultText = "";
+            this.txtFiltering.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFiltering.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFiltering.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiltering.ErrorMessage = "This Field is Required";
+            this.txtFiltering.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFiltering.ForeColor = System.Drawing.Color.Black;
+            this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFiltering.IsRequired = false;
+            this.txtFiltering.Location = new System.Drawing.Point(281, 235);
+            this.txtFiltering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiltering.Name = "txtFiltering";
+            this.txtFiltering.PlaceholderText = "Search...";
+            this.txtFiltering.SelectedText = "";
+            this.txtFiltering.Size = new System.Drawing.Size(225, 29);
+            this.txtFiltering.TabIndex = 126;
+            this.txtFiltering.Visible = false;
+            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
+            this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
             // frmManageEmployees
             // 

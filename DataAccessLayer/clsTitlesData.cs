@@ -13,7 +13,7 @@ namespace DataAccessLayer
         static public DataTable GetAllTitles()
         {
             DataTable dt = new DataTable();
-            string query = "select * from JopTitles;";
+            string query = "select * from JobTitles;";
 
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
             {
@@ -62,7 +62,7 @@ namespace DataAccessLayer
 
         static public bool UpdateTitle(int TitleID,string TitleName)
         {
-            string query = @"UPDATE [dbo].[JopTitles]
+            string query = @"UPDATE [dbo].[JobTitles]
    SET [TitleName] = @TitleName
  WHERE TitleID=@TitleID;
 ";
@@ -90,7 +90,7 @@ namespace DataAccessLayer
 
         static public bool DeleteJopTitle(int TitleID)
         {
-            string query = "Delete from JopTitles where TitleID=@TitleID;";
+            string query = "Delete from JobTitles where TitleID=@TitleID;";
 
             try
             {
@@ -113,7 +113,7 @@ namespace DataAccessLayer
 
         static public bool Find(int TItleID, ref string TitleName)
         {
-            string query = "Select *from JopTitles where TitleID=@TitleID;";
+            string query = "Select *from JobTitles where TitleID=@TitleID;";
 
             try
             {
