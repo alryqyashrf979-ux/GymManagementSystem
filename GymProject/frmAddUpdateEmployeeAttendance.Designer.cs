@@ -157,6 +157,7 @@
             this.btnClose.Size = new System.Drawing.Size(156, 37);
             this.btnClose.TabIndex = 147;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlAttendanceInput
             // 
@@ -328,7 +329,6 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.PlaceholderText = "Note";
-            this.txtNote.ReadOnly = true;
             this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNote.SelectedText = "";
             this.txtNote.Size = new System.Drawing.Size(367, 111);
@@ -479,7 +479,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmAddUpdateEmployeeAttendance";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add EmployeeAttendance";
             this.Load += new System.EventHandler(this.frmAddUpdateEmployeeAttendance_Load);
             this.panel4.ResumeLayout(false);
