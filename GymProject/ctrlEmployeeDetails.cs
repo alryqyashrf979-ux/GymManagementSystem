@@ -48,7 +48,7 @@ namespace GymMangementSystem
             d.Text = EmployeeInfo.Salary.ToString();
             lblShiftID.Text = EmployeeInfo.ShiftID.ToString();
             lblTerminationDate.Text = EmployeeInfo?.TerminationDate.ToString() ?? "[yyyy/mm/dd]";
-            lblTitle.Text = EmployeeInfo.Title.ToString();
+            lblTitle.Text =clsTitles.Find(EmployeeInfo.TitleID).TitleName;
             txtNote.Text = EmployeeInfo.Notes;
             lnkShowShiftInfo.Enabled = true;
         }

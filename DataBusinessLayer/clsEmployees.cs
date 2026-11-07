@@ -25,6 +25,7 @@ namespace DataBusinessLayer
         public clsPeople Person { get { return _Person; } }
         private clsEmployeeShift _EmployeeShift;
         public clsEmployeeShift EmployeeShift { get { return _EmployeeShift; } }
+        public clsTitles TitleInfo { get; private set; }
 
         public enum enMode { AddMode=1,UpdateMode=2};
         enMode _Mode = enMode.AddMode;
@@ -58,6 +59,7 @@ namespace DataBusinessLayer
             this.IsActive = IsActive;
             this._Person = clsPeople.Find(PersonID);
             this._EmployeeShift = clsEmployeeShift.Find(ShiftID);
+            this.TitleInfo = clsTitles.Find(TitleID);
             this.TerminationDate = TerminationDate;
             _Mode = enMode.UpdateMode;
         }
