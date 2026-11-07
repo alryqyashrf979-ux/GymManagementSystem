@@ -65,8 +65,8 @@ namespace GymMangementSystem
             cmTitle.ValueMember = "TitleID";
 
             cmShift.DataSource = clsEmployeeShift.GetAllShiftType();
-            cmShift.DisplayMember = "ShiftType";
-            cmShift.ValueMember = "ShiftID";
+            cmShift.DisplayMember = "Shift Type";
+            cmShift.ValueMember = "Shift ID";
 
             txtSalary.Text = "0";
             gtsIsActive.Checked = true;
