@@ -137,7 +137,7 @@ namespace GymMangementSystem
         {
             _User = clsUsers.FindByUserID(_UserID);
 
-            uctPersonDetailsWithFilter1.DisableFiltering();
+            uctPersonDetailsWithFilter1.EnableFiltering=false;
             if (_User == null)
             {
                 MessageBox.Show($"No User with user id = {_UserID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -239,7 +239,7 @@ namespace GymMangementSystem
                 lblTitle2.Text = "Update User";
                 _Mode = enMode.UpdateMode;
                 lblUserID.Text = _User.UserID.ToString();
-                uctPersonDetailsWithFilter1.DisableFiltering();
+                uctPersonDetailsWithFilter1.EnableFiltering=false;
                 MessageBox.Show("User saved successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

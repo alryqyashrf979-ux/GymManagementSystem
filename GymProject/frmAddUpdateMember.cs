@@ -137,7 +137,7 @@ namespace GymMangementSystem
             lblTitle1.Text = lblTitle2.Text;
             this.Text = lblTitle2.Text;
 
-            uctPersonDetailsWithFilter1.DisableFiltering();
+            uctPersonDetailsWithFilter1.EnableFiltering=false;
             txtPersonName.Text = _Member.EmergencyContactPersonName; ;
             txtRelationship.Text=_Member.Relationship;
             txtPhoneNumber.Text=_Member.EmergencyContactPersonName;
@@ -189,7 +189,7 @@ namespace GymMangementSystem
                 this.Text = lblTitle1.Text;
                 lblMemberID.Text = _Member.MemberID.ToString();
                 lblEmergencyContactID.Text = _Member.ContactID.ToString();
-                uctPersonDetailsWithFilter1.DisableFiltering();
+                uctPersonDetailsWithFilter1.EnableFiltering=false;
 
                 DataBack?.Invoke(this, _Member.MemberID);
 

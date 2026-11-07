@@ -47,16 +47,12 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.gtsIsActive = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.cmTitle = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmShift = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dtpHiredDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtSalary = new GymMangementSystem.MyTextBox();
             this.txtNote = new GymMangementSystem.MyTextBox();
             this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
@@ -68,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -270,7 +265,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(441, 483);
+            this.label5.Location = new System.Drawing.Point(522, 447);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 25);
             this.label5.TabIndex = 138;
@@ -279,38 +274,18 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Time;
-            this.pictureBox5.Location = new System.Drawing.Point(485, 469);
+            this.pictureBox5.Location = new System.Drawing.Point(566, 433);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(61, 57);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 137;
             this.pictureBox5.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(395, 444);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
-            this.label6.TabIndex = 136;
-            this.label6.Text = "Hired Date";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox6.Location = new System.Drawing.Point(502, 437);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 34);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 135;
-            this.pictureBox6.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(783, 443);
+            this.label7.Location = new System.Drawing.Point(491, 495);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 25);
             this.label7.TabIndex = 140;
@@ -319,7 +294,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.IsActive;
-            this.pictureBox7.Location = new System.Drawing.Point(869, 437);
+            this.pictureBox7.Location = new System.Drawing.Point(577, 489);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(33, 34);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -333,7 +308,7 @@
             this.gtsIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gtsIsActive.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.gtsIsActive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.gtsIsActive.Location = new System.Drawing.Point(919, 445);
+            this.gtsIsActive.Location = new System.Drawing.Point(627, 497);
             this.gtsIsActive.Name = "gtsIsActive";
             this.gtsIsActive.Size = new System.Drawing.Size(35, 20);
             this.gtsIsActive.TabIndex = 141;
@@ -344,17 +319,10 @@
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(379, 433);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(454, 433);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 84);
             this.guna2VSeparator1.TabIndex = 142;
-            // 
-            // guna2VSeparator2
-            // 
-            this.guna2VSeparator2.Location = new System.Drawing.Point(778, 433);
-            this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(10, 84);
-            this.guna2VSeparator2.TabIndex = 143;
             // 
             // cmTitle
             // 
@@ -369,7 +337,7 @@
             this.cmTitle.ItemHeight = 30;
             this.cmTitle.Location = new System.Drawing.Point(135, 433);
             this.cmTitle.Name = "cmTitle";
-            this.cmTitle.Size = new System.Drawing.Size(214, 36);
+            this.cmTitle.Size = new System.Drawing.Size(300, 36);
             this.cmTitle.TabIndex = 144;
             // 
             // cmShift
@@ -383,25 +351,10 @@
             this.cmShift.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmShift.ItemHeight = 30;
-            this.cmShift.Location = new System.Drawing.Point(552, 481);
+            this.cmShift.Location = new System.Drawing.Point(633, 447);
             this.cmShift.Name = "cmShift";
-            this.cmShift.Size = new System.Drawing.Size(214, 36);
+            this.cmShift.Size = new System.Drawing.Size(269, 36);
             this.cmShift.TabIndex = 145;
-            // 
-            // dtpHiredDate
-            // 
-            this.dtpHiredDate.BorderRadius = 7;
-            this.dtpHiredDate.Checked = true;
-            this.dtpHiredDate.FillColor = System.Drawing.Color.White;
-            this.dtpHiredDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpHiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpHiredDate.Location = new System.Drawing.Point(552, 437);
-            this.dtpHiredDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpHiredDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpHiredDate.Name = "dtpHiredDate";
-            this.dtpHiredDate.Size = new System.Drawing.Size(214, 36);
-            this.dtpHiredDate.TabIndex = 147;
-            this.dtpHiredDate.Value = new System.DateTime(2026, 11, 7, 2, 24, 25, 610);
             // 
             // txtSalary
             // 
@@ -422,7 +375,7 @@
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.PlaceholderText = "";
             this.txtSalary.SelectedText = "";
-            this.txtSalary.Size = new System.Drawing.Size(214, 36);
+            this.txtSalary.Size = new System.Drawing.Size(300, 36);
             this.txtSalary.TabIndex = 146;
             // 
             // txtNote
@@ -462,18 +415,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(968, 606);
-            this.Controls.Add(this.dtpHiredDate);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.cmShift);
             this.Controls.Add(this.cmTitle);
-            this.Controls.Add(this.guna2VSeparator2);
             this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.gtsIsActive);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);
@@ -490,6 +439,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmAddUpdateEmployee_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -500,7 +450,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -529,16 +478,12 @@
         private MyTextBox txtNote;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI2.WinForms.Guna2ToggleSwitch gtsIsActive;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private Guna.UI2.WinForms.Guna2ComboBox cmTitle;
         private Guna.UI2.WinForms.Guna2ComboBox cmShift;
         private MyTextBox txtSalary;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpHiredDate;
     }
 }
