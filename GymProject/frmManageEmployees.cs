@@ -117,5 +117,12 @@ namespace GymMangementSystem
             if (cmSelectTypeOfFiltering.Text == "Employee ID" || cmSelectTypeOfFiltering.Text == "Salary")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void btnAddNewPayment_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateEmployee();
+            frm.ShowDialog();
+            _RefreshData();
+        }
     }
 }
