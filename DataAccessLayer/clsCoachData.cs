@@ -14,7 +14,11 @@ namespace DataAccessLayer
         static public DataTable GetAllCoaches()
         {
             DataTable dt = new DataTable();
-            string query = "select CoachID as 'Coach ID' , EmployeeID as 'Employee ID',Speciality,Note from Coaches;";
+            string query = @"select CoachID as 'Coach ID' , Coaches.EmployeeID as 'Employee ID',
+                  p.FirstName+' '+p.SecondName+' '+p.LastName as 'Coach Name',Coaches.Speciality
+                  from Coaches join Employees on 
+                  Coaches.EmployeeID=Employees.EmployeeID join People P on P.ID=Employees.PersonID 
+                  ";
 
             using(SqlConnection connection=new SqlConnection(DataAccessSettings.ConnectionString))
             {
