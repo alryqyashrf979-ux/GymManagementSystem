@@ -15,7 +15,7 @@ namespace DataBusinessLayer
         public int EmployeeID { set; get; }
         public bool IsCheckin { set; get; }
         public bool IsCheckout { set; get; }
-        public DateTime Date { set; get; }
+        public DateTime Date { private set; get; }
         public string Note { set; get; }
         private object _Employee;
         public object Employee { get { return _Employee; } }
@@ -60,7 +60,7 @@ namespace DataBusinessLayer
 
         private bool _AddEmployeeAttendance()
         {
-            _AttendanceID = clsEmployeeAttendanceData.AddEmployeeAttendanceData(EmployeeID, IsCheckin, IsCheckout, Note, Date);
+            _AttendanceID = clsEmployeeAttendanceData.AddEmployeeAttendanceData(EmployeeID, IsCheckin, IsCheckout, Note, DateTime.Today);
 
             return (_AttendanceID != -1);
         }
@@ -71,7 +71,7 @@ namespace DataBusinessLayer
 
         }
 
-        static public object Find(int AttendanceID)
+        static public clsEmployeeAttendance Find(int AttendanceID)
         {
             int EmployeeID = -1;
             bool IsCheckin = false, IsCheckout = false;
@@ -86,7 +86,7 @@ namespace DataBusinessLayer
                 return null;
         }
 
-        static public object FindByEmployeeID(int EmployeeID)
+        static public clsEmployeeAttendance FindByEmployeeID(int EmployeeID)
         {
             int AttendanceID = -1;
             bool IsCheckin = false, IsCheckout = false;
