@@ -559,7 +559,6 @@
             this.guna2Button2.TabIndex = 17;
             this.guna2Button2.Text = "Manage Coaches";
             this.guna2Button2.TextOffset = new System.Drawing.Point(-12, 0);
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_2);
             // 
             // frmDashboard
             // 
