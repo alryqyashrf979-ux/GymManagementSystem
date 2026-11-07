@@ -14,7 +14,7 @@ namespace DataBusinessLayer
         public int EmployeeID { get { return this._EmployeeID; }}
         public int PersonID { get; set; }
         public int ShiftID { set; get; }
-        public string Title { get; set; }
+        public int TitleID { get; set; }
         public float Salary { get; set; }
         public DateTime HiredDate { set; get; }
         public DateTime? TerminationDate { set; get; }
@@ -35,7 +35,7 @@ namespace DataBusinessLayer
             this._EmployeeID = -1;
             this.PersonID = -1;
             this.ShiftID = -1;
-            this.Title = string.Empty;
+            this.TitleID = -1;
             this.Salary = 0;
 
             this.HiredDate = DateTime.Now;
@@ -46,12 +46,12 @@ namespace DataBusinessLayer
             this._Mode = enMode.AddMode;
         }
         //
-        clsEmployees(int EmployeeID,int PersonID,int ShiftID,string Title,float Salary,DateTime HiredDate,DateTime? TerminationDate, string Notes,bool IsActive)
+        clsEmployees(int EmployeeID,int PersonID,int ShiftID,int TitleID,float Salary,DateTime HiredDate,DateTime? TerminationDate, string Notes,bool IsActive)
         {
             this._EmployeeID = EmployeeID;
             this.PersonID = PersonID;
             this.ShiftID = ShiftID;
-            this.Title = Title;
+            this.TitleID = TitleID;
             this.Salary = Salary;
             this.HiredDate = HiredDate;
             this.Notes = Notes;
@@ -64,14 +64,14 @@ namespace DataBusinessLayer
 
         private bool _AddEmployee()
         {
-            this._EmployeeID = clsEmployeesData.AddEmployee(this.PersonID, this.Title,this.Salary, this.Notes, this.IsActive, this.ShiftID);
+            this._EmployeeID = clsEmployeesData.AddEmployee(this.PersonID, this.TitleID,this.Salary, this.Notes, this.IsActive, this.ShiftID);
 
             return this._EmployeeID != -1;
         }
 
         private bool _UpdateEmployee()
         {
-            return clsEmployeesData.UpdateEmployee(this._EmployeeID, this.PersonID, this.Title, this.Salary, this.HiredDate, this.Notes, this.IsActive, this.ShiftID);
+            return clsEmployeesData.UpdateEmployee(this._EmployeeID, this.PersonID, this.TitleID, this.Salary, this.HiredDate, this.Notes, this.IsActive, this.ShiftID);
         }
         public static DataTable GetAllEmployees()
         {
@@ -105,15 +105,15 @@ namespace DataBusinessLayer
         static public clsEmployees FindByEmployeeID(int EmployeeID)
         {
             int PersonID = -1, ShiftID = -1;
-            string Title = string.Empty,Notes=string.Empty;
+            int TitleID = -1;string Notes=string.Empty;
             float Salary = 0;
             DateTime HiredDate = DateTime.Now;DateTime? TerminationDate = DateTime.Now;
             bool IsActive = false;                  //? to handle allows null
 
-            bool IsFound = clsEmployeesData.FindByEmployeeID(EmployeeID,ref PersonID,ref Title,ref Salary,ref HiredDate,ref TerminationDate ,ref Notes,ref IsActive,ref ShiftID);
+            bool IsFound = clsEmployeesData.FindByEmployeeID(EmployeeID,ref PersonID,ref TitleID,ref Salary,ref HiredDate,ref TerminationDate ,ref Notes,ref IsActive,ref ShiftID);
                                                
             if (IsFound)
-                return new clsEmployees(EmployeeID, PersonID, ShiftID, Title, Salary, HiredDate,TerminationDate, Notes, IsActive);
+                return new clsEmployees(EmployeeID, PersonID, ShiftID, TitleID, Salary, HiredDate,TerminationDate, Notes, IsActive);
             else
                 return null;
         }
@@ -122,16 +122,16 @@ namespace DataBusinessLayer
         static public clsEmployees FindByNationalNu(string NationalNu)
         {
             int PersonID = -1, ShiftID = -1;
-            string Title = string.Empty, Notes = string.Empty;
+            int TitleID = -1;string Notes = string.Empty;
             float Salary = 0;
             DateTime HiredDate = DateTime.Now; DateTime? TerminationDate = DateTime.Now;
             bool IsActive = false;                  //? to handle allows null
             int EmployeeID = -1;
 
-            bool IsFound = clsEmployeesData.FindByNationalNu(NationalNu, ref PersonID, ref EmployeeID, ref Title, ref Salary, ref HiredDate, ref TerminationDate, ref Notes, ref IsActive, ref ShiftID);
+            bool IsFound = clsEmployeesData.FindByNationalNu(NationalNu, ref PersonID, ref EmployeeID, ref TitleID, ref Salary, ref HiredDate, ref TerminationDate, ref Notes, ref IsActive, ref ShiftID);
 
             if (IsFound)
-                return new clsEmployees(EmployeeID, PersonID, ShiftID, Title, Salary, HiredDate, TerminationDate, Notes, IsActive);
+                return new clsEmployees(EmployeeID, PersonID, ShiftID, TitleID, Salary, HiredDate, TerminationDate, Notes, IsActive);
             else
                 return null;
         }
@@ -145,15 +145,15 @@ namespace DataBusinessLayer
         static public clsEmployees FindByPersonID(int PersonID)
         {
             int EmployeeID = -1, ShiftID = -1;
-            string Title = string.Empty, Notes = string.Empty;
+            int TitleID = -1;string Notes = string.Empty;
             float Salary = 0;
             DateTime HiredDate = DateTime.Now; DateTime? TerminationDate = DateTime.Now;
             bool IsActive = false;                  //? to handle allows null
 
-            bool IsFound = clsEmployeesData.FindByEmployeeID(PersonID, ref EmployeeID, ref Title, ref Salary, ref HiredDate, ref TerminationDate, ref Notes, ref IsActive, ref ShiftID);
+            bool IsFound = clsEmployeesData.FindByEmployeeID(PersonID, ref EmployeeID, ref TitleID, ref Salary, ref HiredDate, ref TerminationDate, ref Notes, ref IsActive, ref ShiftID);
 
             if (IsFound)
-                return new clsEmployees(EmployeeID, PersonID, ShiftID, Title, Salary, HiredDate,TerminationDate, Notes, IsActive);
+                return new clsEmployees(EmployeeID, PersonID, ShiftID, TitleID, Salary, HiredDate,TerminationDate, Notes, IsActive);
             else
                 return null;
         }

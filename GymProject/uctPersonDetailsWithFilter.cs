@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,7 +22,14 @@ namespace GymMangementSystem
         {
             get => uctPersonDetails1.PersonInfo;
         }
-
+        public bool EnableFiltering
+        {
+            set
+            {
+                gbFilter.Enabled = value;
+            }
+           
+        }
       
         public uctPersonDetailsWithFilter()
         {
@@ -57,11 +65,7 @@ namespace GymMangementSystem
             tbSearch.Focus();
         }
 
-        public void DisableFiltering()
-        {
       
-            gbFilter.Enabled = false;
-        }
 
       
         public void LoadPersonInfo(int PersonID)

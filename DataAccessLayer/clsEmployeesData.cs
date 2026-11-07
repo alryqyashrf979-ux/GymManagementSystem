@@ -54,10 +54,10 @@ namespace DataAccessLayer
             }
         }
 
-        static public int AddEmployee(int PersonID,string Title,float Salary,string Notes,bool IsActive,int ShiftID)
+        static public int AddEmployee(int PersonID,int TitleID,float Salary,string Notes,bool IsActive,int ShiftID)
         {
             string query = "INSERT INTO [dbo].[Employees]([PersonID],[Title],[Salary],[HiredDate],[Notes],[IsActive],[ShiftID])" +
-                " VALUES (@PersonID,@Title,@Salary,@HiredDate,@Notes,@IsActive,@ShiftID); Select scope_Identity()";
+                " VALUES (@PersonID,@TitleID,@Salary,@HiredDate,@Notes,@IsActive,@ShiftID); Select scope_Identity()";
 
             try
             {
@@ -67,7 +67,7 @@ namespace DataAccessLayer
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("PersonID", PersonID);
-                        command.Parameters.AddWithValue("Title", Title);
+                        command.Parameters.AddWithValue("TitleID", TitleID);
                         command.Parameters.AddWithValue("Salary", Salary);
                         command.Parameters.AddWithValue("HiredDate", DateTime.Now);
 
@@ -99,11 +99,11 @@ namespace DataAccessLayer
       
 
 
-        static public bool UpdateEmployee(int EmployeeID,int PersonID,string Title,float Salary,DateTime HiredDate,string Notes,bool IsActive,int ShiftID)
+        static public bool UpdateEmployee(int EmployeeID,int PersonID,int TitleID,float Salary,DateTime HiredDate,string Notes,bool IsActive,int ShiftID)
         {
             string query = "UPDATE [dbo].[Employees] SET" +
                 " [PersonID] =@PersonID," +
-                "[Title] =@Title," +
+                "[TitleID] =@TitleID," +
                 "[Salary] =@Salary," +
                 "[HiredDate] = @HiredDate," +
                 "[TerminationDate] = @TerminationDate," +
@@ -121,7 +121,7 @@ namespace DataAccessLayer
                     {
                         command.Parameters.AddWithValue("EmployeeID", EmployeeID);
                         command.Parameters.AddWithValue("PersonID", PersonID);
-                        command.Parameters.AddWithValue("Title", Title);
+                        command.Parameters.AddWithValue("TitleID", TitleID);
                         command.Parameters.AddWithValue("Salary", Salary);
                         command.Parameters.AddWithValue("HiredDate", HiredDate);
 
@@ -143,7 +143,7 @@ namespace DataAccessLayer
                 return false;
             }
         }
-        static public bool FindByNationalNu(string NatoinalNu, ref int PersonID, ref int EmployeeID, ref string Title, ref float Salary, ref DateTime HiredDate, ref DateTime? TerminationDate, ref string Notes, ref bool IsActive, ref int ShiftID)
+        static public bool FindByNationalNu(string NatoinalNu, ref int PersonID, ref int EmployeeID, ref int TitleID, ref float Salary, ref DateTime HiredDate, ref DateTime? TerminationDate, ref string Notes, ref bool IsActive, ref int ShiftID)
         {                                                                                                                                   // ? because allows null .
             string query = "Select Employees.* from Employees join People on Employees.PersonID=People.ID where  People.NationalID=@NatoinalNu;";
 
@@ -162,7 +162,7 @@ namespace DataAccessLayer
                             {
                                 PersonID = (int)reader["PersonID"];
                                 EmployeeID = (int)reader["EmployeeID"];
-                                Title = (string)reader["Title"];
+                                TitleID = (int)reader["TitleID"];
                                 Salary = (float)reader["Salary"];
 
                                 if (reader["HiredDate"] == DBNull.Value)
@@ -196,7 +196,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool FindByEmployeeID(int EmployeeID,ref int PersonID,ref string Title,ref float Salary,ref DateTime HiredDate,ref DateTime? TerminationDate,ref string Notes,ref bool IsActive,ref int ShiftID)
+        static public bool FindByEmployeeID(int EmployeeID,ref int PersonID,ref int TitleID,ref float Salary,ref DateTime HiredDate,ref DateTime? TerminationDate,ref string Notes,ref bool IsActive,ref int ShiftID)
         {                                                                                                                                   // ? because allows null .
             string query = "Select *from Employees where EmployeeID=@EmployeeID;";
 
@@ -214,7 +214,7 @@ namespace DataAccessLayer
                             if(reader.Read())
                             {
                                 PersonID = (int)reader["PersonID"];
-                                Title = (string)reader["Title"];
+                                TitleID = (int)reader["TitleID"];
                                 Salary = (float)reader["Salary"];
 
                                 if(reader["HiredDate"]==DBNull.Value)
