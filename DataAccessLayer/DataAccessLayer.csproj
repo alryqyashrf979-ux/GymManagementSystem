@@ -60,6 +60,7 @@
     <Compile Include="clsSubscriptionChangesData.cs" />
     <Compile Include="clsSubscriptionPlansDataAccess.cs" />
     <Compile Include="clsSubscriptionsData.cs" />
+    <Compile Include="clsTitlesData.cs" />
     <Compile Include="clsUsersData.cs" />
     <Compile Include="DataAccessSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
