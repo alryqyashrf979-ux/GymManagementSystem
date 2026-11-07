@@ -51,14 +51,14 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.gtsIsActive = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.myTextBox2 = new GymMangementSystem.MyTextBox();
-            this.myTextBox1 = new GymMangementSystem.MyTextBox();
+            this.cmTitle = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmShift = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpHiredDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtSalary = new GymMangementSystem.MyTextBox();
+            this.txtNote = new GymMangementSystem.MyTextBox();
             this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -326,21 +326,21 @@
             this.pictureBox7.TabIndex = 139;
             this.pictureBox7.TabStop = false;
             // 
-            // guna2ToggleSwitch1
+            // gtsIsActive
             // 
-            this.guna2ToggleSwitch1.Checked = true;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(919, 445);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
-            this.guna2ToggleSwitch1.TabIndex = 141;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.gtsIsActive.Checked = true;
+            this.gtsIsActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gtsIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gtsIsActive.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.gtsIsActive.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.gtsIsActive.Location = new System.Drawing.Point(919, 445);
+            this.gtsIsActive.Name = "gtsIsActive";
+            this.gtsIsActive.Size = new System.Drawing.Size(35, 20);
+            this.gtsIsActive.TabIndex = 141;
+            this.gtsIsActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gtsIsActive.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gtsIsActive.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.gtsIsActive.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // guna2VSeparator1
             // 
@@ -356,95 +356,95 @@
             this.guna2VSeparator2.Size = new System.Drawing.Size(10, 84);
             this.guna2VSeparator2.TabIndex = 143;
             // 
-            // guna2ComboBox1
+            // cmTitle
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 7;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(135, 433);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(214, 36);
-            this.guna2ComboBox1.TabIndex = 144;
+            this.cmTitle.BackColor = System.Drawing.Color.Transparent;
+            this.cmTitle.BorderRadius = 7;
+            this.cmTitle.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmTitle.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmTitle.ItemHeight = 30;
+            this.cmTitle.Location = new System.Drawing.Point(135, 433);
+            this.cmTitle.Name = "cmTitle";
+            this.cmTitle.Size = new System.Drawing.Size(214, 36);
+            this.cmTitle.TabIndex = 144;
             // 
-            // guna2ComboBox2
+            // cmShift
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 7;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(552, 481);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(214, 36);
-            this.guna2ComboBox2.TabIndex = 145;
+            this.cmShift.BackColor = System.Drawing.Color.Transparent;
+            this.cmShift.BorderRadius = 7;
+            this.cmShift.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmShift.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmShift.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmShift.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmShift.ItemHeight = 30;
+            this.cmShift.Location = new System.Drawing.Point(552, 481);
+            this.cmShift.Name = "cmShift";
+            this.cmShift.Size = new System.Drawing.Size(214, 36);
+            this.cmShift.TabIndex = 145;
             // 
-            // guna2DateTimePicker1
+            // dtpHiredDate
             // 
-            this.guna2DateTimePicker1.BorderRadius = 7;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(552, 437);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(214, 36);
-            this.guna2DateTimePicker1.TabIndex = 147;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2026, 11, 7, 2, 24, 25, 610);
+            this.dtpHiredDate.BorderRadius = 7;
+            this.dtpHiredDate.Checked = true;
+            this.dtpHiredDate.FillColor = System.Drawing.Color.White;
+            this.dtpHiredDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpHiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpHiredDate.Location = new System.Drawing.Point(552, 437);
+            this.dtpHiredDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpHiredDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpHiredDate.Name = "dtpHiredDate";
+            this.dtpHiredDate.Size = new System.Drawing.Size(214, 36);
+            this.dtpHiredDate.TabIndex = 147;
+            this.dtpHiredDate.Value = new System.DateTime(2026, 11, 7, 2, 24, 25, 610);
             // 
-            // myTextBox2
+            // txtSalary
             // 
-            this.myTextBox2.BorderRadius = 7;
-            this.myTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.myTextBox2.DefaultText = "";
-            this.myTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.myTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.myTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox2.ErrorMessage = "This Field is Required";
-            this.myTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.myTextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox2.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.myTextBox2.IsRequired = false;
-            this.myTextBox2.Location = new System.Drawing.Point(135, 475);
-            this.myTextBox2.Name = "myTextBox2";
-            this.myTextBox2.PlaceholderText = "";
-            this.myTextBox2.SelectedText = "";
-            this.myTextBox2.Size = new System.Drawing.Size(214, 36);
-            this.myTextBox2.TabIndex = 146;
+            this.txtSalary.BorderRadius = 7;
+            this.txtSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSalary.DefaultText = "";
+            this.txtSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.ErrorMessage = "This Field is Required";
+            this.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtSalary.IsRequired = false;
+            this.txtSalary.Location = new System.Drawing.Point(135, 475);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.PlaceholderText = "";
+            this.txtSalary.SelectedText = "";
+            this.txtSalary.Size = new System.Drawing.Size(214, 36);
+            this.txtSalary.TabIndex = 146;
             // 
-            // myTextBox1
+            // txtNote
             // 
-            this.myTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.myTextBox1.DefaultText = "";
-            this.myTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.myTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.myTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.myTextBox1.ErrorMessage = "This Field is Required";
-            this.myTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.myTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.myTextBox1.InputType = GymMangementSystem.MyTextBox.TextType.Text;
-            this.myTextBox1.IsRequired = false;
-            this.myTextBox1.Location = new System.Drawing.Point(120, 523);
-            this.myTextBox1.Name = "myTextBox1";
-            this.myTextBox1.PlaceholderText = "Enter your Note...";
-            this.myTextBox1.SelectedText = "";
-            this.myTextBox1.Size = new System.Drawing.Size(584, 71);
-            this.myTextBox1.TabIndex = 134;
+            this.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNote.DefaultText = "";
+            this.txtNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNote.ErrorMessage = "This Field is Required";
+            this.txtNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNote.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtNote.IsRequired = false;
+            this.txtNote.Location = new System.Drawing.Point(120, 523);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.PlaceholderText = "Enter your Note...";
+            this.txtNote.SelectedText = "";
+            this.txtNote.Size = new System.Drawing.Size(584, 71);
+            this.txtNote.TabIndex = 134;
             // 
             // uctPersonDetailsWithFilter1
             // 
@@ -462,19 +462,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(968, 606);
-            this.Controls.Add(this.guna2DateTimePicker1);
-            this.Controls.Add(this.myTextBox2);
-            this.Controls.Add(this.guna2ComboBox2);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.dtpHiredDate);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.cmShift);
+            this.Controls.Add(this.cmTitle);
             this.Controls.Add(this.guna2VSeparator2);
             this.Controls.Add(this.guna2VSeparator1);
-            this.Controls.Add(this.guna2ToggleSwitch1);
+            this.Controls.Add(this.gtsIsActive);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.myTextBox1);
+            this.Controls.Add(this.txtNote);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
@@ -526,19 +526,19 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private MyTextBox myTextBox1;
+        private MyTextBox txtNote;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch gtsIsActive;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private MyTextBox myTextBox2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmTitle;
+        private Guna.UI2.WinForms.Guna2ComboBox cmShift;
+        private MyTextBox txtSalary;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpHiredDate;
     }
 }
