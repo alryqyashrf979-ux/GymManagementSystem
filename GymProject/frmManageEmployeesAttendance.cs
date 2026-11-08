@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,106 @@ namespace GymMangementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        DataTable _dtEmployeesAttendance;
+        private void frmManageEmployeesAttendance_Load(object sender, EventArgs e)
+        {
+            RefreshDate();
+        }
+
+
+        void RefreshDate()
+        {
+            _dtEmployeesAttendance = clsEmployeeAttendance.GetAllEmployeeAttendance();
+
+            dgvEmployeesAttendance.DataSource = _dtEmployeesAttendance;
+
+            lblRecord.Text=dgvEmployeesAttendance.Rows.Count.ToString();    
+
+        }
+
+        private void cmSelectTypeOfFiltering_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFiltering.Visible = (cmSelectTypeOfFiltering.Text != "None" && cmSelectTypeOfFiltering.Text != "Status"&& cmSelectTypeOfFiltering.Text != "Date");
+            cmCheckType.Visible = cmSelectTypeOfFiltering.Text == "Status";
+            dtpDate.Visible = cmSelectTypeOfFiltering.Text == "Date";
+
+            txtFiltering.Clear();
+            txtFiltering.Focus();
+            _dtEmployeesAttendance.DefaultView.RowFilter = "";
+            lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
+
+
+            if (cmSelectTypeOfFiltering.Text == "Name")
+                txtFiltering.InputType = MyTextBox.TextType.Text;
+            else
+                txtFiltering.InputType = MyTextBox.TextType.Numeric;
+
+
+
+        }
+
+        private void btnAddNewPayment_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateEmployeeAttendance frm=new frmAddUpdateEmployeeAttendance();
+            frm.ShowDialog();
+            RefreshDate();
+        }
+
+        private void cmCheckType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            if (cmCheckType.Text == "All")
+            {
+
+                _dtEmployeesAttendance.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
+                return;
+
+            }
+
+
+            _dtEmployeesAttendance.DefaultView.RowFilter=$"[{cmCheckType.Text}] = [{true}]";
+
+            lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
+
+        }
+
+        private void txtFiltering_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+            if(string.IsNullOrEmpty(txtFiltering.Text))
+            {
+                _dtEmployeesAttendance.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
+                return;
+            }
+
+            
+            if(txtFiltering.InputType == MyTextBox.TextType.Numeric)
+                _dtEmployeesAttendance.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text}] = [{txtFiltering.Text}]";
+            else
+                _dtEmployeesAttendance.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text}] like [{txtFiltering.Text}]";
+
+
+            lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
+
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedValue = dtpDate.Value;
+            string timeString = selectedValue.ToString("yyyy/MM/dd");
+
+
+
+            _dtEmployeesAttendance.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text.Trim()}] = '{timeString}' ";
+
+            lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
         }
     }
 }
