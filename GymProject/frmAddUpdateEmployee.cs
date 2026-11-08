@@ -40,7 +40,7 @@ namespace GymMangementSystem
                 btnSave.Enabled = false;
                 return;
             }
-
+            pnlEmployeeInput.Enabled = true;
             uctPersonDetailsWithFilter1.EnableFiltering = false;
             uctPersonDetailsWithFilter1.LoadPersonInfo(_EmployeeInfo.PersonID);
             cmTitle.SelectedValue = _EmployeeInfo.TitleID ;
@@ -112,10 +112,17 @@ namespace GymMangementSystem
 
         private void uctPersonDetailsWithFilter1_OnPersonSelected(object sender, uctPersonDetailsWithFilter.PersonEventArg e)
         {
-            if (e.PersonInfo == null)
-                btnSave.Enabled = false;
-            else
+            btnSave.Enabled = false;
+            pnlEmployeeInput.Enabled = false;   
+
+
+            if(e.PersonInfo!=null)
+            {
                 btnSave.Enabled = true;
+                pnlEmployeeInput.Enabled= true;
+            }
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
