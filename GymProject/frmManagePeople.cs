@@ -152,14 +152,16 @@ namespace GymMangementSystem
 
         private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if((MessageBox.Show("Are you sure to delete this person ?!","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes))
-            if (clsPeople.DeletePerson((int)dgvShowPeopleList.CurrentRow.Cells[0].Value))
+            int Index =(int) dgvShowPeopleList.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure you want to delete Person [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsPeople.DeletePerson(Index))
             {
                 MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _RefreshDataTable();
             }
             else
-               MessageBox.Show("Error : Failed to delete Person.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Person was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
         }
 
