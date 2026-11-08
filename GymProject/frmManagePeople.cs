@@ -136,5 +136,38 @@ namespace GymMangementSystem
             _RefreshDataTable();
 
         }
+
+        private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmPersonDetails();
+            frm.ShowDialog();
+        }
+
+        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddPerson frm = new frmAddPerson();
+            frm.ShowDialog();
+            _RefreshDataTable();
+        }
+
+        private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if((MessageBox.Show("Are you sure to delete this person ?!","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes))
+            if (clsPeople.DeletePerson((int)dgvShowPeopleList.CurrentRow.Cells[0].Value))
+            {
+                MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _RefreshDataTable();
+            }
+            else
+               MessageBox.Show("Error : Failed to delete Person.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddPerson frm = new frmAddPerson((int)dgvShowPeopleList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshDataTable();
+        }
     }
 }
