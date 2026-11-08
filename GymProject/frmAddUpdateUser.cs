@@ -51,13 +51,11 @@ namespace GymMangementSystem
             if (_Mode == enMode.AddMode)
             {
                 tpLoginInfo.Enabled = false;
-                lblTitle.Text = "Add User";
                 lblTitle2.Text = "Add User";
                 _User = new clsUsers();
             }
             else
             {
-                lblTitle.Text = "Update User";
                 lblTitle2.Text = "Update User";
                 tpLoginInfo.Enabled = true;
                 btnSave.Enabled = true;
@@ -235,7 +233,6 @@ namespace GymMangementSystem
 
             if (_User.Save())
             {
-                lblTitle.Text = "Update User";
                 lblTitle2.Text = "Update User";
                 _Mode = enMode.UpdateMode;
                 lblUserID.Text = _User.UserID.ToString();
