@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubscriPtions = new Guna.UI2.WinForms.Guna2Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -56,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -83,10 +83,35 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(202, 659);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 5;
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.Manage_employees;
+            this.guna2Button2.ImageOffset = new System.Drawing.Point(-12, 0);
+            this.guna2Button2.ImageSize = new System.Drawing.Size(65, 39);
+            this.guna2Button2.Location = new System.Drawing.Point(3, 839);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(261, 62);
+            this.guna2Button2.TabIndex = 17;
+            this.guna2Button2.Text = "Manage Coaches";
+            this.guna2Button2.TextOffset = new System.Drawing.Point(-12, 0);
             // 
             // guna2Button1
             // 
@@ -106,7 +131,7 @@
             this.guna2Button1.ImageOffset = new System.Drawing.Point(-28, 0);
             this.guna2Button1.ImageSize = new System.Drawing.Size(60, 55);
             this.guna2Button1.Location = new System.Drawing.Point(-4, 520);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(191, 50);
             this.guna2Button1.TabIndex = 16;
@@ -133,7 +158,7 @@
             this.btnSubscriPtions.ImageOffset = new System.Drawing.Point(-15, 0);
             this.btnSubscriPtions.ImageSize = new System.Drawing.Size(43, 34);
             this.btnSubscriPtions.Location = new System.Drawing.Point(2, 369);
-            this.btnSubscriPtions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubscriPtions.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubscriPtions.Name = "btnSubscriPtions";
             this.btnSubscriPtions.Size = new System.Drawing.Size(191, 50);
             this.btnSubscriPtions.TabIndex = 15;
@@ -218,7 +243,7 @@
             this.btnManageEmployees.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnManageEmployees.ImageSize = new System.Drawing.Size(65, 39);
             this.btnManageEmployees.Location = new System.Drawing.Point(-2, 621);
-            this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageEmployees.Name = "btnManageEmployees";
             this.btnManageEmployees.Size = new System.Drawing.Size(196, 50);
             this.btnManageEmployees.TabIndex = 14;
@@ -244,7 +269,7 @@
             this.btnMangePayment.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnMangePayment.ImageSize = new System.Drawing.Size(55, 39);
             this.btnMangePayment.Location = new System.Drawing.Point(-2, 567);
-            this.btnMangePayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMangePayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnMangePayment.Name = "btnMangePayment";
             this.btnMangePayment.Size = new System.Drawing.Size(190, 50);
             this.btnMangePayment.TabIndex = 13;
@@ -270,7 +295,7 @@
             this.btnManageClasses.ImageOffset = new System.Drawing.Point(-11, 0);
             this.btnManageClasses.ImageSize = new System.Drawing.Size(65, 39);
             this.btnManageClasses.Location = new System.Drawing.Point(-2, 466);
-            this.btnManageClasses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManageClasses.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageClasses.Name = "btnManageClasses";
             this.btnManageClasses.Size = new System.Drawing.Size(199, 50);
             this.btnManageClasses.TabIndex = 12;
@@ -296,7 +321,7 @@
             this.btnManageTrainers.ImageOffset = new System.Drawing.Point(-8, 0);
             this.btnManageTrainers.ImageSize = new System.Drawing.Size(65, 39);
             this.btnManageTrainers.Location = new System.Drawing.Point(-2, 414);
-            this.btnManageTrainers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManageTrainers.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageTrainers.Name = "btnManageTrainers";
             this.btnManageTrainers.Size = new System.Drawing.Size(196, 50);
             this.btnManageTrainers.TabIndex = 11;
@@ -321,7 +346,7 @@
             this.btnManageMember.ImageOffset = new System.Drawing.Point(-6, 0);
             this.btnManageMember.ImageSize = new System.Drawing.Size(69, 39);
             this.btnManageMember.Location = new System.Drawing.Point(0, 322);
-            this.btnManageMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManageMember.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageMember.Name = "btnManageMember";
             this.btnManageMember.Size = new System.Drawing.Size(195, 50);
             this.btnManageMember.TabIndex = 10;
@@ -347,7 +372,7 @@
             this.btnManageUser.ImageOffset = new System.Drawing.Point(-15, 0);
             this.btnManageUser.ImageSize = new System.Drawing.Size(80, 39);
             this.btnManageUser.Location = new System.Drawing.Point(0, 271);
-            this.btnManageUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManageUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageUser.Name = "btnManageUser";
             this.btnManageUser.Size = new System.Drawing.Size(194, 50);
             this.btnManageUser.TabIndex = 9;
@@ -372,10 +397,10 @@
             this.btnManagePeople.Image = global::GymMangementSystem.Properties.Resources.managepeople;
             this.btnManagePeople.ImageOffset = new System.Drawing.Point(-13, 0);
             this.btnManagePeople.ImageSize = new System.Drawing.Size(70, 39);
-            this.btnManagePeople.Location = new System.Drawing.Point(5, 267);
+            this.btnManagePeople.Location = new System.Drawing.Point(4, 224);
             this.btnManagePeople.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManagePeople.Name = "btnManagePeople";
-            this.btnManagePeople.Size = new System.Drawing.Size(190, 50);
+            this.btnManagePeople.Size = new System.Drawing.Size(198, 50);
             this.btnManagePeople.TabIndex = 8;
             this.btnManagePeople.Text = "Manage People";
             this.btnManagePeople.TextOffset = new System.Drawing.Point(-13, 0);
@@ -400,7 +425,7 @@
             this.btnDashboard.ImageOffset = new System.Drawing.Point(-19, 0);
             this.btnDashboard.ImageSize = new System.Drawing.Size(75, 39);
             this.btnDashboard.Location = new System.Drawing.Point(4, 160);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(183, 50);
             this.btnDashboard.TabIndex = 7;
@@ -438,7 +463,7 @@
             this.guna2PictureBox1.Image = global::GymMangementSystem.Properties.Resources.Dnabale;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(-4, 2);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(188, 89);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -459,7 +484,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.guna2Panel3.Location = new System.Drawing.Point(202, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(826, 64);
             this.guna2Panel3.TabIndex = 1;
@@ -495,7 +520,7 @@
             this.pbCurrentUser.Image = global::GymMangementSystem.Properties.Resources.Male;
             this.pbCurrentUser.ImageRotate = 0F;
             this.pbCurrentUser.Location = new System.Drawing.Point(949, 6);
-            this.pbCurrentUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbCurrentUser.Margin = new System.Windows.Forms.Padding(2);
             this.pbCurrentUser.Name = "pbCurrentUser";
             this.pbCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pbCurrentUser.Size = new System.Drawing.Size(48, 52);
@@ -530,35 +555,10 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 659);
             this.panel1.TabIndex = 9;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button2.Image = global::GymMangementSystem.Properties.Resources.Manage_employees;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(-12, 0);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(65, 39);
-            this.guna2Button2.Location = new System.Drawing.Point(3, 839);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(261, 62);
-            this.guna2Button2.TabIndex = 17;
-            this.guna2Button2.Text = "Manage Coaches";
-            this.guna2Button2.TextOffset = new System.Drawing.Point(-12, 0);
             // 
             // frmDashboard
             // 
@@ -573,7 +573,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Gym Management System";
