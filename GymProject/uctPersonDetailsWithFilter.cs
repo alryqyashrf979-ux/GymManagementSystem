@@ -105,7 +105,7 @@ namespace GymMangementSystem
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            frmAddPerson frm = new frmAddPerson();
+            frmAddUpdatePerson frm = new frmAddUpdatePerson();
             frm.DataBack += DataBackEvent;
             frm.ShowDialog();
         }

@@ -1,6 +1,6 @@
 ﻿namespace GymMangementSystem
 {
-    partial class frmAddPerson
+    partial class frmAddUpdatePerson
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPerson));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdatePerson));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtPhoneNumber = new GymMangementSystem.MyTextBox();
             this.txtAddress = new GymMangementSystem.MyTextBox();

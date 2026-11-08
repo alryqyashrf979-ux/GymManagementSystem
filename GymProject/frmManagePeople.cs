@@ -131,7 +131,7 @@ namespace GymMangementSystem
 
         private void btnAddPerson_Click(object sender, EventArgs e)
         {
-            frmAddPerson frm = new frmAddPerson();
+            frmAddUpdatePerson frm = new frmAddUpdatePerson();
             frm.ShowDialog();
             _RefreshDataTable();
 
@@ -145,7 +145,7 @@ namespace GymMangementSystem
 
         private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddPerson frm = new frmAddPerson();
+            frmAddUpdatePerson frm = new frmAddUpdatePerson();
             frm.ShowDialog();
             _RefreshDataTable();
         }
@@ -165,7 +165,7 @@ namespace GymMangementSystem
 
         private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddPerson frm = new frmAddPerson((int)dgvShowPeopleList.CurrentRow.Cells[0].Value);
+            frmAddUpdatePerson frm = new frmAddUpdatePerson((int)dgvShowPeopleList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefreshDataTable();
         }

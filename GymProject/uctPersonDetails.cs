@@ -123,7 +123,7 @@ namespace GymMangementSystem
 
         private void lnkEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmAddPerson frm=new frmAddPerson(PersonInfo.PersonID);
+            frmAddUpdatePerson frm=new frmAddUpdatePerson(PersonInfo.PersonID);
             frm.ShowDialog();
             LoadPersonInfo(PersonInfo.PersonID);
 
