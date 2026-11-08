@@ -1,6 +1,6 @@
 ﻿namespace GymMangementSystem
 {
-    partial class uctPersonDetailsWithFilter
+    partial class ctrlPersonDetailsWithFilter
     {
         /// <summary> 
         /// Required designer variable.

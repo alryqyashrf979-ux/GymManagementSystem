@@ -35,7 +35,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.ctrlPersonDetailsWithFilter();
             this.pnlEmployeeInput = new Guna.UI2.WinForms.Guna2Panel();
             this.txtNote = new GymMangementSystem.MyTextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
@@ -182,7 +182,7 @@
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
             this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1210, 442);
             this.uctPersonDetailsWithFilter1.TabIndex = 124;
-            this.uctPersonDetailsWithFilter1.OnPersonSelected += new System.EventHandler<GymMangementSystem.uctPersonDetailsWithFilter.PersonEventArg>(this.uctPersonDetailsWithFilter1_OnPersonSelected);
+            this.uctPersonDetailsWithFilter1.OnPersonSelected += new System.EventHandler<GymMangementSystem.ctrlPersonDetailsWithFilter.PersonEventArg>(this.uctPersonDetailsWithFilter1_OnPersonSelected);
             // 
             // pnlEmployeeInput
             // 
@@ -569,7 +569,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private uctPersonDetailsWithFilter uctPersonDetailsWithFilter1;
+        private ctrlPersonDetailsWithFilter uctPersonDetailsWithFilter1;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Panel pnlEmployeeInput;

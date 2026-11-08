@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class uctPersonDetailsWithFilter : UserControl
+    public partial class ctrlPersonDetailsWithFilter : UserControl
     {
         public int PersonID
         {
@@ -31,7 +31,7 @@ namespace GymMangementSystem
            
         }
       
-        public uctPersonDetailsWithFilter()
+        public ctrlPersonDetailsWithFilter()
         {
             InitializeComponent();
         }
