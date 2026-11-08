@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using DataBusinessLayer;
+using System.Runtime.InteropServices;
 
 namespace GymMangementSystem
 {
@@ -19,11 +20,14 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
-
-        private void frmManageUsers_Load(object sender, EventArgs e)
+        private void _RefreshData()
         {
             _AllUsers = clsUsers.GetAllUsers();
             dgvShowUserList.DataSource = _AllUsers;
+        }
+        private void frmManageUsers_Load(object sender, EventArgs e)
+        {
+            _RefreshData();
             cbValue.SelectedIndex = 0;
 
             if (dgvShowUserList.Rows.Count > 0)
@@ -137,25 +141,8 @@ namespace GymMangementSystem
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form frm = new frmAddUpdateUser();
-            frm.ShowDialog();
-            frmManageUsers_Load(null, null);
-        }
-
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frm = new frmAddUpdateUser((int)dgvShowUserList.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            frmManageUsers_Load(null, null);
-        }
-
-        private void showUserDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frm = new frmShowUserDetails((int)dgvShowUserList.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-        }
+      
+      
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -166,6 +153,54 @@ namespace GymMangementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm =new frmShowUserDetails((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateUser();
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void btnAddUpdateUser_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateUser();
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateUser((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int Index = (int)dgvShowUserList.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure you want to delete Person [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsUsers.DeleteUser(Index))
+                {
+                    MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshData();
+                }
+                else
+                    MessageBox.Show("User was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form frm = new frmChangePassword((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshData();
         }
     }
 }
