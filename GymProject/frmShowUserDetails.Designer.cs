@@ -48,7 +48,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(929, 37);
+            this.panel4.Size = new System.Drawing.Size(943, 37);
             this.panel4.TabIndex = 14;
             // 
             // panel1
@@ -99,7 +99,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(740, 440);
+            this.btnClose.Location = new System.Drawing.Point(792, 440);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(147, 39);
@@ -112,7 +112,7 @@
             this.ctrlUserDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlUserDetails1.Location = new System.Drawing.Point(1, 37);
             this.ctrlUserDetails1.Name = "ctrlUserDetails1";
-            this.ctrlUserDetails1.Size = new System.Drawing.Size(925, 398);
+            this.ctrlUserDetails1.Size = new System.Drawing.Size(942, 398);
             this.ctrlUserDetails1.TabIndex = 18;
             // 
             // frmShowUserDetails
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(929, 485);
+            this.ClientSize = new System.Drawing.Size(943, 485);
             this.Controls.Add(this.ctrlUserDetails1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
