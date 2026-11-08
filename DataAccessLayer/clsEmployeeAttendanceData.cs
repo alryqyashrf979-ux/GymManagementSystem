@@ -17,8 +17,9 @@ namespace DataAccessLayer
 
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = "select AttendanceID as 'Attendance ID' , EmployeeID as 'Employee ID',IsCheckin as 'Is Checkin'," +
-                "IsCheckout as 'Is Checkout',Note,Date from EmployeesAttendance;";
+            string query = @"select EA.AttendanceID as 'Attendance ID' , EA.EmployeeID as 'Employee ID',P.FirstName+' '+ p.SecondName +' '+p.LastName  as 'Employee Name' ,IsCheckin as 'Is Checkin',
+                IsCheckout as 'Is Checkout',Date from EmployeesAttendance EA join Employees E on e.EmployeeID=EA.EmployeeID join People P on 
+                p.ID=E.PersonID;";
 
             SqlCommand command = new SqlCommand(query, connection);
             try
