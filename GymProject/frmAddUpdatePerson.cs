@@ -15,11 +15,11 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class frmAddPerson : Form
+    public partial class frmAddUpdatePerson : Form
     {
         public delegate void DataBackEventHandler(int PersonID);
         public event DataBackEventHandler DataBack;
-        public frmAddPerson()
+        public frmAddUpdatePerson()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace GymMangementSystem
         private enum enGender { Male = 0, Female = 1 };
 
 
-        public frmAddPerson(int PersonID)
+        public frmAddUpdatePerson(int PersonID)
         {
             InitializeComponent();
             this._PersonID = PersonID;
