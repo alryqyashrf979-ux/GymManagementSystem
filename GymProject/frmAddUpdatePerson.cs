@@ -135,14 +135,12 @@ namespace GymMangementSystem
             if(_Mode==enMode.Addnew)
             {
                 lblTitle.Text = "Add Person";
-                this.Text = "Add Person";
                 _Person = new clsPeople();
 
             }
             else
             {
                 lblTitle.Text = "Update Person";
-                this.Text = "Update Person";
                 
             }
 
@@ -275,7 +273,6 @@ namespace GymMangementSystem
                 lblPersonID.Text = _Person.PersonID.ToString();
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update Person";
-                this.Text = "Update Person";
 
 
 
@@ -284,7 +281,7 @@ namespace GymMangementSystem
                 DataBack?.Invoke(_Person.PersonID);
             }
             else
-                MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Faild to Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
