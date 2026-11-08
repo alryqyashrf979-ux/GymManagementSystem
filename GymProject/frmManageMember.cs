@@ -161,5 +161,11 @@ namespace GymMangementSystem
         {
             this.Close();
         }
+
+        private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmShowMemberDetails((int)dgvMembersList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }
