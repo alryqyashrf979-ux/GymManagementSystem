@@ -110,7 +110,7 @@ namespace GymMangementSystem
 
         }
 
-        private void uctPersonDetailsWithFilter1_OnPersonSelected(object sender, uctPersonDetailsWithFilter.PersonEventArg e)
+        private void uctPersonDetailsWithFilter1_OnPersonSelected(object sender, ctrlPersonDetailsWithFilter.PersonEventArg e)
         {
             btnSave.Enabled = false;
             pnlEmployeeInput.Enabled = false;   

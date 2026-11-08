@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateUser));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.ctrlPersonDetailsWithFilter();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -1002,6 +1002,6 @@
         private System.Windows.Forms.CheckBox chkManageMembers;
         private System.Windows.Forms.CheckBox chkManagePeople;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
-        private uctPersonDetailsWithFilter uctPersonDetailsWithFilter1;
+        private ctrlPersonDetailsWithFilter uctPersonDetailsWithFilter1;
     }
 }

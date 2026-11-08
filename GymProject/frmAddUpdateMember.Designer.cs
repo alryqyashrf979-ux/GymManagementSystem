@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateMember));
             this.tcMemberInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.uctPersonDetailsWithFilter();
+            this.uctPersonDetailsWithFilter1 = new GymMangementSystem.ctrlPersonDetailsWithFilter();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -871,7 +871,7 @@
         private System.Windows.Forms.Label label1;
         private MyTextBox txtInActivationReason;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private uctPersonDetailsWithFilter uctPersonDetailsWithFilter1;
+        private ctrlPersonDetailsWithFilter uctPersonDetailsWithFilter1;
         private System.Windows.Forms.LinkLabel lnkAddSubscription;
     }
 }
