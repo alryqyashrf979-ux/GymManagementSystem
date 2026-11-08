@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using DataBusinessLayer;
 namespace GymMangementSystem
 {
-    public partial class uctPersonDetails : UserControl
+    public partial class ctrlPersonDetails : UserControl
     {
         private int _PersonID=-1;
         public int PersonID
@@ -26,7 +26,7 @@ namespace GymMangementSystem
             get { return _PersonInfo; }
         }
 
-        public uctPersonDetails()
+        public ctrlPersonDetails()
         {
             InitializeComponent();
         }

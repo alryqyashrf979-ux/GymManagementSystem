@@ -43,7 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtInActivationReason = new GymMangementSystem.MyTextBox();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
+            this.uctPersonDetails1 = new GymMangementSystem.ctrlPersonDetails();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -310,6 +310,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private MyTextBox txtInActivationReason;
-        private uctPersonDetails uctPersonDetails1;
+        private ctrlPersonDetails uctPersonDetails1;
     }
 }

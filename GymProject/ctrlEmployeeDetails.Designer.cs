@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
+            this.uctPersonDetails1 = new GymMangementSystem.ctrlPersonDetails();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblHiredDate = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -495,7 +495,7 @@
 
         #endregion
 
-        private uctPersonDetails uctPersonDetails1;
+        private ctrlPersonDetails uctPersonDetails1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.Label label14;

@@ -34,7 +34,7 @@ namespace GymMangementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.uctPersonDetails2 = new GymMangementSystem.uctPersonDetails();
+            this.uctPersonDetails2 = new GymMangementSystem.ctrlPersonDetails();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -133,11 +133,11 @@ namespace GymMangementSystem
 
         #endregion
 
-        private uctPersonDetails uctPersonDetails1;
+        private ctrlPersonDetails uctPersonDetails1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
-        private uctPersonDetails uctPersonDetails2;
+        private ctrlPersonDetails uctPersonDetails2;
     }
 }
