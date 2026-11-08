@@ -134,5 +134,11 @@ namespace GymMangementSystem
             Form frm = new frmManageEmployees();
             frm.ShowDialog();
         }
+
+        private void btnManageTrainers_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmManageCoaches();
+            frm.ShowDialog();
+        }
     }
 }

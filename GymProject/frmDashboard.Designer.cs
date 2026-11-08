@@ -327,6 +327,7 @@
             this.btnManageTrainers.TabIndex = 11;
             this.btnManageTrainers.Text = "Manage Trainers";
             this.btnManageTrainers.TextOffset = new System.Drawing.Point(-7, 0);
+            this.btnManageTrainers.Click += new System.EventHandler(this.btnManageTrainers_Click);
             // 
             // btnManageMember
             // 
