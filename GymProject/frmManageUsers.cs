@@ -185,10 +185,10 @@ namespace GymMangementSystem
         private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             int Index = (int)dgvShowUserList.CurrentRow.Cells[0].Value;
-            if (MessageBox.Show("Are you sure you want to delete Person [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("Are you sure you want to delete user [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 if (clsUsers.DeleteUser(Index))
                 {
-                    MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("User deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _RefreshData();
                 }
                 else
