@@ -467,6 +467,7 @@
             this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
             this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(209, 38);
             this.addPersonToolStripMenuItem.Text = "Add Member";
+            this.addPersonToolStripMenuItem.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
             // 
             // updatePersonToolStripMenuItem
             // 
@@ -474,6 +475,7 @@
             this.updatePersonToolStripMenuItem.Name = "updatePersonToolStripMenuItem";
             this.updatePersonToolStripMenuItem.Size = new System.Drawing.Size(209, 38);
             this.updatePersonToolStripMenuItem.Text = "Update Member";
+            this.updatePersonToolStripMenuItem.Click += new System.EventHandler(this.updatePersonToolStripMenuItem_Click);
             // 
             // deletePersonToolStripMenuItem1
             // 
@@ -481,6 +483,7 @@
             this.deletePersonToolStripMenuItem1.Name = "deletePersonToolStripMenuItem1";
             this.deletePersonToolStripMenuItem1.Size = new System.Drawing.Size(209, 38);
             this.deletePersonToolStripMenuItem1.Text = "Delete Member";
+            this.deletePersonToolStripMenuItem1.Click += new System.EventHandler(this.deletePersonToolStripMenuItem1_Click);
             // 
             // pictureBox1
             // 

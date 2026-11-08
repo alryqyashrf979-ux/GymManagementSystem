@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
@@ -138,7 +139,8 @@ namespace GymMangementSystem
             this.Text = lblTitle2.Text;
 
             uctPersonDetailsWithFilter1.EnableFiltering=false;
-            txtPersonName.Text = _Member.EmergencyContactPersonName; ;
+            uctPersonDetailsWithFilter1.LoadPersonInfo(_Member.PersonID);
+            txtPersonName.Text = _Member.EmergencyContactPersonName; 
             txtRelationship.Text=_Member.Relationship;
             txtPhoneNumber.Text=_Member.EmergencyContactPersonName;
             tgschIsActive.Checked = _Member.IsActive;

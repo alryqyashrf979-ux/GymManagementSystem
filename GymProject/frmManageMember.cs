@@ -167,5 +167,33 @@ namespace GymMangementSystem
             Form frm = new frmShowMemberDetails((int)dgvMembersList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateMember();
+            frm.ShowDialog();
+            _RefreshDataTable();
+        }
+
+        private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateMember((int)dgvMembersList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshDataTable();
+        }
+
+        private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int Index = (int)dgvMembersList.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure you want to delete member [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsPeople.DeletePerson(Index))
+                {
+                    MessageBox.Show("Member deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshDataTable();
+                }
+                else
+                    MessageBox.Show("Member was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
     }
 }
