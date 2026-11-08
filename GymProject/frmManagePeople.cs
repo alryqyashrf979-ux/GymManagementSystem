@@ -139,7 +139,7 @@ namespace GymMangementSystem
 
         private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmPersonDetails();
+            Form frm = new frmPersonDetails((int)dgvShowPeopleList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
 

@@ -12,10 +12,10 @@ namespace GymMangementSystem
 {
     public partial class frmPersonDetails : Form
     {
-        public frmPersonDetails()
+        public frmPersonDetails(int PersonID)
         {
             InitializeComponent();
-            uctPersonDetails2.LoadPersonInfo(10);
+            uctPersonDetails2.LoadPersonInfo(PersonID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
