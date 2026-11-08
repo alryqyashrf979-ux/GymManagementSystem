@@ -35,7 +35,7 @@
             this.cbOptions = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
+            this.uctPersonDetails1 = new GymMangementSystem.ctrlPersonDetails();
             this.gbFilter.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -207,7 +207,7 @@
         private MyTextBox tbSearch;
         private Guna.UI2.WinForms.Guna2ComboBox cbOptions;
         private System.Windows.Forms.Label label1;
-        private uctPersonDetails uctPersonDetails1;
+        private ctrlPersonDetails uctPersonDetails1;
         private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

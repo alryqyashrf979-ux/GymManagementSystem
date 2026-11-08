@@ -43,7 +43,7 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.uctPersonDetails1 = new GymMangementSystem.uctPersonDetails();
+            this.uctPersonDetails1 = new GymMangementSystem.ctrlPersonDetails();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private uctPersonDetails uctPersonDetails1;
+        private ctrlPersonDetails uctPersonDetails1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox12;
