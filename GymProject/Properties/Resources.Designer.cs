@@ -323,6 +323,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("delete_icon_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Description {
             get {
                 object obj = ResourceManager.GetObject("Description", resourceCulture);
@@ -1023,6 +1033,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap show_detail_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("show_detail_icon_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Status {
             get {
                 object obj = ResourceManager.GetObject("Status", resourceCulture);
@@ -1106,6 +1126,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap UnActive {
             get {
                 object obj = ResourceManager.GetObject("UnActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_icon_32x32_fixed {
+            get {
+                object obj = ResourceManager.GetObject("update_icon_32x32_fixed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
