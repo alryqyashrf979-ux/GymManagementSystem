@@ -35,6 +35,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvShowUserList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.PersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.addPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletePersonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,11 +55,6 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddUpdateUser = new System.Windows.Forms.Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updatePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletePersonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowUserList)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -135,6 +136,7 @@
             this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PersonDetailsToolStripMenuItem,
+            this.toolStripSeparator1,
             this.addPersonToolStripMenuItem,
             this.updatePersonToolStripMenuItem,
             this.deletePersonToolStripMenuItem1,
@@ -150,7 +152,62 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(253, 194);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(234, 200);
+            // 
+            // PersonDetailsToolStripMenuItem
+            // 
+            this.PersonDetailsToolStripMenuItem.AutoToolTip = true;
+            this.PersonDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.PersonDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.PersonDetails_32;
+            this.PersonDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PersonDetailsToolStripMenuItem.Name = "PersonDetailsToolStripMenuItem";
+            this.PersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(233, 38);
+            this.PersonDetailsToolStripMenuItem.Text = "Show Details";
+            this.PersonDetailsToolStripMenuItem.Click += new System.EventHandler(this.PersonDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(230, 6);
+            // 
+            // addPersonToolStripMenuItem
+            // 
+            this.addPersonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.addPersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.AddPerson_32;
+            this.addPersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
+            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(233, 38);
+            this.addPersonToolStripMenuItem.Text = "Add User";
+            this.addPersonToolStripMenuItem.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
+            // 
+            // updatePersonToolStripMenuItem
+            // 
+            this.updatePersonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.updatePersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
+            this.updatePersonToolStripMenuItem.Name = "updatePersonToolStripMenuItem";
+            this.updatePersonToolStripMenuItem.Size = new System.Drawing.Size(233, 38);
+            this.updatePersonToolStripMenuItem.Text = "Update User";
+            this.updatePersonToolStripMenuItem.Click += new System.EventHandler(this.updatePersonToolStripMenuItem_Click);
+            // 
+            // deletePersonToolStripMenuItem1
+            // 
+            this.deletePersonToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.deletePersonToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.Delete_32;
+            this.deletePersonToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deletePersonToolStripMenuItem1.Name = "deletePersonToolStripMenuItem1";
+            this.deletePersonToolStripMenuItem1.Size = new System.Drawing.Size(233, 38);
+            this.deletePersonToolStripMenuItem1.Text = "Delete User";
+            this.deletePersonToolStripMenuItem1.Click += new System.EventHandler(this.deletePersonToolStripMenuItem1_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.changePasswordToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Password_32;
+            this.changePasswordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(233, 38);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
             // 
             // guna2Separator1
             // 
@@ -363,49 +420,6 @@
             this.guna2PictureBox1.TabIndex = 106;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // PersonDetailsToolStripMenuItem
-            // 
-            this.PersonDetailsToolStripMenuItem.AutoToolTip = true;
-            this.PersonDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.show_detail_icon_32x32;
-            this.PersonDetailsToolStripMenuItem.Name = "PersonDetailsToolStripMenuItem";
-            this.PersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(252, 38);
-            this.PersonDetailsToolStripMenuItem.Text = "User Details";
-            this.PersonDetailsToolStripMenuItem.Click += new System.EventHandler(this.PersonDetailsToolStripMenuItem_Click);
-            // 
-            // addPersonToolStripMenuItem
-            // 
-            this.addPersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.AddPerson;
-            this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
-            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(252, 38);
-            this.addPersonToolStripMenuItem.Text = "Add User";
-            this.addPersonToolStripMenuItem.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
-            // 
-            // updatePersonToolStripMenuItem
-            // 
-            this.updatePersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.UpdatePerson;
-            this.updatePersonToolStripMenuItem.Name = "updatePersonToolStripMenuItem";
-            this.updatePersonToolStripMenuItem.Size = new System.Drawing.Size(252, 38);
-            this.updatePersonToolStripMenuItem.Text = "Update User";
-            this.updatePersonToolStripMenuItem.Click += new System.EventHandler(this.updatePersonToolStripMenuItem_Click);
-            // 
-            // deletePersonToolStripMenuItem1
-            // 
-            this.deletePersonToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
-            this.deletePersonToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deletePersonToolStripMenuItem1.Name = "deletePersonToolStripMenuItem1";
-            this.deletePersonToolStripMenuItem1.Size = new System.Drawing.Size(252, 38);
-            this.deletePersonToolStripMenuItem1.Text = "Delete User";
-            this.deletePersonToolStripMenuItem1.Click += new System.EventHandler(this.deletePersonToolStripMenuItem1_Click);
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.ChangePassord_32x32;
-            this.changePasswordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(252, 38);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
-            // 
             // frmManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -463,6 +477,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
