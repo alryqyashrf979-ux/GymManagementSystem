@@ -46,8 +46,9 @@ namespace GymMangementSystem
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(946, 42);
+            this.guna2Panel1.Size = new System.Drawing.Size(1198, 52);
             this.guna2Panel1.TabIndex = 3;
             // 
             // label1
@@ -55,9 +56,10 @@ namespace GymMangementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 11);
+            this.label1.Location = new System.Drawing.Point(57, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 23);
+            this.label1.Size = new System.Drawing.Size(184, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Person Details";
             // 
@@ -66,8 +68,9 @@ namespace GymMangementSystem
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonCircle;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -90,10 +93,10 @@ namespace GymMangementSystem
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(792, 323);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(990, 398);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(147, 30);
+            this.btnClose.Size = new System.Drawing.Size(196, 37);
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -101,21 +104,23 @@ namespace GymMangementSystem
             // uctPersonDetails2
             // 
             this.uctPersonDetails2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.uctPersonDetails2.Location = new System.Drawing.Point(0, 43);
+            this.uctPersonDetails2.Location = new System.Drawing.Point(5, 53);
+            this.uctPersonDetails2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uctPersonDetails2.Name = "uctPersonDetails2";
-            this.uctPersonDetails2.Size = new System.Drawing.Size(946, 275);
+            this.uctPersonDetails2.Size = new System.Drawing.Size(1186, 338);
             this.uctPersonDetails2.TabIndex = 17;
             // 
             // frmPersonDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(946, 358);
+            this.ClientSize = new System.Drawing.Size(1198, 441);
             this.Controls.Add(this.uctPersonDetails2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPersonDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2Panel1.ResumeLayout(false);

@@ -870,5 +870,8 @@
   <ItemGroup>
     <None Include="Resources\update_icon_32x32_fixed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangePassord_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
