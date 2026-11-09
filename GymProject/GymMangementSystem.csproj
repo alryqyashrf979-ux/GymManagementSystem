@@ -862,6 +862,12 @@
     <None Include="Resources\AddPerson.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Coaches.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoachesWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\delete_icon_32x32.png" />
   </ItemGroup>
   <ItemGroup>

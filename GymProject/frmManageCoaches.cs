@@ -21,7 +21,7 @@ namespace GymMangementSystem
 
         DataTable _dtCoaches;
 
-        void RefreshData()
+       private void _RefreshData()
         {
 
             _dtCoaches = clsCoaches.GetAllCoaches();
@@ -31,7 +31,7 @@ namespace GymMangementSystem
         }
         private void frmManageCoaches_Load(object sender, EventArgs e)
         {
-            RefreshData();
+            _RefreshData();
         }
 
         private void cmSelectTypeOfFiltering_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,6 +71,51 @@ namespace GymMangementSystem
                 _dtCoaches.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text}] like '[{txtFiltering.Text.Trim()}]%'";
             else
                 _dtCoaches.DefaultView.RowFilter = $"[{cmSelectTypeOfFiltering.Text}] = '[{txtFiltering.Text.Trim()}]'";
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddNewCoach_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateCoach();
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void CoachDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // Form frm=new 
+        }
+
+        private void addCoachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateCoach();
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void updateCoachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateCoach((int)dgvCoaches.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void deleteCoachToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int Index = (int)dgvCoaches.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure you want to delete Coach [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsCoaches.DeleteCoach(Index))
+                {
+                    MessageBox.Show("Coach deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshData();
+                }
+                else
+                    MessageBox.Show("Coach was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
     }
