@@ -120,28 +120,4 @@
   <metadata name="guna2ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="addPersonToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABBJJREFUWEft
-        lt+rVUUUx8+9KfYPBFGKiL0E9ZD3x94zs/c++1y7cPv11L2Rpi+FhAahV6NC5QYpGNIP6EXyxQeDpJe4
-        JaSohPmgYCJRf0HgQ730i8gf52w/3zkzh0P+2scr9nK/sJiZNTNr1vquNbN3YxGLWMQCMRTkvmFoZmbm
-        gWazuYT+cFflMSSd5tTvqu4xgvH/Qk70O+Jxi7V3jz6Dw865SWvtfuSESdOfkJ+NSU9l1n6SZdlUYKcx
-        NzcnxxbMRi/HHPyCs/ZcnmfVRKtVtcqyahaFF/UnJlq+nzn3gzFmWnsC7toJbfRRWJsSnavKslnhxB8c
-        8IW1yWba52DiWWQT/UPM/SZniiKvnDMHR0ZGlgY7Azvhi02tMcnnBZHBgOQzDlvdXXIj0jR9lPmPYaEj
-        Z60183Ji4OKMOSfyfeRUUV/B+Gt+EsQ8j42NPUzkK/t1QmbMjHP27xI2rDGfSjdwYTqXUFOuQjoc/rp0
-        iiYcRFrsagrwkrHmL+ad5jUXaG+4NH2JvVe76XCT0g0EjB5TPonwiMbRcIwE/TRUV3mWVax9V7rIQlxL
-        +g62WrBgzXcM66cAg+NQeAW5XBTJ46iGYvRTU1PL1CZJ8iKGO0Qnht6SDnlQbXBgOB8dXcH8n8i1yFIt
-        cK/3+CJK05Ma3yx/ODBJbfjixF+fon706ihNvxSTpGy/n6gDNn0tB6D5PYaeOrHCY7MN3Xb6W02SHLIm
-        7eBEB91XXMtZDpllzSzjtdoDuEXmzWDreNDdGRxwQY8Km17VeBQqqeZ/ijxXUfq8k56KImzDVlssSEfV
-        ehEz2FijvdiYViGy/0eNawHDF+UAEW3SmPYRdL9GB1R86HQI+U/a1ILXySnvmEkvM/ekt2XMy3JANjWu
-        BQwcL5uFDnifYUzBY7m1r3DwBoyuowY+Yp2iJQXJYebXo9PcRuQp7QF6yN6hMGXrWNDdGRj4sIkDeH1a
-        45sVIQafFgtixCbJ5qDuIe7RwXIAm3v9RB3wCJW6OnoBQzS3uYa2Q39WOqT/GqoAn2D+X0Qvqa+JWpD3
-        bD6LsR51MkwTvxG+uOJDxI14u39N30M0r4eID9NRjQeCS5JncorOH2DMLul0eIxufHx8FTXwC/I7DCTS
-        RZa0lj079OkmRdwUMyZdbcQouToHdBtU2eR7p5/swv8FceUewpHlXtP3Z8SB20lhR3XEmzInXbRZF55q
-        RYSBb3SNVGwYPprd5knN83QNdXFEkSt99A9IHw4f/J9AIkplSKkIRuXIGeQDZAvyBrIXhk7CVFs5pzau
-        wYBe0QX/mvU28o1/nmf2e25GW9R6IT1q9d0vcS7j40Va5nHGhG335r8wROFBZGWW2X2k5ltuyAXq5DwH
-        zqPfTTsalg2c8/8JjcZ1uJutB/yw18QAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>
