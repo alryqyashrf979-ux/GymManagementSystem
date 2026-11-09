@@ -39,10 +39,10 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.cbValue = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvPayment = new Guna.UI2.WinForms.Guna2DataGridView();
             this.PaymentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubscriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActualAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalRemaining = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             this.cmStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAddNewPayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
+            this.txtSearch = new GymMangementSystem.MyTextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -72,16 +72,16 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1827, 46);
+            this.panel4.Size = new System.Drawing.Size(1548, 46);
             this.panel4.TabIndex = 111;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(59, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 39);
             this.panel1.TabIndex = 15;
@@ -103,7 +103,7 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PaymentDetails;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(56, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,12 +125,13 @@
             "None",
             "Payment ID",
             "Subscription ID",
+            "Member Name",
             "Method",
             "Date",
             "Username",
             "Status"});
-            this.cbValue.Location = new System.Drawing.Point(121, 165);
-            this.cbValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbValue.Location = new System.Drawing.Point(125, 358);
+            this.cbValue.Margin = new System.Windows.Forms.Padding(4);
             this.cbValue.Name = "cbValue";
             this.cbValue.Size = new System.Drawing.Size(315, 36);
             this.cbValue.StartIndex = 0;
@@ -141,35 +142,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 176);
+            this.label9.Location = new System.Drawing.Point(27, 363);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 22);
             this.label9.TabIndex = 117;
             this.label9.Text = "Filter By:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderRadius = 5;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(447, 165);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search...";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(349, 46);
-            this.txtSearch.TabIndex = 116;
-            this.txtSearch.Visible = false;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // dgvPayment
             // 
@@ -184,7 +161,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -194,6 +171,7 @@
             this.dgvPayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PaymentID,
             this.SubscriptionID,
+            this.Column1,
             this.PaymentAmount,
             this.ActualAmount,
             this.TotalRemaining,
@@ -203,15 +181,15 @@
             this.Status});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayment.GridColor = System.Drawing.Color.Black;
-            this.dgvPayment.Location = new System.Drawing.Point(1, 218);
-            this.dgvPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPayment.Location = new System.Drawing.Point(8, 405);
+            this.dgvPayment.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -224,16 +202,16 @@
             this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayment.RowHeadersVisible = false;
             this.dgvPayment.RowHeadersWidth = 51;
-            this.dgvPayment.Size = new System.Drawing.Size(1443, 657);
+            this.dgvPayment.Size = new System.Drawing.Size(1534, 438);
             this.dgvPayment.TabIndex = 115;
             this.dgvPayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPayment.ThemeStyle.GridColor = System.Drawing.Color.Black;
             this.dgvPayment.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.dgvPayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.dgvPayment.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPayment.ThemeStyle.HeaderStyle.Height = 30;
             this.dgvPayment.ThemeStyle.ReadOnly = true;
-            this.dgvPayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dgvPayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -256,6 +234,16 @@
             this.SubscriptionID.MinimumWidth = 6;
             this.SubscriptionID.Name = "SubscriptionID";
             this.SubscriptionID.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.DataPropertyName = "Member Name";
+            this.Column1.HeaderText = "Member Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 250;
             // 
             // PaymentAmount
             // 
@@ -325,8 +313,8 @@
             this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(5, 905);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Separator1.Location = new System.Drawing.Point(5, 914);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(203, 12);
             this.guna2Separator1.TabIndex = 121;
@@ -336,7 +324,7 @@
             this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(132, 879);
+            this.lblRecord.Location = new System.Drawing.Point(132, 886);
             this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(49, 25);
@@ -348,7 +336,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 878);
+            this.label2.Location = new System.Drawing.Point(5, 885);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 25);
@@ -370,8 +358,8 @@
             "All",
             "Cash",
             "Card"});
-            this.cbMethod.Location = new System.Drawing.Point(445, 165);
-            this.cbMethod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMethod.Location = new System.Drawing.Point(449, 352);
+            this.cbMethod.Margin = new System.Windows.Forms.Padding(4);
             this.cbMethod.Name = "cbMethod";
             this.cbMethod.Size = new System.Drawing.Size(172, 36);
             this.cbMethod.StartIndex = 0;
@@ -390,7 +378,7 @@
             this.dtpTime.FillColor = System.Drawing.Color.White;
             this.dtpTime.Font = new System.Drawing.Font("Tahoma", 12.75F);
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTime.Location = new System.Drawing.Point(447, 174);
+            this.dtpTime.Location = new System.Drawing.Point(453, 358);
             this.dtpTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -419,8 +407,8 @@
             "Completed",
             "Refunded",
             "Partailly Refunded"});
-            this.cmStatus.Location = new System.Drawing.Point(447, 166);
-            this.cmStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmStatus.Location = new System.Drawing.Point(451, 357);
+            this.cmStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmStatus.Name = "cmStatus";
             this.cmStatus.Size = new System.Drawing.Size(277, 36);
             this.cmStatus.StartIndex = 0;
@@ -446,7 +434,7 @@
             this.btnAddNewPayment.Image = global::GymMangementSystem.Properties.Resources.AddPyament;
             this.btnAddNewPayment.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnAddNewPayment.ImageSize = new System.Drawing.Size(42, 50);
-            this.btnAddNewPayment.Location = new System.Drawing.Point(1736, 169);
+            this.btnAddNewPayment.Location = new System.Drawing.Point(1455, 359);
             this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNewPayment.Name = "btnAddNewPayment";
             this.btnAddNewPayment.Size = new System.Drawing.Size(83, 36);
@@ -472,7 +460,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1638, 879);
+            this.btnClose.Location = new System.Drawing.Point(1359, 886);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(167, 37);
@@ -480,23 +468,39 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // ctrlPaymentDetails1
+            // txtSearch
             // 
-            this.ctrlPaymentDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrlPaymentDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1448, 212);
-            this.ctrlPaymentDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(373, 663);
-            this.ctrlPaymentDetails1.SubscriptionID = 0;
-            this.ctrlPaymentDetails1.TabIndex = 122;
+            this.txtSearch.BorderRadius = 5;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.ErrorMessage = "This Field is Required";
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtSearch.IsRequired = false;
+            this.txtSearch.Location = new System.Drawing.Point(450, 358);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search...";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(317, 36);
+            this.txtSearch.TabIndex = 140;
+            this.txtSearch.Visible = false;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // frmManagePayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1827, 922);
+            this.ClientSize = new System.Drawing.Size(1548, 938);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnAddNewPayment);
             this.Controls.Add(this.cmStatus);
             this.Controls.Add(this.btnClose);
@@ -507,12 +511,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbValue);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvPayment);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.ctrlPaymentDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManagePayments";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManagementPayment_Load);
@@ -533,18 +535,18 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2ComboBox cbValue;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPayment;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label lblRecord;
         private System.Windows.Forms.Label label2;
-        private ctrlPaymentDetails ctrlPaymentDetails1;
         private Guna.UI2.WinForms.Guna2ComboBox cbMethod;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpTime;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2ComboBox cmStatus;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewPayment;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubscriptionID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActualAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalRemaining;
@@ -552,6 +554,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewPayment;
+        private MyTextBox txtSearch;
     }
 }
