@@ -31,6 +31,7 @@ namespace GymMangementSystem
             dtPeople = clsPeople.GetAllPeople();
 
             dgvShowPeopleList.DataSource = dtPeople;
+            lblRecord.Text = dgvShowPeopleList.Rows.Count.ToString();
         }
 
         private void dgvShowPeopleList_CellContentClick(object sender, DataGridViewCellEventArgs e)
