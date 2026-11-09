@@ -196,6 +196,12 @@ namespace GymMangementSystem
 
         private void tbUserName_Validating(object sender, CancelEventArgs e)
         {
+            if(_Mode==enMode.UpdateMode)
+            {
+                if (tbUserName.Text == _User.UserName)
+                    return;
+            }
+
             if (clsUsers.IsUsernameExist(tbUserName.Text))
                 errorProvider1.SetError(tbUserName, "this username already in user choose another one.");
             else
