@@ -33,7 +33,6 @@ namespace GymMangementSystem
 
         private void dgvPayment_Click(object sender, EventArgs e)
         {
-            ctrlPaymentDetails1.LoadPaymentByPaymentID((int)dgvPayment.CurrentRow.Cells[0].Value);
         }
 
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,7 +42,14 @@ namespace GymMangementSystem
             dtpTime.Visible = (cbValue.Text == "Date");
             cmStatus.Visible = (cbValue.Text == "Status");
 
-            txtSearch.Clear();
+            if (cbValue.Text == "Username" || cbValue.Text == "Member Name")
+                txtSearch.InputType = MyTextBox.TextType.Text;
+            else
+                txtSearch.InputType = MyTextBox.TextType.Numeric;
+
+
+
+                txtSearch.Clear();
             txtSearch.Focus();
 
 
@@ -63,9 +69,9 @@ namespace GymMangementSystem
                 return;
             }
 
-            if (cbValue.Text == "Username")
+            if (txtSearch.InputType==MyTextBox.TextType.Text)
                 _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text}] like '{txtSearch.Text.Trim()}%'";
-            else if (cbValue.Text == "Subscription ID" || cbValue.Text == "Payment ID")
+            else 
                 _dtAllPayments.DefaultView.RowFilter = $"[{cbValue.Text}] = {txtSearch.Text.Trim()}";
 
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
