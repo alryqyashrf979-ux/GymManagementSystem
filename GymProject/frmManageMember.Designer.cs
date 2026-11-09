@@ -50,6 +50,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.PersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.addPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePersonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -318,10 +319,11 @@
             // guna2ContextMenuStrip1
             // 
             this.guna2ContextMenuStrip1.BackColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PersonDetailsToolStripMenuItem,
+            this.toolStripSeparator1,
             this.addPersonToolStripMenuItem,
             this.updatePersonToolStripMenuItem,
             this.deletePersonToolStripMenuItem1});
@@ -336,40 +338,52 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(245, 156);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(227, 190);
             // 
             // PersonDetailsToolStripMenuItem
             // 
             this.PersonDetailsToolStripMenuItem.AutoToolTip = true;
-            this.PersonDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.show_detail_icon_32x32;
+            this.PersonDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.PersonDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.PersonDetails_32;
             this.PersonDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PersonDetailsToolStripMenuItem.Name = "PersonDetailsToolStripMenuItem";
-            this.PersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(244, 38);
-            this.PersonDetailsToolStripMenuItem.Text = "Member Details";
+            this.PersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
+            this.PersonDetailsToolStripMenuItem.Text = "&Show Details";
             this.PersonDetailsToolStripMenuItem.Click += new System.EventHandler(this.PersonDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
             // 
             // addPersonToolStripMenuItem
             // 
-            this.addPersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.AddPerson;
+            this.addPersonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.addPersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.AddPerson_32;
+            this.addPersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
-            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(244, 38);
+            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
             this.addPersonToolStripMenuItem.Text = "Add Member";
             this.addPersonToolStripMenuItem.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
             // 
             // updatePersonToolStripMenuItem
             // 
-            this.updatePersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.UpdatePerson;
+            this.updatePersonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.updatePersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
+            this.updatePersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.updatePersonToolStripMenuItem.Name = "updatePersonToolStripMenuItem";
-            this.updatePersonToolStripMenuItem.Size = new System.Drawing.Size(244, 38);
+            this.updatePersonToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
             this.updatePersonToolStripMenuItem.Text = "Update Member";
             this.updatePersonToolStripMenuItem.Click += new System.EventHandler(this.updatePersonToolStripMenuItem_Click);
             // 
             // deletePersonToolStripMenuItem1
             // 
-            this.deletePersonToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
+            this.deletePersonToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.deletePersonToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.Delete_32;
             this.deletePersonToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deletePersonToolStripMenuItem1.Name = "deletePersonToolStripMenuItem1";
-            this.deletePersonToolStripMenuItem1.Size = new System.Drawing.Size(244, 38);
+            this.deletePersonToolStripMenuItem1.Size = new System.Drawing.Size(226, 38);
             this.deletePersonToolStripMenuItem1.Text = "Delete Member";
             this.deletePersonToolStripMenuItem1.Click += new System.EventHandler(this.deletePersonToolStripMenuItem1_Click);
             // 
@@ -598,5 +612,6 @@
         private System.Windows.Forms.ToolStripMenuItem updatePersonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletePersonToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
