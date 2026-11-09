@@ -309,7 +309,7 @@
             this.btnAddNewPayment.Image = global::GymMangementSystem.Properties.Resources.AddUser;
             this.btnAddNewPayment.ImageOffset = new System.Drawing.Point(1, 1);
             this.btnAddNewPayment.ImageSize = new System.Drawing.Size(35, 30);
-            this.btnAddNewPayment.Location = new System.Drawing.Point(1380, 316);
+            this.btnAddNewPayment.Location = new System.Drawing.Point(1375, 316);
             this.btnAddNewPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewPayment.Name = "btnAddNewPayment";
             this.btnAddNewPayment.Size = new System.Drawing.Size(82, 36);
