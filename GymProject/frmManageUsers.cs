@@ -65,6 +65,8 @@ namespace GymMangementSystem
             {
                 tbSearch.Focus();
             }
+
+            _AllUsers.DefaultView.RowFilter = "";
             lblRecord.Text = dgvShowUserList.Rows.Count.ToString();
 
         }
