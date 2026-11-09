@@ -28,6 +28,7 @@ namespace GymMangementSystem
         public void SetHeaderColor(int part1,int part2,int part3)
         {
             pnlHeaderColor.FillColor =Color.FromArgb(part1,part2,part3);
+            lblTitle.ForeColor = Color.White;
         }
         public ctrlPersonDetails()
         {
