@@ -16,5 +16,10 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void ctrlCoachDetails_Load(object sender, EventArgs e)
+        {
+            ctrlPersonDetails1.SetHeaderColor(56, 56, 56);
+        }
     }
 }

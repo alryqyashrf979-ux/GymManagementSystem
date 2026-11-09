@@ -25,7 +25,10 @@ namespace GymMangementSystem
         {
             get { return _PersonInfo; }
         }
-
+        public void SetHeaderColor(int part1,int part2,int part3)
+        {
+            pnlHeaderColor.FillColor =Color.FromArgb(part1,part2,part3);
+        }
         public ctrlPersonDetails()
         {
             InitializeComponent();
