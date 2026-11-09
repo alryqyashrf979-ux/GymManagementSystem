@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlCoachDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlCoachDetails.Designer.cs">
+      <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     <Compile Include="ctrlPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlCoachDetails.resx">
+      <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateEmployee.resx">
       <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -866,6 +875,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CoachesWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coach.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete_icon_32x32.png" />

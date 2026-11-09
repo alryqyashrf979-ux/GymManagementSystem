@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
@@ -105,42 +105,42 @@
             this.dgvCoaches.AllowUserToAddRows = false;
             this.dgvCoaches.AllowUserToDeleteRows = false;
             this.dgvCoaches.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCoaches.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvCoaches.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCoaches.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCoaches.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCoaches.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCoaches.ColumnHeadersHeight = 30;
             this.dgvCoaches.ContextMenuStrip = this.guna2ContextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCoaches.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCoaches.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCoaches.GridColor = System.Drawing.Color.Black;
             this.dgvCoaches.Location = new System.Drawing.Point(4, 274);
             this.dgvCoaches.Name = "dgvCoaches";
             this.dgvCoaches.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCoaches.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCoaches.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCoaches.RowHeadersVisible = false;
             this.dgvCoaches.RowHeadersWidth = 51;
             this.dgvCoaches.Size = new System.Drawing.Size(1071, 282);
@@ -177,14 +177,14 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(197, 178);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(194, 156);
             // 
             // CoachDetailsToolStripMenuItem
             // 
             this.CoachDetailsToolStripMenuItem.AutoToolTip = true;
             this.CoachDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.PersonDetails;
             this.CoachDetailsToolStripMenuItem.Name = "CoachDetailsToolStripMenuItem";
-            this.CoachDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.CoachDetailsToolStripMenuItem.Size = new System.Drawing.Size(193, 38);
             this.CoachDetailsToolStripMenuItem.Text = "Coach Details";
             this.CoachDetailsToolStripMenuItem.Click += new System.EventHandler(this.CoachDetailsToolStripMenuItem_Click);
             // 
@@ -192,7 +192,7 @@
             // 
             this.addCoachToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.AddPerson;
             this.addCoachToolStripMenuItem.Name = "addCoachToolStripMenuItem";
-            this.addCoachToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.addCoachToolStripMenuItem.Size = new System.Drawing.Size(193, 38);
             this.addCoachToolStripMenuItem.Text = "Add Coach";
             this.addCoachToolStripMenuItem.Click += new System.EventHandler(this.addCoachToolStripMenuItem_Click);
             // 
@@ -200,7 +200,7 @@
             // 
             this.updateCoachToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.UpdatePerson;
             this.updateCoachToolStripMenuItem.Name = "updateCoachToolStripMenuItem";
-            this.updateCoachToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.updateCoachToolStripMenuItem.Size = new System.Drawing.Size(193, 38);
             this.updateCoachToolStripMenuItem.Text = "Update Coach";
             this.updateCoachToolStripMenuItem.Click += new System.EventHandler(this.updateCoachToolStripMenuItem_Click);
             // 
@@ -208,7 +208,7 @@
             // 
             this.deleteCoachToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.Delete;
             this.deleteCoachToolStripMenuItem1.Name = "deleteCoachToolStripMenuItem1";
-            this.deleteCoachToolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.deleteCoachToolStripMenuItem1.Size = new System.Drawing.Size(193, 38);
             this.deleteCoachToolStripMenuItem1.Text = "Delete Coach";
             this.deleteCoachToolStripMenuItem1.Click += new System.EventHandler(this.deleteCoachToolStripMenuItem1_Click);
             // 
@@ -336,7 +336,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Coaches;
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.Coach;
             this.pictureBox1.Location = new System.Drawing.Point(0, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1079, 191);
@@ -391,6 +391,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmManageCoaches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManageCoaches_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
