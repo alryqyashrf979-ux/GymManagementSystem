@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageMember));
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -351,8 +350,7 @@
             // 
             // addPersonToolStripMenuItem
             // 
-            this.addPersonToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addPersonToolStripMenuItem.Image")));
-            this.addPersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addPersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.AddPerson;
             this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
             this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(244, 38);
             this.addPersonToolStripMenuItem.Text = "Add Member";
@@ -360,8 +358,7 @@
             // 
             // updatePersonToolStripMenuItem
             // 
-            this.updatePersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.update_icon_32x32_fixed;
-            this.updatePersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.updatePersonToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.UpdatePerson;
             this.updatePersonToolStripMenuItem.Name = "updatePersonToolStripMenuItem";
             this.updatePersonToolStripMenuItem.Size = new System.Drawing.Size(244, 38);
             this.updatePersonToolStripMenuItem.Text = "Update Member";

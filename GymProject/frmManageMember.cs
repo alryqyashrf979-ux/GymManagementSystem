@@ -26,6 +26,7 @@ namespace GymMangementSystem
             dtMembers = clsMembers.GetAllMembers();
 
             dgvMembersList.DataSource = dtMembers;
+            lblRecord.Text = dgvMembersList.Rows.Count.ToString();
         }
         private void txtFiltering_TextChanged(object sender, EventArgs e)
         {

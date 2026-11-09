@@ -148,6 +148,7 @@ namespace GymMangementSystem
             lblPersonID.Text=uctPersonDetailsWithFilter1.PersonID.ToString();
             lblMemberID.Text = _Member.MemberID.ToString();
             txtInActivationReason.Text = _Member.InActivationReason;
+            tpMemberInfo.Enabled = true ;
 
             lnkAddSubscription.Enabled = false;
            
