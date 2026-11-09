@@ -880,6 +880,9 @@
     <None Include="Resources\Coach.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\file_0000000092dc8208867b66082135e85b.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\delete_icon_32x32.png" />
   </ItemGroup>
   <ItemGroup>
