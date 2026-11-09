@@ -60,14 +60,6 @@ namespace GymMangementSystem
             else
                 lblTitle2.Text = "Update Employee";
 
-            cmTitle.DataSource = clsTitles.GetAllTitles();
-            cmTitle.DisplayMember = "TitleName";
-            cmTitle.ValueMember = "TitleID";
-
-            cmShift.DataSource = clsEmployeeShift.GetAllShiftType();
-            cmShift.DisplayMember = "Shift Type";
-            cmShift.ValueMember = "Shift ID";
-
             txtSalary.Text = "0";
             gtsIsActive.Checked = true;
         }
@@ -120,6 +112,17 @@ namespace GymMangementSystem
             {
                 btnSave.Enabled = true;
                 pnlEmployeeInput.Enabled= true;
+
+
+                cmTitle.DisplayMember = "TitleName";
+                cmTitle.ValueMember = "TitleID";
+                cmTitle.DataSource = clsTitles.GetAllTitles();
+
+                cmShift.DisplayMember = "Shift Type";
+                cmShift.ValueMember = "Shift ID";
+                cmShift.DataSource = clsEmployeeShift.GetAllShiftType();
+
+
             }
 
 

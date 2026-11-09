@@ -188,6 +188,34 @@ namespace DataBusinessLayer
         }
 
 
+
+        public int Cancel(int CurrentUser,string CancellationReason,double Fees)
+        {
+            clsSubscriptionCancellation Cancel = new clsSubscriptionCancellation();
+
+
+            Cancel.CancelledByUserID = CurrentUser;
+            Cancel.Refund = Fees;
+            Cancel.ElapsedDays = (short)(DateTime.Today.Date - this.StartDate.Date).Days;
+            Cancel.CancellationReason= CancellationReason;
+            Cancel.SubscriptionID= this.SubscriptionID;
+
+
+            if (Cancel.Save())
+            {
+                if (!UpdateSubscriptionStatus(enSubscriptionStatus.Canceled))
+                    return -1;
+            }
+
+
+            return Cancel.CancellationID;
+
+
+
+        }
+
+
+
         public int Freeze(DateTime StartDate,DateTime EndDate ,double FreezeFee,int FrozenByUserID,string FreezeReason)
         {
 

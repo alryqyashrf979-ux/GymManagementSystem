@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,27 +18,16 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
-        public frmAddUpdateCancelSubscription(int CanceledSubscriptionID)
-        {
-            InitializeComponent();
-            _CanceledSubscriptionID = CanceledSubscriptionID;
-            _Mode = enMode.Update;
-        }
+      
 
-        enum enMode { Addnew = 1, Update = 2 };
-        enMode _Mode = enMode.Addnew;
-        short _ElapsedDays = 0;
-        int _CanceledSubscriptionID = -1;
-        clsSubscriptionCancellation _CanceldSubscription;
+        (double Fees, short ElapsedDays, double ElapsedDaysFees) _RefundInfo;
+
 
         void _DefaultValues()
         {
 
 
-            if (_Mode == enMode.Addnew)
-                _CanceldSubscription = new clsSubscriptionCancellation();
-
-
+         
             lblCanceledByUser.Text = "[????]";
             lblCancellationDate.Text = DateTime.Today.Date.ToString();
             lblElapsedDays.Text = "[????]";
@@ -51,44 +41,11 @@ namespace GymMangementSystem
 
         }
 
-        void _LoadDate()
-        {
-
-
-
-            lblTitle.Text = "Update Cancelled Subscription";
-            this.Text = lblTitle.Text;
-
-            _CanceldSubscription = clsSubscriptionCancellation.Find(_CanceledSubscriptionID);
-
-            if (_CanceldSubscription == null)
-            {
-
-                MessageBox.Show($"Canceled Subscription with ID {_CanceledSubscriptionID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnSave.Enabled = false;
-                pnlCancelSubscription.Enabled = false;
-                return;
-            }
-
-            lblCanceledByUser.Text = _CanceldSubscription.CancelledByUserInfo.UserName;
-            lblCancellationDate.Text= _CanceldSubscription.CancellationDate.ToString();
-            lblElapsedDays.Text= _CanceldSubscription.ElapsedDays.ToString();
-            lblSubscriptionCancellationID.Text= _CanceldSubscription.CancellationID.ToString();
-            lblSubscriptionID.Text= _CanceldSubscription.SubscriptionID.ToString();
-            txtCancellationReason.Text = _CanceldSubscription.CancellationReason;
-            txtFees.Text = _CanceldSubscription.Refund.ToString();
-
-
-
-        }
-
+     
 
         private void frmAddUpdateCancelSubscription_Load(object sender, EventArgs e)
         {
             _DefaultValues();
-
-            if (_Mode == enMode.Update)
-                _LoadDate();
         }
 
         private void ctrlMemberBasicDetailsWithFilter1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
@@ -117,11 +74,14 @@ namespace GymMangementSystem
             btnSave.Enabled = true;
             pnlCancelSubscription.Enabled = true;
 
-            _ElapsedDays = (short)(DateTime.Today.Date - e.MemberInfo.LastSubscriptionInfo.StartDate.Date).Days;
-            lblElapsedDays.Text = _ElapsedDays.ToString();
             lblCanceledByUser.Text = clsGlobal.CurrentUserInfo.UserName;
-            txtFees.Text = clsSubscriptionCancellation.RefundFees(e.MemberInfo, _ElapsedDays).Item1.ToString();
-            lblElapsedDaysFees.Text = clsSubscriptionCancellation.RefundFees(e.MemberInfo, _ElapsedDays).Item2.ToString();
+
+
+            _RefundInfo= clsSubscriptionCancellation.RefundFees(e.MemberInfo);
+
+            lblElapsedDays.Text = _RefundInfo.ElapsedDays.ToString();
+            txtFees.Text = _RefundInfo.Fees.ToString();
+            lblElapsedDaysFees.Text = _RefundInfo.ElapsedDaysFees.ToString();
 
 
         }
@@ -135,26 +95,24 @@ namespace GymMangementSystem
                 return;
             }
 
-        
 
 
-            _CanceldSubscription.CancelledByUserID = clsGlobal.CurrentUserInfo.UserID;
-            _CanceldSubscription.CancellationReason = txtCancellationReason.Text;
-            _CanceldSubscription.SubscriptionID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID;
-            _CanceldSubscription.ElapsedDays = _ElapsedDays;
-            _CanceldSubscription.Refund = Convert.ToDouble(txtFees.Text);
-
-
-            if (_CanceldSubscription.Save())
+            if (MessageBox.Show("Are You Sure you want to Cancel this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
-                clsSubscription.CancelSubscription(_CanceldSubscription.SubscriptionID);
-                _Mode = enMode.Update;
-                lblTitle.Text = "Update Cancelled Subscription";
-                this.Text = lblTitle.Text;
 
-                lblSubscriptionCancellationID.Text = _CanceldSubscription.CancellationID.ToString();
+                return;
+            }
 
 
+            int CancellationID = ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Cancel(clsGlobal.CurrentUserInfo.UserID,
+                txtCancellationReason.Text, _RefundInfo.Fees);
+
+            if (CancellationID!=-1)
+            {
+
+                lblSubscriptionCancellationID.Text = CancellationID.ToString();
+
+                btnSave.Enabled = false;
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }

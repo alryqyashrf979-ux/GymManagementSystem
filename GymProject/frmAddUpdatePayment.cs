@@ -169,6 +169,7 @@ namespace GymMangementSystem
             if (_PaymentInfo.ExecutePayment(PreviousPaymentAmount))
             {
                 ctrlPaymentDetails1.LoadPaymentByPaymentID(_PaymentInfo.PaymentID);
+                txtPaymentAmount.Text = "";
                 btnSave.Enabled = false;
                 MessageBox.Show("Payment details saved successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

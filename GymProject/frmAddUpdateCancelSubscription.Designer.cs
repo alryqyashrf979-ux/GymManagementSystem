@@ -129,7 +129,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1049, 885);
+            this.btnSave.Location = new System.Drawing.Point(1049, 886);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(145, 38);
@@ -155,7 +155,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(870, 885);
+            this.btnClose.Location = new System.Drawing.Point(870, 886);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(156, 38);

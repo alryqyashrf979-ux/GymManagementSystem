@@ -23,14 +23,15 @@ namespace GymMangementSystem
         {
             _dtAllEmployees= clsEmployees.GetAllEmployees();
             dgvEmployees.DataSource = _dtAllEmployees;
+            lblRecord.Text = dgvEmployees.Rows.Count.ToString();
+
         }
         private void frmManageEmployees_Load(object sender, EventArgs e)
         {
             _RefreshData();
-            cmShiftType.DataSource = clsEmployeeShift.GetAllShiftType();
             cmShiftType.DisplayMember = "Shift Type";
             cmShiftType.ValueMember = "Shift ID";
-            lblRecord.Text = dgvEmployees.Rows.Count.ToString();
+            cmShiftType.DataSource = clsEmployeeShift.GetAllShiftType();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -70,9 +71,11 @@ namespace GymMangementSystem
 
         private void cmShiftType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _dtAllEmployees.DefaultView.RowFilter = $"[Shift Type] like '{cmShiftType.Text}'";
-            lblRecord.Text = dgvEmployees.Rows.Count.ToString();
-
+            if (dgvEmployees.Rows.Count > 0)
+            {
+                _dtAllEmployees.DefaultView.RowFilter = $"[Shift Type] like '{cmShiftType.Text}'";
+                lblRecord.Text = dgvEmployees.Rows.Count.ToString();
+            }
         }
 
         private void cmIsActive_SelectedIndexChanged(object sender, EventArgs e)
