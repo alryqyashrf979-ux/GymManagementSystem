@@ -69,6 +69,12 @@
     <Compile Include="ctrlCoachDetails.Designer.cs">
       <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlShiftDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlShiftDetails.Designer.cs">
+      <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
