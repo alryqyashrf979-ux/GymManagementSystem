@@ -981,5 +981,11 @@
   <ItemGroup>
     <None Include="Resources\showٍSubscription_details_32x32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unfreeze_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expire_subscription_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
