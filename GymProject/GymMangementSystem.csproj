@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlCoachBasicDetais.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlCoachBasicDetais.Designer.cs">
+      <DependentUpon>ctrlCoachBasicDetais.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlCoachDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     <Compile Include="ctrlPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlCoachBasicDetais.resx">
+      <DependentUpon>ctrlCoachBasicDetais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlCoachDetails.resx">
       <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
     </EmbeddedResource>
