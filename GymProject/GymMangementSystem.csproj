@@ -348,6 +348,12 @@
     <Compile Include="frmShowPlanDetails.Designer.cs">
       <DependentUpon>frmShowPlanDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmShowShiftDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowShiftDetails.Designer.cs">
+      <DependentUpon>frmShowShiftDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmShowUserDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -523,6 +529,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowPlanDetails.resx">
       <DependentUpon>frmShowPlanDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowShiftDetails.resx">
+      <DependentUpon>frmShowShiftDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowUserDetails.resx">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
