@@ -193,6 +193,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BagCircle {
+            get {
+                object obj = ResourceManager.GetObject("BagCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BagWhite {
             get {
                 object obj = ResourceManager.GetObject("BagWhite", resourceCulture);
@@ -303,16 +313,6 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Coach {
-            get {
-                object obj = ResourceManager.GetObject("Coach", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ClassRegesterationWhite {
             get {
                 object obj = ResourceManager.GetObject("ClassRegesterationWhite", resourceCulture);
@@ -326,6 +326,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Close_32 {
             get {
                 object obj = ResourceManager.GetObject("Close 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coach {
+            get {
+                object obj = ResourceManager.GetObject("Coach", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
