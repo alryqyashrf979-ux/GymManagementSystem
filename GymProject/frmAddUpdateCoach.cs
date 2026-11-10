@@ -80,10 +80,13 @@ namespace GymMangementSystem
                 return;
             }
 
-
+            ctrlEmployeeDetailsWithFiltering1.EnableFiltering = false;
+            ctrlEmployeeDetailsWithFiltering1.LoadEmployeeInfo(_CoachInfo.EmployeeID);
+            txtNote.Text = _CoachInfo.Note;
+            txtSpeciality.Text = _CoachInfo.Speciality;
             lblCoachID.Text = _CoachInfo.CoachID.ToString();
             lblEmployeeID.Text=_CoachInfo.EmployeeID.ToString();
-
+            pnlCoachInput.Enabled = true;
         }
 
 
@@ -117,11 +120,6 @@ namespace GymMangementSystem
             }
 
 
-            if (MessageBox.Show("Are You Sure you want to Freeze this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
-            {
-
-                return;
-            }
 
 
             _CoachInfo.Note=txtNote.Text;

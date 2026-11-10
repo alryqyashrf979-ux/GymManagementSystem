@@ -51,6 +51,7 @@ namespace GymMangementSystem
             lblTitle.Text =clsTitles.Find(EmployeeInfo.TitleID).TitleName;
             txtNote.Text = EmployeeInfo.Notes;
             lnkShowShiftInfo.Enabled = true;
+            uctPersonDetails1.LoadPersonInfo(EmployeeInfo.PersonID);
         }
 
 

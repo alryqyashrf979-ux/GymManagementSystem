@@ -63,9 +63,8 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1200, 49);
+            this.panel4.Size = new System.Drawing.Size(900, 40);
             this.panel4.TabIndex = 16;
             // 
             // lblTitle
@@ -73,10 +72,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(61, 7);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(46, 6);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(139, 32);
+            this.lblTitle.Size = new System.Drawing.Size(113, 26);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Add Coach";
             // 
@@ -86,9 +84,8 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.CancelIcon;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 49);
+            this.pictureBox10.Size = new System.Drawing.Size(42, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -112,20 +109,18 @@
             this.pnlCoachInput.Controls.Add(this.lblCoachID);
             this.pnlCoachInput.Controls.Add(this.label14);
             this.pnlCoachInput.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.pnlCoachInput.Location = new System.Drawing.Point(10, 734);
-            this.pnlCoachInput.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlCoachInput.Location = new System.Drawing.Point(8, 596);
             this.pnlCoachInput.Name = "pnlCoachInput";
-            this.pnlCoachInput.Size = new System.Drawing.Size(1179, 133);
+            this.pnlCoachInput.Size = new System.Drawing.Size(884, 108);
             this.pnlCoachInput.TabIndex = 140;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.NoteCircle;
-            this.pictureBox1.Location = new System.Drawing.Point(736, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(552, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 168;
             this.pictureBox1.TabStop = false;
@@ -136,10 +131,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(658, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(494, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 27);
+            this.label1.Size = new System.Drawing.Size(57, 21);
             this.label1.TabIndex = 167;
             this.label1.Text = "Note :";
             // 
@@ -162,15 +156,14 @@
             this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtNote.IsRequired = false;
-            this.txtNote.Location = new System.Drawing.Point(793, 35);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNote.Location = new System.Drawing.Point(595, 28);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.PlaceholderText = "Note";
-            this.txtNote.ReadOnly = true;
             this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNote.SelectedText = "";
-            this.txtNote.Size = new System.Drawing.Size(378, 91);
+            this.txtNote.Size = new System.Drawing.Size(284, 74);
             this.txtNote.TabIndex = 169;
             this.txtNote.TextOffset = new System.Drawing.Point(0, -1);
             // 
@@ -178,10 +171,9 @@
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.NoteCircle;
-            this.pictureBox7.Location = new System.Drawing.Point(125, 64);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(94, 52);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 162;
             this.pictureBox7.TabStop = false;
@@ -192,10 +184,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(2, 63);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(2, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 27);
+            this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 161;
             this.label3.Text = "Speciality :";
             // 
@@ -218,25 +209,23 @@
             this.txtSpeciality.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSpeciality.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtSpeciality.IsRequired = true;
-            this.txtSpeciality.Location = new System.Drawing.Point(168, 60);
-            this.txtSpeciality.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSpeciality.Location = new System.Drawing.Point(126, 49);
+            this.txtSpeciality.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSpeciality.Multiline = true;
             this.txtSpeciality.Name = "txtSpeciality";
             this.txtSpeciality.PlaceholderText = "Speciality";
-            this.txtSpeciality.ReadOnly = true;
             this.txtSpeciality.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSpeciality.SelectedText = "";
-            this.txtSpeciality.Size = new System.Drawing.Size(347, 68);
+            this.txtSpeciality.Size = new System.Drawing.Size(260, 55);
             this.txtSpeciality.TabIndex = 163;
             this.txtSpeciality.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox5.Location = new System.Drawing.Point(517, 13);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(388, 11);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 35);
+            this.pictureBox5.Size = new System.Drawing.Size(26, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 160;
             this.pictureBox5.TabStop = false;
@@ -244,10 +233,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox3.Location = new System.Drawing.Point(127, 12);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(95, 10);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 35);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 158;
             this.pictureBox3.TabStop = false;
@@ -256,10 +244,10 @@
             // 
             this.lblEmployeeID.AutoSize = true;
             this.lblEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeID.Location = new System.Drawing.Point(558, 18);
+            this.lblEmployeeID.Location = new System.Drawing.Point(418, 15);
             this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(66, 22);
+            this.lblEmployeeID.Size = new System.Drawing.Size(54, 18);
             this.lblEmployeeID.TabIndex = 150;
             this.lblEmployeeID.Text = "[????]";
             // 
@@ -267,10 +255,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(378, 18);
+            this.label12.Location = new System.Drawing.Point(284, 15);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 22);
+            this.label12.Size = new System.Drawing.Size(113, 18);
             this.label12.TabIndex = 149;
             this.label12.Text = "Employee ID :";
             // 
@@ -278,10 +266,10 @@
             // 
             this.lblCoachID.AutoSize = true;
             this.lblCoachID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoachID.Location = new System.Drawing.Point(164, 16);
+            this.lblCoachID.Location = new System.Drawing.Point(123, 13);
             this.lblCoachID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCoachID.Name = "lblCoachID";
-            this.lblCoachID.Size = new System.Drawing.Size(66, 22);
+            this.lblCoachID.Size = new System.Drawing.Size(54, 18);
             this.lblCoachID.TabIndex = 139;
             this.lblCoachID.Text = "[????]";
             // 
@@ -289,10 +277,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(15, 17);
+            this.label14.Location = new System.Drawing.Point(11, 14);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 22);
+            this.label14.Size = new System.Drawing.Size(88, 18);
             this.label14.TabIndex = 138;
             this.label14.Text = "Coach ID :";
             // 
@@ -314,10 +302,10 @@
             this.btnSave.Image = global::GymMangementSystem.Properties.Resources.Save_32;
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(1044, 884);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(783, 713);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 37);
+            this.btnSave.Size = new System.Drawing.Size(109, 30);
             this.btnSave.TabIndex = 146;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -340,10 +328,10 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(876, 884);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(657, 713);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(156, 37);
+            this.btnClose.Size = new System.Drawing.Size(117, 30);
             this.btnClose.TabIndex = 145;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -351,25 +339,27 @@
             // ctrlEmployeeDetailsWithFiltering1
             // 
             this.ctrlEmployeeDetailsWithFiltering1.BackColor = System.Drawing.Color.White;
-            this.ctrlEmployeeDetailsWithFiltering1.Location = new System.Drawing.Point(3, 47);
+            this.ctrlEmployeeDetailsWithFiltering1.Location = new System.Drawing.Point(2, 38);
+            this.ctrlEmployeeDetailsWithFiltering1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlEmployeeDetailsWithFiltering1.Name = "ctrlEmployeeDetailsWithFiltering1";
-            this.ctrlEmployeeDetailsWithFiltering1.Size = new System.Drawing.Size(1194, 687);
+            this.ctrlEmployeeDetailsWithFiltering1.Size = new System.Drawing.Size(896, 558);
             this.ctrlEmployeeDetailsWithFiltering1.TabIndex = 17;
             this.ctrlEmployeeDetailsWithFiltering1.OnEmployeeSelected += new System.EventHandler<GymMangementSystem.ctrlEmployeeDetailsWithFiltering.EmployeeEventArgs>(this.ctrlEmployeeDetailsWithFiltering1_OnEmployeeSelected);
             // 
             // frmAddUpdateCoach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 935);
+            this.ClientSize = new System.Drawing.Size(900, 749);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlCoachInput);
             this.Controls.Add(this.ctrlEmployeeDetailsWithFiltering1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAddUpdateCoach";
             this.Text = "Add Coach";
             this.Load += new System.EventHandler(this.frmAddUpdateCoach_Load);
