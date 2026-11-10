@@ -13,7 +13,7 @@ namespace GymMangementSystem
 {
     public partial class ctrlCoachBasicDetais : UserControl
     {
-        private clsCoaches _CoachInfo;
+        public clsCoaches CoachInfo { get; private set; }
         public ctrlCoachBasicDetais()
         {
             InitializeComponent();
@@ -28,8 +28,8 @@ namespace GymMangementSystem
         }
         public void LoadCoachInformation(int CoachID)
         {
-            _CoachInfo = clsCoaches.FindByCoachID(CoachID);
-            if (_CoachInfo == null)
+            CoachInfo = clsCoaches.FindByCoachID(CoachID);
+            if (CoachInfo == null)
             {
                 _ResetDefaultValues();
                 MessageBox.Show($"No coach with coach id : {CoachID}", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -37,7 +37,7 @@ namespace GymMangementSystem
             }
 
             lblAssignedMembers.Text = clsClassRegisteration.SelectAssignedMembers(CoachID).ToString();
-            clsEmployees _Employee = clsEmployees.FindByEmployeeID(_CoachInfo.EmployeeID);
+            clsEmployees _Employee = clsEmployees.FindByEmployeeID(CoachInfo.EmployeeID);
             if (_Employee.IsActive)
             {
                 btnIsActive.Text = "Active";
@@ -49,7 +49,7 @@ namespace GymMangementSystem
                     Color.FromArgb(199, 123, 123);
             }
                 lblHiredDate.Text = _Employee.HiredDate.ToShortDateString();
-            lblSpecialization.Text = _CoachInfo.Speciality;
+            lblSpecialization.Text = CoachInfo.Speciality;
             lblTotalClasses.Text = clsCoaches.SelectTotalClassesForCoach(CoachID).ToString();
         }
     }

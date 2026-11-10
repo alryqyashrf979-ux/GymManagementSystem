@@ -269,5 +269,22 @@ namespace DataAccessLayer
                 }
             }
         }
+
+
+        static public int SelectCoachIDByNationalNu(string NationalNu)
+        {
+            string query = @"select Coaches.CoachID from Coaches inner join Employees on Coaches.EmployeeID=Employees.EmployeeID inner join People on People.ID=Employees.PersonID where People.NationalID=@NationalNu;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NationalNu", NationalNu);
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
     }
 }

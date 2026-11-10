@@ -31,7 +31,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtFiltering = new GymMangementSystem.MyTextBox();
-            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddNewCoach = new Guna.UI2.WinForms.Guna2Button();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.cmFilteringType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.gbFiltering.BorderColor = System.Drawing.Color.Gainsboro;
             this.gbFiltering.BorderRadius = 5;
             this.gbFiltering.Controls.Add(this.txtFiltering);
-            this.gbFiltering.Controls.Add(this.btnAddNewMember);
+            this.gbFiltering.Controls.Add(this.btnAddNewCoach);
             this.gbFiltering.Controls.Add(this.btnFind);
             this.gbFiltering.Controls.Add(this.cmFilteringType);
             this.gbFiltering.Controls.Add(this.label9);
@@ -86,7 +86,7 @@
             this.txtFiltering.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtFiltering.ForeColor = System.Drawing.Color.Black;
             this.txtFiltering.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
+            this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Numeric;
             this.txtFiltering.IsRequired = true;
             this.txtFiltering.Location = new System.Drawing.Point(388, 14);
             this.txtFiltering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -95,29 +95,30 @@
             this.txtFiltering.SelectedText = "";
             this.txtFiltering.Size = new System.Drawing.Size(233, 28);
             this.txtFiltering.TabIndex = 90;
+            this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
-            // btnAddNewMember
+            // btnAddNewCoach
             // 
-            this.btnAddNewMember.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnAddNewMember.BorderRadius = 5;
-            this.btnAddNewMember.BorderThickness = 1;
-            this.btnAddNewMember.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewMember.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewMember.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Image = global::GymMangementSystem.Properties.Resources.AddUser;
-            this.btnAddNewMember.ImageOffset = new System.Drawing.Point(1, 1);
-            this.btnAddNewMember.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddNewMember.Location = new System.Drawing.Point(752, 13);
-            this.btnAddNewMember.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(62, 29);
-            this.btnAddNewMember.TabIndex = 89;
+            this.btnAddNewCoach.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddNewCoach.BorderRadius = 5;
+            this.btnAddNewCoach.BorderThickness = 1;
+            this.btnAddNewCoach.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewCoach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewCoach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewCoach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewCoach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewCoach.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewCoach.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewCoach.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewCoach.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewCoach.Image = global::GymMangementSystem.Properties.Resources.AddUser;
+            this.btnAddNewCoach.ImageOffset = new System.Drawing.Point(1, 1);
+            this.btnAddNewCoach.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddNewCoach.Location = new System.Drawing.Point(752, 13);
+            this.btnAddNewCoach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNewCoach.Name = "btnAddNewCoach";
+            this.btnAddNewCoach.Size = new System.Drawing.Size(62, 29);
+            this.btnAddNewCoach.TabIndex = 89;
             // 
             // btnFind
             // 
@@ -141,6 +142,7 @@
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(62, 29);
             this.btnFind.TabIndex = 88;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cmFilteringType
             // 
@@ -182,7 +184,6 @@
             this.ctrlCoachDetails1.Name = "ctrlCoachDetails1";
             this.ctrlCoachDetails1.Size = new System.Drawing.Size(961, 470);
             this.ctrlCoachDetails1.TabIndex = 1;
-            this.ctrlCoachDetails1.Load += new System.EventHandler(this.ctrlCoachDetails1_Load);
             // 
             // ctrlCoachDetailsWithFiltering
             // 
@@ -205,7 +206,7 @@
         private ctrlCoachDetails ctrlCoachDetails1;
         private Guna.UI2.WinForms.Guna2GroupBox gbFiltering;
         private MyTextBox txtFiltering;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewCoach;
         private Guna.UI2.WinForms.Guna2Button btnFind;
         private Guna.UI2.WinForms.Guna2ComboBox cmFilteringType;
         private System.Windows.Forms.Label label9;
