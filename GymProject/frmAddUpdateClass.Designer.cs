@@ -161,6 +161,7 @@
             this.lkSelectCoachID.TabIndex = 116;
             this.lkSelectCoachID.TabStop = true;
             this.lkSelectCoachID.Text = "Select Coach ID ";
+            this.lkSelectCoachID.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkSelectCoachID_LinkClicked);
             // 
             // label3
             // 
