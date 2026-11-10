@@ -25,7 +25,7 @@ namespace GymMangementSystem
 
         public event EventHandler<CoachInfoEventArgs> OnCoachSelected;
 
-        protected virtual void _SelectCoach(object sender, CoachInfoEventArgs e)
+        protected virtual void SelectCoach(object sender, CoachInfoEventArgs e)
         {
             OnCoachSelected?.Invoke(sender, e);
         }
@@ -42,7 +42,7 @@ namespace GymMangementSystem
             else
                 ctrlCoachDetails1.LoadCoachInformationByNationalNu(txtFiltering.Text.Trim());
 
-            _SelectCoach(this, new CoachInfoEventArgs(ctrlCoachDetails1.CoachInfo));
+            SelectCoach(this, new CoachInfoEventArgs(ctrlCoachDetails1.CoachInfo));
         }
         private void btnFind_Click(object sender, EventArgs e)
         {

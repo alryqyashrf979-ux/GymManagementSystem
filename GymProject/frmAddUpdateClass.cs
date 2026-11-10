@@ -97,8 +97,6 @@ namespace GymMangementSystem
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            //for demo and when coach management is ready we will link it with it.
-            lblCoachID.Text = "1";
 
             if (_CoachID==-1)
             {
@@ -132,7 +130,15 @@ namespace GymMangementSystem
 
         private void lkSelectCoachID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-          // Form frm=
+            frmSelectCoach frm = new frmSelectCoach();
+            frm.DataBack += _SelectCoachID;
+            frm.ShowDialog();
+        }
+
+        private void _SelectCoachID(int CoachID)
+        {
+            _CoachID = CoachID;
+            lblCoachID.Text = CoachID.ToString();
         }
     }
 }
