@@ -126,5 +126,10 @@ namespace DataBusinessLayer
         {
             return clsCoachData.SelectPersonIDByCoachID(PersonID);
         }
+
+        public static int SelectCoachIDByNationalNu(string NationalNu)
+        {
+            return clsCoachData.SelectCoachIDByNationalNu(NationalNu);
+        }
     }
 }
