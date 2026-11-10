@@ -69,6 +69,12 @@
     <Compile Include="ctrlCoachDetails.Designer.cs">
       <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlCoachDetailsWithFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlCoachDetailsWithFiltering.Designer.cs">
+      <DependentUpon>ctrlCoachDetailsWithFiltering.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlShiftDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlCoachDetails.resx">
       <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlCoachDetailsWithFiltering.resx">
+      <DependentUpon>ctrlCoachDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlShiftDetails.resx">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
