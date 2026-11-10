@@ -112,6 +112,11 @@ namespace DataBusinessLayer
             else
                 return null;
         }
+
+        static public int SelectAssignedMembers(int CoachID)
+        {
+            return clsClassregisterationsDataAccess.SelectAssignedMembers(CoachID);
+        }
     }
 }
     

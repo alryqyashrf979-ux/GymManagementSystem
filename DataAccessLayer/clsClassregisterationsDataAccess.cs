@@ -161,21 +161,21 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int SelectAssignedMembers(int ClassID)
+        static public int SelectAssignedMembers(int CoachID)
         {
-            string query = @"select Count(*) from ClassRegisterations where ClassID=@ClassID;";
+            string query = @"select count(*) from ClassRegisterations where ClassID in 
+                            (select ClassID from Classes where CoachID=@CoachID and IsActive=1);";
 
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@ClassID", ClassID);
+                    command.Parameters.AddWithValue("@CoachID", CoachID);
 
-                    return command.ExecuteNonQuery();
+                    return Convert.ToInt32(command.ExecuteScalar());
                 }
             }
-            return -1;
         }
     }
 }

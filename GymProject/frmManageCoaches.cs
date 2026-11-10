@@ -88,7 +88,8 @@ namespace GymMangementSystem
 
         private void CoachDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // Form frm=new 
+            Form frm = new frmCoachDetails((int)dgvCoaches.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
 
         private void addCoachToolStripMenuItem_Click(object sender, EventArgs e)

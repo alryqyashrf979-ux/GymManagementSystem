@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,9 +23,10 @@ namespace GymMangementSystem
             ctrlPersonDetails1.SetHeaderColor(56, 56, 56);
         }
 
-        private void ctrlPersonDetails1_Load(object sender, EventArgs e)
+    public void LoadCoachInformation(int CoachID)
         {
-
+            ctrlCoachBasicDetais1.LoadCoachInformation(CoachID);
+            ctrlPersonDetails1.LoadPersonInfo(clsCoaches.SelectPersonIDByCoachID(CoachID));
         }
     }
 }

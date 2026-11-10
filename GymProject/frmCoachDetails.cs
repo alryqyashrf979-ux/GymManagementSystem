@@ -12,9 +12,10 @@ namespace GymMangementSystem
 {
     public partial class frmCoachDetails : Form
     {
-        public frmCoachDetails()
+        public frmCoachDetails(int CoachID)
         {
             InitializeComponent();
+            ctrlCoachDetails1.LoadCoachInformation(CoachID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

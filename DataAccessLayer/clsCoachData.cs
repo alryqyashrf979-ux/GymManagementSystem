@@ -161,7 +161,7 @@ namespace DataAccessLayer
             }
         }
 
-        static public bool FindByCoachID(int CoachID,ref int EmployeeID,ref string Speciality,ref string Note,ref DateTime HiredDate)
+        static public bool FindByCoachID(int CoachID,ref int EmployeeID,ref string Speciality,ref string Note)
         {
             string query = "Select *from Coaches where CoachID=@CoachID;";
 
@@ -180,7 +180,6 @@ namespace DataAccessLayer
                             {
                                 EmployeeID = (int)reader["EmployeeID"];
                                 Speciality = (string)reader["Speciality"];
-                                HiredDate = (DateTime)reader["HiredDate"];
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
                                 else
@@ -200,7 +199,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool FindByEmployeeID(int CoachID, ref int EmployeeID, ref string Speciality, ref string Note,ref DateTime HiredDate)
+        static public bool FindByEmployeeID(int CoachID, ref int EmployeeID, ref string Speciality, ref string Note)
         {
             string query = "Select *from Coaches where EmployeeID=@Employee;";
 
@@ -219,7 +218,6 @@ namespace DataAccessLayer
                             {
                                 CoachID = (int)reader["CoachID"];
                                 Speciality = (string)reader["Speciality"];
-                                HiredDate = (DateTime)reader["HiredDate"];
 
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
@@ -251,10 +249,25 @@ namespace DataAccessLayer
                 {
                     command.Parameters.AddWithValue("@CoachID", CoachID);
 
-                    return command.ExecuteNonQuery();
+                    return Convert.ToInt32(command.ExecuteScalar());
                 }
             }
-            return -1;
+        }
+
+        static public int SelectPersonIDByCoachID(int CoachID)
+        {
+            string query = @"select PersonID from Coaches inner join Employees on Coaches.EmployeeID=Employees.EmployeeID where CoachID=@CoachID;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CoachID", CoachID);
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
         }
     }
 }
