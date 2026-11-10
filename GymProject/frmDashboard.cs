@@ -53,7 +53,7 @@ namespace GymMangementSystem
 
         private void btnManageClasses_Click(object sender, EventArgs e)
         {
-            Form frm = new frmClasses();
+            Form frm = new frmManageClasses();
             frm.ShowDialog();
             _SelectbtnDashBoard();
 
@@ -109,7 +109,7 @@ namespace GymMangementSystem
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Form frm = new frmClasses();
+            Form frm = new frmManageClasses();
             frm.ShowDialog();
             _SelectbtnDashBoard();
 
