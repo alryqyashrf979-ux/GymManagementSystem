@@ -172,5 +172,10 @@ namespace GymMangementSystem
             frm.ShowDialog();
             _RefreshDataTable();
         }
+
+        private void guna2ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

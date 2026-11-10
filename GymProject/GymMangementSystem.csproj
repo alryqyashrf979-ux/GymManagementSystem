@@ -978,5 +978,8 @@
   <ItemGroup>
     <None Include="Resources\ManageSubscpritions.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showٍSubscription_details_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
