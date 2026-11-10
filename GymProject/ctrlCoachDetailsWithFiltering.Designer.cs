@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ctrlCoachDetails1 = new GymMangementSystem.ctrlCoachDetails();
             this.gbFiltering = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtFiltering = new GymMangementSystem.MyTextBox();
             this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.cmFilteringType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.ctrlCoachDetails1 = new GymMangementSystem.ctrlCoachDetails();
             this.guna2Panel1.SuspendLayout();
             this.gbFiltering.SuspendLayout();
             this.SuspendLayout();
@@ -50,16 +50,8 @@
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(968, 546);
+            this.guna2Panel1.Size = new System.Drawing.Size(968, 529);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // ctrlCoachDetails1
-            // 
-            this.ctrlCoachDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlCoachDetails1.Location = new System.Drawing.Point(1, 56);
-            this.ctrlCoachDetails1.Name = "ctrlCoachDetails1";
-            this.ctrlCoachDetails1.Size = new System.Drawing.Size(961, 477);
-            this.ctrlCoachDetails1.TabIndex = 1;
             // 
             // gbFiltering
             // 
@@ -162,14 +154,15 @@
             this.cmFilteringType.ForeColor = System.Drawing.Color.Black;
             this.cmFilteringType.ItemHeight = 30;
             this.cmFilteringType.Items.AddRange(new object[] {
-            "National No.",
-            "Member ID"});
-            this.cmFilteringType.Location = new System.Drawing.Point(181, 13);
+            "Coach ID",
+            "National No"});
+            this.cmFilteringType.Location = new System.Drawing.Point(181, 10);
             this.cmFilteringType.Margin = new System.Windows.Forms.Padding(2);
             this.cmFilteringType.Name = "cmFilteringType";
             this.cmFilteringType.Size = new System.Drawing.Size(200, 36);
             this.cmFilteringType.StartIndex = 0;
             this.cmFilteringType.TabIndex = 86;
+            this.cmFilteringType.SelectedIndexChanged += new System.EventHandler(this.cmFilteringType_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -182,6 +175,15 @@
             this.label9.TabIndex = 85;
             this.label9.Text = "FindBy:";
             // 
+            // ctrlCoachDetails1
+            // 
+            this.ctrlCoachDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlCoachDetails1.Location = new System.Drawing.Point(1, 56);
+            this.ctrlCoachDetails1.Name = "ctrlCoachDetails1";
+            this.ctrlCoachDetails1.Size = new System.Drawing.Size(961, 470);
+            this.ctrlCoachDetails1.TabIndex = 1;
+            this.ctrlCoachDetails1.Load += new System.EventHandler(this.ctrlCoachDetails1_Load);
+            // 
             // ctrlCoachDetailsWithFiltering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,7 +191,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "ctrlCoachDetailsWithFiltering";
-            this.Size = new System.Drawing.Size(974, 553);
+            this.Size = new System.Drawing.Size(974, 536);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFiltering.ResumeLayout(false);
             this.gbFiltering.PerformLayout();
