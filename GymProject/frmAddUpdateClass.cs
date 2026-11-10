@@ -129,5 +129,10 @@ namespace GymMangementSystem
                 MessageBox.Show("Error : Class didn't save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+
+        private void lkSelectCoachID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+          // Form frm=
+        }
     }
 }
