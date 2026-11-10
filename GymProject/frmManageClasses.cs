@@ -13,10 +13,10 @@ using System.Threading;
 
 namespace GymMangementSystem
 {
-    public partial class frmClasses : Form
+    public partial class frmManageClasses : Form
     {
        static DataTable _dtClasses = clsClasses.GetAllClasses();
-        public frmClasses()
+        public frmManageClasses()
         {
             InitializeComponent();
         }
