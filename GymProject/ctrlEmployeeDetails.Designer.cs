@@ -30,6 +30,21 @@
         {
             this.uctPersonDetails1 = new GymMangementSystem.ctrlPersonDetails();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lnkShowShiftInfo = new System.Windows.Forms.LinkLabel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.d = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblShiftID = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblTerminationDate = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblHiredDate = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEmployeeID = new System.Windows.Forms.Label();
@@ -43,41 +58,25 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtNote = new GymMangementSystem.MyTextBox();
-            this.lblTerminationDate = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblShiftID = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.d = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lnkShowShiftInfo = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // uctPersonDetails1
             // 
             this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetails1.Location = new System.Drawing.Point(4, 3);
-            this.uctPersonDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.uctPersonDetails1.Location = new System.Drawing.Point(3, 2);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(1187, 339);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(890, 275);
             this.uctPersonDetails1.TabIndex = 0;
             // 
             // guna2Panel1
@@ -113,20 +112,185 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.txtNote);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(6, 344);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(4, 280);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1179, 264);
+            this.guna2Panel1.Size = new System.Drawing.Size(884, 214);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.money_32;
+            this.pictureBox6.Location = new System.Drawing.Point(98, 162);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 161;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox5.Location = new System.Drawing.Point(99, 128);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 160;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonID2;
+            this.pictureBox4.Location = new System.Drawing.Point(99, 92);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 159;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.ClassID;
+            this.pictureBox3.Location = new System.Drawing.Point(100, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 158;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox2.Location = new System.Drawing.Point(414, 170);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 157;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
+            this.pictureBox1.Location = new System.Drawing.Point(414, 138);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 156;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lnkShowShiftInfo
+            // 
+            this.lnkShowShiftInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.lnkShowShiftInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkShowShiftInfo.AutoSize = true;
+            this.lnkShowShiftInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowShiftInfo.Enabled = false;
+            this.lnkShowShiftInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkShowShiftInfo.Location = new System.Drawing.Point(729, 186);
+            this.lnkShowShiftInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkShowShiftInfo.Name = "lnkShowShiftInfo";
+            this.lnkShowShiftInfo.Size = new System.Drawing.Size(139, 26);
+            this.lnkShowShiftInfo.TabIndex = 155;
+            this.lnkShowShiftInfo.TabStop = true;
+            this.lnkShowShiftInfo.Text = "Show Shift Info";
+            this.lnkShowShiftInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lnkShowShiftInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkShowShiftInfo_LinkClicked);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(128, 96);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(54, 18);
+            this.lblTitle.TabIndex = 154;
+            this.lblTitle.Text = "[????]";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(2, 96);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 18);
+            this.label13.TabIndex = 153;
+            this.label13.Text = "Titel :";
+            // 
+            // d
+            // 
+            this.d.AutoSize = true;
+            this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d.Location = new System.Drawing.Point(128, 167);
+            this.d.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.d.Name = "d";
+            this.d.Size = new System.Drawing.Size(54, 18);
+            this.d.TabIndex = 152;
+            this.d.Text = "[????]";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(2, 164);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 18);
+            this.label6.TabIndex = 151;
+            this.label6.Text = "Salary :";
+            // 
+            // lblShiftID
+            // 
+            this.lblShiftID.AutoSize = true;
+            this.lblShiftID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShiftID.Location = new System.Drawing.Point(128, 132);
+            this.lblShiftID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiftID.Name = "lblShiftID";
+            this.lblShiftID.Size = new System.Drawing.Size(54, 18);
+            this.lblShiftID.TabIndex = 150;
+            this.lblShiftID.Text = "[????]";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(2, 130);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 18);
+            this.label12.TabIndex = 149;
+            this.label12.Text = "Shift ID :";
+            // 
+            // lblTerminationDate
+            // 
+            this.lblTerminationDate.AutoSize = true;
+            this.lblTerminationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTerminationDate.Location = new System.Drawing.Point(452, 172);
+            this.lblTerminationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTerminationDate.Name = "lblTerminationDate";
+            this.lblTerminationDate.Size = new System.Drawing.Size(106, 18);
+            this.lblTerminationDate.TabIndex = 144;
+            this.lblTerminationDate.Text = "[yyyy/mm/dd]";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(272, 175);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 18);
+            this.label4.TabIndex = 143;
+            this.label4.Text = "Termination Date  :";
             // 
             // lblHiredDate
             // 
             this.lblHiredDate.AutoSize = true;
             this.lblHiredDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHiredDate.Location = new System.Drawing.Point(602, 170);
+            this.lblHiredDate.Location = new System.Drawing.Point(452, 138);
             this.lblHiredDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHiredDate.Name = "lblHiredDate";
-            this.lblHiredDate.Size = new System.Drawing.Size(126, 22);
+            this.lblHiredDate.Size = new System.Drawing.Size(106, 18);
             this.lblHiredDate.TabIndex = 142;
             this.lblHiredDate.Text = "[yyyy/mm/dd]";
             // 
@@ -134,10 +298,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(420, 175);
+            this.label2.Location = new System.Drawing.Point(315, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 22);
+            this.label2.Size = new System.Drawing.Size(103, 18);
             this.label2.TabIndex = 141;
             this.label2.Text = "Hired Date  :";
             // 
@@ -145,10 +309,10 @@
             // 
             this.lblEmployeeID.AutoSize = true;
             this.lblEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeID.Location = new System.Drawing.Point(171, 72);
+            this.lblEmployeeID.Location = new System.Drawing.Point(128, 58);
             this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(66, 22);
+            this.lblEmployeeID.Size = new System.Drawing.Size(54, 18);
             this.lblEmployeeID.TabIndex = 139;
             this.lblEmployeeID.Text = "[????]";
             // 
@@ -156,10 +320,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 71);
+            this.label14.Location = new System.Drawing.Point(2, 58);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(134, 22);
+            this.label14.Size = new System.Drawing.Size(113, 18);
             this.label14.TabIndex = 138;
             this.label14.Text = "Employee ID :";
             // 
@@ -167,10 +331,9 @@
             // 
             this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox13.Image = global::GymMangementSystem.Properties.Resources.NoteCircle;
-            this.pictureBox13.Location = new System.Drawing.Point(747, 107);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Location = new System.Drawing.Point(560, 87);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(49, 32);
+            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 135;
             this.pictureBox13.TabStop = false;
@@ -181,10 +344,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(678, 104);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(508, 84);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 27);
+            this.label9.Size = new System.Drawing.Size(57, 21);
             this.label9.TabIndex = 134;
             this.label9.Text = "Note :";
             // 
@@ -195,10 +357,10 @@
             this.tgschIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tgschIsActive.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.tgschIsActive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.tgschIsActive.Location = new System.Drawing.Point(604, 139);
+            this.tgschIsActive.Location = new System.Drawing.Point(453, 113);
             this.tgschIsActive.Margin = new System.Windows.Forms.Padding(2);
             this.tgschIsActive.Name = "tgschIsActive";
-            this.tgschIsActive.Size = new System.Drawing.Size(54, 20);
+            this.tgschIsActive.Size = new System.Drawing.Size(40, 16);
             this.tgschIsActive.TabIndex = 132;
             this.tgschIsActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.tgschIsActive.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -210,20 +372,18 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(439, 132);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(329, 107);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 27);
+            this.label11.Size = new System.Drawing.Size(85, 21);
             this.label11.TabIndex = 131;
             this.label11.Text = "Is Active :";
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.IsActive;
-            this.pictureBox9.Location = new System.Drawing.Point(552, 127);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Location = new System.Drawing.Point(414, 103);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(39, 35);
+            this.pictureBox9.Size = new System.Drawing.Size(29, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 130;
             this.pictureBox9.TabStop = false;
@@ -237,9 +397,9 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1179, 44);
+            this.guna2Panel3.Size = new System.Drawing.Size(884, 36);
             this.guna2Panel3.TabIndex = 129;
             // 
             // label8
@@ -247,20 +407,18 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(51, 11);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(38, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 27);
+            this.label8.Size = new System.Drawing.Size(145, 21);
             this.label8.TabIndex = 54;
             this.label8.Text = "Employee Details";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.PersonIcon;
-            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(42, 35);
+            this.pictureBox7.Size = new System.Drawing.Size(32, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
@@ -284,211 +442,41 @@
             this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtNote.IsRequired = false;
-            this.txtNote.Location = new System.Drawing.Point(803, 109);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNote.Location = new System.Drawing.Point(602, 89);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.PlaceholderText = "Note";
             this.txtNote.ReadOnly = true;
             this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNote.SelectedText = "";
-            this.txtNote.Size = new System.Drawing.Size(368, 94);
+            this.txtNote.Size = new System.Drawing.Size(276, 76);
             this.txtNote.TabIndex = 136;
             this.txtNote.TextOffset = new System.Drawing.Point(0, -1);
             // 
-            // lblTerminationDate
-            // 
-            this.lblTerminationDate.AutoSize = true;
-            this.lblTerminationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTerminationDate.Location = new System.Drawing.Point(602, 212);
-            this.lblTerminationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTerminationDate.Name = "lblTerminationDate";
-            this.lblTerminationDate.Size = new System.Drawing.Size(126, 22);
-            this.lblTerminationDate.TabIndex = 144;
-            this.lblTerminationDate.Text = "[yyyy/mm/dd]";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(362, 215);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 22);
-            this.label4.TabIndex = 143;
-            this.label4.Text = "Termination Date  :";
-            // 
-            // lblShiftID
-            // 
-            this.lblShiftID.AutoSize = true;
-            this.lblShiftID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShiftID.Location = new System.Drawing.Point(171, 162);
-            this.lblShiftID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblShiftID.Name = "lblShiftID";
-            this.lblShiftID.Size = new System.Drawing.Size(66, 22);
-            this.lblShiftID.TabIndex = 150;
-            this.lblShiftID.Text = "[????]";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 160);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 22);
-            this.label12.TabIndex = 149;
-            this.label12.Text = "Shift ID :";
-            // 
-            // d
-            // 
-            this.d.AutoSize = true;
-            this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d.Location = new System.Drawing.Point(171, 205);
-            this.d.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(66, 22);
-            this.d.TabIndex = 152;
-            this.d.Text = "[????]";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 202);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 22);
-            this.label6.TabIndex = 151;
-            this.label6.Text = "Salary :";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(171, 118);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(66, 22);
-            this.lblTitle.TabIndex = 154;
-            this.lblTitle.Text = "[????]";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 118);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 22);
-            this.label13.TabIndex = 153;
-            this.label13.Text = "Titel :";
-            // 
-            // lnkShowShiftInfo
-            // 
-            this.lnkShowShiftInfo.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.lnkShowShiftInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkShowShiftInfo.AutoSize = true;
-            this.lnkShowShiftInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lnkShowShiftInfo.Enabled = false;
-            this.lnkShowShiftInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowShiftInfo.Location = new System.Drawing.Point(972, 229);
-            this.lnkShowShiftInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkShowShiftInfo.Name = "lnkShowShiftInfo";
-            this.lnkShowShiftInfo.Size = new System.Drawing.Size(166, 31);
-            this.lnkShowShiftInfo.TabIndex = 155;
-            this.lnkShowShiftInfo.TabStop = true;
-            this.lnkShowShiftInfo.Text = "Show Shift Info";
-            this.lnkShowShiftInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
-            this.pictureBox1.Location = new System.Drawing.Point(552, 170);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 156;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox2.Location = new System.Drawing.Point(552, 209);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 157;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox3.Location = new System.Drawing.Point(134, 68);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 158;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonID2;
-            this.pictureBox4.Location = new System.Drawing.Point(132, 113);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 159;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox5.Location = new System.Drawing.Point(132, 157);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 160;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.money_32;
-            this.pictureBox6.Location = new System.Drawing.Point(131, 200);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 161;
-            this.pictureBox6.TabStop = false;
-            // 
             // ctrlEmployeeDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.uctPersonDetails1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ctrlEmployeeDetails";
-            this.Size = new System.Drawing.Size(1193, 613);
+            this.Size = new System.Drawing.Size(895, 498);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
