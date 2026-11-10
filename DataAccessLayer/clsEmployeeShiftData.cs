@@ -32,7 +32,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        static public int AddEmployeeShift(string ShiftType,DateTime StartTime,DateTime EndTime)
+        static public int AddEmployeeShift(string ShiftType, TimeSpan StartTime, TimeSpan EndTime)
         {
             string query = "INSERT INTO [dbo].[EmployeesShift] ([ShiftType],[StartTime],[EndTime]) " +
                 "VALUES (@ShiftType,@StartTime,@EndTime);select scope_identity();";
@@ -63,7 +63,7 @@ namespace DataAccessLayer
             }
         }
 
-        static public bool UpdateEmployeeShift(int ShiftID,string ShiftType,DateTime StartTime,DateTime EndTime)
+        static public bool UpdateEmployeeShift(int ShiftID,string ShiftType, TimeSpan StartTime, TimeSpan EndTime)
         {
             string query = "UPDATE [dbo].[EmployeesShift] SET " +
                 "[ShiftType] = @ShiftType," +
@@ -118,7 +118,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool Find(int ShiftID,ref string ShiftType,ref DateTime StartTime,ref DateTime EndTime)
+        static public bool Find(int ShiftID,ref string ShiftType,ref TimeSpan StartTime,ref TimeSpan EndTime)
         {
             string query = "select *from EmployeesShift where ShiftID=@ShiftID;";
 
@@ -136,8 +136,8 @@ namespace DataAccessLayer
                             if (reader.Read())
                             {
                                 ShiftType = (string)reader["ShiftType"];
-                                StartTime = (DateTime)reader["StartTime"];
-                                EndTime = (DateTime)reader["EndTime"];
+                                StartTime =(TimeSpan)reader["StartTime"];
+                                EndTime = (TimeSpan)reader["EndTime"];
 
                                 return true;
                             }

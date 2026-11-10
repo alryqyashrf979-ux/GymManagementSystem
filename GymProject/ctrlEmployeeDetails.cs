@@ -83,7 +83,10 @@ namespace GymMangementSystem
 
         }
 
-
-
+        private void lnkShowShiftInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form frm = new frmShowShiftDetails(EmployeeInfo.ShiftID);
+            frm.ShowDialog();
+        }
     }
 }

@@ -14,8 +14,8 @@ namespace DataBusinessLayer
         private int _ShiftID;
         public int ShiftID { get { return _ShiftID; } }
         public string ShiftType { set; get; }
-        public DateTime StartTime { set; get; }
-        public DateTime EndTime { set; get; }
+        public TimeSpan StartTime { set; get; }
+        public TimeSpan EndTime { set; get; }
 
         public enum enMode { AddMode=1,UpdateMode=2 }
         private enMode _Mode = enMode.AddMode;
@@ -24,12 +24,12 @@ namespace DataBusinessLayer
         {
             _ShiftID = -1;
             this.ShiftType = string.Empty;
-            this.StartTime = DateTime.Now;
-            this.EndTime = DateTime.Now;
+            this.StartTime = TimeSpan.Zero;
+            this.EndTime = TimeSpan.Zero;
             _Mode = enMode.AddMode;
         }
 
-        public clsEmployeeShift(int ShiftID,string ShiftType,DateTime StartTime,DateTime EndTime)
+        public clsEmployeeShift(int ShiftID,string ShiftType, TimeSpan StartTime, TimeSpan EndTime)
         {
             _ShiftID = ShiftID;
             this.ShiftType = ShiftType;
@@ -78,7 +78,7 @@ namespace DataBusinessLayer
         static public clsEmployeeShift Find(int ShiftID)
         {
             string ShiftType = string.Empty;
-            DateTime StartTime = DateTime.Now, EndTime = DateTime.Now;
+            TimeSpan StartTime =TimeSpan.Zero, EndTime = TimeSpan.Zero;
 
             bool IsFound = clsEmployeeShiftData.Find(ShiftID, ref ShiftType,ref StartTime,ref EndTime);
 

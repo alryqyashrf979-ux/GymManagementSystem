@@ -12,9 +12,10 @@ namespace GymMangementSystem
 {
     public partial class frmShowShiftDetails : Form
     {
-        public frmShowShiftDetails()
+        public frmShowShiftDetails(int ShiftID)
         {
             InitializeComponent();
+            ctrlShiftDetails1.LoadShiftInformation(ShiftID);
         }
     }
 }

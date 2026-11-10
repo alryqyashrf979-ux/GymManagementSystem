@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlShiftDetails1 = new GymMangementSystem.ctrlShiftDetails();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlShiftDetails1 = new GymMangementSystem.ctrlShiftDetails();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlShiftDetails1
-            // 
-            this.ctrlShiftDetails1.Location = new System.Drawing.Point(-2, 33);
-            this.ctrlShiftDetails1.Name = "ctrlShiftDetails1";
-            this.ctrlShiftDetails1.Size = new System.Drawing.Size(291, 140);
-            this.ctrlShiftDetails1.TabIndex = 0;
             // 
             // panel4
             // 
@@ -62,9 +55,9 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(46, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(81, 17);
+            this.lblTitle.Size = new System.Drawing.Size(89, 17);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Add Coach";
+            this.lblTitle.Text = "Shift Details";
             // 
             // pictureBox10
             // 
@@ -103,6 +96,13 @@
             this.btnClose.TabIndex = 146;
             this.btnClose.Text = "Close";
             // 
+            // ctrlShiftDetails1
+            // 
+            this.ctrlShiftDetails1.Location = new System.Drawing.Point(-2, 33);
+            this.ctrlShiftDetails1.Name = "ctrlShiftDetails1";
+            this.ctrlShiftDetails1.Size = new System.Drawing.Size(291, 140);
+            this.ctrlShiftDetails1.TabIndex = 0;
+            // 
             // frmShowShiftDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +114,7 @@
             this.Controls.Add(this.ctrlShiftDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowShiftDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
