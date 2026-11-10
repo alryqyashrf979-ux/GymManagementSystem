@@ -523,6 +523,16 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap expire_subscription_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("expire_subscription_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Female {
             get {
                 object obj = ResourceManager.GetObject("Female", resourceCulture);
@@ -1276,6 +1286,16 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap UnActive {
             get {
                 object obj = ResourceManager.GetObject("UnActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unfreeze_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("unfreeze_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
