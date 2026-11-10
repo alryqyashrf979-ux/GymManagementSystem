@@ -88,6 +88,7 @@
             this.ctrlCoachDetailsWithFiltering1.Name = "ctrlCoachDetailsWithFiltering1";
             this.ctrlCoachDetailsWithFiltering1.Size = new System.Drawing.Size(974, 538);
             this.ctrlCoachDetailsWithFiltering1.TabIndex = 91;
+            this.ctrlCoachDetailsWithFiltering1.OnCoachSelected += new System.EventHandler<GymMangementSystem.ctrlCoachDetailsWithFiltering.CoachInfoEventArgs>(this.ctrlCoachDetailsWithFiltering1_OnCoachSelected);
             // 
             // btnClose
             // 
@@ -139,6 +140,7 @@
             this.btnSave.Size = new System.Drawing.Size(109, 30);
             this.btnSave.TabIndex = 145;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmSelectCoach
             // 
