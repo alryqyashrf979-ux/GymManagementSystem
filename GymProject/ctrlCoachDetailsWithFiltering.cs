@@ -16,5 +16,15 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+
+        private void ctrlCoachDetails1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
