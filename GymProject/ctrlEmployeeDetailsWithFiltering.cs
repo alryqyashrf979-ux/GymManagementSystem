@@ -21,6 +21,10 @@ namespace GymMangementSystem
 
         public clsEmployees EmployeeInfo { get => ctrlEmployeeDetails1.EmployeeInfo; }
 
+        public bool EnableFiltering
+        {
+            set { gbFiltering.Enabled = value; }
+        }
 
         public class EmployeeEventArgs : EventArgs
         {
@@ -65,6 +69,12 @@ namespace GymMangementSystem
         private void btnFind_Click(object sender, EventArgs e)
         {
             Find();
+        }
+
+        public void LoadEmployeeInfo(int EmployeeID)
+        {
+            txtFiltering.Text = EmployeeID.ToString();
+            ctrlEmployeeDetails1.LoadEmployeeDataByEmployeeID(EmployeeID);
         }
 
         private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
