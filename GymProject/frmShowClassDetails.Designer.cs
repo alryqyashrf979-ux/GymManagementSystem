@@ -134,6 +134,7 @@
             this.btnClose.Size = new System.Drawing.Size(156, 34);
             this.btnClose.TabIndex = 101;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmShowClassDetails
             // 
@@ -148,7 +149,6 @@
             this.Name = "frmShowClassDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Class Details";
-            this.Load += new System.EventHandler(this.frmShowClassDetails_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

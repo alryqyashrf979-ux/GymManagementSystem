@@ -15,15 +15,20 @@ namespace GymMangementSystem
 {
     public partial class frmManageClasses : Form
     {
-       static DataTable _dtClasses = clsClasses.GetAllClasses();
+       static DataTable _dtClasses ;
         public frmManageClasses()
         {
             InitializeComponent();
         }
 
+        private void _RefreshData()
+        {
+            _dtClasses = clsClasses.GetAllClasses();
+            dgvShowClasses.DataSource = _dtClasses;
+        }
         private void frmManageClasses_Load(object sender, EventArgs e)
         {
-            dgvShowClasses.DataSource = _dtClasses;
+            _RefreshData();
 
             lblRecord.Text = dgvShowClasses.Rows.Count.ToString();
 
@@ -116,7 +121,7 @@ namespace GymMangementSystem
         {
             Form frm = new frmAddUpdateClass();
             frm.ShowDialog();
-            frmManageClasses_Load(null, null);
+            _RefreshData();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -127,6 +132,42 @@ namespace GymMangementSystem
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowClassDetails frm = new frmShowClassDetails();
+            frm.LoadClassInformation((int)dgvShowClasses.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateClass();
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateClass((int)dgvShowClasses.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int Index = (int)dgvShowClasses.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure you want to delete Class [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsClasses.DeleteClass(Index))
+                {
+                    MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshData();
+                }
+                else
+                    MessageBox.Show("Class was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
         }
     }
 }

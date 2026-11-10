@@ -17,12 +17,12 @@ namespace GymMangementSystem
             InitializeComponent();
         }
 
-        private void frmShowClassDetails_Load(object sender, EventArgs e)
+    public void LoadClassInformation(int ClassID)
         {
-            ctrlClassDetails1.LoadClassInfo(2);
+            ctrlClassDetails1.LoadClassInfo(ClassID);
             lblClassName.Text = ctrlClassDetails1.Class?.className ?? "Class Name";
             lblDescription.Text = ctrlClassDetails1.Class?.Description ?? "Description";
-            bool IsActive = ctrlClassDetails1.Class?.IsActive??false;
+            bool IsActive = ctrlClassDetails1.Class?.IsActive ?? false;
             if (IsActive)
             {
                 btnActive.Text = "Active";
@@ -33,6 +33,11 @@ namespace GymMangementSystem
                 btnActive.Text = "Inactive";
                 btnActive.FillColor = Color.FromArgb(199, 123, 123);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
