@@ -36,8 +36,19 @@ namespace GymMangementSystem
                 return;
             }
 
-            lblAssignedMembers.Text = "???";
-            lblHiredDate.Text =_CoachInfo.HiredDate.ToShortDateString();
+            lblAssignedMembers.Text = clsClassRegisteration.SelectAssignedMembers(CoachID).ToString();
+            clsEmployees _Employee = clsEmployees.FindByEmployeeID(_CoachInfo.EmployeeID);
+            if (_Employee.IsActive)
+            {
+                btnIsActive.Text = "Active";
+                btnIsActive.FillColor = Color.LightGreen;
+            }
+            else
+            {
+                btnIsActive.Text = "Inactive";
+                    Color.FromArgb(199, 123, 123);
+            }
+                lblHiredDate.Text = _Employee.HiredDate.ToShortDateString();
             lblSpecialization.Text = _CoachInfo.Speciality;
             lblTotalClasses.Text = clsCoaches.SelectTotalClassesForCoach(CoachID).ToString();
         }

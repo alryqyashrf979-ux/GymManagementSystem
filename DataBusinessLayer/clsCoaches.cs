@@ -17,7 +17,6 @@ namespace DataBusinessLayer
         public string Speciality { set; get; }
         private clsEmployees _Employees;
         public clsEmployees Employees { get { return _Employees; } }
-        public DateTime HiredDate { get; set; }
         public enum enMode { AddMode=1,UpdateMode=2}
         private enMode _Mode = enMode.AddMode;
 
@@ -27,17 +26,15 @@ namespace DataBusinessLayer
             EmployeeID = -1;
             Note = string.Empty;
             Speciality = string.Empty;
-            HiredDate = DateTime.Now;
             _Mode = enMode.AddMode;
         }
 
-        public clsCoaches(int CoachID,int EmployeeID,string Note,string Speciality,DateTime HiredDate)
+        public clsCoaches(int CoachID,int EmployeeID,string Note,string Speciality)
         {
             this._CoachID = CoachID;
             this.EmployeeID = EmployeeID;
             this.Note = Note;
             this.Speciality = Speciality;
-            this.HiredDate = HiredDate;
             _Employees = clsEmployees.FindByEmployeeID(EmployeeID);
             _Mode = enMode.UpdateMode;
         }
@@ -91,13 +88,12 @@ namespace DataBusinessLayer
         static public clsCoaches FindByCoachID(int CoachID)
         {
             int EmployeeID = -1;
-            DateTime HiredDate = DateTime.Now;
             string Note = string.Empty, Speciality = string.Empty;
 
-            bool IsFound = clsCoachData.FindByCoachID(CoachID, ref EmployeeID, ref Speciality, ref Note,ref HiredDate);
+            bool IsFound = clsCoachData.FindByCoachID(CoachID, ref EmployeeID, ref Speciality, ref Note);
 
             if (IsFound)
-                return new clsCoaches(CoachID, EmployeeID, Note, Speciality,HiredDate);
+                return new clsCoaches(CoachID, EmployeeID, Note, Speciality);
             else
                 return null;
         }
@@ -111,13 +107,12 @@ namespace DataBusinessLayer
         static public clsCoaches FindByEmployeeID(int EmployeeID)
         {
             int CoachID = -1;
-            DateTime HiredDate = DateTime.Now;
             string Note = string.Empty, Speciality = string.Empty;
 
-            bool IsFound = clsCoachData.FindByEmployeeID(EmployeeID, ref CoachID, ref Speciality, ref Note,ref HiredDate);
+            bool IsFound = clsCoachData.FindByEmployeeID(EmployeeID, ref CoachID, ref Speciality, ref Note);
 
             if (IsFound)
-                return new clsCoaches(CoachID, EmployeeID, Note, Speciality,HiredDate);
+                return new clsCoaches(CoachID, EmployeeID, Note, Speciality);
             else
                 return null;
         }
@@ -125,6 +120,11 @@ namespace DataBusinessLayer
         static public int SelectTotalClassesForCoach(int CoachID)
         {
             return clsCoachData.SelectTotalClassesForCoach(CoachID);
+        }
+
+        public static int SelectPersonIDByCoachID(int PersonID)
+        {
+            return clsCoachData.SelectPersonIDByCoachID(PersonID);
         }
     }
 }

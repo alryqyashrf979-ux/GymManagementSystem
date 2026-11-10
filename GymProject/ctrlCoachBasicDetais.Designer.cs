@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnIsActive = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHiredDate = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblAssignedMembers = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblSpecialization = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblTotalClasses = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -54,7 +54,7 @@
             // guna2GroupBox2
             // 
             this.guna2GroupBox2.BorderRadius = 7;
-            this.guna2GroupBox2.Controls.Add(this.guna2Button1);
+            this.guna2GroupBox2.Controls.Add(this.btnIsActive);
             this.guna2GroupBox2.Controls.Add(this.label1);
             this.guna2GroupBox2.Controls.Add(this.lblHiredDate);
             this.guna2GroupBox2.Controls.Add(this.pictureBox4);
@@ -78,22 +78,22 @@
             this.guna2GroupBox2.TabIndex = 35;
             this.guna2GroupBox2.Text = "Coach Information";
             // 
-            // guna2Button1
+            // btnIsActive
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.LightGreen;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(90, 52);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(83, 26);
-            this.guna2Button1.TabIndex = 23;
-            this.guna2Button1.Text = "Active";
+            this.btnIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.btnIsActive.BorderRadius = 15;
+            this.btnIsActive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIsActive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIsActive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIsActive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIsActive.FillColor = System.Drawing.Color.LightGreen;
+            this.btnIsActive.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnIsActive.ForeColor = System.Drawing.Color.White;
+            this.btnIsActive.Location = new System.Drawing.Point(90, 52);
+            this.btnIsActive.Name = "btnIsActive";
+            this.btnIsActive.Size = new System.Drawing.Size(83, 26);
+            this.btnIsActive.TabIndex = 23;
+            this.btnIsActive.Text = "Active";
             // 
             // label1
             // 
@@ -117,6 +117,16 @@
             this.lblHiredDate.TabIndex = 24;
             this.lblHiredDate.Text = "???";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.managePeople2;
+            this.pictureBox4.Location = new System.Drawing.Point(693, 43);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(257, 65);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -139,6 +149,16 @@
             this.lblAssignedMembers.TabIndex = 33;
             this.lblAssignedMembers.Text = "???";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox5.Location = new System.Drawing.Point(124, 143);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(49, 33);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 19;
+            this.pictureBox5.TabStop = false;
+            // 
             // lblSpecialization
             // 
             this.lblSpecialization.AutoSize = true;
@@ -160,6 +180,26 @@
             this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 32;
             this.label5.Text = "Assigned Members";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Dnable3;
+            this.pictureBox2.Location = new System.Drawing.Point(432, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(237, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Dnable3;
+            this.pictureBox6.Location = new System.Drawing.Point(121, 94);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(52, 39);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
             // 
             // lblTotalClasses
             // 
@@ -197,46 +237,6 @@
             this.guna2VSeparator2.Size = new System.Drawing.Size(12, 132);
             this.guna2VSeparator2.TabIndex = 25;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.managePeople2;
-            this.pictureBox4.Location = new System.Drawing.Point(693, 43);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(257, 65);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 31;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox5.Location = new System.Drawing.Point(124, 143);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(49, 33);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Dnable3;
-            this.pictureBox2.Location = new System.Drawing.Point(432, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Dnable3;
-            this.pictureBox6.Location = new System.Drawing.Point(121, 94);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(52, 39);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
-            // 
             // ctrlCoachBasicDetais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +258,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnIsActive;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHiredDate;
         private System.Windows.Forms.PictureBox pictureBox4;
