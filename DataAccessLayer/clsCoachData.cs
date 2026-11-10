@@ -161,7 +161,7 @@ namespace DataAccessLayer
             }
         }
 
-        static public bool FindByCoachID(int CoachID,ref int EmployeeID,ref string Speciality,ref string Note)
+        static public bool FindByCoachID(int CoachID,ref int EmployeeID,ref string Speciality,ref string Note,ref DateTime HiredDate)
         {
             string query = "Select *from Coaches where CoachID=@CoachID;";
 
@@ -180,6 +180,7 @@ namespace DataAccessLayer
                             {
                                 EmployeeID = (int)reader["EmployeeID"];
                                 Speciality = (string)reader["Speciality"];
+                                HiredDate = (DateTime)reader["HiredDate"];
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
                                 else
@@ -199,7 +200,7 @@ namespace DataAccessLayer
             return false;
         }
 
-        static public bool FindByEmployeeID(int CoachID, ref int EmployeeID, ref string Speciality, ref string Note)
+        static public bool FindByEmployeeID(int CoachID, ref int EmployeeID, ref string Speciality, ref string Note,ref DateTime HiredDate)
         {
             string query = "Select *from Coaches where EmployeeID=@Employee;";
 
@@ -218,6 +219,8 @@ namespace DataAccessLayer
                             {
                                 CoachID = (int)reader["CoachID"];
                                 Speciality = (string)reader["Speciality"];
+                                HiredDate = (DateTime)reader["HiredDate"];
+
                                 if (reader["Note"] == DBNull.Value)
                                     Note = string.Empty;
                                 else
@@ -237,5 +240,21 @@ namespace DataAccessLayer
             return false;
         }
 
+        static public int SelectTotalClassesForCoach(int CoachID)
+        {
+            string query = @"select count(*) from Classes where CoachID=@CoachID;";
+
+            using(SqlConnection connection=new SqlConnection( DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using(SqlCommand command=new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CoachID", CoachID);
+
+                    return command.ExecuteNonQuery();
+                }
+            }
+            return -1;
+        }
     }
 }

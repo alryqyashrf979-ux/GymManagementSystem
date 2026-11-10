@@ -160,6 +160,23 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+        static public int SelectAssignedMembers(int ClassID)
+        {
+            string query = @"select Count(*) from ClassRegisterations where ClassID=@ClassID;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ClassID", ClassID);
+
+                    return command.ExecuteNonQuery();
+                }
+            }
+            return -1;
+        }
     }
 }
     
