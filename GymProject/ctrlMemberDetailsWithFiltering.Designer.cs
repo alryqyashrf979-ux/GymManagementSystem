@@ -42,7 +42,7 @@
             this.guna2Panel1.Controls.Add(this.ctrlEmergencyContactDetails1);
             this.guna2Panel1.Controls.Add(this.ctrlMemberBasicDetailsWithFilter1);
             this.guna2Panel1.Location = new System.Drawing.Point(5, 4);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1199, 782);
             this.guna2Panel1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.ctrlEmergencyContactDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlEmergencyContactDetails1.Location = new System.Drawing.Point(9, 631);
-            this.ctrlEmergencyContactDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ctrlEmergencyContactDetails1.Margin = new System.Windows.Forms.Padding(5);
             this.ctrlEmergencyContactDetails1.Name = "ctrlEmergencyContactDetails1";
             this.ctrlEmergencyContactDetails1.Size = new System.Drawing.Size(1186, 148);
             this.ctrlEmergencyContactDetails1.TabIndex = 1;
@@ -60,10 +60,10 @@
             // 
             this.ctrlMemberBasicDetailsWithFilter1.BackColor = System.Drawing.Color.White;
             this.ctrlMemberBasicDetailsWithFilter1.EnableFiltering = true;
-            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(8, 2);
+            this.ctrlMemberBasicDetailsWithFilter1.Location = new System.Drawing.Point(8, 1);
             this.ctrlMemberBasicDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlMemberBasicDetailsWithFilter1.Name = "ctrlMemberBasicDetailsWithFilter1";
-            this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(1189, 626);
+            this.ctrlMemberBasicDetailsWithFilter1.Size = new System.Drawing.Size(1189, 629);
             this.ctrlMemberBasicDetailsWithFilter1.TabIndex = 0;
             this.ctrlMemberBasicDetailsWithFilter1.OnMemberSelected += new System.EventHandler<GymMangementSystem.ctrlMemberBasicDetailsWithFilter.MemberEventArgs>(this.ctrlMemberBasicDetailsWithFilter1_OnMemberSelected);
             // 
@@ -73,7 +73,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctrlMemberDetailsWithFiltering";
             this.Size = new System.Drawing.Size(1208, 788);
             this.guna2Panel1.ResumeLayout(false);
