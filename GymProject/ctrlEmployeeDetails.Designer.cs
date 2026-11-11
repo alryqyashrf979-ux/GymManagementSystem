@@ -76,7 +76,7 @@
             this.uctPersonDetails1.BackColor = System.Drawing.Color.White;
             this.uctPersonDetails1.Location = new System.Drawing.Point(3, 2);
             this.uctPersonDetails1.Name = "uctPersonDetails1";
-            this.uctPersonDetails1.Size = new System.Drawing.Size(890, 275);
+            this.uctPersonDetails1.Size = new System.Drawing.Size(950, 275);
             this.uctPersonDetails1.TabIndex = 0;
             // 
             // guna2Panel1
@@ -114,7 +114,7 @@
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Location = new System.Drawing.Point(4, 280);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(884, 214);
+            this.guna2Panel1.Size = new System.Drawing.Size(946, 214);
             this.guna2Panel1.TabIndex = 1;
             // 
             // pictureBox6
@@ -185,7 +185,7 @@
             this.lnkShowShiftInfo.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lnkShowShiftInfo.Enabled = false;
             this.lnkShowShiftInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkShowShiftInfo.Location = new System.Drawing.Point(729, 186);
+            this.lnkShowShiftInfo.Location = new System.Drawing.Point(791, 186);
             this.lnkShowShiftInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkShowShiftInfo.Name = "lnkShowShiftInfo";
             this.lnkShowShiftInfo.Size = new System.Drawing.Size(139, 26);
@@ -397,9 +397,9 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(884, 36);
+            this.guna2Panel3.Size = new System.Drawing.Size(946, 36);
             this.guna2Panel3.TabIndex = 129;
             // 
             // label8
@@ -456,14 +456,14 @@
             // 
             // ctrlEmployeeDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.uctPersonDetails1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlEmployeeDetails";
-            this.Size = new System.Drawing.Size(895, 498);
+            this.Size = new System.Drawing.Size(953, 498);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

@@ -65,6 +65,14 @@ namespace GymMangementSystem
 
             txtSalary.Text = "0";
             gtsIsActive.Checked = true;
+
+            cmTitle.DisplayMember = "TitleName";
+            cmTitle.ValueMember = "TitleID";
+            cmTitle.DataSource = clsTitles.GetAllTitles();
+
+            cmShift.DisplayMember = "Shift Type";
+            cmShift.ValueMember = "Shift ID";
+            cmShift.DataSource = clsEmployeeShift.GetAllShiftType();
         }
 
         private void frmAddUpdateEmployee_Load(object sender, EventArgs e)
@@ -118,13 +126,7 @@ namespace GymMangementSystem
                 pnlEmployeeInput.Enabled= true;
 
 
-                cmTitle.DisplayMember = "TitleName";
-                cmTitle.ValueMember = "TitleID";
-                cmTitle.DataSource = clsTitles.GetAllTitles();
-
-                cmShift.DisplayMember = "Shift Type";
-                cmShift.ValueMember = "Shift ID";
-                cmShift.DataSource = clsEmployeeShift.GetAllShiftType();
+             
 
 
             }
