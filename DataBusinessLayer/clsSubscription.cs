@@ -215,6 +215,20 @@ namespace DataBusinessLayer
         }
 
 
+        public bool ExpireSubscription()
+        {
+
+         return  this.UpdateSubscriptionStatus(enSubscriptionStatus.Expired);
+
+        }
+        public bool StartSubscription()
+        {
+
+         return  this.UpdateSubscriptionStatus(enSubscriptionStatus.Active);
+
+        }
+
+
 
         public int Freeze(DateTime StartDate,DateTime EndDate ,double FreezeFee,int FrozenByUserID,string FreezeReason)
         {
@@ -243,7 +257,30 @@ namespace DataBusinessLayer
             return Freeze.FreezeID;
         }
 
+        public bool UnFreeze(int UnFreezeByUser)
+        {
 
+
+            clsFrozenSubscription UnFreeze = clsFrozenSubscription.FindBySubscriptionID(this.SubscriptionID);
+
+            if (UnFreeze == null) return false;
+            UnFreeze.UnFreezeDate = DateTime.Today;
+            UnFreeze.UnfrozenByUserID = UnFreezeByUser;
+            UnFreeze.IsFrozen = false;
+            UnFreeze.FreezingDuration = (byte)(DateTime.Today.Date - UnFreeze.FreezeStartDate.Date).Days;
+
+            if(!UnFreeze.Save())
+            {
+                return false;
+            }
+
+
+           this.ExpirationDate.Date.AddDays(UnFreeze.FreezingDuration);
+            this.Status = enSubscriptionStatus.Active;
+
+            return this.Save();
+
+        }
 
 
 

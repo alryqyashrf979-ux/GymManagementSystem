@@ -209,11 +209,112 @@ namespace GymMangementSystem
             if (MessageBox.Show("Are you sure you want to delete Subscription [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 if (clsSubscription.DeleteSubscription(Index))
                 {
-                    MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Subscription deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _RefreshDataTable();
                 }
                 else
-                    MessageBox.Show("Person was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Subscription was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if (subscription == null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            freezeSubscriptionToolStripMenuItem.Enabled = (subscription.Status == clsSubscription.enSubscriptionStatus.Active);
+            changeSubscriptionToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active);
+            cancelSubscriptionToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active);
+            unFreezeToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Frozen);
+           startSubscriptionToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
+
+
+            expiredToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active&&DateTime.Today.Date==subscription.ExpirationDate.Date);
+
+
+
+
+
+        }
+
+        private void unFreezeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if (subscription == null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (subscription.UnFreeze(clsGlobal.CurrentUserInfo.UserID))
+            {
+                MessageBox.Show($"The Subscription has been successfully unfrozen and is now active", "Subscription UnFrozen successfully.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _RefreshDataTable();
+
+            }
+            else
+                MessageBox.Show($"The Subscription could not be Unfrozen. Please try again.", "Failed UnFrozen Subscription.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+        }
+
+        private void expiredToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if (subscription == null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (subscription.ExpireSubscription())
+            {
+                MessageBox.Show($"The Subscription has been successfully expired.", "Subscription Expired successfully.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _RefreshDataTable();
+
+            }
+            else
+                MessageBox.Show($"Unable to Expire the Subscription. Please try again.", "Failed Expire Subscription.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+        }
+
+        private void startSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if (subscription == null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (subscription.StartSubscription())
+            {
+                MessageBox.Show($"The Subscription is now active", "Subscription Start successfully.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _RefreshDataTable();
+
+            }
+            else
+                MessageBox.Show($"Unable to Start the Subscription. Please try again.", "Failed to Start Subscription.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+
 
 
 
