@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlPaymentDetails1 = new GymMangementSystem.ctrlPaymentDetails();
             this.SuspendLayout();
-            // 
-            // ctrlPaymentDetails1
-            // 
-            this.ctrlPaymentDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1, 1);
-            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
-            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(296, 539);
-            this.ctrlPaymentDetails1.SubscriptionID = 0;
-            this.ctrlPaymentDetails1.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -59,19 +50,28 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(176, 542);
+            this.btnClose.Location = new System.Drawing.Point(594, 281);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(117, 30);
             this.btnClose.TabIndex = 146;
             this.btnClose.Text = "Close";
             // 
+            // ctrlPaymentDetails1
+            // 
+            this.ctrlPaymentDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlPaymentDetails1.Location = new System.Drawing.Point(1, 1);
+            this.ctrlPaymentDetails1.Name = "ctrlPaymentDetails1";
+            this.ctrlPaymentDetails1.Size = new System.Drawing.Size(718, 276);
+            this.ctrlPaymentDetails1.SubscriptionID = 0;
+            this.ctrlPaymentDetails1.TabIndex = 0;
+            // 
             // frmShowPaymentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(299, 574);
+            this.ClientSize = new System.Drawing.Size(722, 315);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlPaymentDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
