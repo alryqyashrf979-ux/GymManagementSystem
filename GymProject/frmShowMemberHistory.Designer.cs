@@ -56,7 +56,7 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(1004, 999);
+            this.btnClose.Location = new System.Drawing.Point(1005, 972);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(184, 41);
@@ -105,7 +105,7 @@
             this.ctrlSubscriptionsHistory1.BackColor = System.Drawing.Color.White;
             this.ctrlSubscriptionsHistory1.Location = new System.Drawing.Point(5, 613);
             this.ctrlSubscriptionsHistory1.Name = "ctrlSubscriptionsHistory1";
-            this.ctrlSubscriptionsHistory1.Size = new System.Drawing.Size(1186, 381);
+            this.ctrlSubscriptionsHistory1.Size = new System.Drawing.Size(1186, 354);
             this.ctrlSubscriptionsHistory1.TabIndex = 1;
             // 
             // ctrlMemberBasicDetails1
@@ -122,7 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1198, 1046);
+            this.ClientSize = new System.Drawing.Size(1198, 1016);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlSubscriptionsHistory1);
