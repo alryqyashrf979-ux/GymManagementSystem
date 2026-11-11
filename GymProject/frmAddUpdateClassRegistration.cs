@@ -62,6 +62,7 @@ namespace GymMangementSystem
 
             lblClassRegistrationID.Text = _ClassRegisteration.ClassRegisterationID.ToString();
             lblMemberID.Text = _ClassRegisteration.MemberID.ToString();
+            _MemberID = _ClassRegisteration.MemberID;
             lblRegisteredBy.Text = _ClassRegisteration.UserInfo.UserName;
             lblRegistrationDate.Text =_ClassRegisteration.RegisterationDate.ToString();
           //  ctrlClassDetailsWithFilter1.EnableFilter = false;
@@ -84,7 +85,6 @@ namespace GymMangementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            lblMemberID.Text = "2";//for ]demo because member screen is not ready.
             if (_MemberID==-1)
             {
                 MessageBox.Show("Error : You have to select a member first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -112,7 +112,14 @@ namespace GymMangementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Form frm=new frm
+            frmSelectMember frm = new frmSelectMember();
+            frm.DataBack += _SelectMemberID;
+            frm.ShowDialog();
+        }
+        private void _SelectMemberID(int MemberID)
+        {
+            _MemberID = MemberID;
+            lblMemberID.Text = MemberID.ToString();
         }
     }
 }
