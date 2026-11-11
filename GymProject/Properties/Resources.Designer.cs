@@ -283,6 +283,36 @@ namespace GymMangementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap class_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("class_icon_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap class_icon_32x32_transparent {
+            get {
+                object obj = ResourceManager.GetObject("class_icon_32x32_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClassDetails {
+            get {
+                object obj = ResourceManager.GetObject("ClassDetails", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Classes {
             get {
                 object obj = ResourceManager.GetObject("Classes", resourceCulture);
@@ -336,6 +366,26 @@ namespace GymMangementSystem.Properties {
         internal static System.Drawing.Bitmap Coach {
             get {
                 object obj = ResourceManager.GetObject("Coach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coach_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("coach_icon_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CoachDetails {
+            get {
+                object obj = ResourceManager.GetObject("CoachDetails", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

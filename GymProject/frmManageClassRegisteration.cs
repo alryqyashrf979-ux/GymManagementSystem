@@ -96,5 +96,7 @@ namespace GymMangementSystem
             if (cbValue.Text == "Class Registeration ID")
                 e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
+
+       
     }
 }
