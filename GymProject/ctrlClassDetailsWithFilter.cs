@@ -32,7 +32,7 @@ namespace GymMangementSystem
             cbClasses.DataSource = clsClasses.GetAllActiveClassesNamesAndIDs();
             cbClasses.DisplayMember = "ClassName";
             cbClasses.ValueMember = "ClassID";
-            cbClasses.StartIndex = -1;
+            cbClasses.StartIndex = 0;
             IsCbClassesFilled = true;
 
         }

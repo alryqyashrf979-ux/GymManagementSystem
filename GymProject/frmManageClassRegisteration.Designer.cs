@@ -34,25 +34,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClassRegisteration = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.MemberDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CoachDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClassDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UserDetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.AddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.cbValue = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnAddClassRegisteration = new System.Windows.Forms.Button();
+            this.MemberDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CoachDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClassDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClassRegisteration)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
@@ -143,79 +143,21 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(197, 298);
-            // 
-            // MemberDetailsToolStripMenuItem
-            // 
-            this.MemberDetailsToolStripMenuItem.AutoToolTip = true;
-            this.MemberDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.MemberDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.PersonDetails_32;
-            this.MemberDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MemberDetailsToolStripMenuItem.Name = "MemberDetailsToolStripMenuItem";
-            this.MemberDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.MemberDetailsToolStripMenuItem.Text = "&Member Details";
-            this.MemberDetailsToolStripMenuItem.Click += new System.EventHandler(this.MemberDetailsToolStripMenuItem_Click);
-            // 
-            // CoachDetailsToolStripMenuItem
-            // 
-            this.CoachDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.CoachDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.coach_icon_32x32;
-            this.CoachDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CoachDetailsToolStripMenuItem.Name = "CoachDetailsToolStripMenuItem";
-            this.CoachDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.CoachDetailsToolStripMenuItem.Text = "Coach Details";
-            this.CoachDetailsToolStripMenuItem.Click += new System.EventHandler(this.CoachDetailsToolStripMenuItem_Click);
-            // 
-            // ClassDetailsToolStripMenuItem
-            // 
-            this.ClassDetailsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.ClassDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.ClassDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.class_icon_32x32_transparent;
-            this.ClassDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ClassDetailsToolStripMenuItem.Name = "ClassDetailsToolStripMenuItem";
-            this.ClassDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.ClassDetailsToolStripMenuItem.Text = "Class Details";
-            this.ClassDetailsToolStripMenuItem.Click += new System.EventHandler(this.ClassDetailsToolStripMenuItem_Click);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(190, 276);
             // 
             // UserDetailstoolStripMenuItem1
             // 
+            this.UserDetailstoolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.User_Details_32x32;
+            this.UserDetailstoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UserDetailstoolStripMenuItem1.Name = "UserDetailstoolStripMenuItem1";
-            this.UserDetailstoolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.UserDetailstoolStripMenuItem1.Size = new System.Drawing.Size(189, 38);
             this.UserDetailstoolStripMenuItem1.Text = "User Details";
             this.UserDetailstoolStripMenuItem1.Click += new System.EventHandler(this.UserDetailstoolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
-            // 
-            // AddToolStripMenuItem1
-            // 
-            this.AddToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.AddToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.AddPerson_32;
-            this.AddToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1";
-            this.AddToolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
-            this.AddToolStripMenuItem1.Text = "Add ";
-            this.AddToolStripMenuItem1.Click += new System.EventHandler(this.AddToolStripMenuItem1_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
-            this.updateToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Delete_32;
-            this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(186, 6);
             // 
             // guna2Separator1
             // 
@@ -280,17 +222,6 @@
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Class Registeration";
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.ClassRegesterationWhite;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
             // cbValue
             // 
             this.cbValue.BackColor = System.Drawing.Color.Transparent;
@@ -350,6 +281,17 @@
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.ClassRegesterationWhite;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
             // btnAddClassRegisteration
             // 
             this.btnAddClassRegisteration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -362,6 +304,66 @@
             this.btnAddClassRegisteration.TabIndex = 109;
             this.btnAddClassRegisteration.UseVisualStyleBackColor = false;
             this.btnAddClassRegisteration.Click += new System.EventHandler(this.btnAddClassRegisteration_Click);
+            // 
+            // MemberDetailsToolStripMenuItem
+            // 
+            this.MemberDetailsToolStripMenuItem.AutoToolTip = true;
+            this.MemberDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.MemberDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.PersonDetails_32;
+            this.MemberDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MemberDetailsToolStripMenuItem.Name = "MemberDetailsToolStripMenuItem";
+            this.MemberDetailsToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
+            this.MemberDetailsToolStripMenuItem.Text = "&Member Details";
+            this.MemberDetailsToolStripMenuItem.Click += new System.EventHandler(this.MemberDetailsToolStripMenuItem_Click);
+            // 
+            // CoachDetailsToolStripMenuItem
+            // 
+            this.CoachDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.CoachDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.coach_icon_32x32;
+            this.CoachDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CoachDetailsToolStripMenuItem.Name = "CoachDetailsToolStripMenuItem";
+            this.CoachDetailsToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
+            this.CoachDetailsToolStripMenuItem.Text = "Coach Details";
+            this.CoachDetailsToolStripMenuItem.Click += new System.EventHandler(this.CoachDetailsToolStripMenuItem_Click);
+            // 
+            // ClassDetailsToolStripMenuItem
+            // 
+            this.ClassDetailsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.ClassDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.ClassDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.class_icon_32x32_transparent;
+            this.ClassDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClassDetailsToolStripMenuItem.Name = "ClassDetailsToolStripMenuItem";
+            this.ClassDetailsToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
+            this.ClassDetailsToolStripMenuItem.Text = "Class Details";
+            this.ClassDetailsToolStripMenuItem.Click += new System.EventHandler(this.ClassDetailsToolStripMenuItem_Click);
+            // 
+            // AddToolStripMenuItem1
+            // 
+            this.AddToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.AddToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.AddPerson_32;
+            this.AddToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1";
+            this.AddToolStripMenuItem1.Size = new System.Drawing.Size(189, 38);
+            this.AddToolStripMenuItem1.Text = "Add ";
+            this.AddToolStripMenuItem1.Click += new System.EventHandler(this.AddToolStripMenuItem1_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
+            this.updateToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Delete_32;
+            this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 

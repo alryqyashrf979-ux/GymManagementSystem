@@ -138,7 +138,7 @@ namespace GymMangementSystem
         {
             int Index = (int)dgvClassRegisteration.CurrentRow.Cells[0].Value;
             if (MessageBox.Show("Are you sure you want to delete Class registeration [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
-                if (clsClasses.DeleteClass(Index))
+                if (clsClassRegisteration.Delete(Index))
                 {
                     MessageBox.Show("Record deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _RefreshData();
