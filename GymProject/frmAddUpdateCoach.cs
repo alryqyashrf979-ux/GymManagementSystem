@@ -15,6 +15,8 @@ namespace GymMangementSystem
     public partial class frmAddUpdateCoach : Form
     {
 
+        public delegate void DataBackEventHandler(int CoachID);
+        public event DataBackEventHandler DataBack;
 
         enum enMode { Addnew = 1, Update = 2 };
         enMode _Mode = enMode.Addnew;
@@ -133,6 +135,7 @@ namespace GymMangementSystem
                 this.Text = lblTitle.Text;
                 lblCoachID.Text=_CoachInfo.CoachID.ToString();
                 _Mode = enMode.Update;
+                DataBack?.Invoke(_CoachInfo.CoachID);
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }

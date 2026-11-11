@@ -119,6 +119,7 @@
             this.btnAddNewCoach.Name = "btnAddNewCoach";
             this.btnAddNewCoach.Size = new System.Drawing.Size(62, 29);
             this.btnAddNewCoach.TabIndex = 89;
+            this.btnAddNewCoach.Click += new System.EventHandler(this.btnAddNewCoach_Click);
             // 
             // btnFind
             // 
