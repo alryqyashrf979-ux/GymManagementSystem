@@ -81,6 +81,12 @@
     <Compile Include="ctrlShiftDetails.Designer.cs">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlSubscriptionsHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSubscriptionsHistory.Designer.cs">
+      <DependentUpon>ctrlSubscriptionsHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlShiftDetails.resx">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlSubscriptionsHistory.resx">
+      <DependentUpon>ctrlSubscriptionsHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateEmployee.resx">
       <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>

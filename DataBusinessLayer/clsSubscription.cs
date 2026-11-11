@@ -356,6 +356,30 @@ namespace DataBusinessLayer
 
         }
 
+
+        public  DataTable GetAllExpiredSubscriptions()
+        {
+
+            return clsSubscriptionsData.GetAllSubscriptionByStatus((byte)enSubscriptionStatus.Expired,this.MemberID);
+        }
+        public  DataTable GetAllCancelledSubscriptions()
+        {
+
+            return clsSubscriptionsData.GetAllSubscriptionByStatus((byte)enSubscriptionStatus.Canceled,this.MemberID);
+        }
+        public  DataTable GetAllChangedSubscriptions()
+        {
+
+            return clsSubscriptionsData.GetAllSubscriptionByStatus((byte)enSubscriptionStatus.Changed, this.MemberID);
+        }
+        public  DataTable GetAllFrozenSubscriptions()
+        {
+
+            return clsSubscriptionsData.GetAllSubscriptionByStatus((byte)enSubscriptionStatus.Frozen, this.MemberID );
+        }
+
+
+
         public static bool DeleteSubscription(int SubscriptionID)
         {
             return clsSubscriptionsData.DeleteSubscription(SubscriptionID);
