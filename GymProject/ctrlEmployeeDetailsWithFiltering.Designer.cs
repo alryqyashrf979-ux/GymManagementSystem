@@ -42,7 +42,7 @@
             // 
             this.ctrlEmployeeDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlEmployeeDetails1.Location = new System.Drawing.Point(0, 59);
-            this.ctrlEmployeeDetails1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctrlEmployeeDetails1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlEmployeeDetails1.Name = "ctrlEmployeeDetails1";
             this.ctrlEmployeeDetails1.Size = new System.Drawing.Size(895, 498);
             this.ctrlEmployeeDetails1.TabIndex = 0;
@@ -113,6 +113,7 @@
             this.btnAddNewEmployee.Name = "btnAddNewEmployee";
             this.btnAddNewEmployee.Size = new System.Drawing.Size(58, 29);
             this.btnAddNewEmployee.TabIndex = 89;
+            this.btnAddNewEmployee.Click += new System.EventHandler(this.btnAddNewEmployee_Click);
             // 
             // btnFind
             // 
@@ -178,7 +179,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gbFiltering);
             this.Controls.Add(this.ctrlEmployeeDetails1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlEmployeeDetailsWithFiltering";
             this.Size = new System.Drawing.Size(896, 558);
             this.gbFiltering.ResumeLayout(false);
