@@ -56,6 +56,12 @@ namespace GymMangementSystem
                 btnFind.PerformClick();
         }
 
+        public void LoadCoachInformation(int CoachID)
+        {
+            cmFilteringType.Text = "Coach ID";
+            txtFiltering.Text = CoachID.ToString();
+            _FindNow();
+        }
         private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmFilteringType.Text == "Coach ID")
@@ -65,6 +71,18 @@ namespace GymMangementSystem
 
             txtFiltering.Clear();
             txtFiltering.Focus();
+        }
+
+        private void btnAddNewCoach_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateCoach frm = new frmAddUpdateCoach();
+            frm.DataBack += _LoadDataOfCoach;
+            frm.ShowDialog();
+        }
+
+        private void _LoadDataOfCoach(int CoachID)
+        {
+            LoadCoachInformation(CoachID);
         }
     }
 }

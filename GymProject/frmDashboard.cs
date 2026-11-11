@@ -109,7 +109,7 @@ namespace GymMangementSystem
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Form frm = new frmManageClasses();
+            Form frm = new frmManageClassRegisteration();
             frm.ShowDialog();
             _SelectbtnDashBoard();
 

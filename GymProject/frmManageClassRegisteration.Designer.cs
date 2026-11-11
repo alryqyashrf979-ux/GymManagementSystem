@@ -318,6 +318,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmManageClassRegisteration";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManageClassRegisteration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClassRegisteration)).EndInit();
             this.guna2ContextMenuStrip1.ResumeLayout(false);

@@ -225,7 +225,7 @@ Classes.IsActive from Classes ;
      ,Replace(Replace(Format(cast( Classes.EndTime AS datetime) ,'hh:mm:ss tt'),'AM','ص'),'PM','م') as 'End Time' 
      , Classes.Maximum_Capacity as 'Capacity'
      , Classes.IsActive as 'Is Active'
-      FROM Classes inner join Coaches on Coaches.CoachID=Classes.ClassID inner join
+      FROM Classes inner join Coaches on Coaches.CoachID=Classes.CoachID inner join
       Employees on Employees.EmployeeID=Coaches.EmployeeID inner join People on People.ID=Employees.PersonID
       ORDER BY Classes.IsActive DESC, Classes.CoachID ASC;
 ";
