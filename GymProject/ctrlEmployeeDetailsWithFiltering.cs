@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -99,6 +100,25 @@ namespace GymMangementSystem
         {
             if (e.KeyChar == (char)13)
                 btnFind.PerformClick();
+        }
+
+        private void btnAddNewEmployee_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateEmployee frm = new frmAddUpdateEmployee();
+            frm.DataBack += _LoadEmployeeData;
+            frm.ShowDialog();
+
+        }
+
+        public void LoadDataByEmployeeID(int EmployeeID)
+        {
+            cmFilteringType.Text = "Employee ID";
+            txtFiltering.Text = EmployeeID.ToString();
+            Find();
+        }
+       private void _LoadEmployeeData(int EmployeeID)
+        {
+            LoadDataByEmployeeID(EmployeeID);
         }
     }
 }

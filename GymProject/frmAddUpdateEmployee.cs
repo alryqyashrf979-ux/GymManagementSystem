@@ -13,6 +13,9 @@ namespace GymMangementSystem
 {
     public partial class frmAddUpdateEmployee : Form
     {
+        public delegate void DataBackEventHandler(int EmployeeID);
+        public event DataBackEventHandler DataBack;
+
         private int _EmployeeID = -1;
         private clsEmployees _EmployeeInfo;
         public enum enMode { AddMode,UpdateMode}
@@ -95,6 +98,7 @@ namespace GymMangementSystem
                 lblTitle2.Text = "Update Employee";
                 _Mode = enMode.UpdateMode;
                 lblEmployeeID.Text = _EmployeeInfo.EmployeeID.ToString();
+                DataBack?.Invoke(_EmployeeInfo.EmployeeID);
                 MessageBox.Show("Data Saved Successfully", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
