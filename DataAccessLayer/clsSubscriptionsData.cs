@@ -14,6 +14,12 @@ namespace DataAccessLayer
 
 
 
+
+
+
+
+
+
         public static int AddNewSubscription(int MemberID,
              int PlanID, DateTime StartDate, DateTime ExpirationDate, DateTime RegistrationDate, double Price, byte Status, int CreatedByUserID)
         {
@@ -217,6 +223,51 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
 
 
 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public static DataTable GetAllSubscriptionByStatus(byte Status,int MemberID)
+        {
+
+
+            string sql = @"select * from Subscriptions where Subscriptions.Status=@Status and MemberID=@MemberID";
+
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        command.Parameters.AddWithValue("@Status", Status);
+                        command.Parameters.AddWithValue("@MemberID", MemberID);
+
+                        using (SqlDataReader Reader = command.ExecuteReader())
+                        {
+
+
+                            if (Reader.HasRows)
+                            {
+                                dt.Load(Reader);
+                                return dt;
+                            }
+                            else
+                            {
+                                return null;
+                            }
+
+
+
+                        }
                     }
                 }
             }
