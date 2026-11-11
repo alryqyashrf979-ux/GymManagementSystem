@@ -138,5 +138,19 @@ namespace GymMangementSystem
             frm.ShowDialog();
             _RefreshData();
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmShowPaymentDetails((int)dgvPayment.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        
+        }
+
+        private void addPaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdatePayment();
+            frm.ShowDialog();
+            _RefreshData();
+        }
     }
 }
