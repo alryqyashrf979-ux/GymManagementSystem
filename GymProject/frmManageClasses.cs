@@ -136,8 +136,7 @@ namespace GymMangementSystem
 
         private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmShowClassDetails frm = new frmShowClassDetails();
-            frm.LoadClassInformation((int)dgvShowClasses.CurrentRow.Cells[0].Value);
+            frmShowClassDetails frm = new frmShowClassDetails((int)dgvShowClasses.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
 
