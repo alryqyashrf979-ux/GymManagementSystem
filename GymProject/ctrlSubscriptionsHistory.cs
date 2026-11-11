@@ -25,15 +25,18 @@ namespace GymMangementSystem
         {
 
 
+            dgvExpiredSubscriptions.DataSource = _MemberInfo.LastSubscriptionInfo.GetAllExpiredSubscriptions();
+            lblExpiredRecord.Text = dgvExpiredSubscriptions.Rows.Count.ToString();
+
+            dgvFrozenSubscriptions.DataSource = _MemberInfo.LastSubscriptionInfo.GetAllFrozenSubscriptions();
+            lblFrozenRecord.Text = dgvFrozenSubscriptions.Rows.Count.ToString();
 
 
+            dgvChangedSubscriptions.DataSource = _MemberInfo.LastSubscriptionInfo.GetAllChangedSubscriptions();
+            lblChangedRecord.Text = dgvChangedSubscriptions.Rows.Count.ToString();
 
-
-
-
-
-
-
+            dgvCancelledSubscriptions.DataSource = _MemberInfo.LastSubscriptionInfo.GetAllCancelledSubscriptions();
+            lblCancelledRecord.Text = dgvCancelledSubscriptions.Rows.Count.ToString();
 
         }
 
