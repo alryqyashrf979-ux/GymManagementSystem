@@ -131,5 +131,92 @@ namespace GymMangementSystem
             frmAddSubscription frm = new frmAddSubscription();
             frm.ShowDialog();
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmShowSubscriptionDetails frm = new frmShowSubscriptionDetails((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
+        }
+
+        private void addSubscripionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddSubscription frm = new frmAddSubscription();
+            frm.ShowDialog();
+            _RefreshDataTable();
+
+        }
+
+        private void cancelSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if(subscription==null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+           frmAddUpdateCancelSubscription frm = new frmAddUpdateCancelSubscription(subscription.MemberID);
+            frm.ShowDialog();
+            _RefreshDataTable();
+
+        }
+
+        private void changeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if (subscription == null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            frmChangeSubscription frm = new frmChangeSubscription(subscription.MemberID);
+            frm.ShowDialog();   
+            _RefreshDataTable();
+        }
+
+        private void freezeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            clsSubscription subscription = clsSubscription.FindBySubscriptionID((int)dgvSubscriptionsList.CurrentRow.Cells[0].Value);
+
+            if (subscription == null)
+            {
+                MessageBox.Show($"Subscription with ID {dgvSubscriptionsList.CurrentRow.Cells[0].Value} not found ", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            frmAddUpdateFrozenSubscription frm = new frmAddUpdateFrozenSubscription(subscription.MemberID);
+            frm.ShowDialog();
+            _RefreshDataTable();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int Index = (int)dgvSubscriptionsList.CurrentRow.Cells[0].Value;
+
+            if (MessageBox.Show("Are you sure you want to delete Subscription [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsSubscription.DeleteSubscription(Index))
+                {
+                    MessageBox.Show("Person deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshDataTable();
+                }
+                else
+                    MessageBox.Show("Person was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+        }
     }
 }

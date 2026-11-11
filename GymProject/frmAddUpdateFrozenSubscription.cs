@@ -22,8 +22,19 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
-   
 
+        int _selectedMember = -1;
+        public frmAddUpdateFrozenSubscription(int selectedMember)
+        {
+            InitializeComponent();
+            _selectedMember = selectedMember;
+        }
+   
+        void SelectedMember()
+        {
+            ctrlMemberBasicDetailsWithFilter1.LoadMemberInfoByMemberID(_selectedMember);
+            ctrlMemberBasicDetailsWithFilter1.EnableFiltering = false;
+        }
 
 
 
@@ -66,12 +77,12 @@ namespace GymMangementSystem
             lblTitle.Text = "Add Frozen Subscription";
             this.Text=lblTitle.Text;
 
+            dtEndDate.MaxDate = DateTime.Today.AddYears(2);
+            dtStartDate.MaxDate = DateTime.Today.AddMonths(5);
          
             dtStartDate.MinDate = DateTime.Today;
             dtEndDate.MinDate = DateTime.Today;
 
-            dtEndDate.MaxDate = DateTime.Today.AddYears(2);
-            dtStartDate.MaxDate = DateTime.Today.AddMonths(5);
 
 
 
@@ -83,6 +94,8 @@ namespace GymMangementSystem
         private void frmAddUpdateFrozenSubscription_Load(object sender, EventArgs e)
         {
             _DefaultValues();
+            if (_selectedMember != -1)
+                SelectedMember();
 
         }
 

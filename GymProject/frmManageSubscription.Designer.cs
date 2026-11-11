@@ -391,7 +391,7 @@
             this.expiredToolStripMenuItem,
             this.startSubscriptionToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(254, 358);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(254, 386);
             // 
             // toolStripMenuItem1
             // 
@@ -510,6 +510,7 @@
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
             this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // addSubscripionToolStripMenuItem
             // 
@@ -519,6 +520,7 @@
             this.addSubscripionToolStripMenuItem.Name = "addSubscripionToolStripMenuItem";
             this.addSubscripionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
             this.addSubscripionToolStripMenuItem.Text = "Add Subscription";
+            this.addSubscripionToolStripMenuItem.Click += new System.EventHandler(this.addSubscripionToolStripMenuItem_Click);
             // 
             // cancelSubscriptionToolStripMenuItem
             // 
@@ -528,6 +530,7 @@
             this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
             this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
             this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
+            this.cancelSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.cancelSubscriptionToolStripMenuItem_Click);
             // 
             // changeSubscriptionToolStripMenuItem
             // 
@@ -537,6 +540,7 @@
             this.changeSubscriptionToolStripMenuItem.Name = "changeSubscriptionToolStripMenuItem";
             this.changeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
             this.changeSubscriptionToolStripMenuItem.Text = "Change Subscription";
+            this.changeSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.changeSubscriptionToolStripMenuItem_Click);
             // 
             // freezeSubscriptionToolStripMenuItem
             // 
@@ -546,6 +550,7 @@
             this.freezeSubscriptionToolStripMenuItem.Name = "freezeSubscriptionToolStripMenuItem";
             this.freezeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
             this.freezeSubscriptionToolStripMenuItem.Text = "Freeze Subscription";
+            this.freezeSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.freezeSubscriptionToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -555,6 +560,7 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // unFreezeToolStripMenuItem
             // 
