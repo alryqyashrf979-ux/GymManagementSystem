@@ -990,5 +990,20 @@
   <ItemGroup>
     <None Include="Resources\start_subscription_32x32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoachDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class_icon_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coach_icon_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class_icon_32x32_transparent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
