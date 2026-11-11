@@ -43,6 +43,18 @@
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedByUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.addSubscripionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.freezeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unFreezeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expiredToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,26 +65,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtFiltering = new GymMangementSystem.MyTextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.txtFiltering = new GymMangementSystem.MyTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addSubscripionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.freezeSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unFreezeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.expiredToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionsList)).BeginInit();
-            this.panel4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -226,6 +226,125 @@
             this.CreatedByUser.Name = "CreatedByUser";
             this.CreatedByUser.ReadOnly = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.addSubscripionToolStripMenuItem,
+            this.cancelSubscriptionToolStripMenuItem,
+            this.changeSubscriptionToolStripMenuItem,
+            this.freezeSubscriptionToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.deleteToolStripMenuItem,
+            this.unFreezeToolStripMenuItem,
+            this.expiredToolStripMenuItem,
+            this.startSubscriptionToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(254, 358);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(250, 6);
+            // 
+            // addSubscripionToolStripMenuItem
+            // 
+            this.addSubscripionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.addSubscripionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
+            this.addSubscripionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addSubscripionToolStripMenuItem.Name = "addSubscripionToolStripMenuItem";
+            this.addSubscripionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.addSubscripionToolStripMenuItem.Text = "Add Subscription";
+            this.addSubscripionToolStripMenuItem.Click += new System.EventHandler(this.addSubscripionToolStripMenuItem_Click);
+            // 
+            // cancelSubscriptionToolStripMenuItem
+            // 
+            this.cancelSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.cancelSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Cancel_32x32;
+            this.cancelSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
+            this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
+            this.cancelSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.cancelSubscriptionToolStripMenuItem_Click);
+            // 
+            // changeSubscriptionToolStripMenuItem
+            // 
+            this.changeSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.changeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
+            this.changeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.changeSubscriptionToolStripMenuItem.Name = "changeSubscriptionToolStripMenuItem";
+            this.changeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.changeSubscriptionToolStripMenuItem.Text = "Change Subscription";
+            this.changeSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.changeSubscriptionToolStripMenuItem_Click);
+            // 
+            // freezeSubscriptionToolStripMenuItem
+            // 
+            this.freezeSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.freezeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.freeze_icon_32x32;
+            this.freezeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.freezeSubscriptionToolStripMenuItem.Name = "freezeSubscriptionToolStripMenuItem";
+            this.freezeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.freezeSubscriptionToolStripMenuItem.Text = "Freeze Subscription";
+            this.freezeSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.freezeSubscriptionToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(250, 6);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.deleteToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
+            this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // unFreezeToolStripMenuItem
+            // 
+            this.unFreezeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.unFreezeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.unfreeze_32x32;
+            this.unFreezeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.unFreezeToolStripMenuItem.Name = "unFreezeToolStripMenuItem";
+            this.unFreezeToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.unFreezeToolStripMenuItem.Text = "Un Freeze";
+            this.unFreezeToolStripMenuItem.Click += new System.EventHandler(this.unFreezeToolStripMenuItem_Click);
+            // 
+            // expiredToolStripMenuItem
+            // 
+            this.expiredToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.expiredToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.expire_subscription_32x32;
+            this.expiredToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.expiredToolStripMenuItem.Name = "expiredToolStripMenuItem";
+            this.expiredToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.expiredToolStripMenuItem.Text = "Expire Subscription";
+            this.expiredToolStripMenuItem.Click += new System.EventHandler(this.expiredToolStripMenuItem_Click);
+            // 
+            // startSubscriptionToolStripMenuItem
+            // 
+            this.startSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.startSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.start_subscription_32x32;
+            this.startSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.startSubscriptionToolStripMenuItem.Name = "startSubscriptionToolStripMenuItem";
+            this.startSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
+            this.startSubscriptionToolStripMenuItem.Text = "Start Subscription";
+            this.startSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.startSubscriptionToolStripMenuItem_Click);
+            // 
             // guna2Separator1
             // 
             this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -375,33 +494,18 @@
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Manage Subscriptions";
             // 
-            // contextMenuStrip1
+            // pictureBox10
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDetailsToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.addSubscripionToolStripMenuItem,
-            this.cancelSubscriptionToolStripMenuItem,
-            this.changeSubscriptionToolStripMenuItem,
-            this.freezeSubscriptionToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.deleteToolStripMenuItem,
-            this.unFreezeToolStripMenuItem,
-            this.expiredToolStripMenuItem,
-            this.startSubscriptionToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(254, 386);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(250, 6);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(250, 6);
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.ManageSubscpritions;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
             // 
             // txtFiltering
             // 
@@ -427,19 +531,6 @@
             this.txtFiltering.TabIndex = 126;
             this.txtFiltering.Visible = false;
             this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.ManageSubscpritions;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -502,93 +593,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
-            // 
-            // addSubscripionToolStripMenuItem
-            // 
-            this.addSubscripionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.addSubscripionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
-            this.addSubscripionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.addSubscripionToolStripMenuItem.Name = "addSubscripionToolStripMenuItem";
-            this.addSubscripionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.addSubscripionToolStripMenuItem.Text = "Add Subscription";
-            this.addSubscripionToolStripMenuItem.Click += new System.EventHandler(this.addSubscripionToolStripMenuItem_Click);
-            // 
-            // cancelSubscriptionToolStripMenuItem
-            // 
-            this.cancelSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.cancelSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Cancel_32x32;
-            this.cancelSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cancelSubscriptionToolStripMenuItem.Name = "cancelSubscriptionToolStripMenuItem";
-            this.cancelSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.cancelSubscriptionToolStripMenuItem.Text = "Cancel Subscription";
-            this.cancelSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.cancelSubscriptionToolStripMenuItem_Click);
-            // 
-            // changeSubscriptionToolStripMenuItem
-            // 
-            this.changeSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.changeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
-            this.changeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.changeSubscriptionToolStripMenuItem.Name = "changeSubscriptionToolStripMenuItem";
-            this.changeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.changeSubscriptionToolStripMenuItem.Text = "Change Subscription";
-            this.changeSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.changeSubscriptionToolStripMenuItem_Click);
-            // 
-            // freezeSubscriptionToolStripMenuItem
-            // 
-            this.freezeSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.freezeSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.freeze_icon_32x32;
-            this.freezeSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.freezeSubscriptionToolStripMenuItem.Name = "freezeSubscriptionToolStripMenuItem";
-            this.freezeSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.freezeSubscriptionToolStripMenuItem.Text = "Freeze Subscription";
-            this.freezeSubscriptionToolStripMenuItem.Click += new System.EventHandler(this.freezeSubscriptionToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.deleteToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
-            this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // unFreezeToolStripMenuItem
-            // 
-            this.unFreezeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.unFreezeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.unfreeze_32x32;
-            this.unFreezeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.unFreezeToolStripMenuItem.Name = "unFreezeToolStripMenuItem";
-            this.unFreezeToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.unFreezeToolStripMenuItem.Text = "Un Freeze";
-            // 
-            // expiredToolStripMenuItem
-            // 
-            this.expiredToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.expiredToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.expire_subscription_32x32;
-            this.expiredToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.expiredToolStripMenuItem.Name = "expiredToolStripMenuItem";
-            this.expiredToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.expiredToolStripMenuItem.Text = "Expire Subscription";
-            // 
-            // startSubscriptionToolStripMenuItem
-            // 
-            this.startSubscriptionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.startSubscriptionToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.start_subscription_32x32;
-            this.startSubscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.startSubscriptionToolStripMenuItem.Name = "startSubscriptionToolStripMenuItem";
-            this.startSubscriptionToolStripMenuItem.Size = new System.Drawing.Size(253, 38);
-            this.startSubscriptionToolStripMenuItem.Text = "Start Subscription";
-            // 
             // frmManageSubscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -616,9 +620,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManageSubscription_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionsList)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
