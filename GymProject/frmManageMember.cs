@@ -196,5 +196,11 @@ namespace GymMangementSystem
                     MessageBox.Show("Member was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+
+        private void showMemberHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowMemberHistory frm = new frmShowMemberHistory((int)dgvMembersList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }
