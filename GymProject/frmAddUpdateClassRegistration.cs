@@ -35,8 +35,7 @@ namespace GymMangementSystem
         private void _ResetDefaultValues()
         {
             ctrlClassDetailsWithFilter1.FillCbClasses();
-            // because it is not connect with frmLogin so CurrentUserInfo = null.
-            //  lblRegisteredBy.Text = clsGlobal.CurrentUserInfo.UserName;
+             lblRegisteredBy.Text = clsGlobal.CurrentUserInfo.UserName;
 
 
 
@@ -46,7 +45,6 @@ namespace GymMangementSystem
                 _ClassRegisteration = new clsClassRegisteration();
             }
 
-            lblRegisteredBy.Text = "[????]";
             lblClassRegistrationID.Text = "[????]";
             lblMemberID.Text = "[????]";
             lblRegistrationDate.Text = DateTime.Now.ToString();
@@ -110,6 +108,11 @@ namespace GymMangementSystem
             else
                 MessageBox.Show("Error :recored didn't save successfully .", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Form frm=new frm
         }
     }
 }

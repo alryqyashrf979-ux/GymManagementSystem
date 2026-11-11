@@ -12,9 +12,10 @@ namespace GymMangementSystem
 {
     public partial class frmShowClassDetails : Form
     {
-        public frmShowClassDetails()
+        public frmShowClassDetails(int ClassID)
         {
             InitializeComponent();
+            LoadClassInformation(ClassID);
         }
 
     public void LoadClassInformation(int ClassID)

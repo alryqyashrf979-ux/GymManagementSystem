@@ -15,7 +15,7 @@ namespace GymMangementSystem
         public frmCoachDetails(int CoachID)
         {
             InitializeComponent();
-          //  ctrlCoachDetails1.LoadCoachInformation(CoachID);
+           ctrlCoachDetails1.LoadCoachInformation(CoachID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
