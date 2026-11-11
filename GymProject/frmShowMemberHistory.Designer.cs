@@ -28,32 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlMemberBasicDetails1 = new GymMangementSystem.ctrlMemberBasicDetails();
-            this.ctrlSubscriptionsHistory1 = new GymMangementSystem.ctrlSubscriptionsHistory();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ctrlSubscriptionsHistory1 = new GymMangementSystem.ctrlSubscriptionsHistory();
+            this.ctrlMemberBasicDetails1 = new GymMangementSystem.ctrlMemberBasicDetails();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlMemberBasicDetails1
-            // 
-            this.ctrlMemberBasicDetails1.BackColor = System.Drawing.Color.White;
-            this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(7, 54);
-            this.ctrlMemberBasicDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
-            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(1188, 564);
-            this.ctrlMemberBasicDetails1.TabIndex = 0;
-            // 
-            // ctrlSubscriptionsHistory1
-            // 
-            this.ctrlSubscriptionsHistory1.BackColor = System.Drawing.Color.White;
-            this.ctrlSubscriptionsHistory1.Location = new System.Drawing.Point(5, 613);
-            this.ctrlSubscriptionsHistory1.Name = "ctrlSubscriptionsHistory1";
-            this.ctrlSubscriptionsHistory1.Size = new System.Drawing.Size(1186, 381);
-            this.ctrlSubscriptionsHistory1.TabIndex = 1;
             // 
             // btnClose
             // 
@@ -98,7 +81,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(49, 17);
+            this.label1.Location = new System.Drawing.Point(49, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 29);
@@ -116,6 +99,23 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // ctrlSubscriptionsHistory1
+            // 
+            this.ctrlSubscriptionsHistory1.BackColor = System.Drawing.Color.White;
+            this.ctrlSubscriptionsHistory1.Location = new System.Drawing.Point(5, 613);
+            this.ctrlSubscriptionsHistory1.Name = "ctrlSubscriptionsHistory1";
+            this.ctrlSubscriptionsHistory1.Size = new System.Drawing.Size(1186, 381);
+            this.ctrlSubscriptionsHistory1.TabIndex = 1;
+            // 
+            // ctrlMemberBasicDetails1
+            // 
+            this.ctrlMemberBasicDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(7, 54);
+            this.ctrlMemberBasicDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
+            this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(1188, 564);
+            this.ctrlMemberBasicDetails1.TabIndex = 0;
             // 
             // frmShowMemberHistory
             // 
