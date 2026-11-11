@@ -18,7 +18,16 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
-      
+
+        int _SelectedMember = -1;
+        public frmAddUpdateCancelSubscription(int selectedMember)
+        {
+            InitializeComponent();
+            _SelectedMember = selectedMember;
+        }
+
+
+
 
         (double Fees, short ElapsedDays, double ElapsedDaysFees) _RefundInfo;
 
@@ -42,10 +51,26 @@ namespace GymMangementSystem
         }
 
      
+        void SelectedMember()
+        {
+
+
+            ctrlMemberBasicDetailsWithFilter1.LoadMemberInfoByMemberID(_SelectedMember);
+            ctrlMemberBasicDetailsWithFilter1.EnableFiltering = false;
+
+        }
+
 
         private void frmAddUpdateCancelSubscription_Load(object sender, EventArgs e)
         {
             _DefaultValues();
+
+            if (_SelectedMember != -1)
+                SelectedMember();
+
+
+
+
         }
 
         private void ctrlMemberBasicDetailsWithFilter1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)

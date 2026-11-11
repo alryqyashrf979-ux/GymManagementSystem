@@ -17,10 +17,22 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
+        int _selectedMember = -1;
+        public frmChangeSubscription(int selectedMember)
+        {
+            InitializeComponent();
+            _selectedMember = selectedMember;
+        }
 
+        void _SeletedMember()
+        {
+            ctrlMemberBasicDetailsWithFilter1.LoadMemberInfoByMemberID(_selectedMember);
+            ctrlMemberBasicDetailsWithFilter1.EnableFiltering = false;
+        }
         private void frmChangeSubscription_Load(object sender, EventArgs e)
         {
-
+            if (_selectedMember != -1)
+                _SeletedMember();
         }
 
         private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
