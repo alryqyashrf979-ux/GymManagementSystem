@@ -174,5 +174,7 @@ namespace DataBusinessLayer
         {
             return clsClassesData.GetAllClassesByEndTime(StartTime);
         }
+
+        static public int SelectCountOfActiveClasses() => clsClassesData.SelectCountOfActiveClasses();
     }
 }
