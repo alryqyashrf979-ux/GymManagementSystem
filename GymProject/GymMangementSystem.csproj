@@ -93,9 +93,9 @@
     <Compile Include="frmAddUpdateEmployee.Designer.cs">
       <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsGlobal.cs" />
-    <Compile Include="clsUtil.cs" />
-    <Compile Include="clsValidation.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
     <Compile Include="ctrlEmergencyContact.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,10 +180,10 @@
     <Compile Include="ctrlUserDetails.Designer.cs">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdatePerson.cs">
+    <Compile Include="People\frmAddUpdatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdatePerson.Designer.cs">
+    <Compile Include="People\frmAddUpdatePerson.Designer.cs">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateCancelSubscription.cs">
@@ -348,10 +348,10 @@
     <Compile Include="frmManageMember.Designer.cs">
       <DependentUpon>frmManageMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManagePeople.cs">
+    <Compile Include="People\frmManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManagePeople.Designer.cs">
+    <Compile Include="People\frmManagePeople.Designer.cs">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageUsers.cs">
@@ -360,10 +360,10 @@
     <Compile Include="frmManageUsers.Designer.cs">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPersonDetails.cs">
+    <Compile Include="People\frmPersonDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPersonDetails.Designer.cs">
+    <Compile Include="People\frmPersonDetails.Designer.cs">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShowClassDetails.cs">
@@ -416,16 +416,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ctrlPersonDetails.cs">
+    <Compile Include="People\Controls\ctrlPersonDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonDetails.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonDetails.Designer.cs">
       <DependentUpon>ctrlPersonDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlPersonDetailsWithFilter.cs">
+    <Compile Include="People\Controls\ctrlPersonDetailsWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonDetailsWithFilter.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ctrlCoachBasicDetais.resx">
@@ -488,7 +488,7 @@
     <EmbeddedResource Include="ctrlUserDetails.resx">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdatePerson.resx">
+    <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddSubscription.resx">
@@ -572,13 +572,13 @@
     <EmbeddedResource Include="frmManageClassRegisteration.resx">
       <DependentUpon>frmManageClassRegisteration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManagePeople.resx">
+    <EmbeddedResource Include="People\frmManagePeople.resx">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageUsers.resx">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPersonDetails.resx">
+    <EmbeddedResource Include="People\frmPersonDetails.resx">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowClassDetails.resx">
@@ -612,10 +612,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ctrlPersonDetails.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonDetails.resx">
       <DependentUpon>ctrlPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlPersonDetailsWithFilter.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonDetailsWithFilter.resx">
       <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
