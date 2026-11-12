@@ -84,7 +84,6 @@ namespace GymMangementSystem
             }
             catch (Exception iox)
             {
-                //MessageBox.Show(iox.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

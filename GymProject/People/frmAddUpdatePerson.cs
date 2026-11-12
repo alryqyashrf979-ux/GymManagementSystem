@@ -35,24 +35,15 @@ namespace GymMangementSystem
         public frmAddUpdatePerson(int PersonID)
         {
             InitializeComponent();
-            this._PersonID = PersonID;
-            this._Mode = enMode.Update;
+            _PersonID = PersonID;
+           _Mode = enMode.Update;
 
 
         }
 
         clsPeople _Person;
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSecondName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
+     
         private void btnSelectPhoto_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
@@ -116,7 +107,7 @@ namespace GymMangementSystem
 
 
 
-            if (_Person.ImagePath != "")
+            if (! string.IsNullOrEmpty(_Person.ImagePath))
                 pbSelectedPhoto.ImageLocation = _Person.ImagePath;
 
 
@@ -166,19 +157,11 @@ namespace GymMangementSystem
 
             cmCountries.SelectedIndex=cmCountries.FindString("Yemen");
 
-            dtDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
+            dtDateOfBirth.MaxDate = DateTime.Now.AddYears(-10);
             dtDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
 
 
         }
-
-
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
 
         bool _HanldeImage()
@@ -189,7 +172,7 @@ namespace GymMangementSystem
             {
 
 
-                if (_Person.ImagePath != "")
+                if (!string.IsNullOrEmpty(_Person.ImagePath))
                 {
                     clsUtil.DeletePersonImage(_Person.ImagePath);
                 }
