@@ -294,10 +294,10 @@
     <Compile Include="Members\frmShowMemberDetails.Designer.cs">
       <DependentUpon>frmShowMemberDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateClassRegistration.cs">
+    <Compile Include="Class Registeration\frmAddUpdateClassRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateClassRegistration.Designer.cs">
+    <Compile Include="Class Registeration\frmAddUpdateClassRegistration.Designer.cs">
       <DependentUpon>frmAddUpdateClassRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Members\frmAddUpdateMember.cs">
@@ -336,10 +336,10 @@
     <Compile Include="Classes\frmManageClasses.Designer.cs">
       <DependentUpon>frmManageClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageClassRegisteration.cs">
+    <Compile Include="Class Registeration\frmManageClassRegisteration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageClassRegisteration.Designer.cs">
+    <Compile Include="Class Registeration\frmManageClassRegisteration.Designer.cs">
       <DependentUpon>frmManageClassRegisteration.cs</DependentUpon>
     </Compile>
     <Compile Include="Members\frmManageMember.cs">
@@ -548,7 +548,7 @@
     <EmbeddedResource Include="Classes\frmAddUpdateClass.resx">
       <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateClassRegistration.resx">
+    <EmbeddedResource Include="Class Registeration\frmAddUpdateClassRegistration.resx">
       <DependentUpon>frmAddUpdateClassRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Members\frmAddUpdateMember.resx">
@@ -569,7 +569,7 @@
     <EmbeddedResource Include="Classes\frmManageClasses.resx">
       <DependentUpon>frmManageClasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageClassRegisteration.resx">
+    <EmbeddedResource Include="Class Registeration\frmManageClassRegisteration.resx">
       <DependentUpon>frmManageClassRegisteration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmManagePeople.resx">
