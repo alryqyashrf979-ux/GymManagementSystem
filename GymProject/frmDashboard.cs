@@ -188,13 +188,12 @@ namespace GymMangementSystem
         {
             lblCurrentUseName.Text = clsGlobal.CurrentUserInfo.UserName;
             lblUserName.Text = clsGlobal.CurrentUserInfo.UserName;
-            DateTime date = DateTime.Now;
-            string FormattedDate = date.ToString("dddd,d MMMM yyyy", CultureInfo.InvariantCulture);
-            lblDate.Text = FormattedDate;
-            lblTime.Text = date.ToString("hh:mm tt");
+        
             lblCountActiveMembers.Text = clsMembers.SelectCountOfActiveMembers().ToString();
             lblActiveTrainers.Text = clsCoaches.SelectCountOfActiveCoaches().ToString();
             lblActiveClasses.Text = clsClasses.SelectCountOfActiveClasses().ToString();
+            lblExpiringSubscription.Text = clsSubscription.SelectCountExpirationSubscriptionInLastTenDays().ToString();
+
             pbCurrentUser.ImageLocation = clsGlobal.CurrentUserInfo.PersonInfo.ImagePath;
 
 
@@ -208,9 +207,12 @@ namespace GymMangementSystem
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
+            DateTime date = DateTime.Now;
+            string FormattedDate = date.ToString("dddd,d MMMM yyyy", CultureInfo.InvariantCulture);
+            lblDate.Text = FormattedDate;
+            lblTime.Text = date.ToString("hh:mm tt");
         }
     }
 }

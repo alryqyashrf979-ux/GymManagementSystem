@@ -11,15 +11,6 @@ namespace DataAccessLayer
     public class clsSubscriptionsData
     {
 
-
-
-
-
-
-
-
-
-
         public static int AddNewSubscription(int MemberID,
              int PlanID, DateTime StartDate, DateTime ExpirationDate, DateTime RegistrationDate, double Price, byte Status, int CreatedByUserID)
         {
@@ -107,8 +98,6 @@ namespace DataAccessLayer
 
         }
 
-
-
         static public bool HasExistingSubscription(int MemberID)
         {
             bool IsFound = false;
@@ -135,8 +124,6 @@ namespace DataAccessLayer
 
             return IsFound;
         }
-
-
 
         public static bool DeleteSubscription(int SubscriptionID)
         {
@@ -364,11 +351,6 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
             }
         }
 
-
-
-
-
-
         public static bool UpdateSubscriptionStatus(int SubscriptionID, byte Status)
         {
             string sql = "UPDATE Subscriptions SET Status = @Status WHERE SubscriptionID = @SubscriptionID";
@@ -390,7 +372,22 @@ JOIN SubscriptionPlans ON SubscriptionPlans.PlanID = subscriptions.PlanID inner 
         }
 
 
+        static public int SelectCountExpirationSubscriptionInLastTenDays()
+        {
+            string query = @"select COUNT(*) from Subscriptions where Status=2 and
+                            RegistrationDate between DateADD(Day,-10,GETDATE()) and GETDATE() ;";
 
-    }
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
+
+        }
                     
 }
