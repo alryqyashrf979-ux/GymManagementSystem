@@ -21,10 +21,8 @@ namespace DataBusinessLayer
         public string Notes { set; get; }
         public bool IsActive { set; get; }
 
-        private clsPeople _Person;
-        public clsPeople Person { get { return _Person; } }
-        private clsEmployeeShift _EmployeeShift;
-        public clsEmployeeShift EmployeeShift { get { return _EmployeeShift; } }
+        public clsPeople PersonInfo { get; private set; }
+        public clsEmployeeShift EmployeeShiftInfo { get; private set; }
         public clsTitles TitleInfo { get; private set; }
 
         public enum enMode { AddMode=1,UpdateMode=2};
@@ -42,8 +40,8 @@ namespace DataBusinessLayer
             this.HiredDate = DateTime.Now;
             this.Notes = string.Empty;
             this.IsActive = false;
-            this._Person = new clsPeople();
-            this._EmployeeShift =clsEmployeeShift.Find(ShiftID);
+            this.PersonInfo = new clsPeople();
+            this.EmployeeShiftInfo =clsEmployeeShift.Find(ShiftID);
             this._Mode = enMode.AddMode;
         }
         //
@@ -57,8 +55,8 @@ namespace DataBusinessLayer
             this.HiredDate = HiredDate;
             this.Notes = Notes;
             this.IsActive = IsActive;
-            this._Person = clsPeople.Find(PersonID);
-            this._EmployeeShift = clsEmployeeShift.Find(ShiftID);
+            this.PersonInfo = clsPeople.Find(PersonID);
+            this.EmployeeShiftInfo = clsEmployeeShift.Find(ShiftID);
             this.TitleInfo = clsTitles.Find(TitleID);
             this.TerminationDate = TerminationDate;
             _Mode = enMode.UpdateMode;

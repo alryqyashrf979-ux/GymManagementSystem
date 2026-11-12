@@ -41,13 +41,13 @@
             this.lblClassRegistrationID = new System.Windows.Forms.Label();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.lblRegisteredBy = new System.Windows.Forms.Label();
-            this.ctrlClassDetailsWithFilter1 = new GymMangementSystem.ctrlClassDetailsWithFilter();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ctrlClassDetailsWithFilter1 = new GymMangementSystem.ctrlClassDetailsWithFilter();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,7 +65,7 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(939, 69);
             this.panel4.TabIndex = 90;
@@ -86,7 +86,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(81, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 64);
             this.panel1.TabIndex = 109;
@@ -108,7 +108,7 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.PersonWithDnableWhite;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(83, 69);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,21 +212,11 @@
             this.lblRegisteredBy.TabIndex = 153;
             this.lblRegisteredBy.Text = "???";
             // 
-            // ctrlClassDetailsWithFilter1
-            // 
-            this.ctrlClassDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlClassDetailsWithFilter1.EnableFiltering = true;
-            this.ctrlClassDetailsWithFilter1.Location = new System.Drawing.Point(0, 74);
-            this.ctrlClassDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ctrlClassDetailsWithFilter1.Name = "ctrlClassDetailsWithFilter1";
-            this.ctrlClassDetailsWithFilter1.Size = new System.Drawing.Size(939, 609);
-            this.ctrlClassDetailsWithFilter1.TabIndex = 150;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
             this.pictureBox2.Location = new System.Drawing.Point(401, 743);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(72, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -289,7 +279,7 @@
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonWithDnable;
             this.pictureBox1.Location = new System.Drawing.Point(425, 690);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -300,7 +290,7 @@
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.ClassID;
             this.pictureBox3.Location = new System.Drawing.Point(0, 679);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(72, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -311,12 +301,23 @@
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonCircle;
             this.pictureBox4.Location = new System.Drawing.Point(0, 730);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(72, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 156;
             this.pictureBox4.TabStop = false;
+            // 
+            // ctrlClassDetailsWithFilter1
+            // 
+            this.ctrlClassDetailsWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlClassDetailsWithFilter1.EnableFiltering = true;
+            this.ctrlClassDetailsWithFilter1.Location = new System.Drawing.Point(0, 74);
+            this.ctrlClassDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
+            this.ctrlClassDetailsWithFilter1.Name = "ctrlClassDetailsWithFilter1";
+            this.ctrlClassDetailsWithFilter1.Size = new System.Drawing.Size(939, 609);
+            this.ctrlClassDetailsWithFilter1.TabIndex = 150;
+            this.ctrlClassDetailsWithFilter1.OnClassSelected += new System.EventHandler<GymMangementSystem.ctrlClassDetailsWithFilter.ClassEventArgs>(this.ctrlClassDetailsWithFilter1_OnClassSelected_1);
             // 
             // frmAddUpdateClassRegistration
             // 
@@ -342,7 +343,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddUpdateClassRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmAddUpdateClassRegistration_Load);

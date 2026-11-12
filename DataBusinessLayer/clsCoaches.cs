@@ -13,6 +13,7 @@ namespace DataBusinessLayer
         private int _CoachID;
         public int CoachID { get { return this._CoachID; } }
         public int EmployeeID { set; get; }
+        public string CoachName { get => this.EmployeeInfo.PersonInfo.FullName; }
         public string Note { set; get; }
         public string Speciality { set; get; }
         private clsEmployees _Employees;

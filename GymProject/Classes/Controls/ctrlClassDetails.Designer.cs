@@ -51,7 +51,7 @@
             this.guna2CirclePictureBox9 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblStartDay = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblCoachID = new System.Windows.Forms.Label();
+            this.lblCoachName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblClassName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -108,7 +108,7 @@
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox9);
             this.guna2Panel1.Controls.Add(this.lblStartDay);
             this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.lblCoachID);
+            this.guna2Panel1.Controls.Add(this.lblCoachName);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.lblClassName);
             this.guna2Panel1.Controls.Add(this.label2);
@@ -392,17 +392,17 @@
             this.label7.TabIndex = 58;
             this.label7.Text = "Start Day";
             // 
-            // lblCoachID
+            // lblCoachName
             // 
-            this.lblCoachID.AutoSize = true;
-            this.lblCoachID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoachID.ForeColor = System.Drawing.Color.Black;
-            this.lblCoachID.Location = new System.Drawing.Point(65, 193);
-            this.lblCoachID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCoachID.Name = "lblCoachID";
-            this.lblCoachID.Size = new System.Drawing.Size(39, 28);
-            this.lblCoachID.TabIndex = 57;
-            this.lblCoachID.Text = "???";
+            this.lblCoachName.AutoSize = true;
+            this.lblCoachName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoachName.ForeColor = System.Drawing.Color.Black;
+            this.lblCoachName.Location = new System.Drawing.Point(65, 193);
+            this.lblCoachName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCoachName.Name = "lblCoachName";
+            this.lblCoachName.Size = new System.Drawing.Size(39, 28);
+            this.lblCoachName.TabIndex = 57;
+            this.lblCoachName.Text = "???";
             // 
             // label5
             // 
@@ -412,9 +412,9 @@
             this.label5.Location = new System.Drawing.Point(68, 171);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 21);
+            this.label5.Size = new System.Drawing.Size(103, 21);
             this.label5.TabIndex = 56;
-            this.label5.Text = "Coach ID";
+            this.label5.Text = "Coach Name";
             // 
             // lblClassName
             // 
@@ -631,7 +631,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox9;
         private System.Windows.Forms.Label lblStartDay;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCoachID;
+        private System.Windows.Forms.Label lblCoachName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblClassName;
         private System.Windows.Forms.Label label2;

@@ -29,7 +29,8 @@ namespace DataBusinessLayer
         private enum enMode { AddNew = 1, Update = 2 }
         enMode _Mode = enMode.AddNew;
 
-
+        public clsCoaches CoachInfo { get { if (this.CoachInfo == null) 
+                { this.CoachInfo = clsCoaches.FindByCoachID(this.CoachID); return this.CoachInfo; } else return this.CoachInfo; } private set { this.CoachInfo = value; } }
 
 
         private clsClasses(int classID, string className, string description, TimeSpan startTime, TimeSpan endTime,
