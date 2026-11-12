@@ -13,17 +13,15 @@ namespace GymMangementSystem
 {
     public partial class ctrlPersonDetails : UserControl
     {
-        private int _PersonID=-1;
         public int PersonID
         {
-            get { return _PersonID; }
+            get;private set;
         }
        
-        private clsPeople _PersonInfo;
 
         public clsPeople PersonInfo
         {
-            get { return _PersonInfo; }
+            get;private set;
         }
         public void SetHeaderColor(int part1,int part2,int part3)
         {
@@ -49,82 +47,73 @@ namespace GymMangementSystem
             lbDateOfBirth.Text = "[????]";
             lbEmail.Text = "[????]";
             lbGender.Text = "[????]";
-            t.Text = "[????]";
+            lblName.Text = "[????]";
             lbNationalNo.Text = "[????]";
             lbPersonID.Text = "[????]";
             lbPhone.Text = "[????]";
-            _PersonID = -1;
+            PersonID = -1;
             picPersonalImage.Image = Properties.Resources.Male;
         }
 
         private void _LoadPersonImage()
         {
-            picPersonalImage.Image = _PersonInfo.Gender == (byte)enGender.Male ? Properties.Resources.Male : Properties.Resources.Female;
+            picPersonalImage.Image = PersonInfo.Gender == (byte)enGender.Male ? Properties.Resources.Male : Properties.Resources.Female;
 
-            if (_PersonInfo.ImagePath == "" || _PersonInfo.ImagePath == null)
+            if (PersonInfo.ImagePath == "" || PersonInfo.ImagePath == null)
                 return;
 
-            string ImagePath = _PersonInfo.ImagePath;
+            string ImagePath = PersonInfo.ImagePath;
             if (File.Exists(ImagePath))
             {
                 picPersonalImage.ImageLocation = ImagePath;
             }
         }
 
-        private void _FillPersonInfo()
+        private void _LoadData()
         {
             lnkEditPersonInfo.Enabled = true;
-            lbAdress.Text = _PersonInfo.Address;
+            lbAdress.Text = PersonInfo.Address;
             lbCountry.Text =PersonInfo.CountryInfo .CountryName;
-            lbDateOfBirth.Text = _PersonInfo.DateOfBirth.ToString();
-            lbEmail.Text = _PersonInfo.Email.ToString();
-            lbGender.Text = _PersonInfo.Gender == 0 ? "Male" : "Female";
-            t.Text = _PersonInfo.FullName;
-            lbNationalNo.Text = _PersonInfo.NationalNo.ToString();
-            lbPersonID.Text = _PersonInfo.PersonID.ToString();
-            lbPhone.Text = _PersonInfo.PhoneNumber;
+            lbDateOfBirth.Text = PersonInfo.DateOfBirth.ToString();
+            lbEmail.Text = PersonInfo.Email.ToString();
+            lbGender.Text = PersonInfo.Gender == 0 ? "Male" : "Female";
+            lblName.Text = PersonInfo.FullName;
+            lbNationalNo.Text = PersonInfo.NationalNo.ToString();
+            lbPersonID.Text = PersonInfo.PersonID.ToString();
+            lbPhone.Text = PersonInfo.PhoneNumber;
 
             _LoadPersonImage();
-            _PersonID = _PersonInfo.PersonID;
+            PersonID = PersonInfo.PersonID;
 
         }
 
         public void LoadPersonInfo(int PersonID)
         {
-            _PersonInfo = clsPeople.Find(PersonID);
-            if (_PersonInfo == null)
+            PersonInfo = clsPeople.Find(PersonID);
+            if (PersonInfo == null)
             {
                 _ResetPersonInformation();
                 MessageBox.Show("No Person with Person ID=" + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            _FillPersonInfo();
+            _LoadData();
         }
 
         public void LoadPersonInfo(string NationalNo)
         {
-            _PersonInfo = clsPeople.Find(NationalNo);
-            if (_PersonInfo == null)
+            PersonInfo = clsPeople.Find(NationalNo);
+            if (PersonInfo == null)
             {
                 _ResetPersonInformation();
                 MessageBox.Show("No Person with National No =" + NationalNo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            _FillPersonInfo();
+            _LoadData();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+      
         private void lnkEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmAddUpdatePerson frm=new frmAddUpdatePerson(PersonInfo.PersonID);
