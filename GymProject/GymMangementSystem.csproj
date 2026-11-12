@@ -162,16 +162,16 @@
     <Compile Include="Payment\Controls\ctrlPaymentDetails.Designer.cs">
       <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlSubscriptionPlanDetails.cs">
+    <Compile Include="Plan\Controls\ctrlSubscriptionPlanDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlSubscriptionPlanDetails.Designer.cs">
+    <Compile Include="Plan\Controls\ctrlSubscriptionPlanDetails.Designer.cs">
       <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlSubscriptionPlanDetailsWithFiltering.cs">
+    <Compile Include="Plan\Controls\ctrlSubscriptionPlanDetailsWithFiltering.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlSubscriptionPlanDetailsWithFiltering.Designer.cs">
+    <Compile Include="Plan\Controls\ctrlSubscriptionPlanDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlSubscriptionPlanDetailsWithFiltering.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\Controls\ctrlUserDetails.cs">
@@ -384,10 +384,10 @@
     <Compile Include="Payment\frmShowPaymentDetails.Designer.cs">
       <DependentUpon>frmShowPaymentDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowPlanDetails.cs">
+    <Compile Include="Plan\frmShowPlanDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowPlanDetails.Designer.cs">
+    <Compile Include="Plan\frmShowPlanDetails.Designer.cs">
       <DependentUpon>frmShowPlanDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Shift\frmShowShiftDetails.cs">
@@ -479,10 +479,10 @@
     <EmbeddedResource Include="Payment\Controls\ctrlPaymentDetails.resx">
       <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlSubscriptionPlanDetails.resx">
+    <EmbeddedResource Include="Plan\Controls\ctrlSubscriptionPlanDetails.resx">
       <DependentUpon>ctrlSubscriptionPlanDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlSubscriptionPlanDetailsWithFiltering.resx">
+    <EmbeddedResource Include="Plan\Controls\ctrlSubscriptionPlanDetailsWithFiltering.resx">
       <DependentUpon>ctrlSubscriptionPlanDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\Controls\ctrlUserDetails.resx">
@@ -590,7 +590,7 @@
     <EmbeddedResource Include="Payment\frmShowPaymentDetails.resx">
       <DependentUpon>frmShowPaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowPlanDetails.resx">
+    <EmbeddedResource Include="Plan\frmShowPlanDetails.resx">
       <DependentUpon>frmShowPlanDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shift\frmShowShiftDetails.resx">
