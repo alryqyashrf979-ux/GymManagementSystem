@@ -234,10 +234,10 @@
     <Compile Include="frmChangeSubscription.Designer.cs">
       <DependentUpon>frmChangeSubscription.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCoachDetails.cs">
+    <Compile Include="Coaches\frmCoachDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCoachDetails.Designer.cs">
+    <Compile Include="Coaches\frmCoachDetails.Designer.cs">
       <DependentUpon>frmCoachDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Coaches\frmManageCoaches.cs">
@@ -324,10 +324,10 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\frmManageClasses.cs">
@@ -512,7 +512,7 @@
     <EmbeddedResource Include="frmChangeSubscription.resx">
       <DependentUpon>frmChangeSubscription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCoachDetails.resx">
+    <EmbeddedResource Include="Coaches\frmCoachDetails.resx">
       <DependentUpon>frmCoachDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coaches\frmManageCoaches.resx">
@@ -563,7 +563,7 @@
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\frmManageClasses.resx">
