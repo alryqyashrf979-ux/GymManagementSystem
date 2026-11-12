@@ -210,10 +210,10 @@
     <Compile Include="Coaches\frmAddUpdateCoach.Designer.cs">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateEmployeeAttendance.cs">
+    <Compile Include="EmployeeAttendance\frmAddUpdateEmployeeAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateEmployeeAttendance.Designer.cs">
+    <Compile Include="EmployeeAttendance\frmAddUpdateEmployeeAttendance.Designer.cs">
       <DependentUpon>frmAddUpdateEmployeeAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateFrozenSubscription.cs">
@@ -252,10 +252,10 @@
     <Compile Include="Employees\frmManageEmployees.Designer.cs">
       <DependentUpon>frmManageEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageEmployeesAttendance.cs">
+    <Compile Include="EmployeeAttendance\frmManageEmployeesAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageEmployeesAttendance.Designer.cs">
+    <Compile Include="EmployeeAttendance\frmManageEmployeesAttendance.Designer.cs">
       <DependentUpon>frmManageEmployeesAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManagePayments.cs">
@@ -500,7 +500,7 @@
     <EmbeddedResource Include="Coaches\frmAddUpdateCoach.resx">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateEmployeeAttendance.resx">
+    <EmbeddedResource Include="EmployeeAttendance\frmAddUpdateEmployeeAttendance.resx">
       <DependentUpon>frmAddUpdateEmployeeAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateFrozenSubscription.resx">
@@ -521,7 +521,7 @@
     <EmbeddedResource Include="Employees\frmManageEmployees.resx">
       <DependentUpon>frmManageEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageEmployeesAttendance.resx">
+    <EmbeddedResource Include="EmployeeAttendance\frmManageEmployeesAttendance.resx">
       <DependentUpon>frmManageEmployeesAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Members\frmManageMember.resx">
