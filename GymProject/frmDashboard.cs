@@ -1,8 +1,10 @@
-﻿using System;
+﻿using GymMangementSystem.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -176,8 +178,33 @@ namespace GymMangementSystem
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clsGlobal.CurrentUserInfo = null;
-            _frmLogin.ShowDialog();
+            _frmLogin.Show();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            lblCurrentUseName.Text = clsGlobal.CurrentUserInfo.UserName;
+            pbCurrentUser.ImageLocation = clsGlobal.CurrentUserInfo.PersonInfo.ImagePath;
+
+
+            if (!File.Exists(clsGlobal.CurrentUserInfo.PersonInfo.ImagePath))
+            {
+                if (clsGlobal.CurrentUserInfo.PersonInfo.Gender == 0)
+                    pbCurrentUser.Image = Resources.Male;
+                else
+                    pbCurrentUser.Image = Resources.Female;
+            }
+
+
+
+
+
         }
     }
 }
