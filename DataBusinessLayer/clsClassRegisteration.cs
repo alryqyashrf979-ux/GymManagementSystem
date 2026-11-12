@@ -117,6 +117,10 @@ namespace DataBusinessLayer
         {
             return clsClassregisterationsDataAccess.SelectAssignedMembers(CoachID);
         }
+        static public int GetEnrolledMembersCountByClassID(int ClassID)
+        {
+            return clsClassregisterationsDataAccess.GetEnrolledMembersCountByClassID(ClassID);
+        }
     }
 }
     

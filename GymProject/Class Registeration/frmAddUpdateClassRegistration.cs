@@ -105,7 +105,7 @@ namespace GymMangementSystem
                 MessageBox.Show("Recored saved successfully .", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Error :recored didn't save successfully .", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error :recored didn't save .", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -144,14 +144,14 @@ namespace GymMangementSystem
                 return;
 
 
-            if (e.ClassInfo.Maximum_Capacity>=)
-                
+            if (e.ClassInfo.IsClassFull())
+            {
+                MessageBox.Show("This class has reached its maximum capacity.\nNo more members can be enrolled.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSave.Enabled = false;
+                return;
 
-
-
-
-
-
+            }
+            btnSave.Enabled = true;
 
 
         }
