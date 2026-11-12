@@ -1,9 +1,11 @@
-﻿using GymMangementSystem.Properties;
+﻿using DataBusinessLayer;
+using GymMangementSystem.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -182,14 +184,15 @@ namespace GymMangementSystem
             this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frmDashboard_Load(object sender, EventArgs e)
         {
             lblCurrentUseName.Text = clsGlobal.CurrentUserInfo.UserName;
+            lblUserName.Text = clsGlobal.CurrentUserInfo.UserName;
+            DateTime date = DateTime.Now;
+            string FormattedDate = date.ToString("dddd,d MMMM yyyy", CultureInfo.InvariantCulture);
+            lblDate.Text = FormattedDate;
+            lblTime.Text = date.ToString("hh:mm tt");
+            lblCountActiveMembers.Text = clsMembers.SelectCountOfActiveMembers().ToString();
             pbCurrentUser.ImageLocation = clsGlobal.CurrentUserInfo.PersonInfo.ImagePath;
 
 
@@ -201,9 +204,10 @@ namespace GymMangementSystem
                     pbCurrentUser.Image = Resources.Female;
             }
 
+        }
 
-
-
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

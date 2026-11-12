@@ -250,6 +250,35 @@ namespace DataAccessLayer
             return false;
         }
 
+        static public int SelectCountOfActiveMembers()
+        {
+            string query = @"select Count(*) from Members where IsActive=1;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
+
+        static public int SelectCountOfMembers()
+        {
+            string query = @"select Count(*) from Members ;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
     }
 
 

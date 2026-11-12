@@ -188,6 +188,10 @@ namespace DataBusinessLayer
             }
             return null;
         }
+
+        static public int SelectCountOfActiveMembers() => clsMembersDataAccess.SelectCountOfActiveMembers();
+
+        static public int SelectCountOfMembers() => clsMembersDataAccess.SelectCountOfMembers();
     }
 }
 
