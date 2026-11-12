@@ -174,10 +174,10 @@
     <Compile Include="ctrlSubscriptionPlanDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlSubscriptionPlanDetailsWithFiltering.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlUserDetails.cs">
+    <Compile Include="Users\Controls\ctrlUserDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlUserDetails.Designer.cs">
+    <Compile Include="Users\Controls\ctrlUserDetails.Designer.cs">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAddUpdatePerson.cs">
@@ -306,16 +306,16 @@
     <Compile Include="frmAddUpdateMember.Designer.cs">
       <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateUser.cs">
+    <Compile Include="Users\frmAddUpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateUser.Designer.cs">
+    <Compile Include="Users\frmAddUpdateUser.Designer.cs">
       <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChangePassword.cs">
+    <Compile Include="Users\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChangePassword.Designer.cs">
+    <Compile Include="Users\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.cs">
@@ -354,10 +354,10 @@
     <Compile Include="People\frmManagePeople.Designer.cs">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageUsers.cs">
+    <Compile Include="Users\frmManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageUsers.Designer.cs">
+    <Compile Include="Users\frmManageUsers.Designer.cs">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmPersonDetails.cs">
@@ -396,10 +396,10 @@
     <Compile Include="frmShowShiftDetails.Designer.cs">
       <DependentUpon>frmShowShiftDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowUserDetails.cs">
+    <Compile Include="Users\frmShowUserDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowUserDetails.Designer.cs">
+    <Compile Include="Users\frmShowUserDetails.Designer.cs">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShowSubscriptionDetails.cs">
@@ -485,7 +485,7 @@
     <EmbeddedResource Include="ctrlSubscriptionPlanDetailsWithFiltering.resx">
       <DependentUpon>ctrlSubscriptionPlanDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlUserDetails.resx">
+    <EmbeddedResource Include="Users\Controls\ctrlUserDetails.resx">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
@@ -554,10 +554,10 @@
     <EmbeddedResource Include="frmAddUpdateMember.resx">
       <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateUser.resx">
+    <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
       <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChangePassword.resx">
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
@@ -575,7 +575,7 @@
     <EmbeddedResource Include="People\frmManagePeople.resx">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageUsers.resx">
+    <EmbeddedResource Include="Users\frmManageUsers.resx">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmPersonDetails.resx">
@@ -596,7 +596,7 @@
     <EmbeddedResource Include="frmShowShiftDetails.resx">
       <DependentUpon>frmShowShiftDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowUserDetails.resx">
+    <EmbeddedResource Include="Users\frmShowUserDetails.resx">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowSubscriptionDetails.resx">
