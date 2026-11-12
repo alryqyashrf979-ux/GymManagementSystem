@@ -559,6 +559,18 @@ Classes.IsActive from Classes ;
             return isFound;
         }
 
+        static public int SelectCountOfActiveClasses()
+        {
+            string query = @"select COUNT(*) from Classes where IsActive=1;";
 
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
     }
 }

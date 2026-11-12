@@ -194,6 +194,7 @@ namespace GymMangementSystem
             lblTime.Text = date.ToString("hh:mm tt");
             lblCountActiveMembers.Text = clsMembers.SelectCountOfActiveMembers().ToString();
             lblActiveTrainers.Text = clsCoaches.SelectCountOfActiveCoaches().ToString();
+            lblActiveClasses.Text = clsClasses.SelectCountOfActiveClasses().ToString();
             pbCurrentUser.ImageLocation = clsGlobal.CurrentUserInfo.PersonInfo.ImagePath;
 
 

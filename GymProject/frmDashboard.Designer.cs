@@ -85,7 +85,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblActiveClasses = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -842,7 +842,7 @@
             this.guna2Panel5.BorderRadius = 8;
             this.guna2Panel5.BorderThickness = 1;
             this.guna2Panel5.Controls.Add(this.label13);
-            this.guna2Panel5.Controls.Add(this.label15);
+            this.guna2Panel5.Controls.Add(this.lblActiveClasses);
             this.guna2Panel5.Controls.Add(this.label16);
             this.guna2Panel5.Controls.Add(this.pictureBox6);
             this.guna2Panel5.CustomBorderColor = System.Drawing.Color.Transparent;
@@ -984,17 +984,17 @@
             this.label13.TabIndex = 18;
             this.label13.Text = "All Active Classes";
             // 
-            // label15
+            // lblActiveClasses
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(119, 35);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 30);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "18";
+            this.lblActiveClasses.AutoSize = true;
+            this.lblActiveClasses.BackColor = System.Drawing.Color.Transparent;
+            this.lblActiveClasses.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveClasses.ForeColor = System.Drawing.Color.Black;
+            this.lblActiveClasses.Location = new System.Drawing.Point(119, 35);
+            this.lblActiveClasses.Name = "lblActiveClasses";
+            this.lblActiveClasses.Size = new System.Drawing.Size(40, 30);
+            this.lblActiveClasses.TabIndex = 20;
+            this.lblActiveClasses.Text = "???";
             // 
             // label16
             // 
@@ -1004,9 +1004,9 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.label16.Location = new System.Drawing.Point(95, 8);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(102, 17);
+            this.label16.Size = new System.Drawing.Size(94, 17);
             this.label16.TabIndex = 21;
-            this.label16.Text = "Today\'s Classes";
+            this.label16.Text = "Active Classes";
             // 
             // pictureBox6
             // 
@@ -1170,7 +1170,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblActiveClasses;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
