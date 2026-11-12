@@ -81,7 +81,7 @@
             this.lblCountActiveMembers = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblActiveTrainers = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -825,7 +825,7 @@
             this.guna2Panel4.BorderRadius = 8;
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.label9);
-            this.guna2Panel4.Controls.Add(this.label11);
+            this.guna2Panel4.Controls.Add(this.lblActiveTrainers);
             this.guna2Panel4.Controls.Add(this.label12);
             this.guna2Panel4.Controls.Add(this.pictureBox5);
             this.guna2Panel4.CustomBorderColor = System.Drawing.Color.Transparent;
@@ -937,17 +937,17 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "All Active Trainers";
             // 
-            // label11
+            // lblActiveTrainers
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(122, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 30);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "12";
+            this.lblActiveTrainers.AutoSize = true;
+            this.lblActiveTrainers.BackColor = System.Drawing.Color.Transparent;
+            this.lblActiveTrainers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveTrainers.ForeColor = System.Drawing.Color.Black;
+            this.lblActiveTrainers.Location = new System.Drawing.Point(122, 35);
+            this.lblActiveTrainers.Name = "lblActiveTrainers";
+            this.lblActiveTrainers.Size = new System.Drawing.Size(40, 30);
+            this.lblActiveTrainers.TabIndex = 20;
+            this.lblActiveTrainers.Text = "???";
             // 
             // label12
             // 
@@ -1174,7 +1174,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblActiveTrainers;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox5;
     }
