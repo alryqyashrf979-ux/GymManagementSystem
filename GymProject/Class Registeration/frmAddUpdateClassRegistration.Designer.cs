@@ -47,8 +47,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.ctrlClassDetailsWithFilter1 = new GymMangementSystem.ctrlClassDetailsWithFilter();
             this.pnlClassRegistration = new Guna.UI2.WinForms.Guna2Panel();
+            this.ctrlClassDetailsWithFilter1 = new GymMangementSystem.ctrlClassDetailsWithFilter();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -161,9 +161,9 @@
             this.lblMemberID.Location = new System.Drawing.Point(752, 95);
             this.lblMemberID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMemberID.Name = "lblMemberID";
-            this.lblMemberID.Size = new System.Drawing.Size(42, 27);
+            this.lblMemberID.Size = new System.Drawing.Size(56, 27);
             this.lblMemberID.TabIndex = 147;
-            this.lblMemberID.Text = "???";
+            this.lblMemberID.Text = "[???]";
             // 
             // linkLabel1
             // 
@@ -183,41 +183,41 @@
             this.lblClassRegistrationID.AutoSize = true;
             this.lblClassRegistrationID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClassRegistrationID.ForeColor = System.Drawing.Color.Black;
-            this.lblClassRegistrationID.Location = new System.Drawing.Point(291, 29);
+            this.lblClassRegistrationID.Location = new System.Drawing.Point(273, 24);
             this.lblClassRegistrationID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClassRegistrationID.Name = "lblClassRegistrationID";
-            this.lblClassRegistrationID.Size = new System.Drawing.Size(42, 27);
+            this.lblClassRegistrationID.Size = new System.Drawing.Size(56, 27);
             this.lblClassRegistrationID.TabIndex = 151;
-            this.lblClassRegistrationID.Text = "???";
+            this.lblClassRegistrationID.Text = "[???]";
             // 
             // lblRegistrationDate
             // 
             this.lblRegistrationDate.AutoSize = true;
             this.lblRegistrationDate.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrationDate.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistrationDate.Location = new System.Drawing.Point(291, 95);
+            this.lblRegistrationDate.Location = new System.Drawing.Point(272, 93);
             this.lblRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
-            this.lblRegistrationDate.Size = new System.Drawing.Size(42, 27);
+            this.lblRegistrationDate.Size = new System.Drawing.Size(56, 27);
             this.lblRegistrationDate.TabIndex = 152;
-            this.lblRegistrationDate.Text = "???";
+            this.lblRegistrationDate.Text = "[???]";
             // 
             // lblRegisteredBy
             // 
             this.lblRegisteredBy.AutoSize = true;
             this.lblRegisteredBy.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisteredBy.ForeColor = System.Drawing.Color.Black;
-            this.lblRegisteredBy.Location = new System.Drawing.Point(750, 34);
+            this.lblRegisteredBy.Location = new System.Drawing.Point(743, 33);
             this.lblRegisteredBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegisteredBy.Name = "lblRegisteredBy";
-            this.lblRegisteredBy.Size = new System.Drawing.Size(42, 27);
+            this.lblRegisteredBy.Size = new System.Drawing.Size(56, 27);
             this.lblRegisteredBy.TabIndex = 153;
-            this.lblRegisteredBy.Text = "???";
+            this.lblRegisteredBy.Text = "[???]";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
-            this.pictureBox2.Location = new System.Drawing.Point(230, 85);
+            this.pictureBox2.Location = new System.Drawing.Point(221, 84);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 42);
@@ -291,7 +291,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox3.Location = new System.Drawing.Point(234, 22);
+            this.pictureBox3.Location = new System.Drawing.Point(225, 19);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 38);
@@ -302,24 +302,13 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonCircle;
-            this.pictureBox4.Location = new System.Drawing.Point(693, 28);
+            this.pictureBox4.Location = new System.Drawing.Point(687, 31);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(49, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 156;
             this.pictureBox4.TabStop = false;
-            // 
-            // ctrlClassDetailsWithFilter1
-            // 
-            this.ctrlClassDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlClassDetailsWithFilter1.EnableFiltering = true;
-            this.ctrlClassDetailsWithFilter1.Location = new System.Drawing.Point(0, 74);
-            this.ctrlClassDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
-            this.ctrlClassDetailsWithFilter1.Name = "ctrlClassDetailsWithFilter1";
-            this.ctrlClassDetailsWithFilter1.Size = new System.Drawing.Size(939, 609);
-            this.ctrlClassDetailsWithFilter1.TabIndex = 150;
-            this.ctrlClassDetailsWithFilter1.OnClassSelected += new System.EventHandler<GymMangementSystem.ctrlClassDetailsWithFilter.ClassEventArgs>(this.ctrlClassDetailsWithFilter1_OnClassSelected_1);
             // 
             // pnlClassRegistration
             // 
@@ -340,16 +329,28 @@
             this.pnlClassRegistration.Controls.Add(this.linkLabel1);
             this.pnlClassRegistration.Controls.Add(this.lblMemberID);
             this.pnlClassRegistration.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.pnlClassRegistration.Enabled = false;
             this.pnlClassRegistration.Location = new System.Drawing.Point(6, 682);
             this.pnlClassRegistration.Margin = new System.Windows.Forms.Padding(4);
             this.pnlClassRegistration.Name = "pnlClassRegistration";
             this.pnlClassRegistration.Size = new System.Drawing.Size(926, 133);
             this.pnlClassRegistration.TabIndex = 157;
             // 
+            // ctrlClassDetailsWithFilter1
+            // 
+            this.ctrlClassDetailsWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlClassDetailsWithFilter1.EnableFiltering = true;
+            this.ctrlClassDetailsWithFilter1.Location = new System.Drawing.Point(0, 74);
+            this.ctrlClassDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5);
+            this.ctrlClassDetailsWithFilter1.Name = "ctrlClassDetailsWithFilter1";
+            this.ctrlClassDetailsWithFilter1.Size = new System.Drawing.Size(939, 609);
+            this.ctrlClassDetailsWithFilter1.TabIndex = 150;
+            this.ctrlClassDetailsWithFilter1.OnClassSelected += new System.EventHandler<GymMangementSystem.ctrlClassDetailsWithFilter.ClassEventArgs>(this.ctrlClassDetailsWithFilter1_OnClassSelected_1);
+            // 
             // frmAddUpdateClassRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(939, 872);
