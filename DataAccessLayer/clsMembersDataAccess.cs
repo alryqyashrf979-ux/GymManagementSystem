@@ -279,6 +279,28 @@ namespace DataAccessLayer
                 }
             }
         }
+
+        static public DataTable GetMembersInLast15Days()
+        {
+            DataTable dt = new DataTable();
+            string Query = @"select Name=P.FirstName+' '+P.SecondName+' '+P.LastName,PL.Name as 'Membership',M.IsActive as 'Status',
+                           Format(S.RegistrationDate,'yyyy/MM/dd') as 'Join Date' from Subscriptions S inner join Members M  on S.MemberID=M.MemberID inner join People P
+                            on M.PersonID=P.ID inner join  SubscriptionPlans PL on PL.PlanID=S.PlanID 
+                            where S.RegistrationDate between DateADD(Day,-15,GETDATE()) and GETDATE() and S.Status in (1,6);";
+
+            using (SqlConnection con = new SqlConnection(DataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand(Query, con))
+            {
+                con.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                        dt.Load(reader);
+                }
+                return dt;
+
+            }
+        }
     }
 
 

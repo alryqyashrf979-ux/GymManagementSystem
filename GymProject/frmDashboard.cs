@@ -193,9 +193,9 @@ namespace GymMangementSystem
             lblActiveTrainers.Text = clsCoaches.SelectCountOfActiveCoaches().ToString();
             lblActiveClasses.Text = clsClasses.SelectCountOfActiveClasses().ToString();
             lblExpiringSubscription.Text = clsSubscription.SelectCountExpirationSubscriptionInLastTenDays().ToString();
-
+            dgvShowMembersInLast15DaysList.DataSource = clsMembers.GetMembersInLast15Days();
             pbCurrentUser.ImageLocation = clsGlobal.CurrentUserInfo.PersonInfo.ImagePath;
-
+            dgvClassList.DataSource = clsClasses.GetActiveClasses();
 
             if (!File.Exists(clsGlobal.CurrentUserInfo.PersonInfo.ImagePath))
             {
@@ -213,6 +213,42 @@ namespace GymMangementSystem
             string FormattedDate = date.ToString("dddd,d MMMM yyyy", CultureInfo.InvariantCulture);
             lblDate.Text = FormattedDate;
             lblTime.Text = date.ToString("hh:mm tt");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form frm = new frmManageMember();
+            frm.ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form frm = new frmManageClasses();
+            frm.ShowDialog();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddSubscription();
+            frm.ShowDialog();
+        }
+
+        private void guna2Button4_Click_1(object sender, EventArgs e)
+        {
+            Form frm = new frmChangeSubscription();
+            frm.ShowDialog();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateCancelSubscription();
+            frm.ShowDialog();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateFrozenSubscription();
+            frm.ShowDialog();
         }
     }
 }

@@ -572,5 +572,54 @@ Classes.IsActive from Classes ;
                 }
             }
         }
+
+        static public DataTable GetActiveClasses()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+          
+            string query =
+              @"select Classes.className as 'Class',Trainer=People.FirstName+' '+People.SecondName+' '+People.LastName,Classes.StartTime as 'Start Time',
+Classes.EndTime as 'End Time',CONCAT(Classes.Maximum_Capacity,'/',
+(select count(*) from ClassRegisterations where ClassID in (select ClassID from Classes where CoachID=Classes.CoachID and IsActive=1))) as 'Capacity'
+from Classes inner join Coaches on Classes.CoachID=Coaches.CoachID inner join Employees on Employees.EmployeeID=Coaches.EmployeeID inner join People 
+on People.ID=Employees.PersonID where Classes.IsActive=1;
+";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                // Console.WriteLine("Error: " + ex.Message);
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
     }
 }
