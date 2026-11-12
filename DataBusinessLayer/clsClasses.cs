@@ -125,9 +125,9 @@ namespace DataBusinessLayer
         {
             return clsClassesData.GetAllClasses();
         }
-        public static DataTable GetAllActiveClassesNamesAndIDs()
+        public static DataTable GetAllActiveClassesNameAndID()
         {
-            return clsClassesData.GetAllActiveClassesNamesAndIDs();
+            return clsClassesData.GetAllActiveClassesNameAndID();
         }
         public static bool DeleteClass(int ClassID)
         {
@@ -165,15 +165,6 @@ namespace DataBusinessLayer
         }
 
 
-        public static DataTable GetAllClassesByStartTime(string StartTime)
-        {
-            return clsClassesData.GetAllClassesByStartTime(StartTime);
-        }
-
-        public static DataTable GetAllClassesByEndTime(string StartTime)
-        {
-            return clsClassesData.GetAllClassesByEndTime(StartTime);
-        }
 
         static public int SelectCountOfActiveClasses() => clsClassesData.SelectCountOfActiveClasses();
 

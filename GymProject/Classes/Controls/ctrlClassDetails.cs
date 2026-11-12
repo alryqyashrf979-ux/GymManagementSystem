@@ -13,7 +13,7 @@ namespace GymMangementSystem
 {
     public partial class ctrlClassDetails : UserControl
     {
-        public clsClasses Class { get; private set; }
+        public clsClasses ClassInfo { get; private set; }
         public int ClassID { get; private set; }
 
 
@@ -43,8 +43,8 @@ namespace GymMangementSystem
 
         public void LoadClassInfo(int ClassID)
         {
-            Class = clsClasses.Find(ClassID);
-            if (Class == null)
+            ClassInfo = clsClasses.Find(ClassID);
+            if (ClassInfo == null)
             {
                 ResetDefaultValues();
                 MessageBox.Show($"Class with class ID : {ClassID} not found !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -52,17 +52,17 @@ namespace GymMangementSystem
             }
 
             this.ClassID = ClassID;
-            lblCapacity.Text = Class.Maximum_Capacity.ToString();
-            lblClassD.Text = Class.ClassID.ToString();
-            lblClassName.Text = Class.className;
-            lblCoachID.Text = Class.CoachID.ToString();
-            lblDescription.Text = Class.Description;
-            lblNote.Text = Class.Note;
-            lblStartDay.Text = Class.StartDay.ToString();
-            lblEndDay.Text = Class.EndDay.ToString();
-            lblStartTime.Text = Class.StartTime.ToString();
-            lblEndTIme.Text = Class.EndTime.ToString();
-            lblIsActive.Text = Class.IsActive.ToString();
+            lblCapacity.Text = ClassInfo.Maximum_Capacity.ToString();
+            lblClassD.Text = ClassInfo.ClassID.ToString();
+            lblClassName.Text = ClassInfo.className;
+            lblCoachID.Text = ClassInfo.CoachID.ToString();
+            lblDescription.Text = ClassInfo.Description;
+            lblNote.Text = ClassInfo.Note;
+            lblStartDay.Text = ClassInfo.StartDay.ToString();
+            lblEndDay.Text = ClassInfo.EndDay.ToString();
+            lblStartTime.Text = ClassInfo.StartTime.ToString();
+            lblEndTIme.Text = ClassInfo.EndTime.ToString();
+            lblIsActive.Text = ClassInfo.IsActive.ToString();
         }
     }
 }

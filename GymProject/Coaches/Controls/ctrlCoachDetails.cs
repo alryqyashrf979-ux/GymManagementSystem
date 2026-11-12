@@ -28,7 +28,9 @@ namespace GymMangementSystem
         public void LoadCoachInformation(int CoachID)
         {
             ctrlCoachBasicDetais1.LoadCoachInformation(CoachID);
-            ctrlPersonDetails1.LoadPersonInfo(clsCoaches.SelectPersonIDByCoachID(CoachID));
+
+            if (ctrlCoachBasicDetais1.CoachInfo != null)
+                ctrlPersonDetails1.LoadPersonInfo(ctrlCoachBasicDetais1.CoachInfo.EmployeeInfo.PersonID);
         }
 
         public void LoadCoachInformationByNationalNu(string NationalNu)

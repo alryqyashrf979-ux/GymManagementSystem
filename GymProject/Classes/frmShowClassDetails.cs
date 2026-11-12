@@ -21,9 +21,9 @@ namespace GymMangementSystem
     public void LoadClassInformation(int ClassID)
         {
             ctrlClassDetails1.LoadClassInfo(ClassID);
-            lblClassName.Text = ctrlClassDetails1.Class?.className ?? "Class Name";
-            lblDescription.Text = ctrlClassDetails1.Class?.Description ?? "Description";
-            bool IsActive = ctrlClassDetails1.Class?.IsActive ?? false;
+            lblClassName.Text = ctrlClassDetails1.ClassInfo?.className ?? "Class Name";
+            lblDescription.Text = ctrlClassDetails1.ClassInfo?.Description ?? "Description";
+            bool IsActive = ctrlClassDetails1.ClassInfo?.IsActive ?? false;
             if (IsActive)
             {
                 btnActive.Text = "Active";
