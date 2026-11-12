@@ -82,16 +82,18 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(973, 37);
+            this.panel4.Size = new System.Drawing.Size(1216, 46);
             this.panel4.TabIndex = 123;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(47, 3);
+            this.panel1.Location = new System.Drawing.Point(59, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 31);
+            this.panel1.Size = new System.Drawing.Size(1, 39);
             this.panel1.TabIndex = 15;
             // 
             // lblTitle2
@@ -99,9 +101,10 @@
             this.lblTitle2.AutoSize = true;
             this.lblTitle2.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblTitle2.Location = new System.Drawing.Point(54, 5);
+            this.lblTitle2.Location = new System.Drawing.Point(68, 6);
+            this.lblTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle2.Name = "lblTitle2";
-            this.lblTitle2.Size = new System.Drawing.Size(229, 26);
+            this.lblTitle2.Size = new System.Drawing.Size(285, 32);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Add/Update Employees";
             // 
@@ -110,8 +113,9 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Add_User_Icon;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(56, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -134,10 +138,10 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(847, 622);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(1059, 778);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 30);
+            this.btnSave.Size = new System.Drawing.Size(145, 38);
             this.btnSave.TabIndex = 127;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -160,10 +164,10 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(705, 622);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(881, 778);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(125, 30);
+            this.btnClose.Size = new System.Drawing.Size(156, 38);
             this.btnClose.TabIndex = 126;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -173,10 +177,10 @@
             this.uctPersonDetailsWithFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uctPersonDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(1, 39);
-            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uctPersonDetailsWithFilter1.Location = new System.Drawing.Point(1, 49);
+            this.uctPersonDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uctPersonDetailsWithFilter1.Name = "uctPersonDetailsWithFilter1";
-            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(968, 354);
+            this.uctPersonDetailsWithFilter1.Size = new System.Drawing.Size(1210, 442);
             this.uctPersonDetailsWithFilter1.TabIndex = 124;
             this.uctPersonDetailsWithFilter1.OnPersonSelected += new System.EventHandler<GymMangementSystem.ctrlPersonDetailsWithFilter.PersonEventArg>(this.uctPersonDetailsWithFilter1_OnPersonSelected);
             // 
@@ -208,9 +212,10 @@
             this.pnlEmployeeInput.Controls.Add(this.label4);
             this.pnlEmployeeInput.Controls.Add(this.pictureBox5);
             this.pnlEmployeeInput.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.pnlEmployeeInput.Location = new System.Drawing.Point(1, 400);
+            this.pnlEmployeeInput.Location = new System.Drawing.Point(6, 500);
+            this.pnlEmployeeInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlEmployeeInput.Name = "pnlEmployeeInput";
-            this.pnlEmployeeInput.Size = new System.Drawing.Size(968, 217);
+            this.pnlEmployeeInput.Size = new System.Drawing.Size(1203, 271);
             this.pnlEmployeeInput.TabIndex = 174;
             // 
             // txtNote
@@ -232,52 +237,56 @@
             this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNote.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtNote.IsRequired = false;
-            this.txtNote.Location = new System.Drawing.Point(110, 130);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNote.Location = new System.Drawing.Point(138, 162);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.PlaceholderText = "Note";
             this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNote.SelectedText = "";
-            this.txtNote.Size = new System.Drawing.Size(434, 83);
+            this.txtNote.Size = new System.Drawing.Size(542, 104);
             this.txtNote.TabIndex = 194;
             this.txtNote.TextOffset = new System.Drawing.Point(0, -1);
             // 
             // lblEmployeeID
             // 
             this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
-            this.lblEmployeeID.Location = new System.Drawing.Point(159, 48);
+            this.lblEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblEmployeeID.Location = new System.Drawing.Point(199, 60);
+            this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(27, 19);
+            this.lblEmployeeID.Size = new System.Drawing.Size(66, 22);
             this.lblEmployeeID.TabIndex = 193;
-            this.lblEmployeeID.Text = "???";
+            this.lblEmployeeID.Text = "[????]";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(2, 46);
+            this.label6.Location = new System.Drawing.Point(2, 58);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 21);
+            this.label6.Size = new System.Drawing.Size(144, 27);
             this.label6.TabIndex = 192;
             this.label6.Text = "Employee ID :";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Bag;
-            this.pictureBox6.Location = new System.Drawing.Point(118, 43);
+            this.pictureBox6.Location = new System.Drawing.Point(148, 54);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 29);
+            this.pictureBox6.Size = new System.Drawing.Size(44, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 191;
             this.pictureBox6.TabStop = false;
             // 
             // guna2VSeparator2
             // 
-            this.guna2VSeparator2.Location = new System.Drawing.Point(739, 44);
+            this.guna2VSeparator2.Location = new System.Drawing.Point(924, 55);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(10, 57);
+            this.guna2VSeparator2.Size = new System.Drawing.Size(12, 71);
             this.guna2VSeparator2.TabIndex = 190;
             // 
             // txtSalary
@@ -296,12 +305,12 @@
             this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSalary.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtSalary.IsRequired = true;
-            this.txtSalary.Location = new System.Drawing.Point(521, 85);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSalary.Location = new System.Drawing.Point(651, 106);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.PlaceholderText = "";
             this.txtSalary.SelectedText = "";
-            this.txtSalary.Size = new System.Drawing.Size(212, 31);
+            this.txtSalary.Size = new System.Drawing.Size(265, 39);
             this.txtSalary.TabIndex = 189;
             // 
             // cmShift
@@ -315,9 +324,10 @@
             this.cmShift.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmShift.ForeColor = System.Drawing.Color.Black;
             this.cmShift.ItemHeight = 30;
-            this.cmShift.Location = new System.Drawing.Point(521, 49);
+            this.cmShift.Location = new System.Drawing.Point(651, 61);
+            this.cmShift.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmShift.Name = "cmShift";
-            this.cmShift.Size = new System.Drawing.Size(213, 36);
+            this.cmShift.Size = new System.Drawing.Size(265, 36);
             this.cmShift.TabIndex = 188;
             // 
             // cmTitle
@@ -331,16 +341,18 @@
             this.cmTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmTitle.ForeColor = System.Drawing.Color.Black;
             this.cmTitle.ItemHeight = 30;
-            this.cmTitle.Location = new System.Drawing.Point(110, 83);
+            this.cmTitle.Location = new System.Drawing.Point(138, 104);
+            this.cmTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmTitle.Name = "cmTitle";
-            this.cmTitle.Size = new System.Drawing.Size(250, 36);
+            this.cmTitle.Size = new System.Drawing.Size(312, 36);
             this.cmTitle.TabIndex = 187;
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(393, 42);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(491, 52);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 69);
+            this.guna2VSeparator1.Size = new System.Drawing.Size(12, 86);
             this.guna2VSeparator1.TabIndex = 186;
             // 
             // gtsIsActive
@@ -350,9 +362,10 @@
             this.gtsIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gtsIsActive.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.gtsIsActive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.gtsIsActive.Location = new System.Drawing.Point(875, 62);
+            this.gtsIsActive.Location = new System.Drawing.Point(1094, 78);
+            this.gtsIsActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gtsIsActive.Name = "gtsIsActive";
-            this.gtsIsActive.Size = new System.Drawing.Size(47, 17);
+            this.gtsIsActive.Size = new System.Drawing.Size(59, 21);
             this.gtsIsActive.TabIndex = 185;
             this.gtsIsActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.gtsIsActive.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -363,18 +376,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(756, 56);
+            this.label7.Location = new System.Drawing.Point(945, 70);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 21);
+            this.label7.Size = new System.Drawing.Size(104, 27);
             this.label7.TabIndex = 184;
             this.label7.Text = "Is Active :";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.IsActive;
-            this.pictureBox7.Location = new System.Drawing.Point(839, 56);
+            this.pictureBox7.Location = new System.Drawing.Point(1049, 70);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 28);
+            this.pictureBox7.Size = new System.Drawing.Size(38, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 183;
             this.pictureBox7.TabStop = false;
@@ -383,18 +398,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(417, 53);
+            this.label5.Location = new System.Drawing.Point(521, 66);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 21);
+            this.label5.Size = new System.Drawing.Size(68, 27);
             this.label5.TabIndex = 182;
             this.label5.Text = "Shift :";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.Note;
-            this.pictureBox4.Location = new System.Drawing.Point(71, 130);
+            this.pictureBox4.Location = new System.Drawing.Point(89, 162);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(44, 38);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 179;
             this.pictureBox4.TabStop = false;
@@ -403,18 +420,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(409, 93);
+            this.label3.Location = new System.Drawing.Point(507, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.Size = new System.Drawing.Size(82, 27);
             this.label3.TabIndex = 178;
             this.label3.Text = "Salary :";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Salary;
-            this.pictureBox3.Location = new System.Drawing.Point(479, 87);
+            this.pictureBox3.Location = new System.Drawing.Point(599, 109);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(44, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 177;
             this.pictureBox3.TabStop = false;
@@ -423,18 +442,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(10, 83);
+            this.label2.Location = new System.Drawing.Point(12, 104);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.Size = new System.Drawing.Size(65, 27);
             this.label2.TabIndex = 176;
             this.label2.Text = "Title :";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Bag;
-            this.pictureBox2.Location = new System.Drawing.Point(70, 81);
+            this.pictureBox2.Location = new System.Drawing.Point(88, 101);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(42, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 175;
             this.pictureBox2.TabStop = false;
@@ -446,17 +467,19 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(1, -1);
+            this.panel2.Location = new System.Drawing.Point(-6, -1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(967, 37);
+            this.panel2.Size = new System.Drawing.Size(1209, 46);
             this.panel2.TabIndex = 174;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(47, 3);
+            this.panel3.Location = new System.Drawing.Point(59, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 31);
+            this.panel3.Size = new System.Drawing.Size(1, 39);
             this.panel3.TabIndex = 15;
             // 
             // label1
@@ -464,9 +487,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 5);
+            this.label1.Location = new System.Drawing.Point(68, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 26);
+            this.label1.Size = new System.Drawing.Size(282, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Employees Information";
             // 
@@ -475,8 +499,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.BagWhite;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -485,34 +510,37 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(5, 130);
+            this.label4.Location = new System.Drawing.Point(6, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
+            this.label4.Size = new System.Drawing.Size(71, 27);
             this.label4.TabIndex = 180;
             this.label4.Text = "Note :";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Time;
-            this.pictureBox5.Location = new System.Drawing.Point(474, 46);
+            this.pictureBox5.Location = new System.Drawing.Point(592, 58);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(42, 36);
+            this.pictureBox5.Size = new System.Drawing.Size(52, 45);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 181;
             this.pictureBox5.TabStop = false;
             // 
             // frmAddUpdateEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(973, 599);
+            this.ClientSize = new System.Drawing.Size(1216, 825);
             this.Controls.Add(this.pnlEmployeeInput);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.uctPersonDetailsWithFilter1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAddUpdateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmAddUpdateEmployee_Load);

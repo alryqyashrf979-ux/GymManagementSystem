@@ -98,6 +98,7 @@
             this.btnClose.Size = new System.Drawing.Size(144, 37);
             this.btnClose.TabIndex = 146;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ctrlShiftDetails1
             // 

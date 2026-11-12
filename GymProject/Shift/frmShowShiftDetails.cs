@@ -17,5 +17,10 @@ namespace GymMangementSystem
             InitializeComponent();
             ctrlShiftDetails1.LoadShiftInformation(ShiftID);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

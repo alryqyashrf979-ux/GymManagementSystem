@@ -20,6 +20,16 @@ namespace GymMangementSystem
             get { return gbFilter.Enabled; }
             set { gbFilter.Enabled = value; }
         }
+        public event EventHandler<clsClasses> OnClassSelected;
+
+
+        protected virtual void selectedClass(clsClasses clsClasses)
+        {
+
+            OnClassSelected?.Invoke(this,clsClasses);
+
+        }
+
 
         public clsClasses SelectedClass { get => ctrlClassDetails1.ClassInfo; }
 
@@ -47,9 +57,20 @@ namespace GymMangementSystem
         {
             if (IsCbClassesFilled)
             {
+
                 ctrlClassDetails1.LoadClassInfo((int)cbClasses.SelectedValue);
                 ClassID = (int)cbClasses.SelectedValue;
+
+                if (ctrlClassDetails1.ClassInfo != null)
+                    selectedClass(ctrlClassDetails1.ClassInfo);
+
+
             }
+        }
+
+        private void ctrlClassDetailsWithFilter_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
