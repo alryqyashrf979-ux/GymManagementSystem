@@ -133,6 +133,8 @@ namespace GymMangementSystem
         {
             Form frm = new frmManageEmployees();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
         }
 
         private void btnManageTrainers_Click(object sender, EventArgs e)
@@ -145,6 +147,37 @@ namespace GymMangementSystem
         {
             Form frm = new frmManageEmployeesAttendance();
             frm.ShowDialog();
+            _SelectbtnDashBoard();
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip2.Show(btnSettings, new Point(btnSettings.Width, 0));
+
+        }
+
+        private void currentUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowUserDetails frm = new frmShowUserDetails(clsGlobal.CurrentUserInfo.UserID);
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+
+
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frmChangePassword frm =new frmChangePassword(clsGlobal.CurrentUserInfo.UserID);
+            frm.ShowDialog();
+            _SelectbtnDashBoard();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUserInfo = null;
+            _frmLogin.ShowDialog();
+            this.Close();
         }
     }
 }
