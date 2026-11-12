@@ -13,7 +13,7 @@ namespace GymMangementSystem
 {
     public partial class ctrlCoachBasicDetais : UserControl
     {
-        public clsCoaches CoachInfo { get; private set; }
+        public clsCoaches CoachInfo { get; private set; } = null;
         public ctrlCoachBasicDetais()
         {
             InitializeComponent();
@@ -37,8 +37,7 @@ namespace GymMangementSystem
             }
 
             lblAssignedMembers.Text = clsClassRegisteration.SelectAssignedMembers(CoachID).ToString();
-            clsEmployees _Employee = clsEmployees.FindByEmployeeID(CoachInfo.EmployeeID);
-            if (_Employee.IsActive)
+            if (CoachInfo.EmployeeInfo.IsActive)
             {
                 btnIsActive.Text = "Active";
                 btnIsActive.FillColor = Color.LightGreen;
@@ -48,7 +47,7 @@ namespace GymMangementSystem
                 btnIsActive.Text = "Inactive";
                     Color.FromArgb(199, 123, 123);
             }
-                lblHiredDate.Text = _Employee.HiredDate.ToShortDateString();
+            lblHiredDate.Text = CoachInfo.EmployeeInfo.HiredDate.ToShortDateString();
             lblSpecialization.Text = CoachInfo.Speciality;
             lblTotalClasses.Text = clsCoaches.SelectTotalClassesForCoach(CoachID).ToString();
         }

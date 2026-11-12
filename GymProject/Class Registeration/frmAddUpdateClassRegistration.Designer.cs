@@ -191,7 +191,7 @@
             // ctrlClassDetailsWithFilter1
             // 
             this.ctrlClassDetailsWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlClassDetailsWithFilter1.EnableFilter = true;
+            this.ctrlClassDetailsWithFilter1.EnableFiltering = true;
             this.ctrlClassDetailsWithFilter1.Location = new System.Drawing.Point(0, 60);
             this.ctrlClassDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlClassDetailsWithFilter1.Name = "ctrlClassDetailsWithFilter1";

@@ -265,7 +265,7 @@ Classes.IsActive from Classes ;
 
         }
 
-           public static DataTable GetAllActiveClassesNamesAndIDs()
+           public static DataTable GetAllActiveClassesNameAndID()
         {
 
             DataTable dt = new DataTable();

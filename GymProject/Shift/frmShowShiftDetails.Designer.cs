@@ -44,18 +44,20 @@
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(287, 34);
+            this.panel4.Size = new System.Drawing.Size(774, 42);
             this.panel4.TabIndex = 17;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(46, 9);
+            this.lblTitle.Location = new System.Drawing.Point(61, 10);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(89, 17);
+            this.lblTitle.Size = new System.Drawing.Size(129, 27);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Shift Details";
             // 
@@ -65,8 +67,9 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.BagWhite;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 34);
+            this.pictureBox10.Size = new System.Drawing.Size(56, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -89,30 +92,33 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(175, 174);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(624, 223);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(108, 30);
+            this.btnClose.Size = new System.Drawing.Size(144, 37);
             this.btnClose.TabIndex = 146;
             this.btnClose.Text = "Close";
             // 
             // ctrlShiftDetails1
             // 
-            this.ctrlShiftDetails1.Location = new System.Drawing.Point(-2, 33);
+            this.ctrlShiftDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlShiftDetails1.Location = new System.Drawing.Point(1, 44);
+            this.ctrlShiftDetails1.Margin = new System.Windows.Forms.Padding(5);
             this.ctrlShiftDetails1.Name = "ctrlShiftDetails1";
-            this.ctrlShiftDetails1.Size = new System.Drawing.Size(291, 140);
+            this.ctrlShiftDetails1.Size = new System.Drawing.Size(767, 172);
             this.ctrlShiftDetails1.TabIndex = 0;
             // 
             // frmShowShiftDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(287, 207);
+            this.ClientSize = new System.Drawing.Size(774, 265);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ctrlShiftDetails1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmShowShiftDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel4.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace DataBusinessLayer
         public string Note { set; get; }
         public string Speciality { set; get; }
         private clsEmployees _Employees;
-        public clsEmployees Employees { get { return _Employees; } }
+        public clsEmployees EmployeeInfo { get { return _Employees; } }
         public enum enMode { AddMode=1,UpdateMode=2}
         private enMode _Mode = enMode.AddMode;
 

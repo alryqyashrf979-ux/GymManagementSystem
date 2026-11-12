@@ -14,12 +14,15 @@ namespace GymMangementSystem
     public partial class ctrlClassDetailsWithFilter : UserControl
     {
         public int ClassID { get; private set; }
-        public int SetClassIDInCbClasses { set { cbClasses.SelectedValue = value; } }
-        public bool EnableFilter
+        public int SelectClassID { set { cbClasses.SelectedValue = value; } }
+        public bool EnableFiltering
         {
             get { return gbFilter.Enabled; }
             set { gbFilter.Enabled = value; }
         }
+
+        public clsClasses SelectedClass { get => ctrlClassDetails1.ClassInfo; }
+
 
         public ctrlClassDetailsWithFilter()
         {
@@ -29,9 +32,10 @@ namespace GymMangementSystem
         private bool IsCbClassesFilled = false;
         public void FillCbClasses()
         {
-            cbClasses.DataSource = clsClasses.GetAllActiveClassesNamesAndIDs();
+
             cbClasses.DisplayMember = "ClassName";
             cbClasses.ValueMember = "ClassID";
+            cbClasses.DataSource = clsClasses.GetAllActiveClassesNameAndID();
             cbClasses.StartIndex = 0;
             IsCbClassesFilled = true;
 

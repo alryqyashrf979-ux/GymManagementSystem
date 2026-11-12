@@ -66,7 +66,7 @@ namespace GymMangementSystem
             lblRegisteredBy.Text = _ClassRegisteration.UserInfo.UserName;
             lblRegistrationDate.Text =_ClassRegisteration.RegisterationDate.ToString();
           //  ctrlClassDetailsWithFilter1.EnableFilter = false;
-            ctrlClassDetailsWithFilter1.SetClassIDInCbClasses = _ClassRegisteration.ClassID;
+            ctrlClassDetailsWithFilter1.SelectClassID = _ClassRegisteration.ClassID;
         }
         private void frmAddUpdateClassRegistration_Load(object sender, EventArgs e)
         {
@@ -100,7 +100,6 @@ namespace GymMangementSystem
             {
                 lblTitle.Text = "Update Class Registeration";
                 lblClassRegistrationID.Text = _ClassRegisteration.ClassRegisterationID.ToString();
-                lblRegisteredBy.Text = clsGlobal.CurrentUserInfo.UserName;
                 _Mode = enMode.UpdateMode;
 
                 MessageBox.Show("Recored saved successfully .", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
