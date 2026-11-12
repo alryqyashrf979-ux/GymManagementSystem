@@ -86,7 +86,8 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
             command.Parameters.AddWithValue("@IsCheckin", IsCheckin);
             command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
-          
+            command.Parameters.AddWithValue("@Date", Date);
+
             if (string.IsNullOrEmpty(Note))
                 command.Parameters.AddWithValue("@Note", DBNull.Value);
             else
@@ -110,7 +111,41 @@ namespace DataAccessLayer
             return (RowEffect > 0);
         }
 
-     
+        static public bool SetCheckout(int AttendanceID, bool IsCheckout)
+        {
+            int RowEffect = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = @"UPDATE [dbo].[EmployeesAttendance] SET
+                          [IsCheckout] = @IsCheckout
+                          WHERE AttendanceID=@AttendanceID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@AttendanceID", AttendanceID);
+            command.Parameters.AddWithValue("@IsCheckout", IsCheckout);
+           
+
+
+
+            try
+            {
+                connection.Open();
+                RowEffect = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (RowEffect > 0);
+        }
+
+
         static public int AddEmployeeAttendanceData(int EmployeeID, bool IsCheckin, bool IsCheckout, string Note, DateTime Date)
         {
             int AttendanceID = -1;
@@ -174,7 +209,7 @@ namespace DataAccessLayer
                     IsCheckin = (bool)reader["IsCheckin"];
                     IsCheckout = (bool)reader["IsCheckout"];
                     Note = (reader["Note"] == DBNull.Value) ? string.Empty : (string)reader["Note"];
-                    Date = (DateTime)reader["Date"];
+                    Date = Convert.ToDateTime(reader["Date"]);
                 }
             }
             catch

@@ -71,6 +71,10 @@ namespace DataBusinessLayer
 
         }
 
+        static public void SetCheckout(int AttendanceID)
+        {
+            clsEmployeeAttendanceData.SetCheckout(AttendanceID, true);
+        }
         static public clsEmployeeAttendance Find(int AttendanceID)
         {
             int EmployeeID = -1;

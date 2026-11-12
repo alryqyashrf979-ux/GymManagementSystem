@@ -122,5 +122,54 @@ namespace GymMangementSystem
 
             lblRecord.Text = dgvEmployeesAttendance.Rows.Count.ToString();
         }
+
+        private void EmployeeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmShowEmployeeDetails((int)dgvEmployeesAttendance.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void addEmployeeAttendanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateEmployeeAttendance frm = new frmAddUpdateEmployeeAttendance();
+            frm.ShowDialog();
+            RefreshDate();
+        }
+
+        private void updateEmployeeAttendanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateEmployeeAttendance frm = new frmAddUpdateEmployeeAttendance((int)dgvEmployeesAttendance.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            RefreshDate();
+        }
+
+        private void deleteEmployeeAttendanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Index = (int)dgvEmployeesAttendance.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure you want to delete Employee Attendance record [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (clsEmployeeAttendance.DeleteEmployeeAttendance(Index))
+                {
+                    MessageBox.Show("Employee Attendance deleted successfully.", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefreshDate();
+                }
+                else
+                    MessageBox.Show("Employee Attendance was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void CheckOuttoolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            clsEmployeeAttendance.SetCheckout((int)dgvEmployeesAttendance.CurrentRow.Cells[0].Value);
+            RefreshDate();
+        }
+
+   
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToBoolean(dgvEmployeesAttendance.CurrentRow.Cells[4].Value) == true)
+                CheckOuttoolStripMenuItem2.Enabled = false;
+            else
+                CheckOuttoolStripMenuItem2.Enabled = true;
+        }
     }
 }

@@ -28,16 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvEmployeesAttendance = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.EmployeeDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.CheckOuttoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeAttendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateEmployeeAttendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeAttendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmCheckType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesAttendance)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -113,41 +122,42 @@
             this.dgvEmployeesAttendance.AllowUserToAddRows = false;
             this.dgvEmployeesAttendance.AllowUserToDeleteRows = false;
             this.dgvEmployeesAttendance.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvEmployeesAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvEmployeesAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmployeesAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployeesAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeesAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmployeesAttendance.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployeesAttendance.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvEmployeesAttendance.ContextMenuStrip = this.contextMenuStrip1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeesAttendance.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmployeesAttendance.GridColor = System.Drawing.Color.Black;
             this.dgvEmployeesAttendance.Location = new System.Drawing.Point(0, 295);
             this.dgvEmployeesAttendance.Name = "dgvEmployeesAttendance";
             this.dgvEmployeesAttendance.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployeesAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeesAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmployeesAttendance.RowHeadersVisible = false;
             this.dgvEmployeesAttendance.RowHeadersWidth = 51;
             this.dgvEmployeesAttendance.Size = new System.Drawing.Size(1448, 408);
@@ -163,6 +173,72 @@
             this.dgvEmployeesAttendance.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvEmployeesAttendance.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dgvEmployeesAttendance.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EmployeeDetailsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.CheckOuttoolStripMenuItem2,
+            this.addEmployeeAttendanceToolStripMenuItem,
+            this.updateEmployeeAttendanceToolStripMenuItem,
+            this.deleteEmployeeAttendanceToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(255, 222);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // EmployeeDetailsToolStripMenuItem
+            // 
+            this.EmployeeDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.EmployeeDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.EmployeeDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EmployeeDetailsToolStripMenuItem.Name = "EmployeeDetailsToolStripMenuItem";
+            this.EmployeeDetailsToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.EmployeeDetailsToolStripMenuItem.Text = "Employee Details";
+            this.EmployeeDetailsToolStripMenuItem.Click += new System.EventHandler(this.EmployeeDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(251, 6);
+            // 
+            // CheckOuttoolStripMenuItem2
+            // 
+            this.CheckOuttoolStripMenuItem2.Image = global::GymMangementSystem.Properties.Resources.Check_Out_Employee_32x32;
+            this.CheckOuttoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CheckOuttoolStripMenuItem2.Name = "CheckOuttoolStripMenuItem2";
+            this.CheckOuttoolStripMenuItem2.Size = new System.Drawing.Size(254, 38);
+            this.CheckOuttoolStripMenuItem2.Text = "Check Out";
+            this.CheckOuttoolStripMenuItem2.Click += new System.EventHandler(this.CheckOuttoolStripMenuItem2_Click);
+            // 
+            // addEmployeeAttendanceToolStripMenuItem
+            // 
+            this.addEmployeeAttendanceToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.addEmployeeAttendanceToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
+            this.addEmployeeAttendanceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addEmployeeAttendanceToolStripMenuItem.Name = "addEmployeeAttendanceToolStripMenuItem";
+            this.addEmployeeAttendanceToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.addEmployeeAttendanceToolStripMenuItem.Text = "Add Employee Attendance";
+            this.addEmployeeAttendanceToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeAttendanceToolStripMenuItem_Click);
+            // 
+            // updateEmployeeAttendanceToolStripMenuItem
+            // 
+            this.updateEmployeeAttendanceToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
+            this.updateEmployeeAttendanceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.updateEmployeeAttendanceToolStripMenuItem.Name = "updateEmployeeAttendanceToolStripMenuItem";
+            this.updateEmployeeAttendanceToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.updateEmployeeAttendanceToolStripMenuItem.Text = "Update Employee Attendance";
+            this.updateEmployeeAttendanceToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeAttendanceToolStripMenuItem_Click);
+            // 
+            // deleteEmployeeAttendanceToolStripMenuItem
+            // 
+            this.deleteEmployeeAttendanceToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
+            this.deleteEmployeeAttendanceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteEmployeeAttendanceToolStripMenuItem.Name = "deleteEmployeeAttendanceToolStripMenuItem";
+            this.deleteEmployeeAttendanceToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.deleteEmployeeAttendanceToolStripMenuItem.Text = "Delete Employee Attendance";
+            this.deleteEmployeeAttendanceToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeAttendanceToolStripMenuItem_Click);
             // 
             // cmCheckType
             // 
@@ -380,7 +456,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmManageEmployeesAttendance";
             this.Text = "frmManageEmployeesAttendance";
             this.Load += new System.EventHandler(this.frmManageEmployeesAttendance_Load);
@@ -389,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesAttendance)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,5 +489,12 @@
         private Guna.UI2.WinForms.Guna2Button btnAddNewPayment;
         private MyTextBox txtFiltering;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDate;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem EmployeeDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeAttendanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateEmployeeAttendanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeAttendanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CheckOuttoolStripMenuItem2;
     }
 }

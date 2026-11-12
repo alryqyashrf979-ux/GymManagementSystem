@@ -161,5 +161,7 @@ namespace GymMangementSystem
                     MessageBox.Show("Employee was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+
+
     }
 }
