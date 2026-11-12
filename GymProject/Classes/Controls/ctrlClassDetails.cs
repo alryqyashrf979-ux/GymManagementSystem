@@ -27,7 +27,7 @@ namespace GymMangementSystem
             lblCapacity.Text = "???";
             lblClassD.Text = "???";
             lblClassName.Text = "???";
-            lblCoachID.Text = "???";
+            lblCoachName.Text = "???";
             lblDescription.Text = "???";
             lblNote.Text = "???";
             lblStartDay.Text = "???";
@@ -55,7 +55,7 @@ namespace GymMangementSystem
             lblCapacity.Text = ClassInfo.Maximum_Capacity.ToString();
             lblClassD.Text = ClassInfo.ClassID.ToString();
             lblClassName.Text = ClassInfo.className;
-            lblCoachID.Text = ClassInfo.CoachID.ToString();
+            lblCoachName.Text = ClassInfo.CoachInfo.CoachName;
             lblDescription.Text = ClassInfo.Description;
             lblNote.Text = ClassInfo.Note;
             lblStartDay.Text = ClassInfo.StartDay.ToString();

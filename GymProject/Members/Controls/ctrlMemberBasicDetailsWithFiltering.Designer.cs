@@ -74,7 +74,7 @@
             this.txtFiltering.InputType = GymMangementSystem.MyTextBox.TextType.Text;
             this.txtFiltering.IsRequired = true;
             this.txtFiltering.Location = new System.Drawing.Point(485, 18);
-            this.txtFiltering.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtFiltering.Margin = new System.Windows.Forms.Padding(5);
             this.txtFiltering.Name = "txtFiltering";
             this.txtFiltering.PlaceholderText = "Search...";
             this.txtFiltering.SelectedText = "";
@@ -168,7 +168,7 @@
             // 
             this.ctrlMemberBasicDetails1.BackColor = System.Drawing.Color.White;
             this.ctrlMemberBasicDetails1.Location = new System.Drawing.Point(4, 69);
-            this.ctrlMemberBasicDetails1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ctrlMemberBasicDetails1.Margin = new System.Windows.Forms.Padding(5);
             this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
             this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(1188, 565);
             this.ctrlMemberBasicDetails1.TabIndex = 3;

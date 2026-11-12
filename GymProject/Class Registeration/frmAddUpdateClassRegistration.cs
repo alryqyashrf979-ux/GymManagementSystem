@@ -120,5 +120,40 @@ namespace GymMangementSystem
             _MemberID = MemberID;
             lblMemberID.Text = MemberID.ToString();
         }
+
+        private void ctrlClassDetailsWithFilter1_OnClassSelected(object sender, clsClasses e)
+        {
+
+
+
+
+
+
+
+        }
+
+        private void ctrlClassDetailsWithFilter1_OnClassSelected(object sender, ctrlClassDetailsWithFilter.ClassEventArgs e)
+        {
+
+        }
+
+        private void ctrlClassDetailsWithFilter1_OnClassSelected_1(object sender, ctrlClassDetailsWithFilter.ClassEventArgs e)
+        {
+
+            if (e.ClassInfo == null)
+                return;
+
+
+            if (e.ClassInfo.Maximum_Capacity>=)
+                
+
+
+
+
+
+
+
+
+        }
     }
 }
