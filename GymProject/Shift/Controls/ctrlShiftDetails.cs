@@ -32,7 +32,7 @@ namespace GymMangementSystem
             if (_Shift == null)
             {
                 _ResetDefaultValues();
-                MessageBox.Show($"No shift with shift id : {ShiftID}", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"No shift with shift ID : {ShiftID}", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

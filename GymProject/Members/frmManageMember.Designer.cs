@@ -54,6 +54,8 @@
             this.addPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePersonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.showMemberHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -64,8 +66,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.showMemberHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembersList)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -342,7 +342,7 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(264, 234);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(264, 206);
             // 
             // PersonDetailsToolStripMenuItem
             // 
@@ -390,6 +390,21 @@
             this.deletePersonToolStripMenuItem1.Size = new System.Drawing.Size(263, 38);
             this.deletePersonToolStripMenuItem1.Text = "Delete Member";
             this.deletePersonToolStripMenuItem1.Click += new System.EventHandler(this.deletePersonToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(260, 6);
+            // 
+            // showMemberHistoryToolStripMenuItem
+            // 
+            this.showMemberHistoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showMemberHistoryToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showMemberHistoryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showMemberHistoryToolStripMenuItem.Name = "showMemberHistoryToolStripMenuItem";
+            this.showMemberHistoryToolStripMenuItem.Size = new System.Drawing.Size(263, 38);
+            this.showMemberHistoryToolStripMenuItem.Text = "Show Member History";
+            this.showMemberHistoryToolStripMenuItem.Click += new System.EventHandler(this.showMemberHistoryToolStripMenuItem_Click);
             // 
             // guna2Separator1
             // 
@@ -547,21 +562,6 @@
             this.btnClose.TabIndex = 115;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(260, 6);
-            // 
-            // showMemberHistoryToolStripMenuItem
-            // 
-            this.showMemberHistoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showMemberHistoryToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showMemberHistoryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showMemberHistoryToolStripMenuItem.Name = "showMemberHistoryToolStripMenuItem";
-            this.showMemberHistoryToolStripMenuItem.Size = new System.Drawing.Size(263, 38);
-            this.showMemberHistoryToolStripMenuItem.Text = "Show Member History";
-            this.showMemberHistoryToolStripMenuItem.Click += new System.EventHandler(this.showMemberHistoryToolStripMenuItem_Click);
             // 
             // frmManageMember
             // 
