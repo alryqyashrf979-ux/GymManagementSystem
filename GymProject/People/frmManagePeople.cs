@@ -24,32 +24,29 @@ namespace GymMangementSystem
         {
             _RefreshDataTable();
         }
-        DataTable dtPeople = new DataTable();
+       private DataTable _dtPeople = new DataTable();
 
         void _RefreshDataTable()
         {
-            dtPeople = clsPeople.GetAllPeople();
+            _dtPeople = clsPeople.GetAllPeople();
 
-            dgvShowPeopleList.DataSource = dtPeople;
+            dgvShowPeopleList.DataSource = _dtPeople;
             lblRecord.Text = dgvShowPeopleList.Rows.Count.ToString();
         }
 
-        private void dgvShowPeopleList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+      
         private void cmSelectTypeOfFiltering_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFiltering.Visible = (cmSelectTypeOfFiltering.Text != "None");
+            txtFiltering.Visible = !(cmSelectTypeOfFiltering.Text == "None"||cmSelectTypeOfFiltering.Text=="Gender");
+            cmGender.Visible = cmSelectTypeOfFiltering.Text == "Gender";
 
-            dtPeople.DefaultView.RowFilter = "";
+            _dtPeople.DefaultView.RowFilter = "";
 
             if (txtFiltering.Visible)
             {
                 txtFiltering.Focus();
             }
-            lblRecord.Text = dtPeople.Rows.Count.ToString();
+            lblRecord.Text = _dtPeople.Rows.Count.ToString();
 
         }
         StringBuilder FilteringName = new StringBuilder();
@@ -88,9 +85,7 @@ namespace GymMangementSystem
                     FilteringName.Append("Address");
                     break;
 
-                case "Gender":
-                    FilteringName.Append("Gender");
-                    break;
+             
 
              
 
@@ -99,19 +94,19 @@ namespace GymMangementSystem
 
             if(txtFiltering.Text=="")
             {
-                dtPeople.DefaultView.RowFilter = "";
-                lblRecord.Text = dtPeople.Rows.Count.ToString();
+                _dtPeople.DefaultView.RowFilter = "";
+                lblRecord.Text = _dtPeople.Rows.Count.ToString();
 
                 return;
             }
 
 
             if (cmSelectTypeOfFiltering.Text == "Person ID")
-                dtPeople.DefaultView.RowFilter = $"{FilteringName.ToString()} = '{txtFiltering.Text}'";
+                _dtPeople.DefaultView.RowFilter = $"{FilteringName.ToString()} = '{txtFiltering.Text}'";
             else
-                dtPeople.DefaultView.RowFilter = $"{FilteringName.ToString()} Like '{txtFiltering.Text}%'";
+                _dtPeople.DefaultView.RowFilter = $"{FilteringName.ToString()} Like '{txtFiltering.Text}%'";
 
-            lblRecord.Text = dtPeople.DefaultView.Count.ToString();
+            lblRecord.Text = _dtPeople.DefaultView.Count.ToString();
 
         }
 
@@ -173,8 +168,17 @@ namespace GymMangementSystem
             _RefreshDataTable();
         }
 
-        private void guna2ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        private void cmGender_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmGender.Text =="All")
+            {
+                _dtPeople.DefaultView.RowFilter = "";
+                lblRecord.Text = dgvShowPeopleList.Rows.Count.ToString();
+                return;
+            }
+
+                _dtPeople.DefaultView.RowFilter = $"{cmSelectTypeOfFiltering.Text} like '{cmGender.Text}%'";
+            lblRecord.Text = dgvShowPeopleList.Rows.Count.ToString();
 
         }
     }
