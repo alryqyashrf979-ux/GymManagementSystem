@@ -25,7 +25,7 @@ namespace GymMangementSystem
         public frmAddUpdateEmployeeAttendance(int AttendanceID)
         {
             InitializeComponent();
-            this._AttendanceID = AttendanceID;
+            _AttendanceID = AttendanceID;
             _Mode = enMode.Update;
         }
 
@@ -116,7 +116,7 @@ namespace GymMangementSystem
             lblCheckinDate.Text = _AttendanceInfo.Date.ToString();
             rdYesChechIn.Checked = _AttendanceInfo.IsCheckin;
             rdYesCheckOut.Checked = _AttendanceInfo.IsCheckout;
-
+            ctrlEmployeeDetailsWithFiltering1.LoadEmployeeInfo(_AttendanceInfo.EmployeeID);
             txtNote.Text = _AttendanceInfo.Note;
 
             pnlCheckin.Enabled = false;

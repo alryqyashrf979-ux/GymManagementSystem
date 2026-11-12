@@ -34,31 +34,31 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.cmIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmSelectTypeOfFiltering = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cmShiftType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtFiltering = new GymMangementSystem.MyTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAddNewPayment = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
-            this.panel4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -119,6 +119,61 @@
             this.dgvEmployees.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvEmployees.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dgvEmployees.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.addEmployeeToolStripMenuItem,
+            this.updateEmployeeToolStripMenuItem,
+            this.deleteEmployeeToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(184, 162);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(183, 38);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 6);
+            // 
+            // addEmployeeToolStripMenuItem
+            // 
+            this.addEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.addEmployeeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
+            this.addEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(183, 38);
+            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
+            // 
+            // updateEmployeeToolStripMenuItem
+            // 
+            this.updateEmployeeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
+            this.updateEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
+            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(183, 38);
+            this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
+            this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
+            this.deleteEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(183, 38);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // lblRecord
             // 
@@ -186,6 +241,17 @@
             this.lblTitle2.Size = new System.Drawing.Size(239, 26);
             this.lblTitle2.TabIndex = 2;
             this.lblTitle2.Text = "Employees Management";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Employees;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
             // 
             // cmIsActive
             // 
@@ -320,23 +386,6 @@
             this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
             this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDetailsToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.addEmployeeToolStripMenuItem,
-            this.updateEmployeeToolStripMenuItem,
-            this.deleteEmployeeToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 184);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(193, 6);
-            // 
             // btnAddNewPayment
             // 
             this.btnAddNewPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -361,17 +410,6 @@
             this.btnAddNewPayment.Size = new System.Drawing.Size(66, 29);
             this.btnAddNewPayment.TabIndex = 130;
             this.btnAddNewPayment.Click += new System.EventHandler(this.btnAddNewPayment_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox10.Image = global::GymMangementSystem.Properties.Resources.Employees;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
             // 
             // btnClose
             // 
@@ -398,44 +436,6 @@
             this.btnClose.TabIndex = 117;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
-            // 
-            // addEmployeeToolStripMenuItem
-            // 
-            this.addEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.addEmployeeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.add_32x32;
-            this.addEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
-            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
-            // 
-            // updateEmployeeToolStripMenuItem
-            // 
-            this.updateEmployeeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.edit_32;
-            this.updateEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
-            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
-            this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
-            // 
-            // deleteEmployeeToolStripMenuItem
-            // 
-            this.deleteEmployeeToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.delete_icon_32x32;
-            this.deleteEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
-            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -474,9 +474,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManageEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
