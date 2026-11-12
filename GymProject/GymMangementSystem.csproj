@@ -81,10 +81,10 @@
     <Compile Include="Shift\Controls\ctrlShiftDetails.Designer.cs">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlSubscriptionsHistory.cs">
+    <Compile Include="Subscription\Controls\ctrlSubscriptionsHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlSubscriptionsHistory.Designer.cs">
+    <Compile Include="Subscription\Controls\ctrlSubscriptionsHistory.Designer.cs">
       <DependentUpon>ctrlSubscriptionsHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees\frmAddUpdateEmployee.cs">
@@ -150,10 +150,10 @@
     <Compile Include="Members\Controls\ctrlMemebrDetails.Designer.cs">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlSubscriptionDetails.cs">
+    <Compile Include="Subscription\Controls\ctrlSubscriptionDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlSubscriptionDetails.Designer.cs">
+    <Compile Include="Subscription\Controls\ctrlSubscriptionDetails.Designer.cs">
       <DependentUpon>ctrlSubscriptionDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Payment\Controls\ctrlPaymentDetails.cs">
@@ -186,10 +186,10 @@
     <Compile Include="People\frmAddUpdatePerson.Designer.cs">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateCancelSubscription.cs">
+    <Compile Include="Subscription\frmAddUpdateCancelSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateCancelSubscription.Designer.cs">
+    <Compile Include="Subscription\frmAddUpdateCancelSubscription.Designer.cs">
       <DependentUpon>frmAddUpdateCancelSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\frmAddUpdateClass.cs">
@@ -198,10 +198,10 @@
     <Compile Include="Classes\frmAddUpdateClass.Designer.cs">
       <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddSubscription.cs">
+    <Compile Include="Subscription\frmAddSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddSubscription.Designer.cs">
+    <Compile Include="Subscription\frmAddSubscription.Designer.cs">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Coaches\frmAddUpdateCoach.cs">
@@ -216,10 +216,10 @@
     <Compile Include="EmployeeAttendance\frmAddUpdateEmployeeAttendance.Designer.cs">
       <DependentUpon>frmAddUpdateEmployeeAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateFrozenSubscription.cs">
+    <Compile Include="Subscription\frmAddUpdateFrozenSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateFrozenSubscription.Designer.cs">
+    <Compile Include="Subscription\frmAddUpdateFrozenSubscription.Designer.cs">
       <DependentUpon>frmAddUpdateFrozenSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Payment\frmAddUpdatePayment.cs">
@@ -228,10 +228,10 @@
     <Compile Include="Payment\frmAddUpdatePayment.Designer.cs">
       <DependentUpon>frmAddUpdatePayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChangeSubscription.cs">
+    <Compile Include="Subscription\frmChangeSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChangeSubscription.Designer.cs">
+    <Compile Include="Subscription\frmChangeSubscription.Designer.cs">
       <DependentUpon>frmChangeSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Coaches\frmCoachDetails.cs">
@@ -264,10 +264,10 @@
     <Compile Include="Payment\frmManagePayments.Designer.cs">
       <DependentUpon>frmManagePayments.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageSubscription.cs">
+    <Compile Include="Subscription\frmManageSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageSubscription.Designer.cs">
+    <Compile Include="Subscription\frmManageSubscription.Designer.cs">
       <DependentUpon>frmManageSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Coaches\frmSelectCoach.cs">
@@ -402,10 +402,10 @@
     <Compile Include="Users\frmShowUserDetails.Designer.cs">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowSubscriptionDetails.cs">
+    <Compile Include="Subscription\frmShowSubscriptionDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowSubscriptionDetails.Designer.cs">
+    <Compile Include="Subscription\frmShowSubscriptionDetails.Designer.cs">
       <DependentUpon>frmShowSubscriptionDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="MyTextBox.cs">
@@ -440,7 +440,7 @@
     <EmbeddedResource Include="Shift\Controls\ctrlShiftDetails.resx">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlSubscriptionsHistory.resx">
+    <EmbeddedResource Include="Subscription\Controls\ctrlSubscriptionsHistory.resx">
       <DependentUpon>ctrlSubscriptionsHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees\frmAddUpdateEmployee.resx">
@@ -473,7 +473,7 @@
     <EmbeddedResource Include="Members\Controls\ctrlMemebrDetails.resx">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlSubscriptionDetails.resx">
+    <EmbeddedResource Include="Subscription\Controls\ctrlSubscriptionDetails.resx">
       <DependentUpon>ctrlSubscriptionDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment\Controls\ctrlPaymentDetails.resx">
@@ -491,10 +491,10 @@
     <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddSubscription.resx">
+    <EmbeddedResource Include="Subscription\frmAddSubscription.resx">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateCancelSubscription.resx">
+    <EmbeddedResource Include="Subscription\frmAddUpdateCancelSubscription.resx">
       <DependentUpon>frmAddUpdateCancelSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coaches\frmAddUpdateCoach.resx">
@@ -503,13 +503,13 @@
     <EmbeddedResource Include="EmployeeAttendance\frmAddUpdateEmployeeAttendance.resx">
       <DependentUpon>frmAddUpdateEmployeeAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateFrozenSubscription.resx">
+    <EmbeddedResource Include="Subscription\frmAddUpdateFrozenSubscription.resx">
       <DependentUpon>frmAddUpdateFrozenSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment\frmAddUpdatePayment.resx">
       <DependentUpon>frmAddUpdatePayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChangeSubscription.resx">
+    <EmbeddedResource Include="Subscription\frmChangeSubscription.resx">
       <DependentUpon>frmChangeSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coaches\frmCoachDetails.resx">
@@ -530,7 +530,7 @@
     <EmbeddedResource Include="Payment\frmManagePayments.resx">
       <DependentUpon>frmManagePayments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageSubscription.resx">
+    <EmbeddedResource Include="Subscription\frmManageSubscription.resx">
       <DependentUpon>frmManageSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coaches\frmSelectCoach.resx">
@@ -599,7 +599,7 @@
     <EmbeddedResource Include="Users\frmShowUserDetails.resx">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowSubscriptionDetails.resx">
+    <EmbeddedResource Include="Subscription\frmShowSubscriptionDetails.resx">
       <DependentUpon>frmShowSubscriptionDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
