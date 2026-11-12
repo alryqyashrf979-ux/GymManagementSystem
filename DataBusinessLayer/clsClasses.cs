@@ -136,6 +136,14 @@ namespace DataBusinessLayer
         }
 
 
+
+        public bool IsClassFull()
+        {
+            return !(this.Maximum_Capacity > clsClassRegisteration.GetEnrolledMembersCountByClassID(ClassID));
+        }
+
+
+
         public static clsClasses Find(int ClassID)
         {
             int coachID = -1;

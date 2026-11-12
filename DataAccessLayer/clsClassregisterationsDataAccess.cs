@@ -177,6 +177,22 @@ namespace DataAccessLayer
                 }
             }
         }
+        static public int GetEnrolledMembersCountByClassID(int ClassID)
+        {
+            string query = @"select count(MemberID) from ClassRegisterations where ClassID=@ClassID
+;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ClassID", ClassID);
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
     }
 }
     
