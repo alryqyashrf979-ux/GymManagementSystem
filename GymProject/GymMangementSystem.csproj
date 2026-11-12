@@ -96,10 +96,10 @@
     <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="Global Classes\clsUtil.cs" />
     <Compile Include="Global Classes\clsValidation.cs" />
-    <Compile Include="ctrlEmergencyContact.cs">
+    <Compile Include="Members\Emergency Contact\Controls\ctrlEmergencyContact.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlEmergencyContact.Designer.cs">
+    <Compile Include="Members\Emergency Contact\Controls\ctrlEmergencyContact.Designer.cs">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees\Controls\ctrlEmployeeDetails.cs">
@@ -156,10 +156,10 @@
     <Compile Include="ctrlSubscriptionDetails.Designer.cs">
       <DependentUpon>ctrlSubscriptionDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlPaymentDetails.cs">
+    <Compile Include="Payment\Controls\ctrlPaymentDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPaymentDetails.Designer.cs">
+    <Compile Include="Payment\Controls\ctrlPaymentDetails.Designer.cs">
       <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlSubscriptionPlanDetails.cs">
@@ -222,10 +222,10 @@
     <Compile Include="frmAddUpdateFrozenSubscription.Designer.cs">
       <DependentUpon>frmAddUpdateFrozenSubscription.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdatePayment.cs">
+    <Compile Include="Payment\frmAddUpdatePayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdatePayment.Designer.cs">
+    <Compile Include="Payment\frmAddUpdatePayment.Designer.cs">
       <DependentUpon>frmAddUpdatePayment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChangeSubscription.cs">
@@ -258,10 +258,10 @@
     <Compile Include="EmployeeAttendance\frmManageEmployeesAttendance.Designer.cs">
       <DependentUpon>frmManageEmployeesAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManagePayments.cs">
+    <Compile Include="Payment\frmManagePayments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManagePayments.Designer.cs">
+    <Compile Include="Payment\frmManagePayments.Designer.cs">
       <DependentUpon>frmManagePayments.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageSubscription.cs">
@@ -378,10 +378,10 @@
     <Compile Include="Members\frmShowMemberHistory.Designer.cs">
       <DependentUpon>frmShowMemberHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowPaymentDetails.cs">
+    <Compile Include="Payment\frmShowPaymentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowPaymentDetails.Designer.cs">
+    <Compile Include="Payment\frmShowPaymentDetails.Designer.cs">
       <DependentUpon>frmShowPaymentDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShowPlanDetails.cs">
@@ -446,7 +446,7 @@
     <EmbeddedResource Include="Employees\frmAddUpdateEmployee.resx">
       <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlEmergencyContact.resx">
+    <EmbeddedResource Include="Members\Emergency Contact\Controls\ctrlEmergencyContact.resx">
       <DependentUpon>ctrlEmergencyContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees\Controls\ctrlEmployeeDetails.resx">
@@ -476,7 +476,7 @@
     <EmbeddedResource Include="ctrlSubscriptionDetails.resx">
       <DependentUpon>ctrlSubscriptionDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlPaymentDetails.resx">
+    <EmbeddedResource Include="Payment\Controls\ctrlPaymentDetails.resx">
       <DependentUpon>ctrlPaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlSubscriptionPlanDetails.resx">
@@ -506,7 +506,7 @@
     <EmbeddedResource Include="frmAddUpdateFrozenSubscription.resx">
       <DependentUpon>frmAddUpdateFrozenSubscription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdatePayment.resx">
+    <EmbeddedResource Include="Payment\frmAddUpdatePayment.resx">
       <DependentUpon>frmAddUpdatePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangeSubscription.resx">
@@ -527,7 +527,7 @@
     <EmbeddedResource Include="Members\frmManageMember.resx">
       <DependentUpon>frmManageMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManagePayments.resx">
+    <EmbeddedResource Include="Payment\frmManagePayments.resx">
       <DependentUpon>frmManagePayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageSubscription.resx">
@@ -587,7 +587,7 @@
     <EmbeddedResource Include="Members\frmShowMemberHistory.resx">
       <DependentUpon>frmShowMemberHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowPaymentDetails.resx">
+    <EmbeddedResource Include="Payment\frmShowPaymentDetails.resx">
       <DependentUpon>frmShowPaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowPlanDetails.resx">
