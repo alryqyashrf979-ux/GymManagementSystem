@@ -16,7 +16,7 @@ namespace GymMangementSystem
     {
         public int PersonID
         {
-            get { return uctPersonDetails1.PersonID; }
+            get=>  uctPersonDetails1.PersonID; 
         }
         public clsPeople PersonInfo
         {
@@ -103,12 +103,7 @@ namespace GymMangementSystem
                 btnSearch.PerformClick();
         }
 
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-            frmAddUpdatePerson frm = new frmAddUpdatePerson();
-            frm.DataBack += DataBackEvent;
-            frm.ShowDialog();
-        }
+      
 
         private void DataBackEvent(int PersonID)
         {
@@ -132,9 +127,11 @@ namespace GymMangementSystem
             }
         }
 
-        private void uctPersonDetails1_Load(object sender, EventArgs e)
+        private void btnAddNewMember_Click(object sender, EventArgs e)
         {
-
+            frmAddUpdatePerson frm = new frmAddUpdatePerson();
+            frm.DataBack += DataBackEvent;
+            frm.ShowDialog();
         }
     }
 }
