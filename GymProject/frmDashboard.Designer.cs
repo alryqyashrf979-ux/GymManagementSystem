@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -59,39 +69,67 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dgvClassList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.dgvShowMembersInLast15DaysList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Membership = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblExpiringSubscription = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblActiveClasses = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblActiveTrainers = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblCountActiveMembers = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.lblDate = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.currentUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblCountActiveMembers = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblActiveTrainers = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblActiveClasses = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblExpiringSubscription = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -99,18 +137,25 @@
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).BeginInit();
             this.panel1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
+            this.guna2Panel9.SuspendLayout();
+            this.guna2Panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClassList)).BeginInit();
+            this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShowMembersInLast15DaysList)).BeginInit();
             this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -658,6 +703,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.guna2Panel9);
+            this.panel1.Controls.Add(this.guna2Panel8);
+            this.panel1.Controls.Add(this.guna2Panel7);
             this.panel1.Controls.Add(this.guna2Panel6);
             this.panel1.Controls.Add(this.guna2Panel5);
             this.panel1.Controls.Add(this.guna2Panel4);
@@ -678,6 +726,823 @@
             this.panel1.Size = new System.Drawing.Size(1370, 749);
             this.panel1.TabIndex = 9;
             // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel9.BorderRadius = 13;
+            this.guna2Panel9.BorderThickness = 1;
+            this.guna2Panel9.Controls.Add(this.label15);
+            this.guna2Panel9.Controls.Add(this.guna2Button7);
+            this.guna2Panel9.Controls.Add(this.label14);
+            this.guna2Panel9.Controls.Add(this.guna2Button6);
+            this.guna2Panel9.Controls.Add(this.label11);
+            this.guna2Panel9.Controls.Add(this.guna2Button5);
+            this.guna2Panel9.Controls.Add(this.label10);
+            this.guna2Panel9.Controls.Add(this.guna2Button4);
+            this.guna2Panel9.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel9.FillColor = System.Drawing.Color.White;
+            this.guna2Panel9.Location = new System.Drawing.Point(258, 588);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(1103, 149);
+            this.guna2Panel9.TabIndex = 18;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Silver;
+            this.label15.Location = new System.Drawing.Point(115, 114);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(102, 15);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Add Membership";
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BackColor = System.Drawing.Color.White;
+            this.guna2Button7.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button7.BorderRadius = 7;
+            this.guna2Button7.BorderThickness = 1;
+            this.guna2Button7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button7.Image = global::GymMangementSystem.Properties.Resources.Add_Subscription_Icon2;
+            this.guna2Button7.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.guna2Button7.ImageSize = new System.Drawing.Size(55, 39);
+            this.guna2Button7.Location = new System.Drawing.Point(52, 45);
+            this.guna2Button7.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(232, 91);
+            this.guna2Button7.TabIndex = 26;
+            this.guna2Button7.Text = "Add                >";
+            this.guna2Button7.TextOffset = new System.Drawing.Point(-6, 0);
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Silver;
+            this.label14.Location = new System.Drawing.Point(923, 115);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 15);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Freeze Membership";
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.BackColor = System.Drawing.Color.White;
+            this.guna2Button6.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button6.BorderRadius = 7;
+            this.guna2Button6.BorderThickness = 1;
+            this.guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button6.Image = global::GymMangementSystem.Properties.Resources.FreezeIcon;
+            this.guna2Button6.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.guna2Button6.ImageSize = new System.Drawing.Size(55, 39);
+            this.guna2Button6.Location = new System.Drawing.Point(854, 45);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(232, 91);
+            this.guna2Button6.TabIndex = 24;
+            this.guna2Button6.Text = "Freeze                >";
+            this.guna2Button6.TextOffset = new System.Drawing.Point(-6, 0);
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(653, 114);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 15);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Cancel Membership";
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BackColor = System.Drawing.Color.White;
+            this.guna2Button5.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button5.BorderRadius = 7;
+            this.guna2Button5.BorderThickness = 1;
+            this.guna2Button5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button5.Image = global::GymMangementSystem.Properties.Resources.CancelIcon;
+            this.guna2Button5.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.guna2Button5.ImageSize = new System.Drawing.Size(55, 39);
+            this.guna2Button5.Location = new System.Drawing.Point(594, 45);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(232, 91);
+            this.guna2Button5.TabIndex = 22;
+            this.guna2Button5.Text = "Cancel                >";
+            this.guna2Button5.TextOffset = new System.Drawing.Point(-6, 0);
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(383, 114);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(121, 15);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Change Membership";
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BackColor = System.Drawing.Color.White;
+            this.guna2Button4.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button4.BorderRadius = 7;
+            this.guna2Button4.BorderThickness = 1;
+            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button4.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
+            this.guna2Button4.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.guna2Button4.ImageSize = new System.Drawing.Size(55, 39);
+            this.guna2Button4.Location = new System.Drawing.Point(321, 45);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(232, 91);
+            this.guna2Button4.TabIndex = 20;
+            this.guna2Button4.Text = "Change                >";
+            this.guna2Button4.TextOffset = new System.Drawing.Point(-6, 0);
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click_1);
+            // 
+            // guna2Panel8
+            // 
+            this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel8.BorderRadius = 13;
+            this.guna2Panel8.BorderThickness = 1;
+            this.guna2Panel8.Controls.Add(this.pictureBox9);
+            this.guna2Panel8.Controls.Add(this.linkLabel2);
+            this.guna2Panel8.Controls.Add(this.label7);
+            this.guna2Panel8.Controls.Add(this.dgvClassList);
+            this.guna2Panel8.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel8.FillColor = System.Drawing.Color.White;
+            this.guna2Panel8.Location = new System.Drawing.Point(791, 253);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(576, 329);
+            this.guna2Panel8.TabIndex = 90;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 91;
+            this.pictureBox9.TabStop = false;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(437, 12);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(71, 17);
+            this.linkLabel2.TabIndex = 89;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "View All ->";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label7.Location = new System.Drawing.Point(49, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 20);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Upcoming Classes";
+            // 
+            // dgvClassList
+            // 
+            this.dgvClassList.AllowUserToAddRows = false;
+            this.dgvClassList.AllowUserToDeleteRows = false;
+            this.dgvClassList.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvClassList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClassList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
+            this.dgvClassList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClassList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvClassList.ColumnHeadersHeight = 35;
+            this.dgvClassList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvClassList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Class,
+            this.Coach,
+            this.StartTime,
+            this.EndTime,
+            this.Capacity});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClassList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvClassList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvClassList.Location = new System.Drawing.Point(6, 41);
+            this.dgvClassList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvClassList.Name = "dgvClassList";
+            this.dgvClassList.ReadOnly = true;
+            this.dgvClassList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClassList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvClassList.RowHeadersVisible = false;
+            this.dgvClassList.RowHeadersWidth = 65;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvClassList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvClassList.RowTemplate.Height = 35;
+            this.dgvClassList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClassList.Size = new System.Drawing.Size(568, 280);
+            this.dgvClassList.TabIndex = 88;
+            this.dgvClassList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvClassList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dgvClassList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvClassList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClassList.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvClassList.ThemeStyle.ReadOnly = true;
+            this.dgvClassList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
+            this.dgvClassList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClassList.ThemeStyle.RowsStyle.Height = 35;
+            this.dgvClassList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            // 
+            // Class
+            // 
+            this.Class.DataPropertyName = "Class";
+            this.Class.FillWeight = 73.12104F;
+            this.Class.HeaderText = "Class";
+            this.Class.Name = "Class";
+            this.Class.ReadOnly = true;
+            // 
+            // Coach
+            // 
+            this.Coach.DataPropertyName = "Trainer";
+            this.Coach.FillWeight = 195.4315F;
+            this.Coach.HeaderText = "Coach";
+            this.Coach.Name = "Coach";
+            this.Coach.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            this.StartTime.DataPropertyName = "Start Time";
+            this.StartTime.FillWeight = 83.56245F;
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.DataPropertyName = "End Time";
+            this.EndTime.FillWeight = 76.86749F;
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            // 
+            // Capacity
+            // 
+            this.Capacity.DataPropertyName = "Capacity";
+            this.Capacity.FillWeight = 71.01752F;
+            this.Capacity.HeaderText = "Capacity";
+            this.Capacity.Name = "Capacity";
+            this.Capacity.ReadOnly = true;
+            // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel7.BorderRadius = 13;
+            this.guna2Panel7.BorderThickness = 1;
+            this.guna2Panel7.Controls.Add(this.linkLabel1);
+            this.guna2Panel7.Controls.Add(this.label6);
+            this.guna2Panel7.Controls.Add(this.pictureBox8);
+            this.guna2Panel7.Controls.Add(this.dgvShowMembersInLast15DaysList);
+            this.guna2Panel7.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel7.FillColor = System.Drawing.Color.White;
+            this.guna2Panel7.Location = new System.Drawing.Point(252, 253);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.Size = new System.Drawing.Size(533, 329);
+            this.guna2Panel7.TabIndex = 18;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(437, 12);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(71, 17);
+            this.linkLabel1.TabIndex = 89;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "View All ->";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label6.Location = new System.Drawing.Point(49, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 20);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Recent Members";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = global::GymMangementSystem.Properties.Resources.Capacity;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(52, 33);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 18;
+            this.pictureBox8.TabStop = false;
+            // 
+            // dgvShowMembersInLast15DaysList
+            // 
+            this.dgvShowMembersInLast15DaysList.AllowUserToAddRows = false;
+            this.dgvShowMembersInLast15DaysList.AllowUserToDeleteRows = false;
+            this.dgvShowMembersInLast15DaysList.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dgvShowMembersInLast15DaysList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvShowMembersInLast15DaysList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
+            this.dgvShowMembersInLast15DaysList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowMembersInLast15DaysList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvShowMembersInLast15DaysList.ColumnHeadersHeight = 35;
+            this.dgvShowMembersInLast15DaysList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvShowMembersInLast15DaysList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Membership,
+            this.Status,
+            this.JoinDate});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShowMembersInLast15DaysList.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvShowMembersInLast15DaysList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvShowMembersInLast15DaysList.Location = new System.Drawing.Point(6, 41);
+            this.dgvShowMembersInLast15DaysList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvShowMembersInLast15DaysList.Name = "dgvShowMembersInLast15DaysList";
+            this.dgvShowMembersInLast15DaysList.ReadOnly = true;
+            this.dgvShowMembersInLast15DaysList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowMembersInLast15DaysList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvShowMembersInLast15DaysList.RowHeadersVisible = false;
+            this.dgvShowMembersInLast15DaysList.RowHeadersWidth = 65;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvShowMembersInLast15DaysList.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvShowMembersInLast15DaysList.RowTemplate.Height = 35;
+            this.dgvShowMembersInLast15DaysList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowMembersInLast15DaysList.Size = new System.Drawing.Size(525, 280);
+            this.dgvShowMembersInLast15DaysList.TabIndex = 88;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.ReadOnly = true;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.Height = 35;
+            this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.FillWeight = 173.7496F;
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Membership
+            // 
+            this.Membership.DataPropertyName = "Membership";
+            this.Membership.FillWeight = 87.76317F;
+            this.Membership.HeaderText = "Membership";
+            this.Membership.Name = "Membership";
+            this.Membership.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.FillWeight = 57.26897F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // JoinDate
+            // 
+            this.JoinDate.DataPropertyName = "Join Date";
+            this.JoinDate.FillWeight = 81.21827F;
+            this.JoinDate.HeaderText = "Join Date";
+            this.JoinDate.Name = "JoinDate";
+            this.JoinDate.ReadOnly = true;
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel6.BorderRadius = 8;
+            this.guna2Panel6.BorderThickness = 1;
+            this.guna2Panel6.Controls.Add(this.label17);
+            this.guna2Panel6.Controls.Add(this.lblExpiringSubscription);
+            this.guna2Panel6.Controls.Add(this.label20);
+            this.guna2Panel6.Controls.Add(this.pictureBox7);
+            this.guna2Panel6.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel6.FillColor = System.Drawing.Color.White;
+            this.guna2Panel6.Location = new System.Drawing.Point(1118, 139);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(225, 100);
+            this.guna2Panel6.TabIndex = 16;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label17.Location = new System.Drawing.Point(97, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(71, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Last 10 Days";
+            // 
+            // lblExpiringSubscription
+            // 
+            this.lblExpiringSubscription.AutoSize = true;
+            this.lblExpiringSubscription.BackColor = System.Drawing.Color.Transparent;
+            this.lblExpiringSubscription.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpiringSubscription.ForeColor = System.Drawing.Color.Black;
+            this.lblExpiringSubscription.Location = new System.Drawing.Point(119, 35);
+            this.lblExpiringSubscription.Name = "lblExpiringSubscription";
+            this.lblExpiringSubscription.Size = new System.Drawing.Size(40, 30);
+            this.lblExpiringSubscription.TabIndex = 20;
+            this.lblExpiringSubscription.Text = "???";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label20.Location = new System.Drawing.Point(73, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(146, 17);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Expiring Memberships";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Time;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(57, 59);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 22;
+            this.pictureBox7.TabStop = false;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel5.BorderRadius = 8;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.label13);
+            this.guna2Panel5.Controls.Add(this.lblActiveClasses);
+            this.guna2Panel5.Controls.Add(this.label16);
+            this.guna2Panel5.Controls.Add(this.pictureBox6);
+            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.FillColor = System.Drawing.Color.White;
+            this.guna2Panel5.Location = new System.Drawing.Point(838, 139);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(225, 100);
+            this.guna2Panel5.TabIndex = 16;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(101, 75);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(96, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "All Active Classes";
+            // 
+            // lblActiveClasses
+            // 
+            this.lblActiveClasses.AutoSize = true;
+            this.lblActiveClasses.BackColor = System.Drawing.Color.Transparent;
+            this.lblActiveClasses.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveClasses.ForeColor = System.Drawing.Color.Black;
+            this.lblActiveClasses.Location = new System.Drawing.Point(119, 35);
+            this.lblActiveClasses.Name = "lblActiveClasses";
+            this.lblActiveClasses.Size = new System.Drawing.Size(40, 30);
+            this.lblActiveClasses.TabIndex = 20;
+            this.lblActiveClasses.Text = "???";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label16.Location = new System.Drawing.Point(95, 8);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 17);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Active Classes";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox6.Location = new System.Drawing.Point(20, 10);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(56, 51);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel4.BorderRadius = 8;
+            this.guna2Panel4.BorderThickness = 1;
+            this.guna2Panel4.Controls.Add(this.label9);
+            this.guna2Panel4.Controls.Add(this.lblActiveTrainers);
+            this.guna2Panel4.Controls.Add(this.label12);
+            this.guna2Panel4.Controls.Add(this.pictureBox5);
+            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(560, 139);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(225, 100);
+            this.guna2Panel4.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(101, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "All Active Trainers";
+            // 
+            // lblActiveTrainers
+            // 
+            this.lblActiveTrainers.AutoSize = true;
+            this.lblActiveTrainers.BackColor = System.Drawing.Color.Transparent;
+            this.lblActiveTrainers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveTrainers.ForeColor = System.Drawing.Color.Black;
+            this.lblActiveTrainers.Location = new System.Drawing.Point(122, 35);
+            this.lblActiveTrainers.Name = "lblActiveTrainers";
+            this.lblActiveTrainers.Size = new System.Drawing.Size(40, 30);
+            this.lblActiveTrainers.TabIndex = 20;
+            this.lblActiveTrainers.Text = "???";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label12.Location = new System.Drawing.Point(98, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 17);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Active Trainers";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Coach;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(74, 61);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel2.BorderRadius = 8;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.Controls.Add(this.lblCountActiveMembers);
+            this.guna2Panel2.Controls.Add(this.label5);
+            this.guna2Panel2.Controls.Add(this.pictureBox4);
+            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.FillColor = System.Drawing.Color.White;
+            this.guna2Panel2.Location = new System.Drawing.Point(273, 139);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(225, 100);
+            this.guna2Panel2.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(81, 76);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "All Active Members";
+            // 
+            // lblCountActiveMembers
+            // 
+            this.lblCountActiveMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCountActiveMembers.AutoSize = true;
+            this.lblCountActiveMembers.BackColor = System.Drawing.Color.Transparent;
+            this.lblCountActiveMembers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountActiveMembers.ForeColor = System.Drawing.Color.Black;
+            this.lblCountActiveMembers.Location = new System.Drawing.Point(104, 36);
+            this.lblCountActiveMembers.Name = "lblCountActiveMembers";
+            this.lblCountActiveMembers.Size = new System.Drawing.Size(40, 30);
+            this.lblCountActiveMembers.TabIndex = 17;
+            this.lblCountActiveMembers.Text = "???";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label5.Location = new System.Drawing.Point(83, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Active Members";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.Capacity;
+            this.pictureBox4.Location = new System.Drawing.Point(5, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(57, 59);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
+            this.pictureBox2.Location = new System.Drawing.Point(1007, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblTime.Location = new System.Drawing.Point(1304, 83);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(22, 15);
+            this.lblTime.TabIndex = 11;
+            this.lblTime.Text = "???";
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Location = new System.Drawing.Point(1240, 71);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 41);
+            this.guna2VSeparator1.TabIndex = 10;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lblDate.Location = new System.Drawing.Point(1049, 86);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(22, 15);
+            this.lblDate.TabIndex = 9;
+            this.lblDate.Text = "???";
+            // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
@@ -688,6 +1553,16 @@
             this.lblUserName.Size = new System.Drawing.Size(60, 33);
             this.lblUserName.TabIndex = 8;
             this.lblUserName.Text = "???";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Time;
+            this.pictureBox3.Location = new System.Drawing.Point(1259, 70);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // contextMenuStrip2
             // 
@@ -741,331 +1616,6 @@
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblDate.Location = new System.Drawing.Point(1049, 86);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(22, 15);
-            this.lblDate.TabIndex = 9;
-            this.lblDate.Text = "???";
-            // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(1240, 71);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 41);
-            this.guna2VSeparator1.TabIndex = 10;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.lblTime.Location = new System.Drawing.Point(1304, 83);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(22, 15);
-            this.lblTime.TabIndex = 11;
-            this.lblTime.Text = "???";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox2.Location = new System.Drawing.Point(1007, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.Time;
-            this.pictureBox3.Location = new System.Drawing.Point(1259, 70);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(62, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel2.BorderRadius = 8;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.label8);
-            this.guna2Panel2.Controls.Add(this.lblCountActiveMembers);
-            this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Controls.Add(this.pictureBox4);
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(273, 139);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(225, 100);
-            this.guna2Panel2.TabIndex = 15;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel4.BorderRadius = 8;
-            this.guna2Panel4.BorderThickness = 1;
-            this.guna2Panel4.Controls.Add(this.label9);
-            this.guna2Panel4.Controls.Add(this.lblActiveTrainers);
-            this.guna2Panel4.Controls.Add(this.label12);
-            this.guna2Panel4.Controls.Add(this.pictureBox5);
-            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.FillColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(560, 139);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(225, 100);
-            this.guna2Panel4.TabIndex = 16;
-            // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel5.BorderRadius = 8;
-            this.guna2Panel5.BorderThickness = 1;
-            this.guna2Panel5.Controls.Add(this.label13);
-            this.guna2Panel5.Controls.Add(this.lblActiveClasses);
-            this.guna2Panel5.Controls.Add(this.label16);
-            this.guna2Panel5.Controls.Add(this.pictureBox6);
-            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel5.FillColor = System.Drawing.Color.White;
-            this.guna2Panel5.Location = new System.Drawing.Point(848, 139);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(225, 100);
-            this.guna2Panel5.TabIndex = 16;
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel6.BorderRadius = 8;
-            this.guna2Panel6.BorderThickness = 1;
-            this.guna2Panel6.Controls.Add(this.label17);
-            this.guna2Panel6.Controls.Add(this.lblExpiringSubscription);
-            this.guna2Panel6.Controls.Add(this.label20);
-            this.guna2Panel6.Controls.Add(this.pictureBox7);
-            this.guna2Panel6.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel6.FillColor = System.Drawing.Color.White;
-            this.guna2Panel6.Location = new System.Drawing.Point(1118, 139);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(225, 100);
-            this.guna2Panel6.TabIndex = 16;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.Capacity;
-            this.pictureBox4.Location = new System.Drawing.Point(5, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(57, 59);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 17;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label5.Location = new System.Drawing.Point(83, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Active Members";
-            // 
-            // lblCountActiveMembers
-            // 
-            this.lblCountActiveMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCountActiveMembers.AutoSize = true;
-            this.lblCountActiveMembers.BackColor = System.Drawing.Color.Transparent;
-            this.lblCountActiveMembers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountActiveMembers.ForeColor = System.Drawing.Color.Black;
-            this.lblCountActiveMembers.Location = new System.Drawing.Point(104, 36);
-            this.lblCountActiveMembers.Name = "lblCountActiveMembers";
-            this.lblCountActiveMembers.Size = new System.Drawing.Size(40, 30);
-            this.lblCountActiveMembers.TabIndex = 17;
-            this.lblCountActiveMembers.Text = "???";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(81, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "All Active Members";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(101, 75);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "All Active Trainers";
-            // 
-            // lblActiveTrainers
-            // 
-            this.lblActiveTrainers.AutoSize = true;
-            this.lblActiveTrainers.BackColor = System.Drawing.Color.Transparent;
-            this.lblActiveTrainers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveTrainers.ForeColor = System.Drawing.Color.Black;
-            this.lblActiveTrainers.Location = new System.Drawing.Point(122, 35);
-            this.lblActiveTrainers.Name = "lblActiveTrainers";
-            this.lblActiveTrainers.Size = new System.Drawing.Size(40, 30);
-            this.lblActiveTrainers.TabIndex = 20;
-            this.lblActiveTrainers.Text = "???";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label12.Location = new System.Drawing.Point(98, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 17);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Active Trainers";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::GymMangementSystem.Properties.Resources.Coach;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(74, 61);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(101, 75);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "All Active Classes";
-            // 
-            // lblActiveClasses
-            // 
-            this.lblActiveClasses.AutoSize = true;
-            this.lblActiveClasses.BackColor = System.Drawing.Color.Transparent;
-            this.lblActiveClasses.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveClasses.ForeColor = System.Drawing.Color.Black;
-            this.lblActiveClasses.Location = new System.Drawing.Point(119, 35);
-            this.lblActiveClasses.Name = "lblActiveClasses";
-            this.lblActiveClasses.Size = new System.Drawing.Size(40, 30);
-            this.lblActiveClasses.TabIndex = 20;
-            this.lblActiveClasses.Text = "???";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label16.Location = new System.Drawing.Point(95, 8);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 17);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Active Classes";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::GymMangementSystem.Properties.Resources.Secheduling;
-            this.pictureBox6.Location = new System.Drawing.Point(20, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(56, 51);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label17.Location = new System.Drawing.Point(97, 76);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(71, 13);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Last 10 Days";
-            // 
-            // lblExpiringSubscription
-            // 
-            this.lblExpiringSubscription.AutoSize = true;
-            this.lblExpiringSubscription.BackColor = System.Drawing.Color.Transparent;
-            this.lblExpiringSubscription.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpiringSubscription.ForeColor = System.Drawing.Color.Black;
-            this.lblExpiringSubscription.Location = new System.Drawing.Point(119, 35);
-            this.lblExpiringSubscription.Name = "lblExpiringSubscription";
-            this.lblExpiringSubscription.Size = new System.Drawing.Size(40, 30);
-            this.lblExpiringSubscription.TabIndex = 20;
-            this.lblExpiringSubscription.Text = "???";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label20.Location = new System.Drawing.Point(73, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(146, 17);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Expiring Memberships";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.Time;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(57, 59);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -1084,7 +1634,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Gym Management System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1098,22 +1647,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.contextMenuStrip2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel5.PerformLayout();
+            this.guna2Panel9.ResumeLayout(false);
+            this.guna2Panel9.PerformLayout();
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClassList)).EndInit();
+            this.guna2Panel7.ResumeLayout(false);
+            this.guna2Panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShowMembersInLast15DaysList)).EndInit();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1184,5 +1743,33 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvShowMembersInLast15DaysList;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Membership;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JoinDate;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvClassList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Class;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2Button guna2Button6;
     }
 }

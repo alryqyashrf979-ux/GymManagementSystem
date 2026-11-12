@@ -176,7 +176,7 @@
             this.ctrlSubscriptionDetails1.EnableStartDate = false;
             this.ctrlSubscriptionDetails1.Location = new System.Drawing.Point(120, 460);
             this.ctrlSubscriptionDetails1.Margin = new System.Windows.Forms.Padding(2);
-            this.ctrlSubscriptionDetails1.MaxStartDateDelayDays = 14;
+      //    this.ctrlSubscriptionDetails1.MaxStartDateDelayDays = 14;
             this.ctrlSubscriptionDetails1.Name = "ctrlSubscriptionDetails1";
             this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1085, 345);
             this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2008, 7, 20, 0, 0, 0, 0);

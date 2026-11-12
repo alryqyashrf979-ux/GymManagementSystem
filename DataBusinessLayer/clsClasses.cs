@@ -176,5 +176,7 @@ namespace DataBusinessLayer
         }
 
         static public int SelectCountOfActiveClasses() => clsClassesData.SelectCountOfActiveClasses();
+
+        static public DataTable GetActiveClasses() => clsClassesData.GetActiveClasses();
     }
 }

@@ -192,6 +192,8 @@ namespace DataBusinessLayer
         static public int SelectCountOfActiveMembers() => clsMembersDataAccess.SelectCountOfActiveMembers();
 
         static public int SelectCountOfMembers() => clsMembersDataAccess.SelectCountOfMembers();
+
+        static public DataTable GetMembersInLast15Days() => clsMembersDataAccess.GetMembersInLast15Days();
     }
 }
 
