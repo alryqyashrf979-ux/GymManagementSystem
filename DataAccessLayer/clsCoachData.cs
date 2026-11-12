@@ -286,5 +286,20 @@ namespace DataAccessLayer
                 }
             }
         }
+
+        static public int SelectCountOfActiveCoaches()
+        {
+            string query = @"select COUNT(*) from Coaches inner join Employees on Coaches.EmployeeID=Employees.EmployeeID where Employees.IsActive=1;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
     }
 }

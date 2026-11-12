@@ -131,5 +131,7 @@ namespace DataBusinessLayer
         {
             return clsCoachData.SelectCoachIDByNationalNu(NationalNu);
         }
+
+        static public int SelectCountOfActiveCoaches() => clsCoachData.SelectCountOfActiveCoaches();
     }
 }
