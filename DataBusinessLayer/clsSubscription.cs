@@ -410,5 +410,7 @@ namespace DataBusinessLayer
             return clsSubscriptionsData.UpdateSubscriptionStatus(SubscriptionID, (byte)enSubscriptionStatus.Canceled);
 
         }
+
+        static public int SelectCountExpirationSubscriptionInLastTenDays() => clsSubscriptionsData.SelectCountExpirationSubscriptionInLastTenDays();
     }
 }

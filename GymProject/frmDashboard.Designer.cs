@@ -89,9 +89,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblExpiringSubscription = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -676,7 +677,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 749);
             this.panel1.TabIndex = 9;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblUserName
             // 
@@ -859,7 +859,7 @@
             this.guna2Panel6.BorderRadius = 8;
             this.guna2Panel6.BorderThickness = 1;
             this.guna2Panel6.Controls.Add(this.label17);
-            this.guna2Panel6.Controls.Add(this.label19);
+            this.guna2Panel6.Controls.Add(this.lblExpiringSubscription);
             this.guna2Panel6.Controls.Add(this.label20);
             this.guna2Panel6.Controls.Add(this.pictureBox7);
             this.guna2Panel6.CustomBorderColor = System.Drawing.Color.Transparent;
@@ -1025,23 +1025,23 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label17.Location = new System.Drawing.Point(72, 76);
+            this.label17.Location = new System.Drawing.Point(97, 76);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 13);
+            this.label17.Size = new System.Drawing.Size(71, 13);
             this.label17.TabIndex = 18;
-            this.label17.Text = "All Expiring Memberships";
+            this.label17.Text = "Last 10 Days";
             // 
-            // label19
+            // lblExpiringSubscription
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(119, 35);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 30);
-            this.label19.TabIndex = 20;
-            this.label19.Text = "12";
+            this.lblExpiringSubscription.AutoSize = true;
+            this.lblExpiringSubscription.BackColor = System.Drawing.Color.Transparent;
+            this.lblExpiringSubscription.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpiringSubscription.ForeColor = System.Drawing.Color.Black;
+            this.lblExpiringSubscription.Location = new System.Drawing.Point(119, 35);
+            this.lblExpiringSubscription.Name = "lblExpiringSubscription";
+            this.lblExpiringSubscription.Size = new System.Drawing.Size(40, 30);
+            this.lblExpiringSubscription.TabIndex = 20;
+            this.lblExpiringSubscription.Text = "???";
             // 
             // label20
             // 
@@ -1065,6 +1065,12 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 22;
             this.pictureBox7.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmDashboard
             // 
@@ -1166,7 +1172,7 @@
         private System.Windows.Forms.Label lblCountActiveMembers;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblExpiringSubscription;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label13;
@@ -1177,5 +1183,6 @@
         private System.Windows.Forms.Label lblActiveTrainers;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
