@@ -75,10 +75,10 @@
     <Compile Include="Coaches\Controls\ctrlCoachDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlCoachDetailsWithFiltering.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlShiftDetails.cs">
+    <Compile Include="Shift\Controls\ctrlShiftDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlShiftDetails.Designer.cs">
+    <Compile Include="Shift\Controls\ctrlShiftDetails.Designer.cs">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlSubscriptionsHistory.cs">
@@ -390,10 +390,10 @@
     <Compile Include="frmShowPlanDetails.Designer.cs">
       <DependentUpon>frmShowPlanDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowShiftDetails.cs">
+    <Compile Include="Shift\frmShowShiftDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowShiftDetails.Designer.cs">
+    <Compile Include="Shift\frmShowShiftDetails.Designer.cs">
       <DependentUpon>frmShowShiftDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmShowUserDetails.cs">
@@ -437,7 +437,7 @@
     <EmbeddedResource Include="Coaches\Controls\ctrlCoachDetailsWithFiltering.resx">
       <DependentUpon>ctrlCoachDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlShiftDetails.resx">
+    <EmbeddedResource Include="Shift\Controls\ctrlShiftDetails.resx">
       <DependentUpon>ctrlShiftDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlSubscriptionsHistory.resx">
@@ -593,7 +593,7 @@
     <EmbeddedResource Include="frmShowPlanDetails.resx">
       <DependentUpon>frmShowPlanDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowShiftDetails.resx">
+    <EmbeddedResource Include="Shift\frmShowShiftDetails.resx">
       <DependentUpon>frmShowShiftDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmShowUserDetails.resx">
