@@ -48,12 +48,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ctrlClassDetailsWithFilter1 = new GymMangementSystem.ctrlClassDetailsWithFilter();
+            this.pnlClassRegistration = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlClassRegistration.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -120,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(64, 687);
+            this.label2.Location = new System.Drawing.Point(5, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(222, 27);
@@ -132,7 +134,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(464, 754);
+            this.label3.Location = new System.Drawing.Point(30, 89);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 27);
@@ -144,7 +146,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(80, 743);
+            this.label4.Location = new System.Drawing.Point(535, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 27);
@@ -156,7 +158,7 @@
             this.lblMemberID.AutoSize = true;
             this.lblMemberID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMemberID.ForeColor = System.Drawing.Color.Black;
-            this.lblMemberID.Location = new System.Drawing.Point(688, 714);
+            this.lblMemberID.Location = new System.Drawing.Point(752, 95);
             this.lblMemberID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMemberID.Name = "lblMemberID";
             this.lblMemberID.Size = new System.Drawing.Size(42, 27);
@@ -167,7 +169,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(500, 711);
+            this.linkLabel1.Location = new System.Drawing.Point(523, 87);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(176, 32);
@@ -181,7 +183,7 @@
             this.lblClassRegistrationID.AutoSize = true;
             this.lblClassRegistrationID.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClassRegistrationID.ForeColor = System.Drawing.Color.Black;
-            this.lblClassRegistrationID.Location = new System.Drawing.Point(316, 690);
+            this.lblClassRegistrationID.Location = new System.Drawing.Point(291, 29);
             this.lblClassRegistrationID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClassRegistrationID.Name = "lblClassRegistrationID";
             this.lblClassRegistrationID.Size = new System.Drawing.Size(42, 27);
@@ -193,7 +195,7 @@
             this.lblRegistrationDate.AutoSize = true;
             this.lblRegistrationDate.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrationDate.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistrationDate.Location = new System.Drawing.Point(673, 754);
+            this.lblRegistrationDate.Location = new System.Drawing.Point(291, 95);
             this.lblRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
             this.lblRegistrationDate.Size = new System.Drawing.Size(42, 27);
@@ -205,7 +207,7 @@
             this.lblRegisteredBy.AutoSize = true;
             this.lblRegisteredBy.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisteredBy.ForeColor = System.Drawing.Color.Black;
-            this.lblRegisteredBy.Location = new System.Drawing.Point(284, 743);
+            this.lblRegisteredBy.Location = new System.Drawing.Point(750, 34);
             this.lblRegisteredBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegisteredBy.Name = "lblRegisteredBy";
             this.lblRegisteredBy.Size = new System.Drawing.Size(42, 27);
@@ -215,10 +217,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GymMangementSystem.Properties.Resources.SechedulingCircle;
-            this.pictureBox2.Location = new System.Drawing.Point(401, 743);
+            this.pictureBox2.Location = new System.Drawing.Point(230, 85);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(51, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 154;
             this.pictureBox2.TabStop = false;
@@ -241,7 +243,7 @@
             this.btnSave.Image = global::GymMangementSystem.Properties.Resources.Save_32;
             this.btnSave.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnSave.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSave.Location = new System.Drawing.Point(764, 822);
+            this.btnSave.Location = new System.Drawing.Point(782, 827);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(145, 37);
@@ -267,7 +269,7 @@
             this.btnClose.Image = global::GymMangementSystem.Properties.Resources.Close_32;
             this.btnClose.ImageOffset = new System.Drawing.Point(-10, 1);
             this.btnClose.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClose.Location = new System.Drawing.Point(596, 822);
+            this.btnClose.Location = new System.Drawing.Point(614, 827);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(156, 37);
@@ -278,10 +280,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GymMangementSystem.Properties.Resources.PersonWithDnable;
-            this.pictureBox1.Location = new System.Drawing.Point(425, 690);
+            this.pictureBox1.Location = new System.Drawing.Point(696, 85);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 149;
             this.pictureBox1.TabStop = false;
@@ -289,10 +291,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GymMangementSystem.Properties.Resources.ClassID;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 679);
+            this.pictureBox3.Location = new System.Drawing.Point(234, 22);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(49, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 155;
             this.pictureBox3.TabStop = false;
@@ -300,10 +302,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GymMangementSystem.Properties.Resources.PersonCircle;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 730);
+            this.pictureBox4.Location = new System.Drawing.Point(693, 28);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(49, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 156;
             this.pictureBox4.TabStop = false;
@@ -319,29 +321,43 @@
             this.ctrlClassDetailsWithFilter1.TabIndex = 150;
             this.ctrlClassDetailsWithFilter1.OnClassSelected += new System.EventHandler<GymMangementSystem.ctrlClassDetailsWithFilter.ClassEventArgs>(this.ctrlClassDetailsWithFilter1_OnClassSelected_1);
             // 
+            // pnlClassRegistration
+            // 
+            this.pnlClassRegistration.BackColor = System.Drawing.Color.White;
+            this.pnlClassRegistration.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(215)))), ((int)(((byte)(220)))));
+            this.pnlClassRegistration.BorderRadius = 5;
+            this.pnlClassRegistration.BorderThickness = 1;
+            this.pnlClassRegistration.Controls.Add(this.lblRegistrationDate);
+            this.pnlClassRegistration.Controls.Add(this.label3);
+            this.pnlClassRegistration.Controls.Add(this.pictureBox4);
+            this.pnlClassRegistration.Controls.Add(this.pictureBox2);
+            this.pnlClassRegistration.Controls.Add(this.pictureBox1);
+            this.pnlClassRegistration.Controls.Add(this.lblRegisteredBy);
+            this.pnlClassRegistration.Controls.Add(this.pictureBox3);
+            this.pnlClassRegistration.Controls.Add(this.label2);
+            this.pnlClassRegistration.Controls.Add(this.label4);
+            this.pnlClassRegistration.Controls.Add(this.lblClassRegistrationID);
+            this.pnlClassRegistration.Controls.Add(this.linkLabel1);
+            this.pnlClassRegistration.Controls.Add(this.lblMemberID);
+            this.pnlClassRegistration.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.pnlClassRegistration.Location = new System.Drawing.Point(6, 682);
+            this.pnlClassRegistration.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlClassRegistration.Name = "pnlClassRegistration";
+            this.pnlClassRegistration.Size = new System.Drawing.Size(926, 133);
+            this.pnlClassRegistration.TabIndex = 157;
+            // 
             // frmAddUpdateClassRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 864);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblRegisteredBy);
-            this.Controls.Add(this.lblRegistrationDate);
-            this.Controls.Add(this.lblClassRegistrationID);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.lblMemberID);
+            this.ClientSize = new System.Drawing.Size(939, 872);
+            this.Controls.Add(this.pnlClassRegistration);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ctrlClassDetailsWithFilter1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddUpdateClassRegistration";
@@ -354,8 +370,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlClassRegistration.ResumeLayout(false);
+            this.pnlClassRegistration.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -381,5 +398,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Panel pnlClassRegistration;
     }
 }

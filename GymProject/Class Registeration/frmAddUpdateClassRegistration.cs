@@ -121,22 +121,9 @@ namespace GymMangementSystem
             lblMemberID.Text = MemberID.ToString();
         }
 
-        private void ctrlClassDetailsWithFilter1_OnClassSelected(object sender, clsClasses e)
-        {
+        
 
-
-
-
-
-
-
-        }
-
-        private void ctrlClassDetailsWithFilter1_OnClassSelected(object sender, ctrlClassDetailsWithFilter.ClassEventArgs e)
-        {
-
-        }
-
+        
         private void ctrlClassDetailsWithFilter1_OnClassSelected_1(object sender, ctrlClassDetailsWithFilter.ClassEventArgs e)
         {
 
@@ -146,12 +133,15 @@ namespace GymMangementSystem
 
             if (e.ClassInfo.IsClassFull())
             {
-                MessageBox.Show("This class has reached its maximum capacity.\nNo more members can be enrolled.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("This class has reached its maximum capacity.\nNo more members can be enrolled.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 btnSave.Enabled = false;
+                pnlClassRegistration.Enabled = false;
+
                 return;
 
             }
             btnSave.Enabled = true;
+            pnlClassRegistration.Enabled = true;
 
 
         }
