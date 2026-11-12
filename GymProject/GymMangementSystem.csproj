@@ -57,22 +57,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ctrlCoachBasicDetais.cs">
+    <Compile Include="Coaches\Controls\ctrlCoachBasicDetais.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlCoachBasicDetais.Designer.cs">
+    <Compile Include="Coaches\Controls\ctrlCoachBasicDetais.Designer.cs">
       <DependentUpon>ctrlCoachBasicDetais.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlCoachDetails.cs">
+    <Compile Include="Coaches\Controls\ctrlCoachDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlCoachDetails.Designer.cs">
+    <Compile Include="Coaches\Controls\ctrlCoachDetails.Designer.cs">
       <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlCoachDetailsWithFiltering.cs">
+    <Compile Include="Coaches\Controls\ctrlCoachDetailsWithFiltering.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlCoachDetailsWithFiltering.Designer.cs">
+    <Compile Include="Coaches\Controls\ctrlCoachDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlCoachDetailsWithFiltering.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlShiftDetails.cs">
@@ -114,22 +114,22 @@
     <Compile Include="ctrlEmployeeDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlEmployeeDetailsWithFiltering.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlMemberBasicDetails.cs">
+    <Compile Include="Members\Controls\ctrlMemberBasicDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlMemberBasicDetails.Designer.cs">
+    <Compile Include="Members\Controls\ctrlMemberBasicDetails.Designer.cs">
       <DependentUpon>ctrlMemberBasicDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlMemberDetailsWithFiltering.cs">
+    <Compile Include="Members\Controls\ctrlMemberDetailsWithFiltering.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlMemberDetailsWithFiltering.Designer.cs">
+    <Compile Include="Members\Controls\ctrlMemberDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlMemberDetailsWithFiltering.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlMemberBasicDetailsWithFiltering.cs">
+    <Compile Include="Members\Controls\ctrlMemberBasicDetailsWithFiltering.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlMemberBasicDetailsWithFiltering.Designer.cs">
+    <Compile Include="Members\Controls\ctrlMemberBasicDetailsWithFiltering.Designer.cs">
       <DependentUpon>ctrlMemberBasicDetailsWithFiltering.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlClassDetails.cs">
@@ -144,10 +144,10 @@
     <Compile Include="ctrlClassDetailsWithFilter.Designer.cs">
       <DependentUpon>ctrlClassDetailsWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlMemebrDetails.cs">
+    <Compile Include="Members\Controls\ctrlMemebrDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlMemebrDetails.Designer.cs">
+    <Compile Include="Members\Controls\ctrlMemebrDetails.Designer.cs">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlSubscriptionDetails.cs">
@@ -204,10 +204,10 @@
     <Compile Include="frmAddSubscription.Designer.cs">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateCoach.cs">
+    <Compile Include="Coaches\frmAddUpdateCoach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateCoach.Designer.cs">
+    <Compile Include="Coaches\frmAddUpdateCoach.Designer.cs">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateEmployeeAttendance.cs">
@@ -240,10 +240,10 @@
     <Compile Include="frmCoachDetails.Designer.cs">
       <DependentUpon>frmCoachDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageCoaches.cs">
+    <Compile Include="Coaches\frmManageCoaches.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageCoaches.Designer.cs">
+    <Compile Include="Coaches\frmManageCoaches.Designer.cs">
       <DependentUpon>frmManageCoaches.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageEmployees.cs">
@@ -270,16 +270,16 @@
     <Compile Include="frmManageSubscription.Designer.cs">
       <DependentUpon>frmManageSubscription.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSelectCoach.cs">
+    <Compile Include="Coaches\frmSelectCoach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelectCoach.Designer.cs">
+    <Compile Include="Coaches\frmSelectCoach.Designer.cs">
       <DependentUpon>frmSelectCoach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSelectMember.cs">
+    <Compile Include="Members\frmSelectMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelectMember.Designer.cs">
+    <Compile Include="Members\frmSelectMember.Designer.cs">
       <DependentUpon>frmSelectMember.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShowEmployeeDetails.cs">
@@ -288,10 +288,10 @@
     <Compile Include="frmShowEmployeeDetails.Designer.cs">
       <DependentUpon>frmShowEmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowMemberDetails.cs">
+    <Compile Include="Members\frmShowMemberDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowMemberDetails.Designer.cs">
+    <Compile Include="Members\frmShowMemberDetails.Designer.cs">
       <DependentUpon>frmShowMemberDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddUpdateClassRegistration.cs">
@@ -300,10 +300,10 @@
     <Compile Include="frmAddUpdateClassRegistration.Designer.cs">
       <DependentUpon>frmAddUpdateClassRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateMember.cs">
+    <Compile Include="Members\frmAddUpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateMember.Designer.cs">
+    <Compile Include="Members\frmAddUpdateMember.Designer.cs">
       <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddUpdateUser.cs">
@@ -342,10 +342,10 @@
     <Compile Include="frmManageClassRegisteration.Designer.cs">
       <DependentUpon>frmManageClassRegisteration.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageMember.cs">
+    <Compile Include="Members\frmManageMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageMember.Designer.cs">
+    <Compile Include="Members\frmManageMember.Designer.cs">
       <DependentUpon>frmManageMember.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmManagePeople.cs">
@@ -372,10 +372,10 @@
     <Compile Include="frmShowClassDetails.Designer.cs">
       <DependentUpon>frmShowClassDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowMemberHistory.cs">
+    <Compile Include="Members\frmShowMemberHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowMemberHistory.Designer.cs">
+    <Compile Include="Members\frmShowMemberHistory.Designer.cs">
       <DependentUpon>frmShowMemberHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShowPaymentDetails.cs">
@@ -428,13 +428,13 @@
     <Compile Include="People\Controls\ctrlPersonDetailsWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ctrlCoachBasicDetais.resx">
+    <EmbeddedResource Include="Coaches\Controls\ctrlCoachBasicDetais.resx">
       <DependentUpon>ctrlCoachBasicDetais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlCoachDetails.resx">
+    <EmbeddedResource Include="Coaches\Controls\ctrlCoachDetails.resx">
       <DependentUpon>ctrlCoachDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlCoachDetailsWithFiltering.resx">
+    <EmbeddedResource Include="Coaches\Controls\ctrlCoachDetailsWithFiltering.resx">
       <DependentUpon>ctrlCoachDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlShiftDetails.resx">
@@ -455,13 +455,13 @@
     <EmbeddedResource Include="ctrlEmployeeDetailsWithFiltering.resx">
       <DependentUpon>ctrlEmployeeDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlMemberBasicDetails.resx">
+    <EmbeddedResource Include="Members\Controls\ctrlMemberBasicDetails.resx">
       <DependentUpon>ctrlMemberBasicDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlMemberDetailsWithFiltering.resx">
+    <EmbeddedResource Include="Members\Controls\ctrlMemberDetailsWithFiltering.resx">
       <DependentUpon>ctrlMemberDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlMemberBasicDetailsWithFiltering.resx">
+    <EmbeddedResource Include="Members\Controls\ctrlMemberBasicDetailsWithFiltering.resx">
       <DependentUpon>ctrlMemberBasicDetailsWithFiltering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlClassDetails.resx">
@@ -470,7 +470,7 @@
     <EmbeddedResource Include="ctrlClassDetailsWithFilter.resx">
       <DependentUpon>ctrlClassDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlMemebrDetails.resx">
+    <EmbeddedResource Include="Members\Controls\ctrlMemebrDetails.resx">
       <DependentUpon>ctrlMemebrDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlSubscriptionDetails.resx">
@@ -497,7 +497,7 @@
     <EmbeddedResource Include="frmAddUpdateCancelSubscription.resx">
       <DependentUpon>frmAddUpdateCancelSubscription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateCoach.resx">
+    <EmbeddedResource Include="Coaches\frmAddUpdateCoach.resx">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateEmployeeAttendance.resx">
@@ -515,7 +515,7 @@
     <EmbeddedResource Include="frmCoachDetails.resx">
       <DependentUpon>frmCoachDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageCoaches.resx">
+    <EmbeddedResource Include="Coaches\frmManageCoaches.resx">
       <DependentUpon>frmManageCoaches.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageEmployees.resx">
@@ -524,7 +524,7 @@
     <EmbeddedResource Include="frmManageEmployeesAttendance.resx">
       <DependentUpon>frmManageEmployeesAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageMember.resx">
+    <EmbeddedResource Include="Members\frmManageMember.resx">
       <DependentUpon>frmManageMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManagePayments.resx">
@@ -533,16 +533,16 @@
     <EmbeddedResource Include="frmManageSubscription.resx">
       <DependentUpon>frmManageSubscription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSelectCoach.resx">
+    <EmbeddedResource Include="Coaches\frmSelectCoach.resx">
       <DependentUpon>frmSelectCoach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSelectMember.resx">
+    <EmbeddedResource Include="Members\frmSelectMember.resx">
       <DependentUpon>frmSelectMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowEmployeeDetails.resx">
       <DependentUpon>frmShowEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowMemberDetails.resx">
+    <EmbeddedResource Include="Members\frmShowMemberDetails.resx">
       <DependentUpon>frmShowMemberDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateClass.resx">
@@ -551,7 +551,7 @@
     <EmbeddedResource Include="frmAddUpdateClassRegistration.resx">
       <DependentUpon>frmAddUpdateClassRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateMember.resx">
+    <EmbeddedResource Include="Members\frmAddUpdateMember.resx">
       <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
@@ -584,7 +584,7 @@
     <EmbeddedResource Include="frmShowClassDetails.resx">
       <DependentUpon>frmShowClassDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShowMemberHistory.resx">
+    <EmbeddedResource Include="Members\frmShowMemberHistory.resx">
       <DependentUpon>frmShowMemberHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowPaymentDetails.resx">
@@ -1055,6 +1055,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Check-Out-Employee-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Employees\Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
