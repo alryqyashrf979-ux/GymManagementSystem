@@ -163,7 +163,6 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1185, 144);
             this.guna2CustomGradientPanel1.TabIndex = 19;
-            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // pictureBox13
             // 
@@ -253,7 +252,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ctrlUserDetails";
             this.Size = new System.Drawing.Size(1193, 498);
-            this.Load += new System.EventHandler(this.ctrlUserDetails_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
