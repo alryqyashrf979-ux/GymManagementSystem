@@ -183,5 +183,14 @@ namespace GymMangementSystem
                 _RefreshData();
             }
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToBoolean(dgvEmployees.CurrentRow.Cells[6].Value))
+                terminateEmployeeToolStripMenuItem.Enabled = true;
+            else
+                terminateEmployeeToolStripMenuItem.Enabled = false;
+
+        }
     }
 }
