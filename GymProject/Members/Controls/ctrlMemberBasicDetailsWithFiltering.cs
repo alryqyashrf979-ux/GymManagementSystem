@@ -92,7 +92,7 @@ namespace GymMangementSystem
         void Find()
         {
 
-            if(cmFilteringType.Text=="Member ID")
+            if(txtFiltering.InputType==MyTextBox.TextType.Numeric)
             {
                 ctrlMemberBasicDetails1.LoadMemberInfoByMemberID(Convert.ToInt32(txtFiltering.Text));
             }
@@ -143,9 +143,6 @@ namespace GymMangementSystem
                 btnFind.PerformClick();
         }
 
-        private void txtFiltering_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
