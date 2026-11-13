@@ -117,8 +117,11 @@ namespace GymMangementSystem
                 return;
             }
             else
+            {
                 tcSubscriptionInfo.SelectedTab = tcSubscriptionInfo.TabPages["tpSubscriptionInfo"];
+                tpSubscriptionInfo.Enabled = true;
 
+            }
 
 
         }
