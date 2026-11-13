@@ -126,7 +126,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctrlClassDetailsWithFilter";
             this.Size = new System.Drawing.Size(937, 602);
-            this.Load += new System.EventHandler(this.ctrlClassDetailsWithFilter_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
