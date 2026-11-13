@@ -330,7 +330,7 @@ namespace DataAccessLayer
         public static bool IsEmployeeExistByPersonID(int PersonID)
         {
 
-            string query = @"select found=1 from Employees where PersonID=@PersonID;";
+            string query = @"select found=1 from Employees where IsActive=1 and PersonID=@PersonID;";
 
             try
             {
