@@ -52,7 +52,7 @@ namespace GymMangementSystem
                 return;
             }
 
-            if (e.MemberInfo.LastSubscriptionID == -1 || e.MemberInfo.LastSubscriptionInfo.Status != clsSubscription.enSubscriptionStatus.Active)
+            if (e.MemberInfo.LastSubscriptionInfo.Status != clsSubscription.enSubscriptionStatus.Active)
             {
                 MessageBox.Show("No Active Subscription found for this member.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -115,7 +115,7 @@ namespace GymMangementSystem
 
             if (dtStartDate.Value.Date > dtEndDate.Value.Date)
             {
-                MessageBox.Show("Start Date can not be greater then End Date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("End Date can not be older than Start Date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -149,13 +149,6 @@ namespace GymMangementSystem
 
         }
 
-        
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtFees_Validating(object sender, CancelEventArgs e)
         {
             if (!clsValidation.IsNumber(txtFees.Text.Trim()))
@@ -173,9 +166,5 @@ namespace GymMangementSystem
             
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
