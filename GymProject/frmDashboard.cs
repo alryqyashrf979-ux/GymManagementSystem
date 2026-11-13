@@ -106,7 +106,7 @@ namespace GymMangementSystem
 
         private void cancelSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddUpdateCancelSubscription frm = new frmAddUpdateCancelSubscription();
+            frmCancelSubscription frm = new frmCancelSubscription();
             frm.ShowDialog();
             _SelectbtnDashBoard();
         }
@@ -241,7 +241,7 @@ namespace GymMangementSystem
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAddUpdateCancelSubscription();
+            Form frm = new frmCancelSubscription();
             frm.ShowDialog();
         }
 

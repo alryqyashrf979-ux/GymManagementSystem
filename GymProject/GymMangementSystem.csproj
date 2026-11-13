@@ -186,11 +186,11 @@
     <Compile Include="People\frmAddUpdatePerson.Designer.cs">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Subscription\frmAddUpdateCancelSubscription.cs">
+    <Compile Include="Subscription\frmCancelSubscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subscription\frmAddUpdateCancelSubscription.Designer.cs">
-      <DependentUpon>frmAddUpdateCancelSubscription.cs</DependentUpon>
+    <Compile Include="Subscription\frmCancelSubscription.Designer.cs">
+      <DependentUpon>frmCancelSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\frmAddUpdateClass.cs">
       <SubType>Form</SubType>
@@ -494,8 +494,8 @@
     <EmbeddedResource Include="Subscription\frmAddSubscription.resx">
       <DependentUpon>frmAddSubscription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Subscription\frmAddUpdateCancelSubscription.resx">
-      <DependentUpon>frmAddUpdateCancelSubscription.cs</DependentUpon>
+    <EmbeddedResource Include="Subscription\frmCancelSubscription.resx">
+      <DependentUpon>frmCancelSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coaches\frmAddUpdateCoach.resx">
       <DependentUpon>frmAddUpdateCoach.cs</DependentUpon>

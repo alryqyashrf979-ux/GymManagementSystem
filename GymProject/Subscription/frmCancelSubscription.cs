@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class frmAddUpdateCancelSubscription : Form
+    public partial class frmCancelSubscription : Form
     {
-        public frmAddUpdateCancelSubscription()
+        public frmCancelSubscription()
         {
             InitializeComponent();
         }
 
         int _SelectedMember = -1;
-        public frmAddUpdateCancelSubscription(int selectedMember)
+        public frmCancelSubscription(int selectedMember)
         {
             InitializeComponent();
             _SelectedMember = selectedMember;
