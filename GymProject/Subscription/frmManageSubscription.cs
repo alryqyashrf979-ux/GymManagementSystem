@@ -231,15 +231,15 @@ namespace GymMangementSystem
                 return;
             }
 
-
-            freezeSubscriptionToolStripMenuItem.Enabled = (subscription.Status == clsSubscription.enSubscriptionStatus.Active);
-            changeSubscriptionToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active);
-            cancelSubscriptionToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active);
+            bool IsActive = (subscription.Status == clsSubscription.enSubscriptionStatus.Active); 
+            freezeSubscriptionToolStripMenuItem.Enabled = IsActive;
+            changeSubscriptionToolStripMenuItem.Enabled= IsActive;
+            cancelSubscriptionToolStripMenuItem.Enabled= IsActive;
             unFreezeToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Frozen);
            startSubscriptionToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Scheduled);
 
 
-            expiredToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active&&DateTime.Today.Date==subscription.ExpirationDate.Date);
+            expiredToolStripMenuItem.Enabled= (subscription.Status == clsSubscription.enSubscriptionStatus.Active&&DateTime.Today.CompareTo(subscription.ExpirationDate.Date)>=0);
 
 
 
