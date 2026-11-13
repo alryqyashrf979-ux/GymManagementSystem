@@ -138,7 +138,6 @@ namespace DataBusinessLayer
             double RefundFee=Rest-TotalRemaining;
             return (Math.Floor(RefundFee),(ElapsedDays),(Math.Floor(DailyFee * ElapsedDays)));
 
-                     //First item of tuple is a Refund and second item is how much price of elapsedDays
         }
 
     }
