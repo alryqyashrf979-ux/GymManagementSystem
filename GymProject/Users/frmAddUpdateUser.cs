@@ -143,7 +143,7 @@ namespace GymMangementSystem
                 return;
             }
 
-            tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+           
             uctPersonDetailsWithFilter1.LoadPersonInfo(_User.PersonID);
             lblPersonID.Text = _User.PersonID.ToString();
             tbUserName.Text = _User.UserName;
@@ -157,7 +157,7 @@ namespace GymMangementSystem
 
             CheckPermission();
 
-
+            btnNext_Click(null,null);
         }
 
         private void _SetCheckedValueForAllChkBox(bool CheckedValue)
