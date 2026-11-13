@@ -132,7 +132,7 @@ namespace GymMangementSystem
 
         private void btnAddNewPayment_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAddUpdatePayment();
+            Form frm = new frmAddPayment();
             frm.ShowDialog();
             _RefreshData();
         }
@@ -146,7 +146,7 @@ namespace GymMangementSystem
 
         private void addPaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAddUpdatePayment();
+            Form frm = new frmAddPayment();
             frm.ShowDialog();
             _RefreshData();
         }
