@@ -67,9 +67,9 @@ namespace GymMangementSystem
                 return;
             }
 
-            _LoadData();//Edit By aim
+            _LoadData();
         }
-        // Added by aim \
+     
         public void LoadPaymentBySubscriptionID(int SubscriptionID)
         {
             PaymentInfo = clsPayments.FindBySubscriptionID(SubscriptionID);
@@ -80,7 +80,7 @@ namespace GymMangementSystem
                 return;
             }
 
-            _LoadData();//Edit By aim
+            _LoadData();
         }
 
         private void lnkShowSubscriptionDetails_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
