@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,29 +44,34 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbExpired = new System.Windows.Forms.TabPage();
             this.dgvExpiredSubscriptions = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsExpiration = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showExpiringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblExpiredRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbFrozen = new System.Windows.Forms.TabPage();
             this.dgvFrozenSubscriptions = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showSubscriptionDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsFrozen = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showFrozenSubscriptionDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblFrozenRecord = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbCancelled = new System.Windows.Forms.TabPage();
             this.dgvCancelledSubscriptions = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showSubscriptionDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsCancellation = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCancelledRecord = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbChanged = new System.Windows.Forms.TabPage();
             this.dgvChangedSubscriptions = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showSubscriptionDetailsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsChange = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showChangeSubscriptionDetailsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblChangedRecord = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -81,16 +81,16 @@
             this.tabControl1.SuspendLayout();
             this.tbExpired.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpiredSubscriptions)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.cmsExpiration.SuspendLayout();
             this.tbFrozen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrozenSubscriptions)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
+            this.cmsFrozen.SuspendLayout();
             this.tbCancelled.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCancelledSubscriptions)).BeginInit();
-            this.contextMenuStrip3.SuspendLayout();
+            this.cmsCancellation.SuspendLayout();
             this.tbChanged.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChangedSubscriptions)).BeginInit();
-            this.contextMenuStrip4.SuspendLayout();
+            this.cmsChange.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -103,10 +103,11 @@
             this.tabControl1.Controls.Add(this.tbCancelled);
             this.tabControl1.Controls.Add(this.tbChanged);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(7, 48);
+            this.tabControl1.Location = new System.Drawing.Point(6, 38);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1169, 291);
+            this.tabControl1.Size = new System.Drawing.Size(935, 233);
             this.tabControl1.TabIndex = 1;
             // 
             // tbExpired
@@ -114,9 +115,10 @@
             this.tbExpired.Controls.Add(this.dgvExpiredSubscriptions);
             this.tbExpired.Controls.Add(this.lblExpiredRecord);
             this.tbExpired.Controls.Add(this.label2);
-            this.tbExpired.Location = new System.Drawing.Point(4, 34);
+            this.tbExpired.Location = new System.Drawing.Point(4, 28);
+            this.tbExpired.Margin = new System.Windows.Forms.Padding(2);
             this.tbExpired.Name = "tbExpired";
-            this.tbExpired.Size = new System.Drawing.Size(1161, 253);
+            this.tbExpired.Size = new System.Drawing.Size(927, 201);
             this.tbExpired.TabIndex = 4;
             this.tbExpired.Text = "Expired";
             this.tbExpired.UseVisualStyleBackColor = true;
@@ -126,56 +128,56 @@
             this.dgvExpiredSubscriptions.AllowUserToAddRows = false;
             this.dgvExpiredSubscriptions.AllowUserToDeleteRows = false;
             this.dgvExpiredSubscriptions.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.dgvExpiredSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvExpiredSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvExpiredSubscriptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvExpiredSubscriptions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvExpiredSubscriptions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExpiredSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExpiredSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvExpiredSubscriptions.ColumnHeadersHeight = 35;
             this.dgvExpiredSubscriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvExpiredSubscriptions.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExpiredSubscriptions.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvExpiredSubscriptions.ContextMenuStrip = this.cmsExpiration;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExpiredSubscriptions.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvExpiredSubscriptions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvExpiredSubscriptions.Location = new System.Drawing.Point(8, 8);
-            this.dgvExpiredSubscriptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvExpiredSubscriptions.Location = new System.Drawing.Point(6, 6);
+            this.dgvExpiredSubscriptions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvExpiredSubscriptions.Name = "dgvExpiredSubscriptions";
             this.dgvExpiredSubscriptions.ReadOnly = true;
             this.dgvExpiredSubscriptions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExpiredSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExpiredSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvExpiredSubscriptions.RowHeadersVisible = false;
             this.dgvExpiredSubscriptions.RowHeadersWidth = 65;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvExpiredSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvExpiredSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvExpiredSubscriptions.RowTemplate.Height = 35;
             this.dgvExpiredSubscriptions.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExpiredSubscriptions.Size = new System.Drawing.Size(1143, 211);
+            this.dgvExpiredSubscriptions.Size = new System.Drawing.Size(914, 169);
             this.dgvExpiredSubscriptions.TabIndex = 103;
             this.dgvExpiredSubscriptions.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvExpiredSubscriptions.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -189,33 +191,33 @@
             this.dgvExpiredSubscriptions.ThemeStyle.RowsStyle.Height = 35;
             this.dgvExpiredSubscriptions.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             // 
-            // contextMenuStrip1
+            // cmsExpiration
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(292, 42);
+            this.cmsExpiration.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsExpiration.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showExpiringToolStripMenuItem});
+            this.cmsExpiration.Name = "contextMenuStrip1";
+            this.cmsExpiration.Size = new System.Drawing.Size(250, 42);
             // 
-            // showToolStripMenuItem
+            // showExpiringToolStripMenuItem
             // 
-            this.showToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(291, 38);
-            this.showToolStripMenuItem.Text = "&Show Subscription Details";
-            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+            this.showExpiringToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showExpiringToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showExpiringToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showExpiringToolStripMenuItem.Name = "showExpiringToolStripMenuItem";
+            this.showExpiringToolStripMenuItem.Size = new System.Drawing.Size(249, 38);
+            this.showExpiringToolStripMenuItem.Text = "&Show Subscription Details";
+            this.showExpiringToolStripMenuItem.Click += new System.EventHandler(this.showExpiringToolStripMenuItem_Click);
             // 
             // lblExpiredRecord
             // 
             this.lblExpiredRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblExpiredRecord.AutoSize = true;
             this.lblExpiredRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpiredRecord.Location = new System.Drawing.Point(120, 223);
+            this.lblExpiredRecord.Location = new System.Drawing.Point(96, 178);
             this.lblExpiredRecord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblExpiredRecord.Name = "lblExpiredRecord";
-            this.lblExpiredRecord.Size = new System.Drawing.Size(49, 25);
+            this.lblExpiredRecord.Size = new System.Drawing.Size(38, 20);
             this.lblExpiredRecord.TabIndex = 101;
             this.lblExpiredRecord.Text = "N/A";
             // 
@@ -224,10 +226,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 222);
+            this.label2.Location = new System.Drawing.Point(6, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 25);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 100;
             this.label2.Text = "#Records:";
             // 
@@ -236,10 +238,11 @@
             this.tbFrozen.Controls.Add(this.dgvFrozenSubscriptions);
             this.tbFrozen.Controls.Add(this.lblFrozenRecord);
             this.tbFrozen.Controls.Add(this.label3);
-            this.tbFrozen.Location = new System.Drawing.Point(4, 34);
+            this.tbFrozen.Location = new System.Drawing.Point(4, 28);
+            this.tbFrozen.Margin = new System.Windows.Forms.Padding(2);
             this.tbFrozen.Name = "tbFrozen";
-            this.tbFrozen.Padding = new System.Windows.Forms.Padding(3);
-            this.tbFrozen.Size = new System.Drawing.Size(1161, 253);
+            this.tbFrozen.Padding = new System.Windows.Forms.Padding(2);
+            this.tbFrozen.Size = new System.Drawing.Size(927, 201);
             this.tbFrozen.TabIndex = 1;
             this.tbFrozen.Text = "Frozen";
             this.tbFrozen.UseVisualStyleBackColor = true;
@@ -249,56 +252,56 @@
             this.dgvFrozenSubscriptions.AllowUserToAddRows = false;
             this.dgvFrozenSubscriptions.AllowUserToDeleteRows = false;
             this.dgvFrozenSubscriptions.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvFrozenSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dgvFrozenSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvFrozenSubscriptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvFrozenSubscriptions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvFrozenSubscriptions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFrozenSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFrozenSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvFrozenSubscriptions.ColumnHeadersHeight = 35;
             this.dgvFrozenSubscriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvFrozenSubscriptions.ContextMenuStrip = this.contextMenuStrip2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFrozenSubscriptions.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFrozenSubscriptions.ContextMenuStrip = this.cmsFrozen;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFrozenSubscriptions.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvFrozenSubscriptions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvFrozenSubscriptions.Location = new System.Drawing.Point(8, 9);
-            this.dgvFrozenSubscriptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvFrozenSubscriptions.Location = new System.Drawing.Point(6, 7);
+            this.dgvFrozenSubscriptions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFrozenSubscriptions.Name = "dgvFrozenSubscriptions";
             this.dgvFrozenSubscriptions.ReadOnly = true;
             this.dgvFrozenSubscriptions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFrozenSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFrozenSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvFrozenSubscriptions.RowHeadersVisible = false;
             this.dgvFrozenSubscriptions.RowHeadersWidth = 65;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFrozenSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFrozenSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvFrozenSubscriptions.RowTemplate.Height = 35;
             this.dgvFrozenSubscriptions.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFrozenSubscriptions.Size = new System.Drawing.Size(1145, 210);
+            this.dgvFrozenSubscriptions.Size = new System.Drawing.Size(916, 168);
             this.dgvFrozenSubscriptions.TabIndex = 104;
             this.dgvFrozenSubscriptions.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvFrozenSubscriptions.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -312,33 +315,33 @@
             this.dgvFrozenSubscriptions.ThemeStyle.RowsStyle.Height = 35;
             this.dgvFrozenSubscriptions.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             // 
-            // contextMenuStrip2
+            // cmsFrozen
             // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showSubscriptionDetailsToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(292, 42);
+            this.cmsFrozen.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsFrozen.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showFrozenSubscriptionDetailsToolStripMenuItem});
+            this.cmsFrozen.Name = "contextMenuStrip2";
+            this.cmsFrozen.Size = new System.Drawing.Size(250, 42);
             // 
-            // showSubscriptionDetailsToolStripMenuItem
+            // showFrozenSubscriptionDetailsToolStripMenuItem
             // 
-            this.showSubscriptionDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showSubscriptionDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showSubscriptionDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showSubscriptionDetailsToolStripMenuItem.Name = "showSubscriptionDetailsToolStripMenuItem";
-            this.showSubscriptionDetailsToolStripMenuItem.Size = new System.Drawing.Size(291, 38);
-            this.showSubscriptionDetailsToolStripMenuItem.Text = "&Show Subscription Details";
-            this.showSubscriptionDetailsToolStripMenuItem.Click += new System.EventHandler(this.showSubscriptionDetailsToolStripMenuItem_Click);
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.Name = "showFrozenSubscriptionDetailsToolStripMenuItem";
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.Size = new System.Drawing.Size(249, 38);
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.Text = "&Show Subscription Details";
+            this.showFrozenSubscriptionDetailsToolStripMenuItem.Click += new System.EventHandler(this.showFrozenSubscriptionDetailsToolStripMenuItem_Click);
             // 
             // lblFrozenRecord
             // 
             this.lblFrozenRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFrozenRecord.AutoSize = true;
             this.lblFrozenRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrozenRecord.Location = new System.Drawing.Point(120, 223);
+            this.lblFrozenRecord.Location = new System.Drawing.Point(96, 178);
             this.lblFrozenRecord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFrozenRecord.Name = "lblFrozenRecord";
-            this.lblFrozenRecord.Size = new System.Drawing.Size(49, 25);
+            this.lblFrozenRecord.Size = new System.Drawing.Size(38, 20);
             this.lblFrozenRecord.TabIndex = 103;
             this.lblFrozenRecord.Text = "N/A";
             // 
@@ -347,10 +350,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 222);
+            this.label3.Location = new System.Drawing.Point(6, 178);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 102;
             this.label3.Text = "#Records:";
             // 
@@ -359,9 +362,10 @@
             this.tbCancelled.Controls.Add(this.dgvCancelledSubscriptions);
             this.tbCancelled.Controls.Add(this.lblCancelledRecord);
             this.tbCancelled.Controls.Add(this.label4);
-            this.tbCancelled.Location = new System.Drawing.Point(4, 34);
+            this.tbCancelled.Location = new System.Drawing.Point(4, 28);
+            this.tbCancelled.Margin = new System.Windows.Forms.Padding(2);
             this.tbCancelled.Name = "tbCancelled";
-            this.tbCancelled.Size = new System.Drawing.Size(1161, 253);
+            this.tbCancelled.Size = new System.Drawing.Size(927, 201);
             this.tbCancelled.TabIndex = 2;
             this.tbCancelled.Text = "Cancelled";
             this.tbCancelled.UseVisualStyleBackColor = true;
@@ -371,56 +375,56 @@
             this.dgvCancelledSubscriptions.AllowUserToAddRows = false;
             this.dgvCancelledSubscriptions.AllowUserToDeleteRows = false;
             this.dgvCancelledSubscriptions.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.dgvCancelledSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvCancelledSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvCancelledSubscriptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCancelledSubscriptions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvCancelledSubscriptions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCancelledSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCancelledSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCancelledSubscriptions.ColumnHeadersHeight = 35;
             this.dgvCancelledSubscriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCancelledSubscriptions.ContextMenuStrip = this.contextMenuStrip3;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCancelledSubscriptions.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvCancelledSubscriptions.ContextMenuStrip = this.cmsCancellation;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCancelledSubscriptions.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCancelledSubscriptions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCancelledSubscriptions.Location = new System.Drawing.Point(6, 10);
-            this.dgvCancelledSubscriptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCancelledSubscriptions.Location = new System.Drawing.Point(5, 8);
+            this.dgvCancelledSubscriptions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCancelledSubscriptions.Name = "dgvCancelledSubscriptions";
             this.dgvCancelledSubscriptions.ReadOnly = true;
             this.dgvCancelledSubscriptions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCancelledSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCancelledSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCancelledSubscriptions.RowHeadersVisible = false;
             this.dgvCancelledSubscriptions.RowHeadersWidth = 65;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCancelledSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCancelledSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvCancelledSubscriptions.RowTemplate.Height = 35;
             this.dgvCancelledSubscriptions.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCancelledSubscriptions.Size = new System.Drawing.Size(1151, 209);
+            this.dgvCancelledSubscriptions.Size = new System.Drawing.Size(921, 167);
             this.dgvCancelledSubscriptions.TabIndex = 106;
             this.dgvCancelledSubscriptions.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCancelledSubscriptions.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -434,33 +438,33 @@
             this.dgvCancelledSubscriptions.ThemeStyle.RowsStyle.Height = 35;
             this.dgvCancelledSubscriptions.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             // 
-            // contextMenuStrip3
+            // cmsCancellation
             // 
-            this.contextMenuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showSubscriptionDetailsToolStripMenuItem1});
-            this.contextMenuStrip3.Name = "contextMenuStrip3";
-            this.contextMenuStrip3.Size = new System.Drawing.Size(292, 42);
+            this.cmsCancellation.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsCancellation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1});
+            this.cmsCancellation.Name = "contextMenuStrip3";
+            this.cmsCancellation.Size = new System.Drawing.Size(250, 42);
             // 
-            // showSubscriptionDetailsToolStripMenuItem1
+            // showCancelledSubscriptionDetailsToolStripMenuItem1
             // 
-            this.showSubscriptionDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showSubscriptionDetailsToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showSubscriptionDetailsToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showSubscriptionDetailsToolStripMenuItem1.Name = "showSubscriptionDetailsToolStripMenuItem1";
-            this.showSubscriptionDetailsToolStripMenuItem1.Size = new System.Drawing.Size(291, 38);
-            this.showSubscriptionDetailsToolStripMenuItem1.Text = "&Show Subscription Details";
-            this.showSubscriptionDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showSubscriptionDetailsToolStripMenuItem1_Click);
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.Name = "showCancelledSubscriptionDetailsToolStripMenuItem1";
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.Size = new System.Drawing.Size(249, 38);
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.Text = "&Show Subscription Details";
+            this.showCancelledSubscriptionDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showCancelledSubscriptionDetailsToolStripMenuItem1_Click);
             // 
             // lblCancelledRecord
             // 
             this.lblCancelledRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCancelledRecord.AutoSize = true;
             this.lblCancelledRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCancelledRecord.Location = new System.Drawing.Point(119, 223);
+            this.lblCancelledRecord.Location = new System.Drawing.Point(95, 178);
             this.lblCancelledRecord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCancelledRecord.Name = "lblCancelledRecord";
-            this.lblCancelledRecord.Size = new System.Drawing.Size(49, 25);
+            this.lblCancelledRecord.Size = new System.Drawing.Size(38, 20);
             this.lblCancelledRecord.TabIndex = 105;
             this.lblCancelledRecord.Text = "N/A";
             // 
@@ -469,10 +473,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 222);
+            this.label4.Location = new System.Drawing.Point(5, 178);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 25);
+            this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 104;
             this.label4.Text = "#Records:";
             // 
@@ -481,9 +485,10 @@
             this.tbChanged.Controls.Add(this.dgvChangedSubscriptions);
             this.tbChanged.Controls.Add(this.lblChangedRecord);
             this.tbChanged.Controls.Add(this.label6);
-            this.tbChanged.Location = new System.Drawing.Point(4, 34);
+            this.tbChanged.Location = new System.Drawing.Point(4, 28);
+            this.tbChanged.Margin = new System.Windows.Forms.Padding(2);
             this.tbChanged.Name = "tbChanged";
-            this.tbChanged.Size = new System.Drawing.Size(1161, 253);
+            this.tbChanged.Size = new System.Drawing.Size(927, 201);
             this.tbChanged.TabIndex = 3;
             this.tbChanged.Text = "Changed";
             this.tbChanged.UseVisualStyleBackColor = true;
@@ -493,56 +498,56 @@
             this.dgvChangedSubscriptions.AllowUserToAddRows = false;
             this.dgvChangedSubscriptions.AllowUserToDeleteRows = false;
             this.dgvChangedSubscriptions.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            this.dgvChangedSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgvChangedSubscriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvChangedSubscriptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChangedSubscriptions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvChangedSubscriptions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChangedSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChangedSubscriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvChangedSubscriptions.ColumnHeadersHeight = 35;
             this.dgvChangedSubscriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvChangedSubscriptions.ContextMenuStrip = this.contextMenuStrip4;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChangedSubscriptions.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvChangedSubscriptions.ContextMenuStrip = this.cmsChange;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChangedSubscriptions.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvChangedSubscriptions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvChangedSubscriptions.Location = new System.Drawing.Point(7, 9);
-            this.dgvChangedSubscriptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvChangedSubscriptions.Location = new System.Drawing.Point(6, 7);
+            this.dgvChangedSubscriptions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvChangedSubscriptions.Name = "dgvChangedSubscriptions";
             this.dgvChangedSubscriptions.ReadOnly = true;
             this.dgvChangedSubscriptions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChangedSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChangedSubscriptions.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvChangedSubscriptions.RowHeadersVisible = false;
             this.dgvChangedSubscriptions.RowHeadersWidth = 65;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvChangedSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvChangedSubscriptions.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvChangedSubscriptions.RowTemplate.Height = 35;
             this.dgvChangedSubscriptions.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChangedSubscriptions.Size = new System.Drawing.Size(1147, 211);
+            this.dgvChangedSubscriptions.Size = new System.Drawing.Size(918, 169);
             this.dgvChangedSubscriptions.TabIndex = 108;
             this.dgvChangedSubscriptions.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvChangedSubscriptions.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -556,33 +561,33 @@
             this.dgvChangedSubscriptions.ThemeStyle.RowsStyle.Height = 35;
             this.dgvChangedSubscriptions.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             // 
-            // contextMenuStrip4
+            // cmsChange
             // 
-            this.contextMenuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showSubscriptionDetailsToolStripMenuItem2});
-            this.contextMenuStrip4.Name = "contextMenuStrip4";
-            this.contextMenuStrip4.Size = new System.Drawing.Size(292, 42);
+            this.cmsChange.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsChange.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showChangeSubscriptionDetailsToolStripMenuItem2});
+            this.cmsChange.Name = "contextMenuStrip4";
+            this.cmsChange.Size = new System.Drawing.Size(250, 42);
             // 
-            // showSubscriptionDetailsToolStripMenuItem2
+            // showChangeSubscriptionDetailsToolStripMenuItem2
             // 
-            this.showSubscriptionDetailsToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
-            this.showSubscriptionDetailsToolStripMenuItem2.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
-            this.showSubscriptionDetailsToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showSubscriptionDetailsToolStripMenuItem2.Name = "showSubscriptionDetailsToolStripMenuItem2";
-            this.showSubscriptionDetailsToolStripMenuItem2.Size = new System.Drawing.Size(291, 38);
-            this.showSubscriptionDetailsToolStripMenuItem2.Text = "&Show Subscription Details";
-            this.showSubscriptionDetailsToolStripMenuItem2.Click += new System.EventHandler(this.showSubscriptionDetailsToolStripMenuItem2_Click);
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F);
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.Image = global::GymMangementSystem.Properties.Resources.showٍSubscription_details_32x32;
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.Name = "showChangeSubscriptionDetailsToolStripMenuItem2";
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.Size = new System.Drawing.Size(249, 38);
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.Text = "&Show Subscription Details";
+            this.showChangeSubscriptionDetailsToolStripMenuItem2.Click += new System.EventHandler(this.showChangeSubscriptionDetailsToolStripMenuItem2_Click);
             // 
             // lblChangedRecord
             // 
             this.lblChangedRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblChangedRecord.AutoSize = true;
             this.lblChangedRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChangedRecord.Location = new System.Drawing.Point(119, 223);
+            this.lblChangedRecord.Location = new System.Drawing.Point(95, 178);
             this.lblChangedRecord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChangedRecord.Name = "lblChangedRecord";
-            this.lblChangedRecord.Size = new System.Drawing.Size(49, 25);
+            this.lblChangedRecord.Size = new System.Drawing.Size(38, 20);
             this.lblChangedRecord.TabIndex = 107;
             this.lblChangedRecord.Text = "N/A";
             // 
@@ -591,10 +596,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 222);
+            this.label6.Location = new System.Drawing.Point(5, 178);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 25);
+            this.label6.Size = new System.Drawing.Size(91, 20);
             this.label6.TabIndex = 106;
             this.label6.Text = "#Records:";
             // 
@@ -607,10 +612,9 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.tabControl1);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1179, 348);
+            this.guna2Panel1.Size = new System.Drawing.Size(943, 278);
             this.guna2Panel1.TabIndex = 2;
             // 
             // guna2Panel3
@@ -622,9 +626,9 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(229)))), ((int)(((byte)(242)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1179, 44);
+            this.guna2Panel3.Size = new System.Drawing.Size(943, 35);
             this.guna2Panel3.TabIndex = 129;
             // 
             // label8
@@ -632,50 +636,48 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(51, 11);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(41, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(219, 27);
+            this.label8.Size = new System.Drawing.Size(179, 21);
             this.label8.TabIndex = 54;
             this.label8.Text = "Subscriptions History";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::GymMangementSystem.Properties.Resources.ManageSubscpritions;
-            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(46, 37);
+            this.pictureBox7.Size = new System.Drawing.Size(37, 30);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
             // 
             // ctrlSubscriptionsHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlSubscriptionsHistory";
-            this.Size = new System.Drawing.Size(1186, 356);
-            this.Load += new System.EventHandler(this.ctrlSubscriptionsHistory_Load);
+            this.Size = new System.Drawing.Size(949, 285);
             this.tabControl1.ResumeLayout(false);
             this.tbExpired.ResumeLayout(false);
             this.tbExpired.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpiredSubscriptions)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.cmsExpiration.ResumeLayout(false);
             this.tbFrozen.ResumeLayout(false);
             this.tbFrozen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrozenSubscriptions)).EndInit();
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.cmsFrozen.ResumeLayout(false);
             this.tbCancelled.ResumeLayout(false);
             this.tbCancelled.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCancelledSubscriptions)).EndInit();
-            this.contextMenuStrip3.ResumeLayout(false);
+            this.cmsCancellation.ResumeLayout(false);
             this.tbChanged.ResumeLayout(false);
             this.tbChanged.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChangedSubscriptions)).EndInit();
-            this.contextMenuStrip4.ResumeLayout(false);
+            this.cmsChange.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -706,13 +708,13 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem showSubscriptionDetailsToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
-        private System.Windows.Forms.ToolStripMenuItem showSubscriptionDetailsToolStripMenuItem1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
-        private System.Windows.Forms.ToolStripMenuItem showSubscriptionDetailsToolStripMenuItem2;
+        private System.Windows.Forms.ContextMenuStrip cmsExpiration;
+        private System.Windows.Forms.ToolStripMenuItem showExpiringToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip cmsFrozen;
+        private System.Windows.Forms.ToolStripMenuItem showFrozenSubscriptionDetailsToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip cmsCancellation;
+        private System.Windows.Forms.ToolStripMenuItem showCancelledSubscriptionDetailsToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip cmsChange;
+        private System.Windows.Forms.ToolStripMenuItem showChangeSubscriptionDetailsToolStripMenuItem2;
     }
 }

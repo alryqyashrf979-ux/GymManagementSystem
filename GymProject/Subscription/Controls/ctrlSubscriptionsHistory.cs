@@ -59,32 +59,25 @@ namespace GymMangementSystem
 
         }
 
-
-        private void ctrlSubscriptionsHistory_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void showToolStripMenuItem_Click(object sender, EventArgs e)
+        private void showExpiringToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmShowSubscriptionDetails frm = new frmShowSubscriptionDetails((int)dgvExpiredSubscriptions.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
 
-        private void showSubscriptionDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void showFrozenSubscriptionDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmShowSubscriptionDetails frm = new frmShowSubscriptionDetails((int)dgvFrozenSubscriptions.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
-
         }
 
-        private void showSubscriptionDetailsToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void showCancelledSubscriptionDetailsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmShowSubscriptionDetails frm = new frmShowSubscriptionDetails((int)dgvCancelledSubscriptions.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
 
-        private void showSubscriptionDetailsToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void showChangeSubscriptionDetailsToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmShowSubscriptionDetails frm = new frmShowSubscriptionDetails((int)dgvChangedSubscriptions.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
