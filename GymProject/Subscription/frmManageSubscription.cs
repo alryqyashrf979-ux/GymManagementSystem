@@ -159,7 +159,7 @@ namespace GymMangementSystem
                 return;
             }
 
-           frmAddUpdateCancelSubscription frm = new frmAddUpdateCancelSubscription(subscription.MemberID);
+           frmCancelSubscription frm = new frmCancelSubscription(subscription.MemberID);
             frm.ShowDialog();
             _RefreshDataTable();
 
