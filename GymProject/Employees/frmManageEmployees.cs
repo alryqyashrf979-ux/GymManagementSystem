@@ -45,8 +45,13 @@ namespace GymMangementSystem
             cmIsActive.Visible = cmSelectTypeOfFiltering.Text == "Is Active";
             dtpDate.Visible = cmSelectTypeOfFiltering.Text == "Hired Date";
             cmShiftType.Visible = cmSelectTypeOfFiltering.Text == "Shift Type";
-            txtFiltering.Clear();
-            txtFiltering.Focus();
+
+            if (txtFiltering.Visible)
+            {
+                txtFiltering.Clear();
+                txtFiltering.Focus();
+            }
+
             _dtAllEmployees.DefaultView.RowFilter = "";
             lblRecord.Text = dgvEmployees.Rows.Count.ToString();
         }
@@ -162,6 +167,21 @@ namespace GymMangementSystem
 
         }
 
+        private void terminateEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Index = (int)dgvEmployees.CurrentRow.Cells[0].Value;
+            clsEmployees EmployeeInfo = clsEmployees.FindByEmployeeID(Index);
+            if (EmployeeInfo == null)
+            {
+                MessageBox.Show($"No Employee with employee id : {Index}", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            if (EmployeeInfo.TerminateEmployee())
+            {
+                MessageBox.Show("Terminated successfully", "Terminated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _RefreshData();
+            }
+        }
     }
 }
