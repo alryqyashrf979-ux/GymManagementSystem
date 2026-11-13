@@ -36,29 +36,7 @@ namespace GymMangementSystem
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            StringBuilder ColumnName = new StringBuilder();
-            switch (cbValue.Text)
-            {
-                //case "Class Registeration ID":
-                //    ColumnName.Append("Class Registeration ID");
-                //    break;
-
-                //case "Member Name":
-                //    ColumnName.Append("Member Name");
-                //    break;
-
-                //case "Class Name":
-                //    ColumnName.Append("Class Name");
-                //    break;
-
-                case "Start Time":
-                    ColumnName.Append("StartTime");
-                    break;
-
-                case "Registeration Date":
-                    ColumnName.Append("RegisterationDate");
-                    break;
-            }
+          
 
             if (string.IsNullOrEmpty(txtSearch.Text))
             {
