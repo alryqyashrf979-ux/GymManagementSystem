@@ -108,7 +108,7 @@ namespace GymMangementSystem
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (cbValue.Text == "Class ID" || cbValue.Text == "Capacity")
-                e.Handled = !char.IsControl(e.KeyChar) && char.IsLetter(e.KeyChar);
+                e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
 
         private void button1_Click(object sender, EventArgs e)
