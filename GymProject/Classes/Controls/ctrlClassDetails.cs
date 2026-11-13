@@ -36,11 +36,7 @@ namespace GymMangementSystem
             lblEndTIme.Text = "???";
             lblIsActive.Text = "???";
         }
-        private void ctrlClassDetails_Load(object sender, EventArgs e)
-        {
-           
-        }
-
+       
         public void LoadClassInfo(int ClassID)
         {
             ClassInfo = clsClasses.Find(ClassID);
