@@ -99,7 +99,6 @@
             this.ctrlSubscriptionDetails1.Size = new System.Drawing.Size(1084, 338);
             this.ctrlSubscriptionDetails1.StartDate = new System.DateTime(2026, 11, 6, 0, 0, 0, 0);
             this.ctrlSubscriptionDetails1.TabIndex = 0;
-            this.ctrlSubscriptionDetails1.Load += new System.EventHandler(this.ctrlSubscriptionDetails1_Load);
             // 
             // btnClose
             // 

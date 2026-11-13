@@ -25,11 +25,6 @@ namespace GymMangementSystem
             ctrlSubscriptionDetails1.EnableStartDate = false;
         }
 
-        private void ctrlSubscriptionDetails1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
