@@ -98,7 +98,7 @@ namespace GymMangementSystem
 
         private void freezeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddUpdateFrozenSubscription frm =new frmAddUpdateFrozenSubscription();
+            frmFreezeSubscription frm =new frmFreezeSubscription();
             frm.ShowDialog();
             _SelectbtnDashBoard();
 
@@ -247,7 +247,7 @@ namespace GymMangementSystem
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAddUpdateFrozenSubscription();
+            Form frm = new frmFreezeSubscription();
             frm.ShowDialog();
         }
     }

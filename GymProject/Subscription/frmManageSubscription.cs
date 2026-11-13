@@ -196,7 +196,7 @@ namespace GymMangementSystem
             }
 
 
-            frmAddUpdateFrozenSubscription frm = new frmAddUpdateFrozenSubscription(subscription.MemberID);
+            frmFreezeSubscription frm = new frmFreezeSubscription(subscription.MemberID);
             frm.ShowDialog();
             _RefreshDataTable();
         }

@@ -12,19 +12,19 @@ using System.Windows.Forms;
 
 namespace GymMangementSystem
 {
-    public partial class frmAddUpdateFrozenSubscription : Form
+    public partial class frmFreezeSubscription : Form
     {
 
        
        
 
-        public frmAddUpdateFrozenSubscription()
+        public frmFreezeSubscription()
         {
             InitializeComponent();
         }
 
         int _selectedMember = -1;
-        public frmAddUpdateFrozenSubscription(int selectedMember)
+        public frmFreezeSubscription(int selectedMember)
         {
             InitializeComponent();
             _selectedMember = selectedMember;
