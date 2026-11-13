@@ -13,11 +13,10 @@ namespace GymMangementSystem
 {
     public partial class ctrlUserDetails : UserControl
     {
-       private clsUsers _User;
 
         public clsUsers UserInfo
         {
-            get { return _User; }
+            get;private set;
         }
 
         public ctrlUserDetails()
@@ -28,16 +27,16 @@ namespace GymMangementSystem
 
         public void LoadUserInfo(int UserID)
         {
-            _User = clsUsers.FindByUserID(UserID);
-            if (_User == null)
+            UserInfo = clsUsers.FindByUserID(UserID);
+            if (UserInfo == null)
             {
                 MessageBox.Show($"No user with user id = {UserID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            uctPersonDetails1.LoadPersonInfo(_User.PersonID);
-            lblUsername.Text = _User.UserName;
+            uctPersonDetails1.LoadPersonInfo(UserInfo.PersonID);
+            lblUsername.Text = UserInfo.UserName;
             lblUserID.Text = UserID.ToString();
-            if (_User.IsActive)
+            if (UserInfo.IsActive)
             {
                 lblsActive.Text = "Yes";
                 lblsActive.BackColor=Color.FromArgb(220, 252, 231);
@@ -48,14 +47,6 @@ namespace GymMangementSystem
                 lblsActive.BackColor = Color.FromArgb(199,123,123);
             }
         }
-        private void ctrlUserDetails_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }

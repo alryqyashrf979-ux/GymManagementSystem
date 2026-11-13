@@ -93,10 +93,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dgvShowMembersInLast15DaysList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Membership = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.lblExpiringSubscription = new System.Windows.Forms.Label();
@@ -131,6 +127,10 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.MemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Membership = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -1147,7 +1147,7 @@
             this.dgvShowMembersInLast15DaysList.ColumnHeadersHeight = 35;
             this.dgvShowMembersInLast15DaysList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvShowMembersInLast15DaysList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.MemberName,
             this.Membership,
             this.Status,
             this.JoinDate});
@@ -1195,38 +1195,6 @@
             this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.Height = 35;
             this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            // 
-            // Name
-            // 
-            this.Name.DataPropertyName = "Name";
-            this.Name.FillWeight = 173.7496F;
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // Membership
-            // 
-            this.Membership.DataPropertyName = "Membership";
-            this.Membership.FillWeight = 87.76317F;
-            this.Membership.HeaderText = "Membership";
-            this.Membership.Name = "Membership";
-            this.Membership.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.FillWeight = 57.26897F;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // JoinDate
-            // 
-            this.JoinDate.DataPropertyName = "Join Date";
-            this.JoinDate.FillWeight = 81.21827F;
-            this.JoinDate.HeaderText = "Join Date";
-            this.JoinDate.Name = "JoinDate";
-            this.JoinDate.ReadOnly = true;
             // 
             // guna2Panel6
             // 
@@ -1546,7 +1514,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.lblUserName.Location = new System.Drawing.Point(403, 68);
             this.lblUserName.Name = "lblUserName";
@@ -1622,6 +1590,38 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // MemberName
+            // 
+            this.MemberName.DataPropertyName = "Name";
+            this.MemberName.FillWeight = 173.7496F;
+            this.MemberName.HeaderText = "Member Name";
+            this.MemberName.Name = "MemberName";
+            this.MemberName.ReadOnly = true;
+            // 
+            // Membership
+            // 
+            this.Membership.DataPropertyName = "Membership";
+            this.Membership.FillWeight = 87.76317F;
+            this.Membership.HeaderText = "Membership";
+            this.Membership.Name = "Membership";
+            this.Membership.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.FillWeight = 57.26897F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // JoinDate
+            // 
+            this.JoinDate.DataPropertyName = "Join Date";
+            this.JoinDate.FillWeight = 81.21827F;
+            this.JoinDate.HeaderText = "Join Date";
+            this.JoinDate.Name = "JoinDate";
+            this.JoinDate.ReadOnly = true;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1634,6 +1634,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Gym Management System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1748,10 +1749,6 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2DataGridView dgvShowMembersInLast15DaysList;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Membership;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JoinDate;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label7;
@@ -1771,5 +1768,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MemberName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Membership;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JoinDate;
     }
 }
