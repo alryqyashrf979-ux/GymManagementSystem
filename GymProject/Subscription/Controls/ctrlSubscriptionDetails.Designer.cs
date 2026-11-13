@@ -523,7 +523,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlSubscriptionDetails";
             this.Size = new System.Drawing.Size(1082, 345);
-            this.Load += new System.EventHandler(this.ctrlSubscriptionDetails_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
