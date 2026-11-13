@@ -35,16 +35,6 @@ namespace GymMangementSystem
                 _SeletedMember();
         }
 
-        private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
-        {
-
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ctrlMemberBasicDetailsWithFilter1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
         {
             btnNext.Enabled = false;
@@ -56,11 +46,11 @@ namespace GymMangementSystem
 
             if (e.MemberInfo.LastSubscriptionID == -1)
             {
-                MessageBox.Show("this Member does not has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("this Member does not has a Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (e.MemberInfo.LastSubscriptionID == -1 || e.MemberInfo.LastSubscriptionInfo.Status != clsSubscription.enSubscriptionStatus.Active)
+            if ( e.MemberInfo.LastSubscriptionInfo.Status != clsSubscription.enSubscriptionStatus.Active)
             {
                 MessageBox.Show("No Active Subscription found for this member.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -90,6 +80,14 @@ namespace GymMangementSystem
         {
 
 
+            if (!clsPayments.IsPaymentStatusCompeleted(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID))
+            {
+                MessageBox.Show("The member has an outstanding balance on their current subscription.\n\n please" +
+                    " ensure all outstanding payments are completed before changing the subscription plan",
+                    "Cannot Change Subscription Plan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
 
 
             if (ctrlSubscriptionPlanDetailsWithFiltering1.SelectedPlan.PlanPrice < ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionInfo.Price)
@@ -99,14 +97,6 @@ namespace GymMangementSystem
             }
 
 
-            if (!clsPayments.IsPaymentStatusCompeleted(ctrlMemberBasicDetailsWithFilter1.MemberInfo.LastSubscriptionID))
-            {
-                MessageBox.Show("The member has an outstanding balance on their current subscription.\n\n please" +
-                    " ensure all outstanding payments are completed before changing the subscription plan",
-                    "Cannot Change Subscription Plan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
 
             if (MessageBox.Show("Are You Sure you want to Freeze this Subscription ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
