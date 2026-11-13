@@ -29,15 +29,6 @@ namespace GymMangementSystem
             _Mode = enMode.Update;
         }
 
-
-
-
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ctrlEmployeeDetailsWithFiltering1_OnEmployeeSelected(object sender, ctrlEmployeeDetailsWithFiltering.EmployeeEventArgs e)
         {
             btnSave.Enabled = false;
