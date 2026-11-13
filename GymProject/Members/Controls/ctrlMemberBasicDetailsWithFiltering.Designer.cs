@@ -80,7 +80,6 @@
             this.txtFiltering.SelectedText = "";
             this.txtFiltering.Size = new System.Drawing.Size(291, 35);
             this.txtFiltering.TabIndex = 90;
-            this.txtFiltering.TextChanged += new System.EventHandler(this.txtFiltering_TextChanged);
             this.txtFiltering.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltering_KeyPress);
             // 
             // btnAddNewMember
