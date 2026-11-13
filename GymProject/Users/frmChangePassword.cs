@@ -21,11 +21,7 @@ namespace GymMangementSystem
             ctrlUserDetails1.LoadUserInfo(UserID);
         }
 
-        private void frmChangePassword_Load(object sender, EventArgs e)
-        {
-           
-        }
-
+      
         private void txtCurrentPassword_Validating(object sender, CancelEventArgs e)
         {
             if (clsHashing.Hashing(txtCurrentPassword.Text) != ctrlUserDetails1.UserInfo.Password)
