@@ -61,7 +61,7 @@ namespace GymMangementSystem
             }
 
             lblTitle2.Text = "Update SubscriPtion";
-            this.Text = "Update Subscription";
+            this.Text = lblTitle2.Text;
 
             ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_Subscription.MemberID);
             ctrlSubscriptionDetails1.LoadSubscriptionDetails(_SubscriptionID);
@@ -81,7 +81,7 @@ namespace GymMangementSystem
 
             _Subscription = new clsSubscription();
             this.Text = "Add Subscription";
-            lblTitle2.Text = "Add Subscription";
+            lblTitle2.Text = this.Text;
             ctrlSubscriptionDetails1.EnableStartDate = true;
             tpSubscriptionInfo.Enabled = false ;
 
@@ -158,7 +158,7 @@ namespace GymMangementSystem
                 AddedSubscription?.Invoke(this, _Subscription);
 
                 lblTitle2.Text = "Update SubscriPtion";
-                this.Text = "Update Subscription";
+                this.Text = lblTitle2.Text;
 
                 MessageBox.Show("Data saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -182,11 +182,6 @@ namespace GymMangementSystem
             else
                 MessageBox.Show("Faild Save Data", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-
-
-
-
         }
 
         private void ctrlMemberDetailsWithFiltering1_OnMemberSelected(object sender, ctrlMemberBasicDetailsWithFilter.MemberEventArgs e)
@@ -199,7 +194,7 @@ namespace GymMangementSystem
 
                 if (clsSubscription.HasExistingSubscription(ctrlMemberDetailsWithFiltering1.MemberID))
                 {
-                    MessageBox.Show("Selected Member already has an Existing Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Selected Member already has a Subscription, choose another one.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlMemberDetailsWithFiltering1.Focus();
                     btnNext.Enabled = false;
                     btnSave.Enabled = false;
