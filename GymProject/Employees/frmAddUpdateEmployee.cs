@@ -138,5 +138,17 @@ namespace GymMangementSystem
         {
             this.Close();
         }
+
+        private void cmTitle_Validating(object sender, CancelEventArgs e)
+        {
+            if (cmTitle.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(cmTitle, "Please Select Title!");
+            }
+            else
+                errorProvider1.SetError(cmTitle, "");
+
+        }
     }
 }

@@ -184,9 +184,9 @@ namespace GymMangementSystem
         }
 
 
-        void AddedSubscription(object Sender,clsSubscription AddedSusbcription )
+        void AddedSubscription(object Sender, clsSubscription AddedSusbcription)
         {
-           _Member.LastSubscriptionID= AddedSusbcription.SubscriptionID;
+            _Member.LastSubscriptionID = AddedSusbcription.SubscriptionID;
             lblLastSubscriptionID.Text = AddedSusbcription.SubscriptionID.ToString();
             _LastSubscriptionID = AddedSusbcription.SubscriptionID;
             lnkAddSubscription.Enabled = false;
@@ -217,22 +217,21 @@ namespace GymMangementSystem
         private void uctPersonDetailsWithFilter1_OnPersonSelected(object sender, ctrlPersonDetailsWithFilter.PersonEventArg e)
         {
             btnNext.Enabled = false;
+            btnSave.Enabled = false;
+            tpMemberInfo.Enabled = false;
 
-            if(e.PersonInfo!=null)
-            if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
-            {
+            if (e.PersonInfo != null)
+                if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
+                {
 
-                MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnSave.Enabled = false;
-                tpMemberInfo.Enabled = false;
-                btnNext.Enabled = false;
-                uctPersonDetailsWithFilter1.FocusOnTbSearch();
+                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    uctPersonDetailsWithFilter1.FocusOnTbSearch();
 
 
-            }
+                }
                 else
                 {
-                    btnNext.Enabled = true ;
+                    btnNext.Enabled = true;
                 }
           
 
