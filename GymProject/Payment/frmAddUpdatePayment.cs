@@ -42,12 +42,7 @@ namespace GymMangementSystem
         }
         private void _LoadData()
         {
-            //_MemberInfo = clsMembers.FindMemberUsingMemberID(_MemberID);
-            //if (_MemberInfo == null)
-            //{
-            //    MessageBox.Show($"Member with ID {_MemberID} not Found !", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+           
 
             ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberID);
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
@@ -76,19 +71,13 @@ namespace GymMangementSystem
             btnSave.Enabled = false;
             btnNext.Enabled = false;
             tpPaymentInfo.Enabled = false;
-            //aim
-
+           
             if (e.MemberInfo == null) return;
 
-            //if (e.MemberInfo == null)
-            //{ 
-            //    tpPaymentInfo.Enabled = false;
-
-            //}
 
             if (ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID == -1)
             {
-                MessageBox.Show("This member does not has an Existing Subscription", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("This member does not has a Subscription", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -154,13 +143,6 @@ namespace GymMangementSystem
 
 
             double PreviousPaymentAmount = ctrlPaymentDetails1.PaymentInfo == null ? 0 : ctrlPaymentDetails1.PaymentInfo.PaymentAmount;
-
-
-
-            //_PaymentInfo.TotalRemaining = clsPayments.CalculteTotalRemaining(_PaymentInfo.ActualAmount, OldPaymentAmount, _PaymentInfo.PaymentAmount);
-
-            //_PaymentInfo.Status = (_PaymentInfo.TotalRemaining == 0) ? clsPayments.enStatus.Completed : clsPayments.enStatus.Pending;
-
 
 
 
