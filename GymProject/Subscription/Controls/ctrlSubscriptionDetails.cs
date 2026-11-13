@@ -138,10 +138,6 @@ namespace GymMangementSystem
             _LoadData();
         }
 
-        private void ctrlSubscriptionDetails_Load(object sender, EventArgs e)
-        {
-        }
-
         private void lnkShowUserInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmShowUserDetails frm = new frmShowUserDetails(_SubscriptionInfo.createdByUserID);
