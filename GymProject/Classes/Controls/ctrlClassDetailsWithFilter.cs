@@ -82,9 +82,5 @@ namespace GymMangementSystem
             }
         }
 
-        private void ctrlClassDetailsWithFilter_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

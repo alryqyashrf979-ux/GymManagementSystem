@@ -588,7 +588,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctrlClassDetails";
             this.Size = new System.Drawing.Size(904, 486);
-            this.Load += new System.EventHandler(this.ctrlClassDetails_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox11)).EndInit();
