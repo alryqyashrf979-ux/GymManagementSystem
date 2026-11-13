@@ -87,15 +87,5 @@ namespace GymMangementSystem
 
         }
 
-
-        private void lnkShowLastSubscriptionInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MessageBox.Show("Not Emplemented...");
-        }
-
-        private void ctrlMemberBasicDetails1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
