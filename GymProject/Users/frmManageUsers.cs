@@ -49,10 +49,7 @@ namespace GymMangementSystem
             }
 
             lblRecord.Text = dgvShowUserList.Rows.Count.ToString() ;
-            tbSearch.Visible = !(cbValue.Text == "None" || cbValue.Text == "Is Active");
-            cbIsActive.Visible = (cbValue.Text == "Is Active");
-
-
+          
         }
 
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +58,7 @@ namespace GymMangementSystem
             tbSearch.Visible = !(cbValue.Text == "None"||cbValue.Text=="Is Active");
             cbIsActive.Visible = (cbValue.Text == "Is Active");
 
-            if (cbValue.Visible)
+            if (tbSearch.Visible)
             {
                 tbSearch.Focus();
             }
@@ -93,9 +90,7 @@ namespace GymMangementSystem
                     Filtering.Append("FullName");
                     break;
 
-                case "Is Active":
-                    Filtering.Append("IsActive");
-                    break;
+        
             }
 
             if (string.IsNullOrEmpty(tbSearch.Text))
@@ -157,19 +152,7 @@ namespace GymMangementSystem
             this.Close();
         }
 
-        private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frm =new frmShowUserDetails((int)dgvShowUserList.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-        }
-
-        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frm = new frmAddUpdateUser();
-            frm.ShowDialog();
-            _RefreshData();
-        }
-
+      
         private void btnAddUpdateUser_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddUpdateUser();
@@ -177,14 +160,35 @@ namespace GymMangementSystem
             _RefreshData();
         }
 
-        private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form frm = new frmChangePassword((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void UserDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmShowUserDetails((int)dgvShowUserList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void addUserToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdateUser();
+            frm.ShowDialog();
+            _RefreshData();
+        }
+
+        private void updateUserToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Form frm = new frmAddUpdateUser((int)dgvShowUserList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefreshData();
         }
 
-        private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void deleteUserToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             int Index = (int)dgvShowUserList.CurrentRow.Cells[0].Value;
             if (MessageBox.Show("Are you sure you want to delete user [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
@@ -196,13 +200,6 @@ namespace GymMangementSystem
                 else
                     MessageBox.Show("User was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        }
-
-        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Form frm = new frmChangePassword((int)dgvShowUserList.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            _RefreshData();
         }
     }
 }
