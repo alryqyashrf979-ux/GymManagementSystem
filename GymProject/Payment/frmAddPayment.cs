@@ -12,17 +12,17 @@ using static DataBusinessLayer.clsPayments;
 
 namespace GymMangementSystem
 {
-    public partial class frmAddUpdatePayment : Form
+    public partial class frmAddPayment : Form
     {
         enum enMode { ExistSubscription, NewSubscription }
         private enMode _Mode = enMode.ExistSubscription;
         private int _MemberID=-1;
-        public frmAddUpdatePayment()
+        public frmAddPayment()
         {
             InitializeComponent();
             _Mode = enMode.ExistSubscription;
         }
-        public frmAddUpdatePayment(int MemberID)
+        public frmAddPayment(int MemberID)
         {
             InitializeComponent();
             _Mode = enMode.NewSubscription;
