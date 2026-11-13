@@ -66,7 +66,6 @@
             this.ctrlMemberBasicDetails1.Name = "ctrlMemberBasicDetails1";
             this.ctrlMemberBasicDetails1.Size = new System.Drawing.Size(1190, 569);
             this.ctrlMemberBasicDetails1.TabIndex = 118;
-            this.ctrlMemberBasicDetails1.Load += new System.EventHandler(this.ctrlMemberBasicDetails1_Load);
             // 
             // ctrlMemebrDetails
             // 
