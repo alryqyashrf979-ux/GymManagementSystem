@@ -24,6 +24,8 @@ namespace GymMangementSystem
         {
             _AllUsers = clsUsers.GetAllUsers();
             dgvShowUserList.DataSource = _AllUsers;
+            lblRecord.Text = dgvShowUserList.Rows.Count.ToString();
+
         }
         private void frmManageUsers_Load(object sender, EventArgs e)
         {
@@ -48,7 +50,6 @@ namespace GymMangementSystem
                 dgvShowUserList.Columns[4].Width = 100;
             }
 
-            lblRecord.Text = dgvShowUserList.Rows.Count.ToString() ;
           
         }
 

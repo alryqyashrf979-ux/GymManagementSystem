@@ -67,8 +67,9 @@ namespace GymMangementSystem
             lblPersonID.Text = "[???]";
             lblUserID.Text = "[???]";
             _SetCheckedValueForAllChkBox(false);
-            rbActive.Checked = true;
-            rbNo.Checked = true;
+
+            tpLoginInfo.Enabled = false;
+            btnSave.Enabled = false;
         }
 
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
@@ -96,14 +97,15 @@ namespace GymMangementSystem
                 {
                     MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     uctPersonDetailsWithFilter1.FocusOnTbSearch();
+                    tpLoginInfo.Enabled = false;
+                    btnSave.Enabled = false;
                 }
                 else
                 {
-                    tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
                     btnSave.Enabled = true;
                     tpLoginInfo.Enabled = true;
-                    lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
                     tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+                    lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
                 }
             }
             else
@@ -234,7 +236,7 @@ namespace GymMangementSystem
 
             _User.Permission = Convert.ToSByte(_Permission);
             _User.IsActive = rbActive.Checked;
-            _User.PersonID = Convert.ToInt32(lblPersonID.Text.Trim());
+            _User.PersonID = uctPersonDetailsWithFilter1.PersonID;
 
             if (_User.Save())
             {
