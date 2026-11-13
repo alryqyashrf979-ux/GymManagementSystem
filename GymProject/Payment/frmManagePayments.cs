@@ -31,10 +31,6 @@ namespace GymMangementSystem
 
         }
 
-        private void dgvPayment_Click(object sender, EventArgs e)
-        {
-        }
-
         private void cbValue_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbMethod.Visible = (cbValue.Text == "Method");

@@ -207,7 +207,6 @@
             this.dgvPayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPayment.Click += new System.EventHandler(this.dgvPayment_Click);
             // 
             // PaymentID
             // 
