@@ -327,10 +327,89 @@ namespace DataAccessLayer
             return false;
         }
 
+        public static bool IsEmployeeExistByPersonID(int PersonID)
+        {
+
+            string query = @"select found=1 from Employees where PersonID=@PersonID;";
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    conn.Open();
+
+                    using (SqlCommand com = new SqlCommand(query, conn))
+                    {
+
+
+                        com.Parameters.AddWithValue("@PersonID", PersonID);
+
+                        SqlDataReader Read = com.ExecuteReader();
+
+                        return Read.HasRows;
+
+
+                    }
+
+
+                }
 
 
 
-        
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+
+
+        }
+
+        public static bool IsEmployeeExistByNationalNu(string NationalNu)
+        {
+
+            string query = @"select found=1 from Employees  inner join People on Employees.PersonID=People.ID where People.NationalID=@NationalID;";
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    conn.Open();
+
+                    using (SqlCommand com = new SqlCommand(query, conn))
+                    {
+
+
+                        com.Parameters.AddWithValue("@NationalID", NationalNu);
+
+                        SqlDataReader Read = com.ExecuteReader();
+
+                        return Read.HasRows;
+
+
+                    }
+
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+
+
+        }
+
+
 
     }
 }
