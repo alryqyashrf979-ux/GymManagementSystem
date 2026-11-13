@@ -48,37 +48,17 @@ namespace GymMangementSystem
                 return;
             }
 
-            if(uctPersonDetailsWithFilter1.PersonID!=-1)
-            {
-
-
-                if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
-                {
-
-                    MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    btnSave.Enabled = false;
-                    tpMemberInfo.Enabled = false;
-                    uctPersonDetailsWithFilter1.FocusOnTbSearch();
-
-
-                }
-                else
-                {
-                    btnSave.Enabled = true;
-                    tpMemberInfo.Enabled = true;
-                    tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpMemberInfo"];
-                    lblPersonID.Text= uctPersonDetailsWithFilter1.PersonID.ToString();
-
-                }
-
-
-
-
-            }
+            if(uctPersonDetailsWithFilter1.PersonID==-1)
+                MessageBox.Show("Error : select a person or add a new person.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                MessageBox.Show("Error : select a person or add a new person.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnSave.Enabled = true;
+                tpMemberInfo.Enabled = true;
+                tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpMemberInfo"];
+                lblPersonID.Text = uctPersonDetailsWithFilter1.PersonID.ToString();
+
             }
+
 
         }
 
@@ -106,8 +86,8 @@ namespace GymMangementSystem
             txtRelationship.Text= string.Empty;
             lblEmergencyContactID.Text = "[???]";
 
-         
 
+            btnNext.Enabled = false;
             btnSave.Enabled = false;
             tpMemberInfo.Enabled = false;
             tcMemberInfo.SelectedTab = tcMemberInfo.TabPages["tpPersonalInfo"];
@@ -143,7 +123,7 @@ namespace GymMangementSystem
             lblMemberID.Text = _Member.MemberID.ToString();
             txtInActivationReason.Text = _Member.InActivationReason;
             tpMemberInfo.Enabled = true ;
-
+            btnNext.Enabled = true;
             lnkAddSubscription.Enabled = false;
            
 
@@ -232,6 +212,30 @@ namespace GymMangementSystem
         {
             if (_LastSubscriptionID != -1)
                 DataBack?.Invoke(this, _Member.MemberID);
+        }
+
+        private void uctPersonDetailsWithFilter1_OnPersonSelected(object sender, ctrlPersonDetailsWithFilter.PersonEventArg e)
+        {
+            btnNext.Enabled = false;
+
+            if(e.PersonInfo!=null)
+            if (clsMembers.DoesMemberExistByPersonID(uctPersonDetailsWithFilter1.PersonID))
+            {
+
+                MessageBox.Show("This person is already a member,Select another Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnSave.Enabled = false;
+                tpMemberInfo.Enabled = false;
+                btnNext.Enabled = false;
+                uctPersonDetailsWithFilter1.FocusOnTbSearch();
+
+
+            }
+                else
+                {
+                    btnNext.Enabled = true ;
+                }
+          
+
         }
     }
 }
