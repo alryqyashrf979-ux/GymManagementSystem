@@ -33,7 +33,6 @@ namespace GymMangementSystem
 
             FilteringName.Clear();
 
-            //FilteringName.Append("");
 
             switch (cmSelectTypeOfFiltering.Text)
             {
@@ -153,37 +152,40 @@ namespace GymMangementSystem
             _RefreshDataTable();
         }
 
-        private void dgvMembersList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void PersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+       
+
+        private void showMemberHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowMemberHistory frm = new frmShowMemberHistory((int)dgvMembersList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void MemberDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmShowMemberDetails((int)dgvMembersList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
 
-        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddUpdateMember();
             frm.ShowDialog();
             _RefreshDataTable();
         }
 
-        private void updatePersonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void updateMemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddUpdateMember((int)dgvMembersList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefreshDataTable();
         }
 
-        private void deletePersonToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void deleteMemberToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             int Index = (int)dgvMembersList.CurrentRow.Cells[0].Value;
             if (MessageBox.Show("Are you sure you want to delete member [" + Index + "]", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
@@ -195,12 +197,6 @@ namespace GymMangementSystem
                 else
                     MessageBox.Show("Member was not Deleted because it has data link to it", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        }
-
-        private void showMemberHistoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmShowMemberHistory frm = new frmShowMemberHistory((int)dgvMembersList.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
         }
     }
 }
