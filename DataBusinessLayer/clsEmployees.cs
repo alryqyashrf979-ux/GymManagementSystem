@@ -163,5 +163,9 @@ namespace DataBusinessLayer
             return clsEmployeesData.TerminateEmployee(EmployeeID);
         }
 
+        public bool TerminateEmployee()
+        {
+            return clsEmployeesData.TerminateEmployee(this.EmployeeID);
+        }
     }
 }

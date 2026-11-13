@@ -1056,7 +1056,9 @@
   <ItemGroup>
     <None Include="Resources\Check-Out-Employee-32x32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Terminate_Employee_32.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SettingsIcon.png" />
   </ItemGroup>
@@ -1065,6 +1067,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sign_out 32 -21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminate_employee_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

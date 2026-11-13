@@ -15,7 +15,7 @@ namespace DataAccessLayer
             DataTable dt = new DataTable();
             string query = @"select E.EmployeeID as 'Employee ID',P.FirstName+' '+P.SecondName+' '+P.LastName as 'Name',J.TitleName as 'Title',
                              E.Salary,Format(E.Hireddate,'yyyy/MM/dd') as 'Hired Date',
-                ISNULL('NULL', E.TerminationDate) as 'Termination Date',E.IsActive as 'Is Active',S.ShiftType as 'Shift Type' from Employees E inner join People P on
+                ISNULL(CONVERT(varchar,E.TerminationDate),'NULL') as 'Termination Date',E.IsActive as 'Is Active',S.ShiftType as 'Shift Type' from Employees E inner join People P on
                 E.PersonID=P.ID inner join JobTitles J on J.TitleID=E.TitleID inner join EmployeesShift S on S.ShiftID=E.ShiftID;";
 
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString)) 
@@ -305,7 +305,7 @@ namespace DataAccessLayer
 
         static public bool TerminateEmployee(int EmployeeID)
         {
-            string query = "Update Employees set TerminationDate=@TerminationDate,IsActive=0 where EmployeeID=@EmployeeID;";
+            string query = "Update Employees set TerminationDate=GETDATE(),IsActive=0 where EmployeeID=@EmployeeID;";
 
             try
             {
@@ -314,7 +314,6 @@ namespace DataAccessLayer
                     connection.Open();
                     using(SqlCommand command=new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("TerminationDate", DateTime.Now);
                         command.Parameters.AddWithValue("EmployeeID", EmployeeID);
 
                         return command.ExecuteNonQuery()> 0;
@@ -327,5 +326,11 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+
+
+
+        
+
     }
 }
