@@ -75,7 +75,8 @@ namespace GymMangementSystem
         public void LoadEmployeeInfo(int EmployeeID)
         {
             txtFiltering.Text = EmployeeID.ToString();
-            ctrlEmployeeDetails1.LoadEmployeeDataByEmployeeID(EmployeeID);
+            cmFilteringType.Text = "Employee ID";
+            Find();
         }
 
         private void cmFilteringType_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,11 +92,6 @@ namespace GymMangementSystem
         }
 
 
-        private void txtFiltering_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtFiltering_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -110,15 +106,10 @@ namespace GymMangementSystem
 
         }
 
-        public void LoadDataByEmployeeID(int EmployeeID)
-        {
-            cmFilteringType.Text = "Employee ID";
-            txtFiltering.Text = EmployeeID.ToString();
-            Find();
-        }
+     
        private void _LoadEmployeeData(int EmployeeID)
         {
-            LoadDataByEmployeeID(EmployeeID);
+            LoadEmployeeInfo(EmployeeID);
         }
     }
 }
