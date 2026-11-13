@@ -18,11 +18,7 @@ namespace GymMangementSystem
         {
             InitializeComponent();
         }
-        private void lnkShowPlanDetails_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
+      
         public clsEmployees EmployeeInfo { private set; get; }
 
 
