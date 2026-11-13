@@ -48,10 +48,11 @@ namespace GymMangementSystem
                 txtSearch.InputType = MyTextBox.TextType.Numeric;
 
 
-
+            if (txtSearch.Visible)
+            {
                 txtSearch.Clear();
-            txtSearch.Focus();
-
+                txtSearch.Focus();
+            }
 
             _dtAllPayments.DefaultView.RowFilter = "";
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
@@ -94,10 +95,7 @@ namespace GymMangementSystem
                 return;
             }
 
-            if(cbMethod.Text.Trim()== "Cash")
-                _dtAllPayments.DefaultView.RowFilter = $"[Payment {cbValue.Text}] like 'Cash%'";
-            else
-                _dtAllPayments.DefaultView.RowFilter = $"[Payment {cbValue.Text}] like 'Card%'";
+            _dtAllPayments.DefaultView.RowFilter = $"[Payment {cbValue.Text}] like '{cbMethod.Text.Trim()}%'";
 
             lblRecord.Text = dgvPayment.Rows.Count.ToString();
 

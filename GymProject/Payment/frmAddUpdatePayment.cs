@@ -17,7 +17,6 @@ namespace GymMangementSystem
         enum enMode { ExistSubscription, NewSubscription }
         private enMode _Mode = enMode.ExistSubscription;
         private int _MemberID=-1;
-        private int _SubscriptionID = -1;
         public frmAddUpdatePayment()
         {
             InitializeComponent();
@@ -51,7 +50,6 @@ namespace GymMangementSystem
             //}
 
             ctrlMemberDetailsWithFiltering1.LoadMemberInfoByMemberID(_MemberID);
-            _SubscriptionID = ctrlMemberDetailsWithFiltering1.MemberInfo.LastSubscriptionID;
             ctrlMemberDetailsWithFiltering1.EnableFiltering = false;
             tcPayment.SelectedTab = tcPayment.TabPages["tpPaymentInfo"];
             btnSave.Enabled = true;
