@@ -80,12 +80,6 @@ namespace GymMangementSystem
                 MessageBox.Show("Error : select a person or add a new person.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
-
-
-
-
-
         }
 
         clsMembers _Member;
@@ -207,9 +201,6 @@ namespace GymMangementSystem
             else
                 MessageBox.Show("Error : Member did Not save successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-
-
         }
 
 
@@ -228,11 +219,6 @@ namespace GymMangementSystem
             this.Close();
         }
 
-        private void txtInActivationReason_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void lnkAddSubscription_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmAddSubscription frm = new frmAddSubscription();
@@ -240,12 +226,6 @@ namespace GymMangementSystem
             frm.LoadMemberDetails(_Member.MemberID);
             frm.ShowDialog();
             
-        }
-
-        private void frmAddUpdateMember_FormClosing(object sender, FormClosingEventArgs e)
-        {
-          
-
         }
 
         private void frmAddUpdateMember_FormClosed(object sender, FormClosedEventArgs e)

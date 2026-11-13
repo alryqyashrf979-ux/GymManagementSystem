@@ -361,7 +361,6 @@
             this.txtInActivationReason.Size = new System.Drawing.Size(460, 112);
             this.txtInActivationReason.TabIndex = 74;
             this.txtInActivationReason.TextOffset = new System.Drawing.Point(0, -1);
-            this.txtInActivationReason.TextChanged += new System.EventHandler(this.txtInActivationReason_TextChanged);
             // 
             // lblLastSubscriptionID
             // 
@@ -825,7 +824,6 @@
             this.Name = "frmAddUpdateMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Member";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddUpdateMember_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddUpdateMember_FormClosed);
             this.Load += new System.EventHandler(this.frmAddUpdateMember_Load);
             this.tcMemberInfo.ResumeLayout(false);
