@@ -122,6 +122,13 @@ namespace GymMangementSystem
 
             if(e.PersonInfo!=null)
             {
+                if (clsEmployees.IsEmployeeExistByPersonID(e.PersonInfo.PersonID))
+                {
+                    MessageBox.Show("This Person already employee,please select another one", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnSave.Enabled = false;
+                    pnlEmployeeInput.Enabled = false;
+                    return;
+                }
                 btnSave.Enabled = true;
                 pnlEmployeeInput.Enabled= true;
 

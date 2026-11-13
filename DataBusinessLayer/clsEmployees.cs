@@ -167,5 +167,8 @@ namespace DataBusinessLayer
         {
             return clsEmployeesData.TerminateEmployee(this.EmployeeID);
         }
+
+        public static bool IsEmployeeExistByNationalNu(string NationalNu) => clsEmployeesData.IsEmployeeExistByNationalNu(NationalNu);
+        public static bool IsEmployeeExistByPersonID(int PersonID) => clsEmployeesData.IsEmployeeExistByPersonID(PersonID);
     }
 }
