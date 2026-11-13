@@ -63,11 +63,6 @@ namespace GymMangementSystem
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnMangePayment_Click(object sender, EventArgs e)
         {
             Form frm = new frmManagePayments();
@@ -78,7 +73,7 @@ namespace GymMangementSystem
 
         private void btnSubscriPtions_Click(object sender, EventArgs e)
         {
-            contextMenuStrip1.Show(btnSubscriPtions, new Point(btnSubscriPtions.Width, 0));
+            cmsSubscriptions.Show(btnSubscriPtions, new Point(btnSubscriPtions.Width, 0));
         }
 
         private void manageSubscriptionsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,12 +114,6 @@ namespace GymMangementSystem
 
         }
 
-        private void guna2Button2_Click_1(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void changeSubscriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChangeSubscription frm =new frmChangeSubscription();
@@ -155,11 +144,7 @@ namespace GymMangementSystem
 
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            contextMenuStrip2.Show(btnSettings, new Point(btnSettings.Width, 0));
-
-        }
+      
 
         private void currentUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -184,11 +169,11 @@ namespace GymMangementSystem
             this.Close();
         }
 
-        private void frmDashboard_Load(object sender, EventArgs e)
+        private void _ResetDefaultValues()
         {
             lblCurrentUseName.Text = clsGlobal.CurrentUserInfo.UserName;
             lblUserName.Text = clsGlobal.CurrentUserInfo.UserName;
-        
+
             lblCountActiveMembers.Text = clsMembers.SelectCountOfActiveMembers().ToString();
             lblActiveTrainers.Text = clsCoaches.SelectCountOfActiveCoaches().ToString();
             lblActiveClasses.Text = clsClasses.SelectCountOfActiveClasses().ToString();
@@ -196,6 +181,10 @@ namespace GymMangementSystem
             dgvShowMembersInLast15DaysList.DataSource = clsMembers.GetMembersInLast15Days();
             pbCurrentUser.ImageLocation = clsGlobal.CurrentUserInfo.PersonInfo.ImagePath;
             dgvClassList.DataSource = clsClasses.GetActiveClasses();
+        }
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            _ResetDefaultValues();
 
             if (!File.Exists(clsGlobal.CurrentUserInfo.PersonInfo.ImagePath))
             {
@@ -215,40 +204,45 @@ namespace GymMangementSystem
             lblTime.Text = date.ToString("hh:mm tt");
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkViewAllMembers_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form frm = new frmManageMember();
             frm.ShowDialog();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkViewAllClasses_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form frm = new frmManageClasses();
             frm.ShowDialog();
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
+        private void btnAddSubscription_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddSubscription();
             frm.ShowDialog();
         }
 
-        private void guna2Button4_Click_1(object sender, EventArgs e)
+        private void btnChangeSubscription_Click(object sender, EventArgs e)
         {
             Form frm = new frmChangeSubscription();
             frm.ShowDialog();
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
+        private void btnCancelSubscription_Click(object sender, EventArgs e)
         {
             Form frm = new frmCancelSubscription();
             frm.ShowDialog();
         }
 
-        private void guna2Button6_Click(object sender, EventArgs e)
+        private void btnFreezeSubscription_Click(object sender, EventArgs e)
         {
             Form frm = new frmFreezeSubscription();
             frm.ShowDialog();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            cmsSetting.Show(btnSettings, new Point(btnSettings.Width, 0));
         }
     }
 }
