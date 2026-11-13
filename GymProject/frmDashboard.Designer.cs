@@ -44,7 +44,7 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubscriPtions = new Guna.UI2.WinForms.Guna2Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsSubscriptions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.manageSubscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelSubscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,16 +71,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddSubscription = new Guna.UI2.WinForms.Guna2Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFreezeSubscription = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelSubscription = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChangeSubscription = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.lnkViewAllClasses = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvClassList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,10 +89,14 @@
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkViewAllMembers = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dgvShowMembersInLast15DaysList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.MemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Membership = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.lblExpiringSubscription = new System.Windows.Forms.Label();
@@ -120,19 +124,15 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsSetting = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.currentUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.MemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Membership = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.cmsSubscriptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentUser)).BeginInit();
@@ -155,7 +155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
+            this.cmsSetting.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -208,7 +208,7 @@
             this.btnSettings.TabIndex = 19;
             this.btnSettings.Text = "Setting";
             this.btnSettings.TextOffset = new System.Drawing.Point(-13, 0);
-            this.btnSettings.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // guna2Button2
             // 
@@ -266,7 +266,7 @@
             this.btnSubscriPtions.BackColor = System.Drawing.Color.Transparent;
             this.btnSubscriPtions.BorderRadius = 5;
             this.btnSubscriPtions.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSubscriPtions.ContextMenuStrip = this.contextMenuStrip1;
+            this.btnSubscriPtions.ContextMenuStrip = this.cmsSubscriptions;
             this.btnSubscriPtions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSubscriPtions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSubscriPtions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -288,13 +288,13 @@
             this.btnSubscriPtions.TextOffset = new System.Drawing.Point(-5, 0);
             this.btnSubscriPtions.Click += new System.EventHandler(this.btnSubscriPtions_Click);
             // 
-            // contextMenuStrip1
+            // cmsSubscriptions
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsSubscriptions.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsSubscriptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageSubscriptionsToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(279, 58);
+            this.cmsSubscriptions.Name = "contextMenuStrip1";
+            this.cmsSubscriptions.Size = new System.Drawing.Size(279, 58);
             // 
             // manageSubscriptionsToolStripMenuItem
             // 
@@ -733,13 +733,13 @@
             this.guna2Panel9.BorderRadius = 13;
             this.guna2Panel9.BorderThickness = 1;
             this.guna2Panel9.Controls.Add(this.label15);
-            this.guna2Panel9.Controls.Add(this.guna2Button7);
+            this.guna2Panel9.Controls.Add(this.btnAddSubscription);
             this.guna2Panel9.Controls.Add(this.label14);
-            this.guna2Panel9.Controls.Add(this.guna2Button6);
+            this.guna2Panel9.Controls.Add(this.btnFreezeSubscription);
             this.guna2Panel9.Controls.Add(this.label11);
-            this.guna2Panel9.Controls.Add(this.guna2Button5);
+            this.guna2Panel9.Controls.Add(this.btnCancelSubscription);
             this.guna2Panel9.Controls.Add(this.label10);
-            this.guna2Panel9.Controls.Add(this.guna2Button4);
+            this.guna2Panel9.Controls.Add(this.btnChangeSubscription);
             this.guna2Panel9.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel9.FillColor = System.Drawing.Color.White;
             this.guna2Panel9.Location = new System.Drawing.Point(258, 588);
@@ -759,33 +759,33 @@
             this.label15.TabIndex = 27;
             this.label15.Text = "Add Membership";
             // 
-            // guna2Button7
+            // btnAddSubscription
             // 
-            this.guna2Button7.BackColor = System.Drawing.Color.White;
-            this.guna2Button7.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button7.BorderRadius = 7;
-            this.guna2Button7.BorderThickness = 1;
-            this.guna2Button7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button7.Image = global::GymMangementSystem.Properties.Resources.Add_Subscription_Icon2;
-            this.guna2Button7.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button7.ImageSize = new System.Drawing.Size(55, 39);
-            this.guna2Button7.Location = new System.Drawing.Point(52, 45);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(232, 91);
-            this.guna2Button7.TabIndex = 26;
-            this.guna2Button7.Text = "Add                >";
-            this.guna2Button7.TextOffset = new System.Drawing.Point(-6, 0);
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            this.btnAddSubscription.BackColor = System.Drawing.Color.White;
+            this.btnAddSubscription.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnAddSubscription.BorderRadius = 7;
+            this.btnAddSubscription.BorderThickness = 1;
+            this.btnAddSubscription.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnAddSubscription.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSubscription.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSubscription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddSubscription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnAddSubscription.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddSubscription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddSubscription.ForeColor = System.Drawing.Color.Black;
+            this.btnAddSubscription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnAddSubscription.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnAddSubscription.Image = global::GymMangementSystem.Properties.Resources.Add_Subscription_Icon2;
+            this.btnAddSubscription.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnAddSubscription.ImageSize = new System.Drawing.Size(55, 39);
+            this.btnAddSubscription.Location = new System.Drawing.Point(52, 45);
+            this.btnAddSubscription.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddSubscription.Name = "btnAddSubscription";
+            this.btnAddSubscription.Size = new System.Drawing.Size(232, 91);
+            this.btnAddSubscription.TabIndex = 26;
+            this.btnAddSubscription.Text = "Add                >";
+            this.btnAddSubscription.TextOffset = new System.Drawing.Point(-6, 0);
+            this.btnAddSubscription.Click += new System.EventHandler(this.btnAddSubscription_Click);
             // 
             // label14
             // 
@@ -799,33 +799,33 @@
             this.label14.TabIndex = 25;
             this.label14.Text = "Freeze Membership";
             // 
-            // guna2Button6
+            // btnFreezeSubscription
             // 
-            this.guna2Button6.BackColor = System.Drawing.Color.White;
-            this.guna2Button6.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button6.BorderRadius = 7;
-            this.guna2Button6.BorderThickness = 1;
-            this.guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button6.Image = global::GymMangementSystem.Properties.Resources.FreezeIcon;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(55, 39);
-            this.guna2Button6.Location = new System.Drawing.Point(854, 45);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(232, 91);
-            this.guna2Button6.TabIndex = 24;
-            this.guna2Button6.Text = "Freeze                >";
-            this.guna2Button6.TextOffset = new System.Drawing.Point(-6, 0);
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            this.btnFreezeSubscription.BackColor = System.Drawing.Color.White;
+            this.btnFreezeSubscription.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnFreezeSubscription.BorderRadius = 7;
+            this.btnFreezeSubscription.BorderThickness = 1;
+            this.btnFreezeSubscription.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFreezeSubscription.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFreezeSubscription.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFreezeSubscription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFreezeSubscription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnFreezeSubscription.FillColor = System.Drawing.Color.Transparent;
+            this.btnFreezeSubscription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFreezeSubscription.ForeColor = System.Drawing.Color.Black;
+            this.btnFreezeSubscription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnFreezeSubscription.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnFreezeSubscription.Image = global::GymMangementSystem.Properties.Resources.FreezeIcon;
+            this.btnFreezeSubscription.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnFreezeSubscription.ImageSize = new System.Drawing.Size(55, 39);
+            this.btnFreezeSubscription.Location = new System.Drawing.Point(854, 45);
+            this.btnFreezeSubscription.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFreezeSubscription.Name = "btnFreezeSubscription";
+            this.btnFreezeSubscription.Size = new System.Drawing.Size(232, 91);
+            this.btnFreezeSubscription.TabIndex = 24;
+            this.btnFreezeSubscription.Text = "Freeze                >";
+            this.btnFreezeSubscription.TextOffset = new System.Drawing.Point(-6, 0);
+            this.btnFreezeSubscription.Click += new System.EventHandler(this.btnFreezeSubscription_Click);
             // 
             // label11
             // 
@@ -839,33 +839,33 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "Cancel Membership";
             // 
-            // guna2Button5
+            // btnCancelSubscription
             // 
-            this.guna2Button5.BackColor = System.Drawing.Color.White;
-            this.guna2Button5.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button5.BorderRadius = 7;
-            this.guna2Button5.BorderThickness = 1;
-            this.guna2Button5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button5.Image = global::GymMangementSystem.Properties.Resources.CancelIcon;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(55, 39);
-            this.guna2Button5.Location = new System.Drawing.Point(594, 45);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(232, 91);
-            this.guna2Button5.TabIndex = 22;
-            this.guna2Button5.Text = "Cancel                >";
-            this.guna2Button5.TextOffset = new System.Drawing.Point(-6, 0);
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.btnCancelSubscription.BackColor = System.Drawing.Color.White;
+            this.btnCancelSubscription.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnCancelSubscription.BorderRadius = 7;
+            this.btnCancelSubscription.BorderThickness = 1;
+            this.btnCancelSubscription.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCancelSubscription.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelSubscription.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelSubscription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelSubscription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnCancelSubscription.FillColor = System.Drawing.Color.Transparent;
+            this.btnCancelSubscription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelSubscription.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelSubscription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnCancelSubscription.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnCancelSubscription.Image = global::GymMangementSystem.Properties.Resources.CancelIcon;
+            this.btnCancelSubscription.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnCancelSubscription.ImageSize = new System.Drawing.Size(55, 39);
+            this.btnCancelSubscription.Location = new System.Drawing.Point(594, 45);
+            this.btnCancelSubscription.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelSubscription.Name = "btnCancelSubscription";
+            this.btnCancelSubscription.Size = new System.Drawing.Size(232, 91);
+            this.btnCancelSubscription.TabIndex = 22;
+            this.btnCancelSubscription.Text = "Cancel                >";
+            this.btnCancelSubscription.TextOffset = new System.Drawing.Point(-6, 0);
+            this.btnCancelSubscription.Click += new System.EventHandler(this.btnCancelSubscription_Click);
             // 
             // label10
             // 
@@ -879,33 +879,33 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Change Membership";
             // 
-            // guna2Button4
+            // btnChangeSubscription
             // 
-            this.guna2Button4.BackColor = System.Drawing.Color.White;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button4.BorderRadius = 7;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Button4.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button4.ImageSize = new System.Drawing.Size(55, 39);
-            this.guna2Button4.Location = new System.Drawing.Point(321, 45);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(232, 91);
-            this.guna2Button4.TabIndex = 20;
-            this.guna2Button4.Text = "Change                >";
-            this.guna2Button4.TextOffset = new System.Drawing.Point(-6, 0);
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click_1);
+            this.btnChangeSubscription.BackColor = System.Drawing.Color.White;
+            this.btnChangeSubscription.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnChangeSubscription.BorderRadius = 7;
+            this.btnChangeSubscription.BorderThickness = 1;
+            this.btnChangeSubscription.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnChangeSubscription.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeSubscription.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeSubscription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangeSubscription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnChangeSubscription.FillColor = System.Drawing.Color.Transparent;
+            this.btnChangeSubscription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChangeSubscription.ForeColor = System.Drawing.Color.Black;
+            this.btnChangeSubscription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnChangeSubscription.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnChangeSubscription.Image = global::GymMangementSystem.Properties.Resources.Change_32x32;
+            this.btnChangeSubscription.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnChangeSubscription.ImageSize = new System.Drawing.Size(55, 39);
+            this.btnChangeSubscription.Location = new System.Drawing.Point(321, 45);
+            this.btnChangeSubscription.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangeSubscription.Name = "btnChangeSubscription";
+            this.btnChangeSubscription.Size = new System.Drawing.Size(232, 91);
+            this.btnChangeSubscription.TabIndex = 20;
+            this.btnChangeSubscription.Text = "Change                >";
+            this.btnChangeSubscription.TextOffset = new System.Drawing.Point(-6, 0);
+            this.btnChangeSubscription.Click += new System.EventHandler(this.btnChangeSubscription_Click);
             // 
             // guna2Panel8
             // 
@@ -914,7 +914,7 @@
             this.guna2Panel8.BorderRadius = 13;
             this.guna2Panel8.BorderThickness = 1;
             this.guna2Panel8.Controls.Add(this.pictureBox9);
-            this.guna2Panel8.Controls.Add(this.linkLabel2);
+            this.guna2Panel8.Controls.Add(this.lnkViewAllClasses);
             this.guna2Panel8.Controls.Add(this.label7);
             this.guna2Panel8.Controls.Add(this.dgvClassList);
             this.guna2Panel8.CustomBorderColor = System.Drawing.Color.Transparent;
@@ -935,17 +935,17 @@
             this.pictureBox9.TabIndex = 91;
             this.pictureBox9.TabStop = false;
             // 
-            // linkLabel2
+            // lnkViewAllClasses
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(437, 12);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(71, 17);
-            this.linkLabel2.TabIndex = 89;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "View All ->";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.lnkViewAllClasses.AutoSize = true;
+            this.lnkViewAllClasses.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkViewAllClasses.Location = new System.Drawing.Point(437, 12);
+            this.lnkViewAllClasses.Name = "lnkViewAllClasses";
+            this.lnkViewAllClasses.Size = new System.Drawing.Size(71, 17);
+            this.lnkViewAllClasses.TabIndex = 89;
+            this.lnkViewAllClasses.TabStop = true;
+            this.lnkViewAllClasses.Text = "View All ->";
+            this.lnkViewAllClasses.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkViewAllClasses_LinkClicked);
             // 
             // label7
             // 
@@ -1078,7 +1078,7 @@
             this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel7.BorderRadius = 13;
             this.guna2Panel7.BorderThickness = 1;
-            this.guna2Panel7.Controls.Add(this.linkLabel1);
+            this.guna2Panel7.Controls.Add(this.lnkViewAllMembers);
             this.guna2Panel7.Controls.Add(this.label6);
             this.guna2Panel7.Controls.Add(this.pictureBox8);
             this.guna2Panel7.Controls.Add(this.dgvShowMembersInLast15DaysList);
@@ -1089,17 +1089,17 @@
             this.guna2Panel7.Size = new System.Drawing.Size(533, 329);
             this.guna2Panel7.TabIndex = 18;
             // 
-            // linkLabel1
+            // lnkViewAllMembers
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(437, 12);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(71, 17);
-            this.linkLabel1.TabIndex = 89;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "View All ->";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkViewAllMembers.AutoSize = true;
+            this.lnkViewAllMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkViewAllMembers.Location = new System.Drawing.Point(437, 12);
+            this.lnkViewAllMembers.Name = "lnkViewAllMembers";
+            this.lnkViewAllMembers.Size = new System.Drawing.Size(71, 17);
+            this.lnkViewAllMembers.TabIndex = 89;
+            this.lnkViewAllMembers.TabStop = true;
+            this.lnkViewAllMembers.Text = "View All ->";
+            this.lnkViewAllMembers.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkViewAllMembers_LinkClicked);
             // 
             // label6
             // 
@@ -1195,6 +1195,38 @@
             this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.Height = 35;
             this.dgvShowMembersInLast15DaysList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            // 
+            // MemberName
+            // 
+            this.MemberName.DataPropertyName = "Name";
+            this.MemberName.FillWeight = 173.7496F;
+            this.MemberName.HeaderText = "Member Name";
+            this.MemberName.Name = "MemberName";
+            this.MemberName.ReadOnly = true;
+            // 
+            // Membership
+            // 
+            this.Membership.DataPropertyName = "Membership";
+            this.Membership.FillWeight = 87.76317F;
+            this.Membership.HeaderText = "Membership";
+            this.Membership.Name = "Membership";
+            this.Membership.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.FillWeight = 57.26897F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // JoinDate
+            // 
+            this.JoinDate.DataPropertyName = "Join Date";
+            this.JoinDate.FillWeight = 81.21827F;
+            this.JoinDate.HeaderText = "Join Date";
+            this.JoinDate.Name = "JoinDate";
+            this.JoinDate.ReadOnly = true;
             // 
             // guna2Panel6
             // 
@@ -1532,17 +1564,17 @@
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
-            // contextMenuStrip2
+            // cmsSetting
             // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsSetting.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsSetting.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.currentUserToolStripMenuItem,
             this.toolStripMenuItem1,
             this.changePasswordToolStripMenuItem,
             this.toolStripMenuItem2,
             this.logOutToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(228, 130);
+            this.cmsSetting.Name = "contextMenuStrip2";
+            this.cmsSetting.Size = new System.Drawing.Size(228, 152);
             // 
             // currentUserToolStripMenuItem
             // 
@@ -1590,38 +1622,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // MemberName
-            // 
-            this.MemberName.DataPropertyName = "Name";
-            this.MemberName.FillWeight = 173.7496F;
-            this.MemberName.HeaderText = "Member Name";
-            this.MemberName.Name = "MemberName";
-            this.MemberName.ReadOnly = true;
-            // 
-            // Membership
-            // 
-            this.Membership.DataPropertyName = "Membership";
-            this.Membership.FillWeight = 87.76317F;
-            this.Membership.HeaderText = "Membership";
-            this.Membership.Name = "Membership";
-            this.Membership.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.FillWeight = 57.26897F;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // JoinDate
-            // 
-            this.JoinDate.DataPropertyName = "Join Date";
-            this.JoinDate.FillWeight = 81.21827F;
-            this.JoinDate.HeaderText = "Join Date";
-            this.JoinDate.Name = "JoinDate";
-            this.JoinDate.ReadOnly = true;
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1641,7 +1641,7 @@
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.cmsSubscriptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -1673,7 +1673,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.cmsSetting.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1700,7 +1700,7 @@
         private System.Windows.Forms.Label lblShowUserInformation;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnSubscriPtions;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip cmsSubscriptions;
         private System.Windows.Forms.ToolStripMenuItem manageSubscriptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addSubscriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelSubscriptionToolStripMenuItem;
@@ -1710,7 +1710,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ContextMenuStrip cmsSetting;
         private System.Windows.Forms.ToolStripMenuItem currentUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
@@ -1748,9 +1748,9 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2DataGridView dgvShowMembersInLast15DaysList;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkViewAllMembers;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel lnkViewAllClasses;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2DataGridView dgvClassList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Class;
@@ -1759,15 +1759,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnChangeSubscription;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnCancelSubscription;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btnAddSubscription;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btnFreezeSubscription;
         private System.Windows.Forms.DataGridViewTextBoxColumn MemberName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Membership;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
