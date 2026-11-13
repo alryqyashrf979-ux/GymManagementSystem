@@ -117,7 +117,6 @@ namespace GymMangementSystem
         {
             if (_User.Permission == -1)
             {
-                rbNo.Checked = false;
                 rbYes.Checked = true;
                 return;
             }
